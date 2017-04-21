@@ -2,11 +2,14 @@
 <widget id="es.guinotepro.guinotepro" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>GuiñotePro</name>
     <description>
-        A blank PhoneGap app.
+        Videojuego de guiñote
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="ivan@lopez.es" href="http://www.guiñotepro.es">
         PhoneGap Team
     </author>
     <content src="index.html" />
     <access origin="*" />
+	
+	<preference name="Orientation" value="landscape" />
+	
 </widget>
