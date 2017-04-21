@@ -1,0 +1,559 @@
+﻿<html>
+<head>
+<title>Guiñote</title>
+<meta name="description" content="Juego de guiñote" />
+<meta charset="utf-8" />
+<meta http-equiv="Expires" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<meta http-equiv="Access-Control-Allow-Credentials: true"/>
+<meta http-equiv="Access-Control-Allow-Methods: ACL, CANCELUPLOAD, CHECKIN, CHECKOUT, COPY, DELETE, GET, HEAD, LOCK, MKCALENDAR, MKCOL, MOVE, OPTIONS, POST, PROPFIND, PROPPATCH, PUT, REPORT, SEARCH, UNCHECKOUT, UNLOCK, UPDATE, VERSION-CONTROL"/>
+<meta http-equiv="Access-Control-Allow-Headers: Overwrite, Destination, Content-Type, Depth, User-Agent, Translate, Range, Content-Range, Timeout, X-File-Size, X-Requested-With, If-Modified-Since, X-File-Name, Cache-Control, Location, Lock-Token, If"/>
+<meta http-equiv="Access-Control-Expose-Headers: DAV, content-length, Allow"/>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+<!-- <meta name=viewport content="width=device-width, initial-scale=1"> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum.scale=1.0, user-scalable=no"> 
+<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<title>GuiñotePro</title>
+
+<script src="lib/phaser.js"></script>
+<script src="lib/jquery.js"></script>
+<script src="lib/saveCPU.js"></script>
+<script src="js/_Main.js"></script>
+<script src="js/_Boot.js"></script>
+<script src="js/_Menu.js"></script>
+<script src="js/_Preload.js"></script>
+<script src='socket.io/socket.io.js'></script>
+<script src="js/_Level.js"></script>
+<script src="js/_Carta.js"></script>
+<script src="js/_CrearBaraja.js"></script>
+<script src="js/_CrearBarajaRecibida.js"></script>
+<script src="js/_RepartosDesdeArriba.js"></script>
+<script src="js/_RepartosDesdeAbajo.js"></script>
+<script src="js/_RepartosDesdeDerecha.js"></script>
+<script src="js/_RepartosDesdeIzquierda.js"></script>
+<script src="js/_MazoMovimientos.js"></script>
+<script src="js/_MazoMovimientosApoyo.js"></script>
+<script src="js/_IA.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> 
+<!-- <script src="cordova.js"></script>  -->
+<script src="node_modules/phaser-input/build/phaser-input.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97842450-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+
+	window.addEventListener('focus', function(){
+	   	//YMHIHSNADE.scale.refresh()
+		//YMHIHSNADE.stage.scale.refresh();
+	}, false);
+
+    $(document).ready(function(e){
+		$('#divtablasalas').css("height", $(window).height()-200);
+	});
+	
+     $(function () {
+
+        $('#FormLogin').on('submit', function (e) {
+
+          e.preventDefault();
+
+          $.ajax({
+           // type: 'post',
+           // url: 'post.php',
+            data: $('#FormLogin').serialize(),
+            success: function () {
+              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+			  //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+			  document.getElementById("inputChat").value="";
+			  document.getElementById("inputChat").value="";
+			 // document.getElementById("ko").focus();
+            }
+          });
+
+        });
+
+      });
+	  
+	  
+     $(function () {
+
+        $('#FormCrearSala').on('submit', function (e) {
+
+          e.preventDefault();
+
+          $.ajax({
+           // type: 'post',
+           // url: 'post.php',
+            data: $('#FormCrearSala').serialize(),
+            success: function () {
+				CrearSala(document.getElementById("sala").value,document.getElementById("pass").value)
+              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+			 
+			 // document.getElementById("ko").focus();
+            }
+          });
+
+        });
+
+      });	
+
+
+    $(function () {
+
+        $('#FormPasswordSala').on('submit', function (e) {
+
+          e.preventDefault();
+
+          $.ajax({
+           // type: 'post',
+           // url: 'post.php',
+            data: $('#FormPasswordSala').serialize(),
+            success: function () {
+				RPEOWUSPJU(document.getElementById("sala_pass").value,document.getElementById("pass_pass").value)
+              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+			 
+			 // document.getElementById("ko").focus();
+            }
+          });
+
+        });
+
+      });	  	  
+	
+</script>
+
+
+<!-- <script type="text/javascript">
+    
+	$('a').click(function (event){ 
+     event.preventDefault(); 
+     $.ajax({
+        url: $(this).attr('href')
+        ,success: function(response) {
+            alert(response)
+        }
+     })
+	 return false; //for good measure
+});
+
+$(document).ready(function(event){
+	$('html').click(function(){
+		$('#inputChat').blur();
+	});
+	
+	$('#inputChat').click(function(event){
+	event.stopPropagation();
+	});
+});
+     
+</script> -->
+
+<script>
+function getUrlVars() {
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
+}
+
+function FiltrarSalas() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("InputSalas");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("TablaSalas");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+</script>
+
+<script>
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+	if (window.cordova==true)
+	{
+		window.open = cordova.InAppBrowser.open;
+		if (cordova.backgroundapp.resumeType == 'launch') {
+			renderUi();
+		}
+	}
+}
+
+document.addEventListener("backbutton", function (e) {
+	e.preventDefault();
+}, false );
+
+
+
+/*document.addEventListener("resume", function() {
+    if (window.cordova==true)
+	{
+		if (cordova.backgroundapp.resumeType == 'normal-launch') {
+			KGLYPJHYGL();
+			renderUi();		
+		} else if (cordova.backgroundapp.resumeType == 'programmatic-launch') {
+			// You launched programatically (through cordova.backgroundapp.show() perhaps)
+			// so you should have already called renderUi() from where you called .show().
+		}
+	}
+	else
+	{
+		//KGLYPJHYGL();
+	}
+}, false);*/
+
+</script>
+<style>
+
+#Login { 
+	background: #fff; 
+	position: absolute; 
+	width: 250px; left: 50% !important; margin-left: -125px; 
+	height: 150px; top: 50% !important; margin-top:-75px;
+	padding: 15px;
+	padding-top: 27px;
+	text-align:center;
+	box-sizing: border-box;
+}
+
+button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px; background: #333; color:#fff; margin: 2px; } 
+
+.redondeado1em { -webkit-border-radius: 1em; -moz-border-radius: 1em; -ms-border-radius: 1em; -o-border-radius: 1em; border-radius: 1em; }
+
+.table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+	position: absolute; 
+	background: #fff; 
+	width: 400px; left: 40% !important; margin-left: -125px; 
+	height: 150px; top: 50% !important; margin-top:-100px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+
+
+#FormCrearSala {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+	position: absolute; 
+	background: #fff; 
+	width: 400px; left: 40% !important; margin-left: -125px; 
+	height: 220px; top: 50% !important; margin-top:-100px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+
+#FormPasswordSala{
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+	position: absolute; 
+	background: #fff; 
+	width: 400px; left: 40% !important; margin-left: -125px; 
+	height: 220px; top: 50% !important; margin-top:-100px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+
+
+
+#InputSalas {
+
+	font-size: 16px; /* Increase font-size */
+
+	width: 200; 
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#BtnCrearSalas {
+
+	font-size: 16px; /* Increase font-size */
+	
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+
+#BtnCerrarSalas {
+
+	font-size: 16px; /* Increase font-size */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#TablaSalas {
+    border-collapse: collapse; /* Collapse borders */	
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+	width: 100%;
+	background: #fff;
+	
+}
+
+#TablaSalas th, #TablaSalas td {
+    text-align: left; /* Left-align text */
+    padding: 7px; /* Add padding */
+	font-size: 13px;
+}
+
+#TablaSalas tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd; 
+}
+
+#TablaSalas tr.header, #TablaSalas tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+#TablaClasificacion {
+    border-collapse: collapse; /* Collapse borders */	
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+	width: 100%;
+	background: #fff;
+
+
+ <!--    border-collapse: collapse; /* Collapse borders */
+    	float: none;
+	position: absolute; 
+	width: 550px; left: 50% !important; margin-left: -300px; 
+	height: 200px; top: 50% !important; margin-top:-250px;
+	
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */ -->
+}
+
+#Clasificacion tr {
+    text-align: center;
+
+}
+
+
+#Clasificacion td {
+    text-align: center;
+
+}
+
+#Clasificacion th {
+    text-align: center;
+
+}
+
+</style>
+</head>
+<!-- <body class="container" style="margin:0px; padding:0px;width:100vw;height:100vh;background-image:url(back.png);" >  -->
+<!-- <body class="container" style="margin:0px; padding:0px;width:100vw;height:100vh;background-color:rgb(0%, 0%, 0%);" >  -->
+<!-- <body class="container" style="margin:0px;padding:0px;height:100vh;width:100vw;height:100vh;background-color:rgb(30%, 0%, 0%);" >  -->
+<!-- "padding:0px;margin:0px;width:100vw; class="container"-->
+<body  style="background-color:rgb(0%, 0%, 0%);" > 
+ <!-- style= "margin:0px; padding:0px;width:100%;height:100%" -->
+  <!-- style= "min-height: 100%;min-width: 100%;margin:0px; padding:0px;width:100%;height:100%" -->
+<div id="gamer" style="margin: 0px; padding:0px ;width:100%; height:100%; max-width: 100%; max-height: 100%">
+
+
+
+
+<div id=DivResultado class="container" style="display:none" >
+    
+  <table id="Clasificacion" class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Jugadores</th>
+        <th>Puntuación</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nosotros</td>
+        <td>25 buenas</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Ellos</td>
+        <td>5 buenas</td>
+        <td>2</td>
+      </tr>
+     </tbody>
+  </table>
+</div>
+
+
+<div id=DivSalasAmigos class="container" style="display:none; position: absolute;
+	top: 15px;
+	left: 30px;
+	right: 30px;
+	" >
+	<!-- <form id="FormSalaAmigos"> -->
+		<input type="text" id="InputSalas" onkeyup="FiltrarSalas()" placeholder="Buscar Salas..">
+		
+		<button type="button" id="BtnCrearSalas" class="btn btn-primary" onclick="MostrarCrearSala()">Crear Sala</button>
+		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onclick="NFARLTEOCI()">Cerrar</button>
+		<div id="lblAvisoSalas" style='color: #fff; font-size: 18px; text-shadow: 0px 0px 5px #000000;'>Las salas se eliminan transcurridos 7 días desde su último uso.</div> 
+		<div id='divtablasalas' style=' overflow: auto; background: rgba(255, 255, 255, 0.5);'>
+		<table id="TablaSalas" >
+		 <tr class="header">
+			<th style="width:60%;">Salas</th>
+			<th style="width:39%;">Creador</th>	
+			<th style="width:1%;visibility:hidden;"></th>
+		  </tr>
+		 </table>
+		 </div>
+	 <!-- </form> -->
+</div>
+
+<div id=DivClasificacion class="container" style="display:none; top: 15px;
+	left: 30px;
+	right: 30px;" >
+
+		<table id="TablaClasificacion">
+		 <tr class="header">
+			<th style="width:10%;">    </th>
+			<th style="width:40%;">_Jugador</th>
+			<th style="width:10%;">_Jugadas</th>
+			<th style="width:10%;">_Ganadas</th>
+			<th style="width:10%;">_Perdidas</th>
+			<th style="width:10%;">_Retiradas</th>
+			<th style="width:10%;">_Puntos</th>
+		  </tr>
+		</table>
+
+</div>
+
+<div id=DivCrearSala class="container" style="display:none" >
+	<form id="FormCrearSala">
+	<div class="form-group">
+	  <label for="sala">Sala:</label>
+	  <input type="text" class="form-control" id="sala" autocomplete="off">
+	</div>
+	<div class="form-group">
+	  <label for="pass">Password Sala:</label>
+	  <input type="text" class="form-control" id="pass" autocomplete="off">
+	</div>
+
+	 <button type="submit" class="btn btn-default">¡Crear Sala!</button>
+	 <button type="button" class="btn btn-default" onclick="NFARLTEOCI()" >Cancelar</button>
+
+	</form>
+</div>
+<div id=DivPasswordSala class="container" style="display:none" >
+	<form id="FormPasswordSala">
+	<div class="form-group">
+	  <label for="sala_pass">Sala:</label>
+	  <input type="text" class="form-control" id="sala_pass" readonly>
+	</div>
+	<div class="form-group">
+	  <label for="pass_pass">Password Sala:</label>
+	  <input type="text" class="form-control" id="pass_pass" autocomplete="off">
+	</div>
+<!-- 	<div class="form-group">
+		<input type="hidden" class="form-control" id="idSalaHidden" autocomplete="off">
+	</div> -->
+	
+	 <button type="submit" class="btn btn-default">¡Entrar Sala!</button>
+	 <button type="button" class="btn btn-default" onclick="NFARLTEOCI()" >Cancelar</button>
+	 <button id="btnEliminarSala" type="button" class="btn btn-default"  onclick="PTBEWVCTBF(document.getElementById('sala_pass').value)" >Eliminar Sala</button>
+	 
+	</form>
+</div>
+
+<div id="DivSalir" class="container"  style="display:none; position: absolute;
+	top: 30%;
+	left: 55%;
+    font-size: 18px; /* Increase font-size */
+	width: 50%;
+	height: 150px;
+	margin-left: -30%;
+	background:#fff;border-radius: 5px;	
+	text-align:center;
+	" >
+	
+	
+	 <!-- <label id="lblSalir">a</label><br> -->
+	  <div style="text-align:center; margin-top: 10px; " >
+	  <label id="lblSalir" ><center>a</center></label>
+	  </div>
+	
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onclick="RespuestaSalir(true)">Sí</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onclick="RespuestaSalir(false)" >No</button>
+	
+</div>
+
+
+<div id="chat" style="display:none" >
+	<form  id="FormChat" class="form-horizontal"> 
+		<div class="form-group">
+			<input  type="text" class="form-control" id="inputChat" placeholder="HXUNTIAKHM" autocomplete="off" maxlength="60" autocomplete="off">			
+					
+		</div> 
+	</form>
+</div>
+<div id="Login" class='redondeado1em' style="display:none" width=1000>
+<div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onclick="MCFSLYOMHE()" ><i class='fa fa-times'></i></div>
+		Logueate con<br>
+		<button onclick="RSHJSKMBRP(1)" style='margin-bottom: 7px'><i class='fa fa-google'></i> Google</button>
+		<button onclick="RSHJSKMBRP(2)" style='margin-bottom: 7px'><i class='fa fa-facebook-official'></i> Facebook</button>
+		<button onclick="RSHJSKMBRP(3)"><i class='fa fa-instagram'></i> Instagram</button>
+		<button onclick="RSHJSKMBRP(4)"><i class='fa fa-twitter'></i> Twitter</button>		
+</div> 
+
+</div>
+
+
+
+
+
+</body>
+
+</html>
+
