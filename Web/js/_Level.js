@@ -486,7 +486,7 @@ Level.prototype.create=function(){
 	}, this, 2, 1, 0);
 	TDRCQKMLDY.visible=false;
 	
-	UEHYPTREIH= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX - 120, YMHIHSNADE.world.height-100, 'Boton_solo', OCSBJTDODP, this, 2, 1, 0);
+	UEHYPTREIH= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX - 180, YMHIHSNADE.world.height-170, 'Boton_solo', OCSBJTDODP, this, 2, 1, 0);
 	UEHYPTREIH.visible=false;
 	UEHYPTREIH.width=UEHYPTREIH.width;
 	UEHYPTREIH.height=UEHYPTREIH.height;

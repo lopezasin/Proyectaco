@@ -96,22 +96,44 @@ Preload.prototype.preload = function() {
 	this.load.image('Boton_cambiar_7_off', 'assets/images/cambiar 7 gris.png');	
 	this.load.image('Boton_cantar_on', 'assets/images/cantar.png');	
 	this.load.image('Boton_cantar_off', 'assets/images/cantar gris.png');	
-	//this.load.image('Boton_chat_on', 'assets/images/chat.png');	
-	//this.load.image('Boton_chat_off', 'assets/images/chat gris.png');	
 	this.load.image('XJARYUVBCB', 'assets/images/desconectado.png');	
 	this.load.image('Conectado', 'assets/images/conectado.png');	
 	this.load.image('Copa', 'assets/images/copa.png');	
 	this.load.image('Perder', 'assets/images/perder.png');	
 	this.load.image('Boton_Salir', 'assets/images/salir.png');	
 	
-	console.log("ANTES");
+	if (1==1)
+	{
+	this.load.audio('VKEJRPCHKN','assets/sounds/reparto.wav');
+	this.load.audio('LFWPDMQYKH', 'assets/sounds/mesa.wav');
+	this.load.audio('BHLJBCKLKE', 'assets/sounds/cantes/20_oros.wav');
+	this.load.audio('SFVDEVFFCR', 'assets/sounds/cantes/20_copas.wav');
+	this.load.audio('KMBKTLXURD', 'assets/sounds/cantes/20_espadas.wav');
+	this.load.audio('Snd20Bastos', 'assets/sounds/cantes/20_bastos.wav');
+	this.load.audio('DPCNHOBNRM', 'assets/sounds/cantes/las_40.wav');
+	this.load.audio('GMKJKKAKMH', 'assets/sounds/cantes/las_40_2.wav');
+	
+	this.load.audio('UHKVCVBOMD', 'assets/sounds/idas.wav');
+	this.load.audio('LKGDBLGIEP', 'assets/sounds/vueltas.wav');
+	this.load.audio('VPGBDEHDIT', 'assets/sounds/a_por_ellos.wav');
+	this.load.audio('KFDIGGAMBI', 'assets/sounds/arrastro.wav');
+	this.load.audio('SndArrastro2', 'assets/sounds/arrastro_2.wav');
+	this.load.audio('DPIDINSQVF', 'assets/sounds/bocarrana.wav');
+	this.load.audio('GERQISACAV', 'assets/sounds/campeones.wav');
+	this.load.audio('TSXDMBDDID', 'assets/sounds/contar.wav');
+	this.load.audio('VLVITFRSLA', 'assets/sounds/coto_terminado.wav');
+	this.load.audio('LSQGNFJBGH', 'assets/sounds/espadilla.wav');
+	this.load.audio('CVJDMGILKI', 'assets/sounds/ore.wav');
+	this.load.audio('NEKUUPJKUV', 'assets/sounds/otra_vez.wav');
+	this.load.audio('MIKBDMVLOR', 'assets/sounds/tabazo.wav');
+	this.load.audio('SndTabazo2', 'assets/sounds/tabazo_2.wav');
+	this.load.audio('JDPOTVNRCT', 'assets/sounds/matanza_caballo.wav');
+	}
+	else
+	{
+		
 	this.load.audio('VKEJRPCHKN',['assets/sounds/reparto.wav', 'assets/sounds/reparto.mp3']);
 	this.load.audio('LFWPDMQYKH', ['assets/sounds/mesa.wav','assets/sounds/mesa.mp3']);
-	console.log("DESPUES");
-	
-
-
-
 	this.load.audio('BHLJBCKLKE', ['assets/sounds/cantes/20_oros.ogg','assets/sounds/cantes/20_oros.mp3']);
 	this.load.audio('SFVDEVFFCR', ['assets/sounds/cantes/20_copas.ogg','assets/sounds/cantes/20_copas.mp3']);
 	this.load.audio('KMBKTLXURD', ['assets/sounds/cantes/20_espadas.ogg','assets/sounds/cantes/20_espadas.mp3']);
@@ -119,7 +141,7 @@ Preload.prototype.preload = function() {
 	this.load.audio('DPCNHOBNRM', ['assets/sounds/cantes/las_40.ogg','assets/sounds/cantes/las_40.mp3']);
 	this.load.audio('GMKJKKAKMH', ['assets/sounds/cantes/las_40_2.ogg','assets/sounds/cantes/las_40_2.mp3']);
 	
-	this.load.audio('UHKVCVBOMD', ['assets/sounds/idas.wav', 'assets/sounds/idas.mp3']);
+	this.load.audio('UHKVCVBOMD', ['assets/sounds/idas.ogg', 'assets/sounds/idas.mp3']);
 	this.load.audio('LKGDBLGIEP', ['assets/sounds/vueltas.ogg','assets/sounds/vueltas.mp3']);
 	this.load.audio('VPGBDEHDIT', ['assets/sounds/a_por_ellos.ogg','assets/sounds/a_por_ellos.mp3']);
 	this.load.audio('KFDIGGAMBI', ['assets/sounds/arrastro.ogg','assets/sounds/arrastro.mp3']);
@@ -134,7 +156,8 @@ Preload.prototype.preload = function() {
 	this.load.audio('MIKBDMVLOR', ['assets/sounds/tabazo.ogg','assets/sounds/tabazo.mp3']);
 	this.load.audio('SndTabazo2', ['assets/sounds/tabazo_2.ogg','assets/sounds/tabazo_2.mp3']);
 	this.load.audio('JDPOTVNRCT', ['assets/sounds/matanza_caballo.ogg','assets/sounds/matanza_caballo.mp3']);
-	//this.load.audio('PDSPWPACWB', ['assets/sounds/mata_companero.ogg','assets/sounds/mata_companero.mp3']);
+	
+	}
 
 
 	
