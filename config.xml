@@ -5,7 +5,7 @@
         Videojuego de guiñote
     </description>
     <author email="ivan@lopez.es" href="http://www.guiñotepro.es">
-        PhoneGap Team
+        Iván López Asín
     </author>
     <content src="index.html" />
     <access origin="*" />
