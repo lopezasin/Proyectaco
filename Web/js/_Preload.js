@@ -104,30 +104,30 @@ Preload.prototype.preload = function() {
 	
 	if (1==1)
 	{
-	this.load.audio('VKEJRPCHKN','assets/sounds/reparto.wav');
-	this.load.audio('LFWPDMQYKH', 'assets/sounds/mesa.wav');
-	this.load.audio('BHLJBCKLKE', 'assets/sounds/cantes/20_oros.wav');
-	this.load.audio('SFVDEVFFCR', 'assets/sounds/cantes/20_copas.wav');
-	this.load.audio('KMBKTLXURD', 'assets/sounds/cantes/20_espadas.wav');
-	this.load.audio('Snd20Bastos', 'assets/sounds/cantes/20_bastos.wav');
-	this.load.audio('DPCNHOBNRM', 'assets/sounds/cantes/las_40.wav');
-	this.load.audio('GMKJKKAKMH', 'assets/sounds/cantes/las_40_2.wav');
+	this.load.audio('VKEJRPCHKN',['assets/sounds/reparto.wav', 'assets/sounds/reparto.mp3']);
+	this.load.audio('LFWPDMQYKH', ['assets/sounds/mesa.wav','assets/sounds/mesa.mp3']);
+	this.load.audio('BHLJBCKLKE', ['assets/sounds/cantes/20_oros.wav','assets/sounds/cantes/20_oros.ogg']);
+	this.load.audio('SFVDEVFFCR', ['assets/sounds/cantes/20_copas.wav','assets/sounds/cantes/20_copas.ogg']);
+	this.load.audio('KMBKTLXURD', ['assets/sounds/cantes/20_espadas.wav','assets/sounds/cantes/20_espadas.ogg']);
+	this.load.audio('Snd20Bastos', ['assets/sounds/cantes/20_bastos.wav','assets/sounds/cantes/20_bastos.ogg']);
+	this.load.audio('DPCNHOBNRM', ['assets/sounds/cantes/las_40.wav','assets/sounds/cantes/las_40.ogg']);
+	this.load.audio('GMKJKKAKMH', ['assets/sounds/cantes/las_40_2.wav','assets/sounds/cantes/las_40_2.ogg']);
 	
-	this.load.audio('UHKVCVBOMD', 'assets/sounds/idas.wav');
-	this.load.audio('LKGDBLGIEP', 'assets/sounds/vueltas.wav');
-	this.load.audio('VPGBDEHDIT', 'assets/sounds/a_por_ellos.wav');
-	this.load.audio('KFDIGGAMBI', 'assets/sounds/arrastro.wav');
-	this.load.audio('SndArrastro2', 'assets/sounds/arrastro_2.wav');
-	this.load.audio('DPIDINSQVF', 'assets/sounds/bocarrana.wav');
-	this.load.audio('GERQISACAV', 'assets/sounds/campeones.wav');
-	this.load.audio('TSXDMBDDID', 'assets/sounds/contar.wav');
-	this.load.audio('VLVITFRSLA', 'assets/sounds/coto_terminado.wav');
-	this.load.audio('LSQGNFJBGH', 'assets/sounds/espadilla.wav');
-	this.load.audio('CVJDMGILKI', 'assets/sounds/ore.wav');
-	this.load.audio('NEKUUPJKUV', 'assets/sounds/otra_vez.wav');
-	this.load.audio('MIKBDMVLOR', 'assets/sounds/tabazo.wav');
-	this.load.audio('SndTabazo2', 'assets/sounds/tabazo_2.wav');
-	this.load.audio('JDPOTVNRCT', 'assets/sounds/matanza_caballo.wav');
+	this.load.audio('UHKVCVBOMD', ['assets/sounds/idas.wav', 'assets/sounds/idas.mp3']);
+	this.load.audio('LKGDBLGIEP', ['assets/sounds/vueltas.wav','assets/sounds/vueltas.ogg']);
+	this.load.audio('VPGBDEHDIT', ['assets/sounds/a_por_ellos.wav','assets/sounds/a_por_ellos.ogg']);
+	this.load.audio('KFDIGGAMBI', ['assets/sounds/arrastro.wav','assets/sounds/arrastro.ogg']);
+	this.load.audio('SndArrastro2', ['assets/sounds/arrastro_2.wav','assets/sounds/arrastro_2.ogg']);
+	this.load.audio('DPIDINSQVF', ['assets/sounds/bocarrana.wav','assets/sounds/bocarrana.ogg']);
+	this.load.audio('GERQISACAV', ['assets/sounds/campeones.wav','assets/sounds/campeones.ogg']);
+	this.load.audio('TSXDMBDDID', ['assets/sounds/contar.wav','assets/sounds/contar.ogg']);
+	this.load.audio('VLVITFRSLA', ['assets/sounds/coto_terminado.wav','assets/sounds/coto_terminado.ogg']);
+	this.load.audio('LSQGNFJBGH', ['assets/sounds/espadilla.wav','assets/sounds/espadilla.ogg']);
+	this.load.audio('CVJDMGILKI', ['assets/sounds/ore.wav','assets/sounds/ore.ogg']);
+	this.load.audio('NEKUUPJKUV', ['assets/sounds/otra_vez.wav','assets/sounds/otra_vez.ogg']);
+	this.load.audio('MIKBDMVLOR', ['assets/sounds/tabazo.wav','assets/sounds/tabazo.ogg']);
+	this.load.audio('SndTabazo2', ['assets/sounds/tabazo_2.wav','assets/sounds/tabazo_2.ogg']);
+	this.load.audio('JDPOTVNRCT', ['assets/sounds/matanza_caballo.wav','assets/sounds/matanza_caballo.ogg']);
 	}
 	else
 	{

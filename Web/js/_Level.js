@@ -1015,7 +1015,7 @@ RSHJSKMBRP=function(Tipo)
 			break;		
 			
 			case 2 :		
-			ref = cordova.InAppBrowser.open(Maquina+'auth/facebook', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(Maquina+'/auth/facebook', '_blank', 'location=no');
 			break;	
 			
 			case 3 :		
