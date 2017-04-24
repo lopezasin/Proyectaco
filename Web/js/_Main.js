@@ -1,13 +1,26 @@
 ﻿window.onload = function() {
 
 
-	
+
 	//if (window.innerHeight/window.innerWidth<0.55)
 	//{
-		var ancho=1366;
-		var alto=662;
-	//	console.log("PC");
+	
+//if window.innerHeight+" "+window.innerWidth
+var ancho;
+var alto;
+if (window.innerHeight/window.innerWidth<0.6)
+{	
+	ancho=1366;
+	alto=662;
+}
+else
+{
+	ancho=1300
+	alto=850;
+}
+		//	console.log("PC");
 
+	
 	//}
 	//else
 	//{

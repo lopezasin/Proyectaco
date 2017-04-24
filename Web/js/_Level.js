@@ -12,7 +12,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var vProduccion=true;
+var vProduccion=false;
 
 var Maquina;
 if (vProduccion==true){
@@ -21,7 +21,8 @@ if (vProduccion==true){
 else
 {
 	//Maquina='http://localhost:5000'		
-	Maquina='http://192.168.1.100:5000'		
+	//Maquina='http://192.168.1.100:5000'		
+	Maquina='http://192.168.43.100:5000'		
 }
 
 
@@ -615,7 +616,7 @@ Level.prototype.create=function(){
 		CUUKQAGFEB.visible=false;
 	}
 	
-						
+	//SVHMCOYULR(window.innerHeight+" "+window.innerWidth);					
 	//BUJELVTIKU=YMHIHSNADE.add.sprite(YMHIHSNADE.world.centerX,YMHIHSNADE.world.centerY, 'Copa');
 
 	
