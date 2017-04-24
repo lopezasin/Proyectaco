@@ -13,7 +13,7 @@ var isCordovaApp = document.URL.indexOf('http://') === -1
 
 Inicia=function()
 {
-	
+	console.log("Entra a iniciar");
 	var ancho;
 	var alto;
 	if (window.innerHeight/window.innerWidth<0.6)

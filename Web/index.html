@@ -192,14 +192,10 @@ function FiltrarSalas() {
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-	if (window.cordova==true)
-	{
+
 		window.open = cordova.InAppBrowser.open;
 		Inicia();
-		/*if (cordova.backgroundapp.resumeType == 'launch') {
-			renderUi();
-		}*/
-	}
+
 }
 
 
