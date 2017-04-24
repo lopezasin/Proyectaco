@@ -113,7 +113,7 @@ Preload.prototype.preload = function() {
 	this.load.audio('DPCNHOBNRM', ['/'+'assets/sounds/cantes/las_40.wav','/'+'assets/sounds/cantes/las_40.ogg']);
 	this.load.audio('GMKJKKAKMH', ['/'+'assets/sounds/cantes/las_40_2.wav','/'+'assets/sounds/cantes/las_40_2.ogg']);
 	
-	this.load.audio('UHKVCVBOMD', ['/'+'assets/sounds/idas.wav', '/'+'assets/sounds/idas.mp3']);
+	this.load.audio('UHKVCVBOMD', '/'+'assets/sounds/idas.wav');
 	this.load.audio('LKGDBLGIEP', ['/'+'assets/sounds/vueltas.wav','/'+'assets/sounds/vueltas.ogg']);
 	this.load.audio('VPGBDEHDIT', ['/'+'assets/sounds/a_por_ellos.wav','/'+'assets/sounds/a_por_ellos.ogg']);
 	this.load.audio('KFDIGGAMBI', ['/'+'assets/sounds/arrastro.wav','/'+'assets/sounds/arrastro.ogg']);
