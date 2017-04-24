@@ -9,7 +9,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-	
+	<content src="index.html" />
 	<allow-navigation href="http://*/*" />
 	<allow-intent href="https://*/*" />
 	
