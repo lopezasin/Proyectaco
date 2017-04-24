@@ -9,12 +9,12 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-	<content src="index.html" />
+	
 	<allow-navigation href="http://*/*" />
 	<allow-intent href="https://*/*" />
 	
 	<preference name="Orientation" value="landscape" />
-	
+	<preference name="LoadUrlTimeoutValue" value="70000"/>
 	
     <plugin name="cordova-plugin-inappbrowser" />
 	<plugin name="cordova-plugin-vibration" />

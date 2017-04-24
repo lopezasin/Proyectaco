@@ -238,7 +238,7 @@ Preload.prototype.preload = function() {
 
 LoadCordova=function(Audio,RutaOrigen)
 {
-	window.plugins.NativeAudio.preloadComplex(Audio, RutaOrigen, 1, 1, 0, function(msg){
+	window.plugins.NativeAudio.preloadComplex(Audio, RutaOrigen, 1, 20, 0, function(msg){
 	}, function(msg){
 		console.log( 'error cargando: ' + Audio );
 	});
