@@ -136,7 +136,7 @@ Preload.prototype.preload = function() {
 	else
 	{
 		
-		
+		console.log("No Cordova!")
 	
 		this.load.audio('VKEJRPCHKN','assets/sounds/reparto.mp3');
 		this.load.audio('LFWPDMQYKH', 'assets/sounds/mesa.mp3');
@@ -238,7 +238,7 @@ Preload.prototype.preload = function() {
 
 LoadCordova=function(Audio,RutaOrigen)
 {
-	window.plugins.NativeAudio.preloadComplex(Audio, RutaOrigen, 1, 20, 0, function(msg){
+	window.plugins.NativeAudio.preloadComplex(Audio, RutaOrigen, 1, 1, 0, function(msg){
 	}, function(msg){
 		console.log( 'error cargando: ' + Audio );
 	});
