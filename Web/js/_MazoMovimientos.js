@@ -5,30 +5,32 @@
 	if (DAIGBSWBCE==true)
 	{
 	
-		switch (OTBFIOUAIV)
+		if( window.plugins && window.plugins.NativeAudio )
 		{
+			switch (OTBFIOUAIV)
+			{
 			case 'WWYKUMYJBJ' :
-				VKEJRPCHKN.play();
+				window.plugins.NativeAudio.play('VKEJRPCHKN');
 				break;
 
 			case 'CVRQKCGIRI' :
-				LFWPDMQYKH.play();
+				window.plugins.NativeAudio.play('LFWPDMQYKH');
 				break;
 			
 			case 'BNSLLGGORP' :
-				BHLJBCKLKE.play();
+				window.plugins.NativeAudio.play('BHLJBCKLKE');
 				break;	
 			
 			case 'TKYUFYJRRA' :
-				SFVDEVFFCR.play();
+				window.plugins.NativeAudio.play('SFVDEVFFCR');
 				break;		
 			
 			case 'LFYAQLIDAI' :
-				KMBKTLXURD.play();
+				window.plugins.NativeAudio.play('KMBKTLXURD');
 				break;		
 			
 			case 'CEDKIIHEHO' :
-				Snd20Bastos.play();
+				window.plugins.NativeAudio.play('Snd20Bastos');
 				break;		
 				
 			case 'CPBEWFVQIJ' :
@@ -36,22 +38,22 @@
 				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
 				if (LXGKVFJUFT==1)
 				{
-					DPCNHOBNRM.play();
+					window.plugins.NativeAudio.play('DPCNHOBNRM');
 				}
 				else
 				{
-					GMKJKKAKMH.play();
+					window.plugins.NativeAudio.play('GMKJKKAKMH');
 				}
 
 				break;		
 				
 				
 			case 'JCIRYRCUJJ' :
-				UHKVCVBOMD.play();
+				window.plugins.NativeAudio.play('UHKVCVBOMD');
 				break;	
 
 			case 'CLVBGPCTEJ' :
-				LKGDBLGIEP.play();
+				window.plugins.NativeAudio.play('LKGDBLGIEP');
 				break;	
 				
 		
@@ -62,11 +64,11 @@
 				
 				if (LXGKVFJUFT==1)
 				{
-					KFDIGGAMBI.play();
+					window.plugins.NativeAudio.play('KFDIGGAMBI');
 				}
 				if (LXGKVFJUFT==2)
 				{
-					MWLXRMDQXK.play();
+					window.plugins.NativeAudio.play('MWLXRMDQXK');
 				}
 				break;	
 				
@@ -75,27 +77,27 @@
 				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
 				if (LXGKVFJUFT==1)
 				{
-					DPIDINSQVF.play();
+					window.plugins.NativeAudio.play('DPIDINSQVF');
 				}
 				break;	
 
 			case 'JCGKEWDJBQ' :
-				GERQISACAV.play();
+				window.plugins.NativeAudio.play('GERQISACAV');
 				break;		
 
 			case 'CAGCUMKBGA' :
-				TSXDMBDDID.play();
+				window.plugins.NativeAudio.play('TSXDMBDDID');
 				break;	
 
 			case 'TSYFNOWESC' :
-				VLVITFRSLA.play();
+				window.plugins.NativeAudio.play('VLVITFRSLA');
 				break;		
 
 			case 'XKBVJQJRBV' :
 				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
 				if (LXGKVFJUFT==1)
 				{
-					LSQGNFJBGH.play();
+					window.plugins.NativeAudio.play('LSQGNFJBGH');
 				}
 		
 				break;		
@@ -104,7 +106,7 @@
 				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
 				if (LXGKVFJUFT==1)
 				{
-					CVJDMGILKI.play();
+					window.plugins.NativeAudio.play('CVJDMGILKI');
 				}
 			
 				break;	
@@ -113,11 +115,11 @@
 				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
 				if (LXGKVFJUFT==1)
 				{
-					NEKUUPJKUV.play();
+					window.plugins.NativeAudio.play('NEKUUPJKUV');
 				}
 				if (LXGKVFJUFT==2)
 				{
-					VPGBDEHDIT.play();
+					window.plugins.NativeAudio.play('VPGBDEHDIT');
 				}				
 				
 				break;		
@@ -126,11 +128,11 @@
 				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
 				if (LXGKVFJUFT==1)
 				{
-					MIKBDMVLOR.play();
+					window.plugins.NativeAudio.play('MIKBDMVLOR');
 				}
 				if (LXGKVFJUFT==2)
 				{
-					HKHCMJEIUU.play();
+					window.plugins.NativeAudio.play('HKHCMJEIUU');
 				}	
 				
 				break;	
@@ -141,18 +143,160 @@
 				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
 				if (LXGKVFJUFT==1)
 				{
-					JDPOTVNRCT.play();
+					window.plugins.NativeAudio.play('JDPOTVNRCT');
 				}
 				
 				break;			
 				
-			/*case 'TEOMREMTLG' :
-				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
-				if (LXGKVFJUFT==1)
-				{
-					PDSPWPACWB.play();
-				}
-				break;	*/				
+		
+			}		
+			
+		}
+		else
+		{
+			switch (OTBFIOUAIV)
+			{
+				case 'WWYKUMYJBJ' :
+					VKEJRPCHKN.play();
+					break;
+
+				case 'CVRQKCGIRI' :
+					LFWPDMQYKH.play();
+					break;
+				
+				case 'BNSLLGGORP' :
+					BHLJBCKLKE.play();
+					break;	
+				
+				case 'TKYUFYJRRA' :
+					SFVDEVFFCR.play();
+					break;		
+				
+				case 'LFYAQLIDAI' :
+					KMBKTLXURD.play();
+					break;		
+				
+				case 'CEDKIIHEHO' :
+					Snd20Bastos.play();
+					break;		
+					
+				case 'CPBEWFVQIJ' :
+					
+					LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+					if (LXGKVFJUFT==1)
+					{
+						DPCNHOBNRM.play();
+					}
+					else
+					{
+						GMKJKKAKMH.play();
+					}
+
+					break;		
+					
+					
+				case 'JCIRYRCUJJ' :
+					UHKVCVBOMD.play();
+					break;	
+
+				case 'CLVBGPCTEJ' :
+					LKGDBLGIEP.play();
+					break;	
+					
+			
+
+				case 'USNAAQWHUY' :
+					
+					LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+					
+					if (LXGKVFJUFT==1)
+					{
+						KFDIGGAMBI.play();
+					}
+					if (LXGKVFJUFT==2)
+					{
+						MWLXRMDQXK.play();
+					}
+					break;	
+					
+				
+				case 'DNBXXHKKYK' :
+					LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
+					if (LXGKVFJUFT==1)
+					{
+						DPIDINSQVF.play();
+					}
+					break;	
+
+				case 'JCGKEWDJBQ' :
+					GERQISACAV.play();
+					break;		
+
+				case 'CAGCUMKBGA' :
+					TSXDMBDDID.play();
+					break;	
+
+				case 'TSYFNOWESC' :
+					VLVITFRSLA.play();
+					break;		
+
+				case 'XKBVJQJRBV' :
+					LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
+					if (LXGKVFJUFT==1)
+					{
+						LSQGNFJBGH.play();
+					}
+			
+					break;		
+
+				case 'LMAYDDUATD' :
+					LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
+					if (LXGKVFJUFT==1)
+					{
+						CVJDMGILKI.play();
+					}
+				
+					break;	
+
+				case 'YURJWRGUNO' :
+					LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+					if (LXGKVFJUFT==1)
+					{
+						NEKUUPJKUV.play();
+					}
+					if (LXGKVFJUFT==2)
+					{
+						VPGBDEHDIT.play();
+					}				
+					
+					break;		
+
+				case 'OTSNYLXEHR' :
+					LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+					if (LXGKVFJUFT==1)
+					{
+						MIKBDMVLOR.play();
+					}
+					if (LXGKVFJUFT==2)
+					{
+						HKHCMJEIUU.play();
+					}	
+					
+					break;	
+
+								
+				case 'OJJBAIPHEV' :
+				
+					LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
+					if (LXGKVFJUFT==1)
+					{
+						JDPOTVNRCT.play();
+					}
+					
+					break;			
+					
+			
+			}
 		}
 	}
 }
