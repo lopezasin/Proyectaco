@@ -22,7 +22,7 @@ else
 {
 	//Maquina='http://localhost:5000'		
 	//Maquina='http://192.168.1.100:5000'		
-	Maquina='http://192.168.43.100:5000'		
+	Maquina='http://192.168.1.100:5000'		
 }
 
 
