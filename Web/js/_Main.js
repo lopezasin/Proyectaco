@@ -23,8 +23,8 @@ Inicia=function()
 	}
 	else
 	{
-		ancho=1300
-		alto=850;
+		ancho=1300;
+		alto=900;
 	}
 		
 	var config = {  width: ancho,  height: alto, id:'koko',  renderer: 1,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: true }

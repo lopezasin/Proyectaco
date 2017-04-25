@@ -135,7 +135,8 @@ var YAJVUBPNNW=15;
 var DFBVDPETGO;
 var IRXOKNWTLV=150;//120
 var TFSXFTYVGQ;
-var MDYSFNYPYP=250; 
+var MDYSFNYPYP=250;
+var vVelocidadRobar=350; 
 //var RDBQUAVHEP=4;
 var DVNRTQIWGL=0;
 var TGTQPBEQFR;
@@ -338,6 +339,14 @@ Level.prototype.create=function(){
 	HKHCMJEIUU = YMHIHSNADE.add.audio('SndTabazo2');
 	JDPOTVNRCT=YMHIHSNADE.add.audio('JDPOTVNRCT');
 	//PDSPWPACWB= YMHIHSNADE.add.audio('PDSPWPACWB');
+	
+	console.log("No audio "+YMHIHSNADE.sound.noAudio);
+	VKEJRPCHKN.play();
+	console.log("Audio Tag: "+VKEJRPCHKN.usingAudioTag);
+	console.log("WebAudio Tag: "+VKEJRPCHKN.usingWebAudio);
+	console.log("Sonando: "+VKEJRPCHKN.isPlaying);
+
+	
 	
 	NHLRWTHYVG=false;
 	VKYLOUGFGR=false;

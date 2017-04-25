@@ -2185,7 +2185,7 @@ CGCMEMLMAG=function(TKWCTNGROU,LDCCGSIBKW){
 						,y:GHTWROCHVV
 						,angle:KKQWKUGGSI
 						}
-						, MDYSFNYPYP, KYFMRVNHIQ);
+						, vVelocidadRobar, KYFMRVNHIQ);
 						PQUFIBKJJH.onComplete.add(//BHRQQCWPGM,this)
 							function () {
 								OROGRNBISW(XACEBCSJAB,UBWRXKMTQN);
@@ -2288,7 +2288,7 @@ BHRQQCWPGM=function(TKWCTNGROU,LDCCGSIBKW){
 						,y:GHTWROCHVV
 						,angle:KKQWKUGGSI
 						}
-						, MDYSFNYPYP, KYFMRVNHIQ);
+						, vVelocidadRobar, KYFMRVNHIQ);
 						PQUFIBKJJH.onComplete.add(//NDYHJQQAUL,this)
 							function () {
 								OROGRNBISW(XACEBCSJAB,UBWRXKMTQN);
@@ -2376,7 +2376,7 @@ NDYHJQQAUL=function(TKWCTNGROU,LDCCGSIBKW){
 						,y:GHTWROCHVV
 						,angle:KKQWKUGGSI
 						}
-						, MDYSFNYPYP, KYFMRVNHIQ);
+						, vVelocidadRobar, KYFMRVNHIQ);
 					PQUFIBKJJH.onComplete.add(//TMUBOPUYAH,this)
 							function () {
 								OROGRNBISW(XACEBCSJAB,UBWRXKMTQN);
