@@ -133,8 +133,8 @@ Preload.prototype.preload = function() {
 		
 		
 	}
-	else
-	{
+	//else
+	//{
 		
 		console.log("No Cordova!")
 	
@@ -162,7 +162,7 @@ Preload.prototype.preload = function() {
 		this.load.audio('MIKBDMVLOR', 'assets/sounds/tabazo.mp3');
 		this.load.audio('SndTabazo2','assets/sounds/tabazo_2.mp3');
 		this.load.audio('JDPOTVNRCT', 'assets/sounds/matanza_caballo.mp3');
-	}
+	//}
 	
 	/*else
 	{
