@@ -102,7 +102,7 @@ Preload.prototype.preload = function() {
 	this.load.image('Perder', 'assets/images/perder.png');	
 	this.load.image('Boton_Salir', 'assets/images/salir.png');	
 	
-/*	if( window.plugins && window.plugins.NativeAudio )
+	if( window.plugins && window.plugins.NativeAudio )
 	{
 		console.log("Cordova!")
 		LoadCordova('VKEJRPCHKN','assets/sounds/reparto.mp3');
@@ -132,7 +132,7 @@ Preload.prototype.preload = function() {
 	
 		
 		
-	}*/
+	}
 	//else
 	//{
 		
