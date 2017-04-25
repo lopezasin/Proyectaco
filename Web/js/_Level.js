@@ -341,7 +341,7 @@ Level.prototype.create=function(){
 	//PDSPWPACWB= YMHIHSNADE.add.audio('PDSPWPACWB');
 	
 	console.log("No audio "+YMHIHSNADE.sound.noAudio);
-	VKEJRPCHKN.play();
+	//VKEJRPCHKN.play();
 	console.log("Audio Tag: "+VKEJRPCHKN.usingAudioTag);
 	console.log("WebAudio Tag: "+VKEJRPCHKN.usingWebAudio);
 	console.log("Sonando: "+VKEJRPCHKN.isPlaying);

@@ -5,7 +5,8 @@
 	if (DAIGBSWBCE==true)
 	{
 	
-		if( window.plugins && window.plugins.NativeAudio )
+		
+		if( window.plugins && window.plugins.NativeAudio && 1==2 )
 		{
 			switch (OTBFIOUAIV)
 			{
