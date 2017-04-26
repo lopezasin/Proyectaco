@@ -12,7 +12,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var vProduccion=true;
+var vProduccion=false;
 
 var Maquina;
 if (vProduccion==true){
@@ -340,11 +340,12 @@ Level.prototype.create=function(){
 	JDPOTVNRCT=YMHIHSNADE.add.audio('JDPOTVNRCT');
 	//PDSPWPACWB= YMHIHSNADE.add.audio('PDSPWPACWB');
 	
-	console.log("No audio "+YMHIHSNADE.sound.noAudio);
+	//console.log(YMHIHSNADE.sound.usingAudioTag);
+	/*console.log("No audio "+YMHIHSNADE.sound.noAudio);
 	VKEJRPCHKN.play();
 	console.log("Audio Tag: "+VKEJRPCHKN.usingAudioTag);
 	console.log("WebAudio Tag: "+VKEJRPCHKN.usingWebAudio);
-	console.log("Sonando: "+VKEJRPCHKN.isPlaying);
+	console.log("Sonando: "+VKEJRPCHKN.isPlaying);*/
 
 	
 	

@@ -1,12 +1,15 @@
 ﻿EABXADHEVT=function(OTBFIOUAIV)
 {
 	var LXGKVFJUFT;
-	
+	var lAudioTag=false;
 	if (DAIGBSWBCE==true)
 	{
 	
-		
-		if( window.plugins && window.plugins.NativeAudio && 1==2 )
+		lAudioTag=YMHIHSNADE.sound.usingAudioTag;
+	
+	
+	
+		if( window.plugins && window.plugins.NativeAudio && lAudioTag==true )
 		{
 			switch (OTBFIOUAIV)
 			{
