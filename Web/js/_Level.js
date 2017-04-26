@@ -1041,12 +1041,13 @@ RSHJSKMBRP=function(Tipo)
 			ref.addEventListener('loadstop', function(e) {
 				var loc = e.url;
 				//when url is changed check if the url contains your specific callbackURL
-				//if (loc.search(data.callbackURL) >= 0) {
+				console.log("LOC "+loc);
+				if (loc=='http://xn--guiotepro-n6a.es/') {
 				//at this point close your inapp browser
 				//you will land on the index page within your application.
 				ref.close();
 				//your code after successful authentication
-				//}
+				}
 				});
 			break;	
 		}
