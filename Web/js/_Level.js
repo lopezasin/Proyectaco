@@ -12,7 +12,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var vProduccion=false;
+var vProduccion=true;
 
 var Maquina;
 if (vProduccion==true){
