@@ -1045,6 +1045,17 @@ RSHJSKMBRP=function(Tipo)
 				if (loc=='http://xn--guiotepro-n6a.es/') {
 				//at this point close your inapp browser
 				//you will land on the index page within your application.
+				var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
+				PUBDSNTIUS.add(2000, function(){
+					
+					YHNMANDWLT();
+					JVEHDHOEEM();
+				
+																		
+			
+				});
+				PUBDSNTIUS.start();
+				
 				ref.close();
 				//your code after successful authentication
 				}
@@ -1052,8 +1063,16 @@ RSHJSKMBRP=function(Tipo)
 			
 			ref.addEventListener('exit', function(e) {
 
-				YHNMANDWLT();
-				JVEHDHOEEM();
+				var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
+				PUBDSNTIUS.add(10000, function(){
+					
+					YHNMANDWLT();
+					JVEHDHOEEM();
+				
+																		
+			
+				});
+				PUBDSNTIUS.start();
 
 				
 				});				
