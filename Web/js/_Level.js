@@ -1048,8 +1048,8 @@ RSHJSKMBRP=function(Tipo)
 				var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
 				PUBDSNTIUS.add(2000, function(){
 					
-					FHKOYDXPCL();
-					JVEHDHOEEM();
+					SalirDesdeLogueo();
+					
 				
 																		
 			
@@ -1061,7 +1061,7 @@ RSHJSKMBRP=function(Tipo)
 				}
 				});
 			
-			ref.addEventListener('exit', function(e) {
+			/*ref.addEventListener('exit', function(e) {
 
 				var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
 				PUBDSNTIUS.add(10000, function(){
@@ -1075,7 +1075,7 @@ RSHJSKMBRP=function(Tipo)
 				PUBDSNTIUS.start();
 
 				
-				});				
+				});	*/			
 			break;	
 		}
 	}
@@ -3926,6 +3926,21 @@ FHKOYDXPCL=function()
 	YMHIHSNADE.state.start("Level");	
 }
 
+SalirDesdeLogueo=function()
+{
+	NFARLTEOCI();
+	EHUHWTYXOS=false;
+	//	WNEWPCNXPA();
+	socket.disconnect();
+	
+	//XIQDONAJMM.visible=true;
+	YJEISFVFQY();
+	QSAXUCPASV();	
+	WNEWPCNXPA();
+	PWGIQBBAWX=true;
+	XEMENNVXGV();
+	JVEHDHOEEM();
+}
 
 EXBCVLOIYJ=function(XQLEOGMJYG,Origen)
 {
