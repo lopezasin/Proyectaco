@@ -1048,7 +1048,7 @@ RSHJSKMBRP=function(Tipo)
 				var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
 				PUBDSNTIUS.add(2000, function(){
 					
-					YHNMANDWLT();
+					FHKOYDXPCL();
 					JVEHDHOEEM();
 				
 																		
@@ -1066,7 +1066,7 @@ RSHJSKMBRP=function(Tipo)
 				var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
 				PUBDSNTIUS.add(10000, function(){
 					
-					YHNMANDWLT();
+					FHKOYDXPCL();
 					JVEHDHOEEM();
 				
 																		
