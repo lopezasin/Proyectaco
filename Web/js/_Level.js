@@ -1046,11 +1046,17 @@ RSHJSKMBRP=function(Tipo)
 				//at this point close your inapp browser
 				//you will land on the index page within your application.
 				ref.close();
-				//YHNMANDWLT();
-				JVEHDHOEEM();
 				//your code after successful authentication
 				}
 				});
+			
+			ref.addEventListener('exit', function(e) {
+
+				YHNMANDWLT();
+				JVEHDHOEEM();
+
+				}
+				});				
 			break;	
 		}
 	}
