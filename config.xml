@@ -23,7 +23,7 @@
 	</feature>
 
 
-(in app/AndroidManifest.xml)
+
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	
 	<preference name="Orientation" value="landscape" />
