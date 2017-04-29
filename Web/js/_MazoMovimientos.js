@@ -2259,14 +2259,14 @@ function checkConnection() {
 			
 
 			
-			if (networkState==Connection.NONE)
+			/*if (networkState==Connection.NONE)
 			{
 				SVHMCOYULR('Sin Conexión');
 			}
 			else
-			{
-				SVHMCOYULR('Connection type: ' + navigator.connection.type);
-			}
+			{*/
+				SVHMCOYULR('Tipo: ' + navigator.connection.type);
+			//}
 		
 		}
 		catch(e)
