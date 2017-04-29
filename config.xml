@@ -12,6 +12,19 @@
 	
 	<allow-navigation href="http://*/*" />
 	<allow-intent href="https://*/*" />
+
+	<feature name="NetworkStatus">
+		<param name="ios-package" value="CDVConnection" />
+	</feature>
+
+	
+	<feature name="NetworkStatus">
+		<param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+	</feature>
+
+
+(in app/AndroidManifest.xml)
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	
 	<preference name="Orientation" value="landscape" />
 		

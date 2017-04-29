@@ -1779,6 +1779,8 @@ XEMENNVXGV=function()
 }
 JVEHDHOEEM=function(){
 	
+	checkConnection();
+	
 	CUUKQAGFEB.x=QETACVSHAR+150;
 	CUUKQAGFEB.visible=true;
 	XEMENNVXGV();
