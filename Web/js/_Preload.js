@@ -136,7 +136,7 @@ Preload.prototype.preload = function() {
 	//else
 	//{
 		
-		console.log("No Cordova!")
+
 	
 	this.load.audio('VKEJRPCHKN',['assets/sounds/reparto.ogg', 'assets/sounds/reparto.mp3']);
 	this.load.audio('LFWPDMQYKH', ['assets/sounds/mesa.ogg','assets/sounds/mesa.mp3']);

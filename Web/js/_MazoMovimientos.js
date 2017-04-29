@@ -2237,7 +2237,7 @@ function checkConnection() {
 	var isCordovaApp = document.URL.indexOf('http://') === -1
 		&& document.URL.indexOf('https://') === -1;
 
-
+	SVHMCOYULR("Chequeando");
 	if (isCordovaApp==true)
 	{
 		
@@ -2262,7 +2262,7 @@ function checkConnection() {
 		}
 		catch(e)
 		{
-			console.log("Error "+e)
+			SVHMCOYULR("Error "+e);
 		}
 	}
 	else
