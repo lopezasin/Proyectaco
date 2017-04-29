@@ -2238,7 +2238,7 @@ function checkConnection() {
 		&& document.URL.indexOf('https://') === -1;
 
 	SVHMCOYULR("Chequeando");
-	if (isCordovaApp==true)
+	if (window.plugins)
 	{
 		
 		try
