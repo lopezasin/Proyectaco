@@ -2241,8 +2241,10 @@ function checkConnection() {
 	if (isCordovaApp==true)
 	{
 		
+		try
+		{
 		var networkState = navigator.connection.type;
-		var states = {};
+		/*var states = {};
     
 
 
@@ -2253,9 +2255,15 @@ function checkConnection() {
 		states[Connection.CELL_3G]  = 'Cell 3G connection';
 		states[Connection.CELL_4G]  = 'Cell 4G connection';
 		states[Connection.CELL]     = 'Cell generic connection';
-		states[Connection.NONE]     = 'No network connection';
+		states[Connection.NONE]     = 'No network connection';*/
+		
 
-		SVHMCOYULR('Connection type: ' + states[networkState]);
+		SVHMCOYULR('Connection type: ' + navigator.connection.type);
+		}
+		catch(e)
+		{
+			console.log("Error "+e)
+		}
 	}
 	else
 	{
