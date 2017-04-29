@@ -235,10 +235,7 @@ var ATTUXTNNKX;
 var XQDPVWOUII
 //var cambiar=1;
 
-/*PhaserInput.onKeyboardClose.addOnce(function() {
-	SVHMCOYULR("HOLAAA");
-});
-*/
+
 
 var UVYJLLYCYD=function(SSUNXNEEHN,AURESXCGMK)
 {
@@ -444,23 +441,23 @@ Level.prototype.create=function(){
 	BXYCJYDVRT=YMHIHSNADE.add.text(-100, -100, "", IQVAAXFOXW);
 	IRAIEARIWA=YMHIHSNADE.add.text(-100, -100, "", IQVAAXFOXW);
 	
-	var WNTTMAIFLB = { font: "bold 20px Arial", fill: "#fff", align: "right", boundsAlignH: "middle", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+	var WNTTMAIFLB = { font: "bold 30px Arial", fill: "#fff", align: "right", boundsAlignH: "middle", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 	XQDPVWOUII=YMHIHSNADE.add.text(0, 0, "Ntros:\nEllos:", WNTTMAIFLB);
 	XQDPVWOUII.stroke = '#961918';
     XQDPVWOUII.strokeThickness = 4;
     XQDPVWOUII.fill = '#F8E600';		
 	XQDPVWOUII.visible=false;
-	XQDPVWOUII.setTextBounds(900,310,300,100)
+	XQDPVWOUII.setTextBounds(900,250,300,100)
 	
 
 	
-	var styleMarcador = { font: "bold 20px Arial", fill: "#fff", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+	var styleMarcador = { font: "bold 30px Arial", fill: "#fff", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 	ATTUXTNNKX=YMHIHSNADE.add.text(0, 0, "", styleMarcador);
 	ATTUXTNNKX.visible=false;
 	ATTUXTNNKX.stroke = '#961918';
     ATTUXTNNKX.strokeThickness = 4;
     ATTUXTNNKX.fill = '#F8E600';		
-	ATTUXTNNKX.setTextBounds(960,310,300,100)
+	ATTUXTNNKX.setTextBounds(990,250,300,100)
 	
 
 	
@@ -1781,6 +1778,7 @@ JVEHDHOEEM=function(){
 	
 	if (checkConnection()==true)
 	{	
+		JKCANKPQBB=0;
 		CUUKQAGFEB.x=QETACVSHAR+150;
 		CUUKQAGFEB.visible=true;
 		XEMENNVXGV();
@@ -3844,26 +3842,21 @@ YUXWLFWVRD=function()
 		TKXPPGUPVV.start();*/
 		
 		JKCANKPQBB++;
-		if (JKCANKPQBB==3 && EGPDVIEJEL==true)
+		if (JKCANKPQBB>=3 && EGPDVIEJEL==true)
 		{
 			FHKOYDXPCL();
 		}
 		
 			
 	}
-	else
-	{
-		//SVHMCOYULR("No tiene conexión a internet.\nNo podrá jugar en modo Multijugador.");
-		//socket.disconnect();
-		
-	}
+	
 	//YHNMANDWLT();
 	
 }
 
 SVHMCOYULR=function(RPHWVBBGIM)
 {
-	var styleMarcador = { font: "bold 30px Arial", fill: "#fff", align: "center", boundsAlignH: "center", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 800};	
+	var styleMarcador = { font: "bold 50px Arial", fill: "#fff", align: "center", boundsAlignH: "center", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 800};	
 	var BMQCYKJAHO=YMHIHSNADE.add.text(0, 0, RPHWVBBGIM, styleMarcador);
 	//ATTUXTNNKX.visible=false;
 	BMQCYKJAHO.stroke = '#961918';
