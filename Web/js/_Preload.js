@@ -79,7 +79,7 @@ Preload.prototype.preload = function() {
 //	this.load.image('Estallido_40', 'assets/images/estallido_turquesa.png');	
 	this.load.image('Reverso', 'assets/images/Cartas/Reversos/reverso.png');	
 	this.load.image('Maquina', 'assets/images/Cartas/Reversos/maquina.jpg');	
-	this.load.image('IRQGAFESIC', 'assets/images/Cartas/Tapetes/tapete.png');	
+	this.load.image('IRQGAFESIC', 'assets/images/Cartas/Tapetes/tapete.jpg');	
 	this.load.image('Las_40', 'assets/images/las 40.png');	
 	this.load.image('20_oros', 'assets/images/20 oros.png');	
 	this.load.image('20_copas', 'assets/images/20 copas.png');	

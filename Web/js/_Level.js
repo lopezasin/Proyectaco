@@ -22,7 +22,7 @@ else
 {
 	//Maquina='http://localhost:5000'		
 	//Maquina='http://192.168.1.100:5000'		
-	Maquina='http://192.168.1.100:5000'		
+	Maquina='http://192.168.43.100:5000'		
 }
 
 
@@ -629,6 +629,9 @@ Level.prototype.create=function(){
 		CUUKQAGFEB.visible=false;
 	}
 	
+	//var a="http://hola.com/callback";
+	//console.log(a.search('hola.com') );
+	
 	//SVHMCOYULR(window.innerHeight+" "+window.innerWidth);					
 	//BUJELVTIKU=YMHIHSNADE.add.sprite(YMHIHSNADE.world.centerX,YMHIHSNADE.world.centerY, 'Copa');
 
@@ -1042,19 +1045,19 @@ RSHJSKMBRP=function(Tipo)
 				var loc = e.url;
 				//when url is changed check if the url contains your specific callbackURL
 				console.log("LOC "+loc);
-				if (loc=='http://xn--guiotepro-n6a.es/') {
+				if (loc.search('http://xn--guiotepro-n6a.es/')>=0) {
 				//at this point close your inapp browser
 				//you will land on the index page within your application.
-				var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
-				PUBDSNTIUS.add(2000, function(){
+				//var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
+				//PUBDSNTIUS.add(2000, function(){
 					
 					SalirDesdeLogueo();
 					
 				
 																		
 			
-				});
-				PUBDSNTIUS.start();
+				//});
+				//PUBDSNTIUS.start();
 				
 				ref.close();
 				//your code after successful authentication
@@ -2242,7 +2245,7 @@ setEventHandlers = function () {
 SRUKEMRQNI=function(Data){
 	var i;
 	
-	if (1==1)
+	if (1==2)
 	{
 	var table = document.getElementById("TablaClasificacion");
 	var row; 
