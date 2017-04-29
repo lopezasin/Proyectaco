@@ -2234,6 +2234,8 @@ GLFVIKHXMD=function(){
 
 function checkConnection() {
 
+	var QOWECQVXCM=true;
+	
 	var isCordovaApp = document.URL.indexOf('http://') === -1
 		&& document.URL.indexOf('https://') === -1;
 
@@ -2259,14 +2261,13 @@ function checkConnection() {
 			
 
 			
-			/*if (networkState==Connection.NONE)
+			if (networkState=="none")
 			{
-				SVHMCOYULR('Sin Conexión');
+				QOWECQVXCM=false;
+				SVHMCOYULR("Revisa tu conexión a internet");
 			}
-			else
-			{*/
-				SVHMCOYULR('Tipo: ' + navigator.connection.type);
-			//}
+
+			
 		
 		}
 		catch(e)
@@ -2274,9 +2275,8 @@ function checkConnection() {
 			SVHMCOYULR("Error "+e);
 		}
 	}
-	else
-	{
-		SVHMCOYULR('No es Cordova');
-	}
+
+	
+	return QOWECQVXCM;
 	
 }

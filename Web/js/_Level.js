@@ -1779,41 +1779,42 @@ XEMENNVXGV=function()
 }
 JVEHDHOEEM=function(){
 	
-	checkConnection();
-	
-	CUUKQAGFEB.x=QETACVSHAR+150;
-	CUUKQAGFEB.visible=true;
-	XEMENNVXGV();
-	
-	DVNRTQIWGL=0;
-	UEHYPTREIH.visible=false;
-	IBECDOLWLN.visible=false;
-	
-	//EFKTQSXAMA.visible=false;
-	//LNJDKEVPQE.visible=false;
-	
-	EGPDVIEJEL=true;
-	
-	QSAXUCPASV();
-	WNEWPCNXPA();
-	log(true,"Entra en multijugador");
-	
-	
-	IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);		
-	YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);	
-	//log(false,User);
-
-	
-	//alert(socket.id);
-	if (socket.id!=undefined)
-	{
-		socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO) ;
-		socket.emit('XUUKTXNVCK',socket.id);
-	}
-	else
-	{
+	if (checkConnection()==true)
+	{	
+		CUUKQAGFEB.x=QETACVSHAR+150;
+		CUUKQAGFEB.visible=true;
 		XEMENNVXGV();
 		
+		DVNRTQIWGL=0;
+		UEHYPTREIH.visible=false;
+		IBECDOLWLN.visible=false;
+		
+		//EFKTQSXAMA.visible=false;
+		//LNJDKEVPQE.visible=false;
+		
+		EGPDVIEJEL=true;
+		
+		QSAXUCPASV();
+		WNEWPCNXPA();
+		log(true,"Entra en multijugador");
+		
+		
+		IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);		
+		YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);	
+		//log(false,User);
+
+		
+		//alert(socket.id);
+		if (socket.id!=undefined)
+		{
+			socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO) ;
+			socket.emit('XUUKTXNVCK',socket.id);
+		}
+		else
+		{
+			XEMENNVXGV();
+			
+		}
 	}
 }
 
@@ -2934,7 +2935,7 @@ AYAOSXTCBR  = function() {
 	JKCANKPQBB=0;
 	console.log("CONECTADO");
  // log(false,'Conectado al servidor:')
-  console.log(socket.id);
+  //console.log(socket.id);
   	if (socket.id!=undefined && UEHYPTREIH.visible==false ) //Solo se envia la peticion si no estoy en la pantalla principal
 	//Ya que si no aparece la pantalla de login al principio
 	{
