@@ -2237,28 +2237,37 @@ function checkConnection() {
 	var isCordovaApp = document.URL.indexOf('http://') === -1
 		&& document.URL.indexOf('https://') === -1;
 
-	SVHMCOYULR("Chequeando");
+	//SVHMCOYULR("Chequeando");
 	if (window.plugins)
 	{
 		
 		try
 		{
-		var networkState = navigator.connection.type;
-		/*var states = {};
-    
-
-
-		states[Connection.UNKNOWN]  = 'Unknown connection';
-		states[Connection.ETHERNET] = 'Ethernet connection';
-		states[Connection.WIFI]     = 'WiFi connection';
-		states[Connection.CELL_2G]  = 'Cell 2G connection';
-		states[Connection.CELL_3G]  = 'Cell 3G connection';
-		states[Connection.CELL_4G]  = 'Cell 4G connection';
-		states[Connection.CELL]     = 'Cell generic connection';
-		states[Connection.NONE]     = 'No network connection';*/
+			var networkState = navigator.connection.type;
+			/*var states = {};
 		
 
-		SVHMCOYULR('Connection type: ' + navigator.connection.type);
+
+			states[Connection.UNKNOWN]  = 'Unknown connection';
+			states[Connection.ETHERNET] = 'Ethernet connection';
+			states[Connection.WIFI]     = 'WiFi connection';
+			states[Connection.CELL_2G]  = 'Cell 2G connection';
+			states[Connection.CELL_3G]  = 'Cell 3G connection';
+			states[Connection.CELL_4G]  = 'Cell 4G connection';
+			states[Connection.CELL]     = 'Cell generic connection';
+			states[Connection.NONE]     = 'No network connection';*/
+			
+
+			
+			if (networkState==Connection.NONE)
+			{
+				SVHMCOYULR('Sin Conexión');
+			}
+			else
+			{
+				SVHMCOYULR('Connection type: ' + navigator.connection.type);
+			}
+		
 		}
 		catch(e)
 		{
