@@ -12,7 +12,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var vProduccion=true;
+var vProduccion=false;
 
 var Maquina;
 if (vProduccion==true){
@@ -46,7 +46,7 @@ var IJCSKNTKVH="";
 
 var JLVDFTPUNI=101;
 var MFENMIFPUA=3;
-var HLBMKNFUWL=1000;//milisegundos
+var HLBMKNFUWL=1500;//milisegundos
 var GWFPRHAYQK=15;//segundos
 var XIQDONAJMM;
 var KVBNWXDTON;
@@ -1041,46 +1041,19 @@ RSHJSKMBRP=function(Tipo)
 			
 			case 4 :		
 			ref = cordova.InAppBrowser.open(Maquina+'/auth/Twitter', '_blank', 'location=no');
-			ref.addEventListener('loadstop', function(e) {
-				var loc = e.url;
-				//when url is changed check if the url contains your specific callbackURL
-				console.log("LOC "+loc);
-				if (loc.search('http://xn--guiotepro-n6a.es/')>=0) {
-				//at this point close your inapp browser
-				//you will land on the index page within your application.
-				//var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
-				//PUBDSNTIUS.add(2000, function(){
-					
-					SalirDesdeLogueo();
-					
-				
-																		
-			
-				//});
-				//PUBDSNTIUS.start();
-				
-				ref.close();
-				//your code after successful authentication
-				}
-				});
-			
-			/*ref.addEventListener('exit', function(e) {
-
-				var	PUBDSNTIUS = YMHIHSNADE.time.create(false);
-				PUBDSNTIUS.add(10000, function(){
-					
-					FHKOYDXPCL();
-					JVEHDHOEEM();
-				
-																		
-			
-				});
-				PUBDSNTIUS.start();
-
-				
-				});	*/			
 			break;	
 		}
+		ref.addEventListener('loadstop', function(e) {
+		var loc = e.url;
+		//when url is changed check if the url contains your specific callbackURL
+		console.log("LOC "+loc);
+		if (loc.search('http://xn--guiotepro-n6a.es/')>=0) {
+		
+			SalirDesdeLogueo();	
+			ref.close();
+
+		}
+		});
 	}
 	
 	
@@ -3877,7 +3850,7 @@ YUXWLFWVRD=function()
 	}
 	else
 	{
-		SVHMCOYULR("No tiene conexión a internet.\nNo podrá jugar en modo Multijugador.");
+		//SVHMCOYULR("No tiene conexión a internet.\nNo podrá jugar en modo Multijugador.");
 		//socket.disconnect();
 		
 	}

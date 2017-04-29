@@ -114,9 +114,17 @@
 				}
 			}
 			
-
+			for (var h=0;h<=MazoIA.length-1;h++)
+			{
+				if (MazoIA[h].UUOPKETETA===NJGFWACAPY)
+				{
+					var pp=MazoIA[h].SGCSHJVERI;
+					var qq=MazoIA[h].EHDWIURHHD
+					var rr=MazoIA[h].HVCFEWNDRF
+				}
+			}
 			
-			console.log("CARTA MOVER "+NJGFWACAPY," "+UHTPGPRUJA);
+			console.log("CARTA MOVER "+NJGFWACAPY," "+UHTPGPRUJA+" "+qq+" "+pp+" "+rr);
 			
 			//08/02/2017 Para por si acaso no existe (cambio de 7 o que se yo)
 			LSKPLOTYIB=false;
@@ -131,6 +139,8 @@
 			if (LSKPLOTYIB==false)
 			{
 				//alert("BRUTAL");
+				console.log("IA DESDE IA");
+				TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
 				IA(UHTPGPRUJA);
 			}
 			
@@ -140,7 +150,7 @@
 			
 			
 			if (1==1)
-			console.log("CARTA MOVER "+NJGFWACAPY );	
+			//console.log("CARTA MOVER "+NJGFWACAPY );	
 			//if (NJGFWACAPY!=false)
 			{
 				

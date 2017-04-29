@@ -529,7 +529,7 @@ LGDEYPLFSA=function(UHTPGPRUJA,OMDVKATFLQ,AWCCMSCOPO){
 
 	var style = { font: "bold 32px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
 	var text;
-	var TKXPPGUPVV;
+	var timerCante;
 					//  The Text is positioned at 0, 100
 	text = YMHIHSNADE.add.text(0, 0, DevolverTexto, style);
 	text.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
@@ -537,9 +537,9 @@ LGDEYPLFSA=function(UHTPGPRUJA,OMDVKATFLQ,AWCCMSCOPO){
 	text.setTextBounds(0, 100, 800, 100);
 	//  Start the TKXPPGUPVV running - this is important!
 	//  It won't start automatically, allowing you to hook it to button events and the like.
-	TKXPPGUPVV = YMHIHSNADE.time.create(false);
-	TKXPPGUPVV.add(3000, FYYEWMEHBU, this,text);
-	TKXPPGUPVV.start();
+	timerCante = YMHIHSNADE.time.create(false);
+	timerCante.add(3000, FYYEWMEHBU, this,text);
+	timerCante.start();
 }
 
 SRFFTPLVMJ=function(SGCSHJVERI){
@@ -1722,11 +1722,14 @@ SESLFOEJHY=function(){
 		else
 		{
 			JQSOOBSDDS();
-			log(true,"IA Desde Mover FXGSEGRXKC");
+			//log(true,"IA Desde Mover FXGSEGRXKC");
 			
 			//var TKXPPGUPVV = YMHIHSNADE.time.create(false);
 			var PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
-			TKXPPGUPVV.add(PLKOPTSHBQ, function(){TKXPPGUPVV.stop(); IA(TFSXFTYVGQ);} );
+			TKXPPGUPVV.stop();
+			TKXPPGUPVV.add(PLKOPTSHBQ, function(){TKXPPGUPVV.stop(); 
+			console.log("IA DESDE mover mazo");
+			IA(TFSXFTYVGQ);} );
 			TKXPPGUPVV.start();			
 		}
 		
@@ -1862,7 +1865,6 @@ function IHSCVAKSDJ(sprite) {
   var s;
   var CYDMXACGSH=false;	
   var i;
-  var TKXPPGUPVV;
   var text;
 	//console.log("ESTADO CONEXION "+socket.socket.connected);
 	log(false,"KEYYYYYYYYYYYYYYYYYYYY "+sprite.name);
@@ -1975,6 +1977,7 @@ function IHSCVAKSDJ(sprite) {
 					
 					if (ValidaMovimientoJugadorSinActualizar(LUCRWXJMDR,TFSXFTYVGQ)==true)
 					{
+						TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
 						KTBOJTXFEU.push(new NQMQGXXHIL(LUCRWXJMDR,TFSXFTYVGQ) );
 						console.log("BLOQUEO DESDE IHSCVAKSDJ "+TFSXFTYVGQ+" "+LUCRWXJMDR);
 						VDKOVQXHON.push(new TVYNYTCQYW(AGKVNAGGLB[i].SGCSHJVERI,AGKVNAGGLB[i].UUOPKETETA,AGKVNAGGLB[i].HVCFEWNDRF,AGKVNAGGLB[i].TNFAGGMKXD,null,TFSXFTYVGQ,null,null));//no hace falta la EBAPPJFYSW hora del server
@@ -2093,11 +2096,11 @@ function IHSCVAKSDJ(sprite) {
 						text.fill = '#F8E600';		
 						
 
-						//  Start the TKXPPGUPVV running - this is important!
+						
 						//  It won't start automatically, allowing you to hook it to button events and the like.
-						var TKXPPGUPVV = YMHIHSNADE.time.create(false);
-						TKXPPGUPVV.add(1500, FYYEWMEHBU, this,text);
-						TKXPPGUPVV.start();
+						var timertextoturno = YMHIHSNADE.time.create(false);
+						timertextoturno.add(1500, FYYEWMEHBU, this,text);
+						timertextoturno.start();
 						
 
 						//  Set a timerEvent to occur after 3 seconds
@@ -2486,7 +2489,9 @@ TMUBOPUYAH=function(TKWCTNGROU,LDCCGSIBKW){
 					, MDYSFNYPYP, KYFMRVNHIQ);
 					PQUFIBKJJH.onComplete.add( function(){ 
 					OROGRNBISW(XACEBCSJAB,UBWRXKMTQN);
-					DFCCHCJBNP(TKWCTNGROU)} )
+					DFCCHCJBNP(TKWCTNGROU);
+					} 
+					)
 					if (UBWRXKMTQN=="D")
 					{
 						YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);

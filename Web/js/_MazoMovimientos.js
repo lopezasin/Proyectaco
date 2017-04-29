@@ -1108,6 +1108,7 @@ FRWLTWDFVM=function(SLGKDYQCAY,UHTPGPRUJA,JugadaDesdeBuffer){
 		
 		if (VDKOVQXHON.length>=4 ){
 		log(true,"DEBE LIMPIAR MESA");
+		TKXPPGUPVV.stop; //Mucho miedo 29/04/2017
 
 				LUCRWXJMDR++;
 				UPCWNPYAIE=LUCRWXJMDR;
@@ -1405,13 +1406,19 @@ FRWLTWDFVM=function(SLGKDYQCAY,UHTPGPRUJA,JugadaDesdeBuffer){
 				log(true,"CAMBIO DVNRTQIWGL A" + DVNRTQIWGL);	
 			
 				if (EGPDVIEJEL==false){
-					log(true,"IA Desde FRWLTWDFVM");
+					//log(true,"IA Desde FRWLTWDFVM");
 
 
 						//var TKXPPGUPVV = YMHIHSNADE.time.create(false);//REVISIONTIEMPO
 						TKXPPGUPVV.stop(); //04/17
 						var PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
-						TKXPPGUPVV.add(PLKOPTSHBQ, function(){TKXPPGUPVV.stop(); IA(DVNRTQIWGL);} );
+						if(VDKOVQXHON.length>=4)
+						{
+							PLKOPTSHBQ=PLKOPTSHBQ+2000;
+						}
+						TKXPPGUPVV.add(PLKOPTSHBQ, function(){TKXPPGUPVV.stop();
+						console.log("IA DESDE quienganamano "+PLKOPTSHBQ);
+						IA(DVNRTQIWGL);} );
 						TKXPPGUPVV.start();		
 
 
@@ -1549,7 +1556,8 @@ BSUNPMKJSM=function(UPCWNPYAIE)
 		}
 		else
 		{
-			
+			console.log("IA DESDE desconectados");
+			TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
 			IA(DVNRTQIWGL);
 			return false;
 		
@@ -1815,12 +1823,25 @@ DFCCHCJBNP=function(UPCWNPYAIE){
 			}
 			
 			if (EGPDVIEJEL==false){
-				log(true,"IA Desde Eliminar de la mesa");
+				//log(true,"IA Desde Eliminar de la mesa");
 					
 					//var TKXPPGUPVV = YMHIHSNADE.time.create(false);//REVISIONTIEMPO
 					TKXPPGUPVV.stop(); //04/17
 					var PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
-					TKXPPGUPVV.add(PLKOPTSHBQ, function(){TKXPPGUPVV.stop();IA(DVNRTQIWGL);} );
+					/*if (PQUFIBKJJH.isRunning==true)
+					{
+						PLKOPTSHBQ=PLKOPTSHBQ+1500
+					}
+					else
+					{
+						console.log("No corre");
+					}*/
+						
+					console.log("Tiempo "+PLKOPTSHBQ);
+					TKXPPGUPVV.add(PLKOPTSHBQ, function(){
+					TKXPPGUPVV.stop();
+					console.log("IA DESDE eliminar de la mesa");
+					IA(DVNRTQIWGL);} );
 					TKXPPGUPVV.start();		
 							
 							
