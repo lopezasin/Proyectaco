@@ -80,6 +80,7 @@ Preload.prototype.preload = function() {
 	this.load.image('Reverso', 'assets/images/Cartas/Reversos/reverso.png');	
 	this.load.image('Maquina', 'assets/images/Cartas/Reversos/maquina.jpg');	
 	this.load.image('IRQGAFESIC', 'assets/images/Cartas/Tapetes/tapete.jpg');	
+	this.load.image('Tapete_43', 'assets/images/Cartas/Tapetes/tapete_43.jpg');	
 	this.load.image('Las_40', 'assets/images/las 40.png');	
 	this.load.image('20_oros', 'assets/images/20 oros.png');	
 	this.load.image('20_copas', 'assets/images/20 copas.png');	
@@ -87,6 +88,7 @@ Preload.prototype.preload = function() {
 	this.load.image('20_bastos', 'assets/images/20 bastos.png');	
 	
 	this.load.image('FondoPrincipal', 'assets/images/fondo_principal.png');	
+	this.load.image('FondoPrincipal_43', 'assets/images/fondo_principal_43.png');	
 	this.load.image('Boton_solo', 'assets/images/Botones/jugar_solo.png');	
 	this.load.image('Boton_online', 'assets/images/Botones/jugar_online.png');	
 	this.load.image('Boton_amigos', 'assets/images/Botones/jugar_con_amigos.png');	

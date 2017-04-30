@@ -1786,7 +1786,7 @@ QYYXUWQADX=function(){
 
 	DCOXIXEBRJ.splice(0,100);
 	JEHYBALODM.splice(0,100);
-	//var COIVBWRMCC=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.width;
+	
 	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		s.to( {x:(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6))  - (YAJVUBPNNW*8) +  COIVBWRMCC)/2)+ (1 *(COIVBWRMCC+ YAJVUBPNNW))
 		,y:PXEBTYBHGS,
@@ -1809,10 +1809,13 @@ QYYXUWQADX=function(){
 		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.tint =  Phaser.Color.getColor(100,100,100);
 		FXGSEGRXKC.pop();
 		
-		ObjTurnoD.visible=true;
-		ObjTurnoR.visible=true;
-		ObjTurnoU.visible=true;
-		ObjTurnoL.visible=true;
+		if (EGPDVIEJEL==true)
+		{
+			ObjTurnoD.visible=true;
+			ObjTurnoR.visible=true;
+			ObjTurnoU.visible=true;
+			ObjTurnoL.visible=true;
+		}
 		//NUWTGXUUTS();
 		
 		//alert(DVNRTQIWGL);
@@ -1964,8 +1967,8 @@ function IHSCVAKSDJ(sprite) {
 			console.log("Son Vueltas: "+EVAILWGGKX);
 			console.log("Marcadores: "+UHHXSNXXJK+" - "+PXGXKDDNFK);
 			
-			if ( ( Math.abs(sprite.x-posicionX)<=AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD.width &&
-				Math.abs(sprite.y-posicionY)<=AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD.height && DVNRTQIWGL==TFSXFTYVGQ)	&& 
+			if ( ( Math.abs(sprite.x-posicionX)<=AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD.width*1.5 &&
+				Math.abs(sprite.y-posicionY)<=AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD.height*1.5 && DVNRTQIWGL==TFSXFTYVGQ)	&& 
 				(!PQUFIBKJJH.isRunning && !LJRRHVSVKD.isRunning && !LCYAHFBDTT.isRunning && !NEPGDYQDEI.isRunning && !HHBPAROITT.isRunning && !EWXBTDLSHW.isRunning && !BDEFDQUJJE.isRunning && !CKOUBGTDUF.isRunning && !JLFYUAKDIJ.isRunning) &&
 				MYQBNBVHKU==true 
 				&&  ( (UHHXSNXXJK<JLVDFTPUNI && PXGXKDDNFK<JLVDFTPUNI)|| EVAILWGGKX==false )
@@ -3475,8 +3478,17 @@ WWAYLOUPUQ=function() {
 			
 			if (socket.id!=undefined)
 			{
-				//alert("ko");			
-				socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO) ;
+				if (PWMIBRSDCJ.length>0)
+				{
+					var JugadorPubli=PWMIBRSDCJ[0].WWKVHIMWYD;
+					var JugadorFullPubli=PWMIBRSDCJ[0].FFRVOEAXTF + '-'+ PWMIBRSDCJ[0].BDYYDTFQAO;
+					socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,JugadorFullPubli,JugadorPubli) ;
+				}
+				else
+				{
+					socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,"Desconocido","Desconocido") ;
+				}
+				
 			}
 				
 			//CRITICO

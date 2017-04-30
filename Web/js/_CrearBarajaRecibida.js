@@ -56,6 +56,12 @@
 				FXGSEGRXKC[i].TNFAGGMKXD = YMHIHSNADE.add.sprite(50,YMHIHSNADE.world.centerY/2, FXGSEGRXKC[i].UUOPKETETA);				
 			}
 			
+			if (cuatrotres==true)
+			{
+				FXGSEGRXKC[i].TNFAGGMKXD.width=FXGSEGRXKC[i].TNFAGGMKXD.width*1.2
+				FXGSEGRXKC[i].TNFAGGMKXD.height=FXGSEGRXKC[i].TNFAGGMKXD.height*1.2
+			}			
+			
 			//FXGSEGRXKC[i].TNFAGGMKXD.inputEnabled = true;
 			//FXGSEGRXKC[i].TNFAGGMKXD.input.enableDrag(false,true);
 			

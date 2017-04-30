@@ -377,7 +377,16 @@ QTIPILDEPH=function(sprite,UBWRXKMTQN,SLGKDYQCAY,UHTPGPRUJA){
 			FRWLTWDFVM(SLGKDYQCAY,UHTPGPRUJA); //Truco para poder pasar por parámetro
 			
 			}  );		
-			YMHIHSNADE.add.tween(sprite.scale).to( {x:1,y:1}, IRXOKNWTLV, BSXWFYLCEW,true);
+			
+			if (cuatrotres==false)
+			{
+				YMHIHSNADE.add.tween(sprite.scale).to( {x:1,y:1}, IRXOKNWTLV, BSXWFYLCEW,true);
+			}
+			else
+			{
+				YMHIHSNADE.add.tween(sprite.scale).to( {x:1.2,y:1.2}, IRXOKNWTLV, BSXWFYLCEW,true);
+			}
+			
 			PQUFIBKJJH.start();
 			sprite.bringToTop();
 	//}	
@@ -2234,7 +2243,7 @@ GLFVIKHXMD=function(){
 }
 
 
-function checkConnection() {
+checkConnection=function() {
 
 	var QOWECQVXCM=true;
 	

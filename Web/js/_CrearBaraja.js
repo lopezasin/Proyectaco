@@ -17,6 +17,7 @@
    {
 	  
 		var key='LEQRGVLYLX';	
+
 		//KVBNWXDTON=null;
 		//KVBNWXDTON=YMHIHSNADE.add.tileSprite(0, 0, WAAJJVPHTG, KKMUHEKLOC, key);		
 	   	KVBNWXDTON.name = key;
@@ -26,13 +27,29 @@
 		}
 		catch(e){
 			log(true,"No se pudo cargar el tapete remoto.");
-			KVBNWXDTON.loadTexture("IRQGAFESIC");
+			if (cuatrotres==false)
+			{
+				KVBNWXDTON.loadTexture("IRQGAFESIC");
+			}
+			else
+			{
+				KVBNWXDTON.loadTexture("Tapete_43");
+			}
 		}
 		RCYRGXLWBR='ReversoRemoto';
    }
    else
    {
-	 	var key='IRQGAFESIC';		
+	 
+		if (cuatrotres==false)
+		{
+				var key='IRQGAFESIC';
+		}
+		else
+		{
+				var key='Tapete_43';
+		}
+			
 		//KVBNWXDTON=null;	
 		//KVBNWXDTON=YMHIHSNADE.add.tileSprite(0, 0, WAAJJVPHTG, KKMUHEKLOC, key);		
 	   	KVBNWXDTON.name = key;
@@ -43,7 +60,14 @@
 		}
 		catch(e){
 			log(true,"No se pudo cargar el tapete local.");
-			KVBNWXDTON.loadTexture("IRQGAFESIC");
+			if (cuatrotres==false)
+			{
+				KVBNWXDTON.loadTexture("IRQGAFESIC");
+			}
+			else
+			{
+				KVBNWXDTON.loadTexture("Tapete_43");
+			}
 		}
 		RCYRGXLWBR='Reverso';
    }
@@ -112,8 +136,8 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
    /* [9,10,19,20,29,30,39,40,1,2,3,4,5,6,7,8,11,12,13,14,15,16,17,18,
    21,22,23,24,25,26,27,28,31,32,33,34,35,36,37,38]*/
    
-   //[38,37,36,35,34,33,32,31,28,27,26,25,24,23,22,9,4,17,16,15,14,13,12,11,6,7,21,18,5,3,2,1,40,19,30,29,39,20,10,8].forEach( function(element, index, Array){
-[24,40,36,35,34,33,32,31,28,19,39,20,10,8,30,23,22,9,13,12,11,6,7,21,18,5,3,2,1,27,26,25,4,17,16,15,14,38,37,29].forEach( function(element, index, Array){
+   [38,37,36,35,34,33,32,31,28,27,26,25,24,23,22,9,4,17,16,15,14,13,12,11,6,7,21,18,5,3,2,1,40,19,30,29,39,20,10,8].forEach( function(element, index, Array){
+//[24,40,36,35,34,33,32,31,28,19,39,20,10,8,30,23,22,9,13,12,11,6,7,21,18,5,3,2,1,27,26,25,4,17,16,15,14,38,37,29].forEach( function(element, index, Array){
    //for (XSHRPQMEEY = 1; XSHRPQMEEY <= 40; XSHRPQMEEY++) { 
 
 		XSHRPQMEEY=element;
@@ -153,7 +177,7 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
  //FXGSEGRXKC=Phaser.ArrayUtils.shuffle(FXGSEGRXKC);
 	
 	
-//socket.emit('EOMOFODTKB', socket.id) ;
+
 	
 	for(i=0;i<=FXGSEGRXKC.length-1;i++){
 			//log(false,"Longitud "+this.Cartas.length)
@@ -173,6 +197,12 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 			}
 			else{
 				FXGSEGRXKC[i].TNFAGGMKXD = YMHIHSNADE.add.sprite(-100, YMHIHSNADE.world.centerY/2, WUHRYVMYBE[i].UUOPKETETA);
+			}
+			
+			if (cuatrotres==true)
+			{
+				FXGSEGRXKC[i].TNFAGGMKXD.width=FXGSEGRXKC[i].TNFAGGMKXD.width*1.2
+				FXGSEGRXKC[i].TNFAGGMKXD.height=FXGSEGRXKC[i].TNFAGGMKXD.height*1.2
 			}
 			
 			FXGSEGRXKC[i].TNFAGGMKXD.name=WUHRYVMYBE[i].UUOPKETETA;

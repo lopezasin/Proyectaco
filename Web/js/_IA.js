@@ -770,6 +770,21 @@ DSAYFEABOB=function(MazoIA,UHTPGPRUJA)
 	return QOWECQVXCM;
 }
 
+MiCompiHaTiradoTriunfo=function(VDKOVQXHON,BMITYYFCGC)
+{
+	var QOWECQVXCM=false;
+	if (BMITYYFCGC==3)
+	{
+		if (VDKOVQXHON.length>0)
+		{
+			if (VDKOVQXHON[0].SGCSHJVERI==TGTQPBEQFR)
+			{
+				QOWECQVXCM=true;
+			}
+		}
+	}
+	return QOWECQVXCM;
+}
 
 HWPRRTMYEP=function(MazoIA,UHTPGPRUJA,Criterio,BMITYYFCGC){
 	//Con TGTQPBEQFR Alto
@@ -790,8 +805,8 @@ HWPRRTMYEP=function(MazoIA,UHTPGPRUJA,Criterio,BMITYYFCGC){
 	if (QOWECQVXCM==false)
 	{
 		
-		if (  (EVAILWGGKX==false && VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA)==true) )
-			//|| (EVAILWGGKX==true && VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA)==true)		)
+		if (  (EVAILWGGKX==false && VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA)==true) 
+			|| (EVAILWGGKX==true && VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA)==true && MiCompiHaTiradoTriunfo(VDKOVQXHON,BMITYYFCGC)==true    )		)
 		{
 			QOWECQVXCM=GMUESSHERK(MazoIA,UHTPGPRUJA);
 			//log(false,"LA SRCGCMADME ES NUESTRA JUGADOR: "+UHTPGPRUJA);
