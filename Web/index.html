@@ -63,9 +63,10 @@
 <script type="text/javascript">
 
 	window.addEventListener('focus', function(){
-	   	//YMHIHSNADE.scale.refresh()
-		//YMHIHSNADE.stage.scale.refresh();
-	}, false);
+	   	game_objeto.scale.refresh()
+		//game_objeto.stage.scale.refresh();
+		console.log("Hola")
+	});
 
     $(document).ready(function(e){
 		$('#divtablasalas').css("height", $(window).height()-200);
