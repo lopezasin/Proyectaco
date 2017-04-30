@@ -171,6 +171,7 @@
 		{
 			DVNRTQIWGL=1
 		}
+		MuestraTurno();
 		//JQSOOBSDDS();
 		//MYQBNBVHKU=true;
 		//alert("grrr");

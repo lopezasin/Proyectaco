@@ -1149,6 +1149,7 @@ FRWLTWDFVM=function(SLGKDYQCAY,UHTPGPRUJA,JugadaDesdeBuffer){
 			}
 			
 			DVNRTQIWGL=TTJFVWDTMG;
+			MuestraTurno();
 			MMMCNMNKTP=DVNRTQIWGL;
 			JWXRWCVLGC(UPCWNPYAIE);
 			
@@ -1694,6 +1695,7 @@ AGLRWERBPD=function(UPCWNPYAIE){
 					DVNRTQIWGL=1;
 				}
 				
+				
 				for (var i=0;i<=VDKOVQXHON.length-1;i++)
 				{
 					log(true,"TABA: "+VDKOVQXHON[i].jugador + VDKOVQXHON[i].VMKDXVSQEY);
@@ -1711,7 +1713,7 @@ AGLRWERBPD=function(UPCWNPYAIE){
 		}
 		log(true,"DVNRTQIWGL feo "+ DVNRTQIWGL);
 	}
-	
+	MuestraTurno();
 	
 	JWXRWCVLGC(UPCWNPYAIE);
 			

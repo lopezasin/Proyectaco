@@ -282,6 +282,7 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 		{
 			DVNRTQIWGL=1
 		}
+		MuestraTurno();
 		//JQSOOBSDDS();
 		
 		if (EGPDVIEJEL==false)
@@ -298,5 +299,12 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 		YMHIHSNADE.world.bringToTop(RXKKPILDQT);
 		
 		log(false,"Soy el "+TFSXFTYVGQ+" y reparte "+RDBQUAVHEP);
+		
+		
+		
+
+		
+		
+		
 		
  };

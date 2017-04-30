@@ -1,6 +1,5 @@
 ﻿MYGLJKSQBC=function(){
 	OOYMLWKRVM();
-	
 };
 
 YIHQSYEOTY=function(){

@@ -101,6 +101,7 @@ Preload.prototype.preload = function() {
 	this.load.image('Copa', 'assets/images/copa.png');	
 	this.load.image('Perder', 'assets/images/perder.png');	
 	this.load.image('Boton_Salir', 'assets/images/salir.png');	
+	this.load.image('Imagen_Turno', 'assets/images/imagen_turno.png');	
 	
 	if( window.plugins && window.plugins.NativeAudio )
 	{

@@ -3772,6 +3772,11 @@ LimpiarSprites=function(){
 	
 	var i;
 	
+	ObjTurnoR.alpha=0;
+	ObjTurnoL.alpha=0;
+	ObjTurnoU.alpha=0;
+	ObjTurnoD.alpha=0;
+	
 	for (i=0;i<=FXGSEGRXKC.length-1;i++)
 	{
 		FXGSEGRXKC[i].TNFAGGMKXD.destroy();
@@ -3850,7 +3855,11 @@ YGTNAODFHW.visible=false;
 YJNIRPCWEI.text="";
 
 //YMHIHSNADE.tweens.pauseAll(); 
-
+ObjTurnoR.alpha=0;
+ObjTurnoL.alpha=0;
+ObjTurnoU.alpha=0;
+ObjTurnoD.alpha=0;
+	
 if (inputField!=undefined)
 {
 	inputField.visible=false;
@@ -3945,6 +3954,10 @@ WNEWPCNXPA=function()
 {
 	
 	//YMHIHSNADE.tweens.pauseAll(); 
+	ObjTurnoR.alpha=0;
+	ObjTurnoL.alpha=0;
+	ObjTurnoU.alpha=0;
+	ObjTurnoD.alpha=0;
 	
 	log(true,"Limpiando variables conexión nueva..");
 	DFBVDPETGO=Math.floor(Math.random());
