@@ -1809,6 +1809,10 @@ QYYXUWQADX=function(){
 		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.tint =  Phaser.Color.getColor(100,100,100);
 		FXGSEGRXKC.pop();
 		
+		ObjTurnoD.visible=true;
+		ObjTurnoR.visible=true;
+		ObjTurnoU.visible=true;
+		ObjTurnoL.visible=true;
 		//NUWTGXUUTS();
 		
 		//alert(DVNRTQIWGL);
@@ -3772,10 +3776,10 @@ LimpiarSprites=function(){
 	
 	var i;
 	
-	ObjTurnoR.alpha=0;
-	ObjTurnoL.alpha=0;
-	ObjTurnoU.alpha=0;
-	ObjTurnoD.alpha=0;
+	ObjTurnoR.visible=false;
+	ObjTurnoL.visible=false;
+	ObjTurnoU.visible=false;
+	ObjTurnoD.visible=false;
 	
 	for (i=0;i<=FXGSEGRXKC.length-1;i++)
 	{
@@ -3855,11 +3859,11 @@ YGTNAODFHW.visible=false;
 YJNIRPCWEI.text="";
 
 //YMHIHSNADE.tweens.pauseAll(); 
-ObjTurnoR.alpha=0;
-ObjTurnoL.alpha=0;
-ObjTurnoU.alpha=0;
-ObjTurnoD.alpha=0;
-	
+ObjTurnoR.visible=false;
+ObjTurnoL.visible=false;
+ObjTurnoU.visible=false;
+ObjTurnoD.visible=false;
+
 if (inputField!=undefined)
 {
 	inputField.visible=false;
@@ -3954,10 +3958,11 @@ WNEWPCNXPA=function()
 {
 	
 	//YMHIHSNADE.tweens.pauseAll(); 
-	ObjTurnoR.alpha=0;
-	ObjTurnoL.alpha=0;
-	ObjTurnoU.alpha=0;
-	ObjTurnoD.alpha=0;
+	ObjTurnoR.visible=false;
+	ObjTurnoL.visible=false;
+	ObjTurnoU.visible=false;
+	ObjTurnoD.visible=false;
+	
 	
 	log(true,"Limpiando variables conexión nueva..");
 	DFBVDPETGO=Math.floor(Math.random());

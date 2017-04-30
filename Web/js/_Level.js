@@ -635,21 +635,23 @@ Level.prototype.create=function(){
 
 	ObjTurnoU=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
 	ObjTurnoU.anchor.setTo(0.5, 0.5)
-	ObjTurnoU.alpha=0;
+	ObjTurnoU.visible=false;
 
 	var x=WIEVLYANFM("L_C",0)+COIVBWRMCC;
 	var y=FIGQBSJQGA("L_C",0);
 
 	ObjTurnoL=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
 	ObjTurnoL.anchor.setTo(0.5, 0.5)
-	ObjTurnoL.alpha=0;
+	ObjTurnoL.visible=false;
+
 	
 	var x=WIEVLYANFM("R_C",0)-COIVBWRMCC;
 	var y=FIGQBSJQGA("L_C",0);
 
 	ObjTurnoR=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
 	ObjTurnoR.anchor.setTo(0.5, 0.5);
-	ObjTurnoR.alpha=0;
+	ObjTurnoR.visible=false;
+
 
 	
 	var x=WIEVLYANFM("U_C",0)-COIVBWRMCC;
@@ -657,7 +659,8 @@ Level.prototype.create=function(){
 
 	ObjTurnoD=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
 	ObjTurnoD.anchor.setTo(0.5, 0.5)
-	ObjTurnoD.alpha=0;
+	ObjTurnoD.visible=false;
+
 	
 };
 
@@ -3997,8 +4000,8 @@ MuestraTurno=function()
 AnimacionTurnoON=function(Obj)
 {
 	
-
-	var tween;
+	Obj.tint=Phaser.Color.getColor(255,255,255);
+	/*var tween;
 		
 		tween = YMHIHSNADE.add.tween(Obj);
 		tween.to( {alpha:1
@@ -4006,20 +4009,22 @@ AnimacionTurnoON=function(Obj)
 		}
 		, MDYSFNYPYP, KYFMRVNHIQ,false,500);
 		tween.start();
+	*/
 
 }
 
 AnimacionTurnoOFF=function(Obj)
 {
 
-	var tween;
+	Obj.tint=Phaser.Color.getColor(110,110,110);
+	/*var tween;
 		
 		tween = YMHIHSNADE.add.tween(Obj);
 		tween.to( {alpha:0.5
 
 		}
 		, MDYSFNYPYP, KYFMRVNHIQ,false,500);
-		tween.start();
+		tween.start();*/
 
 }
 
