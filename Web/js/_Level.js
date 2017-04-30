@@ -12,7 +12,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var vProduccion=true;
+var vProduccion=false;
 
 var Maquina;
 if (vProduccion==true){
@@ -540,6 +540,39 @@ Level.prototype.create=function(){
 	BUJELVTIKU.x=230;
 	BUJELVTIKU.y=-500;
 	
+	
+	var x=WIEVLYANFM("U_C",0)-COIVBWRMCC;
+	var y=FIGQBSJQGA("U_C",0)+(AltoCarta/2)+(YAJVUBPNNW);
+
+	ObjTurnoU=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
+	ObjTurnoU.anchor.setTo(0.5, 0.5)
+	ObjTurnoU.visible=false;
+
+	var x=WIEVLYANFM("L_C",0)+COIVBWRMCC;
+	var y=FIGQBSJQGA("L_C",0);
+
+	ObjTurnoL=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
+	ObjTurnoL.anchor.setTo(0.5, 0.5)
+	ObjTurnoL.visible=false;
+
+	
+	var x=WIEVLYANFM("R_C",0)-COIVBWRMCC;
+	var y=FIGQBSJQGA("L_C",0);
+
+	ObjTurnoR=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
+	ObjTurnoR.anchor.setTo(0.5, 0.5);
+	ObjTurnoR.visible=false;
+
+
+	
+	var x=WIEVLYANFM("U_C",0)-COIVBWRMCC;
+	var y=YMHIHSNADE.world.height-SXSHBRJFIR-AltoCartaEscalado+(YAJVUBPNNW);
+
+	ObjTurnoD=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
+	ObjTurnoD.anchor.setTo(0.5, 0.5)
+	ObjTurnoD.visible=false;
+
+	
 	if (PWGIQBBAWX==true)
 	{
 		
@@ -630,36 +663,6 @@ Level.prototype.create=function(){
 		CUUKQAGFEB.visible=false;
 	}
 	
-	var x=WIEVLYANFM("U_C",0)-COIVBWRMCC;
-	var y=FIGQBSJQGA("U_C",0)+(AltoCarta/2)+(YAJVUBPNNW);
-
-	ObjTurnoU=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
-	ObjTurnoU.anchor.setTo(0.5, 0.5)
-	ObjTurnoU.visible=false;
-
-	var x=WIEVLYANFM("L_C",0)+COIVBWRMCC;
-	var y=FIGQBSJQGA("L_C",0);
-
-	ObjTurnoL=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
-	ObjTurnoL.anchor.setTo(0.5, 0.5)
-	ObjTurnoL.visible=false;
-
-	
-	var x=WIEVLYANFM("R_C",0)-COIVBWRMCC;
-	var y=FIGQBSJQGA("L_C",0);
-
-	ObjTurnoR=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
-	ObjTurnoR.anchor.setTo(0.5, 0.5);
-	ObjTurnoR.visible=false;
-
-
-	
-	var x=WIEVLYANFM("U_C",0)-COIVBWRMCC;
-	var y=YMHIHSNADE.world.height-SXSHBRJFIR-AltoCartaEscalado+(YAJVUBPNNW);
-
-	ObjTurnoD=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
-	ObjTurnoD.anchor.setTo(0.5, 0.5)
-	ObjTurnoD.visible=false;
 
 	
 };
@@ -816,16 +819,22 @@ CerrarCrearSala=function(){
 	//d.style.zIndex=-100;
 }
 
-XHSDDIIBGG=function()
+XHSDDIIBGG=function(VideoJuego)
 {
 	
 	var RHOLNWBOXR="";
+	var TextoVideoJuego="";
+	
+	if (VideoJuego==true)
+	{
+		TextoVideoJuego=" del videojuego";
+	}
 	
 	YHNMANDWLT();
 	
 	if (EGPDVIEJEL==false)
 	{
-		RHOLNWBOXR="¿Realmente desea Salir?";
+		RHOLNWBOXR="¿Realmente desea Salir"+TextoVideoJuego+"?";
 	}
 	else
 	{
@@ -833,16 +842,16 @@ XHSDDIIBGG=function()
 		{
 			if (XPBCVAGCDQ.length!=4)
 			{
-				RHOLNWBOXR="¿Realmente desea Salir?";
+				RHOLNWBOXR="¿Realmente desea Salir"+TextoVideoJuego+"?";
 			}
 			else
 			{
-				RHOLNWBOXR="¿Realmente desea Salir? Salir Implica una derrota.";
+				RHOLNWBOXR="¿Realmente desea Salir"+TextoVideoJuego+"? Salir Implica una derrota.";
 			}
 		}
 		else
 		{
-			RHOLNWBOXR="¿Realmente desea Salir?";
+			RHOLNWBOXR="¿Realmente desea Salir"+TextoVideoJuego+"?";
 		}
 	}
 	
@@ -855,6 +864,9 @@ XHSDDIIBGG=function()
 	
 }
 
+
+
+
 UAUDUHCLOB=function()
 {
 	var d=document.getElementById('DivSalir');
@@ -864,10 +876,20 @@ UAUDUHCLOB=function()
 
 RespuestaSalir=function(JSKXXDPSDS)
 {
+	var a=document.getElementById("lblSalir") 
+	var textomensaje=a.textContent;
+	
 	UAUDUHCLOB();
 	if (JSKXXDPSDS==true)
 	{
-		FHKOYDXPCL();
+		if (textomensaje.search('videojuego')>=0) 
+		{
+			navigator.app.exitApp();
+		}
+		else
+		{
+			FHKOYDXPCL();
+		}
 	}
 	else
 	{
@@ -3877,11 +3899,11 @@ SVHMCOYULR=function(RPHWVBBGIM)
 	
 }
 
-Salir=function(){
+Salir=function(VideoJuego){
 	
 	//if (XPBCVAGCDQ.length==4 || EGPDVIEJEL==false)
 	//{
-		XHSDDIIBGG();
+		XHSDDIIBGG(VideoJuego);
 	//}
 	//else
 	//{
