@@ -1,8 +1,0 @@
-{
-    "preload": [{
-        "type": "image",
-        "overwrite": false,
-        "key": "loading",
-        "url": "assets/images/loading.png"
-    }]
-}
