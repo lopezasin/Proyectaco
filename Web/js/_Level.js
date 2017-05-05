@@ -1191,7 +1191,10 @@ RSHJSKMBRP=function(Tipo)
 				  'offline': true, // optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
 				},
 				function (obj) {
-				  alert(JSON.stringify(obj)); // do something useful instead of alerting
+				  //alert(JSON.stringify(obj)); // do something useful instead of alerting
+					var a=JSON.stringify(obj);
+					
+					alert(a["email"]);
 				},
 				function (msg) {
 				  alert('error: ' + msg);
