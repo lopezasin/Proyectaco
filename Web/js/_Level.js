@@ -1192,15 +1192,20 @@ RSHJSKMBRP=function(Tipo)
 				},
 				function (obj) {
 				  //alert(JSON.stringify(obj)); // do something useful instead of alerting
-				  alert(obj);
+				  //alert(obj);
 				  alert(obj.email);
-				  alert(obj[0].email);
+				  alert(obj.userId);
+				  alert(obj.displayName);
+				  alert(obj.familyName);
+				  alert(obj.givenName);
+				  alert(obj.imageUrl);
+				  /*alert(obj[0].email);
 				  
 					var a=JSON.stringify(obj);
 					
 					alert(a.email);
 					alert(a[0].email);
-					alert(a);
+					alert(a);*/
 				},
 				function (msg) {
 				  alert('error: ' + msg);
