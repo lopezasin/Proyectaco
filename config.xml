@@ -33,9 +33,10 @@
 	<plugin name="cordova-plugin-whitelist" spec="1.3.2" />
 	<plugin name="cordova-plugin-device" />
 	
-	<plugin name="cordova-plugin-googleplus" source="npm">
-	<param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
-	</>
+
+	<gap:plugin name="cordova-plugin-googleplus" source="npm">
+  <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
+</gap:plugin>
 	
 	<icon src="icon.png" />
     <icon src="android-icon-36x36.png"   gap:platform="android"    gap:qualifier="ldpi" />
