@@ -1194,7 +1194,9 @@ RSHJSKMBRP=function(Tipo)
 				  //alert(JSON.stringify(obj)); // do something useful instead of alerting
 					var a=JSON.stringify(obj);
 					
-					alert(a["email"]);
+					alert(a.email);
+					alert(a[0].email);
+					alert(a);
 				},
 				function (msg) {
 				  alert('error: ' + msg);
