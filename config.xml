@@ -32,6 +32,7 @@
 	<plugin name="cordova-plugin-vibration" spec="2.1.4" />
 	<plugin name="cordova-plugin-whitelist" spec="1.3.2" />
 	<plugin name="cordova-plugin-device" />
+	<plugin name="cordova-plugin-background-mode" />
 	
 
 	<gap:plugin name="cordova-plugin-googleplus" source="npm">

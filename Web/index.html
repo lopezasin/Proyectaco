@@ -62,11 +62,11 @@
 <script type="text/javascript">
 
 document.addEventListener('focus', function(){ 
-	SVHMCOYULR("Vuelve");
+	
 			FechaFin=new Date();
 		if ((FechaFin-FechaIni)/1000>=25 )
 		{
-			window.location.reload();
+		//	window.location.reload();
 		}
 }
 );
@@ -76,16 +76,16 @@ document.addEventListener('focus', function(){
  <!-- });  -->
  document.addEventListener('pause', function(){
 	  // YMHIHSNADE.scale.refresh()
-	   SVHMCOYULR("adios1");
+	   
 		FechaIni=new Date();
  }); 
 	document.addEventListener('resume', function(){
 	  // YMHIHSNADE.scale.refresh()
-	  SVHMCOYULR("Vuelve2");
+	  
 		FechaFin=new Date();
 		if ((FechaFin-FechaIni)/1000>=25 )
 		{
-			window.location.reload();
+		//	window.location.reload();
 		}
  }); 
 
@@ -202,7 +202,7 @@ function FiltrarSalas() {
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-
+		cordova.plugins.backgroundMode.enable();
 		window.open = cordova.InAppBrowser.open;
 		Inicia();
 
