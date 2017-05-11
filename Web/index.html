@@ -216,7 +216,7 @@ function FiltrarSalas() {
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-		if( window.plugins)
+		/*if( window.plugins)
 		{
 			SO = device.platform;	
 			
@@ -229,7 +229,7 @@ function onDeviceReady() {
 				alert("no "+SO);
 				cordova.plugins.backgroundMode.enable();
 			}
-		}
+		}*/
 		
 		window.open = cordova.InAppBrowser.open;
 		Inicia();
