@@ -84,7 +84,7 @@
 <splash gap:platform="ios" height="2208" width="1242" src="res/screens/ios/screen-iphone-portrait-736h.png" />
 <splash gap:platform="ios" height="1242" width="2208" src="res/screens/ios/screen-iphone-landscape-736h.png" />
 
-<preference name="SplashScreenDelay" value="5000" />
+<preference name="SplashScreenDelay" value="5" />
 
 
 </widget>
