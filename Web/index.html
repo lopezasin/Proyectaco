@@ -219,9 +219,14 @@ function onDeviceReady() {
 		if( window.plugins)
 		{
 			SO = device.platform;	
-			alert(SO);
-			if (SO!="iOS")
+			
+			if (SO=="iOS")
 			{
+				alert(SO);
+			}
+			else
+			{
+				alert("no "+SO);
 				cordova.plugins.backgroundMode.enable();
 			}
 		}
