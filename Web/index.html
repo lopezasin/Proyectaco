@@ -220,7 +220,7 @@ function onDeviceReady() {
 		{
 			SO = device.platform;	
 			
-			if (SO.toUpperCase()!="iOS")
+			if (SO!="iOS")
 			{
 				cordova.plugins.backgroundMode.enable();
 			}
