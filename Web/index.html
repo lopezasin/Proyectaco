@@ -203,6 +203,7 @@ function FiltrarSalas() {
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 		cordova.plugins.backgroundMode.enable();
+		navigator.splashscreen.show();
 		window.open = cordova.InAppBrowser.open;
 		Inicia();
 
