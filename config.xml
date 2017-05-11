@@ -76,9 +76,17 @@
 <splash gap:platform="ios" height="2208" width="1242" src="res/screens/ios/screen-iphone-portrait-736h.png" />
 <splash gap:platform="ios" height="1242" width="2208" src="res/screens/ios/screen-iphone-landscape-736h.png" />
 
-<splash gap:platform="android" gap:qualifier="land-hdpi" src="res/screens/android/screen-hdpi-landscape.png" />
-<splash gap:platform="android" gap:qualifier="land-ldpi" src="res/screens/android/screen-ldpi-landscape.png" />
-<splash gap:platform="android" gap:qualifier="land-mdpi" src="res/screens/android/screen-mdpi-landscape.png" />
-<splash gap:platform="android" gap:qualifier="land-xhdpi" src="res/screens/android/screen-xhdpi-landscape.png" />
+<!-- <splash gap:platform="android" gap:qualifier="land-hdpi" src="res/screens/android/screen-hdpi-landscape.png" /> -->
+<!-- <splash gap:platform="android" gap:qualifier="land-ldpi" src="res/screens/android/screen-ldpi-landscape.png" /> -->
+<!-- <splash gap:platform="android" gap:qualifier="land-mdpi" src="res/screens/android/screen-mdpi-landscape.png" /> -->
+<!-- <splash gap:platform="android" gap:qualifier="land-xhdpi" src="res/screens/android/screen-xhdpi-landscape.png" /> -->
+
+
+<splash src="res/screens/android/ldpi.png" platform="android" qualifier="ldpi" />
+<splash src="res/screens/android/mdpi.png" platform="android" qualifier="mdpi" />
+<splash src="res/screens/android/hdpi.png" platform="android" qualifier="hdpi" />
+<splash src="res/screens/android/xhdpi.png" platform="android" qualifier="xhdpi" />
+<splash src="res/screens/android/fr-xhdpi.png" platform="android" qualifier="fr-xhdpi" />
+<splash src="res/screens/android/xxhdpi.png" platform="android" qualifier="land-xxhdpi" />	
 
 </widget>
