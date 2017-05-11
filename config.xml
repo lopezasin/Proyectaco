@@ -40,6 +40,7 @@
 </gap:plugin>
 	
 <icon src="icon.png" />
+<splash src="splash.png" />
 
 <icon gap:platform="ios" height="60" width="60" src="res/icons/ios/icon-60.png" />
 <icon gap:platform="ios" height="120" width="120" src="res/icons/ios/icon-60-2x.png" />
