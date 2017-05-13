@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="es.guinotepro.guinotepro" version="1.0.3" versioncode="10003" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="es.guinotepro.guinotepro" version="1.0.3" versioncode="10003" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+<gap:config-file platform="android" parent="/manifest">
+     <application android:debuggable="true" />
+</gap:config-file>
+	
     <name>GuiñotePro</name>
     <description>
         Videojuego de guiñote
