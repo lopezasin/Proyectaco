@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="es.guinotepro.guinotepro" version="1.0.3" versioncode="10003" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="es.guinotepro.guinotepro" version="1.0.4" versioncode="10004" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>GuiñotePro</name>
     <description>
         Videojuego de guiñote
@@ -21,9 +21,9 @@
 	<preference name="Orientation" value="landscape" /> 
 	
 	
-	<preference name="KeepRunning" value="true"/>
-	<preference name="exit-on-suspend" value="false" /> 
-    <plugin name="cordova-plugin-background-mode" />
+	<preference name="KeepRunning" value="false"/>
+ <preference name="exit-on-suspend" value="true" /> 
+  <!-- <plugin name="cordova-plugin-background-mode" /> -->
   
 		
 	<plugin name="cordova-plugin-inappbrowser" spec="1.7.0" />
