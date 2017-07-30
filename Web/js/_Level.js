@@ -27,7 +27,7 @@ else
 }
 
 
-
+var bmd;
 var YMHIHSNADE;
 var vSonidoOn;
 var FechaIni;
@@ -761,7 +761,11 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	HJKHDKJHWU.height=HJKHDKJHWU.height;
 	HJKHDKJHWU.anchor.setTo(0.5,0.5)
 	
-	
+	bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width,YMHIHSNADE.world.height);
+	bmd.ctx.beginPath();
+	bmd.ctx.rect(0,0,YMHIHSNADE.world.width,YMHIHSNADE.world.height);
+	bmd.ctx.fillStyle = '#000000';
+	bmd.ctx.fill();
 	
 	MITSNADNQS();
 
@@ -2306,7 +2310,7 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,EsCante,OMDVKATFLQ, desdeServer)
 			
 			
 			//var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width-100,YMHIHSNADE.world.height-100);
-			var bmd = YMHIHSNADE.make.bitmapData(300,300);
+			//var bmd = YMHIHSNADE.make.bitmapData(300,300);
 			 
 
 			// draw to the canvas context like normal
@@ -2331,7 +2335,7 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,EsCante,OMDVKATFLQ, desdeServer)
 			//text.alpha=0;
 							
 			 //1.0.8
-			/*if (TTCLPDJAMD.isRunning==false)
+			if (TTCLPDJAMD.isRunning==false)
 			{
 				var WTCIGMLJUY = YMHIHSNADE.add.sprite(0, 0, bmd);
 				WTCIGMLJUY.alpha=0.7;
@@ -2341,7 +2345,7 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,EsCante,OMDVKATFLQ, desdeServer)
 						TTCLPDJAMD = YMHIHSNADE.add.tween(WTCIGMLJUY).to( { alpha: 0 }, 500, KYFMRVNHIQ, true,1000,0);
 					}
 				);
-			}*/
+			}
 			
 			
 			FTBVKLREAE=YMHIHSNADE.add.sprite(GCTYDSCWXE,YSMHGCUJFD, HOGPTRLBYH);
@@ -3747,13 +3751,13 @@ VWYRRWMSJI=function(HOGPTRLBYH,NPYBJSHIFL)
 		
 		
 		
-	var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width,YMHIHSNADE.world.height);
+	//var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 
 	// draw to the canvas context like normal
-	bmd.ctx.beginPath();
+	/*bmd.ctx.beginPath();
 	bmd.ctx.rect(0,0,YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 	bmd.ctx.fillStyle = '#000000';
-	bmd.ctx.fill();
+	bmd.ctx.fill();*/
 
 	// use the bitmap data as the texture for the sprite
 	var WTCIGMLJUY = YMHIHSNADE.add.sprite(0, 0, bmd);
