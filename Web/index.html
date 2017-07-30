@@ -42,7 +42,21 @@
 <script src="lib/jquery.js"></script>
 <!-- <script src="lib/saveCPU.js"></script> -->
 <script src='socket.io/socket.io.js'></script>
-<script src="js/js.js"></script>
+<script src="js/_Main.js"></script>
+<script src="js/_Boot.js"></script>
+<script src="js/_Menu.js"></script>
+<script src="js/_Preload.js"></script>
+<script src="js/_Level.js"></script>
+<script src="js/_Carta.js"></script>
+<script src="js/_CrearBaraja.js"></script>
+<script src="js/_CrearBarajaRecibida.js"></script>
+<script src="js/_RepartosDesdeArriba.js"></script>
+<script src="js/_RepartosDesdeAbajo.js"></script>
+<script src="js/_RepartosDesdeDerecha.js"></script>
+<script src="js/_RepartosDesdeIzquierda.js"></script>
+<script src="js/_MazoMovimientos.js"></script>
+<script src="js/_MazoMovimientosApoyo.js"></script>
+<script src="js/_IA.js"></script>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="cordova.js"></script>
 
@@ -71,16 +85,16 @@ document.addEventListener('focus', function(){
 }
 );
 	 
-	  <!-- YMHIHSNADE.state.start("Level"); -->
+	  <!-- game_objeto.state.start("Level"); -->
 		<!-- //console.log("Hola")  -->
  <!-- });  -->
  document.addEventListener('pause', function(){
-	  // YMHIHSNADE.scale.refresh()
+	  // game_objeto.scale.refresh()
 	   
 		FechaIni=new Date();
  }); 
 	document.addEventListener('resume', function(){
-	  // YMHIHSNADE.scale.refresh()
+	  // game_objeto.scale.refresh()
 	  
 		/*FechaFin=new Date();
 		if ((FechaFin-FechaIni)/1000>=25 )
@@ -105,8 +119,8 @@ document.addEventListener('focus', function(){
            // url: 'post.php',
             data: $('#FormLogin').serialize(),
             success: function () {
-              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
-			  //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+              //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
+			  //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
 			  document.getElementById("inputChat").value="";
 			  document.getElementById("inputChat").value="";
 			 // document.getElementById("ko").focus();
@@ -130,7 +144,7 @@ document.addEventListener('focus', function(){
             data: $('#FormCrearSala').serialize(),
             success: function () {
 				CrearSala(document.getElementById("sala").value,document.getElementById("pass").value)
-              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+              //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
 			 
 			 // document.getElementById("ko").focus();
             }
@@ -152,8 +166,8 @@ document.addEventListener('focus', function(){
            // url: 'post.php',
             data: $('#FormPasswordSala').serialize(),
             success: function () {
-				RPEOWUSPJU(document.getElementById("sala_pass").value,document.getElementById("pass_pass").value)
-              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+				ValidaPasswordSala(document.getElementById("sala_pass").value,document.getElementById("pass_pass").value)
+              //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
 			 
 			 // document.getElementById("ko").focus();
             }
@@ -446,7 +460,7 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 		<input type="text" id="InputSalas" onkeyup="FiltrarSalas()" placeholder="Buscar Salas..">
 		
 		<button type="button" id="BtnCrearSalas" class="btn btn-primary" onclick="MostrarCrearSala()">Crear Sala</button>
-		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onclick="NFARLTEOCI()">Cerrar</button>
+		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onclick="CancelarAmigos()">Cerrar</button>
 		<div id="lblAvisoSalas" style='color: #fff; font-size: 18px; text-shadow: 0px 0px 5px #000000;'>Las salas se eliminan transcurridos 7 días desde su último uso.</div> 
 		<div id='divtablasalas' style=' overflow: auto; background: rgba(255, 255, 255, 0.5);'>
 		<table id="TablaSalas" >
@@ -467,7 +481,7 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 		<table id="TablaClasificacion" style="font-size: 13px;width:80%;left:30px">
 		 <tr class="header">
 			<th style="width:10%;"> </th>
-			<th style="width:30%;">SSUNXNEEHN</th>
+			<th style="width:30%;">Jugador</th>
 			<th style="width:10%;">Jugadas</th>
 			<th style="width:10%;">_Ganadas</th>
 			<th style="width:10%;">_Perdidas</th>
@@ -490,7 +504,7 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	</div>
 
 	 <button type="submit" class="btn btn-default">¡Crear Sala!</button>
-	 <button type="button" class="btn btn-default" onclick="NFARLTEOCI()" >Cancelar</button>
+	 <button type="button" class="btn btn-default" onclick="CancelarAmigos()" >Cancelar</button>
 
 	</form>
 </div>
@@ -509,8 +523,8 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	</div> -->
 	
 	 <button type="submit" class="btn btn-default">¡Entrar Sala!</button>
-	 <button type="button" class="btn btn-default" onclick="NFARLTEOCI()" >Cancelar</button>
-	 <button id="btnEliminarSala" type="button" class="btn btn-default"  onclick="PTBEWVCTBF(document.getElementById('sala_pass').value)" >Eliminar Sala</button>
+	 <button type="button" class="btn btn-default" onclick="CancelarAmigos()" >Cancelar</button>
+	 <button id="btnEliminarSala" type="button" class="btn btn-default"  onclick="EliminarSalaDesdeCliente(document.getElementById('sala_pass').value)" >Eliminar Sala</button>
 	 
 	</form>
 </div>
@@ -568,18 +582,18 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 <div id="chat" style="display:none" >
 	<form  id="FormChat" class="form-horizontal"> 
 		<div class="form-group">
-			<input  type="text" class="form-control" id="inputChat" placeholder="HXUNTIAKHM" autocomplete="off" maxlength="60" autocomplete="off">			
+			<input  type="text" class="form-control" id="inputChat" placeholder="enviar texto" autocomplete="off" maxlength="60" autocomplete="off">			
 					
 		</div> 
 	</form>
 </div>
 <div id="Login" class='redondeado1em' style="display:none" width=1000>
-<div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onclick="MCFSLYOMHE()" ><i class='fa fa-times'></i></div>
+<div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onclick="CierraPantallaLogin()" ><i class='fa fa-times'></i></div>
 		Inicia sesión con<br>
-		<button onclick="RSHJSKMBRP(1)" style='margin-bottom: 7px'><i class='fa fa-google'></i> Google</button>
-		<button onclick="RSHJSKMBRP(2)" style='margin-bottom: 7px'><i class='fa fa-facebook-official'></i> Facebook</button>
-		<button onclick="RSHJSKMBRP(3)"><i class='fa fa-instagram'></i> Instagram</button>
-		<button onclick="RSHJSKMBRP(4)"><i class='fa fa-twitter'></i> Twitter</button>		
+		<button onclick="LoginCordova(1)" style='margin-bottom: 7px'><i class='fa fa-google'></i> Google</button>
+		<button onclick="LoginCordova(2)" style='margin-bottom: 7px'><i class='fa fa-facebook-official'></i> Facebook</button>
+		<button onclick="LoginCordova(3)"><i class='fa fa-instagram'></i> Instagram</button>
+		<button onclick="LoginCordova(4)"><i class='fa fa-twitter'></i> Twitter</button>		
 		<br><br>	
 		 <a href="http://guiñotepro.es/privacidad/privacidad.html" target="_blank">política de privacidad</a>
 </div> 
