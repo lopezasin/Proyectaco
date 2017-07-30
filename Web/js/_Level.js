@@ -2305,7 +2305,9 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,EsCante,OMDVKATFLQ, desdeServer)
 			
 			
 			
-			var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width-100,YMHIHSNADE.world.height-100);
+			//var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width-100,YMHIHSNADE.world.height-100);
+			var bmd = YMHIHSNADE.make.bitmapData(300,300);
+			 
 
 			// draw to the canvas context like normal
 		
