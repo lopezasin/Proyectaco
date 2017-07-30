@@ -2296,10 +2296,10 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,EsCante,OMDVKATFLQ, desdeServer)
 			}
 			
 			//1.0.8
-			/*if(navigator.vibrate) {
+			if(navigator.vibrate) {
 				window.navigator.vibrate(300);
 			}
-			*/
+			
 			
 			log(false,"NPYBJSHIFL FTBVKLREAE: "+GCTYDSCWXE);
 			
