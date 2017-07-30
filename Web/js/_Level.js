@@ -2305,12 +2305,12 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,EsCante,OMDVKATFLQ, desdeServer)
 			
 			
 			
-			/*var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width,YMHIHSNADE.world.height);
+			var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 
 			// draw to the canvas context like normal
 		
 			//1.0.8
-			bmd.ctx.beginPath();
+			/*bmd.ctx.beginPath();
 			bmd.ctx.rect(0,0,YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 			bmd.ctx.fillStyle = '#000000';
 			bmd.ctx.fill();
