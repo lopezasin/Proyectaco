@@ -12,7 +12,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var vProduccion=false;
+var vProduccion=true;
 
 var Maquina;
 if (vProduccion==true){
@@ -710,7 +710,7 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	}	
 	
 	//1.0.8
-	BotonClasificacion= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX + 300, YMHIHSNADE.world.height-170, 'Boton_ranking', SolicitaClasificacion, this, 2, 1, 0);;
+	/*BotonClasificacion= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX + 300, YMHIHSNADE.world.height-170, 'Boton_ranking', SolicitaClasificacion, this, 2, 1, 0);;
 	BotonClasificacion.visible=false;
 	BotonClasificacion.width=BotonClasificacion.width;
 	BotonClasificacion.height=BotonClasificacion.height;
@@ -722,7 +722,7 @@ var timerborrar = YMHIHSNADE.time.create(false);
 		BotonClasificacion.height=BotonClasificacion.height*1.4;
 		BotonClasificacion.y=BotonClasificacion.y-90;
 		BotonClasificacion.x=BotonClasificacion.x+45;
-	}		
+	}		*/
 	//1.0.8
 	
 	EFKTQSXAMA= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX -120 , YMHIHSNADE.world.height-170-1000, 'Boton_aleatorio', InicioMultiJugadorAleatorio, this, 2, 1, 0);
@@ -761,11 +761,13 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	HJKHDKJHWU.height=HJKHDKJHWU.height;
 	HJKHDKJHWU.anchor.setTo(0.5,0.5)
 	
+	//1.0.8 Error de los 20
 	bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 	bmd.ctx.beginPath();
 	bmd.ctx.rect(0,0,YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 	bmd.ctx.fillStyle = '#000000';
 	bmd.ctx.fill();
+	//1.0.8
 	
 	MITSNADNQS();
 
@@ -1587,7 +1589,7 @@ MITSNADNQS=function()
 	IBECDOLWLN.visible=true;
 	BotonContacta.visible=true;
 	JKLJKLRIRI.visible=true;
-	BotonClasificacion.visible=true; //1.0.8
+	//BotonClasificacion.visible=true; //1.0.8
 }
 
 YBWXJFDOAW=function()
@@ -2476,7 +2478,7 @@ JVEHDHOEEM=function(){
 		DVNRTQIWGL=1; //1.0.4
 		UEHYPTREIH.visible=false;
 		IBECDOLWLN.visible=false;
-		BotonClasificacion.visible=false; //1.0.8
+		//BotonClasificacion.visible=false; //1.0.8
 		BotonContacta.visible=false;
 		//EFKTQSXAMA.visible=false;
 		//LNJDKEVPQE.visible=false;
@@ -2559,7 +2561,7 @@ OCSBJTDODP=function(){
 	//{
 		UEHYPTREIH.visible=false;
 		IBECDOLWLN.visible=false;
-		BotonClasificacion.visible=true; //1.0.8
+		//BotonClasificacion.visible=true; //1.0.8
 		BotonContacta.visible=false;
 		EFKTQSXAMA.visible=false;
 		LNJDKEVPQE.visible=false;
@@ -5186,7 +5188,7 @@ MCFSLYOMHE=function()
 		
 	UEHYPTREIH.visible=true;
 	IBECDOLWLN.visible=true;
-	BotonClasificacion.visible=true; //1.0.8
+	//BotonClasificacion.visible=true; //1.0.8
 	BotonContacta.visible=true;
 	JKLJKLRIRI.visible=true;
 }

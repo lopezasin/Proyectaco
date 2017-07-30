@@ -183,7 +183,7 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 	
    });
 	
-  //FXGSEGRXKC=Phaser.ArrayUtils.shuffle(FXGSEGRXKC);
+  FXGSEGRXKC=Phaser.ArrayUtils.shuffle(FXGSEGRXKC);
 	
 	
 
