@@ -2114,7 +2114,7 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,EsCante,OMDVKATFLQ, desdeServer)
 		
 		HUJOOKLGRK=(RPHWVBBGIM.length*27)/2
 		
-		//HOGPTRLBYH='20_espadas'; //1.0.8 Creo que es el error de algunos dispositivos
+		HOGPTRLBYH='20_espadas'; //1.0.8 Creo que es el error de algunos dispositivos
 		var BocadilloTemp=YMHIHSNADE.add.sprite(-300,-300, HOGPTRLBYH);
 		var AltoBocadilloEstallido=BocadilloTemp.height;
 		var AnchoBocadilloEstallido=BocadilloTemp.width;
