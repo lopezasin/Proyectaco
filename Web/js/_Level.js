@@ -21,9 +21,9 @@ if (vProduccion==true){
 }
 else
 {
-	Maquina='http://localhost:5000'		
+	//Maquina='http://localhost:5000'		
 	//Maquina='http://192.168.1.100:5000'		
-	//Maquina='http://192.168.43.100:5000'		
+	Maquina='http://192.168.43.100:5000'		
 }
 
 
@@ -179,6 +179,7 @@ var YGTNAODFHW;
 var UEHYPTREIH;
 var IBECDOLWLN;
 var EFKTQSXAMA;
+var BotonClasificacion;
 var LNJDKEVPQE;
 var COIVBWRMCC=0;
 var SXSHBRJFIR=0;
@@ -708,6 +709,22 @@ var timerborrar = YMHIHSNADE.time.create(false);
 		IBECDOLWLN.x=IBECDOLWLN.x+45;
 	}	
 	
+	//1.0.8
+	BotonClasificacion= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX + 300, YMHIHSNADE.world.height-170, 'Boton_ranking', SolicitaClasificacion, this, 2, 1, 0);;
+	BotonClasificacion.visible=false;
+	BotonClasificacion.width=BotonClasificacion.width;
+	BotonClasificacion.height=BotonClasificacion.height;
+	BotonClasificacion.anchor.setTo(0.5,0.5)
+	
+	if (JHJEWHFWNL==true)
+	{
+		BotonClasificacion.width=BotonClasificacion.width*1.4;
+		BotonClasificacion.height=BotonClasificacion.height*1.4;
+		BotonClasificacion.y=BotonClasificacion.y-90;
+		BotonClasificacion.x=BotonClasificacion.x+45;
+	}		
+	//1.0.8
+	
 	EFKTQSXAMA= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX -120 , YMHIHSNADE.world.height-170-1000, 'Boton_aleatorio', InicioMultiJugadorAleatorio, this, 2, 1, 0);
 	EFKTQSXAMA.visible=false;
 	EFKTQSXAMA.width=EFKTQSXAMA.width;
@@ -950,6 +967,14 @@ var timerborrar = YMHIHSNADE.time.create(false);
 
 	
 };
+
+SolicitaClasificacion=function()
+{
+	if (socket.id!=undefined)
+	{
+		socket.emit('XUUKTXNVCK',socket.id);	
+	}
+}
 
 RellenarSala=function()
 {
@@ -1558,7 +1583,7 @@ MITSNADNQS=function()
 	IBECDOLWLN.visible=true;
 	BotonContacta.visible=true;
 	JKLJKLRIRI.visible=true;
-
+	BotonClasificacion.visible=true; //1.0.8
 }
 
 YBWXJFDOAW=function()
@@ -2281,11 +2306,13 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,EsCante,OMDVKATFLQ, desdeServer)
 			var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 
 			// draw to the canvas context like normal
-			bmd.ctx.beginPath();
+		
+			//1.0.8
+			/*bmd.ctx.beginPath();
 			bmd.ctx.rect(0,0,YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 			bmd.ctx.fillStyle = '#000000';
 			bmd.ctx.fill();
-
+		*/
 			// use the bitmap data as the texture for the sprite
 
 		
@@ -2299,17 +2326,19 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,EsCante,OMDVKATFLQ, desdeServer)
 			//text = YMHIHSNADE.add.text(IFJRJXGGFY, CWWHRMDADQ , RPHWVBBGIM, style);
 			//text.alpha=0;
 							
-			if (TTCLPDJAMD.isRunning==false)
+			 //1.0.8
+			/*if (TTCLPDJAMD.isRunning==false)
 			{
 				var WTCIGMLJUY = YMHIHSNADE.add.sprite(0, 0, bmd);
 				WTCIGMLJUY.alpha=0.7;
-				//WTCIGMLJUY.sendToBack()
+				
 				TTCLPDJAMD = YMHIHSNADE.add.tween(WTCIGMLJUY).to( { alpha: 0.7 }, 1000, KYFMRVNHIQ, true);
 				TTCLPDJAMD.onComplete.add(  function(){
 						TTCLPDJAMD = YMHIHSNADE.add.tween(WTCIGMLJUY).to( { alpha: 0 }, 500, KYFMRVNHIQ, true,1000,0);
 					}
 				);
-			}
+			}*/
+			
 			
 			FTBVKLREAE=YMHIHSNADE.add.sprite(GCTYDSCWXE,YSMHGCUJFD, HOGPTRLBYH);
 			FTBVKLREAE.anchor.setTo(0.5, 0.5);
@@ -2439,6 +2468,7 @@ JVEHDHOEEM=function(){
 		DVNRTQIWGL=1; //1.0.4
 		UEHYPTREIH.visible=false;
 		IBECDOLWLN.visible=false;
+		BotonClasificacion.visible=false; //1.0.8
 		BotonContacta.visible=false;
 		//EFKTQSXAMA.visible=false;
 		//LNJDKEVPQE.visible=false;
@@ -2462,7 +2492,7 @@ JVEHDHOEEM=function(){
 		if (socket.id!=undefined)
 		{
 			socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
-			socket.emit('XUUKTXNVCK',socket.id);
+			//socket.emit('XUUKTXNVCK',socket.id);
 			socket.emit('JKHWJKHIWF');
 		
 		}
@@ -2521,6 +2551,7 @@ OCSBJTDODP=function(){
 	//{
 		UEHYPTREIH.visible=false;
 		IBECDOLWLN.visible=false;
+		BotonClasificacion.visible=true; //1.0.8
 		BotonContacta.visible=false;
 		EFKTQSXAMA.visible=false;
 		LNJDKEVPQE.visible=false;
@@ -3139,7 +3170,7 @@ NNSHEUERGY=function()
 SRUKEMRQNI=function(Data){
 	var i;
 	
-	if (1==2)
+	if (1==1)
 	{
 	var table = document.getElementById("TablaClasificacion");
 	var row; 
@@ -3149,21 +3180,21 @@ SRUKEMRQNI=function(Data){
 	var rowCount = table.rows.length;
 
 
-	for (var i = 1; i < rowCount; i++) {
+	for (i = 1; i < rowCount; i++) {
 	  
 		table.deleteRow(1);
 	}
 
-	
+	//alert("j");
 
 	/*for (i=0;i<=Data.length-1;i++)
 	{
 
-		//console.log(Data[i].Usuario[1][0]+" "+Data[i].PAXBGDCANU+Data[i].Usuario[0][0]);
+		console.log(Data[i].Usuario[1][0]+" "+Data[i].PAXBGDCANU+Data[i].Usuario[0][0]);
 		
 		
-	}*/
-	
+	}
+	*/
 
 	// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
 	
@@ -5147,6 +5178,7 @@ MCFSLYOMHE=function()
 		
 	UEHYPTREIH.visible=true;
 	IBECDOLWLN.visible=true;
+	BotonClasificacion.visible=true; //1.0.8
 	BotonContacta.visible=true;
 	JKLJKLRIRI.visible=true;
 }

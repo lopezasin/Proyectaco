@@ -91,6 +91,7 @@ Preload.prototype.preload = function() {
 	this.load.image('FondoPrincipal_43', 'assets/images/fondo_principal_43.png');	
 	this.load.image('Boton_solo', 'assets/images/Botones/jugar_solo.png');	
 	this.load.image('Boton_online', 'assets/images/Botones/jugar_online.png');	
+	this.load.image('Boton_ranking', 'assets/images/Botones/ranking.png');
 	this.load.image('Boton_amigos', 'assets/images/Botones/jugar_con_amigos.png');	
 	this.load.image('Boton_bar1', 'assets/images/Botones/jugar_bar_1.png');	
 	this.load.image('Boton_aleatorio', 'assets/images/Botones/jugar_mundo.png');	
