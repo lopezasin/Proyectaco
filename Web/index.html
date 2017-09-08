@@ -249,7 +249,7 @@ function onDeviceReady() {
 			}
 		}
 		
-		try
+		/*try
 		{
 			//window.plugins.powerManagement.acquire();
 			//window.plugins.powermanagement.acquire();
@@ -259,13 +259,34 @@ function onDeviceReady() {
 		catch()
 		{
 			console.log("Error wake");
-		}
+		}*/
+		
+		
+		
+		
 		window.open = cordova.InAppBrowser.open;
 		
 		Inicia();
 
 }
 
+
+navigator.wakeLock.request("display").then(
+    function successFunction() {
+        // success
+    },
+    function errorFunction() {
+        // error
+    }
+//here system indicates CPU, GPU, radio, wifi etc.
+navigator.wakeLock.request("system").then(
+    function successFunction() {
+        // success
+    },
+    function errorFunction() {
+        // error
+    }
+); 
 /*document.addEventListener("offline", FunctionOffline, false);
  
 function FunctionOffline() {
