@@ -41,9 +41,8 @@
 <!-- <script src="lib/saveCPU.js"></script> -->
 <script src='socket.io/socket.io.js'></script>
 <!-- <script src="http://localhost:5000/socket.io/socket.io.js"></script> -->
-<script type="text/javascript" src="js/Insomnia.js"></script>
-<script type="text/javascript" src="Insomnia.js"></script>
 <script src="js/js.js"></script>
+<script src="NoSleep/NoSleep.js"></script>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="cordova.js"></script>
 
@@ -248,7 +247,7 @@ function onDeviceReady() {
 				}
 			}
 		}
-		
+		enableNoSleep();
 		/*try
 		{
 			//window.plugins.powerManagement.acquire();
@@ -271,22 +270,18 @@ function onDeviceReady() {
 }
 
 
-navigator.wakeLock.request("display").then(
-    function successFunction() {
-        // success
-    },
-    function errorFunction() {
-        // error
-    }
-//here system indicates CPU, GPU, radio, wifi etc.
-navigator.wakeLock.request("system").then(
-    function successFunction() {
-        // success
-    },
-    function errorFunction() {
-        // error
-    }
-); 
+
+var noSleep = new NoSleep();
+
+function enableNoSleep() {
+  noSleep.enable();
+  //document.removeEventListener('click', enableNoSleep, false);
+}
+
+// Enable wake lock.
+// (must be wrapped in a user input event handler e.g. a mouse or touch handler)
+//document.addEventListener('click', enableNoSleep, false);
+
 /*document.addEventListener("offline", FunctionOffline, false);
  
 function FunctionOffline() {
