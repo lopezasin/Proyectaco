@@ -251,7 +251,8 @@ function onDeviceReady() {
 		{
 			//window.plugins.powerManagement.acquire();
 			//window.plugins.powermanagement.acquire();
-			cordova.plugins.powermanagement.enable();
+			//cordova.plugins.powermanagement.enable();
+			window.plugins.insomnia.keepAwake();
 		}
 		catch()
 		{
