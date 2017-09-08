@@ -11,8 +11,6 @@
 <meta http-equiv="Access-Control-Allow-Headers: Overwrite, Destination, Content-Type, Depth, User-Agent, Translate, Range, Content-Range, Timeout, X-File-Size, X-Requested-With, If-Modified-Since, X-File-Name, Cache-Control, Location, Lock-Token, If"/>
 <meta http-equiv="Access-Control-Expose-Headers: DAV, content-length, Allow"/>
 
-
-
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -42,21 +40,8 @@
 <script src="lib/jquery.js"></script>
 <!-- <script src="lib/saveCPU.js"></script> -->
 <script src='socket.io/socket.io.js'></script>
-<script src="js/_Main.js"></script>
-<script src="js/_Boot.js"></script>
-<script src="js/_Menu.js"></script>
-<script src="js/_Preload.js"></script>
-<script src="js/_Level.js"></script>
-<script src="js/_Carta.js"></script>
-<script src="js/_CrearBaraja.js"></script>
-<script src="js/_CrearBarajaRecibida.js"></script>
-<script src="js/_RepartosDesdeArriba.js"></script>
-<script src="js/_RepartosDesdeAbajo.js"></script>
-<script src="js/_RepartosDesdeDerecha.js"></script>
-<script src="js/_RepartosDesdeIzquierda.js"></script>
-<script src="js/_MazoMovimientos.js"></script>
-<script src="js/_MazoMovimientosApoyo.js"></script>
-<script src="js/_IA.js"></script>
+<!-- <script src="http://localhost:5000/socket.io/socket.io.js"></script> -->
+<script src="js/js.js"></script>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="cordova.js"></script>
 
@@ -75,10 +60,12 @@
 
 <script type="text/javascript">
 
+
+
 document.addEventListener('focus', function(){ 
 	
-			FechaFin=new Date();
-		/*if ((FechaFin-FechaIni)/1000>=25 )
+			BNMZBXWIDW=new Date();
+		/*if ((BNMZBXWIDW-UJHVBJDGJD)/1000>=25 )
 		{
 			//No es necesario window.location.reload();
 		}*/
@@ -91,13 +78,13 @@ document.addEventListener('focus', function(){
  document.addEventListener('pause', function(){
 	  // YMHIHSNADE.scale.refresh()
 	   
-		FechaIni=new Date();
+		UJHVBJDGJD=new Date();
  }); 
 	document.addEventListener('resume', function(){
 	  // YMHIHSNADE.scale.refresh()
 	  
-		/*FechaFin=new Date();
-		if ((FechaFin-FechaIni)/1000>=25 )
+		/*BNMZBXWIDW=new Date();
+		if ((BNMZBXWIDW-UJHVBJDGJD)/1000>=25 )
 		{
 			window.location.reload();
 		}*/
@@ -106,7 +93,28 @@ document.addEventListener('focus', function(){
 
     $(document).ready(function(e){
 		$('#divtablasalas').css("height", $(window).height()-100);
+		
+		$('#tabs a').click(function(event){
+			if (!$(this).hasClass('activo')){
+				$abrir=$('#' + $(this).attr("data-div"));
+				$cerrar=$('#' + $('.activo').attr("data-div"));
+				$cerrar.slideUp();
+				$(".activo").removeClass('activo');
+				$abrir.slideDown();
+				$(this).addClass('activo');
+			}
+		});
 	});
+	
+/*	$(document).ready(function(e){
+		$('#DivClasificacion').css("height", $(window).height()-100);
+	});
+	
+	    $(document).ready(function(e){
+		$('#DivClasificacionSemanal').css("height", $(window).height()-100);
+	});	
+*/	
+
 	
      $(function () {
 
@@ -239,6 +247,14 @@ function onDeviceReady() {
 			}
 		}
 		
+		try
+		{
+			window.powermanagement.acquire();
+		}
+		catch()
+		{
+			console.log("Error wake");
+		}
 		window.open = cordova.InAppBrowser.open;
 		
 		Inicia();
@@ -270,6 +286,23 @@ document.addEventListener("backbutton", function (e) {
 </script>
 <style>
 
+    .zoom{
+        /* Aumentamos la anchura y altura durante 2 segundos */
+        transition: width 2s, height 2s, transform 1s;
+        -moz-transition: width 2s, height 2s, -moz-transform 1s;
+        -webkit-transition: width 2s, height 2s, -webkit-transform 1s;
+        -o-transition: width 2s, height 2s,-o-transform 1s;
+    }
+    .zoom:hover{
+        /* tranformamos el elemento al pasar el mouse por encima al doble de
+           su tamaño con scale(2). */
+        transform : scale(2.5);
+        -moz-transform : scale(2.5);      /* Firefox */
+        -webkit-transform : scale(2.5);   /* Chrome - Safari */
+        -o-transform : scale(2.5);        /* Opera */
+    }
+	
+	
 #Login { 
 	background: #fff; 
 	position: absolute; 
@@ -377,12 +410,105 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
     background-color: #f1f1f1;
 }
 
-#TablaClasificacion {
+<!-- #TablaClasificacion {
     border-collapse: collapse; /* Collapse borders */	
     border: 1px solid #ddd; /* Add a grey border */
-    font-size: 18px; /* Increase font-size */
+    font-size: 11px; /* Increase font-size */
 	width: 100%;
 	background: #fff;
+	border-spacing: 565em;
+} -->
+
+
+#DivClasificacionContenedor {
+	position: absolute;
+	width: 900px;
+	height: 600px;
+	left: 50%;
+	margin-left: -450px;
+	top: 50%;
+	margin-top: -300px;
+	background: rgba(255, 255, 255, 0.8);
+	overflow:auto;
+}
+
+@media (max-width: 900px) {
+	#DivClasificacionContenedor {
+		margin:0px;
+		left: 30px;
+		top: 30px;
+		right: 30px;
+		bottom: 30px;
+		width: auto !important;
+		height: auto !important;
+	}
+}
+
+@media (max-height: 700px) {
+	#DivClasificacionContenedor {
+		margin:0px;
+		left: 30px;
+		top: 30px;
+		right: 30px;
+		bottom: 30px;
+		width: auto !important;
+		height: auto !important;
+	}
+}
+
+#TablaClasificacion {
+    border-collapse: collapse;
+	border: 1px solid #ddd;
+    width: 100%;
+} 
+
+#tr.TablaClasificacion {
+padding-bottom: 50em;
+border-spacing: 50em;
+    	float: none;
+	position: absolute; 
+} 
+
+#TablaClasificacion th, #TablaClasificacion td {
+    text-align: left;
+    padding: 5px;
+	font-size: 11px;
+}
+
+#TablaClasificacion tr:nth-child(even){background-color: #f2f2f2} 
+
+#TablaClasificacion th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+#TablaClasificacionSemanal {
+    border-collapse: collapse;
+	border: 1px solid #ddd;
+} 
+
+#tr.TablaClasificacionSemanal {
+padding-bottom: 50em;
+border-spacing: 50em;
+    	float: none;
+	position: absolute; 
+} 
+
+#TablaClasificacionSemanal th, #TablaClasificacionSemanal td {
+    text-align: left;
+    padding: 5px;
+	font-size: 11px;
+}
+
+#TablaClasificacionSemanal tr:nth-child(even){background-color: #f2f2f2} 
+
+#TablaClasificacionSemanal th {
+    background-color: #4CAF50;
+    color: white;
+}
 
 
  <!--    border-collapse: collapse; /* Collapse borders */
@@ -393,7 +519,7 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	
     border: 1px solid #ddd; /* Add a grey border */
     font-size: 18px; /* Increase font-size */ -->
-}
+
 
 #Clasificacion tr {
     text-align: center;
@@ -411,6 +537,24 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 
 }
 
+#DivFace {
+  width: 100%;
+  height: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#tabs { padding: 5px; padding-bottom: 0px; }
+#tabs a { 
+	text-decoration: none;
+	background: #390; color: #fff; display: inline-block; padding: 10px;
+	-webkit-border-radius: 1em 0em 0px 0px; 
+	-moz-border-radius: 1em 1em 0px 0px; 
+	-ms-border-radius: 1em 1em 0px 0px; 
+	-o-border-radius: 1em 1em 0px 0px; 
+	border-radius: 1em 1em 0px 0px; }
+#tabs a.activo { background: #fff; font-size: 20px; color: #000; }
 </style>
 </head>
 <!-- <body class="container" style="margin:0px; padding:0px;width:100vw;height:100vh;background-image:url(back.png);" >  -->
@@ -418,12 +562,21 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 <!-- <body class="container" style="margin:0px;padding:0px;height:100vh;width:100vw;height:100vh;background-color:rgb(30%, 0%, 0%);" >  -->
 <!-- "padding:0px;margin:0px;width:100vw; class="container"-->
 <body  style="background-color:rgb(0%, 0%, 0%);" > 
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.10&appId=123400284870556";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
  <!-- style= "margin:0px; padding:0px;width:100%;height:100%" -->
   <!-- style= "min-height: 100%;min-width: 100%;margin:0px; padding:0px;width:100%;height:100%" -->
 <div id="gamer" style="margin: 0px; padding:0px ;width:100%; height:100%; max-width: 100%; max-height: 100%">
 
-
-
+<div id="DivFace" class="fb-like" data-href="https://www.facebook.com/guinotepro/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
 
 <div id=DivResultado class="container" style="display:none" >
     
@@ -457,10 +610,10 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	right: 30px;
 	" >
 	<!-- <form id="FormSalaAmigos"> -->
-		<input type="text" id="InputSalas" onkeyup="FiltrarSalas()" placeholder="Buscar Salas..">
+		<input type="text" id="InputSalas" onKeyUp="FiltrarSalas()" placeholder="Buscar Salas..">
 		
-		<button type="button" id="BtnCrearSalas" class="btn btn-primary" onclick="MostrarCrearSala()">Crear Sala</button>
-		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onclick="NFARLTEOCI()">Cerrar</button>
+		<button type="button" id="BtnCrearSalas" class="btn btn-primary" onClick="LOIUJDIWPD()">Crear Sala</button>
+		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button>
 		<div id="lblAvisoSalas" style='color: #fff; font-size: 18px; text-shadow: 0px 0px 5px #000000;'>Las salas se eliminan transcurridos 7 días desde su último uso.</div> 
 		<div id='divtablasalas' style=' overflow: auto; background: rgba(255, 255, 255, 0.5);'>
 		<table id="TablaSalas" >
@@ -473,24 +626,54 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 		 </div>
 	 <!-- </form> -->
 </div>
-
-<div id=DivClasificacion class="container" style="display:none;  
-	left: 30px;
-	right: 10px; overflow: auto; background: rgba(255, 255, 255, 0.5)">
-
-		<table id="TablaClasificacion" style="font-size: 13px;width:80%;left:30px">
-		 <tr class="header">
-			<th style="width:10%;"> </th>
-			<th style="width:30%;">SSUNXNEEHN</th>
-			<th style="width:10%;">Jugadas</th>
-			<th style="width:10%;">_Ganadas</th>
-			<th style="width:10%;">_Perdidas</th>
-			<th style="width:10%;">_Retiradas</th>
-			<th style="width:5%;">_Puntos</th>
-		  </tr>
-		</table>
-
+<!-- style="font-size: 13px;width:80%;left:30px" -->
+<div id=DivClasificacionContenedor style="display:none;">
+	<div style='height: 40px; background: #fff; border-bottom: #ccc solid 1px;'>
+    	<div style='float: right;'><button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button></div>
+        <div style='float: left; font-size: 15px; padding: 5px;'>La clasificación se calcula cada minuto. Partimos con 100 ptos. Ganar +2 ptos., Perder -1 pto., Retirarse -2 ptos. </div> 
+       	<div style='clear: both'>&nbsp;</div>
+    </div>
+    <div style='padding:10px'>
+        <div id='tabs'>
+            <a href='#' id='acumulada' data-div="DivClasificacion" class=' activo'>Acumulada</a>
+            <a href='#' id='semanal'  data-div="DivClasificacionSemanal" class=' '>Semanal</a>
+        </div>
+        <div id=DivClasificacion style='background: #fff; padding:10px;'>
+                <table id="TablaClasificacion"  >
+                 <tr class="header">			
+                    <th style="width:5%;">POSICIÓN</th>
+                    <th style="width:10%;"> </th>
+                    <th style="width:30%;">JUGADOR</th>
+                    <th style="width:10%;">JUGADAS</th>
+                    <th style="width:10%;">GANADAS</th>
+                    <th style="width:10%;">PERDIDAS</th>
+                    <th style="width:10%;">RETIRADAS</th>
+                    <th style="width:15%;">PUNTOS</th>
+                    <th style="width:15%;">NIVEL</th>
+                  </tr>
+                </table>
+    
+        </div>
+        
+        <div id=DivClasificacionSemanal style='display: none; background: #fff; padding:10px;'>
+                <table id="TablaClasificacionSemanal" >
+                 <tr class="header">			
+                    <th style="width:5%;">POSICIÓN</th>
+                    <th style="width:10%;"> </th>
+                    <th style="width:30%;">JUGADOR</th>
+                    <th style="width:10%;">JUGADAS</th>
+                    <th style="width:10%;">GANADAS</th>
+                    <th style="width:10%;">PERDIDAS</th>
+                    <th style="width:10%;">RETIRADAS</th>
+                    <th style="width:15%;">PUNTOS</th>
+                    <th style="width:15%;">TOP 5 SEMANA</th>
+                  </tr>
+                </table>
+    
+        </div>
+    </div>
 </div>
+
 
 <div id=DivCrearSala class="container" style="display:none" >
 	<form id="FormCrearSala">
@@ -504,7 +687,7 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	</div>
 
 	 <button type="submit" class="btn btn-default">¡Crear Sala!</button>
-	 <button type="button" class="btn btn-default" onclick="NFARLTEOCI()" >Cancelar</button>
+	 <button type="button" class="btn btn-default" onClick="NFARLTEOCI()" >Cancelar</button>
 
 	</form>
 </div>
@@ -523,7 +706,7 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	</div> -->
 	
 	 <button type="submit" class="btn btn-default">¡Entrar Sala!</button>
-	 <button type="button" class="btn btn-default" onclick="NFARLTEOCI()" >Cancelar</button>
+	 <button type="button" class="btn btn-default" onClick="NFARLTEOCI()" >Cancelar</button>
 	 <button id="btnEliminarSala" type="button" class="btn btn-default"  onclick="PTBEWVCTBF(document.getElementById('sala_pass').value)" >Eliminar Sala</button>
 	 
 	</form>
@@ -548,8 +731,8 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	  <label id="lblSalir" ><center>a</center></label>
 	  </div>
 	
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onclick="RespuestaSalir(true)">Sí</button>
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onclick="RespuestaSalir(false)" >No</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaSalir(true)">Sí</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaSalir(false)" >No</button>
 	
 </div>
 
@@ -573,9 +756,9 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	  <label id="lblPareja" ><center>a</center></label>
 	  </div>
 	
-	 <button id=Pareja1 type="button" class="btn btn-default" style='margin-top: 20px; ' onclick="RespuestaPareja(1)">a</button>
-	 <button id=Pareja2 type="button" class="btn btn-default" style='margin-top: 20px; ' onclick="RespuestaPareja(2)" >a</button>
-	 <button id=Pareja3 type="button" class="btn btn-default" style='margin-top: 20px; ' onclick="RespuestaPareja(3)" >a</button>
+	 <button id=Pareja1 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaPareja(1)">a</button>
+	 <button id=Pareja2 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaPareja(2)" >a</button>
+	 <button id=Pareja3 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaPareja(3)" >a</button>
 	
 </div>
 
@@ -588,12 +771,12 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	</form>
 </div>
 <div id="Login" class='redondeado1em' style="display:none" width=1000>
-<div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onclick="MCFSLYOMHE()" ><i class='fa fa-times'></i></div>
+<div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onClick="MCFSLYOMHE()" ><i class='fa fa-times'></i></div>
 		Inicia sesión con<br>
-		<button onclick="RSHJSKMBRP(1)" style='margin-bottom: 7px'><i class='fa fa-google'></i> Google</button>
-		<button onclick="RSHJSKMBRP(2)" style='margin-bottom: 7px'><i class='fa fa-facebook-official'></i> Facebook</button>
-		<button onclick="RSHJSKMBRP(3)"><i class='fa fa-instagram'></i> Instagram</button>
-		<button onclick="RSHJSKMBRP(4)"><i class='fa fa-twitter'></i> Twitter</button>		
+		<button onClick="RSHJSKMBRP(1)" style='margin-bottom: 7px'><i class='fa fa-google'></i> Google</button>
+		<button onClick="RSHJSKMBRP(2)" style='margin-bottom: 7px'><i class='fa fa-facebook-official'></i> Facebook</button>
+		<button onClick="RSHJSKMBRP(3)"><i class='fa fa-instagram'></i> Instagram</button>
+		<button onClick="RSHJSKMBRP(4)"><i class='fa fa-twitter'></i> Twitter</button>		
 		<br><br>	
 		 <a href="http://guiñotepro.es/privacidad/privacidad.html" target="_blank">política de privacidad</a>
 </div> 
