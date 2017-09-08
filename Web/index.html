@@ -247,14 +247,16 @@ function onDeviceReady() {
 			}
 		}
 		
-		/*try
+		try
 		{
-			window.plugins.powerManagement.acquire();
+			//window.plugins.powerManagement.acquire();
+			//window.plugins.powermanagement.acquire();
+			cordova.plugins.powermanagement.enable();
 		}
 		catch()
 		{
 			console.log("Error wake");
-		}*/
+		}
 		window.open = cordova.InAppBrowser.open;
 		
 		Inicia();
@@ -448,7 +450,7 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	#DivClasificacionContenedor {
 		margin:0px;
 		left: 30px;
-		top: 30px;
+		top: 5px;
 		right: 30px;
 		bottom: 30px;
 		width: auto !important;
@@ -630,7 +632,7 @@ border-spacing: 50em;
 <div id=DivClasificacionContenedor style="display:none;">
 	<div style='height: 40px; background: #fff; border-bottom: #ccc solid 1px;'>
     	<div style='float: right;'><button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button></div>
-        <div style='float: left; font-size: 15px; padding: 5px;'>La clasificación se calcula cada minuto. Partimos con 100 ptos. Ganar +2 ptos., Perder -1 pto., Retirarse -2 ptos. </div> 
+        <!-- <div style='float: left; font-size: 15px; padding: 5px;'>La clasificación se calcula cada minuto. Partimos con 100 ptos. Ganar +2 ptos., Perder -1 pto., Retirarse -2 ptos. </div>  -->
        	<div style='clear: both'>&nbsp;</div>
     </div>
     <div style='padding:10px'>
