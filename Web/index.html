@@ -225,6 +225,7 @@ function FiltrarSalas() {
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
+		window.powermanagement.acquire();
 		if( window.plugins)
 		{
 			var SO;
