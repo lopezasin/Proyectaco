@@ -13,7 +13,7 @@
 	<allow-navigation href="http://*/*" />
 	<allow-intent href="https://*/*" />
 
-
+<uses-permission android:name="android.permission.WAKE_LOCK" />
 	
 
 
