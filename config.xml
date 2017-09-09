@@ -13,11 +13,11 @@
 	<allow-navigation href="http://*/*" />
 	<allow-intent href="https://*/*" />
 
-<uses-permission android:name="android.permission.WAKE_LOCK" />
+
 	
 
 
-
+<preference name="WAKE_LOCK" value="true" /> 
 	<preference name="Orientation" value="landscape" /> 
 	
 	
