@@ -1834,14 +1834,16 @@ RSHJSKMBRP=function(Tipo)
 			//alert("a");	
 			if (loc.search('HKCERVLWFB')>=0) {	
 				//alert("b");	
-				SalirDesdeLogueo();	
+				//SalirDesdeLogueo();	
 				//alert("c");
 				//JVEHDHOEEM();
-				YBWXJFDOAW();
+				//YBWXJFDOAW();
 				//alert("d");
+				MCFSLYOMHE();
+				JVEHDHOEEM(false);
 				ref.close();
 				//JVEHDHOEEM();
-				YBWXJFDOAW();
+				//YBWXJFDOAW();
 			}
 			});
 		}
