@@ -226,7 +226,13 @@ function FiltrarSalas() {
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-		window.powermanagement.acquire();
+		try
+		{
+			window.powermanagement.acquire();
+		}
+		catch(e)
+		{}
+		
 		if( window.plugins)
 		{
 			var SO;
