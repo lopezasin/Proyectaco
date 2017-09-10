@@ -1831,11 +1831,11 @@ RSHJSKMBRP=function(Tipo)
 			//when url is changed check if the url contains your specific callbackURL
 			//console.log("LOC "+loc);
 			//if (loc.search('http://xn--guiotepro-n6a.es/?HKCERVLWFB=g')>=0) {
-			alert("a");	
+			//alert("a");	
 			if (loc.search('HKCERVLWFB')>=0) {	
-				alert("b");	
-				SalirDesdeLogueo();	
-				alert("c");
+				//alert("b");	
+				//SalirDesdeLogueo();	
+				//alert("c");
 				JVEHDHOEEM();
 				alert("d");
 				ref.close();
