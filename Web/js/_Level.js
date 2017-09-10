@@ -1839,8 +1839,9 @@ RSHJSKMBRP=function(Tipo)
 				//JVEHDHOEEM();
 				//YBWXJFDOAW();
 				//alert("d");
-				MCFSLYOMHE();
-				JVEHDHOEEM(false);
+				//MCFSLYOMHE();
+				//JVEHDHOEEM(false);
+				FHKOYDXPCL();
 				ref.close();
 				//JVEHDHOEEM();
 				//YBWXJFDOAW();
