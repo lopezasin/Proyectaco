@@ -521,6 +521,7 @@ border-spacing: 50em;
 #TablaClasificacionSemanal {
     border-collapse: collapse;
 	border: 1px solid #ddd;
+	 width: 100%;
 } 
 
 #tr.TablaClasificacionSemanal {
@@ -666,7 +667,7 @@ border-spacing: 50em;
 	<!-- <div style='height: 40px; background: #fff; border-bottom: #ccc solid 1px;'>  -->
     	<div style='float: right;'><button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button></div>
         <!-- <div style='float: left; font-size: 15px; padding: 5px;'>La clasificación se calcula cada minuto. Partimos con 100 ptos. Ganar +2 ptos., Perder -1 pto., Retirarse -2 ptos. </div>  -->
-       	<!-- <div style='clear: both'>&nbsp;</div> -->
+
      <!-- </div>  -->
     <div style='padding:10px'>
         <div id='tabs'>
@@ -674,6 +675,9 @@ border-spacing: 50em;
             <a href='#' id='semanal'  data-div="DivClasificacionSemanal" class=' '>Semanal</a>
         </div>
         <div id=DivClasificacion style='background: #fff; padding:10px;'>
+		<div id="TextoClasificacionGlobal" style='float: left; font-size: 15px; padding: 5px;font-weight: bold;'></div> 
+       
+		
                 <table id="TablaClasificacion"  >
                  <tr class="header">			
                     <th style="width:5%;">POSICIÓN</th>
@@ -691,6 +695,8 @@ border-spacing: 50em;
         </div>
         
         <div id=DivClasificacionSemanal style='display: none; background: #fff; padding:10px;'>
+		<div id="TextoClasificacionSemanal" style='float: left; font-size: 15px; padding: 5px;font-weight: bold;'></div> 
+				
                 <table id="TablaClasificacionSemanal" >
                  <tr class="header">			
                     <th style="width:5%;">POSICIÓN</th>
