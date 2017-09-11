@@ -4119,7 +4119,7 @@ MatarConexion=function()
 		try
 		{
 			socket.disconnect();
-			socket=null; 
+			//socket=null; //1.0.8 ivan
 			DFBVDPETGO=Math.floor(Math.random());
 		}
 		catch(e){}

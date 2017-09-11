@@ -54,7 +54,7 @@ var IJCSKNTKVH="";
 var JLVDFTPUNI=101;
 var MFENMIFPUA=3;
 var HLBMKNFUWL=1500;//milisegundos
-var GWFPRHAYQK=15;//segundos
+var GWFPRHAYQK=20;//segundos
 var XIQDONAJMM;
 var KVBNWXDTON;
 var RCYRGXLWBR;

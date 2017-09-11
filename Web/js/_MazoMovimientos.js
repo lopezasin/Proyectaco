@@ -2195,9 +2195,9 @@ JWXRWCVLGC=function(UPCWNPYAIE)
 				JHKSJDHVKJ=GWFPRHAYQK;
 			}
 			
-			if (LUCRWXJMDR==1)
+			if (LUCRWXJMDR!=1)
 			{
-				JHKSJDHVKJ=20;
+				JHKSJDHVKJ=15;
 			}
 			
 			if (vNoEsta==true)
