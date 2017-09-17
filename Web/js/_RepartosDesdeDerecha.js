@@ -1,497 +1,497 @@
-﻿Repartir_Desde_Derecha=function(){
-	Repartir_Desde_Derecha_R1();
+﻿EUNGWSACEK=function(){
+	XALJNKGKXN();
 };
 
-Repartir_Desde_Derecha_U1=function(){
-	MazoU.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,0,null));
-	ReproducirSonido('_Reparto');
-	//GrupoU.add(Mazo[Mazo.length-1].cartilla);
+XLGSARNUBL=function(){
+	TWJONOKGHC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,0,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//PBHYCULPGK.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("U",0);
-	var posY=devuelveY("U",0);
+	var NOFEDXHMLS=WIEVLYANFM("U",0);
+	var GHTWROCHVV=FIGQBSJQGA("U",0);
 	
 
-	tw1 = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		tw1.to( {x:posX
-		,y:posY
-		}, vVelocidadCartas, EfectoTween2);
-		tw1.onComplete.add( function(){ GrupoU.add(MazoU[MazoU.length-1].cartilla); Repartir_Desde_Derecha_U2(); } );
-		tw1.start();
-		Mazo.pop();
+	PQUFIBKJJH = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		PQUFIBKJJH.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
+		}, IRXOKNWTLV, BSXWFYLCEW);
+		PQUFIBKJJH.onComplete.add( function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); NBOXKNLUUR(); } );
+		PQUFIBKJJH.start();
+		FXGSEGRXKC.pop();
 	
 	
 
 };
 
-Repartir_Desde_Derecha_U2=function(){
-	MazoU.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,1,null));
-	ReproducirSonido('_Reparto');
-	//GrupoU.add(Mazo[Mazo.length-1].cartilla);
+NBOXKNLUUR=function(){
+	TWJONOKGHC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,1,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//PBHYCULPGK.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("U",1);
-	var posY=devuelveY("U",1);
+	var NOFEDXHMLS=WIEVLYANFM("U",1);
+	var GHTWROCHVV=FIGQBSJQGA("U",1);
 	
-	tw2 = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		tw2.to( {x:posX
-		,y:posY
-		}, vVelocidadCartas, EfectoTween2);
-		tw2.onComplete.add( function(){ GrupoU.add(MazoU[MazoU.length-1].cartilla); Repartir_Desde_Derecha_U3(); } );
-		tw2.start();
-		Mazo.pop();
+	LJRRHVSVKD = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		LJRRHVSVKD.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
+		}, IRXOKNWTLV, BSXWFYLCEW);
+		LJRRHVSVKD.onComplete.add( function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); GEHYGJVLCX(); } );
+		LJRRHVSVKD.start();
+		FXGSEGRXKC.pop();
 };
 
-Repartir_Desde_Derecha_U3=function(){
-	MazoU.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,2,null));
-	ReproducirSonido('_Reparto');
+GEHYGJVLCX=function(){
+	TWJONOKGHC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,2,null));
+	EABXADHEVT('WWYKUMYJBJ');
 	
 	
 
 	
-	//GrupoU.add(Mazo[Mazo.length-1].cartilla);
+	//PBHYCULPGK.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("U",2);
-	var posY=devuelveY("U",2);
+	var NOFEDXHMLS=WIEVLYANFM("U",2);
+	var GHTWROCHVV=FIGQBSJQGA("U",2);
 	
-	tw3 = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		tw3.to( {x:posX
-		,y:posY
-		}, vVelocidadCartas, EfectoTween2);		
-		tw3.onComplete.add( function(){ GrupoU.add(MazoU[MazoU.length-1].cartilla); Repartir_Desde_Derecha_L1(); } );
-		tw3.start();
-		Mazo.pop();
+	LCYAHFBDTT = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		LCYAHFBDTT.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
+		}, IRXOKNWTLV, BSXWFYLCEW);		
+		LCYAHFBDTT.onComplete.add( function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); GMXSPHUAWP(); } );
+		LCYAHFBDTT.start();
+		FXGSEGRXKC.pop();
 };
 
 
 
-Repartir_Desde_Derecha_L1=function(){
-	MazoL.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,0,null));
-	ReproducirSonido('_Reparto');
-	//GrupoL.add(Mazo[Mazo.length-1].cartilla);
+GMXSPHUAWP=function(){
+	KNVKGHHTYC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,0,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//SYXHGDSJDY.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("L",0);
-	var posY=devuelveY("L",0);
+	var NOFEDXHMLS=WIEVLYANFM("L",0);
+	var GHTWROCHVV=FIGQBSJQGA("L",0);
 	
-	tw4 = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		tw4.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 90
+	NEPGDYQDEI = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		NEPGDYQDEI.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
-		, vVelocidadCartas, EfectoTween2);
-		tw4.onComplete.add( function(){ GrupoL.add(MazoL[MazoL.length-1].cartilla); Repartir_Desde_Derecha_L2(); } );
-		tw4.start();
-		Mazo.pop();
+		, IRXOKNWTLV, BSXWFYLCEW);
+		NEPGDYQDEI.onComplete.add( function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); YKKCWUNYPN(); } );
+		NEPGDYQDEI.start();
+		FXGSEGRXKC.pop();
 };
 
 
-Repartir_Desde_Derecha_L2=function(){
-	MazoL.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,1,null));
-	ReproducirSonido('_Reparto');
-	//GrupoL.add(Mazo[Mazo.length-1].cartilla);
+YKKCWUNYPN=function(){
+	KNVKGHHTYC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,1,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//SYXHGDSJDY.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("L",1);
-	var posY=devuelveY("L",1);
+	var NOFEDXHMLS=WIEVLYANFM("L",1);
+	var GHTWROCHVV=FIGQBSJQGA("L",1);
 	
-	twEsp7 = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		twEsp7.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 90
+	HHBPAROITT = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		HHBPAROITT.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
-		, vVelocidadCartas, EfectoTween2);
-		twEsp7.onComplete.add( function(){ GrupoL.add(MazoL[MazoL.length-1].cartilla); Repartir_Desde_Derecha_L3(); } );
-		twEsp7.start();
-		Mazo.pop();
+		, IRXOKNWTLV, BSXWFYLCEW);
+		HHBPAROITT.onComplete.add( function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); RVEPHBTXKX(); } );
+		HHBPAROITT.start();
+		FXGSEGRXKC.pop();
 };
 
 
-Repartir_Desde_Derecha_L3=function(){
-	MazoL.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,2,null));
-	ReproducirSonido('_Reparto');
-	//GrupoL.add(Mazo[Mazo.length-1].cartilla);
+RVEPHBTXKX=function(){
+	KNVKGHHTYC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,2,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//SYXHGDSJDY.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("L",2);
-	var posY=devuelveY("L",2);
+	var NOFEDXHMLS=WIEVLYANFM("L",2);
+	var GHTWROCHVV=FIGQBSJQGA("L",2);
 	
-	twRec1 = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		twRec1.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 90
+	BDEFDQUJJE = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		BDEFDQUJJE.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
-		, vVelocidadCartas, EfectoTween2);
-		twRec1.onComplete.add( function(){ GrupoL.add(MazoL[MazoL.length-1].cartilla); Repartir_Desde_Derecha_D1(); } );
-		twRec1.start();
-		Mazo.pop();
+		, IRXOKNWTLV, BSXWFYLCEW);
+		BDEFDQUJJE.onComplete.add( function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); PHGHYUOWTN(); } );
+		BDEFDQUJJE.start();
+		FXGSEGRXKC.pop();
 };
 
 
 
-Repartir_Desde_Derecha_D1=function(){
-	MazoD.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,0,null));
-	ReproducirSonido('_Reparto');
-	//GrupoD.add(Mazo[Mazo.length-1].cartilla);
-	MostrarAnverso(Mazo[Mazo.length-1].cartilla);
+PHGHYUOWTN=function(){
+	AGKVNAGGLB.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,0,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//RXKKPILDQT.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("D",0);
-	var posY=devuelveY("D",0);
+	var NOFEDXHMLS=WIEVLYANFM("D",0);
+	var GHTWROCHVV=FIGQBSJQGA("D",0);
 	
-	twRec2 = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		twRec2.to( {x:posX
-		,y:posY}, vVelocidadCartas, EfectoTween2);
-		twRec2.onComplete.add( function(){ GrupoD.add(MazoD[MazoD.length-1].cartilla); Repartir_Desde_Derecha_D2(); } );
-		twRec2.start();
-		game_objeto.add.tween(Mazo[Mazo.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
-		Mazo.pop();
+	CKOUBGTDUF = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		CKOUBGTDUF.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
+		CKOUBGTDUF.onComplete.add( function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); KDVKJEBYUU(); } );
+		CKOUBGTDUF.start();
+		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		FXGSEGRXKC.pop();
 		
 
 };
 
-Repartir_Desde_Derecha_D2=function(){
-	MazoD.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,1,null));
-	ReproducirSonido('_Reparto');
-	//GrupoD.add(Mazo[Mazo.length-1].cartilla);
-	MostrarAnverso(Mazo[Mazo.length-1].cartilla);
+KDVKJEBYUU=function(){
+	AGKVNAGGLB.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,1,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//RXKKPILDQT.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("D",1);
-	var posY=devuelveY("D",1);
+	var NOFEDXHMLS=WIEVLYANFM("D",1);
+	var GHTWROCHVV=FIGQBSJQGA("D",1);
 	
-	twReu = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		twReu.to( {x:posX
-		,y:posY}, vVelocidadCartas, EfectoTween2);
-		twReu.onComplete.add( function(){ GrupoD.add(MazoD[MazoD.length-1].cartilla); Repartir_Desde_Derecha_D3(); } );
-		//Mazo[Mazo.length-1].cartilla.inputEnabled = true;
-		//Mazo[Mazo.length-1].cartilla.input.enableDrag(false,true);
-		twReu.start();
-		game_objeto.add.tween(Mazo[Mazo.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
-		Mazo.pop();
+	EWXBTDLSHW = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		EWXBTDLSHW.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
+		EWXBTDLSHW.onComplete.add( function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); JMMNLMSMJE(); } );
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.inputEnabled = true;
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.input.enableDrag(false,true);
+		EWXBTDLSHW.start();
+		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		FXGSEGRXKC.pop();
 };
 
-Repartir_Desde_Derecha_D3=function(){
-	MazoD.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,2,null));
-	ReproducirSonido('_Reparto');
-	//GrupoD.add(Mazo[Mazo.length-1].cartilla);
-	MostrarAnverso(Mazo[Mazo.length-1].cartilla);
+JMMNLMSMJE=function(){
+	AGKVNAGGLB.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,2,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//RXKKPILDQT.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("D",2);
-	var posY=devuelveY("D",2);
+	var NOFEDXHMLS=WIEVLYANFM("D",2);
+	var GHTWROCHVV=FIGQBSJQGA("D",2);
 	
-	twRec3 = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		twRec3.to( {x:posX
-		,y:posY}, vVelocidadCartas, EfectoTween2);		
-		twRec3.onComplete.add( function(){ GrupoD.add(MazoD[MazoD.length-1].cartilla); Repartir_Desde_Derecha_R4(); } );
-		//Mazo[Mazo.length-1].cartilla.inputEnabled = true;
-		//Mazo[Mazo.length-1].cartilla.input.enableDrag(false,true);
-		twRec3.start();
-		game_objeto.add.tween(Mazo[Mazo.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
-		Mazo.pop();
+	JLFYUAKDIJ = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		JLFYUAKDIJ.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);		
+		JLFYUAKDIJ.onComplete.add( function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); YVIUGJDUUO(); } );
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.inputEnabled = true;
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.input.enableDrag(false,true);
+		JLFYUAKDIJ.start();
+		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		FXGSEGRXKC.pop();
 };
 
 
-Repartir_Desde_Derecha_R1=function(){
-	MazoR.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,0,null));
-	ReproducirSonido('_Reparto');
+XALJNKGKXN=function(){
+	CBCNHFGWLU.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,0,null));
+	EABXADHEVT('WWYKUMYJBJ');
 	
-	if (SonVueltas==true)
+	if (EVAILWGGKX==true)
 	{
-		TextMarcador.visible=true;
-		TextTituloMarcador.visible=true;
-		ReproducirSonido('_Vueltas');		
+		ATTUXTNNKX.visible=true;
+		XQDPVWOUII.visible=true;
+		EABXADHEVT('CLVBGPCTEJ');		
 	}
 	else
 	{
-		ReproducirSonido('_Idas');		
+		EABXADHEVT('JCIRYRCUJJ');		
 	}
 	
-	//GrupoR.add(Mazo[Mazo.length-1].cartilla);
+	//BDRJVGFWQH.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("R",0);
-	var posY=devuelveY("R",0);
+	var NOFEDXHMLS=WIEVLYANFM("R",0);
+	var GHTWROCHVV=FIGQBSJQGA("R",0);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 270
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
-		, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoR.add(MazoR[MazoR.length-1].cartilla); Repartir_Desde_Derecha_R2(); } );
+		, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); ELJAQLYAYE(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
 
-Repartir_Desde_Derecha_R2=function(){
-	MazoR.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,1,null));
-	ReproducirSonido('_Reparto');
-	//GrupoR.add(Mazo[Mazo.length-1].cartilla);
+ELJAQLYAYE=function(){
+	CBCNHFGWLU.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,1,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//BDRJVGFWQH.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("R",1);
-	var posY=devuelveY("R",1);
+	var NOFEDXHMLS=WIEVLYANFM("R",1);
+	var GHTWROCHVV=FIGQBSJQGA("R",1);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 270
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
-		, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoR.add(MazoR[MazoR.length-1].cartilla); Repartir_Desde_Derecha_R3(); } );
+		, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); OXGRTXEORL(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
 
-Repartir_Desde_Derecha_R3=function(){
-	MazoR.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,2,null));
-	ReproducirSonido('_Reparto');
-	//GrupoR.add(Mazo[Mazo.length-1].cartilla);
+OXGRTXEORL=function(){
+	CBCNHFGWLU.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,2,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//BDRJVGFWQH.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("R",2);
-	var posY=devuelveY("R",2);
+	var NOFEDXHMLS=WIEVLYANFM("R",2);
+	var GHTWROCHVV=FIGQBSJQGA("R",2);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 270
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
-		, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoR.add(MazoR[MazoR.length-1].cartilla); Repartir_Desde_Derecha_U1(); } );
+		, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); XLGSARNUBL(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
 // SEGUNDA PASADA
 
-Repartir_Desde_Derecha_U4=function(){
-	MazoU.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,3,null));
-	ReproducirSonido('_Reparto');
-	//GrupoU.add(Mazo[Mazo.length-1].cartilla);
+UTVYHFEAFY=function(){
+	TWJONOKGHC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,3,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//PBHYCULPGK.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("U",3);
-	var posY=devuelveY("U",3);
+	var NOFEDXHMLS=WIEVLYANFM("U",3);
+	var GHTWROCHVV=FIGQBSJQGA("U",3);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY}, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoU.add(MazoU[MazoU.length-1].cartilla); Repartir_Desde_Derecha_U5(); } );
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); QFIXRSTKNY(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 		
 
 };
 
-Repartir_Desde_Derecha_U5=function(){
-	MazoU.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,4,null));
-	ReproducirSonido('_Reparto');
-	//GrupoU.add(Mazo[Mazo.length-1].cartilla);
+QFIXRSTKNY=function(){
+	TWJONOKGHC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,4,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//PBHYCULPGK.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("U",4);
-	var posY=devuelveY("U",4);
+	var NOFEDXHMLS=WIEVLYANFM("U",4);
+	var GHTWROCHVV=FIGQBSJQGA("U",4);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY}, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoU.add(MazoU[MazoU.length-1].cartilla); Repartir_Desde_Derecha_U6(); } );
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); RSBORYATHB(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
-Repartir_Desde_Derecha_U6=function(){
-	MazoU.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,5,null));
-	ReproducirSonido('_Reparto');
-	//GrupoU.add(Mazo[Mazo.length-1].cartilla);
+RSBORYATHB=function(){
+	TWJONOKGHC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,5,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//PBHYCULPGK.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("U",5);
-	var posY=devuelveY("U",5);
+	var NOFEDXHMLS=WIEVLYANFM("U",5);
+	var GHTWROCHVV=FIGQBSJQGA("U",5);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY}, vVelocidadCartas, EfectoTween2);		
-		s.onComplete.add( function(){ GrupoU.add(MazoU[MazoU.length-1].cartilla); Repartir_Desde_Derecha_L4(); } );
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);		
+		s.onComplete.add( function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); GFVUTLXCKB(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
 
 
-Repartir_Desde_Derecha_L4=function(){
-	MazoL.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,3,null));
-	ReproducirSonido('_Reparto');
-	//GrupoL.add(Mazo[Mazo.length-1].cartilla);
+GFVUTLXCKB=function(){
+	KNVKGHHTYC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,3,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//SYXHGDSJDY.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("L",3);
-	var posY=devuelveY("L",3);
+	var NOFEDXHMLS=WIEVLYANFM("L",3);
+	var GHTWROCHVV=FIGQBSJQGA("L",3);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 90
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
-		, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoL.add(MazoL[MazoL.length-1].cartilla); Repartir_Desde_Derecha_L5(); } );
+		, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); RVVELTRXSO(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
 
-Repartir_Desde_Derecha_L5=function(){
-	MazoL.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,4,null));
-	ReproducirSonido('_Reparto');
-	//GrupoL.add(Mazo[Mazo.length-1].cartilla);
+RVVELTRXSO=function(){
+	KNVKGHHTYC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,4,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//SYXHGDSJDY.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("L",4);
-	var posY=devuelveY("L",4);
+	var NOFEDXHMLS=WIEVLYANFM("L",4);
+	var GHTWROCHVV=FIGQBSJQGA("L",4);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 90
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
-		, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoL.add(MazoL[MazoL.length-1].cartilla); Repartir_Desde_Derecha_L6(); } );
+		, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); FPPBRATYNN(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
 
-Repartir_Desde_Derecha_L6=function(){
-	MazoL.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,5,null));
-	ReproducirSonido('_Reparto');
-	//GrupoL.add(Mazo[Mazo.length-1].cartilla);
+FPPBRATYNN=function(){
+	KNVKGHHTYC.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,5,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//SYXHGDSJDY.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("L",5);
-	var posY=devuelveY("L",5);
+	var NOFEDXHMLS=WIEVLYANFM("L",5);
+	var GHTWROCHVV=FIGQBSJQGA("L",5);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 90
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
-		, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoL.add(MazoL[MazoL.length-1].cartilla); Repartir_Desde_Derecha_D4(); } );
+		, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); XSMVMFMTPQ(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
 
 
-Repartir_Desde_Derecha_D4=function(){
-	MazoD.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,3,null));
-	ReproducirSonido('_Reparto');
-	//GrupoD.add(Mazo[Mazo.length-1].cartilla);
-	MostrarAnverso(Mazo[Mazo.length-1].cartilla);
+XSMVMFMTPQ=function(){
+	AGKVNAGGLB.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,3,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//RXKKPILDQT.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("D",3);
-	var posY=devuelveY("D",3);
+	var NOFEDXHMLS=WIEVLYANFM("D",3);
+	var GHTWROCHVV=FIGQBSJQGA("D",3);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY}, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoD.add(MazoD[MazoD.length-1].cartilla); Repartir_Desde_Derecha_D5(); } );
-		//Mazo[Mazo.length-1].cartilla.inputEnabled = true;
-		//Mazo[Mazo.length-1].cartilla.input.enableDrag(false,true);
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); IFEOSLRTIQ(); } );
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.inputEnabled = true;
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.input.enableDrag(false,true);
 		s.start();
-		game_objeto.add.tween(Mazo[Mazo.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
-		Mazo.pop();
+		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		FXGSEGRXKC.pop();
 		
 
 };
 
-Repartir_Desde_Derecha_D5=function(){
-	MazoD.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,4,null));
-	ReproducirSonido('_Reparto');
-	//GrupoD.add(Mazo[Mazo.length-1].cartilla);
-	MostrarAnverso(Mazo[Mazo.length-1].cartilla);
+IFEOSLRTIQ=function(){
+	AGKVNAGGLB.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,4,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//RXKKPILDQT.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("D",4);
-	var posY=devuelveY("D",4);
+	var NOFEDXHMLS=WIEVLYANFM("D",4);
+	var GHTWROCHVV=FIGQBSJQGA("D",4);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY}, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoD.add(MazoD[MazoD.length-1].cartilla); Repartir_Desde_Derecha_D6(); } );
-		//Mazo[Mazo.length-1].cartilla.inputEnabled = true;
-		//Mazo[Mazo.length-1].cartilla.input.enableDrag(false,true);
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); JWGGTDJAIE(); } );
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.inputEnabled = true;
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.input.enableDrag(false,true);
 		s.start();
-		game_objeto.add.tween(Mazo[Mazo.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
-		Mazo.pop();
+		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		FXGSEGRXKC.pop();
 };
 
-Repartir_Desde_Derecha_D6=function(){
-	MazoD.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,5,null));
-	ReproducirSonido('_Reparto');
-	//GrupoD.add(Mazo[Mazo.length-1].cartilla);
-	MostrarAnverso(Mazo[Mazo.length-1].cartilla);
+JWGGTDJAIE=function(){
+	AGKVNAGGLB.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,5,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//RXKKPILDQT.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("D",5);
-	var posY=devuelveY("D",5);
+	var NOFEDXHMLS=WIEVLYANFM("D",5);
+	var GHTWROCHVV=FIGQBSJQGA("D",5);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY}, vVelocidadCartas, EfectoTween2);		
-		//s.onComplete.add( function(){ Repartir_Desde_Derecha_R4(); } );
-		//Mazo[Mazo.length-1].cartilla.inputEnabled = true;
-		//Mazo[Mazo.length-1].cartilla.input.enableDrag(false,true);
-		s.onComplete.add( function(){ GrupoD.add(MazoD[MazoD.length-1].cartilla); SacaTriunfo(); } );;
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);		
+		//s.onComplete.add( function(){ YVIUGJDUUO(); } );
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.inputEnabled = true;
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.input.enableDrag(false,true);
+		s.onComplete.add( function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); QYYXUWQADX(); } );;
 		s.start();
-		game_objeto.add.tween(Mazo[Mazo.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
-		Mazo.pop();
-		//PreparaCaracteristicasMano();
+		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		FXGSEGRXKC.pop();
+		//JQSOOBSDDS();
 };
 
 
-Repartir_Desde_Derecha_R4=function(){
-	MazoR.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,3,null));
-	ReproducirSonido('_Reparto');
-	//GrupoR.add(Mazo[Mazo.length-1].cartilla);
+YVIUGJDUUO=function(){
+	CBCNHFGWLU.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,3,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//BDRJVGFWQH.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("R",3);
-	var posY=devuelveY("R",3);
+	var NOFEDXHMLS=WIEVLYANFM("R",3);
+	var GHTWROCHVV=FIGQBSJQGA("R",3);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 270
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
-		, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoR.add(MazoR[MazoR.length-1].cartilla); Repartir_Desde_Derecha_R5(); } );
+		, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); NESJSTWXWP(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
 
-Repartir_Desde_Derecha_R5=function(){
-	MazoR.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,4,null));
-	ReproducirSonido('_Reparto');
-	//GrupoR.add(Mazo[Mazo.length-1].cartilla);
+NESJSTWXWP=function(){
+	CBCNHFGWLU.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,4,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//BDRJVGFWQH.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("R",4);
-	var posY=devuelveY("R",4);
+	var NOFEDXHMLS=WIEVLYANFM("R",4);
+	var GHTWROCHVV=FIGQBSJQGA("R",4);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 270
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
-		, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoR.add(MazoR[MazoR.length-1].cartilla); Repartir_Desde_Derecha_R6(); } );
+		, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); IABLTISPHU(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 
 
-Repartir_Desde_Derecha_R6=function(){
-	MazoR.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,5,null));
-	ReproducirSonido('_Reparto');
-	//GrupoR.add(Mazo[Mazo.length-1].cartilla);
+IABLTISPHU=function(){
+	CBCNHFGWLU.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,5,null));
+	EABXADHEVT('WWYKUMYJBJ');
+	//BDRJVGFWQH.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 	
-	var posX=devuelveX("R",5);
-	var posY=devuelveY("R",5);
+	var NOFEDXHMLS=WIEVLYANFM("R",5);
+	var GHTWROCHVV=FIGQBSJQGA("R",5);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:posX
-		,y:posY,
-		angle : Mazo[Mazo.length-1].cartilla.angle + 270
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
-		, vVelocidadCartas, EfectoTween2);
-		s.onComplete.add( function(){ GrupoR.add(MazoR[MazoR.length-1].cartilla); Repartir_Desde_Derecha_U4(); } );
+		, IRXOKNWTLV, BSXWFYLCEW);
+		s.onComplete.add( function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); UTVYHFEAFY(); } );
 		s.start();
-		Mazo.pop();
+		FXGSEGRXKC.pop();
 };
 

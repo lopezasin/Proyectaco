@@ -14,355 +14,355 @@ Level.prototype = proto;
 
 var vProduccion=true;
 
-var Maquina;
+var JHGHJAGCMC;
 if (vProduccion==true){
-	Maquina='http://35.158.124.54'
-	//Maquina='http://a.xn--guiotepro-n6a.es'
-	//Maquina='http://xn--guiotepro-n6a.es:5000'
-	//Maquina='http://54.93.97.50:5000'
+	JHGHJAGCMC='http://35.158.124.54'
+	//JHGHJAGCMC='http://a.xn--guiotepro-n6a.es'
+	//JHGHJAGCMC='http://xn--guiotepro-n6a.es:5000'
+	//JHGHJAGCMC='http://54.93.97.50:5000'
 }
 else
 {
-	Maquina='http://localhost:5000'		
-	//Maquina='http://192.168.1.100:5000'		
-	//Maquina='http://192.168.43.100:5000'		
+	JHGHJAGCMC='http://localhost:5000'		
+	//JHGHJAGCMC='http://192.168.1.100:5000'		
+	//JHGHJAGCMC='http://192.168.43.100:5000'		
 }
 
 var vNoEsta;
-var SocketInicializado=false
-var FinalizandoPartida=false;
+var BNCAIUQIJJ=false
+var JHHWEKWEJK=false;
 var bmd;
-var game_objeto;
-var vSonidoOn;
-var FechaIni;
-var FechaFin;
-var IntentosReconexion=0;
-var Version='1.0.8';
+var YMHIHSNADE;
+var BNCXHHJGVW;
+var UJHVBJDGJD;
+var BNMZBXWIDW;
+var JKCANKPQBB=0;
+var SFKLFIJOIO='1.0.8';
 var lUsable=true;
 var socket;
-var SonVueltas=false;
-var callbackweb;
-var LogicalTapeteRemoto=false;
-var LogicalDorsoRemoto=false;
+var EVAILWGGKX=false;
+var HKCERVLWFB;
+var NHLRWTHYVG=false;
+var VKYLOUGFGR=false;
 //var LogicalNoticia=false;
 var inputField;
-var FuerzaSalir=false;
-var Noticia;
-var ContadorNoticia=0;
-var AntiguoSocket="";
+var ERQHLTPETK=false;
+var BUJELVTIKU;
+var ISVLSNLHWR=0;
+var IJCSKNTKVH="";
 
-var PuntosGanar=101;
-var PartidasCoto=3;
-var TiempoIA=1500;//milisegundos
-var Tiempoturno=20;//segundos
-var BackFondo;
-var BackTapete;
-var ReversoGlobal;
+var JLVDFTPUNI=101;
+var MFENMIFPUA=3;
+var HLBMKNFUWL=1500;//milisegundos
+var GWFPRHAYQK=20;//segundos
+var XIQDONAJMM;
+var KVBNWXDTON;
+var RCYRGXLWBR;
 
-var idPartida;
+var MQUGCIUQII;
 
-var Mazo=[];
-var MazoEnviar=[];
-var MazoEnviarApoyo=[];
-var	MazoR=[];
-var	MazoL=[];
-var	MazoU=[];
-var	MazoD=[];
-var	Mazoposiciones=[];
-var MazoCentral=[];
-var MazoCentralApoyo=[];
-var MazoCentralBuffer=[];
-var MazoCentralBufferEspecial7=[];
-var CartaTriunfo=[];
-var MazoRecogido=[];
-var MazoRecogidoApoyo=[];
-var MazoRecogidoRival=[];
-var UltimaBazaNuestra=[];
-var UltimaBazaRival=[];
-var ArrayDescartePosible=[];
-var ModoMultijugador=false;
-var EntradaModoJuego=false;
-var	posX_D;
-var	posY_D;
-var posAngle_D;
-var	posX_L;
-var	posY_L;
-var posAngle_L;
-var	posX_R;
-var	posY_R;
-var posAngle_R;
-var	posX_U;
-var	posY_U;
-var posAngle_U;
-var RondaArrastre=4;
-var vEscalaGanadora=1.5;
-var vEscalaPequenas=0.9;
-var vEscalaUltimaBaza=1;
-var vEscaladoCarta=1.5;
-var TiempoCartaGanadora=300; //500
-var GrupoD;
-var GrupoL;
-var GrupoR;
-var GrupoU;
-var GrupoCentral;
-var GrupoUltimaBaza;
-var GrupoMazo;
-var Grupo7;
-var SemaforoCartaRecibida;
+var FXGSEGRXKC=[];
+var WUHRYVMYBE=[];
+var SXFHAGTGJT=[];
+var	CBCNHFGWLU=[];
+var	KNVKGHHTYC=[];
+var	TWJONOKGHC=[];
+var	AGKVNAGGLB=[];
+var	ETAUVLWEYR=[];
+var VDKOVQXHON=[];
+var YBVSVUGPJG=[];
+var WSHPROHDIV=[];
+var TTJKWKBPWO=[];
+var FBSDMRLVEL=[];
+var KBESPOUXUK=[];
+var JLOISTPAPQ=[];
+var BRILHDFUSO=[];
+var XYRJNHOCRB=[];
+var HAJIKEVCFP=[];
+var LSJCRLDUCH=[];
+var EGPDVIEJEL=false;
+var EHUHWTYXOS=false;
+var	VUFCMULFSR;
+var	QTQIWVWEOI;
+var DDONCKKEVJ;
+var	IXWMVXRIVW;
+var	QFPBRSSRCY;
+var MALHKNCITQ;
+var	HCTVQVJJIB;
+var	IWGTWFENXM;
+var WPVNAOXVJH;
+var	GHGYTYYGNN;
+var	HJGJWOCUMN;
+var NXXLHVGDFY;
+var SNVWBLGBPJ=4;
+var MEPQMUPTEH=1.5;
+var RABUWLOKWX=0.9;
+var XQNKTFDREN=1;
+var QDTCADQEEX=1.5;
+var PVQFVAAAEY=300; //500
+var RXKKPILDQT;
+var SYXHGDSJDY;
+var BDRJVGFWQH;
+var PBHYCULPGK;
+var UOPIKJVEKS;
+var WWFSQDQYYU;
+var GSXGWASLIY;
+var COTMMCVJWP;
+var GHFGHSIWCV;
 
 //OJO CON ESTOS ArrayS AL LIMPIAR VARIABLES
-var ArrayDelaPropiaSala=[];
-var ArrayChatDeshabilitado=[];
-var ArrayJugadoresDesconectados=[];
-var ArrayAccionesDesconexiones=[];
+var XPBCVAGCDQ=[];
+var QLNEIQGEDF=[];
+var KYDWXPGHVY=[];
+var NBEJWDVLLV=[];
 //var ArrayJugadoresDesconectadosID=[];
-var SemaforoRondasRapido=[];
-var SemaforoTextoPuntuacion=[];
-var SemaforoRepartos=[];
+var XYXCEMMRDC=[];
+var JEHYBALODM=[];
+var DCOXIXEBRJ=[];
 
-var ArrayInfoJugador=[];
-var ArrayOKParejas=[];
-var QuienTomaElControl;
-var PartidaComenzada=false;
-var ObjTurnoU;
-var ObjTurnoL;
-var ObjTurnoD;
-var ObjTurnoR;
-var MuestraErrorDesconexion=true;
+var PWMIBRSDCJ=[];
+var NKJHKJHHHE=[];
+var ESKTEXAVHU;
+var MYQBNBVHKU=false;
+var UYIUYIUYIU;
+var BNVUWCOWEC;
+var DHJGJHGWCY;
+var GJHWUYGCBN;
+var YTUGCWECJC=true;
 
-var ObjetoJugadoresRonda = function(RondaParam,Jugador){
-	this.Ronda=RondaParam
-	this.Jugador=Jugador
+var NQMQGXXHIL = function(TKWCTNGROU,SSUNXNEEHN){
+	this.AGTXFNIKQD=TKWCTNGROU
+	this.SSUNXNEEHN=SSUNXNEEHN
 };
-var SemaforoRondas=[];
-var SemaforoAvatars=[];
-var vRonda=1;
-var RondaJugada=[];
-var SiempreBocaArriba=false;
-var textoContador;
-var TextCuentaMundo;
+var KTBOJTXFEU=[];
+var BSFNXQXOTD=[];
+var LUCRWXJMDR=1;
+var KKPQLKMIQR=[];
+var HBFBHWJQSQ=false;
+var YJNIRPCWEI;
+var JKLJKLRIRI;
 
 
-var soyelprimero=false;
-var vVerticalPorqueSi=0; //por algún motivo lo manda todo al 0
-var vHorizontalPorqueSi=0;
-var vVerticalDerechaPorqueSi=0;
-var vHorizontalDerechaPorqueSi=0;
-var vHorizontalIzquierdaPorqueSi=0;
-var vSeparacion=15;
-var Habitacion;
-var vVelocidadCartas=150;//120
-var SoyElJugador;
-var vVelocidadCartasReordernar=250;
-var vVelocidadRobar=350; 
-//var QuienReparte=4;
-var vTurno=1; //1.0.4
-var Triunfo;
-var tw1;
-var tw2;
-var tw3;
-var tw4;
-var twEsp7;
-var twReu;
-var twRec1;
-var twRec2;
-var twRec3;
-var twText1;
-var twText2;
-var twText3;
-var twText4;
-var twBocadillo;
-var MarcadorNuestro=0;
-var MarcadorRival=0;
-var MarcadorPartidasRival=0;
-var MarcadorPartidasNuestro=0;
-var BotonCantar;
-var BazaNuestraGlobal=false;
-var RegistrarCantes=[];
-var BotonSiete;
-var BotonMonoJugador;
-var BotonMultiJugador;
-var BotonAleatorio;
-var BotonClasificacion;
-var BotonAmigos;
-var AnchoCarta=0;
-var AnchoCartaEscalado=0;
+var XAXPEHVIAI=false;
+var KEPPHQIJQR=0; //por algún motivo lo manda todo al 0
+var AQONVWHHFT=0;
+var BOLUEYFVYH=0;
+var GAMFUXNGTH=0;
+var JOWOYBTJSV=0;
+var YAJVUBPNNW=15;
+var DFBVDPETGO;
+var IRXOKNWTLV=150;//120
+var TFSXFTYVGQ;
+var MDYSFNYPYP=250;
+var BQUYYUASDK=350; 
+//var RDBQUAVHEP=4;
+var DVNRTQIWGL=1; //1.0.4
+var TGTQPBEQFR;
+var PQUFIBKJJH;
+var LJRRHVSVKD;
+var LCYAHFBDTT;
+var NEPGDYQDEI;
+var HHBPAROITT;
+var EWXBTDLSHW;
+var BDEFDQUJJE;
+var CKOUBGTDUF;
+var JLFYUAKDIJ;
+var RXPVLOEMXC;
+var UMEOIIEQQD;
+var XIDKQMJQLI;
+var MTNVBILBQS;
+var UTIDOKPNXQ;
+var UHHXSNXXJK=0;
+var PXGXKDDNFK=0;
+var CNCCBHQJKL=0;
+var JVQXQGYDHH=0;
+var IEQDMBJCAY;
+var PPTWRPRLSI=false;
+var FOQUJVEYFC=[];
+var YGTNAODFHW;
+var UEHYPTREIH;
+var IBECDOLWLN;
+var EFKTQSXAMA;
+var POEICHMHDL;
+var LNJDKEVPQE;
+var COIVBWRMCC=0;
+var SXSHBRJFIR=0;
 //Phaser.Easing.Quadratic.Out;
 //Phaser.Easing.Quartic;
-var EfectoTween1=Phaser.Easing.Linear.Out;
-var EfectoTween2=Phaser.Easing.Linear.Out;
-var EfectoTweenRebote=Phaser.Easing.Bounce.Out;
-var CentroIrreal=0;
-var MuestraChat=false;
-var MuestraLogin=false;
-var AnchoFoto=75;
-var timerturno;
-var timerpareja;
-var timerestoylisto;
-var timer;
-//var timerRetardo;
-var timerBarajaRecibida;
-var vConContador=true;
-var textJugador1;
-var textJugador2;
-var textJugador3;
-var textJugador4;
+var KYFMRVNHIQ=Phaser.Easing.Linear.Out;
+var BSXWFYLCEW=Phaser.Easing.Linear.Out;
+var QUXNHVVDDK=Phaser.Easing.Bounce.Out;
+var PXEBTYBHGS=0;
+var EHBNOAKBDQ=false;
+var KOHYQKLAJO=false;
+var PJRPWGXEYM=75;
+var HUUCUYFBLW;
+var HYSGUYGUYT;
+var BGHJGDWJVI;
+var TKXPPGUPVV;
+//var PUBDSNTIUS;
+var CVTBLMKIGL;
+var VEMBUOOHLM=true;
+var UWROMBGGSY;
+var HUPALFWPFI;
+var BXYCJYDVRT;
+var IRAIEARIWA;
 
-var Avatar1;
-var Avatar2;
-var Avatar3;
-var Avatar4;
+var IDKJKASOTQ;
+var MMKMYKBXGH;
+var AQXDDTTNUH;
+var JNMGJTHVNF;
 
-var AvatarSprite1;
-var AvatarSprite2;
-var AvatarSprite3;
-var AvatarSprite4;
+var QYBDUBOCBT;
+var BDQHBTUNWW;
+var PRWBHVTUSC;
+var BMWINQGWDD;
 
-var AvatarMedalla1;
-var AvatarMedalla2;
-var AvatarMedalla3;
-var AvatarMedalla4;
+var NBHWGUGUWB;
+var HGYGDVGQUY;
+var XXGUGUYWUW;
+var XKIOHWGJHG;
 
-var AvatarLogro1;
-var AvatarLogro2;
-var AvatarLogro3;
-var AvatarLogro4;
+var XPLHSUIGIU;
+var NHGUGUEUER;
+var HGWUGIVGWP;
+var HGWYUYGVWO;
 
 
 var deb;
 
 
-var anchoPantalla=0;
-var altoPantalla=0;
+var WAAJJVPHTG=0;
+var KKMUHEKLOC=0;
 
-var textEsperando;
-var textListos;
-var textEligiendo;
-var SndReparto;
-var SndMesa;
-var Snd20Oros;
-var Snd20Copas;
-var Snd20Espadas;
-var Snd20Bastos;
-var SndLas40;
-var SndIdas;
-var SndVueltas;
-var SndLas40_2;
-var SndAPorEllos;
-var SndArrastro;
-var SndArrastro_2;
-var SndBocarrana;
-var SndCampeones;
-var SndContar;
-var SndCotoTerminado;
-var SndEspadilla;
-var SndOre;
-var SndMatanzaCaballo;
-var SndMataCompanero;
-var SndOtraVezSera;
-var SndTabazo;
-var SndTabazo_2;
-var SndVueltas;
-var SndIdas2;
-var SndVueltas2;
-var SndGrano;
-var SndUltimas;
-var xSalir;
-var cuatrotres=false;
+var JBXCGDTWYW;
+var NSNUIQUYIU;
+var JSJSHSHSSE;
+var VKEJRPCHKN;
+var LFWPDMQYKH;
+var BHLJBCKLKE;
+var SFVDEVFFCR;
+var KMBKTLXURD;
+var UIYIEWUHCI;
+var DPCNHOBNRM;
+var UHKVCVBOMD;
+var LKGDBLGIEP;
+var GMKJKKAKMH;
+var VPGBDEHDIT;
+var KFDIGGAMBI;
+var MWLXRMDQXK;
+var DPIDINSQVF;
+var GERQISACAV;
+var TSXDMBDDID;
+var VLVITFRSLA;
+var LSQGNFJBGH;
+var CVJDMGILKI;
+var JDPOTVNRCT;
+var PDSPWPACWB;
+var NEKUUPJKUV;
+var MIKBDMVLOR;
+var HKHCMJEIUU;
+var LKGDBLGIEP;
+var JHGVBSHGIW;
+var IUIUOPPWCC;
+var JBCWHUIWCW;
+var NBIQIUICLA;
+var QETACVSHAR;
+var JHJEWHFWNL=false;
 
-var SndChatarrero;
-var SndChiflar;
-var SndEscupe;
-var SndFaldas;
-var SndGorrion;
-var SndGrijan;
-var SndGuinoteOtro;
-var SndMataBocarrana;
-var SndMonja;
-var SndPajaro;
-var SndPrimeraChicos;
-var SndPuntos;
-var SndToro;	
+var UIYIUHCWVX;
+var UUYECMNSZZ;
+var ZZJJJUHIHI;
+var LEUSNCUWAA;
+var AAAAJKGHKC;
+var HKJHVUHWUO;
+var BVUWCEFEGY;
+var NUSHIUSPKE;
+var UIYIUWCHCW;
+var AZZHJKWPLD;
+var HGJCHGAJGC;
+var MSJIWCUWCU;
+var LOIYUIYIUC;	
 
 //1.0.8 //Solo lPermisoDesconectado se modifica desde el servidor, sin que haga falta salir y entrar.
 //var lPermisoHabilitado=true; //Controla usuarios que deshabilito
-//var lVersionValida=true;
+//var VXEWRTCPMM=true;
 //var lPermisoDesconectado=true;
 //1.0.8
 
 
-var IntentaConexionInicial=true;
-var TextMarcador;
-var TextTituloMarcador
+var PWGIQBBAWX=true;
+var ATTUXTNNKX;
+var XQDPVWOUII
 //var cambiar=1;
 
 var ObjetoG;
 
-var ObjetoDesconexion=function(Jugador,JugadorSala)
+var UVYJLLYCYD=function(SSUNXNEEHN,AURESXCGMK)
 {
-	this.Jugador=Jugador
-	this.JugadorSala=JugadorSala
+	this.SSUNXNEEHN=SSUNXNEEHN
+	this.AURESXCGMK=AURESXCGMK
 }
 
 
-var ObjetoJugador = function(Nombre,Sexo,Foto,Dorso,Tapete,ProveedorID,RedSocial,Admin,VersionOK,VersionMensaje,Noticia,IP,ChatDisponible,Nivel,CampeonSemanal){
-	this.Nombre=Nombre
-	this.Sexo=Sexo
-	this.Foto=Foto
-	this.Dorso=Dorso
-	this.Tapete=Tapete
-	this.ProveedorID=ProveedorID
-	this.RedSocial=RedSocial
-	this.Admin=Admin
-	this.VersionOK=VersionOK
-	this.VersionMensaje=VersionMensaje
-	this.Noticia=Noticia
-	this.IP=IP
-	this.ChatDisponible=ChatDisponible
-	this.Nivel=Nivel
-	this.CampeonSemanal=CampeonSemanal
+var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC,FFRVOEAXTF,BDYYDTFQAO,UHYGLMAUNK,DNQIYVAFPR,XCXKVEEIOO,BUJELVTIKU,NBJHGSFSJS,MBMWBWUYUY,OIUIOWCHVW,NHWYTYUSYG){
+	this.WWKVHIMWYD=WWKVHIMWYD
+	this.BONQVNOXDP=BONQVNOXDP
+	this.QHHQPXWFNG=QHHQPXWFNG
+	this.EJOYNSESRD=EJOYNSESRD
+	this.IRQGAFESIC=IRQGAFESIC
+	this.FFRVOEAXTF=FFRVOEAXTF
+	this.BDYYDTFQAO=BDYYDTFQAO
+	this.UHYGLMAUNK=UHYGLMAUNK
+	this.DNQIYVAFPR=DNQIYVAFPR
+	this.XCXKVEEIOO=XCXKVEEIOO
+	this.BUJELVTIKU=BUJELVTIKU
+	this.NBJHGSFSJS=NBJHGSFSJS
+	this.MBMWBWUYUY=MBMWBWUYUY
+	this.OIUIOWCHVW=OIUIOWCHVW
+	this.NHWYTYUSYG=NHWYTYUSYG
 	
-	this.JugadorFull=ProveedorID+"-"+RedSocial;
+	this.OBTBPOULAV=FFRVOEAXTF+"-"+BDYYDTFQAO;
 	
 };
 
 
-function PosicionesCartas(Mazo,posicion,x,y) {
+function HMNHQKBORK(FXGSEGRXKC,NPYBJSHIFL,x,y) {
 
-	this.Mazo=Mazo;
-	this.posicion=posicion
+	this.FXGSEGRXKC=FXGSEGRXKC;
+	this.NPYBJSHIFL=NPYBJSHIFL
 	this.x=x;
     this.y=y;    
 }
 
-acelera=function(){
-	//alert("acelera");
+KGLYPJHYGL=function(){
+	//alert("KGLYPJHYGL");
 	//console.log("JJJ");
-	//ReproducirSonido("_Copas");
+	//EABXADHEVT("TKYUFYJRRA");
 }
 Level.prototype.create=function(){
 
-	//this.game.onPause.add(acelera, this); //1.0.8 Sobra
-	//this.game.onResume.add(acelera, this);
+	//this.game.onPause.add(KGLYPJHYGL, this); //1.0.8 Sobra
+	//this.game.onResume.add(KGLYPJHYGL, this);
 
-	vSonidoOn=true;
-//this.player1.graphic.beginFill(this.player1.color, 1);
-//this.player1.graphic.drawRect(0, 0, this.player1.size, this.player1.size);
+	BNCXHHJGVW=true;
+//this.JHCGSIWICI.graphic.beginFill(this.JHCGSIWICI.color, 1);
+//this.JHCGSIWICI.graphic.drawRect(0, 0, this.JHCGSIWICI.size, this.JHCGSIWICI.size);
 		
 	//log(false, Math.floor(Math.random() * 360) + 1   );	
-	game_objeto=this;
+	YMHIHSNADE=this;
 	
-	Habitacion=Math.floor(Math.random());
-	OcultaClasificacion();
+	DFBVDPETGO=Math.floor(Math.random());
+	YJEISFVFQY();
 	
 	if (window.innerHeight/window.innerWidth<0.68)
 	{	
-		cuatrotres=false;
+		JHJEWHFWNL=false;
 	}
 	else
 	{
-		cuatrotres=true;
-		vEscaladoCarta=1.7;
+		JHJEWHFWNL=true;
+		QDTCADQEEX=1.7;
 	}
 	
 	
@@ -385,7 +385,7 @@ Level.prototype.create=function(){
 ////
 
 /*now= new Date();
-var timerborrar = game_objeto.time.create(false);
+var timerborrar = YMHIHSNADE.time.create(false);
 			timerborrar.add(5000, function(){
 				now2= new Date();
 				//console.log(now);
@@ -404,8 +404,8 @@ var timerborrar = game_objeto.time.create(false);
     this.myInput2.angle = -30;
     this.myInput2.canvasInput.value('Woww, lo necesitabamos!');*/
 	
-	//game_objeto.forceSetTimeOut=true;
-	//Phaser.RequestAnimationFrame(game_objeto, false);
+	//YMHIHSNADE.forceSetTimeOut=true;
+	//Phaser.RequestAnimationFrame(YMHIHSNADE, false);
 	//alert(isRAF());
 	////
 
@@ -416,74 +416,74 @@ var timerborrar = game_objeto.time.create(false);
 	//console.log("Eo");
 	//console.log(getMonday(new Date(Date.now())));
 
-	SndReparto = game_objeto.add.audio('SndReparto');
-	SndMesa = game_objeto.add.audio('SndMesa');
-	Snd20Oros = game_objeto.add.audio('Snd20Oros');
-	Snd20Copas = game_objeto.add.audio('Snd20Copas');
-	Snd20Espadas = game_objeto.add.audio('Snd20Espadas');
-	Snd20Bastos = game_objeto.add.audio('Snd20Bastos');
-	SndLas40 = game_objeto.add.audio('SndLas40');
-	SndLas40_2 = game_objeto.add.audio('SndLas40_2');
-	SndIdas = game_objeto.add.audio('SndIdas');
-	SndVueltas = game_objeto.add.audio('SndVueltas');
-	SndAPorEllos = game_objeto.add.audio('SndAPorEllos');
-	SndArrastro = game_objeto.add.audio('SndArrastro');
-	SndArrastro_2 = game_objeto.add.audio('SndArrastro2');
-	SndBocarrana = game_objeto.add.audio('SndBocarrana');
-	SndCampeones = game_objeto.add.audio('SndCampeones');
-	SndContar = game_objeto.add.audio('SndContar');
-	SndCotoTerminado = game_objeto.add.audio('SndCotoTerminado');
-	SndEspadilla = game_objeto.add.audio('SndEspadilla');
-	SndOre = game_objeto.add.audio('SndOre');
-	SndOtraVezSera = game_objeto.add.audio('SndOtraVezSera');
-	SndTabazo = game_objeto.add.audio('SndTabazo');
-	SndTabazo_2 = game_objeto.add.audio('SndTabazo2');
-	SndMatanzaCaballo=game_objeto.add.audio('SndMatanzaCaballo');
-	SndIdas2=game_objeto.add.audio('SndIdas2');
-	SndVueltas2=game_objeto.add.audio('SndVueltas2');
-	SndGrano=game_objeto.add.audio('SndGrano');
-	SndUltimas=game_objeto.add.audio('SndUltimas');
+	VKEJRPCHKN = YMHIHSNADE.add.audio('VKEJRPCHKN');
+	LFWPDMQYKH = YMHIHSNADE.add.audio('LFWPDMQYKH');
+	BHLJBCKLKE = YMHIHSNADE.add.audio('BHLJBCKLKE');
+	SFVDEVFFCR = YMHIHSNADE.add.audio('SFVDEVFFCR');
+	KMBKTLXURD = YMHIHSNADE.add.audio('KMBKTLXURD');
+	UIYIEWUHCI = YMHIHSNADE.add.audio('UIYIEWUHCI');
+	DPCNHOBNRM = YMHIHSNADE.add.audio('DPCNHOBNRM');
+	GMKJKKAKMH = YMHIHSNADE.add.audio('GMKJKKAKMH');
+	UHKVCVBOMD = YMHIHSNADE.add.audio('UHKVCVBOMD');
+	LKGDBLGIEP = YMHIHSNADE.add.audio('LKGDBLGIEP');
+	VPGBDEHDIT = YMHIHSNADE.add.audio('VPGBDEHDIT');
+	KFDIGGAMBI = YMHIHSNADE.add.audio('KFDIGGAMBI');
+	MWLXRMDQXK = YMHIHSNADE.add.audio('SndArrastro2');
+	DPIDINSQVF = YMHIHSNADE.add.audio('DPIDINSQVF');
+	GERQISACAV = YMHIHSNADE.add.audio('GERQISACAV');
+	TSXDMBDDID = YMHIHSNADE.add.audio('TSXDMBDDID');
+	VLVITFRSLA = YMHIHSNADE.add.audio('VLVITFRSLA');
+	LSQGNFJBGH = YMHIHSNADE.add.audio('LSQGNFJBGH');
+	CVJDMGILKI = YMHIHSNADE.add.audio('CVJDMGILKI');
+	NEKUUPJKUV = YMHIHSNADE.add.audio('NEKUUPJKUV');
+	MIKBDMVLOR = YMHIHSNADE.add.audio('MIKBDMVLOR');
+	HKHCMJEIUU = YMHIHSNADE.add.audio('SndTabazo2');
+	JDPOTVNRCT=YMHIHSNADE.add.audio('JDPOTVNRCT');
+	JHGVBSHGIW=YMHIHSNADE.add.audio('JHGVBSHGIW');
+	IUIUOPPWCC=YMHIHSNADE.add.audio('IUIUOPPWCC');
+	JBCWHUIWCW=YMHIHSNADE.add.audio('JBCWHUIWCW');
+	NBIQIUICLA=YMHIHSNADE.add.audio('NBIQIUICLA');
 	
 	
 	//1.0.6
-		SndChatarrero=game_objeto.add.audio('SndChatarrero');
-		SndChiflar=game_objeto.add.audio('SndChiflar');
-		SndEscupe=game_objeto.add.audio('SndEscupe');
-		SndFaldas=game_objeto.add.audio('SndFaldas');
-		SndGorrion=game_objeto.add.audio('SndGorrion');
-		SndGrijan=game_objeto.add.audio('SndGrijan');
-		SndGuinoteOtro=game_objeto.add.audio('SndGuinoteOtro');
-		SndMataBocarrana=game_objeto.add.audio('SndMataBocarrana');
-		SndMonja=game_objeto.add.audio('SndMonja');
-		SndPajaro=game_objeto.add.audio('SndPajaro');
-		SndPrimeraChicos=game_objeto.add.audio('SndPrimeraChicos');
-		SndPuntos=game_objeto.add.audio('SndPuntos');
-		SndToro=game_objeto.add.audio('SndToro');	
+		UIYIUHCWVX=YMHIHSNADE.add.audio('UIYIUHCWVX');
+		UUYECMNSZZ=YMHIHSNADE.add.audio('UUYECMNSZZ');
+		ZZJJJUHIHI=YMHIHSNADE.add.audio('ZZJJJUHIHI');
+		LEUSNCUWAA=YMHIHSNADE.add.audio('LEUSNCUWAA');
+		AAAAJKGHKC=YMHIHSNADE.add.audio('AAAAJKGHKC');
+		HKJHVUHWUO=YMHIHSNADE.add.audio('HKJHVUHWUO');
+		BVUWCEFEGY=YMHIHSNADE.add.audio('BVUWCEFEGY');
+		NUSHIUSPKE=YMHIHSNADE.add.audio('NUSHIUSPKE');
+		UIYIUWCHCW=YMHIHSNADE.add.audio('UIYIUWCHCW');
+		AZZHJKWPLD=YMHIHSNADE.add.audio('AZZHJKWPLD');
+		HGJCHGAJGC=YMHIHSNADE.add.audio('HGJCHGAJGC');
+		MSJIWCUWCU=YMHIHSNADE.add.audio('MSJIWCUWCU');
+		LOIYUIYIUC=YMHIHSNADE.add.audio('LOIYUIYIUC');	
 	
 	
 	//1.0.6
 	
 	
-	//SndMataCompanero= game_objeto.add.audio('SndMataCompanero');
+	//PDSPWPACWB= YMHIHSNADE.add.audio('PDSPWPACWB');
 	
-	//console.log(game_objeto.sound.usingAudioTag);
-	/*//console.log("No audio "+game_objeto.sound.noAudio);
-	SndReparto.play();
-	//console.log("Audio Tag: "+SndReparto.usingAudioTag);
-	//console.log("WebAudio Tag: "+SndReparto.usingWebAudio);
-	//console.log("Sonando: "+SndReparto.isPlaying);*/
+	//console.log(YMHIHSNADE.sound.usingAudioTag);
+	/*//console.log("No audio "+YMHIHSNADE.sound.noAudio);
+	VKEJRPCHKN.play();
+	//console.log("Audio Tag: "+VKEJRPCHKN.usingAudioTag);
+	//console.log("WebAudio Tag: "+VKEJRPCHKN.usingWebAudio);
+	//console.log("Sonando: "+VKEJRPCHKN.isPlaying);*/
 
-	//PosicionCartas(false); //1.0.6
+	//SUMEMLHUFX(false); //1.0.6
 	
-	LogicalTapeteRemoto=false;
-	LogicalDorsoRemoto=false;
+	NHLRWTHYVG=false;
+	VKYLOUGFGR=false;
 	//LogicalNoticia=false;
-	//SndBatalla = game_objeto.add.audio('SndBatalla');
+	//SndBatalla = YMHIHSNADE.add.audio('SndBatalla');
 	//SndBatalla.play();
 	//if (window.innerHeight/window.innerWidth<0.55)
 	//{
-		 anchoPantalla=1300;
-		 altoPantalla=622;
+		 WAAJJVPHTG=1300;
+		 KKMUHEKLOC=622;
 		//console.log("PC");
 		//var alto=300;
 	//}
@@ -492,200 +492,200 @@ var timerborrar = game_objeto.time.create(false);
 		//var ancho=window.innerWidth;
 		//var alto=window.innerHeight;
 		
-	//	 anchoPantalla=1200;
-	//	 altoPantalla=750;
+	//	 WAAJJVPHTG=1200;
+	//	 KKMUHEKLOC=750;
 	//	//console.log("IPAD");
 	//}
 	
-	//BackFondo=this.game.add.tileSprite(0, 0, game_objeto.world.width, game_objeto.world.height, 'FondoPrincipal');
+	//XIQDONAJMM=this.game.add.tileSprite(0, 0, YMHIHSNADE.world.width, YMHIHSNADE.world.height, 'FondoPrincipal');
 	
 	
-	if (cuatrotres==false)
+	if (JHJEWHFWNL==false)
 	{
-		BackTapete=this.game.add.tileSprite(0, 0, game_objeto.world.width, game_objeto.world.height, 'Tapete');
-		BackFondo=game_objeto.add.sprite(0, 0, 'FondoPrincipal');
+		KVBNWXDTON=this.game.add.tileSprite(0, 0, YMHIHSNADE.world.width, YMHIHSNADE.world.height, 'IRQGAFESIC');
+		XIQDONAJMM=YMHIHSNADE.add.sprite(0, 0, 'FondoPrincipal');
 	}
 	else
 	{
-		BackTapete=this.game.add.tileSprite(0, 0, game_objeto.world.width, game_objeto.world.height, 'Tapete_43');
-		BackFondo=game_objeto.add.sprite(0, 0, 'FondoPrincipal_43');
+		KVBNWXDTON=this.game.add.tileSprite(0, 0, YMHIHSNADE.world.width, YMHIHSNADE.world.height, 'Tapete_43');
+		XIQDONAJMM=YMHIHSNADE.add.sprite(0, 0, 'FondoPrincipal_43');
 	}
 
 
 	
-	BackFondo.visible=true;
-	BackTapete.visible=false;
+	XIQDONAJMM.visible=true;
+	KVBNWXDTON.visible=false;
 	
 	
 
 	
-		var x=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (2 *(AnchoCartaEscalado+
-	vSeparacion))+AnchoCarta;
+		var x=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (2 *(SXSHBRJFIR+
+	YAJVUBPNNW))+COIVBWRMCC;
 	
 
 	
-	BotonSiete= game_objeto.add.button(x , game_objeto.world.height-45, 'Boton_cambiar_7_on', Cambiar7 , this, 2, 1, 0);
-	BotonSiete.visible=false;	
-	BotonSiete.anchor.setTo(0.5,0.5);
-	BotonSiete.width=BotonSiete.width*1.2;
-	BotonSiete.height=BotonSiete.height*1.2;
+	YGTNAODFHW= YMHIHSNADE.add.button(x , YMHIHSNADE.world.height-45, 'Boton_cambiar_7_on', QPGADJGDVQ , this, 2, 1, 0);
+	YGTNAODFHW.visible=false;	
+	YGTNAODFHW.anchor.setTo(0.5,0.5);
+	YGTNAODFHW.width=YGTNAODFHW.width*1.2;
+	YGTNAODFHW.height=YGTNAODFHW.height*1.2;
 	
-	xSalir=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (2 *(AnchoCartaEscalado+
-	vSeparacion))+AnchoCarta+250;
+	QETACVSHAR=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (2 *(SXSHBRJFIR+
+	YAJVUBPNNW))+COIVBWRMCC+250;
 	
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
-		xSalir=xSalir+40;
+		QETACVSHAR=QETACVSHAR+40;
 	}
 	
-	/*	xSalir=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (19 *(AnchoCartaEscalado+
-	vSeparacion))+AnchoCarta;
+	/*	QETACVSHAR=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (19 *(SXSHBRJFIR+
+	YAJVUBPNNW))+COIVBWRMCC;
 	*/
 	
-	BotonSalir= game_objeto.add.button(xSalir ,  game_objeto.world.height-45, 'Boton_Salir', Salir , this, 2, 1, 0);
-	BotonSalir.visible=true;	
-	BotonSalir.anchor.setTo(0.5,0.5);
-	BotonSalir.width=BotonSalir.width*1.2;
-	BotonSalir.height=BotonSalir.height*1.2;
+	CUUKQAGFEB= YMHIHSNADE.add.button(QETACVSHAR ,  YMHIHSNADE.world.height-45, 'Boton_Salir', Salir , this, 2, 1, 0);
+	CUUKQAGFEB.visible=true;	
+	CUUKQAGFEB.anchor.setTo(0.5,0.5);
+	CUUKQAGFEB.width=CUUKQAGFEB.width*1.2;
+	CUUKQAGFEB.height=CUUKQAGFEB.height*1.2;
 	
-	timerturno = game_objeto.time.create(false);
-	timerpareja = game_objeto.time.create(false);
-	timerestoylisto  = game_objeto.time.create(false); //1.0.6
-	timerBarajaRecibida = game_objeto.time.create(false);
+	HUUCUYFBLW = YMHIHSNADE.time.create(false);
+	HYSGUYGUYT = YMHIHSNADE.time.create(false);
+	BGHJGDWJVI  = YMHIHSNADE.time.create(false); //1.0.6
+	CVTBLMKIGL = YMHIHSNADE.time.create(false);
 	
-	timer = game_objeto.time.create(false);
+	TKXPPGUPVV = YMHIHSNADE.time.create(false);
 
 					
-	//timerRetardo = game_objeto.time.create(false);	
+	//PUBDSNTIUS = YMHIHSNADE.time.create(false);	
 	
 	
-	textoContador = game_objeto.add.text(0, 0, "");
+	YJNIRPCWEI = YMHIHSNADE.add.text(0, 0, "");
 	
-	tw1=game_objeto.add.tween(textoContador).to( { alpha: 1 }, 1, EfectoTween1, true);
-	tw2=game_objeto.add.tween(textoContador).to( { alpha: 1 }, 1, EfectoTween1, true);
-	tw3=game_objeto.add.tween(textoContador).to( { alpha: 1 }, 1, EfectoTween1, true);
-	tw4=game_objeto.add.tween(textoContador).to( { alpha: 1 }, 1, EfectoTween1, true);
+	PQUFIBKJJH=YMHIHSNADE.add.tween(YJNIRPCWEI).to( { alpha: 1 }, 1, KYFMRVNHIQ, true);
+	LJRRHVSVKD=YMHIHSNADE.add.tween(YJNIRPCWEI).to( { alpha: 1 }, 1, KYFMRVNHIQ, true);
+	LCYAHFBDTT=YMHIHSNADE.add.tween(YJNIRPCWEI).to( { alpha: 1 }, 1, KYFMRVNHIQ, true);
+	NEPGDYQDEI=YMHIHSNADE.add.tween(YJNIRPCWEI).to( { alpha: 1 }, 1, KYFMRVNHIQ, true);
 	
-	GrupoD = game_objeto.add.group();
-	GrupoL = game_objeto.add.group();
-	GrupoR = game_objeto.add.group();
-	GrupoU = game_objeto.add.group();
-	GrupoMazo = game_objeto.add.group();
-	GrupoCentral = game_objeto.add.group();
-	GrupoUltimaBaza = game_objeto.add.group();
-	Grupo7 = game_objeto.add.group();
+	RXKKPILDQT = YMHIHSNADE.add.group();
+	SYXHGDSJDY = YMHIHSNADE.add.group();
+	BDRJVGFWQH = YMHIHSNADE.add.group();
+	PBHYCULPGK = YMHIHSNADE.add.group();
+	GSXGWASLIY = YMHIHSNADE.add.group();
+	UOPIKJVEKS = YMHIHSNADE.add.group();
+	WWFSQDQYYU = YMHIHSNADE.add.group();
+	COTMMCVJWP = YMHIHSNADE.add.group();
 	
-	var CartaDummie=game_objeto.add.sprite(-200,-200,'1');
-	AnchoCarta=CartaDummie.width;
-	AltoCarta=CartaDummie.height;
-	AnchoCartaEscalado=CartaDummie.width*vEscaladoCarta;
-	AltoCartaEscalado=CartaDummie.height*vEscaladoCarta;
-	CentroIrreal=((game_objeto.world.height-AltoCarta-AltoCartaEscalado+AnchoCarta)/2)+(AnchoCarta)-25;
-	PosicionCartas("D");
+	var BRQFVLOBSF=YMHIHSNADE.add.sprite(-200,-200,'1');
+	COIVBWRMCC=BRQFVLOBSF.width;
+	MKSLYEWQQS=BRQFVLOBSF.height;
+	SXSHBRJFIR=BRQFVLOBSF.width*QDTCADQEEX;
+	PPLOSJIWHO=BRQFVLOBSF.height*QDTCADQEEX;
+	PXEBTYBHGS=((YMHIHSNADE.world.height-MKSLYEWQQS-PPLOSJIWHO+COIVBWRMCC)/2)+(COIVBWRMCC)-25;
+	SUMEMLHUFX("D");
 	
-	twBocadillo=game_objeto.add.tween(CartaDummie);
-	twFondoNegro=game_objeto.add.tween(CartaDummie);
-	twRec1=game_objeto.add.tween(CartaDummie);
-	twRec2=game_objeto.add.tween(CartaDummie);
-	twRec3=game_objeto.add.tween(CartaDummie);
-	tw1=game_objeto.add.tween(CartaDummie);
-	tw2=game_objeto.add.tween(CartaDummie);
-	tw3=game_objeto.add.tween(CartaDummie);
+	UTIDOKPNXQ=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	TTCLPDJAMD=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	BDEFDQUJJE=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	CKOUBGTDUF=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	JLFYUAKDIJ=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	PQUFIBKJJH=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	LJRRHVSVKD=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	LCYAHFBDTT=YMHIHSNADE.add.tween(BRQFVLOBSF);
 	
-	var styleJugador = { font: "bold 18px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
-	textJugador1=game_objeto.add.text(0, 0, "",styleJugador);
-	textJugador2=game_objeto.add.text(-100, -100, "", styleJugador);
-	textJugador3=game_objeto.add.text(-100, -100, "", styleJugador);
-	textJugador4=game_objeto.add.text(-100, -100, "", styleJugador);
+	var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+	UWROMBGGSY=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+	HUPALFWPFI=YMHIHSNADE.add.text(-100, -100, "", IQVAAXFOXW);
+	BXYCJYDVRT=YMHIHSNADE.add.text(-100, -100, "", IQVAAXFOXW);
+	IRAIEARIWA=YMHIHSNADE.add.text(-100, -100, "", IQVAAXFOXW);
 	
-	var styleMarcadorTitulo = { font: "bold 30px Arial", fill: "#fff", align: "right", boundsAlignH: "middle", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
-	TextTituloMarcador=game_objeto.add.text(0, 0, "Ntros:\nEllos:", styleMarcadorTitulo);
-	TextTituloMarcador.stroke = '#961918';
-    TextTituloMarcador.strokeThickness = 4;
-    TextTituloMarcador.fill = '#F8E600';		
-	TextTituloMarcador.visible=false;
-	TextTituloMarcador.setTextBounds(900,game_objeto.world.height-(AltoCartaEscalado*2),300,100)
+	var WNTTMAIFLB = { font: "bold 30px Arial", fill: "#fff", align: "right", boundsAlignH: "middle", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+	XQDPVWOUII=YMHIHSNADE.add.text(0, 0, "Ntros:\nEllos:", WNTTMAIFLB);
+	XQDPVWOUII.stroke = '#961918';
+    XQDPVWOUII.strokeThickness = 4;
+    XQDPVWOUII.fill = '#F8E600';		
+	XQDPVWOUII.visible=false;
+	XQDPVWOUII.setTextBounds(900,YMHIHSNADE.world.height-(PPLOSJIWHO*2),300,100)
 	
 
 	
 	var styleMarcador = { font: "bold 30px Arial", fill: "#fff", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
-	TextMarcador=game_objeto.add.text(0, 0, "", styleMarcador);
-	TextMarcador.visible=false;
-	TextMarcador.stroke = '#961918';
-    TextMarcador.strokeThickness = 4;
-    TextMarcador.fill = '#F8E600';		
-	TextMarcador.setTextBounds(990,game_objeto.world.height-(AltoCartaEscalado*2),300,100)
+	ATTUXTNNKX=YMHIHSNADE.add.text(0, 0, "", styleMarcador);
+	ATTUXTNNKX.visible=false;
+	ATTUXTNNKX.stroke = '#961918';
+    ATTUXTNNKX.strokeThickness = 4;
+    ATTUXTNNKX.fill = '#F8E600';		
+	ATTUXTNNKX.setTextBounds(990,YMHIHSNADE.world.height-(PPLOSJIWHO*2),300,100)
 	
 	
 	
 	/*var styleMarcador = { font: "bold 30px Arial", fill: "#fff", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
-	TextCuentaAmigos=game_objeto.add.text(100, 300, "", styleMarcador);
+	TextCuentaAmigos=YMHIHSNADE.add.text(100, 300, "", styleMarcador);
 	TextCuentaAmigos.visible=false;
 	TextCuentaAmigos.stroke = '#961918';
     TextCuentaAmigos.strokeThickness = 4;
     TextCuentaAmigos.fill = '#F8E600';		*/
-	//TextCuentaAmigos.setTextBounds(990,game_objeto.world.height-(AltoCartaEscalado*2),300,100)
+	//TextCuentaAmigos.setTextBounds(990,YMHIHSNADE.world.height-(PPLOSJIWHO*2),300,100)
 
 	var styleMarcador = { font: "bold 24px Arial", fill: "#fff", boundsAlignH: "right", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 5000};	
-	TextCuentaMundo=game_objeto.add.text(0, 0, "", styleMarcador);
-	TextCuentaMundo.visible=false;
-	TextCuentaMundo.stroke = '#961918';
-    TextCuentaMundo.strokeThickness = 4;
-    TextCuentaMundo.fill = '#F8E600';		
-	TextCuentaMundo.setTextBounds(15,15,game_objeto.world.width-120,100)
+	JKLJKLRIRI=YMHIHSNADE.add.text(0, 0, "", styleMarcador);
+	JKLJKLRIRI.visible=false;
+	JKLJKLRIRI.stroke = '#961918';
+    JKLJKLRIRI.strokeThickness = 4;
+    JKLJKLRIRI.fill = '#F8E600';		
+	JKLJKLRIRI.setTextBounds(15,15,YMHIHSNADE.world.width-120,100)
 	
 
 	
-	BotonDIV= game_objeto.add.button(400, 0, 'spr_cantar', function(){ 
-		MuestraOcultaChat();
+	LHLJIPPLXD= YMHIHSNADE.add.button(400, 0, 'spr_cantar', function(){ 
+		TRKOSJTLDX();
 	}, this, 2, 1, 0);
-	BotonDIV.visible=false;
+	LHLJIPPLXD.visible=false;
 	
-	/*BotonLoginDIV= game_objeto.add.button(700, 0, 'spr_cantar', function(){ 
-		MuestraOcultaLogin();
+	/*BotonLoginDIV= YMHIHSNADE.add.button(700, 0, 'spr_cantar', function(){ 
+		QDPPTWILGS();
 	}, this, 2, 1, 0);
 	BotonLoginDIV.visible=true;*/
 
-	var x=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (0 *(AnchoCartaEscalado+
-	vSeparacion))+AnchoCarta;
+	var x=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (0 *(SXSHBRJFIR+
+	YAJVUBPNNW))+COIVBWRMCC;
 	
-	BotonCantar= game_objeto.add.button(x, game_objeto.world.height-45, 'Boton_cantar_on', function(){ Cantar(SoyElJugador); }, this, 2, 1, 0);
-	BotonCantar.visible=false;
-	BotonCantar.anchor.setTo(0.5,0.5);
-	BotonCantar.width=BotonCantar.width*1.2;
-	BotonCantar.height=BotonCantar.height*1.2;
+	IEQDMBJCAY= YMHIHSNADE.add.button(x, YMHIHSNADE.world.height-45, 'Boton_cantar_on', function(){ VSBOFQVPVQ(TFSXFTYVGQ); }, this, 2, 1, 0);
+	IEQDMBJCAY.visible=false;
+	IEQDMBJCAY.anchor.setTo(0.5,0.5);
+	IEQDMBJCAY.width=IEQDMBJCAY.width*1.2;
+	IEQDMBJCAY.height=IEQDMBJCAY.height*1.2;
 
 	
 	
-	BotonSonidoOn= game_objeto.add.button(50+vSeparacion, 110, 'Boton_sonido_on', SonidoOff, this, 2, 1, 0);;
-	BotonSonidoOn.anchor.setTo(0.5,0.5)
-	BotonSonidoOn.visible=false;
-	BotonSonidoOff= game_objeto.add.button(50+vSeparacion, 110, 'Boton_sonido_off', SonidoOn, this, 2, 1, 0);;
-	BotonSonidoOff.anchor.setTo(0.5,0.5)
-	BotonSonidoOff.visible=false;
+	BNMBJQQQQW= YMHIHSNADE.add.button(50+YAJVUBPNNW, 110, 'Boton_sonido_on', SonidoOff, this, 2, 1, 0);;
+	BNMBJQQQQW.anchor.setTo(0.5,0.5)
+	BNMBJQQQQW.visible=false;
+	MNSLSOPOOP= YMHIHSNADE.add.button(50+YAJVUBPNNW, 110, 'Boton_sonido_off', SonidoOn, this, 2, 1, 0);;
+	MNSLSOPOOP.anchor.setTo(0.5,0.5)
+	MNSLSOPOOP.visible=false;
 	
 	
-		//SndChatarrero.play();
-		//SndChiflar.play();
-		//SndEscupe.play();
-		//SndFaldas.play();
-		//SndGorrion.play();
-		//SndGrijan.play();
-		//SndGuinoteOtro.play();
-		//SndMataBocarrana.play();
-		//SndMonja.play();
-		//SndPajaro.play();
-		//SndPrimeraChicos.play();
-		//SndPuntos.play();
-		//SndToro.play();
+		//UIYIUHCWVX.play();
+		//UUYECMNSZZ.play();
+		//ZZJJJUHIHI.play();
+		//LEUSNCUWAA.play();
+		//AAAAJKGHKC.play();
+		//HKJHVUHWUO.play();
+		//BVUWCEFEGY.play();
+		//NUSHIUSPKE.play();
+		//UIYIUWCHCW.play();
+		//AZZHJKWPLD.play();
+		//HGJCHGAJGC.play();
+		//MSJIWCUWCU.play();
+		//LOIYUIYIUC.play();
 	
 	
 	
 	
-	if (vSonidoOn==true)
+	if (BNCXHHJGVW==true)
 	{
-		BotonSonidoOn.visible=true;
-		BotonSonidoOff.visible=false;
+		BNMBJQQQQW.visible=true;
+		MNSLSOPOOP.visible=false;
 	}
 
 
@@ -693,291 +693,291 @@ var timerborrar = game_objeto.time.create(false);
 
 	this.lCartaEnviada=0;
 	
-	BotonBorrar= game_objeto.add.button(900, 0, 'spr_cantar', function(){ 
-		DetenerTiempo();
+	JFRRFIXASB= YMHIHSNADE.add.button(900, 0, 'spr_cantar', function(){ 
+		JTQKCQEDPC();
 	}, this, 2, 1, 0);
-	BotonBorrar.visible=false;
+	JFRRFIXASB.visible=false;
 	
-	BotonParar= game_objeto.add.button(900, 0, 'spr_cantar', function(){ 
-		DetenerTiempo();
+	TDRCQKMLDY= YMHIHSNADE.add.button(900, 0, 'spr_cantar', function(){ 
+		JTQKCQEDPC();
 	}, this, 2, 1, 0);
-	BotonParar.visible=false;
+	TDRCQKMLDY.visible=false;
 	
-	BotonMonoJugador= game_objeto.add.button(game_objeto.world.centerX - 120, game_objeto.world.height-170, 'Boton_solo', InicioMonoJugador, this, 2, 1, 0);
-	BotonMonoJugador.visible=false;
-	BotonMonoJugador.width=BotonMonoJugador.width;
-	BotonMonoJugador.height=BotonMonoJugador.height;
-	BotonMonoJugador.anchor.setTo(0.5,0.5)
+	UEHYPTREIH= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX - 120, YMHIHSNADE.world.height-170, 'Boton_solo', OCSBJTDODP, this, 2, 1, 0);
+	UEHYPTREIH.visible=false;
+	UEHYPTREIH.width=UEHYPTREIH.width;
+	UEHYPTREIH.height=UEHYPTREIH.height;
+	UEHYPTREIH.anchor.setTo(0.5,0.5)
 	
-	BotonContacta= game_objeto.add.button(game_objeto.world.width-100, game_objeto.world.height-30, 'Contacta', function(){LoginCordova(5)}, this, 2, 1, 0);
+	BotonContacta= YMHIHSNADE.add.button(YMHIHSNADE.world.width-100, YMHIHSNADE.world.height-30, 'Contacta', function(){RSHJSKMBRP(5)}, this, 2, 1, 0);
 	BotonContacta.visible=false;
 	BotonContacta.anchor.setTo(0.5,0.5)
 	
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
-		BotonMonoJugador.width=BotonMonoJugador.width*1.4;
-		BotonMonoJugador.height=BotonMonoJugador.height*1.4;
-		BotonMonoJugador.y=BotonMonoJugador.y-90;
-		BotonMonoJugador.x=BotonMonoJugador.x-45;
+		UEHYPTREIH.width=UEHYPTREIH.width*1.4;
+		UEHYPTREIH.height=UEHYPTREIH.height*1.4;
+		UEHYPTREIH.y=UEHYPTREIH.y-90;
+		UEHYPTREIH.x=UEHYPTREIH.x-45;
 	}
 	
-	BotonMultiJugador= game_objeto.add.button(game_objeto.world.centerX + 120, game_objeto.world.height-170, 'Boton_online', InicioMultiJugador, this, 2, 1, 0);;
-	BotonMultiJugador.visible=false;
-	BotonMultiJugador.width=BotonMultiJugador.width;
-	BotonMultiJugador.height=BotonMultiJugador.height;
-	BotonMultiJugador.anchor.setTo(0.5,0.5)
+	IBECDOLWLN= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX + 120, YMHIHSNADE.world.height-170, 'Boton_online', JVEHDHOEEM, this, 2, 1, 0);;
+	IBECDOLWLN.visible=false;
+	IBECDOLWLN.width=IBECDOLWLN.width;
+	IBECDOLWLN.height=IBECDOLWLN.height;
+	IBECDOLWLN.anchor.setTo(0.5,0.5)
 	
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
-		BotonMultiJugador.width=BotonMultiJugador.width*1.4;
-		BotonMultiJugador.height=BotonMultiJugador.height*1.4;
-		BotonMultiJugador.y=BotonMultiJugador.y-90;
-		BotonMultiJugador.x=BotonMultiJugador.x+45;
+		IBECDOLWLN.width=IBECDOLWLN.width*1.4;
+		IBECDOLWLN.height=IBECDOLWLN.height*1.4;
+		IBECDOLWLN.y=IBECDOLWLN.y-90;
+		IBECDOLWLN.x=IBECDOLWLN.x+45;
 	}	
 	
 	//1.0.8
-	BotonClasificacion= game_objeto.add.button(game_objeto.world.centerX + 420, game_objeto.world.centerY-100, 'Boton_ranking', SolicitaClasificacion, this, 2, 1, 0);;
-	BotonClasificacion.visible=false;
-	BotonClasificacion.width=BotonClasificacion.width;
-	BotonClasificacion.height=BotonClasificacion.height;
-	BotonClasificacion.anchor.setTo(0.5,0.5)
+	POEICHMHDL= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX + 420, YMHIHSNADE.world.centerY-100, 'Boton_ranking', SolicitaClasificacion, this, 2, 1, 0);;
+	POEICHMHDL.visible=false;
+	POEICHMHDL.width=POEICHMHDL.width;
+	POEICHMHDL.height=POEICHMHDL.height;
+	POEICHMHDL.anchor.setTo(0.5,0.5)
 	
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
-		BotonClasificacion.width=BotonClasificacion.width;
-		BotonClasificacion.height=BotonClasificacion.height;
-		BotonClasificacion.y=BotonClasificacion.y-110;
-		BotonClasificacion.x=BotonClasificacion.x+70;
+		POEICHMHDL.width=POEICHMHDL.width;
+		POEICHMHDL.height=POEICHMHDL.height;
+		POEICHMHDL.y=POEICHMHDL.y-110;
+		POEICHMHDL.x=POEICHMHDL.x+70;
 	}		
 	//1.0.8
 	
-	BotonAleatorio= game_objeto.add.button(game_objeto.world.centerX -120 , game_objeto.world.height-170-1000, 'Boton_aleatorio', InicioMultiJugadorAleatorio, this, 2, 1, 0);
-	BotonAleatorio.visible=false;
-	BotonAleatorio.width=BotonAleatorio.width;
-	BotonAleatorio.height=BotonAleatorio.height;
-	BotonAleatorio.anchor.setTo(0.5,0.5)
+	EFKTQSXAMA= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX -120 , YMHIHSNADE.world.height-170-1000, 'Boton_aleatorio', LLKJWWDFFF, this, 2, 1, 0);
+	EFKTQSXAMA.visible=false;
+	EFKTQSXAMA.width=EFKTQSXAMA.width;
+	EFKTQSXAMA.height=EFKTQSXAMA.height;
+	EFKTQSXAMA.anchor.setTo(0.5,0.5)
 	
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
-		BotonAleatorio.width=BotonAleatorio.width*1.4;
-		BotonAleatorio.height=BotonAleatorio.height*1.4;
-		BotonAleatorio.y=BotonAleatorio.y-90;
-		BotonAleatorio.x=BotonAleatorio.x-45;
+		EFKTQSXAMA.width=EFKTQSXAMA.width*1.4;
+		EFKTQSXAMA.height=EFKTQSXAMA.height*1.4;
+		EFKTQSXAMA.y=EFKTQSXAMA.y-90;
+		EFKTQSXAMA.x=EFKTQSXAMA.x-45;
 	}
 	
-	BotonAmigos= game_objeto.add.button(game_objeto.world.centerX +120+1000 , game_objeto.world.height-170, 'Boton_amigos', InicioMultiJugadorAmigos, this, 2, 1, 0);;
-	BotonAmigos.visible=false;
-	BotonAmigos.width=BotonAmigos.width;
-	BotonAmigos.height=BotonAmigos.height;
-	BotonAmigos.anchor.setTo(0.5,0.5)
+	LNJDKEVPQE= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX +120+1000 , YMHIHSNADE.world.height-170, 'Boton_amigos', YIQDWVLKWG, this, 2, 1, 0);;
+	LNJDKEVPQE.visible=false;
+	LNJDKEVPQE.width=LNJDKEVPQE.width;
+	LNJDKEVPQE.height=LNJDKEVPQE.height;
+	LNJDKEVPQE.anchor.setTo(0.5,0.5)
 	
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
-		BotonAmigos.width=BotonAmigos.width*1.4;
-		BotonAmigos.height=BotonAmigos.height*1.4;
-		BotonAmigos.y=BotonAmigos.y-90;
-		BotonAmigos.x=BotonAmigos.x+45;
+		LNJDKEVPQE.width=LNJDKEVPQE.width*1.4;
+		LNJDKEVPQE.height=LNJDKEVPQE.height*1.4;
+		LNJDKEVPQE.y=LNJDKEVPQE.y-90;
+		LNJDKEVPQE.x=LNJDKEVPQE.x+45;
 	}		
 	
 	
 	
-	BotonRobots= game_objeto.add.button(game_objeto.world.centerX+35  , game_objeto.world.centerY+150, 'Boton_robots', RellenarSala, this, 2, 1, 0);;
-	BotonRobots.visible=false;
-	BotonRobots.width=BotonRobots.width;
-	BotonRobots.height=BotonRobots.height;
-	BotonRobots.anchor.setTo(0.5,0.5)
+	HJKHDKJHWU= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX+35  , YMHIHSNADE.world.centerY+150, 'Boton_robots', RellenarSala, this, 2, 1, 0);;
+	HJKHDKJHWU.visible=false;
+	HJKHDKJHWU.width=HJKHDKJHWU.width;
+	HJKHDKJHWU.height=HJKHDKJHWU.height;
+	HJKHDKJHWU.anchor.setTo(0.5,0.5)
 	
 	//1.0.8 Error de los 20
-	bmd = game_objeto.add.bitmapData(game_objeto.world.width,game_objeto.world.height);
+	bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 	bmd.ctx.beginPath();
-	bmd.ctx.rect(0,0,game_objeto.world.width,game_objeto.world.height);
+	bmd.ctx.rect(0,0,YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 	bmd.ctx.fillStyle = '#000000';
 	bmd.ctx.fill();
 	//1.0.8
 	
-	ConfiguraPantallaInicio();
+	MITSNADNQS();
 
-	//BotonCantar.visible=false;
+	//IEQDMBJCAY.visible=false;
 	
 	//console.log("ANTES INTENTA CONEXION");
 	
-	Noticia=game_objeto.add.button(x , game_objeto.world.height-45, 'Boton_cambiar_7_on', CerrarNoticia , this, 2, 1, 0);
-	Noticia.visible=false;
-	Noticia.anchor.setTo(0.5,0.5);
-	Noticia.x=230;
-	Noticia.y=-500;
+	BUJELVTIKU=YMHIHSNADE.add.button(x , YMHIHSNADE.world.height-45, 'Boton_cambiar_7_on', DMLSYYQBXI , this, 2, 1, 0);
+	BUJELVTIKU.visible=false;
+	BUJELVTIKU.anchor.setTo(0.5,0.5);
+	BUJELVTIKU.x=230;
+	BUJELVTIKU.y=-500;
 	
 	
-	var x=devuelveX("U_C",0)-AnchoCarta;
-	var y=devuelveY("U_C",0)+(AltoCarta/2)+(vSeparacion);
-	if (cuatrotres==true)
+	var x=WIEVLYANFM("U_C",0)-COIVBWRMCC;
+	var y=FIGQBSJQGA("U_C",0)+(MKSLYEWQQS/2)+(YAJVUBPNNW);
+	if (JHJEWHFWNL==true)
 	{
 		y=y+15;
 	}
 	
-	ObjTurnoU=game_objeto.add.sprite(x,y, 'Imagen_Turno');
-	ObjTurnoU.anchor.setTo(0.5, 0.5)
-	ObjTurnoU.visible=false;
+	UYIUYIUYIU=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
+	UYIUYIUYIU.anchor.setTo(0.5, 0.5)
+	UYIUYIUYIU.visible=false;
 
-	var x=devuelveX("L_C",0)+AnchoCarta;
-	var y=devuelveY("L_C",0);
+	var x=WIEVLYANFM("L_C",0)+COIVBWRMCC;
+	var y=FIGQBSJQGA("L_C",0);
 
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
 		x=x+15;
 	}
-	ObjTurnoL=game_objeto.add.sprite(x,y, 'Imagen_Turno');
-	ObjTurnoL.anchor.setTo(0.5, 0.5)
-	ObjTurnoL.visible=false;
+	BNVUWCOWEC=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
+	BNVUWCOWEC.anchor.setTo(0.5, 0.5)
+	BNVUWCOWEC.visible=false;
 
 	
-	var x=devuelveX("R_C",0)-AnchoCarta;
-	var y=devuelveY("L_C",0);
+	var x=WIEVLYANFM("R_C",0)-COIVBWRMCC;
+	var y=FIGQBSJQGA("L_C",0);
 
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
 		x=x-15;
 	}
-	ObjTurnoR=game_objeto.add.sprite(x,y, 'Imagen_Turno');
-	ObjTurnoR.anchor.setTo(0.5, 0.5);
-	ObjTurnoR.visible=false;
+	GJHWUYGCBN=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
+	GJHWUYGCBN.anchor.setTo(0.5, 0.5);
+	GJHWUYGCBN.visible=false;
 
 
 	
-	var x=devuelveX("U_C",0)-AnchoCarta;
-	var y=game_objeto.world.height-AnchoCartaEscalado-AltoCartaEscalado+(vSeparacion);
+	var x=WIEVLYANFM("U_C",0)-COIVBWRMCC;
+	var y=YMHIHSNADE.world.height-SXSHBRJFIR-PPLOSJIWHO+(YAJVUBPNNW);
 
-	ObjTurnoD=game_objeto.add.sprite(x,y, 'Imagen_Turno');
-	ObjTurnoD.anchor.setTo(0.5, 0.5)
-	ObjTurnoD.visible=false;
+	DHJGJHGWCY=YMHIHSNADE.add.sprite(x,y, 'Imagen_Turno');
+	DHJGJHGWCY.anchor.setTo(0.5, 0.5)
+	DHJGJHGWCY.visible=false;
 
 	
-	if (IntentaConexionInicial==true)
+	if (PWGIQBBAWX==true)
 	{
 		
 		try
 		{
 			
 			//console.log("Conecta: Llamada level")			
-			ConectaServidor();
+			XEMENNVXGV();
 			if (socket.id!=undefined)
 			{
 					//alert("ko");			
-				//socket.emit('enviar_peticion_publicidad', socket.id,Version) ;
+				//socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO) ;
 				
-				if (ArrayInfoJugador.length>0)
+				if (PWMIBRSDCJ.length>0)
 				{
-					var JugadorPubli=ArrayInfoJugador[0].Nombre;
-					var JugadorFullPubli=ArrayInfoJugador[0].ProveedorID + '-'+ ArrayInfoJugador[0].RedSocial;
-					socket.emit('enviar_peticion_publicidad', socket.id,Version,ObjetoG) ;
+					var JugadorPubli=PWMIBRSDCJ[0].WWKVHIMWYD;
+					var JugadorFullPubli=PWMIBRSDCJ[0].FFRVOEAXTF + '-'+ PWMIBRSDCJ[0].BDYYDTFQAO;
+					socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
 				}
 				else
 				{
-					socket.emit('enviar_peticion_publicidad', socket.id,Version,ObjetoG) ;
+					socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
 				}
 				
 				
 				
-				socket.emit('enviar validar version', Version);
+				socket.emit('SNEESSIXBK', SFKLFIJOIO);
 
 			}
 		}
 		catch (e){};
 		//console.log("INTENTA CONEXION");
 		
-		if(FuerzaSalir==false)
+		if(ERQHLTPETK==false)
 		{
 			//console.log("Llamada level2")		
-			LoginDesdeWeb();
+			CMREMHOJIN();
 		}
 	}
-	IntentaConexionInicial=true;
-	FuerzaSalir=false;
+	PWGIQBBAWX=true;
+	ERQHLTPETK=false;
 
 	if (socket.id!=undefined)
 	{
-		socket.emit('solicita conectados');
+		socket.emit('JKHWJKHIWF');
 	}
 		
 	
 
-	textoContador.x=game_objeto.world.centerX;
-	textoContador.y=game_objeto.world.centerY+30
+	YJNIRPCWEI.x=YMHIHSNADE.world.centerX;
+	YJNIRPCWEI.y=YMHIHSNADE.world.centerY+30
 	
-	textoContador.anchor.set(0.5);
-    textoContador.align = 'center';
+	YJNIRPCWEI.anchor.set(0.5);
+    YJNIRPCWEI.align = 'center';
 
 
-    textoContador.font = 'Arial Black';
-    textoContador.fontSize = 40;
-    textoContador.fontWeight = 'bold';
+    YJNIRPCWEI.font = 'Arial Black';
+    YJNIRPCWEI.fontSize = 40;
+    YJNIRPCWEI.fontWeight = 'bold';
 
 
-    textoContador.stroke = '#961918';
-    textoContador.strokeThickness = 7;
-    textoContador.fill = '#F8E600';		
+    YJNIRPCWEI.stroke = '#961918';
+    YJNIRPCWEI.strokeThickness = 7;
+    YJNIRPCWEI.fill = '#F8E600';		
 		
 		
 		
 		
-	textEsperando = game_objeto.add.text(game_objeto.world.centerX, game_objeto.world.centerY, 'Esperando jugadores');
-	textEsperando.visible=false;
+	JBXCGDTWYW = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY, 'Esperando jugadores');
+	JBXCGDTWYW.visible=false;
 	//log(true,"Se crea el mensaje");
 	
-	textEsperando.anchor.set(0.5);
-    textEsperando.align = 'center';
+	JBXCGDTWYW.anchor.set(0.5);
+    JBXCGDTWYW.align = 'center';
 
 
-    textEsperando.font = 'Arial Black';
-    textEsperando.fontSize = 60;
-    textEsperando.fontWeight = 'bold';
+    JBXCGDTWYW.font = 'Arial Black';
+    JBXCGDTWYW.fontSize = 60;
+    JBXCGDTWYW.fontWeight = 'bold';
 
 
-    textEsperando.stroke = '#961918';
-    textEsperando.strokeThickness = 15;
-    textEsperando.fill = '#F8E600';
+    JBXCGDTWYW.stroke = '#961918';
+    JBXCGDTWYW.strokeThickness = 15;
+    JBXCGDTWYW.fill = '#F8E600';
 			
 			
-	textListos = game_objeto.add.text(game_objeto.world.centerX, game_objeto.world.centerY-50, 'Un momento por favor... Esperando al resto de compañeros.');
-	textListos.visible=false;
+	NSNUIQUYIU = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'Un momento por favor... Esperando al resto de compañeros.');
+	NSNUIQUYIU.visible=false;
 	//log(true,"Se crea el mensaje");
 	
-	textListos.anchor.set(0.5);
-    textListos.align = 'center';
+	NSNUIQUYIU.anchor.set(0.5);
+    NSNUIQUYIU.align = 'center';
 
 
-    textListos.font = 'Arial Black';
-    textListos.fontSize = 40;
-    textListos.fontWeight = 'bold';
+    NSNUIQUYIU.font = 'Arial Black';
+    NSNUIQUYIU.fontSize = 40;
+    NSNUIQUYIU.fontWeight = 'bold';
 
 
-    textListos.stroke = '#961918';
-    textListos.strokeThickness = 15;
-    textListos.fill = '#F8E600';			
-	textListos.wordWrap= true;
-	textListos.wordWrapWidth=1000;	
+    NSNUIQUYIU.stroke = '#961918';
+    NSNUIQUYIU.strokeThickness = 15;
+    NSNUIQUYIU.fill = '#F8E600';			
+	NSNUIQUYIU.wordWrap= true;
+	NSNUIQUYIU.wordWrapWidth=1000;	
 	
 
-	textEligiendo = game_objeto.add.text(game_objeto.world.centerX, game_objeto.world.centerY-50, 'Eligiendo pareja');
-	textEligiendo.visible=false;
+	JSJSHSHSSE = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'Eligiendo pareja');
+	JSJSHSHSSE.visible=false;
 	//log(true,"Se crea el mensaje");
 	
-	textEligiendo.anchor.set(0.5);
-    textEligiendo.align = 'center';
+	JSJSHSHSSE.anchor.set(0.5);
+    JSJSHSHSSE.align = 'center';
 
 
-    textEligiendo.font = 'Arial Black';
-    textEligiendo.fontSize = 40;
-    textEligiendo.fontWeight = 'bold';
+    JSJSHSHSSE.font = 'Arial Black';
+    JSJSHSHSSE.fontSize = 40;
+    JSJSHSHSSE.fontWeight = 'bold';
 
 
-    textEligiendo.stroke = '#961918';
-    textEligiendo.strokeThickness = 15;
-    textEligiendo.fill = '#F8E600';			
-	textEligiendo.wordWrap= true;
-	textEligiendo.wordWrapWidth=1000;	
+    JSJSHSHSSE.stroke = '#961918';
+    JSJSHSHSSE.strokeThickness = 15;
+    JSJSHSHSSE.fill = '#F8E600';			
+	JSJSHSHSSE.wordWrap= true;
+	JSJSHSHSSE.wordWrapWidth=1000;	
 	
-		inputField = game_objeto.add.inputField(10+vSeparacion, 25,{
+		inputField = YMHIHSNADE.add.inputField(10+YAJVUBPNNW, 25,{
 		font: "20px Arial",
 		height:30,
 		width:200,
@@ -992,18 +992,18 @@ var timerborrar = game_objeto.time.create(false);
 		
 		inputField.visible=false;
 
-		//MostrarCrearSala();
+		//LOIUJDIWPD();
 	
-	//deb=game_objeto.add.text(0, 0, "");
+	//deb=YMHIHSNADE.add.text(0, 0, "");
 	
-	//kio= game_objeto.add.sprite(100,530,'PRO');
-	//kio2= game_objeto.add.sprite(145,530,'Medalla');
-	//kio3= game_objeto.add.sprite(1210,530,'Mago');
+	//kio= YMHIHSNADE.add.sprite(100,530,'PRO');
+	//kio2= YMHIHSNADE.add.sprite(145,530,'Medalla');
+	//kio3= YMHIHSNADE.add.sprite(1210,530,'Mago');
 	
-	if (BotonMonoJugador.visible==true && BotonMultiJugador.visible==true)
+	if (UEHYPTREIH.visible==true && IBECDOLWLN.visible==true)
 	{
-		BotonSalir.x=xSalir;
-		BotonSalir.visible=false;
+		CUUKQAGFEB.x=QETACVSHAR;
+		CUUKQAGFEB.visible=false;
 	}
 	
 
@@ -1012,59 +1012,59 @@ var timerborrar = game_objeto.time.create(false);
 
 SolicitaClasificacion=function()
 {
-	var JugadorFull;
+	var OBTBPOULAV;
 	
-	if (ArrayInfoJugador.length>0)
+	if (PWMIBRSDCJ.length>0)
 	{
-		console.log("EO "+ArrayInfoJugador[0].JugadorFull)
-		console.log("EO "+ArrayInfoJugador[0]);
-		JugadorFull=ArrayInfoJugador[0].JugadorFull;
+		console.log("EO "+PWMIBRSDCJ[0].OBTBPOULAV)
+		console.log("EO "+PWMIBRSDCJ[0]);
+		OBTBPOULAV=PWMIBRSDCJ[0].OBTBPOULAV;
 	}
 	else
 	{
-		console.log("aa "+ArrayInfoJugador[0].JugadorFull)
-		JugadorFull=null;
+		console.log("aa "+PWMIBRSDCJ[0].OBTBPOULAV)
+		OBTBPOULAV=null;
 	}
 	
 	if (socket.id!=undefined)
 	{
 		
-		socket.emit('solicita_clasificacion',socket.id,JugadorFull);	
+		socket.emit('WHGHJCGWWQ',socket.id,OBTBPOULAV);	
 	}
 }
 
 RellenarSala=function()
 {
-	if (ModoMultijugador==true)
+	if (EGPDVIEJEL==true)
 	{
 		if(socket.id!=undefined)
 		{
 			//console.log("llega a rellenar");
-			socket.emit('rellenar sala',Habitacion,ArrayDelaPropiaSala[SoyElJugador-1].JugadorFull)
+			socket.emit('NZBSUWWZXX',DFBVDPETGO,XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV)
 		}
 	}
 }
 
 SonidoOff=function()
 {
-	vSonidoOn=false;
-	BotonSonidoOn.visible=false;
-	BotonSonidoOff.visible=true;
+	BNCXHHJGVW=false;
+	BNMBJQQQQW.visible=false;
+	MNSLSOPOOP.visible=true;
 }
 
 SonidoOn=function()
 {
-	vSonidoOn=true;
-	BotonSonidoOn.visible=true;
-	BotonSonidoOff.visible=false;
+	BNCXHHJGVW=true;
+	BNMBJQQQQW.visible=true;
+	MNSLSOPOOP.visible=false;
 }
 
-CerrarNoticia=function()
+DMLSYYQBXI=function()
 {
-	Noticia.visible=false;
+	BUJELVTIKU.visible=false;
 }
 
-InicioMultiJugadorAmigos=function()
+YIQDWVLKWG=function()
 {
 	
 	/*if ( lPermisoHabilitado==false )
@@ -1074,34 +1074,34 @@ InicioMultiJugadorAmigos=function()
 	
 	if (checkConnection()==true)
 	{	
-		CancelarAmigos();
-		if (ModoMultijugador==true)
+		NFARLTEOCI();
+		if (EGPDVIEJEL==true)
 		{
-			socket.emit('enviar peticion sala amigos') ;
+			socket.emit('ETJNHPEGJR') ;
 		}
 	}
 }
 
 
-GrabarResultado=function(mueve,Partida,IdasVueltas,Puntos,Veinte,Cuarenta,As,Tres)
+WTERKRAPBE=function(ABWBCAJRXQ,KXAWTTIEGG,SPWYNLHQXU,PAXBGDCANU,VRCARVJJPF,VGVSETFAFF,As,WJIXAEXYTP)
 {
 	
-	//mueve=SoyElJugador;
+	//ABWBCAJRXQ=TFSXFTYVGQ;
 
-	if (ModoMultijugador==true)
+	if (EGPDVIEJEL==true)
 	{
-		var Desconectado=ArrayDelaPropiaSala[mueve-1].Desconectado;
-		var Provider_Full=ArrayDelaPropiaSala[mueve-1].JugadorFull;
-		var Name=ArrayDelaPropiaSala[mueve-1].Nombre;
-		var Socket=ArrayDelaPropiaSala[mueve-1].JugadorSala;
-		//console.log(mueve+" Mi Socket: "+Socket);
-		var Sala=ArrayDelaPropiaSala[mueve-1].Sala;
-		var Amigo=ArrayDelaPropiaSala[mueve-1].Amigo;
-		var IP=ArrayDelaPropiaSala[mueve-1].IP;
+		var XJARYUVBCB=XPBCVAGCDQ[ABWBCAJRXQ-1].XJARYUVBCB;
+		var FUAQHEGBCV=XPBCVAGCDQ[ABWBCAJRXQ-1].OBTBPOULAV;
+		var Name=XPBCVAGCDQ[ABWBCAJRXQ-1].WWKVHIMWYD;
+		var Socket=XPBCVAGCDQ[ABWBCAJRXQ-1].AURESXCGMK;
+		//console.log(ABWBCAJRXQ+" Mi Socket: "+Socket);
+		var Sala=XPBCVAGCDQ[ABWBCAJRXQ-1].Sala;
+		var Amigo=XPBCVAGCDQ[ABWBCAJRXQ-1].Amigo;
+		var NBJHGSFSJS=XPBCVAGCDQ[ABWBCAJRXQ-1].NBJHGSFSJS;
 		
 		var Idas;
 
-		if (IdasVueltas==true)
+		if (SPWYNLHQXU==true)
 		{	
 			Idas='v';
 		}
@@ -1110,26 +1110,26 @@ GrabarResultado=function(mueve,Partida,IdasVueltas,Puntos,Veinte,Cuarenta,As,Tre
 			Idas='i';
 		}
 		
-		//if (ArrayDelaPropiaSala[mueve-1].Desconectado==true)
+		//if (XPBCVAGCDQ[ABWBCAJRXQ-1].XJARYUVBCB==true)
 		//{
 		//	Idas='d';
 		//}
 
 		
-		socket.emit('Enviar_Resultados',Provider_Full,Name,Socket,Sala,Partida,Idas,Desconectado,Puntos,Veinte,Cuarenta,As,Tres,Amigo,idPartida,IP)
+		socket.emit('IUYWUIHCVW',FUAQHEGBCV,Name,Socket,Sala,KXAWTTIEGG,Idas,XJARYUVBCB,PAXBGDCANU,VRCARVJJPF,VGVSETFAFF,As,WJIXAEXYTP,Amigo,MQUGCIUQII,NBJHGSFSJS)
 	}
 }
 
-onSocketListaSalaAmigos=function(ListaAmigos)
+TJDBATCOYY=function(XGSWBEHNKH)
 {
 	var i;
-	var Mensaje="";
+	var RHOLNWBOXR="";
 	
-	CrearTablaSalas(ListaAmigos);
+	IICHSQQWTF(XGSWBEHNKH);
 	
 }
 
-CrearTablaSalas=function(ListaAmigos)
+IICHSQQWTF=function(XGSWBEHNKH)
 {
 	var i;
 	var table = document.getElementById("TablaSalas");
@@ -1141,9 +1141,9 @@ CrearTablaSalas=function(ListaAmigos)
 	
 	// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
 	
-	//console.log("Tamaño amigos "+ListaAmigos.length);
+	//console.log("Tamaño amigos "+XGSWBEHNKH.length);
 	
-	OcultarFacebook();
+	NGHJWGJHWG();
 
 	//var tableRows = table.getElementsByTagName('tr');
 	var rowCount = table.rows.length;
@@ -1159,10 +1159,10 @@ CrearTablaSalas=function(ListaAmigos)
 	d.style.display = 'block';
 	//d.style.zIndex=-100;
 						
-	for (i=0;i<=ListaAmigos.length-1;i++)
+	for (i=0;i<=XGSWBEHNKH.length-1;i++)
 	{
 		row=table.insertRow(i+1);
-		//row.onclick = function(){alert(ListaAmigos[i].Sala);};
+		//row.onclick = function(){alert(XGSWBEHNKH[i].Sala);};
 		cell1 = row.insertCell(0);
 		cell2 = row.insertCell(1);
 		cell3 = row.insertCell(2);
@@ -1170,17 +1170,17 @@ CrearTablaSalas=function(ListaAmigos)
 		//cell3 = row.insertCell(2);
 		
 		
-		cell1.innerHTML = ListaAmigos[i].Sala;
-		cell2.innerHTML = ListaAmigos[i].Creador;
+		cell1.innerHTML = XGSWBEHNKH[i].Sala;
+		cell2.innerHTML = XGSWBEHNKH[i].Creador;
 		//cell3.innerHTML =  "<img src='" + Data[i].Usuario[0][0] + "' style='max-width:100%' >";
-		cell3.innerHTML = (ListaAmigos[i].JugadorFull.substring(0, ListaAmigos[i].JugadorFull.indexOf('-',1))+46);
+		cell3.innerHTML = (XGSWBEHNKH[i].OBTBPOULAV.substring(0, XGSWBEHNKH[i].OBTBPOULAV.indexOf('-',1))+46);
 		//cell3.style.visibility = "hidden";
 		
 		row.onclick = (function() { // closure
             var cnt = i; // save the counter to use in the function
             return function() {
-			MostrarPidePasswordSala(this.cells[0].innerHTML, this.cells[2].innerHTML)
-			//InicioPartidaOnline(1,this.cells[2].innerHTML);
+			OQDXNSPREQ(this.cells[0].innerHTML, this.cells[2].innerHTML)
+			//KKJJKHAJHK(1,this.cells[2].innerHTML);
             //  alert("row"+cnt+" data="+this.cells[2].innerHTML);
 			  
             }    
@@ -1191,29 +1191,29 @@ CrearTablaSalas=function(ListaAmigos)
 		
 		//cell1.onclick=function(){alert(this.rowIndex);};
 		
-		//cell3.innerHTML = ListaAmigos[i].Sala;
+		//cell3.innerHTML = XGSWBEHNKH[i].Sala;
 		//cell3.style.visibility = "hidden";
 		
 		
 	}
 }
 
-CerrarTablaSalas=function()
+ETTNDBLRCS=function()
 {
-	Noticia.visible=false;
+	BUJELVTIKU.visible=false;
 	var d=document.getElementById('DivSalasAmigos');
 	d.style.display = 'none';
 	
 }
 
-CerrarClasificacion=function()
+BHJGQASXXS=function()
 {
 	var d=document.getElementById('DivClasificacionContenedor');
 	d.style.display = 'none';
 	MostrarFacebook();
 }
 
-MostrarCrearSala=function(){
+LOIUJDIWPD=function(){
 	
 	var d=document.getElementById('DivCrearSala');
 	document.getElementById("sala").value="";
@@ -1223,92 +1223,92 @@ MostrarCrearSala=function(){
 }
 
 
-CerrarCrearSala=function(){
+BHWJGHJGWI=function(){
 	
 	var d=document.getElementById('DivCrearSala');
 	d.style.display = 'none';
 	//d.style.zIndex=-100;
 }
 
-MostrarSalir=function(VideoJuego)
+XHSDDIIBGG=function(VideoJuego)
 {
 	
-	var Mensaje="";
-	var TextoVideoJuego="";
+	var RHOLNWBOXR="";
+	var JHOWHOCWOO="";
 	
 	if (VideoJuego==true)
 	{
-		TextoVideoJuego=" del videojuego";
+		JHOWHOCWOO=" del videojuego";
 	}
 	
-	//OcultaPantallaLogin();
+	//YHNMANDWLT();
 	
-	if (ModoMultijugador==false)
+	if (EGPDVIEJEL==false)
 	{
-		Mensaje="¿Realmente desea Salir"+TextoVideoJuego+"?";
+		RHOLNWBOXR="¿Realmente desea Salir"+JHOWHOCWOO+"?";
 	}
 	else
 	{
-		if (ArrayDelaPropiaSala!=undefined)
+		if (XPBCVAGCDQ!=undefined)
 		{
-			if (ArrayDelaPropiaSala.length!=4)
+			if (XPBCVAGCDQ.length!=4)
 			{
-				Mensaje="¿Realmente desea Salir"+TextoVideoJuego+"?";
+				RHOLNWBOXR="¿Realmente desea Salir"+JHOWHOCWOO+"?";
 			}
 			else
 			{
-				Mensaje="¿Realmente desea Salir"+TextoVideoJuego+"? Salir Implica una derrota.";
+				RHOLNWBOXR="¿Realmente desea Salir"+JHOWHOCWOO+"? Salir Implica una derrota.";
 			}
 		}
 		else
 		{
-			Mensaje="¿Realmente desea Salir"+TextoVideoJuego+"?";
+			RHOLNWBOXR="¿Realmente desea Salir"+JHOWHOCWOO+"?";
 		}
 	}
 	
 	var a=document.getElementById("lblSalir") 
 	//var b=a.labels[0];
-	a.textContent = Mensaje;
+	a.textContent = RHOLNWBOXR;
 	var d=document.getElementById('DivSalir');
 	d.style.display = 'block';
 	
 	
 }
 
-MostrarElegirPareja=function(MuestraDIV)
+VVCDGUUDWR=function(MuestraDIV)
 {
 	
 	var i;
-	var player1="";
-	var player2="";
-	var player3="";
+	var JHCGSIWICI="";
+	var NBIUIUCWUE="";
+	var UUYYYYCEWE="";
 	var idplayer1="";
 	var idplayer2="";
 	var idplayer3="";
 	var vueltas=0;
 	
-	//console.log("Soy "+SoyElJugador)
+	//console.log("Soy "+TFSXFTYVGQ)
 		
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		//if (ArrayDelaPropiaSala[i].Desconectado==false || (ArrayDelaPropiaSala[i].Desconectado==true  && ArrayDelaPropiaSala[1].Desconectado==false ))
+		//if (XPBCVAGCDQ[i].XJARYUVBCB==false || (XPBCVAGCDQ[i].XJARYUVBCB==true  && XPBCVAGCDQ[1].XJARYUVBCB==false ))
 		//{
-			if ((i+1)!=SoyElJugador)
+			if ((i+1)!=TFSXFTYVGQ)
 			{
 				if (vueltas==0)
 				{
-					player1=ArrayDelaPropiaSala[i].Nombre;
-					idplayer1=ArrayDelaPropiaSala[i].JugadorSala;				
+					JHCGSIWICI=XPBCVAGCDQ[i].WWKVHIMWYD;
+					idplayer1=XPBCVAGCDQ[i].AURESXCGMK;				
 				}
 				if (vueltas==1)
 				{
-					player2=ArrayDelaPropiaSala[i].Nombre;
-					idplayer2=ArrayDelaPropiaSala[i].JugadorSala;				
+					NBIUIUCWUE=XPBCVAGCDQ[i].WWKVHIMWYD;
+					idplayer2=XPBCVAGCDQ[i].AURESXCGMK;				
 				}
 				if (vueltas==2)
 				{
-					player3=ArrayDelaPropiaSala[i].Nombre;
-					idplayer3=ArrayDelaPropiaSala[i].JugadorSala;				
+					UUYYYYCEWE=XPBCVAGCDQ[i].WWKVHIMWYD;
+					idplayer3=XPBCVAGCDQ[i].AURESXCGMK;				
 				}
 				vueltas++;
 			}
@@ -1317,9 +1317,9 @@ MostrarElegirPareja=function(MuestraDIV)
 	}
 	
 	
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		//console.log("-----"+ArrayDelaPropiaSala[i].Desconectado);
+		//console.log("-----"+XPBCVAGCDQ[i].XJARYUVBCB);
 	}
 	
 	var a=document.getElementById("lblPareja") 
@@ -1335,26 +1335,26 @@ MostrarElegirPareja=function(MuestraDIV)
 	
 	a=document.getElementById("Pareja1") 
 	//var b=a.labels[0];
-	a.textContent = player1;
+	a.textContent = JHCGSIWICI;
 	
-	//if (ArrayDelaPropiaSala[0].Desconectado==true && ArrayDelaPropiaSala[2].Desconectado==false)	{
+	//if (XPBCVAGCDQ[0].XJARYUVBCB==true && XPBCVAGCDQ[2].XJARYUVBCB==false)	{
 	//	a.style.display = 'none';
 	//}
 	
 	a=document.getElementById("Pareja2") 
 	//var b=a.labels[0];
-	a.textContent = player2;
+	a.textContent = NBIUIUCWUE;
 	
-	//if (ArrayDelaPropiaSala[1].Desconectado==true)
+	//if (XPBCVAGCDQ[1].XJARYUVBCB==true)
 	//{
 	//	a.style.display = 'none';
 	//}
 	
 	a=document.getElementById("Pareja3") 
 	//var b=a.labels[0];
-	a.textContent = player3;	
+	a.textContent = UUYYYYCEWE;	
 	
-	//if (ArrayDelaPropiaSala[2].Desconectado==true  && ArrayDelaPropiaSala[0].Desconectado==false)
+	//if (XPBCVAGCDQ[2].XJARYUVBCB==true  && XPBCVAGCDQ[0].XJARYUVBCB==false)
 	//{
 	//	a.style.display = 'none';
 	//}
@@ -1364,32 +1364,32 @@ MostrarElegirPareja=function(MuestraDIV)
 		var d=document.getElementById('DivEligePareja');
 		d.style.display = 'block';
 		
-		var TiempoParaturno=7;
+		var JHKSJDHVKJ=7;
 		
-		timerpareja.loop(1000, function(){	
+		HYSGUYGUYT.loop(1000, function(){	
 		
 			
 		
-			if (TiempoParaturno<=0)
+			if (JHKSJDHVKJ<=0)
 			{
-				timerpareja.stop();
+				HYSGUYGUYT.stop();
 				RespuestaPareja(2);
 			}
 			else
 			{
-				TiempoParaturno=TiempoParaturno-1;
+				JHKSJDHVKJ=JHKSJDHVKJ-1;
 			}
 		
 			
 		});
-		timerpareja.start();
+		HYSGUYGUYT.start();
 		
 	}
 }
 
 OcultarElegirPareja=function()
 {
-	timerpareja.stop();
+	HYSGUYGUYT.stop();
 	var d=document.getElementById('DivEligePareja');
 	d.style.display = 'none';
 }
@@ -1400,7 +1400,7 @@ MostrarFacebook=function()
 	d.style.display = 'inline-block';	
 }
 
-OcultarFacebook=function()
+NGHJWGJHWG=function()
 {
 	var d=document.getElementById('DivFace');
 	d.style.display = 'none';	
@@ -1410,153 +1410,153 @@ RespuestaPareja=function(Seleccion)
 {
 	var i;
 	var ParejaOriginal;
-	//OrdenEnSala
+	//KKUYGYRGYG
 	var d=document.getElementById('DivEligePareja');
 	d.style.display = 'none';
-//JugadorSalaFalseado	
+//LKKDKDNMNR	
 	
-	if (SoyElJugador==1)
+	if (TFSXFTYVGQ==1)
 	{
 		ParejaOriginal=3;
 	
 		if (Seleccion==1)
 		{
-			MiPareja=2;
+			POPEWFWERV=2;
 		}
 		if (Seleccion==2)
 		{
-			MiPareja=3;
+			POPEWFWERV=3;
 		}
 		if (Seleccion==3)
 		{
-			MiPareja=4;
+			POPEWFWERV=4;
 		}
 	}
-	if (SoyElJugador==2)
+	if (TFSXFTYVGQ==2)
 	{
 		ParejaOriginal=4;
 		if (Seleccion==1)
 		{
-			MiPareja=1;
+			POPEWFWERV=1;
 		}
 		if (Seleccion==2)
 		{
-			MiPareja=3;
+			POPEWFWERV=3;
 		}
 		if (Seleccion==3)
 		{
-			MiPareja=4;
+			POPEWFWERV=4;
 		}
 	}
-	if (SoyElJugador==3)
+	if (TFSXFTYVGQ==3)
 	{
 		ParejaOriginal=1;
 		if (Seleccion==1)
 		{
-			MiPareja=1;
+			POPEWFWERV=1;
 		}
 		if (Seleccion==2)
 		{
-			MiPareja=2;
+			POPEWFWERV=2;
 		}
 		if (Seleccion==3)
 		{
-			MiPareja=4;
+			POPEWFWERV=4;
 		}		
 	}
-	if (SoyElJugador==4)
+	if (TFSXFTYVGQ==4)
 	{
 		ParejaOriginal=2;
 		if (Seleccion==1)
 		{
-			MiPareja=1;
+			POPEWFWERV=1;
 		}
 		if (Seleccion==2)
 		{
-			MiPareja=2;
+			POPEWFWERV=2;
 		}
 		if (Seleccion==3)
 		{
-			MiPareja=3;
+			POPEWFWERV=3;
 		}		
 	}	
 
 	
-	//console.log("Soy "+SoyElJugador+" Ha seleccionado: "+Seleccion+" Mi pareja "+MiPareja);
+	//console.log("Soy "+TFSXFTYVGQ+" Ha seleccionado: "+Seleccion+" Mi pareja "+POPEWFWERV);
 	
 	
-	var OrdenDelModificado=ArrayDelaPropiaSala[MiPareja-1].OrdenEnSala;
+	var OrdenDelModificado=XPBCVAGCDQ[POPEWFWERV-1].KKUYGYRGYG;
 	//console.log("Orden del modificado "+OrdenDelModificado);
 	
 
 	//console.log("Pareja Original "+ParejaOriginal);
-	ArrayDelaPropiaSala[MiPareja-1].OrdenEnSala=ParejaOriginal;
+	XPBCVAGCDQ[POPEWFWERV-1].KKUYGYRGYG=ParejaOriginal;
 	
 	
-	ArrayDelaPropiaSala[ParejaOriginal-1].OrdenEnSala=OrdenDelModificado;
+	XPBCVAGCDQ[ParejaOriginal-1].KKUYGYRGYG=OrdenDelModificado;
 
 
-	ArrayDelaPropiaSala.sort(sort_by('OrdenEnSala', false, parseFloat));
+	XPBCVAGCDQ.sort(sort_by('KKUYGYRGYG', false, parseFloat));
 	
 	
 	
 	
 	//Por ahora reparte siempre el último en entrar
-	var ObjectSend=function( ArrayDelaPropiaSala,Habitacion, QuienReparte,NuevaPareja,
-		IdMsg,ClientId,SalaID,Mensaje){
-		 this.ArrayDelaPropiaSala=ArrayDelaPropiaSala
-		 this.Habitacion=Habitacion
-		 this.QuienReparte=QuienReparte
+	var GXNRNMAAKW=function( XPBCVAGCDQ,DFBVDPETGO, RDBQUAVHEP,NuevaPareja,
+		OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+		 this.XPBCVAGCDQ=XPBCVAGCDQ
+		 this.DFBVDPETGO=DFBVDPETGO
+		 this.RDBQUAVHEP=RDBQUAVHEP
 		 this.NuevaPareja=NuevaPareja
 
 											 
-		 this.IdMsg=IdMsg
-		 this.ClientId=ClientId
-		 this.SalaID=SalaID
-		 this.Mensaje=Mensaje
+		 this.OYJAHGADFQ=OYJAHGADFQ
+		 this.OJPXTRQDKS=OJPXTRQDKS
+		 this.LYHKNIMVEB=LYHKNIMVEB
+		 this.RHOLNWBOXR=RHOLNWBOXR
 		 
-		 this.Fecha=new Date(Date.now());
+		 this.EBAPPJFYSW=new Date(Date.now());
 	 }
-	var ArrayAccionesDesconexionesLocal=[];
-	ArrayAccionesDesconexionesLocal.splice(0,1000);
+	var QPHHGPRJAI=[];
+	QPHHGPRJAI.splice(0,1000);
 
 		
-	var IdMsg=Math.random()*100000;
-	var Objeto=new ObjectSend(ArrayDelaPropiaSala,Habitacion,4,MiPareja,
-		IdMsg,socket.id,Habitacion,'enviar cambio parejas');
-	ArrayAccionesDesconexiones.push(Objeto);
-	ArrayAccionesDesconexionesLocal.push(Objeto);
+	var OYJAHGADFQ=Math.random()*100000;
+	var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ,DFBVDPETGO,4,POPEWFWERV,
+		OYJAHGADFQ,socket.id,DFBVDPETGO,'IWOWOOKJKJ');
+	NBEJWDVLLV.push(KCPHFPSPLQ);
+	QPHHGPRJAI.push(KCPHFPSPLQ);
 
 
-	socket.emit('enviar cambio parejas',ArrayAccionesDesconexionesLocal[0],
-	 function(idMensaje)
+	socket.emit('IWOWOOKJKJ',QPHHGPRJAI[0],
+	 function(XQLEOGMJYG)
 	 {			 
-		EliminarColaMensajes(idMensaje,'enviar cambio parejas');
+		EXBCVLOIYJ(XQLEOGMJYG,'IWOWOOKJKJ');
 	 }
 	);						
-	ArrayAccionesDesconexionesLocal.splice(0,1000);	
+	QPHHGPRJAI.splice(0,1000);	
 	
 	
-	ArrayJugadoresDesconectados.splice(0,1000) //Importante no quitarlo. Al hacer los giros con el array de jugadores, hay que volver a calcular los desconectados y por eso se limpia el array
+	KYDWXPGHVY.splice(0,1000) //Importante no quitarlo. Al hacer los giros con el array de jugadores, hay que volver a calcular los desconectados y por eso se limpia el array
 	//console.log("Llamada 1")
-	CalculaControl();
+	IOJCRKJSRL();
 	
 }
 
-CerrarSalir=function()
+UAUDUHCLOB=function()
 {
 	var d=document.getElementById('DivSalir');
 	d.style.display = 'none';
 	//d.style.zIndex=-100;
 }
 
-RespuestaSalir=function(Respuesta)
+RespuestaSalir=function(JSKXXDPSDS)
 {
 	var a=document.getElementById("lblSalir") 
 	var textomensaje=a.textContent;
 	
-	CerrarSalir();
-	if (Respuesta==true)
+	UAUDUHCLOB();
+	if (JSKXXDPSDS==true)
 	{
 		if (textomensaje.search('videojuego')>=0) 
 		{
@@ -1564,7 +1564,7 @@ RespuestaSalir=function(Respuesta)
 		}
 		else
 		{
-			SalirConfirmado();
+			FHKOYDXPCL();
 		}
 	}
 	else
@@ -1573,27 +1573,27 @@ RespuestaSalir=function(Respuesta)
 	}
 }
 
-EliminarSalaDesdeCliente=function(SalaEliminar)
+PTBEWVCTBF=function(BXDXCOKIHE)
 {
-	socket.emit("enviar_eliminar_sala_amigo_cliente",SalaEliminar);
-	CancelarAmigos();
+	socket.emit("AXPTYWMEOH",BXDXCOKIHE);
+	NFARLTEOCI();
 }
-MostrarPidePasswordSala=function(NombreSala,Residual)
+OQDXNSPREQ=function(NombreSala,Residual)
 {
-	CerrarTablaSalas();	
+	ETTNDBLRCS();	
 	var d=document.getElementById('DivPasswordSala');
 	document.getElementById("sala_pass").value=NombreSala;
 	document.getElementById("pass_pass").value="";
 	
 	//console.log("Residual "+Residual.substring(0, Residual.length-2));
-	//console.log("Residual2 "+ArrayInfoJugador[0].JugadorFull.substring(0, ArrayInfoJugador[0].JugadorFull.indexOf('-',1)+0));
+	//console.log("Residual2 "+PWMIBRSDCJ[0].OBTBPOULAV.substring(0, PWMIBRSDCJ[0].OBTBPOULAV.indexOf('-',1)+0));
 	a=Residual.substring(0, Residual.length-2);
-	b=ArrayInfoJugador[0].JugadorFull.substring(0, ArrayInfoJugador[0].JugadorFull.indexOf('-',1)+0);
+	b=PWMIBRSDCJ[0].OBTBPOULAV.substring(0, PWMIBRSDCJ[0].OBTBPOULAV.indexOf('-',1)+0);
 	
 	//console.log(a.length);
 	//console.log(b.length);
 	
-	if (ArrayInfoJugador[0].Admin==true || ArrayInfoJugador[0].JugadorFull.substring(0, ArrayInfoJugador[0].JugadorFull.indexOf('-',1)+0)==   Residual.substring(0, Residual.length-2)  )
+	if (PWMIBRSDCJ[0].UHYGLMAUNK==true || PWMIBRSDCJ[0].OBTBPOULAV.substring(0, PWMIBRSDCJ[0].OBTBPOULAV.indexOf('-',1)+0)==   Residual.substring(0, Residual.length-2)  )
 	{
 		//console.log("MUESTRA");
 		//document.getElementById("btnEliminarSala").style.visibility = "none";
@@ -1612,16 +1612,16 @@ MostrarPidePasswordSala=function(NombreSala,Residual)
 	
 }
 
-CancelarAmigos=function()
+NFARLTEOCI=function()
 {
-	CerrarTablaSalas();	
-	CerrarClasificacion();
-	CerrarCrearSala();
-	CerrarPidePasswordSala();
-	OcultaPantallaLogin();
-	//OcultarFacebook();
+	ETTNDBLRCS();	
+	BHJGQASXXS();
+	BHWJGHJGWI();
+	RHNUCWDYDF();
+	YHNMANDWLT();
+	//NGHJWGJHWG();
 }
-CerrarPidePasswordSala=function(idSalaAmigo)
+RHNUCWDYDF=function(idSalaAmigo)
 {
 		
 	var d=document.getElementById('DivPasswordSala');
@@ -1630,84 +1630,84 @@ CerrarPidePasswordSala=function(idSalaAmigo)
 	
 }
 
-ValidaPasswordSala=function(Sala,Pass)
+RPEOWUSPJU=function(Sala,Pass)
 {
-	socket.emit('enviar validar password', Sala, Pass) ;
-	CerrarPidePasswordSala();
+	socket.emit('FNPXATLNEM', Sala, Pass) ;
+	RHNUCWDYDF();
 }
 
 CrearSala=function(Sala,Pass)
 {
-	var JugadorCreador;
-	var JugadorFull;
+	var XUWGVBCQPJ;
+	var OBTBPOULAV;
 	
 	if (Sala!="")
 	{
-		if (ModoMultijugador==true)
+		if (EGPDVIEJEL==true)
 		{
-			if (ArrayInfoJugador.length>0)
+			if (PWMIBRSDCJ.length>0)
 			{
-				JugadorCreador=ArrayInfoJugador[0].Nombre;
-				JugadorFull=ArrayInfoJugador[0].ProveedorID + '-'+ ArrayInfoJugador[0].RedSocial;
+				XUWGVBCQPJ=PWMIBRSDCJ[0].WWKVHIMWYD;
+				OBTBPOULAV=PWMIBRSDCJ[0].FFRVOEAXTF + '-'+ PWMIBRSDCJ[0].BDYYDTFQAO;
 			}
 			else
 			{
-				JugadorCreador="";
-				JugadorFull="";
+				XUWGVBCQPJ="";
+				OBTBPOULAV="";
 			}
 			
-			socket.emit('enviar sala nueva', Sala.substring(0,30), Pass.substring(0,30), JugadorCreador,JugadorFull) ;
-			socket.emit('enviar peticion sala amigos') ;
+			socket.emit('JYSMJTIHBJ', Sala.substring(0,30), Pass.substring(0,30), XUWGVBCQPJ,OBTBPOULAV) ;
+			socket.emit('ETJNHPEGJR') ;
 		
 		}
 	}
-	CerrarCrearSala();
+	BHWJGHJGWI();
 }
-ConfiguraPantallaInicio=function()
+MITSNADNQS=function()
 {
 	
-	BotonMonoJugador.visible=true;
-	BotonMultiJugador.visible=true;
+	UEHYPTREIH.visible=true;
+	IBECDOLWLN.visible=true;
 	BotonContacta.visible=true;
-	TextCuentaMundo.visible=true;
+	JKLJKLRIRI.visible=true;
 	MostrarFacebook();
-	BotonClasificacion.visible=true; //1.0.8
+	POEICHMHDL.visible=true; //1.0.8
 }
 
-ConfiguraPantallaMultijugador=function()
+YBWXJFDOAW=function()
 {
 	
-	BotonAleatorio.visible=true;
-	BotonAmigos.visible=true;
-	TextCuentaMundo.visible=true;
+	EFKTQSXAMA.visible=true;
+	LNJDKEVPQE.visible=true;
+	JKLJKLRIRI.visible=true;
 	MostrarFacebook();
 	
-	//BotonSalir.visible=true;
+	//CUUKQAGFEB.visible=true;
 
-	xAleatorio= game_objeto.world.centerX -120;
-	yAleatorio=game_objeto.world.height-170;
+	APUVCXAYVN= YMHIHSNADE.world.centerX -120;
+	PHMUHFKHBO=YMHIHSNADE.world.height-170;
 
-	xAmigos= game_objeto.world.centerX +120; 
-	yAmigos= game_objeto.world.height-170;
+	KYLVRIAAWF= YMHIHSNADE.world.centerX +120; 
+	VLHOFXLPJS= YMHIHSNADE.world.height-170;
 
 
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
-		//BotonAleatorio.width=BotonAleatorio.width*1.4;
-		//BotonAleatorio.height=BotonAleatorio.height*1.4;
-		//yAleatorio=BotonAleatorio.y-90;
-		//xAleatorio=BotonAleatorio.x-45;
-		yAleatorio=yAmigos-90;
+		//EFKTQSXAMA.width=EFKTQSXAMA.width*1.4;
+		//EFKTQSXAMA.height=EFKTQSXAMA.height*1.4;
+		//PHMUHFKHBO=EFKTQSXAMA.y-90;
+		//APUVCXAYVN=EFKTQSXAMA.x-45;
+		PHMUHFKHBO=VLHOFXLPJS-90;
 		
 	}
 	
-	if (cuatrotres==true)
+	if (JHJEWHFWNL==true)
 	{
-		//BotonAmigos.width=BotonAmigos.width*1.4;
-		//BotonAmigos.height=BotonAmigos.height*1.4;
-		//yAmigos=BotonAmigos.y-90;
-		yAmigos=BotonAmigos.x+45;
-		xAmigos=xAmigos+45;
+		//LNJDKEVPQE.width=LNJDKEVPQE.width*1.4;
+		//LNJDKEVPQE.height=LNJDKEVPQE.height*1.4;
+		//VLHOFXLPJS=LNJDKEVPQE.y-90;
+		VLHOFXLPJS=LNJDKEVPQE.x+45;
+		KYLVRIAAWF=KYLVRIAAWF+45;
 	}	
 
 
@@ -1715,18 +1715,18 @@ ConfiguraPantallaMultijugador=function()
 
 
 	
-	var twAmigo=game_objeto.add.tween(BotonAmigos).to( { x: xAmigos }, 400, EfectoTween2);
-	twAmigo.start();
+	var TXBFLEOYKI=YMHIHSNADE.add.tween(LNJDKEVPQE).to( { x: KYLVRIAAWF }, 400, BSXWFYLCEW);
+	TXBFLEOYKI.start();
 
-	var twAleatorio=game_objeto.add.tween(BotonAleatorio).to( { y: yAleatorio  }, 400, EfectoTween1);
-	twAleatorio.start();
+	var RDJFKUULTX=YMHIHSNADE.add.tween(EFKTQSXAMA).to( { y: PHMUHFKHBO  }, 400, KYFMRVNHIQ);
+	RDJFKUULTX.start();
 	
 
 	
 }
 
 
-LoginCordova=function(Tipo)
+RSHJSKMBRP=function(Tipo)
 {
 	
 	
@@ -1741,25 +1741,25 @@ LoginCordova=function(Tipo)
 		switch (Tipo){	
 		
 			case 1 :		
-			ref = window.open(Maquina+'/auth/google', '_self');
+			ref = window.open(JHGHJAGCMC+'/auth/google', '_self');
 					
 			break;		
 			
 			case 2 :		
-			ref = window.open(Maquina+'/auth/facebook', '_self');
+			ref = window.open(JHGHJAGCMC+'/auth/facebook', '_self');
 			break;	
 			
 			case 3 :		
-			ref = window.open(Maquina+'/auth/Instagram', '_self');
+			ref = window.open(JHGHJAGCMC+'/auth/Instagram', '_self');
 			break;	
 			
 			case 4 :		
-			ref = window.open(Maquina+'/auth/Twitter', '_self');
+			ref = window.open(JHGHJAGCMC+'/auth/Twitter', '_self');
 			break;	
 			
 			case 5 :		
 			TrucoNavegador=false;
-			ref = window.open(Maquina+'/contacto');
+			ref = window.open(JHGHJAGCMC+'/contacto');
 			break;				
 		}
 	}
@@ -1768,7 +1768,7 @@ LoginCordova=function(Tipo)
 		switch (Tipo){	
 		
 			case 1 :		
-			//ref = cordova.InAppBrowser.open(Maquina+'/auth/google', '_blank', 'location=no');
+			//ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/google', '_blank', 'location=no');
 				TrucoNavegador=false;
 			window.plugins.googleplus.login(
 				{
@@ -1777,11 +1777,11 @@ LoginCordova=function(Tipo)
 				  'offline': true, // optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
 				},
 				function (obj) {
-				CierraPantallaLogin();	
-				//ConfiguraPantallaInicio();
+				MCFSLYOMHE();	
+				//MITSNADNQS();
 				ObjetoG=obj;				
-				InicioMultiJugador();
-				//socket.emit('enviar_peticion_modo_multijugador', Habitacion,socket.id, false,Version,ObjetoG) ;
+				JVEHDHOEEM();
+				//socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
 				  //alert(JSON.stringify(obj)); // do something useful instead of alerting
 				  //alert(obj);
 				  /*alert(obj.email);
@@ -1801,26 +1801,26 @@ LoginCordova=function(Tipo)
 				},
 				function (msg) {
 				  alert('error: ' + msg);
-				  CierraPantallaLogin();
+				  MCFSLYOMHE();
 				}
 			);
 			break;		
 			
 			case 2 :		
-			ref = cordova.InAppBrowser.open(Maquina+'/auth/facebook', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
 			break;	
 			
 			case 3 :		
-			ref = cordova.InAppBrowser.open(Maquina+'/auth/Instagram', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/Instagram', '_blank', 'location=no');
 			break;	
 			
 			case 4 :		
-			ref = cordova.InAppBrowser.open(Maquina+'/auth/Twitter', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/Twitter', '_blank', 'location=no');
 			break;	
 			
 			case 5 :		
 			TrucoNavegador=false;
-			ref = cordova.InAppBrowser.open(Maquina+'/contacto', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/contacto', '_blank', 'location=no');
 			break;
 		}
 		
@@ -1830,21 +1830,21 @@ LoginCordova=function(Tipo)
 			var loc = e.url;
 			//when url is changed check if the url contains your specific callbackURL
 			//console.log("LOC "+loc);
-			//if (loc.search('http://xn--guiotepro-n6a.es/?callbackweb=g')>=0) {
+			//if (loc.search('http://xn--guiotepro-n6a.es/?HKCERVLWFB=g')>=0) {
 			//alert("a");	
-			if (loc.search('callbackweb')>=0) {	
+			if (loc.search('HKCERVLWFB')>=0) {	
 				//alert("b");	
 				//SalirDesdeLogueo();	
 				//alert("c");
-				//InicioMultiJugador();
-				//ConfiguraPantallaMultijugador();
+				//JVEHDHOEEM();
+				//YBWXJFDOAW();
 				//alert("d");
-				//CierraPantallaLogin();
-				//InicioMultiJugador(false);
-				SalirConfirmado();
+				//MCFSLYOMHE();
+				//JVEHDHOEEM(false);
+				FHKOYDXPCL();
 				ref.close();
-				//InicioMultiJugador();
-				//ConfiguraPantallaMultijugador();
+				//JVEHDHOEEM();
+				//YBWXJFDOAW();
 			}
 			});
 		}
@@ -1858,31 +1858,31 @@ LoginCordova=function(Tipo)
 	
 }	
 	
-DetenerTiempo=function()
+JTQKCQEDPC=function()
 {
 	// window.open("http://xn--guiotepro-n6a.es/auth/google", '_system', 'location=yes');
-	timerturno.stop();
-	log(true,"Es el Turno de "+vTurno+". Yo soy "+SoyElJugador);
+	HUUCUYFBLW.stop();
+	log(true,"Es el Turno de "+DVNRTQIWGL+". Yo soy "+TFSXFTYVGQ);
 
 
 }
 
-MuestraOcultaChat=function()
+TRKOSJTLDX=function()
 {
 	var d;
-	if (MuestraChat==false)
+	if (EHBNOAKBDQ==false)
 	{
 		d=document.getElementById('chat');
 		d.style.display = 'block';
 		/*d.style.zIndex=100;
 		
 		d.style.position = "absolute";
-		d.style.left = game_objeto.world.x+'px';
+		d.style.left = YMHIHSNADE.world.x+'px';
 		d.style.top = 10+'px';
 		d.style.width =80+'px';*/
 		
 		
-		MuestraChat=true;
+		EHBNOAKBDQ=true;
 	}
 	else
 	{
@@ -1892,16 +1892,16 @@ MuestraOcultaChat=function()
 
 		
 		
-		MuestraChat=false;
+		EHBNOAKBDQ=false;
 	}
 	
 }
 
 
-MuestraOcultaLogin=function()
+QDPPTWILGS=function()
 {
 	var d;
-	if (MuestraChat==false)
+	if (EHBNOAKBDQ==false)
 	{
 		d=document.getElementById('Login');
 		d.style.display = 'block';
@@ -1912,20 +1912,20 @@ MuestraOcultaLogin=function()
 		d.style.top = 30+'px';*/
 		
 		
-		MuestraLogin=true;
+		KOHYQKLAJO=true;
 	}
 	else
 	{
 		var d=document.getElementById('Login');
 		d.style.display = 'none';
 		//d.style.zIndex=-1;
-		MuestraLogin=false;
+		KOHYQKLAJO=false;
 	}
 	
 }
 
 
-MuestraPantallaLogin=function()
+WFWTECIQSP=function()
 {
 	var d;
 	
@@ -1941,286 +1941,286 @@ MuestraPantallaLogin=function()
 
 
 
-TextoBocadillo=function(JugadorQueMueve,Texto,EsCante,puntos, desdeServer)
+XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,NBWHWUQAAA,OMDVKATFLQ, desdeServer)
 {
-	var LongitudTexto;
-	var posXBocadillo;
-	var posYBocadillo;
+	var HUJOOKLGRK;
+	var GCTYDSCWXE;
+	var YSMHGCUJFD;
 	var text;
-	var CorrectorX;
-	var CorrectorY;
-	var TextoSalida
-	var twText;
-	var twText2;
-	var Bocadillo;
-	var posXBocadilloTexto;
-	var posYBocadilloTexto;
-	var ImagenBocadillo;
+	var TDSYMKWUOC;
+	var LQCVWFLTAG;
+	var IQISGTBLTU
+	var DQKYYAPEEN;
+	var UMEOIIEQQD;
+	var FTBVKLREAE;
+	var IFJRJXGGFY;
+	var CWWHRMDADQ;
+	var HOGPTRLBYH;
 	var i;
-	var ChatDeshabilitado=false;
-	var Letra=DevuelveUbicacionCarta(JugadorQueMueve);
-	//console.log("Jugador que habla "+JugadorQueMueve+ " "+Letra)
-	var ContinuaJugando=true;
+	var XLAXKBPPMF=false;
+	var STLEOJDWSU=HHOPUSIABJ(UHTPGPRUJA);
+	//console.log("SSUNXNEEHN que habla "+UHTPGPRUJA+ " "+STLEOJDWSU)
+	var OTGBWFDOND=true;
 	//////////////
-//EsCante=true;	
+//NBWHWUQAAA=true;	
 
 
 
-	if (JugadorQueMueve==undefined)
+	if (UHTPGPRUJA==undefined)
 	{
 		return false;
 	}
 
-	if (EsCante==true)
+	if (NBWHWUQAAA==true)
 	{
 		
 
 		
 		
 		//console.log("VOY A CANTAR");
-		MuestraDorsoCante(JugadorQueMueve,Texto,puntos);
-		if (EstaCantado(Texto)==false || desdeServer==false) // desdeServer: Tema de que canta el que tiene el control dos veces..
+		HUCLBWTDFV(UHTPGPRUJA,RPHWVBBGIM,OMDVKATFLQ);
+		if (SRFFTPLVMJ(RPHWVBBGIM)==false || desdeServer==false) // desdeServer: Tema de que canta el que tiene el control dos veces..
 		{	
-			RegistrarCantes.push(Texto)
+			FOQUJVEYFC.push(RPHWVBBGIM)
 			
 			//console.log("Va a cantarrrrr")
 			
 			
 			
-			if(SoyElJugador==1) {
-				if(JugadorQueMueve==2){
-					if (puntos==20)
+			if(TFSXFTYVGQ==1) {
+				if(UHTPGPRUJA==2){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="El jugador de su derecha canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("R",20);
+						//NJWWPODLWD="El jugador de su derecha canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("R",20);
 					}
 					else
 					{
-						//DevolverTexto="El jugador de su derecha canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("R",40);
+						//NJWWPODLWD="El jugador de su derecha canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("R",40);
 					}
 				}
-				if(JugadorQueMueve==3){
-					if (puntos==20)
+				if(UHTPGPRUJA==3){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="Su compañero canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("N",20);
+						//NJWWPODLWD="Su compañero canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("N",20);
 					}
 					else
 					{
-						//DevolverTexto="Su compa�ero canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("N",40);
+						//NJWWPODLWD="Su compa�ero canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("N",40);
 					}
 				}		
-				if(JugadorQueMueve==4){
-					if (puntos==20)
+				if(UHTPGPRUJA==4){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="El jugador de su izquierda canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("R",20);
+						//NJWWPODLWD="El jugador de su izquierda canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("R",20);
 					}
 					else
 					{
-						//DevolverTexto="El jugador de su izquierda canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("R",40);
+						//NJWWPODLWD="El jugador de su izquierda canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("R",40);
 					}
 				}	
 
-				if(JugadorQueMueve==1){
-					if (puntos==20)
+				if(UHTPGPRUJA==1){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("N",20);
+						//NJWWPODLWD="20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("N",20);
 					}
 					else
 					{
-						//DevolverTexto="Las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("N",40);
+						//NJWWPODLWD="Las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("N",40);
 					}
 				}				
 			}
 
-			if(SoyElJugador==2) {
-				if(JugadorQueMueve==3){
-					if (puntos==20)
+			if(TFSXFTYVGQ==2) {
+				if(UHTPGPRUJA==3){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="El jugador de su derecha canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("R",20);
+						//NJWWPODLWD="El jugador de su derecha canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("R",20);
 					}
 					else
 					{
-						//DevolverTexto="El jugador de su derecha canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("R",40);
+						//NJWWPODLWD="El jugador de su derecha canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("R",40);
 					}
 				}
-				if(JugadorQueMueve==4){
-					if (puntos==20)
+				if(UHTPGPRUJA==4){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="Su compa�ero canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("N",20);
+						//NJWWPODLWD="Su compa�ero canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("N",20);
 					}
 					else
 					{
-						//DevolverTexto="Su compa�ero canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("N",40);
+						//NJWWPODLWD="Su compa�ero canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("N",40);
 					}
 				}		
-				if(JugadorQueMueve==1){
-					if (puntos==20)
+				if(UHTPGPRUJA==1){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="El jugador de su izquierda canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("R",20);
+						//NJWWPODLWD="El jugador de su izquierda canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("R",20);
 					}
 					else
 					{
-						//DevolverTexto="El jugador de su izquierda canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("R",40);
+						//NJWWPODLWD="El jugador de su izquierda canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("R",40);
 					}
 				}	
 
-				if(JugadorQueMueve==2){
-					if (puntos==20)
+				if(UHTPGPRUJA==2){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("N",20);
+						//NJWWPODLWD="20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("N",20);
 					}
 					else
 					{
-						//DevolverTexto="Las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("N",40);
+						//NJWWPODLWD="Las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("N",40);
 					}
 				}			
 			}
 			
-				if(SoyElJugador==3) {
-				if(JugadorQueMueve==4){
-					if (puntos==20)
+				if(TFSXFTYVGQ==3) {
+				if(UHTPGPRUJA==4){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="El jugador de su derecha canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("R",20);
+						//NJWWPODLWD="El jugador de su derecha canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("R",20);
 					}
 					else
 					{
-						//DevolverTexto="El jugador de su derecha canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("R",40);
+						//NJWWPODLWD="El jugador de su derecha canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("R",40);
 					}
 				}
-				if(JugadorQueMueve==1){
-					if (puntos==20)
+				if(UHTPGPRUJA==1){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="Su compa�ero canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("N",20);
+						//NJWWPODLWD="Su compa�ero canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("N",20);
 					}
 					else
 					{
-						//DevolverTexto="Su compa�ero canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("N",40);
+						//NJWWPODLWD="Su compa�ero canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("N",40);
 					}
 				}		
-				if(JugadorQueMueve==2){
-					if (puntos==20)
+				if(UHTPGPRUJA==2){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="El jugador de su izquierda canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("R",20);
+						//NJWWPODLWD="El jugador de su izquierda canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("R",20);
 					}
 					else
 					{
-						//DevolverTexto="El jugador de su izquierda canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("R",40);
+						//NJWWPODLWD="El jugador de su izquierda canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("R",40);
 					}
 				}	
-				if(JugadorQueMueve==3){
-					if (puntos==20)
+				if(UHTPGPRUJA==3){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("N",20);
+						//NJWWPODLWD="20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("N",20);
 					}
 					else
 					{
-						//DevolverTexto="Las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("N",40);
+						//NJWWPODLWD="Las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("N",40);
 					}
 				}			
 			}
 			
-			if(SoyElJugador==4) {
-				if(JugadorQueMueve==1){
-					if (puntos==20)
+			if(TFSXFTYVGQ==4) {
+				if(UHTPGPRUJA==1){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="El jugador de su derecha canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("R",20);
+						//NJWWPODLWD="El jugador de su derecha canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("R",20);
 					}
 					else
 					{
-						//DevolverTexto="El jugador de su derecha canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("R",40);
+						//NJWWPODLWD="El jugador de su derecha canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("R",40);
 					}
 				}
-				if(JugadorQueMueve==2){
-					if (puntos==20)
+				if(UHTPGPRUJA==2){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="Su compa�ero canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("N",20);
+						//NJWWPODLWD="Su compa�ero canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("N",20);
 					}
 					else
 					{
-						//DevolverTexto="Su compa�ero canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("N",40);
+						//NJWWPODLWD="Su compa�ero canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("N",40);
 					}
 				}		
-				if(JugadorQueMueve==3){
-					if (puntos==20)
+				if(UHTPGPRUJA==3){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="El jugador de su izquierda canta 20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("R",20);
+						//NJWWPODLWD="El jugador de su izquierda canta 20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("R",20);
 					}
 					else
 					{
-						//DevolverTexto="El jugador de su izquierda canta las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("R",40);
+						//NJWWPODLWD="El jugador de su izquierda canta las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("R",40);
 					}
 				}	
-				if(JugadorQueMueve==4){
-					if (puntos==20)
+				if(UHTPGPRUJA==4){
+					if (OMDVKATFLQ==20)
 					{
-						//DevolverTexto="20 en "+ texto;
-						Texto="20 en "+Texto;
-						ContinuaJugando=ActualizaMarcador("N",20);
+						//NJWWPODLWD="20 en "+ AWCCMSCOPO;
+						RPHWVBBGIM="20 en "+RPHWVBBGIM;
+						OTGBWFDOND=LQJEJOOAPH("N",20);
 					}
 					else
 					{
-						//DevolverTexto="Las 40";
-						Texto="Las 40";
-						ContinuaJugando=ActualizaMarcador("N",40);
+						//NJWWPODLWD="Las 40";
+						RPHWVBBGIM="Las 40";
+						OTGBWFDOND=LQJEJOOAPH("N",40);
 					}
 				}			
 			}
@@ -2230,43 +2230,43 @@ TextoBocadillo=function(JugadorQueMueve,Texto,EsCante,puntos, desdeServer)
 	
 	//////////////
 	
-	//if (EsCante==false || (EsCante==true && ContinuaJugando==true))
-	if ( (EsCante==false  ) || EsCante==true )
+	//if (NBWHWUQAAA==false || (NBWHWUQAAA==true && OTGBWFDOND==true))
+	if ( (NBWHWUQAAA==false  ) || NBWHWUQAAA==true )
 	{
-		log(false,Texto);
+		log(false,RPHWVBBGIM);
 		
-		LongitudTexto=(Texto.length*27)/2
+		HUJOOKLGRK=(RPHWVBBGIM.length*27)/2
 		
-		ImagenBocadillo='20_espadas'; //1.0.8 Creo que es el error de algunos dispositivos
-		var BocadilloTemp=game_objeto.add.sprite(-300,-300, ImagenBocadillo);
+		HOGPTRLBYH='20_espadas'; //1.0.8 Creo que es el error de algunos dispositivos
+		var BocadilloTemp=YMHIHSNADE.add.sprite(-300,-300, HOGPTRLBYH);
 		var AltoBocadilloEstallido=BocadilloTemp.height;
 		var AnchoBocadilloEstallido=BocadilloTemp.width;
 		log(false,"ancho   ss "+BocadilloTemp.width);
-		if (Letra=="D")
+		if (STLEOJDWSU=="D")
 		{
-			if (EsCante==false)
+			if (NBWHWUQAAA==false)
 			{
-				posXBocadillo=devuelveX("D",0)-AnchoCartaEscalado+150;
-				posYBocadillo=devuelveY("D",0)-AltoCartaEscalado*1.2;
-				posXBocadilloTexto=posXBocadillo+20;
-				posYBocadilloTexto=posYBocadillo+20;			
+				GCTYDSCWXE=WIEVLYANFM("D",0)-SXSHBRJFIR+150;
+				YSMHGCUJFD=FIGQBSJQGA("D",0)-PPLOSJIWHO*1.2;
+				IFJRJXGGFY=GCTYDSCWXE+20;
+				CWWHRMDADQ=YSMHGCUJFD+20;			
 			}
 			else
 			{
 				
 				
-				posXBocadillo=game_objeto.world.centerX; //(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+(AnchoCartaEscalado*1.5);
-				posYBocadillo=game_objeto.world.height-(AnchoCartaEscalado*2);
+				GCTYDSCWXE=YMHIHSNADE.world.centerX; //(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+(SXSHBRJFIR*1.5);
+				YSMHGCUJFD=YMHIHSNADE.world.height-(SXSHBRJFIR*2);
 				
-				if (twBocadillo.isRunning==true)
+				if (UTIDOKPNXQ.isRunning==true)
 				{
-					posXBocadillo=posXBocadillo+200;
+					GCTYDSCWXE=GCTYDSCWXE+200;
 					log(false,"CORRIENDO");
 				}
 
 				
-				posXBocadilloTexto=posXBocadillo+(AnchoBocadilloEstallido*2.7);
-				posYBocadilloTexto=posYBocadillo+(AltoBocadilloEstallido*1.8);	
+				IFJRJXGGFY=GCTYDSCWXE+(AnchoBocadilloEstallido*2.7);
+				CWWHRMDADQ=YSMHGCUJFD+(AltoBocadilloEstallido*1.8);	
 				
 
 				
@@ -2274,123 +2274,123 @@ TextoBocadillo=function(JugadorQueMueve,Texto,EsCante,puntos, desdeServer)
 				
 			}
 
-			ImagenBocadillo= 'BocadilloD';
+			HOGPTRLBYH= 'SOPWHPQINK';
 
 		}	
-		if (Letra=="U")
+		if (STLEOJDWSU=="U")
 		{
-			if (EsCante==false)
+			if (NBWHWUQAAA==false)
 			{
 				
-				posXBocadillo=devuelveX("U",0);
-				posYBocadillo=devuelveY("U",0)+(AltoCarta/2);			
-				posXBocadilloTexto=posXBocadillo+20;
-				posYBocadilloTexto=posYBocadillo+45;
+				GCTYDSCWXE=WIEVLYANFM("U",0);
+				YSMHGCUJFD=FIGQBSJQGA("U",0)+(MKSLYEWQQS/2);			
+				IFJRJXGGFY=GCTYDSCWXE+20;
+				CWWHRMDADQ=YSMHGCUJFD+45;
 			}	
 			else
 			{
 							
-				posXBocadillo=game_objeto.world.centerX; //(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+(AnchoCartaEscalado*1.5);
-				posYBocadillo=(AltoCarta)*1.5;	
+				GCTYDSCWXE=YMHIHSNADE.world.centerX; //(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+(SXSHBRJFIR*1.5);
+				YSMHGCUJFD=(MKSLYEWQQS)*1.5;	
 
-				if (twBocadillo.isRunning==true)
+				if (UTIDOKPNXQ.isRunning==true)
 				{
-					posXBocadillo=posXBocadillo+200;
+					GCTYDSCWXE=GCTYDSCWXE+200;
 				}
 				
-				posXBocadilloTexto=posXBocadillo+(AnchoBocadilloEstallido*2.7);
-				posYBocadilloTexto=posYBocadillo+(AltoBocadilloEstallido*1.8);	
+				IFJRJXGGFY=GCTYDSCWXE+(AnchoBocadilloEstallido*2.7);
+				CWWHRMDADQ=YSMHGCUJFD+(AltoBocadilloEstallido*1.8);	
 				
 			}
 
-			ImagenBocadillo= 'BocadilloU';
+			HOGPTRLBYH= 'LFDEDJWAOF';
 
 		}
-		if (Letra=="L")
+		if (STLEOJDWSU=="L")
 		{
-			if (EsCante==false)
+			if (NBWHWUQAAA==false)
 			{
-				posXBocadillo=devuelveX("L",0)+(AnchoCarta/2);
-				posYBocadillo=devuelveY("L",0)-AnchoCarta+100;		
-				posXBocadilloTexto=posXBocadillo+20;
-				posYBocadilloTexto=posYBocadillo+20;			
+				GCTYDSCWXE=WIEVLYANFM("L",0)+(COIVBWRMCC/2);
+				YSMHGCUJFD=FIGQBSJQGA("L",0)-COIVBWRMCC+100;		
+				IFJRJXGGFY=GCTYDSCWXE+20;
+				CWWHRMDADQ=YSMHGCUJFD+20;			
 			}
 			else
 			{
-				posXBocadillo=(AnchoCarta*2.5);
-				//posYBocadillo=game_objeto.world.height/2-AnchoCarta;
-				posYBocadillo=game_objeto.world.centerY;
+				GCTYDSCWXE=(COIVBWRMCC*2.5);
+				//YSMHGCUJFD=YMHIHSNADE.world.height/2-COIVBWRMCC;
+				YSMHGCUJFD=YMHIHSNADE.world.centerY;
 				
-				if (twBocadillo.isRunning==true)
+				if (UTIDOKPNXQ.isRunning==true)
 				{
-					posYBocadillo=posYBocadillo+100;
+					YSMHGCUJFD=YSMHGCUJFD+100;
 				}
 				
-				posXBocadilloTexto=posXBocadillo+(AnchoBocadilloEstallido*2.7);
-				posYBocadilloTexto=posYBocadillo+(AltoBocadilloEstallido*1.8);	
+				IFJRJXGGFY=GCTYDSCWXE+(AnchoBocadilloEstallido*2.7);
+				CWWHRMDADQ=YSMHGCUJFD+(AltoBocadilloEstallido*1.8);	
 			}
 
-			ImagenBocadillo= 'BocadilloL';
+			HOGPTRLBYH= 'PASYDHNYGP';
 		}
-		if (Letra=="R")
+		if (STLEOJDWSU=="R")
 		{
 			
-			if (EsCante==false)
+			if (NBWHWUQAAA==false)
 			{
-				posXBocadillo=devuelveX("R",0)-(AltoCarta*2.3);
-				posYBocadillo=devuelveY("R",0)-100;		
-				posXBocadilloTexto=posXBocadillo+20;
-				posYBocadilloTexto=posYBocadillo+45;
+				GCTYDSCWXE=WIEVLYANFM("R",0)-(MKSLYEWQQS*2.3);
+				YSMHGCUJFD=FIGQBSJQGA("R",0)-100;		
+				IFJRJXGGFY=GCTYDSCWXE+20;
+				CWWHRMDADQ=YSMHGCUJFD+45;
 			}
 			else
 			{
-				posXBocadillo=game_objeto.world.width-(AnchoCarta*2.5);
-				//posYBocadillo=game_objeto.world.height/2-AnchoCarta;	
-				posYBocadillo=game_objeto.world.centerY;
+				GCTYDSCWXE=YMHIHSNADE.world.width-(COIVBWRMCC*2.5);
+				//YSMHGCUJFD=YMHIHSNADE.world.height/2-COIVBWRMCC;	
+				YSMHGCUJFD=YMHIHSNADE.world.centerY;
 				
-				if (twBocadillo.isRunning==true)
+				if (UTIDOKPNXQ.isRunning==true)
 				{
-					posYBocadillo=posYBocadillo+100;
+					YSMHGCUJFD=YSMHGCUJFD+100;
 				}
-				posXBocadilloTexto=posXBocadillo+(AnchoBocadilloEstallido*2.7);
-				posYBocadilloTexto=posYBocadillo+(AltoBocadilloEstallido*1.8);					
+				IFJRJXGGFY=GCTYDSCWXE+(AnchoBocadilloEstallido*2.7);
+				CWWHRMDADQ=YSMHGCUJFD+(AltoBocadilloEstallido*1.8);					
 			}
-			ImagenBocadillo= 'BocadilloR';
+			HOGPTRLBYH= 'RTHPPBTCQJ';
 		}	
 		
-		if (EsCante==true){
-			if (puntos==20)
+		if (NBWHWUQAAA==true){
+			if (OMDVKATFLQ==20)
 			{
-				ImagenBocadillo='Estallido';
-				if (Texto.indexOf('oros')>0)
+				HOGPTRLBYH='Estallido';
+				if (RPHWVBBGIM.indexOf('oros')>0)
 				{
-					ImagenBocadillo='20_oros';
-					ReproducirSonido("_Oros");
+					HOGPTRLBYH='20_oros';
+					EABXADHEVT("BNSLLGGORP");
 				}
 				
-				if (Texto.indexOf('copas')>0)
+				if (RPHWVBBGIM.indexOf('copas')>0)
 				{
-					ImagenBocadillo='20_copas';
-					ReproducirSonido("_Copas");
+					HOGPTRLBYH='20_copas';
+					EABXADHEVT("TKYUFYJRRA");
 				}
 				
-				if (Texto.indexOf('espadas')>0)
+				if (RPHWVBBGIM.indexOf('espadas')>0)
 				{
-					ImagenBocadillo='20_espadas';
-					ReproducirSonido("_Espadas");
+					HOGPTRLBYH='20_espadas';
+					EABXADHEVT("LFYAQLIDAI");
 				}
 				
-				if (Texto.indexOf('bastos')>0)
+				if (RPHWVBBGIM.indexOf('bastos')>0)
 				{
-					ImagenBocadillo='20_bastos';
-					ReproducirSonido("_Bastos");
+					HOGPTRLBYH='20_bastos';
+					EABXADHEVT("CEDKIIHEHO");
 				}
 			}
 			else
 			{
-				//ImagenBocadillo='Estallido_40';
-				ImagenBocadillo='Las_40';
-				ReproducirSonido("_Las40");
+				//HOGPTRLBYH='Estallido_40';
+				HOGPTRLBYH='Las_40';
+				EABXADHEVT("CPBEWFVQIJ");
 			}
 			
 			//1.0.8
@@ -2399,19 +2399,19 @@ TextoBocadillo=function(JugadorQueMueve,Texto,EsCante,puntos, desdeServer)
 			}
 			
 			
-			log(false,"posicion Bocadillo: "+posXBocadillo);
+			log(false,"NPYBJSHIFL FTBVKLREAE: "+GCTYDSCWXE);
 			
 			
 			
-			//var bmd = game_objeto.add.bitmapData(game_objeto.world.width-100,game_objeto.world.height-100);
-			//var bmd = game_objeto.make.bitmapData(300,300);
+			//var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width-100,YMHIHSNADE.world.height-100);
+			//var bmd = YMHIHSNADE.make.bitmapData(300,300);
 			 
 
 			// draw to the canvas context like normal
 		
 			//1.0.8
 			/*bmd.ctx.beginPath();
-			bmd.ctx.rect(0,0,game_objeto.world.width,game_objeto.world.height);
+			bmd.ctx.rect(0,0,YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 			bmd.ctx.fillStyle = '#000000';
 			bmd.ctx.fill();*/
 		
@@ -2420,42 +2420,42 @@ TextoBocadillo=function(JugadorQueMueve,Texto,EsCante,puntos, desdeServer)
 		
 		
 
-			//Bocadillo.bringToTop;
-			//var style = { font: "bold 17px Arial", wordWrap: true, wordWrapWidth: Bocadillo.width-10 };
+			//FTBVKLREAE.bringToTop;
+			//var style = { font: "bold 17px Arial", wordWrap: true, wordWrapWidth: FTBVKLREAE.width-10 };
 			
 			
 			
-			//text = game_objeto.add.text(posXBocadilloTexto, posYBocadilloTexto , Texto, style);
+			//text = YMHIHSNADE.add.text(IFJRJXGGFY, CWWHRMDADQ , RPHWVBBGIM, style);
 			//text.alpha=0;
 							
 			 //1.0.8
-			if (twFondoNegro.isRunning==false)
+			if (TTCLPDJAMD.isRunning==false)
 			{
-				var FondoNegro = game_objeto.add.sprite(0, 0, bmd);
-				FondoNegro.alpha=0.7;
+				var WTCIGMLJUY = YMHIHSNADE.add.sprite(0, 0, bmd);
+				WTCIGMLJUY.alpha=0.7;
 				
-				twFondoNegro = game_objeto.add.tween(FondoNegro).to( { alpha: 0.7 }, 1000, EfectoTween1, true);
-				twFondoNegro.onComplete.add(  function(){
-						twFondoNegro = game_objeto.add.tween(FondoNegro).to( { alpha: 0 }, 500, EfectoTween1, true,1000,0);
+				TTCLPDJAMD = YMHIHSNADE.add.tween(WTCIGMLJUY).to( { alpha: 0.7 }, 1000, KYFMRVNHIQ, true);
+				TTCLPDJAMD.onComplete.add(  function(){
+						TTCLPDJAMD = YMHIHSNADE.add.tween(WTCIGMLJUY).to( { alpha: 0 }, 500, KYFMRVNHIQ, true,1000,0);
 					}
 				);
 			}
 			
 			
-			Bocadillo=game_objeto.add.sprite(posXBocadillo,posYBocadillo, ImagenBocadillo);
-			Bocadillo.anchor.setTo(0.5, 0.5);
+			FTBVKLREAE=YMHIHSNADE.add.sprite(GCTYDSCWXE,YSMHGCUJFD, HOGPTRLBYH);
+			FTBVKLREAE.anchor.setTo(0.5, 0.5);
 
-			//Bocadillo.bringToTop;
-			twBocadillo = game_objeto.add.tween(Bocadillo).to( { alpha: 1 }, 1000, EfectoTween1, true);
-			twBocadillo.onComplete.add(  function(){
-					twBocadillo = game_objeto.add.tween(Bocadillo).to( { alpha: 0 }, 500, EfectoTween1, true,1000,0);
+			//FTBVKLREAE.bringToTop;
+			UTIDOKPNXQ = YMHIHSNADE.add.tween(FTBVKLREAE).to( { alpha: 1 }, 1000, KYFMRVNHIQ, true);
+			UTIDOKPNXQ.onComplete.add(  function(){
+					UTIDOKPNXQ = YMHIHSNADE.add.tween(FTBVKLREAE).to( { alpha: 0 }, 500, KYFMRVNHIQ, true,1000,0);
 				}
 			);
 			
 			
-			/*twText2 = game_objeto.add.tween(text).to( { alpha: 1 }, 1500, EfectoTween1, true);
-			twText2.onComplete.add(  function(){
-					twText2 = game_objeto.add.tween(text).to( { alpha: 0 }, 1500, EfectoTween1, true,2000,0);
+			/*UMEOIIEQQD = YMHIHSNADE.add.tween(text).to( { alpha: 1 }, 1500, KYFMRVNHIQ, true);
+			UMEOIIEQQD.onComplete.add(  function(){
+					UMEOIIEQQD = YMHIHSNADE.add.tween(text).to( { alpha: 0 }, 1500, KYFMRVNHIQ, true,2000,0);
 				}
 			
 			);*/
@@ -2466,36 +2466,36 @@ TextoBocadillo=function(JugadorQueMueve,Texto,EsCante,puntos, desdeServer)
 		else
 		{
 			
-			for (i=0; i<=ArrayChatDeshabilitado.length-1;i++)
+			for (i=0; i<=QLNEIQGEDF.length-1;i++)
 			{
-				if(ArrayChatDeshabilitado[i]==Letra)
+				if(QLNEIQGEDF[i]==STLEOJDWSU)
 				{
-					ChatDeshabilitado=true;
+					XLAXKBPPMF=true;
 				}
 				
 			}	
 			
-			if (ChatDeshabilitado==false)
+			if (XLAXKBPPMF==false)
 			{
-				Bocadillo=game_objeto.add.sprite(posXBocadillo,posYBocadillo, ImagenBocadillo);
+				FTBVKLREAE=YMHIHSNADE.add.sprite(GCTYDSCWXE,YSMHGCUJFD, HOGPTRLBYH);
 
-				var style = { font: "bold 21px Arial", wordWrap: true, wordWrapWidth: Bocadillo.width-14 };
+				var style = { font: "bold 21px Arial", wordWrap: true, wordWrapWidth: FTBVKLREAE.width-14 };
 				
 				
 				
-				text = game_objeto.add.text(posXBocadilloTexto, posYBocadilloTexto , Texto, style);
+				text = YMHIHSNADE.add.text(IFJRJXGGFY, CWWHRMDADQ , RPHWVBBGIM, style);
 				text.alpha=0;
 				
-				twText = game_objeto.add.tween(Bocadillo).to( { alpha: 1 }, 1500, EfectoTween1, true);
-				twText.onComplete.add(  function(){
-						twText = game_objeto.add.tween(Bocadillo).to( { alpha: 0 }, 1500, EfectoTween1, true,2000,0);
+				DQKYYAPEEN = YMHIHSNADE.add.tween(FTBVKLREAE).to( { alpha: 1 }, 1500, KYFMRVNHIQ, true);
+				DQKYYAPEEN.onComplete.add(  function(){
+						DQKYYAPEEN = YMHIHSNADE.add.tween(FTBVKLREAE).to( { alpha: 0 }, 1500, KYFMRVNHIQ, true,2000,0);
 					}
 				
 				);
 				
-				twText2 = game_objeto.add.tween(text).to( { alpha: 1 }, 1500, EfectoTween1, true);
-				twText2.onComplete.add(  function(){
-						twText2 = game_objeto.add.tween(text).to( { alpha: 0 }, 1500, EfectoTween1, true,2000,0);
+				UMEOIIEQQD = YMHIHSNADE.add.tween(text).to( { alpha: 1 }, 1500, KYFMRVNHIQ, true);
+				UMEOIIEQQD.onComplete.add(  function(){
+						UMEOIIEQQD = YMHIHSNADE.add.tween(text).to( { alpha: 0 }, 1500, KYFMRVNHIQ, true,2000,0);
 					}
 				
 				);
@@ -2506,23 +2506,23 @@ TextoBocadillo=function(JugadorQueMueve,Texto,EsCante,puntos, desdeServer)
 	
 }
 
-EnviarTextoBocadillo=function(SoyElJugador,Texto,EsCante)
+BYBYBFHBOX=function(TFSXFTYVGQ,RPHWVBBGIM,NBWHWUQAAA)
 {
-	Texto=Texto.substring(0,60)
+	RPHWVBBGIM=RPHWVBBGIM.substring(0,60)
 	inputField.resetText();
-	TextoBocadillo(SoyElJugador,Texto,EsCante)
-	if (ModoMultijugador==true && EsCante==false)
+	XIAPNYIGXV(TFSXFTYVGQ,RPHWVBBGIM,NBWHWUQAAA)
+	if (EGPDVIEJEL==true && NBWHWUQAAA==false)
 	{
-		socket.emit('enviar texto', Texto,Habitacion,SoyElJugador) ;
+		socket.emit('HXUNTIAKHM', RPHWVBBGIM,DFBVDPETGO,TFSXFTYVGQ) ;
 	}
 }
 
-ConectaServidor=function()
+XEMENNVXGV=function()
 {
 	
 	/*try
 	{
-		MuestraErrorDesconexion=false;
+		YTUGCWECJC=false;
 		socket.disconnect();
 		console.log("Desconecta el socket ");
 		console.log("Estado del socket "+socket.id);
@@ -2530,7 +2530,7 @@ ConectaServidor=function()
 	}
 	catch(err)
 	{
-		MuestraErrorDesconexion=true;
+		YTUGCWECJC=true;
 	}*/
 	//console.log("Entra a conectar");
 	try
@@ -2538,7 +2538,7 @@ ConectaServidor=function()
 		if (socket.id==undefined)
 		{
 			//console.log("Se mete a conectar");
-			socket = io.connect(Maquina,{reconnection: true,  reconnectionDelay: 3000,
+			socket = io.connect(JHGHJAGCMC,{reconnection: true,  reconnectionDelay: 3000,
 				reconnectionDelayMax : 4000,
 				reconnectionAttempts: 2,
 				'max reconnection attempts' : 2,
@@ -2551,13 +2551,13 @@ ConectaServidor=function()
 				//'force new connection': true
 			}
 			);
-			//AntiguoSocket
-			SocketInicializado=false;
+			//IJCSKNTKVH
+			BNCAIUQIJJ=false;
 			//console.log("inicia setevent proxima");
-			//if (SocketInicializado==false)
+			//if (BNCAIUQIJJ==false)
 			//{
 			//	console.log("inicia setevent");
-			//	SocketInicializado=true;
+			//	BNCAIUQIJJ=true;
 				setEventHandlers();				
 			//}
 			
@@ -2570,7 +2570,7 @@ ConectaServidor=function()
 			if (socket==undefined)
 			{
 			//console.log("Se mete a conectar 2");
-			socket = io.connect(Maquina,{reconnection: true,  reconnectionDelay: 3000,
+			socket = io.connect(JHGHJAGCMC,{reconnection: true,  reconnectionDelay: 3000,
 				reconnectionDelayMax : 4000,
 				reconnectionAttempts: 2,
 				'max reconnection attempts' : 2,
@@ -2584,10 +2584,10 @@ ConectaServidor=function()
 			}
 			);
 			
-			//SocketInicializado=false;
-			//if (SocketInicializado==false)
+			//BNCAIUQIJJ=false;
+			//if (BNCAIUQIJJ==false)
 			//{
-			//	SocketInicializado=true;
+			//	BNCAIUQIJJ=true;
 				setEventHandlers();				
 			//}
 				
@@ -2597,10 +2597,10 @@ ConectaServidor=function()
 			//console.log("Problema reconectando");
 		}
 	}
-	//console.log("Intento de reconexión "+IntentosReconexion);
+	//console.log("Intento de reconexión "+JKCANKPQBB);
 
 }
-InicioMultiJugador=function(NoConectar){
+JVEHDHOEEM=function(NoConectar){
 	
 	/*if ( lPermisoHabilitado==false )
 	{
@@ -2611,66 +2611,66 @@ InicioMultiJugador=function(NoConectar){
 	if (checkConnection()==true)
 	{	
 		//console.log("inicio si");
-		IntentosReconexion=0;
-		BotonSalir.x=xSalir+150;
-		BotonSalir.visible=true;
-		//SocketInicializado=false;
-		//console.log("Conecta: Llamada InicioMultiJugador")		
+		JKCANKPQBB=0;
+		CUUKQAGFEB.x=QETACVSHAR+150;
+		CUUKQAGFEB.visible=true;
+		//BNCAIUQIJJ=false;
+		//console.log("Conecta: Llamada JVEHDHOEEM")		
 	
 		/*if (socket.id!=undefined)
 		{
-			MuestraErrorDesconexion=false;
+			YTUGCWECJC=false;
 			try
 			{
 				socket.disconnect();
 				socket=null; 
-				Habitacion=Math.floor(Math.random());
+				DFBVDPETGO=Math.floor(Math.random());
 			}
 			catch(e){}
 		}*/
 		
 		if (NoConectar!=true) //Creaba sockets sin conocimiento
 		{
-			ConectaServidor();
+			XEMENNVXGV();
 		}
 		
-		vTurno=1; //1.0.4
-		BotonMonoJugador.visible=false;
-		BotonMultiJugador.visible=false;
-		//BotonClasificacion.visible=false; //1.0.8
+		DVNRTQIWGL=1; //1.0.4
+		UEHYPTREIH.visible=false;
+		IBECDOLWLN.visible=false;
+		//POEICHMHDL.visible=false; //1.0.8
 		BotonContacta.visible=false;
-		//BotonAleatorio.visible=false;
-		//BotonAmigos.visible=false;
+		//EFKTQSXAMA.visible=false;
+		//LNJDKEVPQE.visible=false;
 		
-		ModoMultijugador=true;
+		EGPDVIEJEL=true;
 		
-		LimpiarVariables();
-		LimpiarVariablesConexionNueva();
+		QSAXUCPASV();
+		WNEWPCNXPA();
 		log(true,"Entra en multijugador");
 		
 		
-		BotonCantar.loadTexture('Boton_cantar_off', 0);		
-		BotonSiete.loadTexture('Boton_cambiar_7_off', 0);	
+		IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);		
+		YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);	
 		//log(false,User);
 
 		//console.log("J");
-		TextCuentaMundo.visible=true;
-		//TextCuentaMundo.text="KK";
+		JKLJKLRIRI.visible=true;
+		//JKLJKLRIRI.text="KK";
 		
 		
 		if (socket.id!=undefined)
 		{
 			//console.log("Arriba");
-			socket.emit('enviar_peticion_modo_multijugador', Habitacion,socket.id, false,Version,ObjetoG) ;
-			//socket.emit('solicita_clasificacion',socket.id);
-			socket.emit('solicita conectados');
+			socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
+			//socket.emit('WHGHJCGWWQ',socket.id);
+			socket.emit('JKHWJKHIWF');
 		
 		}
 		/*else 1.0.8
 		{
 			//console.log("Abajo");
 			console.log("Conecta: Llamada InicioMultiJugador2 ");			
-			ConectaServidor();
+			XEMENNVXGV();
 			
 		}*/
 
@@ -2681,25 +2681,25 @@ InicioMultiJugador=function(NoConectar){
 	}
 }
 
-InicioPartidaOnline=function(Modalidad,Sala)
+KKJJKHAJHK=function(Modalidad,Sala)
 {
-	//OcultarFacebook(); //1.0.8
-	BotonClasificacion.visible=false;
-	Noticia.visible=false;
-	BotonSalir.visible=true;
-	//1.0.8 BotonSalir.x=xSalir;
+	//NGHJWGJHWG(); //1.0.8
+	POEICHMHDL.visible=false;
+	BUJELVTIKU.visible=false;
+	CUUKQAGFEB.visible=true;
+	//1.0.8 CUUKQAGFEB.x=QETACVSHAR;
 	
-	vTurno=1; //1.0.4
+	DVNRTQIWGL=1; //1.0.4
 
-	CancelarAmigos();
+	NFARLTEOCI();
 	
 	if (socket.id!=undefined)
 	{
-		socket.emit('enviar_peticion_partida', socket.id, true,Modalidad,Sala,Version,ObjetoG) ; //0: Aleatorio  1: Amigos
+		socket.emit('PRHGDXYEOQ', socket.id, true,Modalidad,Sala,SFKLFIJOIO,ObjetoG) ; //0: LXGKVFJUFT  1: Amigos
 	}
 }
 
-InicioMultiJugadorAleatorio=function()
+LLKJWWDFFF=function()
 {
 	
 	/*if ( lPermisoHabilitado==false )
@@ -2709,66 +2709,66 @@ InicioMultiJugadorAleatorio=function()
 	
 	if (checkConnection()==true)
 	{	
-		InicioPartidaOnline(0,false);//Aleatorio
+		KKJJKHAJHK(0,false);//LXGKVFJUFT
 	}
 }
 
-LoginDesdeWeb=function(){
+CMREMHOJIN=function(){
 
-		var callbackweb = getUrlVars()["callbackweb"];
-		//alert(callbackweb);
-		if (callbackweb=="g#" || callbackweb=="g")
+		var HKCERVLWFB = getUrlVars()["HKCERVLWFB"];
+		//alert(HKCERVLWFB);
+		if (HKCERVLWFB=="g#" || HKCERVLWFB=="g")
 		{
 			//alert("entra");
-			SocketInicializado=false;
-			//console.log("Conecta: Llamada LoginDesdeWeb");			
-			InicioMultiJugador(true);
+			BNCAIUQIJJ=false;
+			//console.log("Conecta: Llamada CMREMHOJIN");			
+			JVEHDHOEEM(true);
 		}
 
 }
 
-InicioMonoJugador=function(){
+OCSBJTDODP=function(){
 	
-	/*if ( lVersionValida==false )
+	/*if ( VXEWRTCPMM==false )
 	{
 		return false;
 	}*/
 
-	ConectaServidor();
+	XEMENNVXGV();
 	
 	//if (lUsable==true)
 	//{
-		BotonMonoJugador.visible=false;
-		BotonMultiJugador.visible=false;
-		BotonClasificacion.visible=false; //1.0.8
+		UEHYPTREIH.visible=false;
+		IBECDOLWLN.visible=false;
+		POEICHMHDL.visible=false; //1.0.8
 		BotonContacta.visible=false;
-		BotonAleatorio.visible=false;
-		BotonAmigos.visible=false;
-		TextCuentaMundo.visible=false;
+		EFKTQSXAMA.visible=false;
+		LNJDKEVPQE.visible=false;
+		JKLJKLRIRI.visible=false;
 		
 		
-		ModoMultijugador=false;
+		EGPDVIEJEL=false;
 		
-		LimpiarVariables();
-		LimpiarVariablesConexionNueva();	
+		QSAXUCPASV();
+		WNEWPCNXPA();	
 		
 		
-		SoyElJugador=1;
-		PartidaComenzada=true;
+		TFSXFTYVGQ=1;
+		MYQBNBVHKU=true;
 		
-		BackFondo.visible=false;
-		BackTapete.visible=true;
+		XIQDONAJMM.visible=false;
+		KVBNWXDTON.visible=true;
 			
-		CrearBaraja(4); //ILA QuienReparte
-		//PreparaCaracteristicasMano()
+		ETKKAJPFXQ(4); //ILA RDBQUAVHEP
+		//JQSOOBSDDS()
 		
 		
-		BotonCantar.loadTexture('Boton_cantar_off', 0);		
-		BotonSiete.loadTexture('Boton_cambiar_7_off', 0);		
+		IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);		
+		YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);		
 	//}
 	//else
 	//{
-	//	onSocketMensajeServidor("Versión Obsoleta. Actualícese.",false);
+	//	VSXSYEUABW("Versión Obsoleta. Actualícese.",false);
 		
 	//}
 
@@ -2776,65 +2776,65 @@ InicioMonoJugador=function(){
 
 
 
-textoturno=function() {
-	var DevolverTexto;
+SVLGSBPKGJ=function() {
+	var NJWWPODLWD;
 	
-	if (ModoMultijugador==false)
+	if (EGPDVIEJEL==false)
 	{
-		log(false,"vTurno en Devolver texto: "+vTurno)
-		if(SoyElJugador==1) {
-			if(vTurno==2){
-				DevolverTexto="Es el turno del jugador de su derecha"
+		log(false,"DVNRTQIWGL en RTOSLKFWHC AWCCMSCOPO: "+DVNRTQIWGL)
+		if(TFSXFTYVGQ==1) {
+			if(DVNRTQIWGL==2){
+				NJWWPODLWD="Es el turno del jugador de su derecha"
 			}
-			if(vTurno==3){
-				DevolverTexto="Es el turno de su compañero"
+			if(DVNRTQIWGL==3){
+				NJWWPODLWD="Es el turno de su compañero"
 			}		
-			if(vTurno==4){
-				DevolverTexto="Es el turno del jugador de su izquierda"
+			if(DVNRTQIWGL==4){
+				NJWWPODLWD="Es el turno del jugador de su izquierda"
 			}			
 		}
 
-		if(SoyElJugador==2) {
-			if(vTurno==3){
-				DevolverTexto="Es el turno del jugador de su derecha"
+		if(TFSXFTYVGQ==2) {
+			if(DVNRTQIWGL==3){
+				NJWWPODLWD="Es el turno del jugador de su derecha"
 			}
-			if(vTurno==4){
-				DevolverTexto="Es el turno de su compañero"
+			if(DVNRTQIWGL==4){
+				NJWWPODLWD="Es el turno de su compañero"
 			}		
-			if(vTurno==1){
-				DevolverTexto="Es el turno del jugador de su izquierda"
+			if(DVNRTQIWGL==1){
+				NJWWPODLWD="Es el turno del jugador de su izquierda"
 			}			
 		}	
 		
-		if(SoyElJugador==3) {
-			if(vTurno==4){
-				DevolverTexto="Es el turno del jugador de su derecha"
+		if(TFSXFTYVGQ==3) {
+			if(DVNRTQIWGL==4){
+				NJWWPODLWD="Es el turno del jugador de su derecha"
 			}
-			if(vTurno==1){
-				DevolverTexto="Es el turno de su compañero"
+			if(DVNRTQIWGL==1){
+				NJWWPODLWD="Es el turno de su compañero"
 			}		
-			if(vTurno==2){
-				DevolverTexto="Es el turno del jugador de su izquierda"
+			if(DVNRTQIWGL==2){
+				NJWWPODLWD="Es el turno del jugador de su izquierda"
 			}			
 		}	
 
-		if(SoyElJugador==4) {
-			if(vTurno==1){
-				DevolverTexto="Es el turno del jugador de su derecha"
+		if(TFSXFTYVGQ==4) {
+			if(DVNRTQIWGL==1){
+				NJWWPODLWD="Es el turno del jugador de su derecha"
 			}
-			if(vTurno==2){
-				DevolverTexto="Es el turno de su compañero"
+			if(DVNRTQIWGL==2){
+				NJWWPODLWD="Es el turno de su compañero"
 			}		
-			if(vTurno==3){
-				DevolverTexto="Es el turno del jugador de su izquierda"
+			if(DVNRTQIWGL==3){
+				NJWWPODLWD="Es el turno del jugador de su izquierda"
 			}			
 		}
 	}
 	else
 	{
-		DevolverTexto=" Es el turno de "+ArrayDelaPropiaSala[vTurno-1].Nombre
+		NJWWPODLWD=" Es el turno de "+XPBCVAGCDQ[DVNRTQIWGL-1].WWKVHIMWYD
 	}
-	return DevolverTexto;
+	return NJWWPODLWD;
 }
 
 
@@ -2842,23 +2842,23 @@ textoturno=function() {
 function dragUpdate(sprite, pointer, dragX, dragY, snapPoint) {
 
   	var index;
-	 for ( var i = 0; i < MazoD.length; i++){
-		if (MazoD[i].idCarta==sprite.name){
+	 for ( var i = 0; i < AGKVNAGGLB.length; i++){
+		if (AGKVNAGGLB[i].UUOPKETETA==sprite.name){
 			index=i;
 			break;
 		}	 
 	 }
 
-	 //log(false,"Moviendo "+MazoD[index].valor+" de "+MazoD[index].palo+" "+pointer.x)
+	 //log(false,"Moviendo "+AGKVNAGGLB[index].HVCFEWNDRF+" de "+AGKVNAGGLB[index].SGCSHJVERI+" "+pointer.x)
 	
-	 for ( var i = 0; i < MazoD.length; i++){
-		game_objeto.physics.arcade.overlap(MazoD[i].cartilla, MazoD[i], colision_cartas, null, this);
+	 for ( var i = 0; i < AGKVNAGGLB.length; i++){
+		YMHIHSNADE.physics.arcade.overlap(AGKVNAGGLB[i].TNFAGGMKXD, AGKVNAGGLB[i], MDBPQGPDUY, null, this);
 	}
 	
 
 }
 
-colision_cartas=function(sprite, spriteColision) {
+MDBPQGPDUY=function(sprite, spriteColision) {
 	log(false,"Colisionando ");
 };
 
@@ -2866,8 +2866,8 @@ colision_cartas=function(sprite, spriteColision) {
  
 Level.prototype.update=function(){
 	
-	GrupoL.sort('y', Phaser.Group.SORT_ASCENDING);
-	GrupoR.sort('y', Phaser.Group.SORT_DESCENDING);	
+	SYXHGDSJDY.sort('y', Phaser.Group.SORT_ASCENDING);
+	BDRJVGFWQH.sort('y', Phaser.Group.SORT_DESCENDING);	
 
 	
 };
@@ -2875,81 +2875,81 @@ Level.prototype.update=function(){
 
 Encima=function(cartamovida){
 
-	//game_objeto.add.text(600, 300,"Ca", { font: '16px Arial', fill: '#ffffff' });
+	//YMHIHSNADE.add.text(600, 300,"Ca", { font: '16px Arial', fill: '#ffffff' });
 	cartamovida.x=cartamovida.x-1500;
 	
-	game_objeto.tweens.removeAll();
+	YMHIHSNADE.tweens.removeAll();
 
 	// rotate monkey
-	var twn = game_objeto.add.tween(cartamovida);
+	var twn = YMHIHSNADE.add.tween(cartamovida);
 	twn.to({
 		angle : cartamovida.angle + 360
 	}, 1000, "Linear", true);
 
 	// scale monkey
-	twn = game_objeto.add.tween(cartamovida.scale);
+	twn = YMHIHSNADE.add.tween(cartamovida.scale);
 	twn.to({
 		x : 0.1,
 		y : 0.1
 	}, 1000, "Linear", true);
-//	game_objeto.add.text(390, 300,cartamovida.palo, { font: '16px Arial', fill: '#ffffff' });
+//	YMHIHSNADE.add.text(390, 300,cartamovida.SGCSHJVERI, { font: '16px Arial', fill: '#ffffff' });
 };
 
 
-/*var ObjetoSala = function(JugadorSala,Sala){
-	this.JugadorSala=JugadorSala
+/*var JHIWUIUYCJ = function(AURESXCGMK,Sala){
+	this.AURESXCGMK=AURESXCGMK
 	this.Sala=Sala
 };
 */
 
-var ObjetoSala = function(JugadorSala,Sala,Cerrada,Nombre,Sexo,Foto,AvatarSprite,Desconectado,Dorso,Tapete,Amigo,JugadorFull,OrdenEnSala, JugadorSalaFalseado,NombreOri,Admin,IP,
-	Nivel,CampeonSemanal){
+var JHIWUIUYCJ = function(AURESXCGMK,Sala,Cerrada,WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,LIHWIHIUVH,XJARYUVBCB,EJOYNSESRD,IRQGAFESIC,Amigo,OBTBPOULAV,KKUYGYRGYG, LKKDKDNMNR,JJHFHGHSUI,UHYGLMAUNK,NBJHGSFSJS,
+	OIUIOWCHVW,NHWYTYUSYG){
 		
-	this.JugadorSala=JugadorSala;
+	this.AURESXCGMK=AURESXCGMK;
 	this.Sala=Sala;
 	this.SalaCerrada=Cerrada;
-	this.Nombre=Nombre;
-	this.Sexo=Sexo;
-	this.Foto=Foto;
-	this.AvatarSprite;
-	this.Desconectado=Desconectado;
-	this.Dorso=Dorso;
-	this.Tapete=Tapete;
+	this.WWKVHIMWYD=WWKVHIMWYD;
+	this.BONQVNOXDP=BONQVNOXDP;
+	this.QHHQPXWFNG=QHHQPXWFNG;
+	this.LIHWIHIUVH;
+	this.XJARYUVBCB=XJARYUVBCB;
+	this.EJOYNSESRD=EJOYNSESRD;
+	this.IRQGAFESIC=IRQGAFESIC;
 	this.Amigo=Amigo
-	this.JugadorFull=JugadorFull
-	this.OrdenEnSala=OrdenEnSala
-	this.JugadorSalaFalseado=JugadorSalaFalseado
-	this.Admin=Admin
-	this.IP=IP
-	this.Nivel=Nivel
-	this.CampeonSemanal=CampeonSemanal	
+	this.OBTBPOULAV=OBTBPOULAV
+	this.KKUYGYRGYG=KKUYGYRGYG
+	this.LKKDKDNMNR=LKKDKDNMNR
+	this.UHYGLMAUNK=UHYGLMAUNK
+	this.NBJHGSFSJS=NBJHGSFSJS
+	this.OIUIOWCHVW=OIUIOWCHVW
+	this.NHWYTYUSYG=NHWYTYUSYG	
 	
-	this.NombreOri=NombreOri
+	this.JJHFHGHSUI=JJHFHGHSUI
 };
 
 setEventHandlers = function () { //ESTE
   // Socket connection successful
-  //game_objeto.add.text(390, 400,"laiolailo", { font: '16px Arial', fill: '#ffffff' });
+  //YMHIHSNADE.add.text(390, 400,"laiolailo", { font: '16px Arial', fill: '#ffffff' });
   
   
-  socket.on('connect', onSocketConnected);
+  socket.on('connect', AYAOSXTCBR);
   socket.on('reconnect', function()
   {
 	  var i;
-	  if (PartidaComenzada==false)
+	  if (MYQBNBVHKU==false)
 	  {
 		  //MatarConexion();
-		  SalirConfirmado(); //madremia
+		  FHKOYDXPCL(); //madremia
 	  }
 	  else
 	  {
 	 
-	  IntentosReconexion=0;
-	  //console.log("ARRAY DE LA SALA "+ArrayDelaPropiaSala);
-	  if (ArrayDelaPropiaSala.length>0) 
+	  JKCANKPQBB=0;
+	  //console.log("ARRAY DE LA SALA "+XPBCVAGCDQ);
+	  if (XPBCVAGCDQ.length>0) 
 	  {
-		  MensajeError("Reconectando..."+ ArrayDelaPropiaSala[SoyElJugador-1].Nombre);	
-		  socket.emit("Reconectado", ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala,ArrayDelaPropiaSala[SoyElJugador-1].Sala);
+		  SVHMCOYULR("Reconectando..."+ XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD);	
+		  socket.emit("Reconectado", XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,XPBCVAGCDQ[TFSXFTYVGQ-1].Sala);
 	
 	
 	  
@@ -2958,207 +2958,207 @@ setEventHandlers = function () { //ESTE
 	  else
 	  {
 		   //console.log("MUY RARO");
-		  if (ModoMultijugador==true)
+		  if (EGPDVIEJEL==true)
 		  {
-			//jojo SalirConfirmado();
-			SalirConfirmado(); //madremia
+			//jojo FHKOYDXPCL();
+			FHKOYDXPCL(); //madremia
 		  }
 	  }
 	  }
   });
 
-  socket.on('enviar_perfil_desde_server', onSocketPerfil);
-  socket.on('enviar_publicidad_desde_server', onSocketPublicidad);
+  socket.on('VOUQWLMKWW', CURCDCWNHB);
+  socket.on('UAKKKJVTUK', DVCXGBTNWL);
  
-  socket.on('disconnect', onSocketDisconnect);
+  socket.on('disconnect', RWOCHOBYJY);
  
   
-  socket.on('conectados_sala', function(data,callback)
+  socket.on('OUPPFUDFTA', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketconectadosSala(data.JugadoresEnSala,data.SalaJoin,data.ArrayEnviar)
-	  return callback(data.IdMsg);
+	  NSIRYROROW(data.JugadoresEnSala,data.SalaJoin,data.ArrayEnviar)
+	  return callback(data.OYJAHGADFQ);
   }
   );
   
   
   
-  socket.on('baraja_desde_server', function(data,callback)
+  socket.on('FFGKWCDVFE', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketBarajaDesdeServer(data.data,data.QuienReparte,data.idPartida)
-	  return callback(data.IdMsg);
+	  KLDULSMKMA(data.data,data.RDBQUAVHEP,data.MQUGCIUQII)
+	  return callback(data.OYJAHGADFQ);
   }
   );
   
-  socket.on('envio_posicion_desde_server', function(data,callback)
+  socket.on('VMCFXIVSKH', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketEnvioPosicionDesdeServer(data.JugadorQueMueve,data.KeyMover,data.nuevaposicion)
-	  return callback(data.IdMsg);
+	  XWGQYYRRQO(data.UHTPGPRUJA,data.SJVCMXWVVI,data.BBSGITWRQX)
+	  return callback(data.OYJAHGADFQ);
   }
   );
 
-  socket.on('envio_centro_desde_server',  function(data,callback)
+  socket.on('PMXHPCMRIF',  function(data,callback)
   {
 	  //console.log(data);
 	  var i;
-	  var Adelante=true;
+	  var HAUSUTNHGI=true;
 	  
 	  if (data.DesdeDesconexion==true)
 	  {
-			  for (i=0;i<=ArrayAccionesDesconexiones.length-1;i++)
+			  for (i=0;i<=NBEJWDVLLV.length-1;i++)
 			  {
-					if(ArrayAccionesDesconexiones[i].Mensaje=='enviar carta centro' || ArrayAccionesDesconexiones[i].Mensaje=='enviar carta centro solo yo')
+					if(NBEJWDVLLV[i].RHOLNWBOXR=='RYUDYPPOXW' || NBEJWDVLLV[i].RHOLNWBOXR=='RYUDYPPOXW solo yo')
 					{
-						Adelante=false;
+						HAUSUTNHGI=false;
 						break;
 					}
 			  }
 			  
-			if (Adelante==false)
+			if (HAUSUTNHGI==false)
 			{
 				//MatarConexion();
-				SalirConfirmado(); //madremia
+				FHKOYDXPCL(); //madremia
 			}
 	  
 	  }
 	  else
 	  {
-		  Adelante=true;
+		  HAUSUTNHGI=true;
 	  }
 	  //console.log("jol");
-	  onSocketEnvioCentroDesdeServer(data.JugadorQueMueve,data.KeyMover,data.Turno,data.Ronda,data.Hora)
+	  NOGEVUYFEW(data.UHTPGPRUJA,data.SJVCMXWVVI,data.Turno,data.AGTXFNIKQD,data.QKVJASWVEO)
 	  
-	  return callback(data.IdMsg);
+	  return callback(data.OYJAHGADFQ);
   }
   );
  
-  socket.on('envio_centro_desde_server_solo_yo', function(data,callback)
+  socket.on('ODSYQUFMDU', function(data,callback)
   {
 	  
 	  var i;
-	  var Adelante=true;
+	  var HAUSUTNHGI=true;
 	  
 	  if (data.DesdeDesconexion==true)
 	  {
-			  for (i=0;i<=ArrayAccionesDesconexiones.length-1;i++)
+			  for (i=0;i<=NBEJWDVLLV.length-1;i++)
 			  {
-					if(ArrayAccionesDesconexiones[i].Mensaje=='enviar carta centro' || ArrayAccionesDesconexiones[i].Mensaje=='enviar carta centro solo yo')
+					if(NBEJWDVLLV[i].RHOLNWBOXR=='RYUDYPPOXW' || NBEJWDVLLV[i].RHOLNWBOXR=='RYUDYPPOXW solo yo')
 					{
-						Adelante=false;
+						HAUSUTNHGI=false;
 						break;
 					}
 			  }
 			  
-			if (Adelante==false)
+			if (HAUSUTNHGI==false)
 			{
 				//MatarConexion();
-				SalirConfirmado(); //madremia
+				FHKOYDXPCL(); //madremia
 			}
 	  
 	  }
 	  else
 	  {
-		  Adelante=true;
+		  HAUSUTNHGI=true;
 	  }
 	
-	  onSocketEnvioCentroDesdeServer(data.JugadorQueMueve,data.KeyMover,data.Turno,data.Ronda,data.Hora)
-	  return callback(data.IdMsg);
+	  NOGEVUYFEW(data.UHTPGPRUJA,data.SJVCMXWVVI,data.Turno,data.AGTXFNIKQD,data.QKVJASWVEO)
+	  return callback(data.OYJAHGADFQ);
   }
   );
   
   
-  socket.on('Comenzad Partida', function(data,callback)
+  socket.on('VOJPSKOTNY', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketComenzadPartida();
-	  return callback(data.IdMsg);
+	  NUWTGXUUTS();
+	  return callback(data.OYJAHGADFQ);
   }
   );
 
-  socket.on('envio_cante_desde_server',  function(data,callback)
+  socket.on('IPGXRVPSID',  function(data,callback)
   {
 	  //console.log(data);
-	  onSocketCantarDesdeServer(data.JugadorQueMueve,data.puntos,data.texto)
-	  return callback(data.IdMsg);
+	  TGLVJXEMKD(data.UHTPGPRUJA,data.OMDVKATFLQ,data.AWCCMSCOPO)
+	  return callback(data.OYJAHGADFQ);
   }
   );  
   
-  socket.on('envio_cambio7_desde_server', function(data,callback)
+  socket.on('RNLCJXJTGF', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketCambiar7DesdeServer(data.JugadorQueMueve,data.KeyMover)
-	  return callback(data.IdMsg);
+	  MBDMSUIWEH(data.UHTPGPRUJA,data.SJVCMXWVVI)
+	  return callback(data.OYJAHGADFQ);
   }
   );
   
   
-  socket.on('envio_parejas_desde_server', function(data,callback)
+  socket.on('HKJSDHFUIW', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketCambiarParejasDesdeServer(data.ArrayDelaPropiaSalaClienteOrdenada,data.QuienReparte)
-	  return callback(data.IdMsg);
+	  MCMWUEHUWH(data.ArrayDelaPropiaSalaClienteOrdenada,data.RDBQUAVHEP)
+	  return callback(data.OYJAHGADFQ);
   }
   );
   
-   socket.on('envio_ok_parejas_desde_server', function(data,callback)
+   socket.on('KJHKHEIEIE', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketCambiarParejasDesdeServerOK(data.QuienSoy)
-	  return callback(data.IdMsg);
+	  BMNBIWEGUY(data.QuienSoy)
+	  return callback(data.OYJAHGADFQ);
   }
   );  
   
-  socket.on('enviar_texto_desde_server', function(data,callback)
+  socket.on('OYYQISPRTK', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketEnviarTextoDesdeServer(data.data,data.QuienHabla)
-	  return callback(data.IdMsg);
+	  VMSUJQUAGD(data.data,data.QuienHabla)
+	  return callback(data.OYJAHGADFQ);
   }
   );
   
   
-  socket.on('desconectado_desde_server', function(data,callback)
+  socket.on('GCOMOMYQBP', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketDesconectadoDesdeServer(data.Jugador,data.Nombre,data.posicionJugador,data.MinutosSancion) //1.0.8 Añado MinutosSancion
-	  return callback(data.IdMsg);
+	  GDRQVXOCBL(data.SSUNXNEEHN,data.WWKVHIMWYD,data.posicionJugador,data.MinutosSancion) //1.0.8 Añado MinutosSancion
+	  return callback(data.OYJAHGADFQ);
   }
   );
   
   
  
- socket.on('reconectado_desde_server', function(data,callback)
+ socket.on('TGUUXMBTHT', function(data,callback)
   {
 	  //console.log(data);
-	  onSocketReconectadoDesdeServer(data.Jugador,data.Nombre,data.posicionJugador,data.NuevoId)
-	  return callback(data.IdMsg);
+	  BCVWETKAKG(data.SSUNXNEEHN,data.WWKVHIMWYD,data.posicionJugador,data.NuevoId)
+	  return callback(data.OYJAHGADFQ);
   }
   );
 
 
- socket.on("connect_failed", onSocketConexionFallida);
-  socket.on("connect_error", onSocketServidorCaido);
-  socket.on("envio_lista_sala_amigos", onSocketListaSalaAmigos);
-  socket.on("MensajeServidor", onSocketMensajeServidor);
-  socket.on("envio_validacion_salas_ok",onSocketValidacionSalaOK);
-  socket.on("envia_clasificacion", onSocketClasificacion);
+ socket.on("connect_failed", FGRXSJFOOH);
+  socket.on("connect_error", MNTKNVATCM);
+  socket.on("ITHUWHNFDP", TJDBATCOYY);
+  socket.on("IOWWFUHGJF", VSXSYEUABW);
+  socket.on("XRIVHTTLDJ",QAFLUOOCBX);
+  socket.on("envia_clasificacion", SRUKEMRQNI);
   
-  socket.on('error_personalizado_desde_server', onSocketErrorDesdeServer);
+  socket.on('JWNXDMIDXW', onSocketErrorDesdeServer);
   
  
-	socket.on('cuenta jugadores',onSocketContadorJugadores);
+	socket.on('NNSGGWRWTY',HAJAHHHETE);
 	
-	socket.on('giveme_your_moves', function(data,callback)
+	socket.on('PPLWIHVSDV', function(data,callback)
 	  {
 		  //console.log(data);
-		  onSocketEnviaEnOff(data.Habitacion)
-		  return callback(data.IdMsg);
+		  JHWIQQCLKD(data.DFBVDPETGO)
+		  return callback(data.OYJAHGADFQ);
 	  }
 	  );
 	  
-	  socket.on('elimina_chat_desde_server', function()
+	  socket.on('JHSJKVSKKW', function()
 	  {
 		  inputField.visible=false;
 	  });
@@ -3166,76 +3166,76 @@ setEventHandlers = function () { //ESTE
 }; //ESTE
 
 
-onSocketErrorDesdeServer= function (ErrorInterno,ErrorPublico) {
+onSocketErrorDesdeServer= function (NNWWUUQPPP,ErrorPublico) {
 	
 	
-	if (ErrorInterno=="Error0" || ErrorInterno=="Error2" || ErrorInterno=="Error3" || ErrorInterno=="Error4") //Errores de Login
+	if (NNWWUUQPPP=="Error0" || NNWWUUQPPP=="Error2" || NNWWUUQPPP=="Error3" || NNWWUUQPPP=="Error4") //Errores de Login
 	{
-		MuestraPantallaLogin();
+		WFWTECIQSP();
 	}
 	
 
-	if (ErrorInterno=="Error5") //Usuario deshabilitado
+	if (NNWWUUQPPP=="Error5") //Usuario deshabilitado
 	{
 		//lPermisoHabilitado=false;
-		onSocketMensajeServidor(ErrorPublico, true)
+		VSXSYEUABW(ErrorPublico, true)
 	}
 
-	if (ErrorInterno=="Error6") //Usuario en la sala
+	if (NNWWUUQPPP=="Error6") //Usuario en la sala
 	{
-		onSocketMensajeServidor(ErrorPublico, false)
+		VSXSYEUABW(ErrorPublico, false)
 	}
 	
-	if (ErrorInterno=="Error7") //Contraseña Incorrecta
+	if (NNWWUUQPPP=="Error7") //Contraseña Incorrecta
 	{
-		onSocketMensajeServidor(ErrorPublico, false)
+		VSXSYEUABW(ErrorPublico, false)
 	}	
 	
-	if (ErrorInterno=="Error8") //Versión Incorrecta
+	if (NNWWUUQPPP=="Error8") //Versión Incorrecta
 	{
-		onSocketMensajeServidor(ErrorPublico, true);
+		VSXSYEUABW(ErrorPublico, true);
 	}		
 	
-	if (ErrorInterno=="Error9" || ErrorInterno=="Error10" || ErrorInterno=="Error11" ) //Sala completa, Nombre de sala no permitido y Sala Existe
+	if (NNWWUUQPPP=="Error9" || NNWWUUQPPP=="Error10" || NNWWUUQPPP=="Error11" ) //Sala completa, WWKVHIMWYD de sala no permitido y Sala Existe
 	{
-		onSocketMensajeServidor(ErrorPublico, true);
+		VSXSYEUABW(ErrorPublico, true);
 	}		
 	
-	if (ErrorInterno=="Error12")
+	if (NNWWUUQPPP=="Error12")
 	{
 		//lPermisoDesconectado=false;
-		onSocketMensajeServidor(ErrorPublico, false);		
+		VSXSYEUABW(ErrorPublico, false);		
 	}	
 	
-	if (ErrorInterno=="Error13")
+	if (NNWWUUQPPP=="Error13")
 	{
 		//Informar a todos de que un usuario ha sido sancionado
-		onSocketMensajeServidor(ErrorPublico, false);		
+		VSXSYEUABW(ErrorPublico, false);		
 	}		
 	
 }
 
 
-onSocketEnviaEnOff=function(Sala)
+JHWIQQCLKD=function(Sala)
 {
 	var i;
 	//1.0.6
-	for (i=0;i<=ArrayAccionesDesconexiones.length-1;i++)
+	for (i=0;i<=NBEJWDVLLV.length-1;i++)
 	{
-		//console.log("Enviando el mensaje "+ArrayAccionesDesconexiones[0].IdMsg+" de "+ArrayAccionesDesconexiones[0].ClientId);
-		//console.log("Comparo cliente "+ArrayAccionesDesconexiones[i].ClientId+" con "+ViejoSocket+" y sala "+ArrayAccionesDesconexiones[i].Habitacion+" con "+Sala);
-		//if ( (ArrayAccionesDesconexiones[i].ClientId==NuevoID || ArrayAccionesDesconexiones[i].ClientId===JugadorQueReconecta) && ArrayAccionesDesconexiones[i].Habitacion==Sala)
-		if ( ArrayAccionesDesconexiones[i].Habitacion==Sala)
+		//console.log("Enviando el mensaje "+NBEJWDVLLV[0].OYJAHGADFQ+" de "+NBEJWDVLLV[0].OJPXTRQDKS);
+		//console.log("Comparo cliente "+NBEJWDVLLV[i].OJPXTRQDKS+" con "+ViejoSocket+" y sala "+NBEJWDVLLV[i].DFBVDPETGO+" con "+Sala);
+		//if ( (NBEJWDVLLV[i].OJPXTRQDKS==NuevoID || NBEJWDVLLV[i].OJPXTRQDKS===JugadorQueReconecta) && NBEJWDVLLV[i].DFBVDPETGO==Sala)
+		if ( NBEJWDVLLV[i].DFBVDPETGO==Sala)
 		{
 			
-			ArrayAccionesDesconexiones[i].ClientId=socket.id; //Cambio las colas de mensajes al nuevo socket.
+			NBEJWDVLLV[i].OJPXTRQDKS=socket.id; //Cambio las colas de mensajes al nuevo socket.
 			
-			//console.log("Y lo emito "+ArrayAccionesDesconexiones[i].Mensaje +" "+ArrayAccionesDesconexiones[0].IdMsg+" de "+ArrayAccionesDesconexiones[0].ClientId); 	
-			 this.emit(ArrayAccionesDesconexiones[i].Mensaje,ArrayAccionesDesconexiones[i],
-			 function(idMensaje)
+			//console.log("Y lo emito "+NBEJWDVLLV[i].RHOLNWBOXR +" "+NBEJWDVLLV[0].OYJAHGADFQ+" de "+NBEJWDVLLV[0].OJPXTRQDKS); 	
+			 this.emit(NBEJWDVLLV[i].RHOLNWBOXR,NBEJWDVLLV[i],
+			 function(XQLEOGMJYG)
 			 {
 				
-				EliminarColaMensajes(idMensaje,'reconecto');
+				EXBCVLOIYJ(XQLEOGMJYG,'reconecto');
 				
 				
 			 }
@@ -3246,120 +3246,120 @@ onSocketEnviaEnOff=function(Sala)
 	}	
 	
 
-	CalculaControl();
+	IOJCRKJSRL();
 }
 
-onSocketContadorJugadores=function(ObjetoContador)
+HAJAHHHETE=function(NMNUEBBPOI)
 {
-	//alert(ObjetoContador.CuentaMundo+ " "+ObjetoContador.CuentaAmigos);
+	//alert(NMNUEBBPOI.HJHKJHJKHE+ " "+NMNUEBBPOI.NSUIHIUEUE);
 
-	//TextCuentaMundo.visible=true;
-	TextCuentaMundo.text="";
+	//JKLJKLRIRI.visible=true;
+	JKLJKLRIRI.text="";
 	
-	if (ObjetoContador.CuentaMundo!=-9999)
+	if (NMNUEBBPOI.HJHKJHJKHE!=-9999)
 	{
-		TextCuentaMundo.text="Contra el mundo: "+ ObjetoContador.CuentaMundo+" personas\n"+"Contra amigos: "+ObjetoContador.CuentaAmigos +" personas\n";
+		JKLJKLRIRI.text="Contra el mundo: "+ NMNUEBBPOI.HJHKJHJKHE+" personas\n"+"Contra amigos: "+NMNUEBBPOI.NSUIHIUEUE +" personas\n";
 	}
 	
 	
-	if (ObjetoContador.CuentaSolos!=-9999)
+	if (NMNUEBBPOI.CuentaSolos!=-9999)
 	{
-		TextCuentaMundo.text=TextCuentaMundo.text+"Contra el juego: "+ObjetoContador.CuentaSolos+" personas";
+		JKLJKLRIRI.text=JKLJKLRIRI.text+"Contra el juego: "+NMNUEBBPOI.CuentaSolos+" personas";
 	}
 	
 	
-	/*TextCuentaMundo.text="Contra el mundo: "+ ObjetoContador.CuentaMundo+" personas en línea\n"+"Contra amigos: "+ObjetoContador.CuentaAmigos +" personas en línea\n"+
-		"Contra el juego: "+ObjetoContador.CuentaSolos+" personas";
+	/*JKLJKLRIRI.text="Contra el mundo: "+ NMNUEBBPOI.HJHKJHJKHE+" personas en línea\n"+"Contra amigos: "+NMNUEBBPOI.NSUIHIUEUE +" personas en línea\n"+
+		"Contra el juego: "+NMNUEBBPOI.CuentaSolos+" personas";
 	*/
 	
 	
 }
 
 
-onSocketCambiarParejasDesdeServer=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,NuevaPareja)
+MCMWUEHUWH=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,NuevaPareja)
 {
 	var i;
 	
 	
-	ArrayDelaPropiaSala=ArrayDelaPropiaSalaClienteOrdenada;
+	XPBCVAGCDQ=ArrayDelaPropiaSalaClienteOrdenada;
 	
-	ArrayJugadoresDesconectados.splice(0,1000); //Importante hacer esto porque han cambiado los órdenes
-	CalculaControl();
+	KYDWXPGHVY.splice(0,1000); //Importante hacer esto porque han cambiado los órdenes
+	IOJCRKJSRL();
 	
 	
-	for (i=0; i<=ArrayDelaPropiaSala.length-1;i++)
+	for (i=0; i<=XPBCVAGCDQ.length-1;i++)
 	{
-		if (ArrayDelaPropiaSala[i].JugadorSala==socket.id)
+		if (XPBCVAGCDQ[i].AURESXCGMK==socket.id)
 		{
-			SoyElJugador=(i+1);
-			//console.log("CHANGE2: "+SoyElJugador)
-			//console.log("SOY con el trucaje"+SoyElJugador);
+			TFSXFTYVGQ=(i+1);
+			//console.log("CHANGE2: "+TFSXFTYVGQ)
+			//console.log("SOY con el trucaje"+TFSXFTYVGQ);
 		}
 
 	}
 	
-	//console.log("SOY "+SoyElJugador);
+	//console.log("SOY "+TFSXFTYVGQ);
 	
-	SemaforoAvatars.splice(0,1000);
-	DibujaJugadores();
+	BSFNXQXOTD.splice(0,1000);
+	JHKJKHHJCC();
 	
 	
-	var ObjectSend=function( QuienSoy,
-		IdMsg,ClientId,SalaID,Mensaje){
-		 this.QuienSoy=SoyElJugador
+	var GXNRNMAAKW=function( QuienSoy,
+		OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+		 this.QuienSoy=TFSXFTYVGQ
 		 
 											 
-		 this.IdMsg=IdMsg
-		 this.ClientId=ClientId
-		 this.SalaID=SalaID
-		 this.Mensaje=Mensaje
+		 this.OYJAHGADFQ=OYJAHGADFQ
+		 this.OJPXTRQDKS=OJPXTRQDKS
+		 this.LYHKNIMVEB=LYHKNIMVEB
+		 this.RHOLNWBOXR=RHOLNWBOXR
 		 
-		 this.Fecha=new Date(Date.now());
+		 this.EBAPPJFYSW=new Date(Date.now());
 	 }
 
 
-	 var ArrayAccionesDesconexionesLocal=[];
-	ArrayAccionesDesconexionesLocal.splice(0,1000);
+	 var QPHHGPRJAI=[];
+	QPHHGPRJAI.splice(0,1000);
 
 		
-	var IdMsg=Math.random()*100000;
-	var Objeto=new ObjectSend(ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala,
-		IdMsg,socket.id,Habitacion,'cambio parejas ok');
-	ArrayAccionesDesconexiones.push(Objeto);
-	ArrayAccionesDesconexionesLocal.push(Objeto);
+	var OYJAHGADFQ=Math.random()*100000;
+	var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,
+		OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
+	NBEJWDVLLV.push(KCPHFPSPLQ);
+	QPHHGPRJAI.push(KCPHFPSPLQ);
 	
 
-	socket.emit('cambio parejas ok',ArrayAccionesDesconexionesLocal[0],  
-	 function(idMensaje)
+	socket.emit('JHWIEIWIIW',QPHHGPRJAI[0],  
+	 function(XQLEOGMJYG)
 	 {			 
-		EliminarColaMensajes(idMensaje,'cambio parejas ok');
+		EXBCVLOIYJ(XQLEOGMJYG,'JHWIEIWIIW');
 	 }
 	);	
-	ArrayAccionesDesconexionesLocal.splice(0,1000);		
-	//ArrayJugadoresDesconectados.splice(0,1000);
+	QPHHGPRJAI.splice(0,1000);		
+	//KYDWXPGHVY.splice(0,1000);
 	
-	//console.log("Soy "+SoyElJugador+" "+QuienTomaElControl);
+	//console.log("Soy "+TFSXFTYVGQ+" "+ESKTEXAVHU);
 	
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		if (SoyElJugador==QuienTomaElControl && ArrayDelaPropiaSala[i].Desconectado==true)
+		if (TFSXFTYVGQ==ESKTEXAVHU && XPBCVAGCDQ[i].XJARYUVBCB==true)
 		{
 			//console.log("Enviando..");
-			var IdMsg=Math.random()*100000;
-			var Objeto=new ObjectSend(ArrayDelaPropiaSala[i].JugadorSala,
-				IdMsg,socket.id,Habitacion,'cambio parejas ok');
-			ArrayAccionesDesconexiones.push(Objeto);
-			ArrayAccionesDesconexionesLocal.push(Objeto);
+			var OYJAHGADFQ=Math.random()*100000;
+			var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ[i].AURESXCGMK,
+				OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
+			NBEJWDVLLV.push(KCPHFPSPLQ);
+			QPHHGPRJAI.push(KCPHFPSPLQ);
 			
 			
-			socket.emit('cambio parejas ok',ArrayAccionesDesconexionesLocal[0],  
-			 function(idMensaje)
+			socket.emit('JHWIEIWIIW',QPHHGPRJAI[0],  
+			 function(XQLEOGMJYG)
 			 {			 
-				EliminarColaMensajes(idMensaje,'cambio parejas ok');
+				EXBCVLOIYJ(XQLEOGMJYG,'JHWIEIWIIW');
 			 }
 			);	
-			ArrayAccionesDesconexionesLocal.splice(0,1000);		
-			//ArrayJugadoresDesconectados.splice(0,1000);
+			QPHHGPRJAI.splice(0,1000);		
+			//KYDWXPGHVY.splice(0,1000);
 	
 	
 		}
@@ -3373,52 +3373,52 @@ onSocketCambiarParejasDesdeServer=function(ArrayDelaPropiaSalaClienteOrdenada,Qu
 	
 }
 
-onSocketCambiarParejasDesdeServerOK=function(QuienDaOK)
+BMNBIWEGUY=function(QuienDaOK)
 {
 	var i;
-	var FuerzaReparto=false;
-	ArrayOKParejas.push(QuienDaOK);
-	//console.log("Recibiendo respuestas: "+ArrayOKParejas.length+" ");
-	FuerzaRepartoPartidaInicial();
+	var IUWYUIYWIN=false;
+	NKJHKJHHHE.push(QuienDaOK);
+	//console.log("Recibiendo respuestas: "+NKJHKJHHHE.length+" ");
+	NNSHEUERGY();
 
 	
 }
 
-FuerzaRepartoPartidaInicial=function()
+NNSHEUERGY=function()
 {
 	
-	var FuerzaReparto=false;
+	var IUWYUIYWIN=false;
 	var i;
 	
-	//console.log("Debe repartir.."+ArrayOKParejas.length)
-	//CalculaControl();
-	CalculaControl();//1.0.6
+	//console.log("Debe repartir.."+NKJHKJHHHE.length)
+	//IOJCRKJSRL();
+	IOJCRKJSRL();//1.0.6
 	
-	if (ArrayOKParejas.length==4 && MazoD.length==0 && MazoL.length==0 && MazoR.length==0 && MazoU.length==0)
+	if (NKJHKJHHHE.length==4 && AGKVNAGGLB.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && TWJONOKGHC.length==0)
 	{
 		
 		
-		if (ArrayDelaPropiaSala.length==4){
+		if (XPBCVAGCDQ.length==4){
 		
-			/*for (i=0;i<=ArrayJugadoresDesconectados.length-1;i++)
+			/*for (i=0;i<=KYDWXPGHVY.length-1;i++)
 			{
-			//console.log("Desconectado "+QuienTomaElControl);	
-				if (ArrayJugadoresDesconectados[i].JugadorSala==ArrayDelaPropiaSala[3].JugadorSala && SoyElJugador==QuienTomaElControl)
+			//console.log("XJARYUVBCB "+ESKTEXAVHU);	
+				if (KYDWXPGHVY[i].AURESXCGMK==XPBCVAGCDQ[3].AURESXCGMK && TFSXFTYVGQ==ESKTEXAVHU)
 				{
-					FuerzaReparto=true;
+					IUWYUIYWIN=true;
 				}
 			}*/
 	
-			if ( SoyElJugador==QuienTomaElControl)
+			if ( TFSXFTYVGQ==ESKTEXAVHU)
 			{
-			 //if (ArrayDelaPropiaSala[3].JugadorSala==socket.id || FuerzaReparto==true){ //Se crea la baraja
+			 //if (XPBCVAGCDQ[3].AURESXCGMK==socket.id || IUWYUIYWIN==true){ //Se crea la baraja
 				
-				vTurno=1;
+				DVNRTQIWGL=1;
 				
-				if (ValidaRepartosJugador()==true) //1.0.8
+				if (OSBTHSJKFW()==true) //1.0.8
 				{
-					CrearBaraja(4);	//ILA QuienReparte
-					EnviarBaraja(MazoEnviar,Habitacion,4,SonVueltas,ArrayDelaPropiaSala,(MarcadorPartidasNuestro+MarcadorPartidasRival)) ; //ILA QuienReparte
+					ETKKAJPFXQ(4);	//ILA RDBQUAVHEP
+					HKJWHCKHWQ(WUHRYVMYBE,DFBVDPETGO,4,EVAILWGGKX,XPBCVAGCDQ,(JVQXQGYDHH+CNCCBHQJKL)) ; //ILA RDBQUAVHEP
 				}
 							
 			}
@@ -3428,7 +3428,7 @@ FuerzaRepartoPartidaInicial=function()
 	}
 	
 }
-onSocketClasificacion=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
+SRUKEMRQNI=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
 	var i;
 	var row; 
 	var cell1;
@@ -3450,7 +3450,7 @@ onSocketClasificacion=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
 	/*console.log(ObjetoPosicionSemanal._Posicion);
 	console.log(ObjetoPosicionSemanal._Puntos);*/
 	
-	OcultarFacebook();
+	NGHJWGJHWG();
 	
 	var table = document.getElementById("TextoClasificacionGlobal");
 	if (ObjetoPosicionGlobal._Puntos==0)
@@ -3529,16 +3529,16 @@ onSocketClasificacion=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
 			
 			
 			
-			if(Data[i].Foto!=undefined)
+			if(Data[i].QHHQPXWFNG!=undefined)
 			{
-				cell2.innerHTML =  "<img class='zoom' src='" + Data[i].Foto + "' style='max-width:30;max-height:30' >";
-				//cell2.innerHTML =  "<a href="+ Data[i].Foto+" class='fancy'><img src="+ Data[i].Foto+" style='max-width:140;max-height:140'></a>";
+				cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
+				//cell2.innerHTML =  "<a href="+ Data[i].QHHQPXWFNG+" class='fancy'><img src="+ Data[i].QHHQPXWFNG+" style='max-width:140;max-height:140'></a>";
 			}
 			else
 			{
-				cell2.innerHTML =  "<img class='zoom' src='" + Maquina+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
+				cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
 			}
-			cell3.innerHTML = Data[i].Jugador;
+			cell3.innerHTML = Data[i].SSUNXNEEHN;
 			cell4.innerHTML = Data[i]._Jugadas;
 			cell5.innerHTML = Data[i]._Ganadas;
 			cell6.innerHTML = Data[i]._Perdidas;
@@ -3546,7 +3546,7 @@ onSocketClasificacion=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
 			cell8.innerHTML = parseFloat(Data[i]._Puntos).toFixed(0);
 			
 			
-			Imagen=CalculaAvatarLogro(Data[i]._Nivel,1)
+			Imagen=OIQUIOCVKK(Data[i]._Nivel,1)
 			/*if  (Data[i]._Nivel==1)
 			{
 				Imagen='nivel_pro.png'
@@ -3563,7 +3563,7 @@ onSocketClasificacion=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
 			{
 				Imagen='nivel_diplomado.png'
 			}	*/		
-			cell9.innerHTML =  "<img class='zoom' src='" + Maquina+'/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
+			cell9.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
 			
 			index++;
 		}
@@ -3607,15 +3607,15 @@ onSocketClasificacion=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
 			cell9 = row.insertCell(8);
 			
 			cell1.innerHTML = Data[i]._Posicion;
-			if(Data[i].Foto!=undefined)
+			if(Data[i].QHHQPXWFNG!=undefined)
 			{
-				cell2.innerHTML =  "<img class='zoom' src='" + Data[i].Foto + "' style='max-width:30;max-height:30' >";
+				cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
 			}
 			else
 			{
-				cell2.innerHTML =  "<img class='zoom' src='" + Maquina+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
+				cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
 			}
-			cell3.innerHTML = Data[i].Jugador;
+			cell3.innerHTML = Data[i].SSUNXNEEHN;
 			cell4.innerHTML = Data[i]._Jugadas;
 			cell5.innerHTML = Data[i]._Ganadas;
 			cell6.innerHTML = Data[i]._Perdidas;
@@ -3628,7 +3628,7 @@ onSocketClasificacion=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
 				Imagen='medalla.png'
 			}
 		
-			cell9.innerHTML =  "<img class='zoom' src='" + Maquina+'/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
+			cell9.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
 			index++
 		}
 		
@@ -3650,31 +3650,31 @@ onSocketClasificacion=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
 	
 
 }
-onSocketValidacionSalaOK=function(Validacion,Sala){
+QAFLUOOCBX=function(Validacion,Sala){
 	if (Validacion==true)
 	{
-		InicioPartidaOnline(1,Sala);
+		KKJJKHAJHK(1,Sala);
 	}
 	else
 	{
 		//console.log("mal");
-		//onSocketMensajeServidor("Contraseña incorrecta.",false); //1.0.8
+		//VSXSYEUABW("Contraseña incorrecta.",false); //1.0.8
 		onSocketErrorDesdeServer("Error7","Contraseña incorrecta.");
 		
 	}
 }
-onSocketMensajeServidor=function(Texto,Salir)
+VSXSYEUABW=function(RPHWVBBGIM,Salir)
 {
 
 
-	var	TextoFormateado=EscribirTextoGuay(Texto,40);
+	var	UYEUYIYECB=IEUIUCYUCC(RPHWVBBGIM,40);
 	
-	var tw = game_objeto.add.tween(TextoFormateado).to( { alpha: 0 }, 1000, EfectoTween1, true,5000);
+	var tw = YMHIHSNADE.add.tween(UYEUYIYECB).to( { alpha: 0 }, 1000, KYFMRVNHIQ, true,5000);
 	tw.onComplete.add( function(){
 	
 		if (Salir==true)
 		{
-			SalirConfirmado();
+			FHKOYDXPCL();
 		}
 		
 	}
@@ -3685,336 +3685,336 @@ onSocketMensajeServidor=function(Texto,Salir)
 
 
 
-onSocketConexionFallida=function()
+FGRXSJFOOH=function()
 {
-	ErrorConexion();
+	YUXWLFWVRD();
 	
 }
 
-onSocketServidorCaido=function()
+MNTKNVATCM=function()
 {
-	ErrorConexion();
+	YUXWLFWVRD();
 }
 
-onSocketPerfil=function(ArrayDesdeServer)
+CURCDCWNHB=function(CYHNPORXFJ)
 {
-		//alert(ArrayDesdeServer[0].Tapete);
+		//alert(CYHNPORXFJ[0].IRQGAFESIC);
 		var tapete;
 		
-		ArrayInfoJugador.splice(0,1000);
+		PWMIBRSDCJ.splice(0,1000);
 		
-		tapete=ArrayDesdeServer[0].Tapete
-		if (cuatrotres==true)
+		tapete=CYHNPORXFJ[0].IRQGAFESIC
+		if (JHJEWHFWNL==true)
 		{
 			tapete=tapete.replace('.jpg','_43.jpg');
 		}
-		console.log("ENTRO "+ArrayDesdeServer[0].ChatDisponible)
-		ArrayInfoJugador.push(new ObjetoJugador(ArrayDesdeServer[0].Nombre,
-			ArrayDesdeServer[0].Sexo,
-			ArrayDesdeServer[0].Foto,
-			ArrayDesdeServer[0].Dorso,
+		console.log("ENTRO "+CYHNPORXFJ[0].MBMWBWUYUY)
+		PWMIBRSDCJ.push(new AWXPNWRCHC(CYHNPORXFJ[0].WWKVHIMWYD,
+			CYHNPORXFJ[0].BONQVNOXDP,
+			CYHNPORXFJ[0].QHHQPXWFNG,
+			CYHNPORXFJ[0].EJOYNSESRD,
 			tapete,
-			ArrayDesdeServer[0].ProveedorID,
-			ArrayDesdeServer[0].RedSocial,
-			ArrayDesdeServer[0].Admin,
-			ArrayDesdeServer[0].VersionOK,
-			ArrayDesdeServer[0].VersionMensaje,
-			ArrayDesdeServer[0].Noticia,
-			ArrayDesdeServer[0].IP,
-			ArrayDesdeServer[0].ChatDisponible,
-			ArrayDesdeServer[0].Nivel,
-			ArrayDesdeServer[0].CampeonSemanal
+			CYHNPORXFJ[0].FFRVOEAXTF,
+			CYHNPORXFJ[0].BDYYDTFQAO,
+			CYHNPORXFJ[0].UHYGLMAUNK,
+			CYHNPORXFJ[0].DNQIYVAFPR,
+			CYHNPORXFJ[0].XCXKVEEIOO,
+			CYHNPORXFJ[0].BUJELVTIKU,
+			CYHNPORXFJ[0].NBJHGSFSJS,
+			CYHNPORXFJ[0].MBMWBWUYUY,
+			CYHNPORXFJ[0].OIUIOWCHVW,
+			CYHNPORXFJ[0].NHWYTYUSYG
 			));
 			
-			//alert(ArrayInfoJugador[0].Tapete);
+			//alert(PWMIBRSDCJ[0].IRQGAFESIC);
 		
 		
 		
 		
-		if ( ArrayDesdeServer[0].VersionMensaje!="" )
+		if ( CYHNPORXFJ[0].XCXKVEEIOO!="" )
 		{
-			//console.log("Debe Salir "+ArrayDesdeServer[0].VersionOK);
-			//onSocketMensajeServidor(ArrayDesdeServer[0].VersionMensaje,ArrayDesdeServer[0].VersionOK); //1.0.8
-			onSocketErrorDesdeServer("Error8",ArrayDesdeServer[0].VersionMensaje); //1.0.8
-			//lVersionValida=ArrayDesdeServer[0].VersionOK; //1.0.8
+			//console.log("Debe Salir "+CYHNPORXFJ[0].DNQIYVAFPR);
+			//VSXSYEUABW(CYHNPORXFJ[0].XCXKVEEIOO,CYHNPORXFJ[0].DNQIYVAFPR); //1.0.8
+			onSocketErrorDesdeServer("Error8",CYHNPORXFJ[0].XCXKVEEIOO); //1.0.8
+			//VXEWRTCPMM=CYHNPORXFJ[0].DNQIYVAFPR; //1.0.8
 			
 			
 		}
 		
-		TapeteRemoto=ArrayInfoJugador[0].Tapete;
+		LEQRGVLYLX=PWMIBRSDCJ[0].IRQGAFESIC;
 	
 		
 		
-		TapeteRemotoLoader=new Phaser.Loader(game_objeto);
-		TapeteRemotoLoader.crossOrigin ="Anonymous"
-		TapeteRemotoLoader.image('TapeteRemoto', ArrayInfoJugador[0].Tapete);
-		TapeteRemotoLoader.onFileComplete.add( function() { fileCompleteTapete();  }  );
-		TapeteRemotoLoader.start();
+		DCIKAAMXTU=new Phaser.Loader(YMHIHSNADE);
+		DCIKAAMXTU.crossOrigin ="Anonymous"
+		DCIKAAMXTU.image('LEQRGVLYLX', PWMIBRSDCJ[0].IRQGAFESIC);
+		DCIKAAMXTU.onFileComplete.add( function() { BHAACHYLAS();  }  );
+		DCIKAAMXTU.start();
 
-		DorsoRemotoLoader=new Phaser.Loader(game_objeto);
-		DorsoRemotoLoader.crossOrigin ="Anonymous"
-		//DorsoRemotoLoader.removeFile('image', 'ReversoRemoto')
-		DorsoRemotoLoader.image('ReversoRemoto', ArrayInfoJugador[0].Dorso,true);
-		DorsoRemotoLoader.onFileComplete.add( function() { fileCompleteDorso();  }  );
-		DorsoRemotoLoader.start();
+		CBGXLQKDBG=new Phaser.Loader(YMHIHSNADE);
+		CBGXLQKDBG.crossOrigin ="Anonymous"
+		//CBGXLQKDBG.removeFile('image', 'ReversoRemoto')
+		CBGXLQKDBG.image('ReversoRemoto', PWMIBRSDCJ[0].EJOYNSESRD,true);
+		CBGXLQKDBG.onFileComplete.add( function() { GXFPVAOHBL();  }  );
+		CBGXLQKDBG.start();
 		
-		if (ArrayInfoJugador[0].Noticia!=null && ContadorNoticia<=2 && ArrayDelaPropiaSala.length!=4 && EntradaModoJuego==false )
+		if (PWMIBRSDCJ[0].BUJELVTIKU!=null && ISVLSNLHWR<=2 && XPBCVAGCDQ.length!=4 && EHUHWTYXOS==false )
 		{			
-			NoticiaRemotoLoader=new Phaser.Loader(game_objeto);
-			NoticiaRemotoLoader.crossOrigin ="Anonymous"
-			NoticiaRemotoLoader.image('NoticiaRemoto', ArrayInfoJugador[0].Noticia,true);
-			NoticiaRemotoLoader.onFileComplete.add( function() { fileCompleteNoticia();  }  );
-			NoticiaRemotoLoader.start();
+			ETJWOWNABD=new Phaser.Loader(YMHIHSNADE);
+			ETJWOWNABD.crossOrigin ="Anonymous"
+			ETJWOWNABD.image('NoticiaRemoto', PWMIBRSDCJ[0].BUJELVTIKU,true);
+			ETJWOWNABD.onFileComplete.add( function() { OJPKPPKDJU();  }  );
+			ETJWOWNABD.start();
 		}
 		
-		ContadorNoticia++;
-		if (ContadorNoticia>10)
+		ISVLSNLHWR++;
+		if (ISVLSNLHWR>10)
 		{
-			ContadorNoticia=0;
+			ISVLSNLHWR=0;
 		}
 		
-		if (BotonMonoJugador.visible==false) //1.0.8 El IF solamente. Resulta que según la rapidez de calculaperfil se superponían imágenes de los botones
+		if (UEHYPTREIH.visible==false) //1.0.8 El IF solamente. Resulta que según la rapidez de calculaperfil se superponían imágenes de los botones
 		{
-			ConfiguraPantallaMultijugador();
+			YBWXJFDOAW();
 		}
 	
 }
 
-onSocketPublicidad=function(ArrayDesdeServer)
+DVCXGBTNWL=function(CYHNPORXFJ)
 {
 	
 	var i;
 	
 	//No puedo hacer destroys porque se revienta en los carteles de fin de partida
-		/*for (i=0;i<=Mazo.length-1;i++)
+		/*for (i=0;i<=FXGSEGRXKC.length-1;i++)
 		{
-			Mazo[i].cartilla.destroy();
+			FXGSEGRXKC[i].TNFAGGMKXD.destroy();
 		}
 
-		for (i=0;i<=MazoR.length-1;i++)
+		for (i=0;i<=CBCNHFGWLU.length-1;i++)
 		{
-			MazoR[i].cartilla.destroy();
+			CBCNHFGWLU[i].TNFAGGMKXD.destroy();
 		}
 
-		for (i=0;i<=MazoL.length-1;i++)
+		for (i=0;i<=KNVKGHHTYC.length-1;i++)
 		{
-			MazoL[i].cartilla.destroy();
+			KNVKGHHTYC[i].TNFAGGMKXD.destroy();
 		}
 
-		for (i=0;i<=MazoU.length-1;i++)
+		for (i=0;i<=TWJONOKGHC.length-1;i++)
 		{
-			MazoU[i].cartilla.destroy();
+			TWJONOKGHC[i].TNFAGGMKXD.destroy();
 		}
-		for (i=0;i<=MazoD.length-1;i++)
+		for (i=0;i<=AGKVNAGGLB.length-1;i++)
 		{
-			MazoD[i].cartilla.destroy();
-		}
-
-		for (i=0;i<=MazoCentral.length-1;i++)
-		{
-			MazoCentral[i].cartilla.destroy();
+			AGKVNAGGLB[i].TNFAGGMKXD.destroy();
 		}
 
-		for (i=0;i<=CartaTriunfo.length-1;i++)
+		for (i=0;i<=VDKOVQXHON.length-1;i++)
 		{
-			CartaTriunfo[i].cartilla.destroy();
+			VDKOVQXHON[i].TNFAGGMKXD.destroy();
 		}
 
-		for (i=0;i<=MazoRecogido.length-1;i++)
+		for (i=0;i<=FBSDMRLVEL.length-1;i++)
 		{
-			MazoRecogido[i].destroy();
+			FBSDMRLVEL[i].TNFAGGMKXD.destroy();
 		}
 
-		for (i=0;i<=MazoRecogidoRival.length-1;i++)
+		for (i=0;i<=KBESPOUXUK.length-1;i++)
 		{
-			MazoRecogidoRival[i].destroy();
+			KBESPOUXUK[i].destroy();
+		}
+
+		for (i=0;i<=BRILHDFUSO.length-1;i++)
+		{
+			BRILHDFUSO[i].destroy();
 		}*/
 
 
-		//alert(ArrayDesdeServer[0].Tapete);
-		ArrayInfoJugador.splice(0,1000);
+		//alert(CYHNPORXFJ[0].IRQGAFESIC);
+		PWMIBRSDCJ.splice(0,1000);
 
-		var tapete=ArrayDesdeServer[0].Tapete;
-		if (cuatrotres==true)
+		var tapete=CYHNPORXFJ[0].IRQGAFESIC;
+		if (JHJEWHFWNL==true)
 		{
 			tapete=tapete.replace('.jpg','_43.jpg');
 		}
-		console.log("ENTRO1 "+ArrayDesdeServer[0].ChatDisponible)
-		ArrayInfoJugador.push(new ObjetoJugador(ArrayDesdeServer[0].Nombre,
-			ArrayDesdeServer[0].Sexo,
-			ArrayDesdeServer[0].Foto,
-			ArrayDesdeServer[0].Dorso,
+		console.log("ENTRO1 "+CYHNPORXFJ[0].MBMWBWUYUY)
+		PWMIBRSDCJ.push(new AWXPNWRCHC(CYHNPORXFJ[0].WWKVHIMWYD,
+			CYHNPORXFJ[0].BONQVNOXDP,
+			CYHNPORXFJ[0].QHHQPXWFNG,
+			CYHNPORXFJ[0].EJOYNSESRD,
 			tapete,
-			ArrayDesdeServer[0].ProveedorID,
-			ArrayDesdeServer[0].RedSocial,
-			ArrayDesdeServer[0].Admin,
-			ArrayDesdeServer[0].VersionOK,
-			ArrayDesdeServer[0].VersionMensaje,
-			ArrayDesdeServer[0].Noticia,
-			ArrayDesdeServer[0].IP,
-			ArrayDesdeServer[0].ChatDisponible,
-			ArrayDesdeServer[0].Nivel,
-			ArrayDesdeServer[0].CampeonSemanal			
+			CYHNPORXFJ[0].FFRVOEAXTF,
+			CYHNPORXFJ[0].BDYYDTFQAO,
+			CYHNPORXFJ[0].UHYGLMAUNK,
+			CYHNPORXFJ[0].DNQIYVAFPR,
+			CYHNPORXFJ[0].XCXKVEEIOO,
+			CYHNPORXFJ[0].BUJELVTIKU,
+			CYHNPORXFJ[0].NBJHGSFSJS,
+			CYHNPORXFJ[0].MBMWBWUYUY,
+			CYHNPORXFJ[0].OIUIOWCHVW,
+			CYHNPORXFJ[0].NHWYTYUSYG			
 			));
 			
-		if ( ArrayDesdeServer[0].VersionMensaje!="" )
+		if ( CYHNPORXFJ[0].XCXKVEEIOO!="" )
 		{
-			//console.log("Debe Salir "+ArrayDesdeServer[0].VersionOK)
-			//onSocketMensajeServidor(ArrayDesdeServer[0].VersionMensaje,ArrayDesdeServer[0].VersionOK)	//1.0.8
-			onSocketErrorDesdeServer("Error8",ArrayDesdeServer[0].VersionMensaje); //1.0.8
-			//lVersionValida=ArrayDesdeServer[0].VersionOK; //1.0.8
+			//console.log("Debe Salir "+CYHNPORXFJ[0].DNQIYVAFPR)
+			//VSXSYEUABW(CYHNPORXFJ[0].XCXKVEEIOO,CYHNPORXFJ[0].DNQIYVAFPR)	//1.0.8
+			onSocketErrorDesdeServer("Error8",CYHNPORXFJ[0].XCXKVEEIOO); //1.0.8
+			//VXEWRTCPMM=CYHNPORXFJ[0].DNQIYVAFPR; //1.0.8
 		}	
 			
-		TapeteRemoto=ArrayInfoJugador[0].Tapete;
+		LEQRGVLYLX=PWMIBRSDCJ[0].IRQGAFESIC;
 	
 		
 		
-		TapeteRemotoLoader=new Phaser.Loader(game_objeto);
-		TapeteRemotoLoader.crossOrigin ="Anonymous"
-		TapeteRemotoLoader.image('TapeteRemoto', ArrayInfoJugador[0].Tapete);
-		TapeteRemotoLoader.onFileComplete.add( function() { fileCompleteTapete();  }  );
-		TapeteRemotoLoader.start();
+		DCIKAAMXTU=new Phaser.Loader(YMHIHSNADE);
+		DCIKAAMXTU.crossOrigin ="Anonymous"
+		DCIKAAMXTU.image('LEQRGVLYLX', PWMIBRSDCJ[0].IRQGAFESIC);
+		DCIKAAMXTU.onFileComplete.add( function() { BHAACHYLAS();  }  );
+		DCIKAAMXTU.start();
 		
-		DorsoRemotoLoader=new Phaser.Loader(game_objeto);
-		DorsoRemotoLoader.crossOrigin ="Anonymous"
-		//DorsoRemotoLoader.removeFile('image', 'ReversoRemoto')
-		DorsoRemotoLoader.image('ReversoRemoto', ArrayInfoJugador[0].Dorso,true);
-		// alert(ArrayInfoJugador[0].Dorso);
-		DorsoRemotoLoader.onFileComplete.add( function() { fileCompleteDorso();  }  );
-		DorsoRemotoLoader.start();
+		CBGXLQKDBG=new Phaser.Loader(YMHIHSNADE);
+		CBGXLQKDBG.crossOrigin ="Anonymous"
+		//CBGXLQKDBG.removeFile('image', 'ReversoRemoto')
+		CBGXLQKDBG.image('ReversoRemoto', PWMIBRSDCJ[0].EJOYNSESRD,true);
+		// alert(PWMIBRSDCJ[0].EJOYNSESRD);
+		CBGXLQKDBG.onFileComplete.add( function() { GXFPVAOHBL();  }  );
+		CBGXLQKDBG.start();
 		
-		if (ArrayInfoJugador[0].Noticia!=null && ContadorNoticia<=2 && ArrayDelaPropiaSala.length!=4 && EntradaModoJuego==false )
+		if (PWMIBRSDCJ[0].BUJELVTIKU!=null && ISVLSNLHWR<=2 && XPBCVAGCDQ.length!=4 && EHUHWTYXOS==false )
 		{
-			NoticiaRemoto=ArrayInfoJugador[0].Noticia
-			NoticiaRemotoLoader=new Phaser.Loader(game_objeto);
-			NoticiaRemotoLoader.crossOrigin ="Anonymous"
-			NoticiaRemotoLoader.image('NoticiaRemoto', ArrayInfoJugador[0].Noticia);
-			NoticiaRemotoLoader.onFileComplete.add( function() { fileCompleteNoticia();  }  );
-			NoticiaRemotoLoader.start();		
+			NoticiaRemoto=PWMIBRSDCJ[0].BUJELVTIKU
+			ETJWOWNABD=new Phaser.Loader(YMHIHSNADE);
+			ETJWOWNABD.crossOrigin ="Anonymous"
+			ETJWOWNABD.image('NoticiaRemoto', PWMIBRSDCJ[0].BUJELVTIKU);
+			ETJWOWNABD.onFileComplete.add( function() { OJPKPPKDJU();  }  );
+			ETJWOWNABD.start();		
 		}
-		ContadorNoticia++;
-		if (ContadorNoticia>10)
+		ISVLSNLHWR++;
+		if (ISVLSNLHWR>10)
 		{
-			ContadorNoticia=0;
+			ISVLSNLHWR=0;
 		}
 	
 }
 
 
 
-onSocketDesconectadoDesdeServer=function(JugadorQueDesconecta,NombreDesconectado,posicionJugador,MinutosSancion)
+GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion)
 {
-	var TextDesconectado;
+	var LQPUBPQTJA;
 	var i;
 	var u;
-	var posicion;
-	var Letra;
+	var NPYBJSHIFL;
+	var STLEOJDWSU;
 	
 	//return true;
 	
 	log(true,"Desconecta el jugador ");
-	log(true,"JUGADOR QUE DESCONECTA "+JugadorQueDesconecta);
+	log(true,"JUGADOR QUE DESCONECTA "+JJHEHUIEGO);
 	
-	//console.log("Jugador que desconecta "+JugadorQueDesconecta);
-	for (var i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	//console.log("SSUNXNEEHN que desconecta "+JJHEHUIEGO);
+	for (var i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		//console.log("Desconectando... "+ArrayDelaPropiaSala[i].JugadorSala+" "+ArrayDelaPropiaSala[i].Nombre);
-		if (ArrayDelaPropiaSala[i].JugadorSala==JugadorQueDesconecta)
+		//console.log("Desconectando... "+XPBCVAGCDQ[i].AURESXCGMK+" "+XPBCVAGCDQ[i].WWKVHIMWYD);
+		if (XPBCVAGCDQ[i].AURESXCGMK==JJHEHUIEGO)
 		{
-			ArrayDelaPropiaSala[i].Desconectado=true;
-			ArrayJugadoresDesconectados.push( new ObjetoDesconexion ( (i+1),JugadorQueDesconecta ));
-			//ArrayJugadoresDesconectadosID.push(JugadorQueDesconecta);
+			XPBCVAGCDQ[i].XJARYUVBCB=true;
+			KYDWXPGHVY.push( new UVYJLLYCYD ( (i+1),JJHEHUIEGO ));
+			//ArrayJugadoresDesconectadosID.push(JJHEHUIEGO);
 		}			
 		
 	}
-	CalculaControl();
+	IOJCRKJSRL();
 	
 		//No se si sobra
-	if (PartidaComenzada==false && SoyElJugador==QuienTomaElControl) //1.0.6
+	if (MYQBNBVHKU==false && TFSXFTYVGQ==ESKTEXAVHU) //1.0.6
 	{	
-		var ObjectSend=function( Habitacion,JugadorSala,idPartida,
-			IdMsg,ClientId,SalaID,Mensaje){
-			 this.Habitacion=Habitacion
-			 this.JugadorSala=JugadorSala
-			 this.idPartida=idPartida
+		var GXNRNMAAKW=function( DFBVDPETGO,AURESXCGMK,MQUGCIUQII,
+			OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+			 this.DFBVDPETGO=DFBVDPETGO
+			 this.AURESXCGMK=AURESXCGMK
+			 this.MQUGCIUQII=MQUGCIUQII
 								 
-			 this.IdMsg=IdMsg
-			 this.ClientId=ClientId
-			 this.SalaID=SalaID
-			 this.Mensaje=Mensaje
+			 this.OYJAHGADFQ=OYJAHGADFQ
+			 this.OJPXTRQDKS=OJPXTRQDKS
+			 this.LYHKNIMVEB=LYHKNIMVEB
+			 this.RHOLNWBOXR=RHOLNWBOXR
 			 
-			 this.Fecha=new Date(Date.now());
+			 this.EBAPPJFYSW=new Date(Date.now());
 		 }
-		var ArrayAccionesDesconexionesLocal=[];
-		ArrayAccionesDesconexionesLocal.splice(0,1000);
+		var QPHHGPRJAI=[];
+		QPHHGPRJAI.splice(0,1000);
 
 			
-		var IdMsg=Math.random()*100000;
-		var Objeto=new ObjectSend(Habitacion,JugadorQueDesconecta,idPartida,
-			IdMsg,JugadorQueDesconecta,Habitacion,'Estoy listo');
-		ArrayAccionesDesconexiones.push(Objeto);
-		ArrayAccionesDesconexionesLocal.push(Objeto);
+		var OYJAHGADFQ=Math.random()*100000;
+		var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,JJHEHUIEGO,MQUGCIUQII,
+			OYJAHGADFQ,JJHEHUIEGO,DFBVDPETGO,'BKEMJDLQQM');
+		NBEJWDVLLV.push(KCPHFPSPLQ);
+		QPHHGPRJAI.push(KCPHFPSPLQ);
 
 
-		socket.emit('Estoy listo',ArrayAccionesDesconexionesLocal[0],
-		 function(idMensaje)
+		socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
+		 function(XQLEOGMJYG)
 		 {			 
-			EliminarColaMensajes(idMensaje,'Estoy listo');
+			EXBCVLOIYJ(XQLEOGMJYG,'BKEMJDLQQM');
 		 }
 		);						
-		ArrayAccionesDesconexionesLocal.splice(0,1000);	
+		QPHHGPRJAI.splice(0,1000);	
 	}
 	
 
 	
 	
-	//console.log("MADRE MIA: "+SoyElJugador)
-	for(i=0;i<=ArrayJugadoresDesconectados.length-1;i++)
+	//console.log("MADRE MIA: "+TFSXFTYVGQ)
+	for(i=0;i<=KYDWXPGHVY.length-1;i++)
 	{		
-		//console.log("-- JUGADORES DESCONECTADOS "+ArrayJugadoresDesconectados[i].Jugador);
+		//console.log("-- JUGADORES DESCONECTADOS "+KYDWXPGHVY[i].SSUNXNEEHN);
 	}
 	
 
 		//1.0.4
-		if (ModoMultijugador==true && PartidaComenzada==false)//1.0.6
+		if (EGPDVIEJEL==true && MYQBNBVHKU==false)//1.0.6
 		{
-			if (SoyElJugador==QuienTomaElControl && MarcadorPartidasNuestro==0 && MarcadorPartidasRival==0 && SonVueltas==false && MarcadorNuestro==0 && MarcadorRival==0) //1.0.8 Nos aseguramos con MarcadorNuestro y MarcadorRival de que realmente la partida nunca comenzó
+			if (TFSXFTYVGQ==ESKTEXAVHU && JVQXQGYDHH==0 && CNCCBHQJKL==0 && EVAILWGGKX==false && UHHXSNXXJK==0 && PXGXKDDNFK==0) //1.0.8 Nos aseguramos con UHHXSNXXJK y PXGXKDDNFK de que realmente la partida nunca comenzó
 			{
 				if (socket!=null)
 				{
-					var ObjectSend=function( QuienSoy,
-						IdMsg,ClientId,SalaID,Mensaje){
-						 this.QuienSoy=SoyElJugador
+					var GXNRNMAAKW=function( QuienSoy,
+						OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+						 this.QuienSoy=TFSXFTYVGQ
 						 
 															 
-						 this.IdMsg=IdMsg
-						 this.ClientId=ClientId
-						 this.SalaID=SalaID
-						 this.Mensaje=Mensaje
+						 this.OYJAHGADFQ=OYJAHGADFQ
+						 this.OJPXTRQDKS=OJPXTRQDKS
+						 this.LYHKNIMVEB=LYHKNIMVEB
+						 this.RHOLNWBOXR=RHOLNWBOXR
 						 
-						 this.Fecha=new Date(Date.now());
+						 this.EBAPPJFYSW=new Date(Date.now());
 					 }
 
 
-					 var ArrayAccionesDesconexionesLocal=[];
-					ArrayAccionesDesconexionesLocal.splice(0,1000);
+					 var QPHHGPRJAI=[];
+					QPHHGPRJAI.splice(0,1000);
 
 						
-					var IdMsg=Math.random()*100000;
-					var Objeto=new ObjectSend(SoyElJugador,
-						IdMsg,socket.id,Habitacion,'cambio parejas ok');
-					ArrayAccionesDesconexiones.push(Objeto);
-					ArrayAccionesDesconexionesLocal.push(Objeto);
+					var OYJAHGADFQ=Math.random()*100000;
+					var KCPHFPSPLQ=new GXNRNMAAKW(TFSXFTYVGQ,
+						OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
+					NBEJWDVLLV.push(KCPHFPSPLQ);
+					QPHHGPRJAI.push(KCPHFPSPLQ);
 
 					
-					//console.log("Envio cambio parejas ok desde desconectados");
-					socket.emit('cambio parejas ok',ArrayAccionesDesconexionesLocal[0],
-					 function(idMensaje)
+					//console.log("Envio JHWIEIWIIW desde desconectados");
+					socket.emit('JHWIEIWIIW',QPHHGPRJAI[0],
+					 function(XQLEOGMJYG)
 					 {			 
-						EliminarColaMensajes(idMensaje,'cambio parejas ok');
+						EXBCVLOIYJ(XQLEOGMJYG,'JHWIEIWIIW');
 					 }
 					);	
-					ArrayAccionesDesconexionesLocal.splice(0,1000);		
+					QPHHGPRJAI.splice(0,1000);		
 				}
 			}	
 		}
@@ -4028,184 +4028,184 @@ onSocketDesconectadoDesdeServer=function(JugadorQueDesconecta,NombreDesconectado
 	
 
 	
-	for (var i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	for (var i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		if (ArrayDelaPropiaSala[i].JugadorSala==JugadorQueDesconecta)
+		if (XPBCVAGCDQ[i].AURESXCGMK==JJHEHUIEGO)
 		{
-			posicion=i;			
+			NPYBJSHIFL=i;			
 		}			
 		
 	}
 	
-	if (posicion==0)
+	if (NPYBJSHIFL==0)
 	{
-		textJugador1.text="Ordenador 1";
-		ArrayDelaPropiaSala[posicion].Nombre="Ordenador 1"
-		//Avatar1.loadTexture('Maquina', 0);
-		AvatarSprite1.loadTexture('Maquina', 0);
-		AvatarSprite1.width=AnchoFoto;
-		AvatarSprite1.height=AnchoFoto;
+		UWROMBGGSY.text="Ordenador 1";
+		XPBCVAGCDQ[NPYBJSHIFL].WWKVHIMWYD="Ordenador 1"
+		//IDKJKASOTQ.loadTexture('JHGHJAGCMC', 0);
+		QYBDUBOCBT.loadTexture('JHGHJAGCMC', 0);
+		QYBDUBOCBT.width=PJRPWGXEYM;
+		QYBDUBOCBT.height=PJRPWGXEYM;
 		
-		if (AvatarMedalla1!=undefined)
+		if (NBHWGUGUWB!=undefined)
 		{
-			AvatarMedalla1.destroy();
+			NBHWGUGUWB.destroy();
 		}
 
-		if (AvatarLogro1!=undefined)
+		if (XPLHSUIGIU!=undefined)
 		{
-			AvatarLogro1.destroy();
+			XPLHSUIGIU.destroy();
 		}		
 		
 		
 		
 	}
 	
-	if (posicion==1)
+	if (NPYBJSHIFL==1)
 	{
-		textJugador2.text="Ordenador 2";
-		ArrayDelaPropiaSala[posicion].Nombre="Ordenador 2"
-		AvatarSprite2.loadTexture('Maquina', 0);
-		AvatarSprite2.width=AnchoFoto;
-		AvatarSprite2.height=AnchoFoto;
+		HUPALFWPFI.text="Ordenador 2";
+		XPBCVAGCDQ[NPYBJSHIFL].WWKVHIMWYD="Ordenador 2"
+		BDQHBTUNWW.loadTexture('JHGHJAGCMC', 0);
+		BDQHBTUNWW.width=PJRPWGXEYM;
+		BDQHBTUNWW.height=PJRPWGXEYM;
 		
-		if (AvatarMedalla2!=undefined)
+		if (HGYGDVGQUY!=undefined)
 		{
-			AvatarMedalla2.destroy();
+			HGYGDVGQUY.destroy();
 		}
 
-		if (AvatarLogro2!=undefined)
+		if (NHGUGUEUER!=undefined)
 		{
-			AvatarLogro2.destroy();
+			NHGUGUEUER.destroy();
 		}	}	
-	if (posicion==2)
+	if (NPYBJSHIFL==2)
 	{
-		textJugador3.text="Ordenador 3";
-		ArrayDelaPropiaSala[posicion].Nombre="Ordenador 3"
-		AvatarSprite3.loadTexture('Maquina', 0);
-		AvatarSprite3.width=AnchoFoto;
-		AvatarSprite3.height=AnchoFoto;
+		BXYCJYDVRT.text="Ordenador 3";
+		XPBCVAGCDQ[NPYBJSHIFL].WWKVHIMWYD="Ordenador 3"
+		PRWBHVTUSC.loadTexture('JHGHJAGCMC', 0);
+		PRWBHVTUSC.width=PJRPWGXEYM;
+		PRWBHVTUSC.height=PJRPWGXEYM;
 		
-		if (AvatarMedalla3!=undefined)
+		if (XXGUGUYWUW!=undefined)
 		{
-			AvatarMedalla3.destroy();
+			XXGUGUYWUW.destroy();
 		}
 
-		if (AvatarLogro3!=undefined)
+		if (HGWUGIVGWP!=undefined)
 		{
-			AvatarLogro3.destroy();
+			HGWUGIVGWP.destroy();
 		}		
 	}
-	if (posicion==3)
+	if (NPYBJSHIFL==3)
 	{
-		textJugador4.text="Ordenador 4";
-		ArrayDelaPropiaSala[posicion].Nombre="Ordenador 4"
-		AvatarSprite4.loadTexture('Maquina', 0);
-		AvatarSprite4.width=AnchoFoto;
-		AvatarSprite4.height=AnchoFoto;
+		IRAIEARIWA.text="Ordenador 4";
+		XPBCVAGCDQ[NPYBJSHIFL].WWKVHIMWYD="Ordenador 4"
+		BMWINQGWDD.loadTexture('JHGHJAGCMC', 0);
+		BMWINQGWDD.width=PJRPWGXEYM;
+		BMWINQGWDD.height=PJRPWGXEYM;
 		
-		if (AvatarMedalla4!=undefined)
+		if (XKIOHWGJHG!=undefined)
 		{
-			AvatarMedalla4.destroy();
+			XKIOHWGJHG.destroy();
 		}
 
-		if (AvatarLogro4!=undefined)
+		if (HGWYUYGVWO!=undefined)
 		{
-			AvatarLogro4.destroy();
+			HGWYUYGVWO.destroy();
 		}	
 	}	
 	
-	/* recuperar if (ArrayJugadoresDesconectados.length==0)
+	/* recuperar if (KYDWXPGHVY.length==0)
 	{
-		MostrarElegirPareja(false);
+		VVCDGUUDWR(false);
 	}*/
 	
-	DibujaMensajeEspecial('Desconectado',posicion);
+	VWYRRWMSJI('XJARYUVBCB',NPYBJSHIFL);
 	if (MinutosSancion>0)
 	{
 		onSocketErrorDesdeServer("Error13",NombreDesconectado+" será sancionado con "+MinutosSancion+" minutos si no logra reconectar.");
 	}
 
 	
-	//FuerzaRepartoPartidaInicial();
-	/*if (SoyElJugador==QuienTomaElControl && MarcadorPartidasNuestro==0 && MarcadorPartidasRival==0 && SonVueltas==false && MazoD.length==0 && MazoCentral.length==0 && MazoL.length==0 && MazoR.length==0 && ArrayDelaPropiaSala.length>=4)
+	//NNSHEUERGY();
+	/*if (TFSXFTYVGQ==ESKTEXAVHU && JVQXQGYDHH==0 && CNCCBHQJKL==0 && EVAILWGGKX==false && AGKVNAGGLB.length==0 && VDKOVQXHON.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && XPBCVAGCDQ.length>=4)
 	{	
-		for (i=0;i<=ArrayJugadoresDesconectados.length-1;i++)
+		for (i=0;i<=KYDWXPGHVY.length-1;i++)
 		{
-			if (ArrayJugadoresDesconectados[i].JugadorSala==ArrayDelaPropiaSala[3].JugadorSala)
+			if (KYDWXPGHVY[i].AURESXCGMK==XPBCVAGCDQ[3].AURESXCGMK)
 			{
 				RespuestaPareja(2);
 			}
 		}
 	}*/
 	
-	/*timerRetardo.add(5000, function(){
-		timerRetardo.stop();
-		CalculaControl();	
+	/*PUBDSNTIUS.add(5000, function(){
+		PUBDSNTIUS.stop();
+		IOJCRKJSRL();	
 		//console.log("El controlaco");
 	}
 	);	
-	timerRetardo.start();*/
+	PUBDSNTIUS.start();*/
 	
-	//1.0.6  && QuienTomaElControl==SoyElJugador
-	if (MazoD.length==0 && MazoCentral.length==0 && MazoL.length==0 && MazoR.length==0 && ArrayDelaPropiaSala.length>=4 && QuienTomaElControl==SoyElJugador && FinalizandoPartida==false) //1.0.8 FinalizandoPartida==false)
+	//1.0.6  && ESKTEXAVHU==TFSXFTYVGQ
+	if (AGKVNAGGLB.length==0 && VDKOVQXHON.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && XPBCVAGCDQ.length>=4 && ESKTEXAVHU==TFSXFTYVGQ && JHHWEKWEJK==false) //1.0.8 JHHWEKWEJK==false)
 	{
 		//console.log("GAÑAN");
-		NuevaPartida(vTurno);
+		KPQSPDMKJE(DVNRTQIWGL);
 		//console.log("Llamada 7");
-		//CalculaControl();
+		//IOJCRKJSRL();
 	}
 		
 		
 }
 
 
-DibujaMensajeEspecial=function(ImagenBocadillo,posicion)
+VWYRRWMSJI=function(HOGPTRLBYH,NPYBJSHIFL)
 {
 	//return true;
-	//	var ImagenBocadillo= 'Desconectado';
-	var Letra;
-	var posXBocadillo;
-	var posYBocadillo;
+	//	var HOGPTRLBYH= 'XJARYUVBCB';
+	var STLEOJDWSU;
+	var GCTYDSCWXE;
+	var YSMHGCUJFD;
 	
-	Letra= DevuelveUbicacionCarta(posicion+1);
+	STLEOJDWSU= HHOPUSIABJ(NPYBJSHIFL+1);
 	
-	if (Letra=="D")
+	if (STLEOJDWSU=="D")
 	{
 
-			posXBocadillo=game_objeto.world.centerX; //(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+(AnchoCartaEscalado*1.5);
-			posYBocadillo=game_objeto.world.height-(AnchoCartaEscalado*2);
+			GCTYDSCWXE=YMHIHSNADE.world.centerX; //(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+(SXSHBRJFIR*1.5);
+			YSMHGCUJFD=YMHIHSNADE.world.height-(SXSHBRJFIR*2);
 			
 
 
 
 	}	
-	if (Letra=="U")
+	if (STLEOJDWSU=="U")
 	{
 	
 						
-			posXBocadillo=game_objeto.world.centerX; //(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+(AnchoCartaEscalado*1.5);
-			posYBocadillo=(AltoCarta)*1.5;	
+			GCTYDSCWXE=YMHIHSNADE.world.centerX; //(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+(SXSHBRJFIR*1.5);
+			YSMHGCUJFD=(MKSLYEWQQS)*1.5;	
 
 		
 
 	}
-	if (Letra=="L")
+	if (STLEOJDWSU=="L")
 	{
 	
-			posXBocadillo=(AnchoCarta*2.5);
-			//posYBocadillo=game_objeto.world.height/2-AnchoCarta;
-			posYBocadillo=game_objeto.world.centerY;
+			GCTYDSCWXE=(COIVBWRMCC*2.5);
+			//YSMHGCUJFD=YMHIHSNADE.world.height/2-COIVBWRMCC;
+			YSMHGCUJFD=YMHIHSNADE.world.centerY;
 			
 	
 		
 	}
-	if (Letra=="R")
+	if (STLEOJDWSU=="R")
 	{
 		
 	
-			posXBocadillo=game_objeto.world.width-(AnchoCarta*2.5);
-			//posYBocadillo=game_objeto.world.height/2-AnchoCarta;	
-			posYBocadillo=game_objeto.world.centerY;
+			GCTYDSCWXE=YMHIHSNADE.world.width-(COIVBWRMCC*2.5);
+			//YSMHGCUJFD=YMHIHSNADE.world.height/2-COIVBWRMCC;	
+			YSMHGCUJFD=YMHIHSNADE.world.centerY;
 			
 	
 	}	
@@ -4218,63 +4218,63 @@ DibujaMensajeEspecial=function(ImagenBocadillo,posicion)
 		window.navigator.vibrate(300);
 	}*/
 		
-	log(false,"posicion Bocadillo: "+posXBocadillo);
+	log(false,"NPYBJSHIFL FTBVKLREAE: "+GCTYDSCWXE);
 		
 		
 		
-	//var bmd = game_objeto.add.bitmapData(game_objeto.world.width,game_objeto.world.height);
+	//var bmd = YMHIHSNADE.add.bitmapData(YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 
 	// draw to the canvas context like normal
 	/*bmd.ctx.beginPath();
-	bmd.ctx.rect(0,0,game_objeto.world.width,game_objeto.world.height);
+	bmd.ctx.rect(0,0,YMHIHSNADE.world.width,YMHIHSNADE.world.height);
 	bmd.ctx.fillStyle = '#000000';
 	bmd.ctx.fill();*/
 
 	// use the bitmap data as the texture for the sprite
-	var FondoNegro = game_objeto.add.sprite(0, 0, bmd);
-	FondoNegro.alpha=0.7;
+	var WTCIGMLJUY = YMHIHSNADE.add.sprite(0, 0, bmd);
+	WTCIGMLJUY.alpha=0.7;
 
 
-	var Bocadillo=game_objeto.add.sprite(posXBocadillo,posYBocadillo, ImagenBocadillo);
-	Bocadillo.anchor.setTo(0.5, 0.5);
+	var FTBVKLREAE=YMHIHSNADE.add.sprite(GCTYDSCWXE,YSMHGCUJFD, HOGPTRLBYH);
+	FTBVKLREAE.anchor.setTo(0.5, 0.5);
 
 
 		
-		var twFondoNegro = game_objeto.add.tween(FondoNegro).to( { alpha: 0.7 }, 1000, EfectoTween1, true);
-		twFondoNegro.onComplete.add(  function(){
-				twFondoNegro = game_objeto.add.tween(FondoNegro).to( { alpha: 0 }, 500, EfectoTween1, true,1000,0);
+		var TTCLPDJAMD = YMHIHSNADE.add.tween(WTCIGMLJUY).to( { alpha: 0.7 }, 1000, KYFMRVNHIQ, true);
+		TTCLPDJAMD.onComplete.add(  function(){
+				TTCLPDJAMD = YMHIHSNADE.add.tween(WTCIGMLJUY).to( { alpha: 0 }, 500, KYFMRVNHIQ, true,1000,0);
 			}
 		);
 		
 		
-		var twBocadilloDesconectado = game_objeto.add.tween(Bocadillo).to( { alpha: 1 }, 1000, EfectoTween1, true);
-		twBocadilloDesconectado.onComplete.add(  function(){
-				twBocadilloDesconectado = game_objeto.add.tween(Bocadillo).to( { alpha: 0 }, 500, EfectoTween1, true,1000,0);
+		var NKJEHKJJJK = YMHIHSNADE.add.tween(FTBVKLREAE).to( { alpha: 1 }, 1000, KYFMRVNHIQ, true);
+		NKJEHKJJJK.onComplete.add(  function(){
+				NKJEHKJJJK = YMHIHSNADE.add.tween(FTBVKLREAE).to( { alpha: 0 }, 500, KYFMRVNHIQ, true,1000,0);
 			}
 		);
 }
 
-onSocketReconectadoDesdeServer=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,NuevoID)
+BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,NuevoID)
 {
-	var TextDesconectado;
+	var LQPUBPQTJA;
 	var i;
 	var u;
-	var posicion;
-	var Letra;
+	var NPYBJSHIFL;
+	var STLEOJDWSU;
 	
 	//return true;
-	//timerRetardo.stop();
+	//PUBDSNTIUS.stop();
 	
 	log(true,"Desconecta el jugador ");
 	log(true,"JUGADOR QUE RECONECTA "+JugadorQueReconecta);
 	
 	
 	
-	for (i=0;i<=ArrayJugadoresDesconectados.length-1;i++)
+	for (i=0;i<=KYDWXPGHVY.length-1;i++)
 	{
-		if (ArrayJugadoresDesconectados[i].JugadorSala==JugadorQueReconecta)
+		if (KYDWXPGHVY[i].AURESXCGMK==JugadorQueReconecta)
 		{
-			ArrayJugadoresDesconectados.splice(i,1);
+			KYDWXPGHVY.splice(i,1);
 			break;
 		}			
 		
@@ -4282,14 +4282,14 @@ onSocketReconectadoDesdeServer=function(JugadorQueReconecta,NombreDesconectado,p
 	
 	
 	var NumeroJugador=-1;
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		//console.log("Actualizando id: "+ArrayDelaPropiaSala[i].JugadorSala+ " "+ JugadorQueReconecta);
-		if (ArrayDelaPropiaSala[i].JugadorSala==JugadorQueReconecta)
+		//console.log("Actualizando id: "+XPBCVAGCDQ[i].AURESXCGMK+ " "+ JugadorQueReconecta);
+		if (XPBCVAGCDQ[i].AURESXCGMK==JugadorQueReconecta)
 		{
-			posicion=i;	
-			ArrayDelaPropiaSala[i].Desconectado=false;
-			ArrayDelaPropiaSala[i].JugadorSala=NuevoID;
+			NPYBJSHIFL=i;	
+			XPBCVAGCDQ[i].XJARYUVBCB=false;
+			XPBCVAGCDQ[i].AURESXCGMK=NuevoID;
 			//console.log("Mi nuevo id: "+NuevoID);
 			break;
 		}
@@ -4297,202 +4297,202 @@ onSocketReconectadoDesdeServer=function(JugadorQueReconecta,NombreDesconectado,p
 	
 	
 
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		//console.log("PELICULA "+ArrayDelaPropiaSala[i].Desconectado);
+		//console.log("PELICULA "+XPBCVAGCDQ[i].XJARYUVBCB);
 	}
 	
-	DibujaJugadores();
+	JHKJKHHJCC();
 
 	
-	DibujaMensajeEspecial('Conectado',posicion);
-	CalculaControl();//1.0.6
+	VWYRRWMSJI('Conectado',NPYBJSHIFL);
+	IOJCRKJSRL();//1.0.6
 	
 }
 
 
-function fileCompleteTapete() {
+function BHAACHYLAS() {
 
 	var key;
 	
-	//key='TapeteRemoto';		
+	//key='LEQRGVLYLX';		
 	
 	
-	//BackTapete.name = key;
-	//BackTapete.loadTexture(key, 0);
+	//KVBNWXDTON.name = key;
+	//KVBNWXDTON.loadTexture(key, 0);
 	
-	LogicalTapeteRemoto=true;
-	//alert("TAPETE DESCARGADO "+LogicalTapeteRemoto);
+	NHLRWTHYVG=true;
+	//alert("TAPETE DESCARGADO "+NHLRWTHYVG);
 	
 
 }
 
 
-function fileCompleteDorso() {
+function GXFPVAOHBL() {
 
 	var key;
 	
-	LogicalDorsoRemoto=true;
+	VKYLOUGFGR=true;
 	
 	
-	//AvatarSprite1.x=AvatarSprite1.x*(-1);
-	//AvatarSprite1.y=AvatarSprite1.y*(-1);
+	//QYBDUBOCBT.x=QYBDUBOCBT.x*(-1);
+	//QYBDUBOCBT.y=QYBDUBOCBT.y*(-1);
 	//BackDorso.name = key;
 	//BackDorso.loadTexture(key, 0);
 	
-	//AvatarSprite1.width=AnchoFoto;
-	//AvatarSprite1.height=AnchoFoto;
+	//QYBDUBOCBT.width=PJRPWGXEYM;
+	//QYBDUBOCBT.height=PJRPWGXEYM;
 	
 	//log(true,"Se recalcula");
 
 }
 
 
-function fileCompleteNoticia() {
+function OJPKPPKDJU() {
 
 	var key;
 	
-	if (ArrayInfoJugador[0].Noticia!=null)
+	if (PWMIBRSDCJ[0].BUJELVTIKU!=null)
 	{
 		//LogicalNoticia=true;
-		Noticia.visible=true;
-		Noticia.loadTexture('NoticiaRemoto', 0);
-		var tw=game_objeto.add.tween(Noticia).to( { y: 345 }, 1000, EfectoTweenRebote);
+		BUJELVTIKU.visible=true;
+		BUJELVTIKU.loadTexture('NoticiaRemoto', 0);
+		var tw=YMHIHSNADE.add.tween(BUJELVTIKU).to( { y: 345 }, 1000, QUXNHVVDDK);
 		tw.start();
 		//console.log("DIBUJA");
 	}
 
 }
 
-function fileComplete1() {
+function SJXIUSUWHQ() {
 
 	var key;
 	
 	key='imagen1';		
 	
-	if (AvatarSprite1.x<0)
+	if (QYBDUBOCBT.x<0)
 	{
-		AvatarSprite1.x=AvatarSprite1.x*(-1);
-		AvatarSprite1.y=AvatarSprite1.y*(-1);
+		QYBDUBOCBT.x=QYBDUBOCBT.x*(-1);
+		QYBDUBOCBT.y=QYBDUBOCBT.y*(-1);
 	}
 	
-	AvatarSprite1.name = key;
+	QYBDUBOCBT.name = key;
 	try
 	{
-		AvatarSprite1.loadTexture(key, 0);
+		QYBDUBOCBT.loadTexture(key, 0);
 	}
 	catch(e)
 	{
 		log(true,"No consigo cargar la imagen de sprite 1");
 	}
 	
-	AvatarSprite1.width=AnchoFoto;
-	AvatarSprite1.height=AnchoFoto;
+	QYBDUBOCBT.width=PJRPWGXEYM;
+	QYBDUBOCBT.height=PJRPWGXEYM;
 	
 	log(true,"Se recalcula");
 
 }
-function fileComplete2() {
+function CWTXODSQLJ() {
 
 	var key;
 	
 	key='imagen2';		
 	
-	if (AvatarSprite2.x<0)
+	if (BDQHBTUNWW.x<0)
 	{
-		AvatarSprite2.x=AvatarSprite2.x*(-1);
-		AvatarSprite2.y=AvatarSprite2.y*(-1);
+		BDQHBTUNWW.x=BDQHBTUNWW.x*(-1);
+		BDQHBTUNWW.y=BDQHBTUNWW.y*(-1);
 	}
 	
-	AvatarSprite2.name = key;
+	BDQHBTUNWW.name = key;
 	
 	try
 	{
-		AvatarSprite2.loadTexture(key, 0);
+		BDQHBTUNWW.loadTexture(key, 0);
 	}
 	catch(e)
 	{
 		log(true,"No consigo cargar la imagen de sprite 2");
 	}
 	
-	AvatarSprite2.width=AnchoFoto;
-	AvatarSprite2.height=AnchoFoto;	
+	BDQHBTUNWW.width=PJRPWGXEYM;
+	BDQHBTUNWW.height=PJRPWGXEYM;	
 }
 
-function fileComplete3() {
+function EXQNVUFJLI() {
 
 	var key;
 	
 	key='imagen3';		
 	
-	if (AvatarSprite3.x<0)
+	if (PRWBHVTUSC.x<0)
 	{
-		AvatarSprite3.x=AvatarSprite3.x*(-1);
-		AvatarSprite3.y=AvatarSprite3.y*(-1);
+		PRWBHVTUSC.x=PRWBHVTUSC.x*(-1);
+		PRWBHVTUSC.y=PRWBHVTUSC.y*(-1);
 	}
 	
-	AvatarSprite3.name = key;
+	PRWBHVTUSC.name = key;
 	try
 	{
-		AvatarSprite3.loadTexture(key, 0);
+		PRWBHVTUSC.loadTexture(key, 0);
 	}
 	catch(e)
 	{
 		log(true,"No consigo cargar la imagen de sprite 3");
 	}
 	
-	AvatarSprite3.width=AnchoFoto;
-	AvatarSprite3.height=AnchoFoto;
+	PRWBHVTUSC.width=PJRPWGXEYM;
+	PRWBHVTUSC.height=PJRPWGXEYM;
 }
 
-function fileComplete4() {
+function DJAOLUHAHL() {
 
 	var key;
 	
 	key='imagen4';		
 
-	if (AvatarSprite4.x<0)
+	if (BMWINQGWDD.x<0)
 	{	
-		AvatarSprite4.x=AvatarSprite4.x*(-1);
-		AvatarSprite4.y=AvatarSprite4.y*(-1);
+		BMWINQGWDD.x=BMWINQGWDD.x*(-1);
+		BMWINQGWDD.y=BMWINQGWDD.y*(-1);
 	}
 	
-	AvatarSprite4.name = key;
+	BMWINQGWDD.name = key;
 	try
 	{
-		AvatarSprite4.loadTexture(key, 0);
+		BMWINQGWDD.loadTexture(key, 0);
 	}
 	catch(e)
 	{
 		log(true,"No consigo cargar la imagen de sprite 4");
 	}
 	
-	AvatarSprite4.width=AnchoFoto;
-	AvatarSprite4.height=AnchoFoto;	
+	BMWINQGWDD.width=PJRPWGXEYM;
+	BMWINQGWDD.height=PJRPWGXEYM;	
 }
 
 
 
 // Socket connected
-onSocketConnected  = function() {
-	IntentosReconexion=0;
+AYAOSXTCBR  = function() {
+	JKCANKPQBB=0;
 	//console.log("CONECTADO");
  // log(false,'Conectado al servidor:')
   //console.log(socket.id);
   //console.log("kkk");
-  	if (socket.id!=undefined && ( BotonMonoJugador.visible==true || BotonAmigos.visible==true  ))
+  	if (socket.id!=undefined && ( UEHYPTREIH.visible==true || LNJDKEVPQE.visible==true  ))
 	{
 		
-		socket.emit('solicita conectados');
+		socket.emit('JKHWJKHIWF');
 	}
 	
-  	if (socket.id!=undefined && BotonMonoJugador.visible==false ) //Solo se envia la peticion si no estoy en la pantalla principal
+  	if (socket.id!=undefined && UEHYPTREIH.visible==false ) //Solo se envia la peticion si no estoy en la pantalla principal
 	//Ya que si no aparece la pantalla de login al principio
 	{
-		if (PartidaComenzada==false)
+		if (MYQBNBVHKU==false)
 		{
-			socket.emit('enviar_peticion_modo_multijugador', Habitacion,socket.id, false,Version,ObjetoG) ;
-			socket.emit('enviar validar version', Version);
+			socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
+			socket.emit('SNEESSIXBK', SFKLFIJOIO);
 		}
 	}
 	else
@@ -4501,21 +4501,21 @@ onSocketConnected  = function() {
 		{
 			//alert("ko");		
 			//console.log("Pide publi");
-			socket.emit('enviar_peticion_publicidad', socket.id,Version) ;
+			socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO) ;
 			
-			if (ArrayInfoJugador.length>0)
+			if (PWMIBRSDCJ.length>0)
 			{
-				var JugadorPubli=ArrayInfoJugador[0].Nombre;
-				var JugadorFullPubli=ArrayInfoJugador[0].ProveedorID + '-'+ ArrayInfoJugador[0].RedSocial;
-				socket.emit('enviar_peticion_publicidad', socket.id,Version,ObjetoG) ;
+				var JugadorPubli=PWMIBRSDCJ[0].WWKVHIMWYD;
+				var JugadorFullPubli=PWMIBRSDCJ[0].FFRVOEAXTF + '-'+ PWMIBRSDCJ[0].BDYYDTFQAO;
+				socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
 			}
 			else
 			{
-				socket.emit('enviar_peticion_publicidad', socket.id,Version,ObjetoG) ;
+				socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
 			}
 			
 			
-			socket.emit('enviar validar version', Version);
+			socket.emit('SNEESSIXBK', SFKLFIJOIO);
 		}
 	}
 
@@ -4523,11 +4523,11 @@ onSocketConnected  = function() {
   
 };
 
-onSocketDisconnect  = function() {
-  ErrorConexion();
+RWOCHOBYJY  = function() {
+  YUXWLFWVRD();
 };
 
-onSocketCartaMovida = function() {
+AAQWTFMQMA = function() {
  log(false,'carta movida')
  //log(false,this.hola)
 //Level.prototype.Dibuja();
@@ -4535,7 +4535,7 @@ onSocketCartaMovida = function() {
  
  };
  
- onSocketBarajaPedida = function() {
+ DQNJCOABIH = function() {
  log(false,'ya te la env�o')
  //log(false,this.hola)
 //Level.prototype.Dibuja();
@@ -4543,29 +4543,29 @@ onSocketCartaMovida = function() {
  
  };
 
- onSocketComenzadPartida=function() {
+ NUWTGXUUTS=function() {
 	log(true,"Le llega");
-	textListos.visible=false;
-	textEligiendo.visible=false;
-	PartidaComenzada=true;
+	NSNUIQUYIU.visible=false;
+	JSJSHSHSSE.visible=false;
+	MYQBNBVHKU=true;
 	//alert("COMENZADA");
 	//console.log("Llamada 9");
-	CalculaControl();
+	IOJCRKJSRL();
 	//console.log("Antes de prepararcaracteristicamano");
-	PreparaCaracteristicasMano();	
+	JQSOOBSDDS();	
 	//console.log("Después de prepararcaracteristicamano");
 	
  };
  
- MensajeEsperandoJugadores=function()
+ KSKJDEIIEI=function()
  {
 	
-	textEligiendo.visible=false;
-	textEsperando.visible=true;
-    textEsperando.alpha = 0;
+	JSJSHSHSSE.visible=false;
+	JBXCGDTWYW.visible=true;
+    JBXCGDTWYW.alpha = 0;
 
     //  Create our tween. This will fade the sprite to alpha 1 over the duration of 2 seconds
-    var tween = game_objeto.add.tween(textEsperando).to( { alpha: 1 }, 1500, "Linear", true, 0, -1);
+    var tween = YMHIHSNADE.add.tween(JBXCGDTWYW).to( { alpha: 1 }, 1500, "Linear", true, 0, -1);
 
     //  And this tells it to yoyo, i.e. fade back to zero again before repeating.
     //  The 3000 tells it to wait for 3 seconds before starting the fade back.
@@ -4574,15 +4574,15 @@ onSocketCartaMovida = function() {
 
  }
  
-  MensajeEsperandoListos=function()
+  UWHKCVJHKV=function()
  {
 	
-	textEligiendo.visible=false;
-	textListos.visible=true;
-    textListos.alpha = 0;
+	JSJSHSHSSE.visible=false;
+	NSNUIQUYIU.visible=true;
+    NSNUIQUYIU.alpha = 0;
 
     //  Create our tween. This will fade the sprite to alpha 1 over the duration of 2 seconds
-    var tween = game_objeto.add.tween(textListos).to( { alpha: 1 }, 1500, "Linear", true, 0, -1);
+    var tween = YMHIHSNADE.add.tween(NSNUIQUYIU).to( { alpha: 1 }, 1500, "Linear", true, 0, -1);
 
     //  And this tells it to yoyo, i.e. fade back to zero again before repeating.
     //  The 3000 tells it to wait for 3 seconds before starting the fade back.
@@ -4591,35 +4591,35 @@ onSocketCartaMovida = function() {
 
  }
  
-  MensajeEsperandoElegir=function()
+  NHKJAHUEIE=function()
  {
 	 var i;
 	 var vivo=0;
 	 
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		if (ArrayDelaPropiaSala[i].Desconectado==false)
+		if (XPBCVAGCDQ[i].XJARYUVBCB==false)
 		{
 			vivo=i;
 		}
 	}
 	 
-	textEsperando.visible=false;
-	if (ArrayDelaPropiaSala.length>0)
+	JBXCGDTWYW.visible=false;
+	if (XPBCVAGCDQ.length>0)
 	{
-		textEligiendo.text=ArrayDelaPropiaSala[vivo].Nombre+" está eligiendo pareja";
+		JSJSHSHSSE.text=XPBCVAGCDQ[vivo].WWKVHIMWYD+" está eligiendo pareja";
 	}
 	else
 	{
-		textEligiendo.text="Se está eligiendo pareja";
+		JSJSHSHSSE.text="Se está eligiendo pareja";
 	}
 	
-	textEligiendo.visible=true;
-    textEligiendo.alpha = 0;
+	JSJSHSHSSE.visible=true;
+    JSJSHSHSSE.alpha = 0;
 
 	
     //  Create our tween. This will fade the sprite to alpha 1 over the duration of 2 seconds
-    var tween = game_objeto.add.tween(textEligiendo).to( { alpha: 1 }, 1500, "Linear", true, 0, -1);
+    var tween = YMHIHSNADE.add.tween(JSJSHSHSSE).to( { alpha: 1 }, 1500, "Linear", true, 0, -1);
 
     //  And this tells it to yoyo, i.e. fade back to zero again before repeating.
     //  The 3000 tells it to wait for 3 seconds before starting the fade back.
@@ -4628,104 +4628,104 @@ onSocketCartaMovida = function() {
 
  }
  
- DevuelveUbicacionCartaSegunOrdenConectado=function(OrdenConectado)
+ RUVPPDCRDY=function(OrdenConectado)
  {
-	 var Letra;
+	 var STLEOJDWSU;
 	 
  }
  
- ClickAvatar=function(NumeroAvatar)
+ RWANTPBSQE=function(MMIFVRWSYK)
  {
 	 
 	var QuienDeshabilito;
-	var Letra;
+	var STLEOJDWSU;
 	var i;
-	var Encontrado=false;
-	var Jugador;
-	var TextoFormateado;
+	var VEFCIYHBGC=false;
+	var SSUNXNEEHN;
+	var UYEUYIYECB;
 	
-	Jugador=NumeroAvatar;
+	SSUNXNEEHN=MMIFVRWSYK;
 	
-	Letra=DevuelveUbicacionCarta(Jugador);
-	log(true,"ALGO CON LA Letra "+Letra);
-	for (i=0;i<=ArrayChatDeshabilitado.length-1;i++)
+	STLEOJDWSU=HHOPUSIABJ(SSUNXNEEHN);
+	log(true,"ALGO CON LA STLEOJDWSU "+STLEOJDWSU);
+	for (i=0;i<=QLNEIQGEDF.length-1;i++)
 	{
-		if (ArrayChatDeshabilitado[i]==Letra)
+		if (QLNEIQGEDF[i]==STLEOJDWSU)
 		{
-			Encontrado=true;
+			VEFCIYHBGC=true;
 			break;
 		}
 	}
 	
-	if (Encontrado==false) //Hay que deshabilitarlo
+	if (VEFCIYHBGC==false) //Hay que deshabilitarlo
 	{
-		if(Letra!="D")
+		if(STLEOJDWSU!="D")
 		{
-			ArrayChatDeshabilitado.push(Letra);
+			QLNEIQGEDF.push(STLEOJDWSU);
 		
 			
-			if (NumeroAvatar==1)
+			if (MMIFVRWSYK==1)
 			 {
-				AvatarSprite1.tint=Phaser.Color.getColor(110,110,110);
+				QYBDUBOCBT.tint=Phaser.Color.getColor(110,110,110);
 			 }
-			 if (NumeroAvatar==2)
+			 if (MMIFVRWSYK==2)
 			 {
-				 AvatarSprite2.tint=Phaser.Color.getColor(110,110,110);
+				 BDQHBTUNWW.tint=Phaser.Color.getColor(110,110,110);
 			 }	
-			 if (NumeroAvatar==3)
+			 if (MMIFVRWSYK==3)
 			 {
-				 AvatarSprite3.tint=Phaser.Color.getColor(110,110,110);
+				 PRWBHVTUSC.tint=Phaser.Color.getColor(110,110,110);
 			 }	 
-			 if (NumeroAvatar==4)
+			 if (MMIFVRWSYK==4)
 			 {
-				 AvatarSprite4.tint=Phaser.Color.getColor(110,110,110);
+				 BMWINQGWDD.tint=Phaser.Color.getColor(110,110,110);
 			 }	 
 			 
 		 }
 	}
 	else
 	{
-		ArrayChatDeshabilitado.splice(i,1);
-		if (NumeroAvatar==1)
+		QLNEIQGEDF.splice(i,1);
+		if (MMIFVRWSYK==1)
 		 {
-			AvatarSprite1.tint=Phaser.Color.getColor(255,255,255);
+			QYBDUBOCBT.tint=Phaser.Color.getColor(255,255,255);
 		 }
-		 if (NumeroAvatar==2)
+		 if (MMIFVRWSYK==2)
 		 {
-			 AvatarSprite2.tint=Phaser.Color.getColor(255,255,255);
+			 BDQHBTUNWW.tint=Phaser.Color.getColor(255,255,255);
 		 }	
-		 if (NumeroAvatar==3)
+		 if (MMIFVRWSYK==3)
 		 {
-			 AvatarSprite3.tint=Phaser.Color.getColor(255,255,255);
+			 PRWBHVTUSC.tint=Phaser.Color.getColor(255,255,255);
 		 }	 
-		 if (NumeroAvatar==4)
+		 if (MMIFVRWSYK==4)
 		 {
-			 AvatarSprite4.tint=Phaser.Color.getColor(255,255,255);
+			 BMWINQGWDD.tint=Phaser.Color.getColor(255,255,255);
 		 }	 
 	}
 	
-	if (Letra=="D")
+	if (STLEOJDWSU=="D")
 	{
 		
-		TextoFormateado=EscribirTextoGuay("Pulse sobre la foto de los jugadores\npara activar o desactivar el chat con ellos",40);
+		UYEUYIYECB=IEUIUCYUCC("Pulse sobre la foto de los jugadores\npara activar o desactivar el chat con ellos",40);
 	}
 	else
 	{
-		if (Encontrado==false)
+		if (VEFCIYHBGC==false)
 		{
-			TextoFormateado=EscribirTextoGuay("Chat deshabilitado con "+ArrayDelaPropiaSala[NumeroAvatar-1].Nombre,40);
+			UYEUYIYECB=IEUIUCYUCC("Chat deshabilitado con "+XPBCVAGCDQ[MMIFVRWSYK-1].WWKVHIMWYD,40);
 			
-			if (ArrayDelaPropiaSala[0].Amigo==false)
+			if (XPBCVAGCDQ[0].Amigo==false)
 			{
-				socket.emit("enviar_silenciar", ArrayInfoJugador[0].JugadorFull, ArrayInfoJugador[0].IP, ArrayDelaPropiaSala[NumeroAvatar-1].JugadorFull,Habitacion);				
+				socket.emit("JKJHCJKAQE", PWMIBRSDCJ[0].OBTBPOULAV, PWMIBRSDCJ[0].NBJHGSFSJS, XPBCVAGCDQ[MMIFVRWSYK-1].OBTBPOULAV,DFBVDPETGO);				
 			}
 		}
 		else
 		{
-			TextoFormateado=EscribirTextoGuay("Chat habilitado con "+ArrayDelaPropiaSala[NumeroAvatar-1].Nombre,40);
-			if (ArrayDelaPropiaSala[0].Amigo==false)
+			UYEUYIYECB=IEUIUCYUCC("Chat habilitado con "+XPBCVAGCDQ[MMIFVRWSYK-1].WWKVHIMWYD,40);
+			if (XPBCVAGCDQ[0].Amigo==false)
 			{
-				socket.emit("enviar_desilenciar", ArrayInfoJugador[0].JugadorFull, ArrayInfoJugador[0].IP, ArrayDelaPropiaSala[NumeroAvatar-1].JugadorFull,Habitacion);
+				socket.emit("UIHVKHWKOV", PWMIBRSDCJ[0].OBTBPOULAV, PWMIBRSDCJ[0].NBJHGSFSJS, XPBCVAGCDQ[MMIFVRWSYK-1].OBTBPOULAV,DFBVDPETGO);
 			}
 		}
 		
@@ -4733,41 +4733,41 @@ onSocketCartaMovida = function() {
 	}
 	
 
-	var tw = game_objeto.add.tween(TextoFormateado).to( { alpha: 0 }, 1000, EfectoTween1, true,1000);
+	var tw = YMHIHSNADE.add.tween(UYEUYIYECB).to( { alpha: 0 }, 1000, KYFMRVNHIQ, true,1000);
 	
 	 
  }
- onSocketconectadosSala = function(conectados,room,ArrayJugadorSalas) {
-	 OcultarFacebook();
-	 Habitacion=room;
+ NSIRYROROW = function(conectados,room,HGIFKEMXAD) {
+	 NGHJWGJHWG();
+	 DFBVDPETGO=room;
 	 log(false,'conectados: '+conectados)
-	 log(false,'Habitacion: '+Habitacion)
+	 log(false,'DFBVDPETGO: '+DFBVDPETGO)
 
 	
 	
-	var LongitudArray = ArrayJugadorSalas.length-1;
+	var LongitudArray = HGIFKEMXAD.length-1;
 
 	var i;
 	var u;
-	var Encontrado;
-	var Foto;
+	var VEFCIYHBGC;
+	var QHHQPXWFNG;
 	//var textJugador;
-	var LetraMazo;
+	var UBWRXKMTQN;
 	var x1;
 	var y1;
 	var x1text;
 	var y1text;
-	var NumeroJugadorTemporal=0;
+	var JKAHSQUUIA=0;
 	var imagen1="";
 	var imagen2="";
 	var imagen3="";
 	var imagen4="";
 
 	var tapete;
-	var TapeteRemoto="";
-	var TapeteRemotoLoader="";
-	var DorsoRemotoLoader="";
-	var DorsoRemoto="";
+	var LEQRGVLYLX="";
+	var DCIKAAMXTU="";
+	var CBGXLQKDBG="";
+	var JBCHKJWHKP="";
 
 	//Onjetos Loader;
 	var a;
@@ -4775,105 +4775,105 @@ onSocketCartaMovida = function() {
 	var c;
 	var d;
 
-	BotonSalir.x=xSalir;
-	//ArrayDelaPropiaSala.splice(0,1000);
+	CUUKQAGFEB.x=QETACVSHAR;
+	//XPBCVAGCDQ.splice(0,1000);
 
-	BotonAleatorio.visible=false;
-	BotonAmigos.visible=false;
+	EFKTQSXAMA.visible=false;
+	LNJDKEVPQE.visible=false;
 	
-	//if (textEsperando==undefined)
+	//if (JBXCGDTWYW==undefined)
 	//{
 	log(true,"Longitud de conectados sala aleatoria "+LongitudArray)
 
 	
 	
-	OcultaPantallaLogin();
+	YHNMANDWLT();
 		
 	log(true,"Se borra "+LongitudArray);
 	for (i=0;i<=LongitudArray;i++){
 		//console.log("SOCKETS: ");
 		//console.log("SOCKETS ID: "+socket.id);
-		//console.log("SOCKETS JUGADOR: "+ArrayJugadorSalas[i].JugadorSala);
-		if (ArrayJugadorSalas[i].Sala==room)
+		//console.log("SOCKETS JUGADOR: "+HGIFKEMXAD[i].AURESXCGMK);
+		if (HGIFKEMXAD[i].Sala==room)
 		{
 			
-			Encontrado=false;
-			for (u=0;u<=ArrayDelaPropiaSala.length-1;u++)
+			VEFCIYHBGC=false;
+			for (u=0;u<=XPBCVAGCDQ.length-1;u++)
 			{
-				if (ArrayJugadorSalas[i].JugadorSala==ArrayDelaPropiaSala[u].JugadorSala)
+				if (HGIFKEMXAD[i].AURESXCGMK==XPBCVAGCDQ[u].AURESXCGMK)
 				{
-					Encontrado=true;
+					VEFCIYHBGC=true;
 				}			
 			}	
 			
-			if (Encontrado==false)
+			if (VEFCIYHBGC==false)
 			{
 				
-				tapete=ArrayJugadorSalas[i].Tapete;
-				if (cuatrotres==true)
+				tapete=HGIFKEMXAD[i].IRQGAFESIC;
+				if (JHJEWHFWNL==true)
 				{
 					tapete=tapete.replace('.jpg','_43.jpg');
 				}
 		
-				if (ArrayJugadorSalas[i].Foto==null)
+				if (HGIFKEMXAD[i].QHHQPXWFNG==null)
 				{					
-					Foto=Maquina+"/assets/images/desconocido.png";
+					QHHQPXWFNG=JHGHJAGCMC+"/assets/images/desconocido.png";
 				}
 				else
 				{
-					Foto=ArrayJugadorSalas[i].Foto
+					QHHQPXWFNG=HGIFKEMXAD[i].QHHQPXWFNG
 				}
 				
-				//console.log("Mi nivelaco "+ArrayJugadorSalas[i].Nivel);
-				ArrayDelaPropiaSala.push(new ObjetoSala(ArrayJugadorSalas[i].JugadorSala,ArrayJugadorSalas[i].Sala,false,ArrayJugadorSalas[i].Nombre,
-					ArrayJugadorSalas[i].Sexo,Foto,null,ArrayJugadorSalas[i].Desconectado,ArrayJugadorSalas[i].Dorso,tapete, ArrayJugadorSalas[i].Amigo , ArrayJugadorSalas[i].JugadorFull, (i+1), "",ArrayJugadorSalas[i].Nombre, ArrayJugadorSalas[i].Admin,ArrayJugadorSalas[i].IP,
-					ArrayJugadorSalas[i].Nivel,ArrayJugadorSalas[i].CampeonSemanal
+				//console.log("Mi nivelaco "+HGIFKEMXAD[i].OIUIOWCHVW);
+				XPBCVAGCDQ.push(new JHIWUIUYCJ(HGIFKEMXAD[i].AURESXCGMK,HGIFKEMXAD[i].Sala,false,HGIFKEMXAD[i].WWKVHIMWYD,
+					HGIFKEMXAD[i].BONQVNOXDP,QHHQPXWFNG,null,HGIFKEMXAD[i].XJARYUVBCB,HGIFKEMXAD[i].EJOYNSESRD,tapete, HGIFKEMXAD[i].Amigo , HGIFKEMXAD[i].OBTBPOULAV, (i+1), "",HGIFKEMXAD[i].WWKVHIMWYD, HGIFKEMXAD[i].UHYGLMAUNK,HGIFKEMXAD[i].NBJHGSFSJS,
+					HGIFKEMXAD[i].OIUIOWCHVW,HGIFKEMXAD[i].NHWYTYUSYG
 					))
 					
-				//console.log("Campeon semanal "+ArrayJugadorSalas[i].CampeonSemanal+" "+ArrayJugadorSalas[i].Nivel);	
+				//console.log("Campeon semanal "+HGIFKEMXAD[i].NHWYTYUSYG+" "+HGIFKEMXAD[i].OIUIOWCHVW);	
 					
-				//log(true,"Se está recibiendo "+ArrayJugadorSalas[i].Nombre+" "+ArrayJugadorSalas[i].Desconectado	);
+				//log(true,"Se está recibiendo "+HGIFKEMXAD[i].WWKVHIMWYD+" "+HGIFKEMXAD[i].XJARYUVBCB	);
 				//log(true,"Se ha guardado ");
-				//log(true,"Se ha guardado "+ArrayDelaPropiaSala[ArrayDelaPropiaSala.length-1].Desconectado);
+				//log(true,"Se ha guardado "+XPBCVAGCDQ[XPBCVAGCDQ.length-1].XJARYUVBCB);
 			}
 		}			
 	}
 
 	if (LongitudArray<=2)
 	{
-		MensajeEsperandoJugadores();
+		KSKJDEIIEI();
 	}
 	else
 	{
-		MensajeEsperandoElegir();
+		NHKJAHUEIE();
 	}
 	
 	//console.log("Llamada 10");
-	CalculaControl();
+	IOJCRKJSRL();
 
 	//Saco el bucle porque si se conecta el segundo, no sabe quien es
-	 for (var i=0;i<=ArrayDelaPropiaSala.length-1;i++){
-		//console.log("RECIBIENDO JUGADORES: "+ArrayDelaPropiaSala[i].JugadorSala+  "    "+socket.id)
-		if (ArrayDelaPropiaSala[i].JugadorSala==socket.id)
+	 for (var i=0;i<=XPBCVAGCDQ.length-1;i++){
+		//console.log("RECIBIENDO JUGADORES: "+XPBCVAGCDQ[i].AURESXCGMK+  "    "+socket.id)
+		if (XPBCVAGCDQ[i].AURESXCGMK==socket.id)
 		{
 			
 			
-			SoyElJugador=i+1;
-			//console.log("CHANGE1: "+SoyElJugador);
+			TFSXFTYVGQ=i+1;
+			//console.log("CHANGE1: "+TFSXFTYVGQ);
 			
-			BackFondo.visible=false;
-			BackTapete.visible=true;
+			XIQDONAJMM.visible=false;
+			KVBNWXDTON.visible=true;
 			
-			//CrearTapete();
+			//DMLCWWNWRP();
 			
 			
-			log(true,ArrayDelaPropiaSala[i].Tapete);
-			log(true,ArrayDelaPropiaSala[i].Dorso);
-			//console.log("CHAT "+ArrayInfoJugador[0].ChatDisponible);
+			log(true,XPBCVAGCDQ[i].IRQGAFESIC);
+			log(true,XPBCVAGCDQ[i].EJOYNSESRD);
+			//console.log("CHAT "+PWMIBRSDCJ[0].MBMWBWUYUY);
 			inputField.visible=true;
-			if (ArrayInfoJugador.length>0)
+			if (PWMIBRSDCJ.length>0)
 			{
-				inputField.visible=ArrayInfoJugador[0].ChatDisponible;	 //1.0.8
+				inputField.visible=PWMIBRSDCJ[0].MBMWBWUYUY;	 //1.0.8
 			}
 
 			
@@ -4882,80 +4882,80 @@ onSocketCartaMovida = function() {
 
 
 		
-	DibujaJugadores();
+	JHKJKHHJCC();
 	
 
 
-	if (ArrayDelaPropiaSala.length==4){
-		BotonRobots.visible=false;
-		var UltimoVivo;
-		for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	if (XPBCVAGCDQ.length==4){
+		HJKHDKJHWU.visible=false;
+		var MMNORPWJDC;
+		for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 		{
-			//console.log("Antes "+ArrayDelaPropiaSala[i].Nombre+" Orden: "+ ArrayDelaPropiaSala[i].OrdenEnSala+ " "+ArrayDelaPropiaSala[i].JugadorSala + " "+socket.id)
-			if (ArrayDelaPropiaSala[i].Desconectado==false)
+			//console.log("Antes "+XPBCVAGCDQ[i].WWKVHIMWYD+" Orden: "+ XPBCVAGCDQ[i].KKUYGYRGYG+ " "+XPBCVAGCDQ[i].AURESXCGMK + " "+socket.id)
+			if (XPBCVAGCDQ[i].XJARYUVBCB==false)
 			{
-				UltimoVivo=ArrayDelaPropiaSala[i].JugadorSala;
+				MMNORPWJDC=XPBCVAGCDQ[i].AURESXCGMK;
 			}
 		}
 
 		
 
-		 if (UltimoVivo==socket.id){ //Se crea la baraja
+		 if (MMNORPWJDC==socket.id){ //Se crea la baraja
 			
-			vTurno=1;
-			MostrarElegirPareja(true);
+			DVNRTQIWGL=1;
+			VVCDGUUDWR(true);
 
 		 }
 		
 	 }
 	 else
 	 {
-		 for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+		 for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 		 {
-			if (ArrayDelaPropiaSala[i].Desconectado==false)
+			if (XPBCVAGCDQ[i].XJARYUVBCB==false)
 			{
-				UltimoVivo=ArrayDelaPropiaSala[i].JugadorSala;
+				MMNORPWJDC=XPBCVAGCDQ[i].AURESXCGMK;
 			} 
 		 }
 		 
-		 if (UltimoVivo==socket.id)
+		 if (MMNORPWJDC==socket.id)
 		 {			
-			BotonRobots.visible=true;
+			HJKHDKJHWU.visible=true;
 		 }
 		 else
 		 {
-			BotonRobots.visible=false;
+			HJKHDKJHWU.visible=false;
 		 }
 		 
 		 
 	 }
  };
  
- CalculaAvatarLogro=function(Nivel,Origen)
+ OIQUIOCVKK=function(OIUIOWCHVW,Origen)
  {
-	 //Origen 1: Tabla Clasificacion Origen 2: Avatar
+	 //Origen 1: Tabla Clasificacion Origen 2: DKIFYHXLLC
 	 var Logro="SinLogro";
 	 var Imagen="sin_logro.png";
 	 
  
 	 
-	 var Devolver="";
-	 if (Nivel==1)
+	 var RTOSLKFWHC="";
+	 if (OIUIOWCHVW==1)
 	 {
 		 Logro='PRO';
 		 Imagen='nivel_pro.png'
 	 }
-	 if (Nivel==2)
+	 if (OIUIOWCHVW==2)
 	 {
 		 Logro='Ninja';
 		 Imagen='nivel_ninja.png'
 	 }
-	 if (Nivel==3)
+	 if (OIUIOWCHVW==3)
 	 {
 		 Logro='Mago';
 		 Imagen='nivel_mago.png'
 	 }
-	 if (Nivel==4)
+	 if (OIUIOWCHVW==4)
 	 {
 		 Logro='Diplomado';
 		 Imagen='nivel_diplomado.png'
@@ -4963,39 +4963,39 @@ onSocketCartaMovida = function() {
 	
 	if (Origen==1)
 	{
-		Devolver=Imagen;
+		RTOSLKFWHC=Imagen;
 	}
 	else
 	{
-		Devolver=Logro;
+		RTOSLKFWHC=Logro;
 	}
 	
-	return Devolver;
+	return RTOSLKFWHC;
 	
  }
  		
  
-  DibujaJugadores=function(){
+  JHKJKHHJCC=function(){
 	 
 	var i;
 	var u;
-	var Encontrado;
+	var VEFCIYHBGC;
 	//var textJugador;
-	var LetraMazo;
+	var UBWRXKMTQN;
 	var x1;
 	var y1;
 	var x1text;
 	var y1text;
-	var NumeroJugadorTemporal=0;
+	var JKAHSQUUIA=0;
 	var imagen1="";
 	var imagen2="";
 	var imagen3="";
 	var imagen4="";
 
-	var TapeteRemoto="";
-	var TapeteRemotoLoader="";
-	var DorsoRemotoLoader="";
-	var DorsoRemoto="";
+	var LEQRGVLYLX="";
+	var DCIKAAMXTU="";
+	var CBGXLQKDBG="";
+	var JBCHKJWHKP="";
 
 	//Onjetos Loader;
 	var a;
@@ -5005,31 +5005,31 @@ onSocketCartaMovida = function() {
 	
 	var Desplazamiento;
 
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++){
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++){
 		//console.log("i   "+i);
-		NumeroJugadorTemporal=i+1;
-		//if (ValidaDibujoAvatars(NumeroJugadorTemporal)==true)
+		JKAHSQUUIA=i+1;
+		//if (IGPARKSECH(JKAHSQUUIA)==true)
 		if (1==1)
 		{
-	 		log(true,"Jugador Temporal "+NumeroJugadorTemporal);
+	 		log(true,"SSUNXNEEHN Temporal "+JKAHSQUUIA);
 			//console.log("1");
 		
-			LetraMazo=DevuelveUbicacionCarta(NumeroJugadorTemporal);
+			UBWRXKMTQN=HHOPUSIABJ(JKAHSQUUIA);
 			//console.log("1.1");
-			log(true,"Ha devuelto "+LetraMazo);
-			PosicionCartas("D");
+			log(true,"Ha devuelto "+UBWRXKMTQN);
+			SUMEMLHUFX("D");
 			//console.log("1.2");
-			//console.log(LetraMazo);
+			//console.log(UBWRXKMTQN);
 			Desplazamiento=0;
-			if (LetraMazo=="D")
+			if (UBWRXKMTQN=="D")
 			{
 				//console.log("1.3");
-				x1=devuelveX("D_5",0)+110;
+				x1=WIEVLYANFM("D_5",0)+110;
 				//console.log("1.4");
-				y1=devuelveY("L_0",0)+20;
-				//ArrayDelaPropiaSala[i].Nombre="texto largo en la parte de abajo"
+				y1=FIGQBSJQGA("L_0",0)+20;
+				//XPBCVAGCDQ[i].WWKVHIMWYD="AWCCMSCOPO largo en la parte de abajo"
 				//console.log("1.5");
-				var styleJugador = { font: "bold 18px Arial", fill: "#fff", align: "left", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+				var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", align: "left", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 				//console.log("1.6");
 				x1text=x1+85;
 				y1text=y1;
@@ -5037,73 +5037,73 @@ onSocketCartaMovida = function() {
 				Desplazamiento=75;
 
 			}
-			if (LetraMazo=="R")
+			if (UBWRXKMTQN=="R")
 			{
-				//x1=devuelveX("R_0",0)-30;
-				if (cuatrotres==false)
+				//x1=WIEVLYANFM("R_0",0)-30;
+				if (JHJEWHFWNL==false)
 				{
-					x1=devuelveX("D_5",0)+245;
+					x1=WIEVLYANFM("D_5",0)+245;
 				}
 				else
 				{
-					x1=devuelveX("R_5",0)-20;
+					x1=WIEVLYANFM("R_5",0)-20;
 				}
 			//	x1=500;
-				//if (cuatrotres==false)
+				//if (JHJEWHFWNL==false)
 				//{
-				y1=devuelveY("R_5",0)-147
+				y1=FIGQBSJQGA("R_5",0)-147
 				//}
 				//else
 				//{
-				//	y1=devuelveY("R_5",0)
+				//	y1=FIGQBSJQGA("R_5",0)
 				//}
-				//ArrayDelaPropiaSala[i].Nombre="Pepito Grillo es gay ya te digo";
-				//ArrayDelaPropiaSala[i].Nombre="Ivan";
-				var styleJugador = { font: "bold 18px Arial", fill: "#fff", align: "right", boundsAlignH: "right", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+				//XPBCVAGCDQ[i].WWKVHIMWYD="Pepito Grillo es gay ya te digo";
+				//XPBCVAGCDQ[i].WWKVHIMWYD="Ivan";
+				var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", align: "right", boundsAlignH: "right", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 				x1text=x1-200;
 				//x1text=100;
 				y1text=y1;	
 				Desplazamiento=-55;				
 				
 			}
-			if (LetraMazo=="U")
+			if (UBWRXKMTQN=="U")
 			{
-				x1=devuelveX("D_0",0)+25;
-				//x1=devuelveX("D_5",0)+90;
-				if (cuatrotres==false)
+				x1=WIEVLYANFM("D_0",0)+25;
+				//x1=WIEVLYANFM("D_5",0)+90;
+				if (JHJEWHFWNL==false)
 				{
-					y1=devuelveY("R_5",0)-147;
+					y1=FIGQBSJQGA("R_5",0)-147;
 				}
 				else
 				{
-					y1=devuelveY("U_0",0)-95;
+					y1=FIGQBSJQGA("U_0",0)-95;
 				}
 				
-				//ArrayDelaPropiaSala[i].Nombre="y algo mariposón. Tb lo se"
-				var styleJugador = { font: "bold 18px Arial", fill: "#fff", align: "right", boundsAlignH: "right", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+				//XPBCVAGCDQ[i].WWKVHIMWYD="y algo mariposón. Tb lo se"
+				var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", align: "right", boundsAlignH: "right", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 				x1text=x1-200;
 				y1text=y1;		
 				Desplazamiento=-55;				
 			}
 			  
-			if (LetraMazo=="L")
+			if (UBWRXKMTQN=="L")
 			{
 				//console.log("1.11");
-				x1=devuelveX("L_0",0);
+				x1=WIEVLYANFM("L_0",0);
 				//console.log("1.12");
-				y1=devuelveY("L_0",0)+20;
-				//ArrayDelaPropiaSala[i].Nombre="Otro texto largo en la parte izquierda"
+				y1=FIGQBSJQGA("L_0",0)+20;
+				//XPBCVAGCDQ[i].WWKVHIMWYD="Otro AWCCMSCOPO largo en la parte izquierda"
 				//console.log("1.13");
-				var styleJugador = { font: "bold 18px Arial", fill: "#fff", align: "left", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+				var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", align: "left", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 				//console.log("1.14");
 				x1text=x1+85;
 				y1text=y1;		
 				Desplazamiento=75;				
 			}
 			//console.log("i "+i );
-				//console.log("Dice que no existe "+ArrayDelaPropiaSala[i].Desconectado);
+				//console.log("Dice que no existe "+XPBCVAGCDQ[i].XJARYUVBCB);
 					/*var Desplazamiento=0
-					if(LetraMazo=="D" || LetraMazo=="U" || LetraMazo=="L" || LetraMazo=="R")
+					if(UBWRXKMTQN=="D" || UBWRXKMTQN=="U" || UBWRXKMTQN=="L" || UBWRXKMTQN=="R")
 					{
 						Desplazamiento=75
 					}
@@ -5113,311 +5113,311 @@ onSocketCartaMovida = function() {
 					}*/
 					
 				if (i==0){
-					//textJugador1 = game_objeto.add.text(x1+60, y1+15, ArrayDelaPropiaSala[i].Nombre,style);
+					//UWROMBGGSY = YMHIHSNADE.add.text(x1+60, y1+15, XPBCVAGCDQ[i].WWKVHIMWYD,style);
 					//console.log("2");
-					//console.log("Avatar "+AvatarSprite1);
-					if (AvatarSprite1!=undefined)
+					//console.log("DKIFYHXLLC "+QYBDUBOCBT);
+					if (QYBDUBOCBT!=undefined)
 					{
-						AvatarSprite1.destroy();
-						textJugador1.destroy();
+						QYBDUBOCBT.destroy();
+						UWROMBGGSY.destroy();
 					}	
-					AvatarSprite1= game_objeto.add.sprite(x1*(-1),y1*(-1),'1');
-					AvatarSprite1.inputEnabled = true;
+					QYBDUBOCBT= YMHIHSNADE.add.sprite(x1*(-1),y1*(-1),'1');
+					QYBDUBOCBT.inputEnabled = true;
 					//console.log("3");
-					AvatarSprite1.events.onInputDown.add( function(){ ClickAvatar(1); } );
+					QYBDUBOCBT.events.onInputDown.add( function(){ RWANTPBSQE(1); } );
 					
-					if (AvatarMedalla1!=undefined)
+					if (NBHWGUGUWB!=undefined)
 					{
-						AvatarMedalla1.destroy();
+						NBHWGUGUWB.destroy();
 					}
 					
 
 					
-					if (ArrayDelaPropiaSala[i].CampeonSemanal==true && ArrayDelaPropiaSala[i].Desconectado==false)
+					if (XPBCVAGCDQ[i].NHWYTYUSYG==true && XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						AvatarMedalla1 = game_objeto.add.sprite(x1+Desplazamiento,y1+55,'Medalla');
+						NBHWGUGUWB = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1+55,'Medalla');
 					}
 					
-					if (AvatarLogro1!=undefined)
+					if (XPLHSUIGIU!=undefined)
 					{
-						AvatarLogro1.destroy();
+						XPLHSUIGIU.destroy();
 					}
 					
-					if (ArrayDelaPropiaSala[i].Nivel>0 && ArrayDelaPropiaSala[i].Desconectado==false)
+					if (XPBCVAGCDQ[i].OIUIOWCHVW>0 && XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						AvatarLogro1 = game_objeto.add.sprite(x1+Desplazamiento,y1-35,CalculaAvatarLogro(ArrayDelaPropiaSala[i].Nivel,2));					
+						XPLHSUIGIU = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1-35,OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,2));					
 					}
 					
-					textJugador1=game_objeto.add.text(0, 0, "",styleJugador);
-					textJugador1.setTextBounds(x1text, y1text, 190, 90);
+					UWROMBGGSY=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+					UWROMBGGSY.setTextBounds(x1text, y1text, 190, 90);
 					
-					//textJugador1.x=(x1text);
-					//textJugador1.y=(y1text);
+					//UWROMBGGSY.x=(x1text);
+					//UWROMBGGSY.y=(y1text);
 					//alert("jj");
-					//textJugador1.style=styleJugador;
+					//UWROMBGGSY.style=IQVAAXFOXW;
 					
-					textJugador1.text="";
-					textJugador1.text=ArrayDelaPropiaSala[i].NombreOri;
+					UWROMBGGSY.text="";
+					UWROMBGGSY.text=XPBCVAGCDQ[i].JJHFHGHSUI;
 					
 					
 					
-					imagen1=ArrayDelaPropiaSala[i].Foto
-					if (Avatar1==undefined)
+					imagen1=XPBCVAGCDQ[i].QHHQPXWFNG
+					if (IDKJKASOTQ==undefined)
 					{
-						Avatar1=new Phaser.Loader(game_objeto);
+						IDKJKASOTQ=new Phaser.Loader(YMHIHSNADE);
 					}
 					
-					if ( ArrayDelaPropiaSala[i].Desconectado==false)
+					if ( XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						Avatar1.crossOrigin ="Anonymous"
-						Avatar1.image('imagen1', ArrayDelaPropiaSala[i].Foto,true);
-						//console.log("Foto "+ArrayDelaPropiaSala[i].Foto);
-						Avatar1.onFileComplete.add( function() { fileComplete1();  }  );
-						Avatar1.start();
+						IDKJKASOTQ.crossOrigin ="Anonymous"
+						IDKJKASOTQ.image('imagen1', XPBCVAGCDQ[i].QHHQPXWFNG,true);
+						//console.log("QHHQPXWFNG "+XPBCVAGCDQ[i].QHHQPXWFNG);
+						IDKJKASOTQ.onFileComplete.add( function() { SJXIUSUWHQ();  }  );
+						IDKJKASOTQ.start();
 					}
 					else
 					{
-						textJugador1.text="";
-						textJugador1.text="Ordenador 1";
-						ArrayDelaPropiaSala[i].Nombre="Ordenador 1"
-						var key='Maquina'					
-						if (AvatarSprite1.x<0)
+						UWROMBGGSY.text="";
+						UWROMBGGSY.text="Ordenador 1";
+						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 1"
+						var key='JHGHJAGCMC'					
+						if (QYBDUBOCBT.x<0)
 						{
-							AvatarSprite1.x=AvatarSprite1.x*(-1);
-							AvatarSprite1.y=AvatarSprite1.y*(-1);
+							QYBDUBOCBT.x=QYBDUBOCBT.x*(-1);
+							QYBDUBOCBT.y=QYBDUBOCBT.y*(-1);
 						}
-						AvatarSprite1.name = key;
-						AvatarSprite1.loadTexture(key, 0);
-						AvatarSprite1.width=AnchoFoto;
-						AvatarSprite1.height=AnchoFoto;	
+						QYBDUBOCBT.name = key;
+						QYBDUBOCBT.loadTexture(key, 0);
+						QYBDUBOCBT.width=PJRPWGXEYM;
+						QYBDUBOCBT.height=PJRPWGXEYM;	
 					}
 					
 				}
 				if (i==1){
-					//textJugador2 = game_objeto.add.text(x1+60, y1+15, ArrayDelaPropiaSala[i].Nombre,style);
-					if (AvatarSprite2!=undefined)
+					//HUPALFWPFI = YMHIHSNADE.add.text(x1+60, y1+15, XPBCVAGCDQ[i].WWKVHIMWYD,style);
+					if (BDQHBTUNWW!=undefined)
 					{
-						AvatarSprite2.destroy();
-						textJugador2.destroy();
+						BDQHBTUNWW.destroy();
+						HUPALFWPFI.destroy();
 					}	
-					AvatarSprite2= game_objeto.add.sprite(x1*(-1),y1*(-1),'1');
-					AvatarSprite2.inputEnabled = true;
-					AvatarSprite2.events.onInputDown.add( function(){ ClickAvatar(2); } );
+					BDQHBTUNWW= YMHIHSNADE.add.sprite(x1*(-1),y1*(-1),'1');
+					BDQHBTUNWW.inputEnabled = true;
+					BDQHBTUNWW.events.onInputDown.add( function(){ RWANTPBSQE(2); } );
 	
-					if (AvatarMedalla2!=undefined)
+					if (HGYGDVGQUY!=undefined)
 					{
-						AvatarMedalla2.destroy();
+						HGYGDVGQUY.destroy();
 					}
 					
-					if (ArrayDelaPropiaSala[i].CampeonSemanal==true  && ArrayDelaPropiaSala[i].Desconectado==false)
+					if (XPBCVAGCDQ[i].NHWYTYUSYG==true  && XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						AvatarMedalla2 = game_objeto.add.sprite(x1+Desplazamiento,y1+55,'Medalla'); //-55
+						HGYGDVGQUY = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1+55,'Medalla'); //-55
 					}
 					
-					if (AvatarLogro2!=undefined)
+					if (NHGUGUEUER!=undefined)
 					{
-						AvatarLogro2.destroy();
+						NHGUGUEUER.destroy();
 					}
 					
-					if (ArrayDelaPropiaSala[i].Nivel>0  && ArrayDelaPropiaSala[i].Desconectado==false)
+					if (XPBCVAGCDQ[i].OIUIOWCHVW>0  && XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						AvatarLogro2 = game_objeto.add.sprite(x1+Desplazamiento,y1-35,CalculaAvatarLogro(ArrayDelaPropiaSala[i].Nivel,2));							
+						NHGUGUEUER = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1-35,OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,2));							
 					}
 					
-					textJugador2=game_objeto.add.text(0, 0, "",styleJugador);
-					textJugador2.setTextBounds(x1text, y1text, 190, 90);
+					HUPALFWPFI=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+					HUPALFWPFI.setTextBounds(x1text, y1text, 190, 90);
 					
-				//	textJugador2.x=(x1text);
-				//	textJugador2.y=(y1text);
-					//textJugador2.setTextBounds(100, 100, 200, 200);
-					//textJugador2.style=styleJugador;
+				//	HUPALFWPFI.x=(x1text);
+				//	HUPALFWPFI.y=(y1text);
+					//HUPALFWPFI.setTextBounds(100, 100, 200, 200);
+					//HUPALFWPFI.style=IQVAAXFOXW;
 					
-					textJugador2.text="";
-					textJugador2.text=ArrayDelaPropiaSala[i].NombreOri;
-					//console.log("Texto jugador 2: "+ArrayDelaPropiaSala[i].Nombre);
+					HUPALFWPFI.text="";
+					HUPALFWPFI.text=XPBCVAGCDQ[i].JJHFHGHSUI;
+					//console.log("RPHWVBBGIM jugador 2: "+XPBCVAGCDQ[i].WWKVHIMWYD);
 					
-					imagen2=ArrayDelaPropiaSala[i].Foto
-					if (Avatar2==undefined)
+					imagen2=XPBCVAGCDQ[i].QHHQPXWFNG
+					if (MMKMYKBXGH==undefined)
 					{
-						Avatar2=new Phaser.Loader(game_objeto);
+						MMKMYKBXGH=new Phaser.Loader(YMHIHSNADE);
 					}
 					
 					
-					if ( ArrayDelaPropiaSala[i].Desconectado==false)
+					if ( XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						Avatar2.crossOrigin ="Anonymous"
-						//console.log("Foto "+ArrayDelaPropiaSala[i].Foto);
-						Avatar2.image('imagen2', ArrayDelaPropiaSala[i].Foto,true);
-						Avatar2.onFileComplete.add( function() { fileComplete2();  }  );
-						Avatar2.start();
+						MMKMYKBXGH.crossOrigin ="Anonymous"
+						//console.log("QHHQPXWFNG "+XPBCVAGCDQ[i].QHHQPXWFNG);
+						MMKMYKBXGH.image('imagen2', XPBCVAGCDQ[i].QHHQPXWFNG,true);
+						MMKMYKBXGH.onFileComplete.add( function() { CWTXODSQLJ();  }  );
+						MMKMYKBXGH.start();
 					}
 					else
 					{
-						textJugador2.text="";
-						textJugador2.text="Ordenador 2";
-						ArrayDelaPropiaSala[i].Nombre="Ordenador 2"
-						var key='Maquina'					
-						if (AvatarSprite2.x<0)
+						HUPALFWPFI.text="";
+						HUPALFWPFI.text="Ordenador 2";
+						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 2"
+						var key='JHGHJAGCMC'					
+						if (BDQHBTUNWW.x<0)
 						{
-							AvatarSprite2.x=AvatarSprite2.x*(-1);
-							AvatarSprite2.y=AvatarSprite2.y*(-1);
+							BDQHBTUNWW.x=BDQHBTUNWW.x*(-1);
+							BDQHBTUNWW.y=BDQHBTUNWW.y*(-1);
 						}
-						AvatarSprite2.name = key;
-						AvatarSprite2.loadTexture(key, 0);
-						AvatarSprite2.width=AnchoFoto;
-						AvatarSprite2.height=AnchoFoto;	
+						BDQHBTUNWW.name = key;
+						BDQHBTUNWW.loadTexture(key, 0);
+						BDQHBTUNWW.width=PJRPWGXEYM;
+						BDQHBTUNWW.height=PJRPWGXEYM;	
 					}
 				}
 				if (i==2){
-					//textJugador3 = game_objeto.add.text(x1+60, y1+15, ArrayDelaPropiaSala[i].Nombre,style);
-					if (AvatarSprite3!=undefined)
+					//BXYCJYDVRT = YMHIHSNADE.add.text(x1+60, y1+15, XPBCVAGCDQ[i].WWKVHIMWYD,style);
+					if (PRWBHVTUSC!=undefined)
 					{
-						AvatarSprite3.destroy();
-						textJugador3.destroy();
+						PRWBHVTUSC.destroy();
+						BXYCJYDVRT.destroy();
 					}
-					AvatarSprite3= game_objeto.add.sprite(x1*(-1),y1*(-1),'1');
-					AvatarSprite3.inputEnabled = true;
-					AvatarSprite3.events.onInputDown.add(  function(){ ClickAvatar(3); } );
+					PRWBHVTUSC= YMHIHSNADE.add.sprite(x1*(-1),y1*(-1),'1');
+					PRWBHVTUSC.inputEnabled = true;
+					PRWBHVTUSC.events.onInputDown.add(  function(){ RWANTPBSQE(3); } );
 					
 					
-					if (AvatarMedalla3!=undefined)
+					if (XXGUGUYWUW!=undefined)
 					{
-						AvatarMedalla3.destroy();
+						XXGUGUYWUW.destroy();
 					}
-					if (ArrayDelaPropiaSala[i].CampeonSemanal==true && ArrayDelaPropiaSala[i].Desconectado==false)
+					if (XPBCVAGCDQ[i].NHWYTYUSYG==true && XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						AvatarMedalla3 = game_objeto.add.sprite(x1+Desplazamiento,y1+55,'Medalla'); //-55
+						XXGUGUYWUW = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1+55,'Medalla'); //-55
 					}
 
-					if (AvatarLogro3!=undefined)
+					if (HGWUGIVGWP!=undefined)
 					{
-						AvatarLogro3.destroy();
+						HGWUGIVGWP.destroy();
 					}
 					
-					if (ArrayDelaPropiaSala[i].Nivel>0 && ArrayDelaPropiaSala[i].Desconectado==false)
+					if (XPBCVAGCDQ[i].OIUIOWCHVW>0 && XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						AvatarLogro3 = game_objeto.add.sprite(x1+Desplazamiento,y1-35,CalculaAvatarLogro(ArrayDelaPropiaSala[i].Nivel,2));			
+						HGWUGIVGWP = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1-35,OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,2));			
 					}
 					
-					textJugador3=game_objeto.add.text(0, 0, "",styleJugador);
-					textJugador3.setTextBounds(x1text, y1text, 190, 90);
-					//textJugador3.x=(x1text);
-					//textJugador3.y=(y1text);
-					//textJugador3.style=styleJugador;
-					textJugador3.text="";
-					textJugador3.text=ArrayDelaPropiaSala[i].NombreOri;
-					//console.log("Texto jugador 3: "+ArrayDelaPropiaSala[i].Nombre);
+					BXYCJYDVRT=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+					BXYCJYDVRT.setTextBounds(x1text, y1text, 190, 90);
+					//BXYCJYDVRT.x=(x1text);
+					//BXYCJYDVRT.y=(y1text);
+					//BXYCJYDVRT.style=IQVAAXFOXW;
+					BXYCJYDVRT.text="";
+					BXYCJYDVRT.text=XPBCVAGCDQ[i].JJHFHGHSUI;
+					//console.log("RPHWVBBGIM jugador 3: "+XPBCVAGCDQ[i].WWKVHIMWYD);
 					
-					imagen3=ArrayDelaPropiaSala[i].Foto
-					imagen3=ArrayDelaPropiaSala[i].Foto
-					if (Avatar3==undefined)
+					imagen3=XPBCVAGCDQ[i].QHHQPXWFNG
+					imagen3=XPBCVAGCDQ[i].QHHQPXWFNG
+					if (AQXDDTTNUH==undefined)
 					{
-						Avatar3=new Phaser.Loader(game_objeto);
+						AQXDDTTNUH=new Phaser.Loader(YMHIHSNADE);
 					}
-					if ( ArrayDelaPropiaSala[i].Desconectado==false)
+					if ( XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						Avatar3.crossOrigin ="Anonymous"
-						//console.log("Foto "+ArrayDelaPropiaSala[i].Foto);
-						Avatar3.image('imagen3', ArrayDelaPropiaSala[i].Foto,true);
-						Avatar3.onFileComplete.add( function() { fileComplete3();  }  );
-						Avatar3.start();
+						AQXDDTTNUH.crossOrigin ="Anonymous"
+						//console.log("QHHQPXWFNG "+XPBCVAGCDQ[i].QHHQPXWFNG);
+						AQXDDTTNUH.image('imagen3', XPBCVAGCDQ[i].QHHQPXWFNG,true);
+						AQXDDTTNUH.onFileComplete.add( function() { EXQNVUFJLI();  }  );
+						AQXDDTTNUH.start();
 					}
 					else
 					{
-						textJugador3.text="";
-						textJugador3.text="Ordenador 3";
-						ArrayDelaPropiaSala[i].Nombre="Ordenador 3"
-						var key='Maquina'					
-						if (AvatarSprite3.x<0)
+						BXYCJYDVRT.text="";
+						BXYCJYDVRT.text="Ordenador 3";
+						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 3"
+						var key='JHGHJAGCMC'					
+						if (PRWBHVTUSC.x<0)
 						{
-							AvatarSprite3.x=AvatarSprite3.x*(-1);
-							AvatarSprite3.y=AvatarSprite3.y*(-1);
+							PRWBHVTUSC.x=PRWBHVTUSC.x*(-1);
+							PRWBHVTUSC.y=PRWBHVTUSC.y*(-1);
 						}
-						AvatarSprite3.name = key;
-						AvatarSprite3.loadTexture(key, 0);
-						AvatarSprite3.width=AnchoFoto;
-						AvatarSprite3.height=AnchoFoto;	
+						PRWBHVTUSC.name = key;
+						PRWBHVTUSC.loadTexture(key, 0);
+						PRWBHVTUSC.width=PJRPWGXEYM;
+						PRWBHVTUSC.height=PJRPWGXEYM;	
 					}
 				}
 				if (i==3){
-					//textJugador4 = game_objeto.add.text(x1+60, y1+15, ArrayDelaPropiaSala[i].Nombre,style);
+					//IRAIEARIWA = YMHIHSNADE.add.text(x1+60, y1+15, XPBCVAGCDQ[i].WWKVHIMWYD,style);
 					//console.log("1.31");
-					if (AvatarSprite4!=undefined)
+					if (BMWINQGWDD!=undefined)
 					{
-						AvatarSprite4.destroy();
-						textJugador4.destroy();
+						BMWINQGWDD.destroy();
+						IRAIEARIWA.destroy();
 					}					
-					AvatarSprite4= game_objeto.add.sprite(x1*(-1),y1*(-1),'1');
+					BMWINQGWDD= YMHIHSNADE.add.sprite(x1*(-1),y1*(-1),'1');
 					
 
 					
 					//console.log("1.32");
-					AvatarSprite4.inputEnabled = true;
+					BMWINQGWDD.inputEnabled = true;
 					//console.log("1.33");
-					AvatarSprite4.events.onInputDown.add( function(){ ClickAvatar(4); } );
+					BMWINQGWDD.events.onInputDown.add( function(){ RWANTPBSQE(4); } );
 					//console.log("1.34");
 	
-					if (AvatarMedalla4!=undefined)
+					if (XKIOHWGJHG!=undefined)
 					{
-						AvatarMedalla4.destroy();
+						XKIOHWGJHG.destroy();
 					}
-					if (ArrayDelaPropiaSala[i].CampeonSemanal==true && ArrayDelaPropiaSala[i].Desconectado==false)
+					if (XPBCVAGCDQ[i].NHWYTYUSYG==true && XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						AvatarMedalla4 = game_objeto.add.sprite(x1+Desplazamiento,y1+55,'Medalla');//75
-					}
-					
-					if (AvatarLogro4!=undefined)
-					{
-						AvatarLogro4.destroy();
+						XKIOHWGJHG = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1+55,'Medalla');//75
 					}
 					
-					if (ArrayDelaPropiaSala[i].Nivel>0 && ArrayDelaPropiaSala[i].Desconectado==false)
+					if (HGWYUYGVWO!=undefined)
 					{
-						AvatarLogro4 = game_objeto.add.sprite(x1+Desplazamiento,y1-35,CalculaAvatarLogro(ArrayDelaPropiaSala[i].Nivel,2));		
+						HGWYUYGVWO.destroy();
 					}
 					
-					textJugador4=game_objeto.add.text(0, 0, "",styleJugador);
-					textJugador4.setTextBounds(x1text, y1text, 190, 90);
-					//textJugador4.x=(x1text);
-					//textJugador4.y=(y1text);
-					//textJugador4.style=styleJugador;
-					textJugador4.text="";
-					textJugador4.text=ArrayDelaPropiaSala[i].NombreOri;
-					//console.log("Texto jugador 4: "+ArrayDelaPropiaSala[i].Nombre);
-					
-					imagen4=ArrayDelaPropiaSala[i].Foto
-					imagen4=ArrayDelaPropiaSala[i].Foto
-					if (Avatar4==undefined)
+					if (XPBCVAGCDQ[i].OIUIOWCHVW>0 && XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						Avatar4=new Phaser.Loader(game_objeto);
+						HGWYUYGVWO = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1-35,OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,2));		
 					}
 					
-					if ( ArrayDelaPropiaSala[i].Desconectado==false)
+					IRAIEARIWA=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+					IRAIEARIWA.setTextBounds(x1text, y1text, 190, 90);
+					//IRAIEARIWA.x=(x1text);
+					//IRAIEARIWA.y=(y1text);
+					//IRAIEARIWA.style=IQVAAXFOXW;
+					IRAIEARIWA.text="";
+					IRAIEARIWA.text=XPBCVAGCDQ[i].JJHFHGHSUI;
+					//console.log("RPHWVBBGIM jugador 4: "+XPBCVAGCDQ[i].WWKVHIMWYD);
+					
+					imagen4=XPBCVAGCDQ[i].QHHQPXWFNG
+					imagen4=XPBCVAGCDQ[i].QHHQPXWFNG
+					if (JNMGJTHVNF==undefined)
 					{
-						Avatar4.crossOrigin ="Anonymous"
+						JNMGJTHVNF=new Phaser.Loader(YMHIHSNADE);
+					}
+					
+					if ( XPBCVAGCDQ[i].XJARYUVBCB==false)
+					{
+						JNMGJTHVNF.crossOrigin ="Anonymous"
 						//console.log("1.35");
-						Avatar4.image('imagen4', ArrayDelaPropiaSala[i].Foto,true);
+						JNMGJTHVNF.image('imagen4', XPBCVAGCDQ[i].QHHQPXWFNG,true);
 						//console.log("1.36");
-						//console.log("Foto "+ArrayDelaPropiaSala[i].Foto);
-						Avatar4.onFileComplete.add( function() { fileComplete4();  }  );
-						Avatar4.start();
+						//console.log("QHHQPXWFNG "+XPBCVAGCDQ[i].QHHQPXWFNG);
+						JNMGJTHVNF.onFileComplete.add( function() { DJAOLUHAHL();  }  );
+						JNMGJTHVNF.start();
 						//console.log("1.37");
 					}
 					else
 					{
-						textJugador4.text="";
-						textJugador4.text="Ordenador 4";
-						ArrayDelaPropiaSala[i].Nombre="Ordenador 4"
-						var key='Maquina'					
-						if (AvatarSprite4.x<0)
+						IRAIEARIWA.text="";
+						IRAIEARIWA.text="Ordenador 4";
+						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 4"
+						var key='JHGHJAGCMC'					
+						if (BMWINQGWDD.x<0)
 						{
-							AvatarSprite4.x=AvatarSprite4.x*(-1);
-							AvatarSprite4.y=AvatarSprite4.y*(-1);
+							BMWINQGWDD.x=BMWINQGWDD.x*(-1);
+							BMWINQGWDD.y=BMWINQGWDD.y*(-1);
 						}
-						AvatarSprite4.name = key;
-						AvatarSprite4.loadTexture(key, 0);
-						AvatarSprite4.width=AnchoFoto;
-						AvatarSprite4.height=AnchoFoto;	
+						BMWINQGWDD.name = key;
+						BMWINQGWDD.loadTexture(key, 0);
+						BMWINQGWDD.width=PJRPWGXEYM;
+						BMWINQGWDD.height=PJRPWGXEYM;	
 					}	
 				}			
 		}	
@@ -5427,27 +5427,27 @@ onSocketCartaMovida = function() {
  
  
  
-DibujaJugadores2=function(){
+DRKFTTVQVC=function(){
 	 
 	var i;
 	var u;
-	var Encontrado;
+	var VEFCIYHBGC;
 	//var textJugador;
-	var LetraMazo;
+	var UBWRXKMTQN;
 	var x1;
 	var y1;
 	var x1text;
 	var y1text;
-	var NumeroJugadorTemporal=0;
+	var JKAHSQUUIA=0;
 	var imagen1="";
 	var imagen2="";
 	var imagen3="";
 	var imagen4="";
 
-	var TapeteRemoto="";
-	var TapeteRemotoLoader="";
-	var DorsoRemotoLoader="";
-	var DorsoRemoto="";
+	var LEQRGVLYLX="";
+	var DCIKAAMXTU="";
+	var CBGXLQKDBG="";
+	var JBCHKJWHKP="";
 
 	//Onjetos Loader;
 	var a;
@@ -5456,152 +5456,152 @@ DibujaJugadores2=function(){
 	var d;
 
 	 
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++){
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++){
 		
-		NumeroJugadorTemporal=i+1;
-		//if (ValidaDibujoAvatars(NumeroJugadorTemporal)==true)
+		JKAHSQUUIA=i+1;
+		//if (IGPARKSECH(JKAHSQUUIA)==true)
 		//{
-	 		log(true,"Jugador Temporal "+NumeroJugadorTemporal);
+	 		log(true,"SSUNXNEEHN Temporal "+JKAHSQUUIA);
 		
 					
-				//console.log("Dice que no existe "+ArrayDelaPropiaSala[i].Desconectado);
+				//console.log("Dice que no existe "+XPBCVAGCDQ[i].XJARYUVBCB);
 				if (i==0){
 				
-					textJugador1.text=ArrayDelaPropiaSala[i].NombreOri;
+					UWROMBGGSY.text=XPBCVAGCDQ[i].JJHFHGHSUI;
 					
 					
 					
-					imagen1=ArrayDelaPropiaSala[i].Foto
-					Avatar1=new Phaser.Loader(game_objeto);
+					imagen1=XPBCVAGCDQ[i].QHHQPXWFNG
+					IDKJKASOTQ=new Phaser.Loader(YMHIHSNADE);
 					
-					if ( ArrayDelaPropiaSala[i].Desconectado==false)
+					if ( XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						Avatar1.crossOrigin ="Anonymous"
-						Avatar1.image('imagen1', ArrayDelaPropiaSala[i].Foto);
-						//console.log("Foto "+ArrayDelaPropiaSala[i].Foto);
-						Avatar1.onFileComplete.add( function() { fileComplete1();  }  );
-						Avatar1.start();
+						IDKJKASOTQ.crossOrigin ="Anonymous"
+						IDKJKASOTQ.image('imagen1', XPBCVAGCDQ[i].QHHQPXWFNG);
+						//console.log("QHHQPXWFNG "+XPBCVAGCDQ[i].QHHQPXWFNG);
+						IDKJKASOTQ.onFileComplete.add( function() { SJXIUSUWHQ();  }  );
+						IDKJKASOTQ.start();
 					}
 					else
 					{
-						textJugador1.text="Ordenador 1";
-						ArrayDelaPropiaSala[i].Nombre="Ordenador 1"
-						var key='Maquina'					
-						AvatarSprite1.name = key;
-						AvatarSprite1.loadTexture(key, 0);	
-						AvatarSprite1.width=AnchoFoto;
-						AvatarSprite1.height=AnchoFoto;							
+						UWROMBGGSY.text="Ordenador 1";
+						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 1"
+						var key='JHGHJAGCMC'					
+						QYBDUBOCBT.name = key;
+						QYBDUBOCBT.loadTexture(key, 0);	
+						QYBDUBOCBT.width=PJRPWGXEYM;
+						QYBDUBOCBT.height=PJRPWGXEYM;							
 					}
 					
 				}
 				if (i==1){
 					
-					textJugador2.text=ArrayDelaPropiaSala[i].NombreOri;
+					HUPALFWPFI.text=XPBCVAGCDQ[i].JJHFHGHSUI;
 					
-					imagen2=ArrayDelaPropiaSala[i].Foto
-					Avatar2=new Phaser.Loader(game_objeto);
-					if ( ArrayDelaPropiaSala[i].Desconectado==false)
+					imagen2=XPBCVAGCDQ[i].QHHQPXWFNG
+					MMKMYKBXGH=new Phaser.Loader(YMHIHSNADE);
+					if ( XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						Avatar2.crossOrigin ="Anonymous"
-						Avatar2.image('imagen2', ArrayDelaPropiaSala[i].Foto);
-						//console.log("Foto "+ArrayDelaPropiaSala[i].Foto);
-						Avatar2.onFileComplete.add( function() { fileComplete2();  }  );
-						Avatar2.start();
+						MMKMYKBXGH.crossOrigin ="Anonymous"
+						MMKMYKBXGH.image('imagen2', XPBCVAGCDQ[i].QHHQPXWFNG);
+						//console.log("QHHQPXWFNG "+XPBCVAGCDQ[i].QHHQPXWFNG);
+						MMKMYKBXGH.onFileComplete.add( function() { CWTXODSQLJ();  }  );
+						MMKMYKBXGH.start();
 					}
 					else
 					{
-						textJugador2.text="Ordenador 2";
-						ArrayDelaPropiaSala[i].Nombre="Ordenador 2"
-						var key='Maquina'					
-						AvatarSprite2.name = key;
-						AvatarSprite2.loadTexture(key, 0);
-						AvatarSprite2.width=AnchoFoto;
-						AvatarSprite2.height=AnchoFoto;							
+						HUPALFWPFI.text="Ordenador 2";
+						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 2"
+						var key='JHGHJAGCMC'					
+						BDQHBTUNWW.name = key;
+						BDQHBTUNWW.loadTexture(key, 0);
+						BDQHBTUNWW.width=PJRPWGXEYM;
+						BDQHBTUNWW.height=PJRPWGXEYM;							
 					}
 				}
 				if (i==2){
 					
-					textJugador3.text=ArrayDelaPropiaSala[i].NombreOri;
+					BXYCJYDVRT.text=XPBCVAGCDQ[i].JJHFHGHSUI;
 					
-					imagen3=ArrayDelaPropiaSala[i].Foto
-					Avatar3=new Phaser.Loader(game_objeto);
-					if ( ArrayDelaPropiaSala[i].Desconectado==false)
+					imagen3=XPBCVAGCDQ[i].QHHQPXWFNG
+					AQXDDTTNUH=new Phaser.Loader(YMHIHSNADE);
+					if ( XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						Avatar3.crossOrigin ="Anonymous"
-						Avatar3.image('imagen3', ArrayDelaPropiaSala[i].Foto);
-						//console.log("Foto "+ArrayDelaPropiaSala[i].Foto);
-						Avatar3.onFileComplete.add( function() { fileComplete3();  }  );
-						Avatar3.start();
+						AQXDDTTNUH.crossOrigin ="Anonymous"
+						AQXDDTTNUH.image('imagen3', XPBCVAGCDQ[i].QHHQPXWFNG);
+						//console.log("QHHQPXWFNG "+XPBCVAGCDQ[i].QHHQPXWFNG);
+						AQXDDTTNUH.onFileComplete.add( function() { EXQNVUFJLI();  }  );
+						AQXDDTTNUH.start();
 					}
 					else
 					{
-						textJugador3.text="Ordenador 3";
-						ArrayDelaPropiaSala[i].Nombre="Ordenador 3"
-						var key='Maquina'					
+						BXYCJYDVRT.text="Ordenador 3";
+						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 3"
+						var key='JHGHJAGCMC'					
 
-						AvatarSprite3.name = key;
-						AvatarSprite3.loadTexture(key, 0);
-						AvatarSprite3.width=AnchoFoto;
-						AvatarSprite3.height=AnchoFoto;							
+						PRWBHVTUSC.name = key;
+						PRWBHVTUSC.loadTexture(key, 0);
+						PRWBHVTUSC.width=PJRPWGXEYM;
+						PRWBHVTUSC.height=PJRPWGXEYM;							
 					}
 				}
 				if (i==3){
 					
-					textJugador4.text=ArrayDelaPropiaSala[i].NombreOri;
+					IRAIEARIWA.text=XPBCVAGCDQ[i].JJHFHGHSUI;
 					
-					imagen4=ArrayDelaPropiaSala[i].Foto
-					Avatar4=new Phaser.Loader(game_objeto);
-					if ( ArrayDelaPropiaSala[i].Desconectado==false)
+					imagen4=XPBCVAGCDQ[i].QHHQPXWFNG
+					JNMGJTHVNF=new Phaser.Loader(YMHIHSNADE);
+					if ( XPBCVAGCDQ[i].XJARYUVBCB==false)
 					{
-						Avatar4.crossOrigin ="Anonymous"
-						Avatar4.image('imagen4', ArrayDelaPropiaSala[i].Foto);
-						//console.log("Foto "+ArrayDelaPropiaSala[i].Foto);
-						Avatar4.onFileComplete.add( function() { fileComplete4();  }  );
-						Avatar4.start();
+						JNMGJTHVNF.crossOrigin ="Anonymous"
+						JNMGJTHVNF.image('imagen4', XPBCVAGCDQ[i].QHHQPXWFNG);
+						//console.log("QHHQPXWFNG "+XPBCVAGCDQ[i].QHHQPXWFNG);
+						JNMGJTHVNF.onFileComplete.add( function() { DJAOLUHAHL();  }  );
+						JNMGJTHVNF.start();
 					}
 					else
 					{
-						textJugador4.text="Ordenador 4";
-						ArrayDelaPropiaSala[i].Nombre="Ordenador 4"
-						var key='Maquina'					
-						AvatarSprite4.name = key;
-						AvatarSprite4.loadTexture(key, 0);
-						AvatarSprite4.width=AnchoFoto;
-						AvatarSprite4.height=AnchoFoto;							
+						IRAIEARIWA.text="Ordenador 4";
+						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 4"
+						var key='JHGHJAGCMC'					
+						BMWINQGWDD.name = key;
+						BMWINQGWDD.loadTexture(key, 0);
+						BMWINQGWDD.width=PJRPWGXEYM;
+						BMWINQGWDD.height=PJRPWGXEYM;							
 					}	
 				}			
 		//}	
 	}	
 		
  } 
-CalculaControl=function()
+IOJCRKJSRL=function()
 {
 	var i;
 	var u;
 	var Vivo;
 	
-	ArrayDelaPropiaSala.sort(sort_by('OrdenEnSala', false, parseFloat));
+	XPBCVAGCDQ.sort(sort_by('KKUYGYRGYG', false, parseFloat));
 	
-	RecalculaDesconectados();
+	LRYVPILWKS();
 	
-	//console.log("Jugadores Desconectados: "+ArrayJugadoresDesconectados.length);
+	//console.log("Jugadores UHYCGYFWYJ: "+KYDWXPGHVY.length);
 	
 	var Vivo;
-	/*for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	/*for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
 		
 		Vivo=true;
-		for (u=0;u<=ArrayJugadoresDesconectados.length-1;u++)
+		for (u=0;u<=KYDWXPGHVY.length-1;u++)
 		{
-			//console.log("Jugador desc "+ArrayJugadoresDesconectados[u].Jugador);
-			if ( (i+1)==ArrayJugadoresDesconectados[u].Jugador)
+			//console.log("SSUNXNEEHN desc "+KYDWXPGHVY[u].SSUNXNEEHN);
+			if ( (i+1)==KYDWXPGHVY[u].SSUNXNEEHN)
 			{
 				Vivo=false;	
-				//console.log("Muerto "+ArrayJugadoresDesconectados[u].Jugador);				
+				//console.log("Muerto "+KYDWXPGHVY[u].SSUNXNEEHN);				
 			}		
 			else
 			{
-				//console.log("Vivo "+ArrayJugadoresDesconectados[u].Jugador);		
+				//console.log("Vivo "+KYDWXPGHVY[u].SSUNXNEEHN);		
 			}
 		}	
 		if (Vivo==true)
@@ -5612,35 +5612,35 @@ CalculaControl=function()
 	
 	Vivo=true
 	
-	//for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	//for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	//{
-		//console.log("Volteando "+ArrayDelaPropiaSala[i].Desconectado+" "+ArrayDelaPropiaSala[i].Jugador);
+		//console.log("Volteando "+XPBCVAGCDQ[i].XJARYUVBCB+" "+XPBCVAGCDQ[i].SSUNXNEEHN);
 
 		
 	//}
 	
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		//console.log("Volteando "+ArrayDelaPropiaSala[i].Desconectado+" "+ArrayDelaPropiaSala[i].Jugador);
-		if (ArrayDelaPropiaSala[i].Desconectado==false)
+		//console.log("Volteando "+XPBCVAGCDQ[i].XJARYUVBCB+" "+XPBCVAGCDQ[i].SSUNXNEEHN);
+		if (XPBCVAGCDQ[i].XJARYUVBCB==false)
 		{			
 			break;
 		}
 		
 	}
 	
-	//console.log("Calculando el control.."+Vivo+" "+ArrayDelaPropiaSala.length+" "+ArrayJugadoresDesconectados.length)
+	//console.log("Calculando el control.."+Vivo+" "+XPBCVAGCDQ.length+" "+KYDWXPGHVY.length)
 	if (Vivo==true)
 	{
-		QuienTomaElControl=(i+1);
-		log(true,"TOMA EL CONTROL DSDE CONECTADOS: "+QuienTomaElControl);
+		ESKTEXAVHU=(i+1);
+		log(true,"TOMA EL CONTROL DSDE CONECTADOS: "+ESKTEXAVHU);
 		
 		//console.log("** Calcula Control");
 		//console.log("Hace el amago")
-		if (IADesconectados(vRonda)==true) //Para que cuando comience partida, empiece el contador en el jugador que corresponda. 
+		if (BSUNPMKJSM(LUCRWXJMDR)==true) //Para que cuando comience partida, empiece el contador en el jugador que corresponda. 
 		//Con todos los cambios, dej� de funcionar.
 		{
-			ContadorTurno(vRonda);
+			JWXRWCVLGC(LUCRWXJMDR);
 		}
 		
 
@@ -5655,82 +5655,82 @@ consol=function()
 {
 	log(false,"a");
 }
-onSocketBarajaDesdeServer = function(Data,QuienReparte,idPartidaServer) {
+KLDULSMKMA = function(Data,RDBQUAVHEP,KKAJSKKAQC) {
 //Tipo Idas o Vueltas
 	
  
  //log(false,this.hola)
 //Level.prototype.Dibuja();
 var i;
-var Desconectado=false;
+var XJARYUVBCB=false;
 var QueHago;
-//console.log("Me llega la id partida "+idPartidaServer)
-idPartida=idPartidaServer;
-QueHago=QuienReparte;
-/*QueHago=QuienReparte-1;
+//console.log("Me llega la id partida "+KKAJSKKAQC)
+MQUGCIUQII=KKAJSKKAQC;
+QueHago=RDBQUAVHEP;
+/*QueHago=RDBQUAVHEP-1;
 if (QueHago==0)
 {
 	QueHago=4;
 }*/
 
-	log(true,'El que reparte es '+QuienReparte+" y yo soy "+SoyElJugador )
-	//alert('El que reparte es '+QuienReparte+" y yo soy "+SoyElJugador );
+	log(true,'El que reparte es '+RDBQUAVHEP+" y yo soy "+TFSXFTYVGQ )
+	//alert('El que reparte es '+RDBQUAVHEP+" y yo soy "+TFSXFTYVGQ );
 	
-	/*for (i=0;i<=ArrayJugadoresDesconectados.length-1;i++)
+	/*for (i=0;i<=KYDWXPGHVY.length-1;i++)
 	{
-		if (QuienReparte==ArrayJugadoresDesconectados[i].Jugador)
+		if (RDBQUAVHEP==KYDWXPGHVY[i].SSUNXNEEHN)
 		{
-			Desconectado=true;
+			XJARYUVBCB=true;
 		}
 	}*/
 	
 	
-//if (vTurno==ArrayJugadoresDesconectados[i].Jugador && SoyElJugador==QuienTomaElControl)
+//if (DVNRTQIWGL==KYDWXPGHVY[i].SSUNXNEEHN && TFSXFTYVGQ==ESKTEXAVHU)
 	
 	
-	if ( //(QuienReparte!=SoyElJugador &&  Desconectado==true && QuienTomaElControl==SoyElJugador  )  
+	if ( //(RDBQUAVHEP!=TFSXFTYVGQ &&  XJARYUVBCB==true && ESKTEXAVHU==TFSXFTYVGQ  )  
 
-			(ValidaRepartosJugador()==true) 
-			//!( QuienReparte==SoyElJugador ||  (QuienReparte!=SoyElJugador && QuienTomaElControl==SoyElJugador && Desconectado==true))  
+			(OSBTHSJKFW()==true) 
+			//!( RDBQUAVHEP==TFSXFTYVGQ ||  (RDBQUAVHEP!=TFSXFTYVGQ && ESKTEXAVHU==TFSXFTYVGQ && XJARYUVBCB==true))  
 		
-		) //(MazoD.length==0 && MazoL.length==0 && MazoR.length==0 && MazoU.length==0)
+		) //(AGKVNAGGLB.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && TWJONOKGHC.length==0)
 	{
 		
 		log(true,'Recibiendo baraja..')
-		//MazoEnviarApoyo no se elimina. Se usa por el tema pesta�as y porque se eliminaba la variable en LimpiarVariables
+		//SXFHAGTGJT no se elimina. Se usa por el tema pesta�as y porque se eliminaba la variable en QSAXUCPASV
 
 	
 //	if (Tipo=="Idas")
 //	{
-//		vTurno=1;
+//		DVNRTQIWGL=1;
 //	}
 	//else{
-		log(true,"Creo el Mazo de apoyo");
-		//for (i=0;i<=Data.length-1;i++) //A veces acaba antes que el que reparte, se crea el Mazo de apoyo y después se llama, pero creo que lo dejo obsoleto por un timer
+		log(true,"Creo el FXGSEGRXKC de apoyo");
+		//for (i=0;i<=Data.length-1;i++) //A veces acaba antes que el que reparte, se crea el FXGSEGRXKC de apoyo y después se llama, pero creo que lo dejo obsoleto por un TKXPPGUPVV
 		//{
-		//	MazoEnviarApoyo.push(new Carta(Data[i].palo,Data[i].idCarta,Data[i].valor,null,null,null));
+		//	SXFHAGTGJT.push(new TVYNYTCQYW(Data[i].SGCSHJVERI,Data[i].UUOPKETETA,Data[i].HVCFEWNDRF,null,null,null));
 		//}
-		//if (!twRec1.isRunning  && !twRec2.isRunning  && !twRec3.isRunning && !tw1.isRunning && !tw2.isRunning && !tw3.isRunning)
+		//if (!BDEFDQUJJE.isRunning  && !CKOUBGTDUF.isRunning  && !JLFYUAKDIJ.isRunning && !PQUFIBKJJH.isRunning && !LJRRHVSVKD.isRunning && !LCYAHFBDTT.isRunning)
 		//{
 		//	log(true,"la crea");
-		//	CrearBarajaRecibida(Data,QuienReparte);
+		//	CLWUDOTYHT(Data,RDBQUAVHEP);
 		//}
 		//else
 		//{
 			log(true,"la crea a malas ");
 			
-			timerBarajaRecibida.loop(1000, function(){
-				//log(true, "Dando vueltas como un capullo2 "+Data.length+" twRec1 "+twRec1.isRunning+" twRec2 "+twRec2.isRunning+" twRec3 "+twRec3.isRunning+" tw1 "+tw1.isRunning+" tw2 "+tw2.isRunning+ "  tw3 "+tw3.isRunning);
-				//if (!twRec1.isRunning  && !twRec2.isRunning  && !twRec3.isRunning && !tw1.isRunning && !tw2.isRunning && !tw3.isRunning)
-				if (SemaforoTextoPuntuacion.length==0)
+			CVTBLMKIGL.loop(1000, function(){
+				//log(true, "Dando vueltas como un capullo2 "+Data.length+" BDEFDQUJJE "+BDEFDQUJJE.isRunning+" CKOUBGTDUF "+CKOUBGTDUF.isRunning+" JLFYUAKDIJ "+JLFYUAKDIJ.isRunning+" PQUFIBKJJH "+PQUFIBKJJH.isRunning+" LJRRHVSVKD "+LJRRHVSVKD.isRunning+ "  LCYAHFBDTT "+LCYAHFBDTT.isRunning);
+				//if (!BDEFDQUJJE.isRunning  && !CKOUBGTDUF.isRunning  && !JLFYUAKDIJ.isRunning && !PQUFIBKJJH.isRunning && !LJRRHVSVKD.isRunning && !LCYAHFBDTT.isRunning)
+				if (JEHYBALODM.length==0)
 					{
 						log(true, "Dando vueltas como un capullo");
-						timerBarajaRecibida.stop();
-						CrearBarajaRecibida(Data,QuienReparte);
+						CVTBLMKIGL.stop();
+						CLWUDOTYHT(Data,RDBQUAVHEP);
 					}
 				}
 			);
-			timerBarajaRecibida.start();	
+			CVTBLMKIGL.start();	
 			
 		//}
 	}
@@ -5744,45 +5744,45 @@ if (QueHago==0)
  };
  
  
- onSocketCantarDesdeServer= function(JugadorQueMueve,puntos, texto) {
-	//TextoCante(JugadorQueMueve,puntos, texto); 
+ TGLVJXEMKD= function(UHTPGPRUJA,OMDVKATFLQ, AWCCMSCOPO) {
+	//LGDEYPLFSA(UHTPGPRUJA,OMDVKATFLQ, AWCCMSCOPO); 
 	
-	TextoBocadillo(JugadorQueMueve,texto,true,puntos,true);
-	//MuestraDorsoCante(JugadorQueMueve,texto,puntos);
+	XIAPNYIGXV(UHTPGPRUJA,AWCCMSCOPO,true,OMDVKATFLQ,true);
+	//HUCLBWTDFV(UHTPGPRUJA,AWCCMSCOPO,OMDVKATFLQ);
 	
  };
  
  
-onSocketEnvioPosicionDesdeServer = function(JugadorQueMueve,KeyMover,nuevaposicion) {
- log(false,'Recibiendo posicion de jugador'+JugadorQueMueve+": "+KeyMover+" "+nuevaposicion)
- MoverCartaAjena(JugadorQueMueve,KeyMover,nuevaposicion); 
+XWGQYYRRQO = function(UHTPGPRUJA,SJVCMXWVVI,BBSGITWRQX) {
+ log(false,'Recibiendo NPYBJSHIFL de jugador'+UHTPGPRUJA+": "+SJVCMXWVVI+" "+BBSGITWRQX)
+ RAVHQRVMNJ(UHTPGPRUJA,SJVCMXWVVI,BBSGITWRQX); 
  };
  
  
- onSocketEnvioCentroDesdeServer= function(JugadorQueMueve,KeyMover,turnoRecibido,RondaRecibida,FechaHora) {
+ NOGEVUYFEW= function(UHTPGPRUJA,SJVCMXWVVI,turnoRecibido,SLGKDYQCAY,VMKDXVSQEY) {
 
-	//MensajeError("RECIBO..."+ KeyMover+" y "+JugadorQueMueve);
+	//SVHMCOYULR("RECIBO..."+ SJVCMXWVVI+" y "+UHTPGPRUJA);
 	var Delay=10;
 	
-	if (PuntosFin()==true)
+	if (OTGNMRHTVK()==true)
 	{
-		CrearTextoPuntuacion(); 
+		WWAYLOUPUQ(); 
 	}
 	else
 	{
 		
-	 //ape SemaforoRondasRapido.push(new ObjetoJugadoresRonda(RondaRecibida,JugadorQueMueve) );
+	 //ape XYXCEMMRDC.push(new NQMQGXXHIL(SLGKDYQCAY,UHTPGPRUJA) );
 	 
-		//console.log("BLOQUEO DESDE SERVER RAPIDO- "+JugadorQueMueve+" "+RondaRecibida+" "+FechaHora);
-		if (MazoCentralBuffer.length>0) //1.0.6 Hago un delay
+		//console.log("BLOQUEO DESDE SERVER RAPIDO- "+UHTPGPRUJA+" "+SLGKDYQCAY+" "+VMKDXVSQEY);
+		if (WSHPROHDIV.length>0) //1.0.6 Hago un delay
 		{
-			Delay=700*MazoCentralBuffer.length;	
+			Delay=700*WSHPROHDIV.length;	
 		}
 		//console.log("se");
-		var timerdelay = game_objeto.time.create(false);
+		var timerdelay = YMHIHSNADE.time.create(false);
 			timerdelay.add(Delay, function(){
 				//console.log("si");
-				MoverCentroAjeno(JugadorQueMueve,KeyMover,RondaRecibida,FechaHora); 
+				VPDVSDLPHG(UHTPGPRUJA,SJVCMXWVVI,SLGKDYQCAY,VMKDXVSQEY); 
 		}
 		);
 		timerdelay.start();
@@ -5792,16 +5792,16 @@ onSocketEnvioPosicionDesdeServer = function(JugadorQueMueve,KeyMover,nuevaposici
 
  }
  
- onSocketCambiar7DesdeServer = function(JugadorQueMueve,KeyMover){
-  Cambiar7Ajeno(JugadorQueMueve,KeyMover); 
+ MBDMSUIWEH = function(UHTPGPRUJA,SJVCMXWVVI){
+  NPOUCHQXMY(UHTPGPRUJA,SJVCMXWVVI); 
  }
  
- onSocketEnviarTextoDesdeServer=function(Texto,QuienHabla){
-  TextoBocadillo(QuienHabla,Texto,false); 
+ VMSUJQUAGD=function(RPHWVBBGIM,QuienHabla){
+  XIAPNYIGXV(QuienHabla,RPHWVBBGIM,false); 
  }
  
 
-OcultaPantallaLogin=function()
+YHNMANDWLT=function()
 {
 	var d;
 	
@@ -5812,7 +5812,7 @@ OcultaPantallaLogin=function()
 
 }
 
-CierraPantallaLogin=function()
+MCFSLYOMHE=function()
 {
 	var d;
 	
@@ -5820,148 +5820,148 @@ CierraPantallaLogin=function()
 		d.style.display = 'none';
 	//	d.style.zIndex=-1;
 		
-	BotonMonoJugador.visible=true;
-	BotonMultiJugador.visible=true;
-	BotonClasificacion.visible=true; //1.0.8
+	UEHYPTREIH.visible=true;
+	IBECDOLWLN.visible=true;
+	POEICHMHDL.visible=true; //1.0.8
 	BotonContacta.visible=true;
-	TextCuentaMundo.visible=true;
+	JKLJKLRIRI.visible=true;
 	
-	BotonAleatorio.visible=false; //1.0.8 resuelve bug cerrar de la x el login.
-	BotonAmigos.visible=false; //1.0.8
-	BotonSalir.visible=false; //1.0.8
+	EFKTQSXAMA.visible=false; //1.0.8 resuelve bug cerrar de la x el login.
+	LNJDKEVPQE.visible=false; //1.0.8
+	CUUKQAGFEB.visible=false; //1.0.8
 }
 
-ErrorConexion=function()
+YUXWLFWVRD=function()
 {
-	if (ModoMultijugador==true)
+	if (EGPDVIEJEL==true)
 	{
-		//var timerErrorConexion = game_objeto.time.create(false);
+		//var timerErrorConexion = YMHIHSNADE.time.create(false);
 		//timerErrorConexion.add(5000,function(){
 		//	timerErrorConexion.stop();
 		//	if (socket.id!=undefined)
 		//	{
-		if (MuestraErrorDesconexion==true)
+		if (YTUGCWECJC==true)
 		{
-			MensajeError("Revise su conexión a internet o inténtelo más tarde.");
+			SVHMCOYULR("Revise su conexión a internet o inténtelo más tarde.");
 		}
-		MuestraErrorDesconexion=true;
+		YTUGCWECJC=true;
 		//	}
 		//});
 		//timerErrorConexion.start();
 		
 		//socket.disconnect();
-		IntentaConexionInicial=false;
+		PWGIQBBAWX=false;
 		
 
 		
-		IntentosReconexion++;
-		//if (IntentosReconexion>=3 && ModoMultijugador==true)
-		if (IntentosReconexion>=2)	
+		JKCANKPQBB++;
+		//if (JKCANKPQBB>=3 && EGPDVIEJEL==true)
+		if (JKCANKPQBB>=2)	
 		{
-			//SalirConfirmado(); 1.0.81
-			//MatarConexionDeMentira();
-			SalirConfirmado(); //madremia
+			//FHKOYDXPCL(); 1.0.81
+			//JHKWHCWKWC();
+			FHKOYDXPCL(); //madremia
 			
 		}
 		
 			
 	}
 	
-	//OcultaPantallaLogin();
+	//YHNMANDWLT();
 	
 }
 
-MensajeError=function(Texto)
+SVHMCOYULR=function(RPHWVBBGIM)
 {
 	//tocar 1000 y 50
 	var styleMarcador = { font: "bold 50px Arial", fill: "#fff", align: "center", boundsAlignH: "center", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 800};	
-	var TextError=game_objeto.add.text(0, 0, Texto, styleMarcador);
-	//TextMarcador.visible=false;
-	TextError.stroke = '#961918';
-    TextError.strokeThickness = 4;
-    TextError.fill = '#F8E600';		
-	//TextMarcador.setTextBounds(960,310,300,100)
-	TextError.setTextBounds(100,150,1200,200)
+	var BMQCYKJAHO=YMHIHSNADE.add.text(0, 0, RPHWVBBGIM, styleMarcador);
+	//ATTUXTNNKX.visible=false;
+	BMQCYKJAHO.stroke = '#961918';
+    BMQCYKJAHO.strokeThickness = 4;
+    BMQCYKJAHO.fill = '#F8E600';		
+	//ATTUXTNNKX.setTextBounds(960,310,300,100)
+	BMQCYKJAHO.setTextBounds(100,150,1200,200)
 	
-	var	twMensajeError = game_objeto.add.tween(TextError).to( { alpha: 0 }, 1500, EfectoTween1, true,1000);
+	var	twMensajeError = YMHIHSNADE.add.tween(BMQCYKJAHO).to( { alpha: 0 }, 1500, KYFMRVNHIQ, true,1000);
 	
 	
 }
 
 Salir=function(VideoJuego){
 	
-	//if (ArrayDelaPropiaSala.length==4 || ModoMultijugador==false)
+	//if (XPBCVAGCDQ.length==4 || EGPDVIEJEL==false)
 	//{
-		MostrarSalir(VideoJuego);
+		XHSDDIIBGG(VideoJuego);
 	//}
 	//else
 	//{
-	//	SalirConfirmado();
+	//	FHKOYDXPCL();
 	//}
 }
 
-SalirConfirmado=function()
+FHKOYDXPCL=function()
 {
-	CancelarAmigos();
-	EntradaModoJuego=false;
-	//	LimpiarVariablesConexionNueva();
-	/*1.0.6 MuestraErrorDesconexion=false;
+	NFARLTEOCI();
+	EHUHWTYXOS=false;
+	//	WNEWPCNXPA();
+	/*1.0.6 YTUGCWECJC=false;
 	try
 	{
 		socket.disconnect();
-		Habitacion=Math.floor(Math.random());
+		DFBVDPETGO=Math.floor(Math.random());
 	}
 	catch(e){}*/
 	
-	//BackFondo.visible=true;
-	//OcultaClasificacion(); //1.0.8 Daba problemas pero es que además se ejecuta en LimpiarVariablesConexionNueva
-	LimpiarVariables();	
-	LimpiarVariablesConexionNueva();
-	IntentaConexionInicial=true;
-	FuerzaSalir=true;
-	//game_objeto.state.start("Level");	
+	//XIQDONAJMM.visible=true;
+	//YJEISFVFQY(); //1.0.8 Daba problemas pero es que además se ejecuta en WNEWPCNXPA
+	QSAXUCPASV();	
+	WNEWPCNXPA();
+	PWGIQBBAWX=true;
+	ERQHLTPETK=true;
+	//YMHIHSNADE.state.start("Level");	
 	//1.0.6
 	
 	
 	MatarConexion();
-	//SocketInicializado=false;
+	//BNCAIUQIJJ=false;
 }
 
 SalirDesdeLogueo=function()
 {
-	CancelarAmigos();
-	EntradaModoJuego=false;
-	//	LimpiarVariablesConexionNueva();
-	MuestraErrorDesconexion=false;
+	NFARLTEOCI();
+	EHUHWTYXOS=false;
+	//	WNEWPCNXPA();
+	YTUGCWECJC=false;
 	
 	//1.0.8
 	/*try 
 	{
 		socket.disconnect();
 		socket=null;
-		Habitacion=Math.floor(Math.random());
+		DFBVDPETGO=Math.floor(Math.random());
 	}
 	catch(e){}
 	*/
 	
-	//BackFondo.visible=true;
-	OcultaClasificacion();
-	LimpiarVariables();	
-	LimpiarVariablesConexionNueva();
-	IntentaConexionInicial=true;
+	//XIQDONAJMM.visible=true;
+	YJEISFVFQY();
+	QSAXUCPASV();	
+	WNEWPCNXPA();
+	PWGIQBBAWX=true;
 	//console.log("Conecta: Llamada SalirDesdeLogueo");			
-	//1.0.8 jo ConectaServidor();
-	//InicioMultiJugador();
+	//1.0.8 jo XEMENNVXGV();
+	//JVEHDHOEEM();
 }
 
-EliminarColaMensajes=function(idMensaje,Origen)
+EXBCVLOIYJ=function(XQLEOGMJYG,Origen)
 {
 	var encontrado=false;
 	var i;
 	
-	for (i=0;i<=ArrayAccionesDesconexiones.length-1;i++)
+	for (i=0;i<=NBEJWDVLLV.length-1;i++)
 	{
-		if (ArrayAccionesDesconexiones[i].IdMsg==idMensaje)
+		if (NBEJWDVLLV[i].OYJAHGADFQ==XQLEOGMJYG)
 		{
 			encontrado=true;
 			break;
@@ -5969,16 +5969,16 @@ EliminarColaMensajes=function(idMensaje,Origen)
 	}
 	if (encontrado==true)
 	{
-		ArrayAccionesDesconexiones.splice(i,1);
-		//console.log("Eliminado mensaje "+Origen+" "+idMensaje)
+		NBEJWDVLLV.splice(i,1);
+		//console.log("Eliminado mensaje "+Origen+" "+XQLEOGMJYG)
 	}
 }	
 
 
-MuestraTurno=function()
+KKQJCHKQEP=function()
 {
-	var LetraMazo=DevuelveUbicacionCarta(vTurno);
-	var Mazo;
+	var UBWRXKMTQN=HHOPUSIABJ(DVNRTQIWGL);
+	var FXGSEGRXKC;
 	var i;
 	var tween1;
 	var tween2;
@@ -5987,76 +5987,76 @@ MuestraTurno=function()
 	var u;
 	//var
 	
-	//console.log("Animacion "+LetraMazo);
+	//console.log("Animacion "+UBWRXKMTQN);
 	
-	//AnimacionTurnoON(ObjTurnoD);
-	/*ObjTurnoD.visible=true;
-	ObjTurnoL.visible=true;
-	ObjTurnoR.visible=true;
-	ObjTurnoU.visible=true;*/
+	//KJHKJQQCCE(DHJGJHGWCY);
+	/*DHJGJHGWCY.visible=true;
+	BNVUWCOWEC.visible=true;
+	GJHWUYGCBN.visible=true;
+	UYIUYIUYIU.visible=true;*/
 	
-	if (LetraMazo=="D")
+	if (UBWRXKMTQN=="D")
 	{
-		AnimacionTurnoON(ObjTurnoD);
-		AnimacionTurnoOFF(ObjTurnoL);
-		AnimacionTurnoOFF(ObjTurnoR);
-		AnimacionTurnoOFF(ObjTurnoU);	
+		KJHKJQQCCE(DHJGJHGWCY);
+		LIQHCBMZAX(BNVUWCOWEC);
+		LIQHCBMZAX(GJHWUYGCBN);
+		LIQHCBMZAX(UYIUYIUYIU);	
 	}
 	
-	if (LetraMazo=="U")
+	if (UBWRXKMTQN=="U")
 	{
-		AnimacionTurnoON(ObjTurnoU);
-		AnimacionTurnoOFF(ObjTurnoL);
-		AnimacionTurnoOFF(ObjTurnoR);
-		AnimacionTurnoOFF(ObjTurnoD);
+		KJHKJQQCCE(UYIUYIUYIU);
+		LIQHCBMZAX(BNVUWCOWEC);
+		LIQHCBMZAX(GJHWUYGCBN);
+		LIQHCBMZAX(DHJGJHGWCY);
 	}
 	
-	if (LetraMazo=="L")
+	if (UBWRXKMTQN=="L")
 	{
-		AnimacionTurnoON(ObjTurnoL);
-		AnimacionTurnoOFF(ObjTurnoU);
-		AnimacionTurnoOFF(ObjTurnoR);
-		AnimacionTurnoOFF(ObjTurnoD);
+		KJHKJQQCCE(BNVUWCOWEC);
+		LIQHCBMZAX(UYIUYIUYIU);
+		LIQHCBMZAX(GJHWUYGCBN);
+		LIQHCBMZAX(DHJGJHGWCY);
 	}	
 	
-	if (LetraMazo=="R")
+	if (UBWRXKMTQN=="R")
 	{
-		AnimacionTurnoON(ObjTurnoR);
-		AnimacionTurnoOFF(ObjTurnoU);
-		AnimacionTurnoOFF(ObjTurnoL);
-		AnimacionTurnoOFF(ObjTurnoD);
+		KJHKJQQCCE(GJHWUYGCBN);
+		LIQHCBMZAX(UYIUYIUYIU);
+		LIQHCBMZAX(BNVUWCOWEC);
+		LIQHCBMZAX(DHJGJHGWCY);
 	}	
 	
 	
 }	
 
-AnimacionTurnoON=function(Obj)
+KJHKJQQCCE=function(Obj)
 {
 	
 	Obj.tint=Phaser.Color.getColor(255,255,255);
 	/*var tween;
 		
-		tween = game_objeto.add.tween(Obj);
+		tween = YMHIHSNADE.add.tween(Obj);
 		tween.to( {alpha:1
 
 		}
-		, vVelocidadCartasReordernar, EfectoTween1,false,500);
+		, MDYSFNYPYP, KYFMRVNHIQ,false,500);
 		tween.start();
 	*/
 
 }
 
-AnimacionTurnoOFF=function(Obj)
+LIQHCBMZAX=function(Obj)
 {
 
 	Obj.tint=Phaser.Color.getColor(110,110,110);
 	/*var tween;
 		
-		tween = game_objeto.add.tween(Obj);
+		tween = YMHIHSNADE.add.tween(Obj);
 		tween.to( {alpha:0.5
 
 		}
-		, vVelocidadCartasReordernar, EfectoTween1,false,500);
+		, MDYSFNYPYP, KYFMRVNHIQ,false,500);
 		tween.start();*/
 
 }
@@ -6065,7 +6065,7 @@ AnimacionTurnoOFF=function(Obj)
 
 /*Level.prototype.render=function(){
 	var a;
-	a=game_objeto.add.text(0, 0, "");
+	a=YMHIHSNADE.add.text(0, 0, "");
 	a.text=""
-	a.text="aaa"+MarcadorNuestro;
+	a.text="aaa"+UHHXSNXXJK;
 }*/

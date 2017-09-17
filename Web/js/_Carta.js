@@ -1,39 +1,39 @@
-﻿function Carta(palorecibido,numero,valor,game,posicion,jugador,RondaParam,FechaHora) {
+﻿function TVYNYTCQYW(FHXIGDTMQS,EHDWIURHHD,HVCFEWNDRF,game,NPYBJSHIFL,jugador,TKWCTNGROU,VMKDXVSQEY) {
 
-	this.palo=palorecibido;
-	this.idCarta=numero;
-    this.valor=valor;    
-	this.cartilla=game;
-	this.posicion=posicion;
+	this.SGCSHJVERI=FHXIGDTMQS;
+	this.UUOPKETETA=EHDWIURHHD;
+    this.HVCFEWNDRF=HVCFEWNDRF;    
+	this.TNFAGGMKXD=game;
+	this.NPYBJSHIFL=NPYBJSHIFL;
 	this.jugador=jugador;
-	this.Ronda=RondaParam; //A priori se usa solo en los buffer.Ojo en el futuro si meto mⳠpar⮥tros en la llamada pq este no lo he rellenado en ning򮠬ado.
-	this.FechaHora=FechaHora;
+	this.AGTXFNIKQD=TKWCTNGROU; //A priori se usa solo en los buffer.Ojo en el futuro si meto mⳠpar⮥tros en la llamada pq este no lo he rellenado en ning򮠬ado.
+	this.VMKDXVSQEY=VMKDXVSQEY;
 	
-	switch (valor){
+	switch (HVCFEWNDRF){
 	
 		case 1 :
-			this.valorReal=12;
-			this.valorPuntuacion=11;
+			this.VVRCMEUNOJ=12;
+			this.WQCPJQWFPN=11;
 			break;
 		case 3 :
-			this.valorReal=11;
-			this.valorPuntuacion=10;
+			this.VVRCMEUNOJ=11;
+			this.WQCPJQWFPN=10;
 			break;	
 		case 10 :
-			this.valorReal=10;
-			this.valorPuntuacion=4;
+			this.VVRCMEUNOJ=10;
+			this.WQCPJQWFPN=4;
 			break;				
 		case 9 :
-			this.valorReal=8;
-			this.valorPuntuacion=2;
+			this.VVRCMEUNOJ=8;
+			this.WQCPJQWFPN=2;
 			break;	
 		case 8 :
-			this.valorReal=9;
-			this.valorPuntuacion=3;
+			this.VVRCMEUNOJ=9;
+			this.WQCPJQWFPN=3;
 			break;				
 		default :		
-			this.valorReal=valor
-			this.valorPuntuacion=0;
+			this.VVRCMEUNOJ=HVCFEWNDRF
+			this.WQCPJQWFPN=0;
 			break;		
 	}
 	
@@ -44,488 +44,488 @@
 }
 
 //Se usa para las comprobaciones de Bazas ganadoras.
-function CartaBazaNuestra(palo,valorReal,jugador) { 
-	this.palo=palo;
-	this.valorReal=valorReal;
+function UYOMGORTXR(SGCSHJVERI,VVRCMEUNOJ,jugador) { 
+	this.SGCSHJVERI=SGCSHJVERI;
+	this.VVRCMEUNOJ=VVRCMEUNOJ;
     this.jugador=jugador;
 }
 
-PosicionCartas=function(LetraMazo)
+SUMEMLHUFX=function(UBWRXKMTQN)
 {
-	var NumeroCartasMano;
-	var Mazo;
-	Mazoposiciones.splice(0,1000);
+	var HVWPIFFCEV;
+	var FXGSEGRXKC;
+	ETAUVLWEYR.splice(0,1000);
 	
 	
-	//var AnchoCartaEscalado=Mazo[Mazo.length-1].cartilla.width*vEscaladoCarta;
+	//var SXSHBRJFIR=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.width*QDTCADQEEX;
 	
-	if (LetraMazo=="D")
+	if (UBWRXKMTQN=="D")
 	{
-		Mazo=MazoD;
+		FXGSEGRXKC=AGKVNAGGLB;
 	}
-	if (LetraMazo=="U")
+	if (UBWRXKMTQN=="U")
 	{
-		Mazo=MazoU;
+		FXGSEGRXKC=TWJONOKGHC;
 	}
-	if (LetraMazo=="L")
+	if (UBWRXKMTQN=="L")
 	{
-		Mazo=MazoL;
+		FXGSEGRXKC=KNVKGHHTYC;
 	}
-	if (LetraMazo=="R")
+	if (UBWRXKMTQN=="R")
 	{
-		Mazo=MazoR;
+		FXGSEGRXKC=CBCNHFGWLU;
 	}
 	
-	var Signo=1;
+	var HGFPUSYJWG=1;
 	
-	if (vRonda>5)
+	if (LUCRWXJMDR>5)
 	{
 		log(false,"INCREIBLE0");
-		if (LetraMazo=="R" || LetraMazo=="U")
+		if (UBWRXKMTQN=="R" || UBWRXKMTQN=="U")
 		{
-			NumeroCartasMano=(Mazo.length+1);
+			HVWPIFFCEV=(FXGSEGRXKC.length+1);
 			
 		}
 		else
 		{
-			NumeroCartasMano=Mazo.length+1;
+			HVWPIFFCEV=FXGSEGRXKC.length+1;
 			log(false,"INCREIBLE");
 		}
 	}
 	else
 	{
 		
-		if (Mazo.length==0)
+		if (FXGSEGRXKC.length==0)
 		{
-			NumeroCartasMano=6;
+			HVWPIFFCEV=6;
 		}
 		else
 		{	
-			NumeroCartasMano=Mazo.length+1;
-			if (NumeroCartasMano==7)
+			HVWPIFFCEV=FXGSEGRXKC.length+1;
+			if (HVWPIFFCEV==7)
 			{
-				NumeroCartasMano=6;
+				HVWPIFFCEV=6;
 			}
 		}
 		
 	}
 	
 	//1.0.6
-	if (PartidaComenzada==false)
+	if (MYQBNBVHKU==false)
 	{
-		NumeroCartasMano=6;
+		HVWPIFFCEV=6;
 	}
 	
 	
 	
-	//posicionEspecial Cartas Ultima Baza (nunca cambia)
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (0 *(AnchoCartaEscalado+ vSeparacion))
-	-(AnchoCartaEscalado)-(AnchoCarta/2)+30;
+	//posicionEspecial Cartas Ultima SRCGCMADME (nunca cambia)
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (0 *(SXSHBRJFIR+ YAJVUBPNNW))
+	-(SXSHBRJFIR)-(COIVBWRMCC/2)+30;
 	
-	var posY=game_objeto.world.height-(AnchoCartaEscalado)-30;
+	var GHTWROCHVV=YMHIHSNADE.world.height-(SXSHBRJFIR)-30;
 	
-	Mazoposiciones.push(new PosicionesCartas("ULTIMA_Baza",0,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("ULTIMA_Baza",0,NOFEDXHMLS,GHTWROCHVV));
 	
 	
-/*	if 	(DeQuien=="Nuestro"){
-		posX=devuelveX("D",98)- (AnchoCartaEscalado)-(AnchoCarta/2);
-		posY=devuelveY("D",0);
+/*	if 	(DeQuien=="VIYQDHWIAA"){
+		NOFEDXHMLS=WIEVLYANFM("D",98)- (SXSHBRJFIR)-(COIVBWRMCC/2);
+		GHTWROCHVV=FIGQBSJQGA("D",0);
 	}
 	else{
 		
-		posX=devuelveX("ULTIMA_Baza_Rival",0)-(AnchoCartaEscalado)-(AnchoCarta/2);
-		posY=devuelveY("R_0",0)+AnchoCarta;
+		NOFEDXHMLS=WIEVLYANFM("ULTIMA_Baza_Rival",0)-(SXSHBRJFIR)-(COIVBWRMCC/2);
+		GHTWROCHVV=FIGQBSJQGA("R_0",0)+COIVBWRMCC;
 	}*/
 	
 	
 
-	//var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (7 *(AnchoCartaEscalado+ vSeparacion))-(AnchoCartaEscalado)-(AnchoCarta/2);
+	//var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (7 *(SXSHBRJFIR+ YAJVUBPNNW))-(SXSHBRJFIR)-(COIVBWRMCC/2);
 	
-	//var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*6)) )/2)- ((  1   *((AnchoCarta/2)+ vSeparacion))*Signo)+AnchoCarta;
-	var posX;
+	//var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*6)) )/2)- ((  1   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG)+COIVBWRMCC;
+	var NOFEDXHMLS;
 	
-	if (ModoMultijugador==true)
+	if (EGPDVIEJEL==true)
 	{
-		posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)  +  AnchoCarta )    /2)+      (5 *(AnchoCarta+ vSeparacion))+AnchoCarta-(AnchoFoto/2)+
-		(AnchoCarta*1.5);
+		NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )    /2)+      (5 *(COIVBWRMCC+ YAJVUBPNNW))+COIVBWRMCC-(PJRPWGXEYM/2)+
+		(COIVBWRMCC*1.5);
 	}
 	else
 	{
-		posX=game_objeto.world.width-AnchoCarta;
+		NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
 	}
 	
 	
-	var posY=(AnchoCarta);
+	var GHTWROCHVV=(COIVBWRMCC);
 	
-	Mazoposiciones.push(new PosicionesCartas("ULTIMA_Baza_Rival",0,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("ULTIMA_Baza_Rival",0,NOFEDXHMLS,GHTWROCHVV));
 	
-	//var posX=(( game_objeto.world.width-vHorizontalPorqueSi-    - (vSeparacion*5)   +  AnchoCartaEscalado   (((AnchoCartaEscalado/2)*NumeroCartasMano))  )    /2)+      (0 *((AnchoCartaEscalado/2)+ vSeparacion ));
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (0 *(AnchoCartaEscalado+ vSeparacion));
-	var posY=game_objeto.world.height-AnchoCartaEscalado;
-	Mazoposiciones.push(new PosicionesCartas("D",0,posX,posY-60));
+	//var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-    - (YAJVUBPNNW*5)   +  SXSHBRJFIR   (((SXSHBRJFIR/2)*HVWPIFFCEV))  )    /2)+      (0 *((SXSHBRJFIR/2)+ YAJVUBPNNW ));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (0 *(SXSHBRJFIR+ YAJVUBPNNW));
+	var GHTWROCHVV=YMHIHSNADE.world.height-SXSHBRJFIR;
+	ETAUVLWEYR.push(new HMNHQKBORK("D",0,NOFEDXHMLS,GHTWROCHVV-60));
 	
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (0 *(AnchoCartaEscalado+ vSeparacion));
-	var posY=game_objeto.world.height-AnchoCartaEscalado;
-	Mazoposiciones.push(new PosicionesCartas("D",98,posX,posY-60));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (0 *(SXSHBRJFIR+ YAJVUBPNNW));
+	var GHTWROCHVV=YMHIHSNADE.world.height-SXSHBRJFIR;
+	ETAUVLWEYR.push(new HMNHQKBORK("D",98,NOFEDXHMLS,GHTWROCHVV-60));
 	
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado )    /2)-(AnchoCartaEscalado/2) ;
-	var posY=game_objeto.world.height-(AltoCarta*2)-(vSeparacion/2);
-	Mazoposiciones.push(new PosicionesCartas("D_0",0,posX,posY-60));	
-	
-
-	//var posX=(( game_objeto.world.width-vHorizontalPorqueSi-(((AnchoCartaEscalado/2)*NumeroCartasMano))  )/2)+ (1 *((AnchoCartaEscalado/2)+ vSeparacion));
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (1 *(AnchoCartaEscalado+ vSeparacion));
-	var posY=game_objeto.world.height-AnchoCartaEscalado;
-	Mazoposiciones.push(new PosicionesCartas("D",1,posX,posY-60));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR )    /2)-(SXSHBRJFIR/2) ;
+	var GHTWROCHVV=YMHIHSNADE.world.height-(MKSLYEWQQS*2)-(YAJVUBPNNW/2);
+	ETAUVLWEYR.push(new HMNHQKBORK("D_0",0,NOFEDXHMLS,GHTWROCHVV-60));	
 	
 
-	//var posX=(( game_objeto.world.width-vHorizontalPorqueSi-(((AnchoCartaEscalado/2)*NumeroCartasMano)) )/2)+ (2 *((AnchoCartaEscalado/2)+ vSeparacion));
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (2 *(AnchoCartaEscalado+ vSeparacion));
-	var posY=game_objeto.world.height-AnchoCartaEscalado;
-	Mazoposiciones.push(new PosicionesCartas("D",2,posX,posY-60));
-	
-	//var posX=(( game_objeto.world.width-vHorizontalPorqueSi-(((AnchoCartaEscalado/2)*NumeroCartasMano))   )    /2)+      (3 *((AnchoCartaEscalado/2)+ vSeparacion));
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (3 *(AnchoCartaEscalado+ vSeparacion));
-	var posY=game_objeto.world.height-AnchoCartaEscalado;
-	Mazoposiciones.push(new PosicionesCartas("D",3,posX,posY-60));
-
-	//var posX=(( game_objeto.world.width-vHorizontalPorqueSi-(((AnchoCartaEscalado/2)*NumeroCartasMano)) )/2)+ (4 *((AnchoCartaEscalado/2)+ vSeparacion));
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (4 *(AnchoCartaEscalado+ vSeparacion));
-	var posY=game_objeto.world.height-AnchoCartaEscalado;
-	Mazoposiciones.push(new PosicionesCartas("D",4,posX,posY-60));
+	//var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-(((SXSHBRJFIR/2)*HVWPIFFCEV))  )/2)+ (1 *((SXSHBRJFIR/2)+ YAJVUBPNNW));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (1 *(SXSHBRJFIR+ YAJVUBPNNW));
+	var GHTWROCHVV=YMHIHSNADE.world.height-SXSHBRJFIR;
+	ETAUVLWEYR.push(new HMNHQKBORK("D",1,NOFEDXHMLS,GHTWROCHVV-60));
 	
 
-	//var posX=(( game_objeto.world.width-vHorizontalPorqueSi-(((AnchoCartaEscalado/2)*NumeroCartasMano)) )/2)+ (5 *((AnchoCartaEscalado/2)+ vSeparacion));
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (5 *(AnchoCartaEscalado+ vSeparacion));
-	var posY=game_objeto.world.height-AnchoCartaEscalado;
-	Mazoposiciones.push(new PosicionesCartas("D",5,posX,posY-60));	
+	//var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-(((SXSHBRJFIR/2)*HVWPIFFCEV)) )/2)+ (2 *((SXSHBRJFIR/2)+ YAJVUBPNNW));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (2 *(SXSHBRJFIR+ YAJVUBPNNW));
+	var GHTWROCHVV=YMHIHSNADE.world.height-SXSHBRJFIR;
+	ETAUVLWEYR.push(new HMNHQKBORK("D",2,NOFEDXHMLS,GHTWROCHVV-60));
 	
-	Mazoposiciones.push(new PosicionesCartas("D_5",0,posX,posY-60));	
+	//var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-(((SXSHBRJFIR/2)*HVWPIFFCEV))   )    /2)+      (3 *((SXSHBRJFIR/2)+ YAJVUBPNNW));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (3 *(SXSHBRJFIR+ YAJVUBPNNW));
+	var GHTWROCHVV=YMHIHSNADE.world.height-SXSHBRJFIR;
+	ETAUVLWEYR.push(new HMNHQKBORK("D",3,NOFEDXHMLS,GHTWROCHVV-60));
+
+	//var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-(((SXSHBRJFIR/2)*HVWPIFFCEV)) )/2)+ (4 *((SXSHBRJFIR/2)+ YAJVUBPNNW));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (4 *(SXSHBRJFIR+ YAJVUBPNNW));
+	var GHTWROCHVV=YMHIHSNADE.world.height-SXSHBRJFIR;
+	ETAUVLWEYR.push(new HMNHQKBORK("D",4,NOFEDXHMLS,GHTWROCHVV-60));
+	
+
+	//var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-(((SXSHBRJFIR/2)*HVWPIFFCEV)) )/2)+ (5 *((SXSHBRJFIR/2)+ YAJVUBPNNW));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (5 *(SXSHBRJFIR+ YAJVUBPNNW));
+	var GHTWROCHVV=YMHIHSNADE.world.height-SXSHBRJFIR;
+	ETAUVLWEYR.push(new HMNHQKBORK("D",5,NOFEDXHMLS,GHTWROCHVV-60));	
+	
+	ETAUVLWEYR.push(new HMNHQKBORK("D_5",0,NOFEDXHMLS,GHTWROCHVV-60));	
 	
 	
 	//Robada
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCartaEscalado*6)) - (vSeparacion*5)  +  AnchoCartaEscalado  )    /2)+      (5 *(AnchoCartaEscalado+ vSeparacion));
-	var posY=game_objeto.world.height-AnchoCartaEscalado;
-	Mazoposiciones.push(new PosicionesCartas("D",99,posX,posY-60));	
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (5 *(SXSHBRJFIR+ YAJVUBPNNW));
+	var GHTWROCHVV=YMHIHSNADE.world.height-SXSHBRJFIR;
+	ETAUVLWEYR.push(new HMNHQKBORK("D",99,NOFEDXHMLS,GHTWROCHVV-60));	
 
 
 
-	if (vRonda<=4)	
+	if (LUCRWXJMDR<=4)	
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta  )    /2)+      (5 *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC  )    /2)+      (5 *(COIVBWRMCC+ YAJVUBPNNW));
 	}
 	else
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (5 *(AnchoCarta+ vSeparacion))- ( (6-NumeroCartasMano) *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (5 *(COIVBWRMCC+ YAJVUBPNNW))- ( (6-HVWPIFFCEV) *(COIVBWRMCC+ YAJVUBPNNW));
 	}
-	var posY=AnchoCarta;
-	Mazoposiciones.push(new PosicionesCartas("U",0,posX,posY));
+	var GHTWROCHVV=COIVBWRMCC;
+	ETAUVLWEYR.push(new HMNHQKBORK("U",0,NOFEDXHMLS,GHTWROCHVV));
 	
 	
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)  +  AnchoCarta )    /2)+      (4 *(AnchoCarta+ vSeparacion))+AnchoCarta-(AnchoFoto/2);
-	var posY=(AnchoCarta*2);
-	Mazoposiciones.push(new PosicionesCartas("U_0",0,posX,posY));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )    /2)+      (4 *(COIVBWRMCC+ YAJVUBPNNW))+COIVBWRMCC-(PJRPWGXEYM/2);
+	var GHTWROCHVV=(COIVBWRMCC*2);
+	ETAUVLWEYR.push(new HMNHQKBORK("U_0",0,NOFEDXHMLS,GHTWROCHVV));
 	
 
 	
 	
-	if (vRonda<=4)	
+	if (LUCRWXJMDR<=4)	
 	{	
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (4 *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (4 *(COIVBWRMCC+ YAJVUBPNNW));
 	}
 	else
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (4 *(AnchoCarta+ vSeparacion))- ( (6-NumeroCartasMano) *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (4 *(COIVBWRMCC+ YAJVUBPNNW))- ( (6-HVWPIFFCEV) *(COIVBWRMCC+ YAJVUBPNNW));
 	}
-	var posY=AnchoCarta;
-	Mazoposiciones.push(new PosicionesCartas("U",1,posX,posY));
+	var GHTWROCHVV=COIVBWRMCC;
+	ETAUVLWEYR.push(new HMNHQKBORK("U",1,NOFEDXHMLS,GHTWROCHVV));
 	
-	if (vRonda<=4)	
+	if (LUCRWXJMDR<=4)	
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)   +  AnchoCarta)/2)+ (3 *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)   +  COIVBWRMCC)/2)+ (3 *(COIVBWRMCC+ YAJVUBPNNW));
 	}
 	else
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (3 *(AnchoCarta+ vSeparacion))- ( (6-NumeroCartasMano) *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (3 *(COIVBWRMCC+ YAJVUBPNNW))- ( (6-HVWPIFFCEV) *(COIVBWRMCC+ YAJVUBPNNW));
 	}
-	var posY=AnchoCarta;
-	Mazoposiciones.push(new PosicionesCartas("U",2,posX,posY));
+	var GHTWROCHVV=COIVBWRMCC;
+	ETAUVLWEYR.push(new HMNHQKBORK("U",2,NOFEDXHMLS,GHTWROCHVV));
 
 
 	
-	/*var posX=AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano))   )/2)+ (0 *((AnchoCarta/2)+ vSeparacion));
-	Mazoposiciones.push(new PosicionesCartas("L",0,posX,posY));*/
-	var posX=AnchoCarta;
-	if (vRonda<=14)
+	/*var NOFEDXHMLS=COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV))   )/2)+ (0 *((COIVBWRMCC/2)+ YAJVUBPNNW));
+	ETAUVLWEYR.push(new HMNHQKBORK("L",0,NOFEDXHMLS,GHTWROCHVV));*/
+	var NOFEDXHMLS=COIVBWRMCC;
+	if (LUCRWXJMDR<=14)
 	{	
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  0   *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  0   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  0  *((AnchoCarta/2)+ vSeparacion))*Signo) +  ((  (0+NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo)    ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  0  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) +  ((  (0+HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG)    ;
 	}
-	Mazoposiciones.push(new PosicionesCartas("L",0,posX,posY))
+	ETAUVLWEYR.push(new HMNHQKBORK("L",0,NOFEDXHMLS,GHTWROCHVV))
 	
 
 	
 
-	/*var posX=AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano))   )/2)+ (1*((AnchoCarta/2)+ vSeparacion));*/
-	var posX=AnchoCarta;
-	if (vRonda<=14)
+	/*var NOFEDXHMLS=COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV))   )/2)+ (1*((COIVBWRMCC/2)+ YAJVUBPNNW));*/
+	var NOFEDXHMLS=COIVBWRMCC;
+	if (LUCRWXJMDR<=14)
 	{	
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  1   *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  1   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  1  *((AnchoCarta/2)+ vSeparacion))*Signo) +  ((  (0+NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo)    ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  1  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) +  ((  (0+HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG)    ;
 	}
-	Mazoposiciones.push(new PosicionesCartas("L",1,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("L",1,NOFEDXHMLS,GHTWROCHVV));
 	
 
-	/*var posX=AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano))  )/2)+ (2*((AnchoCarta/2)+ vSeparacion));
-	Mazoposiciones.push(new PosicionesCartas("L",2,posX,posY));*/
-	var posX=AnchoCarta;
-	if (vRonda<=14)
+	/*var NOFEDXHMLS=COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV))  )/2)+ (2*((COIVBWRMCC/2)+ YAJVUBPNNW));
+	ETAUVLWEYR.push(new HMNHQKBORK("L",2,NOFEDXHMLS,GHTWROCHVV));*/
+	var NOFEDXHMLS=COIVBWRMCC;
+	if (LUCRWXJMDR<=14)
 	{	
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  2   *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  2   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  2  *((AnchoCarta/2)+ vSeparacion))*Signo) +  ((  (0+NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo)    ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  2  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) +  ((  (0+HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG)    ;
 	}
-	Mazoposiciones.push(new PosicionesCartas("L",2,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("L",2,NOFEDXHMLS,GHTWROCHVV));
 	
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  2   *((AnchoCarta/2)+ vSeparacion))*Signo);
-	Mazoposiciones.push(new PosicionesCartas("L_C",0,posX,posY));
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  2   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
+	ETAUVLWEYR.push(new HMNHQKBORK("L_C",0,NOFEDXHMLS,GHTWROCHVV));
 	
 	
 	
-vFormulaAjuste=( ((vSeparacion)*(6-NumeroCartasMano)))
-//vFormulaAjuste=-(AnchoCarta+vSeparacion)
+vFormulaAjuste=( ((YAJVUBPNNW)*(6-HVWPIFFCEV)))
+//vFormulaAjuste=-(COIVBWRMCC+YAJVUBPNNW)
 
-	var posX=game_objeto.world.width-AnchoCarta;
-	if (vRonda<=4)
+	var NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	if (LUCRWXJMDR<=4)
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  5  *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  5  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  5  *((AnchoCarta/2)+ vSeparacion))*Signo) -  ((  (6-NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo) -vFormulaAjuste    ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  5  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -  ((  (6-HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -vFormulaAjuste    ;
 	}
 	
-	Mazoposiciones.push(new PosicionesCartas("R",0,posX,posY));
-	
-
-	var posX=game_objeto.world.width-AnchoCarta;
-	
-	if (vRonda<=4)
-	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  4   *((AnchoCarta/2)+ vSeparacion))*Signo);
-	}
-	else
-	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  4  *((AnchoCarta/2)+ vSeparacion))*Signo) -  ((  (6-NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo)  -vFormulaAjuste ;
-	}
-	Mazoposiciones.push(new PosicionesCartas("R",1,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("R",0,NOFEDXHMLS,GHTWROCHVV));
 	
 
+	var NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	
+	if (LUCRWXJMDR<=4)
+	{
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  4   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
+	}
+	else
+	{
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  4  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -  ((  (6-HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG)  -vFormulaAjuste ;
+	}
+	ETAUVLWEYR.push(new HMNHQKBORK("R",1,NOFEDXHMLS,GHTWROCHVV));
+	
 
-	var posX=game_objeto.world.width-AnchoCarta;
-	if (vRonda<=4)
+
+	var NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	if (LUCRWXJMDR<=4)
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)))/2)+ ((  3    *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)))/2)+ ((  3    *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  3  *((AnchoCarta/2)+ vSeparacion))*Signo) -  ((  (6-NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo) -vFormulaAjuste ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  3  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -  ((  (6-HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -vFormulaAjuste ;
 	}
-	Mazoposiciones.push(new PosicionesCartas("R",2,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("R",2,NOFEDXHMLS,GHTWROCHVV));
 	
-	var posX=game_objeto.world.width-AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)))/2)+ ((  3    *((AnchoCarta/2)+ vSeparacion))*Signo);
-	Mazoposiciones.push(new PosicionesCartas("R_C",0,posX,posY));
+	var NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)))/2)+ ((  3    *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
+	ETAUVLWEYR.push(new HMNHQKBORK("R_C",0,NOFEDXHMLS,GHTWROCHVV));
 
 	
-	if (vRonda<=4)
+	if (LUCRWXJMDR<=4)
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta  )    /2)+      (2 *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC  )    /2)+      (2 *(COIVBWRMCC+ YAJVUBPNNW));
 	}
 	else
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (2 *(AnchoCarta+ vSeparacion))- ( (6-NumeroCartasMano) *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (2 *(COIVBWRMCC+ YAJVUBPNNW))- ( (6-HVWPIFFCEV) *(COIVBWRMCC+ YAJVUBPNNW));
 	}
-	var posY=AnchoCarta;
-	Mazoposiciones.push(new PosicionesCartas("U",3,posX,posY));
+	var GHTWROCHVV=COIVBWRMCC;
+	ETAUVLWEYR.push(new HMNHQKBORK("U",3,NOFEDXHMLS,GHTWROCHVV));
 	
-	if (vRonda<=4)	
+	if (LUCRWXJMDR<=4)	
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (1 *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (1 *(COIVBWRMCC+ YAJVUBPNNW));
 	}
 	else
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (1 *(AnchoCarta+ vSeparacion))- ( (6-NumeroCartasMano) *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (1 *(COIVBWRMCC+ YAJVUBPNNW))- ( (6-HVWPIFFCEV) *(COIVBWRMCC+ YAJVUBPNNW));
 	}
 	
-	var posY=AnchoCarta;
-	Mazoposiciones.push(new PosicionesCartas("U",4,posX,posY));
+	var GHTWROCHVV=COIVBWRMCC;
+	ETAUVLWEYR.push(new HMNHQKBORK("U",4,NOFEDXHMLS,GHTWROCHVV));
 
-	if (vRonda<=4)	
+	if (LUCRWXJMDR<=4)	
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)   +  AnchoCarta)/2)+ (0 *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)   +  COIVBWRMCC)/2)+ (0 *(COIVBWRMCC+ YAJVUBPNNW));
 	}
 	else
 	{
-		var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (0 *(AnchoCarta+ vSeparacion))- ( (6-NumeroCartasMano) *(AnchoCarta+ vSeparacion));
+		var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (0 *(COIVBWRMCC+ YAJVUBPNNW))- ( (6-HVWPIFFCEV) *(COIVBWRMCC+ YAJVUBPNNW));
 	}
-	var posY=AnchoCarta;
-	Mazoposiciones.push(new PosicionesCartas("U",5,posX,posY));
+	var GHTWROCHVV=COIVBWRMCC;
+	ETAUVLWEYR.push(new HMNHQKBORK("U",5,NOFEDXHMLS,GHTWROCHVV));
 	
 	//Robada
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)   +  AnchoCarta)/2)+ (0 *(AnchoCarta+ vSeparacion));
-	var posY=AnchoCarta;
-	Mazoposiciones.push(new PosicionesCartas("U",99,posX,posY));
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)   +  COIVBWRMCC)/2)+ (0 *(COIVBWRMCC+ YAJVUBPNNW));
+	var GHTWROCHVV=COIVBWRMCC;
+	ETAUVLWEYR.push(new HMNHQKBORK("U",99,NOFEDXHMLS,GHTWROCHVV));
 
-	var posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*NumeroCartasMano)) - (vSeparacion*5)   +  AnchoCarta)/2)+ (0 *(AnchoCarta+ vSeparacion));
-	var posY=AnchoCarta;	
-	Mazoposiciones.push(new PosicionesCartas("U_C",0,posX,posY));	
+	var NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*HVWPIFFCEV)) - (YAJVUBPNNW*5)   +  COIVBWRMCC)/2)+ (0 *(COIVBWRMCC+ YAJVUBPNNW));
+	var GHTWROCHVV=COIVBWRMCC;	
+	ETAUVLWEYR.push(new HMNHQKBORK("U_C",0,NOFEDXHMLS,GHTWROCHVV));	
 	
-	/*var posX=AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano))   )/2)+ (3 *((AnchoCarta/2)+ vSeparacion));*/
-	var posX=AnchoCarta;
-	if (vRonda<=14)
+	/*var NOFEDXHMLS=COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV))   )/2)+ (3 *((COIVBWRMCC/2)+ YAJVUBPNNW));*/
+	var NOFEDXHMLS=COIVBWRMCC;
+	if (LUCRWXJMDR<=14)
 	{	
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  3   *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  3   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  3  *((AnchoCarta/2)+ vSeparacion))*Signo) +  ((  (0+NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo)    ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  3  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) +  ((  (0+HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG)    ;
 	}
-	Mazoposiciones.push(new PosicionesCartas("L",3,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("L",3,NOFEDXHMLS,GHTWROCHVV));
 	
 
-	/*var posX=AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano))  )/2)+ (4 *((AnchoCarta/2)+ vSeparacion));*/
-	var posX=AnchoCarta;
-	if (vRonda<=14)
+	/*var NOFEDXHMLS=COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV))  )/2)+ (4 *((COIVBWRMCC/2)+ YAJVUBPNNW));*/
+	var NOFEDXHMLS=COIVBWRMCC;
+	if (LUCRWXJMDR<=14)
 	{	
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  4   *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  4   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  4  *((AnchoCarta/2)+ vSeparacion))*Signo) +  ((  (0+NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo)    ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  4  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) +  ((  (0+HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG)    ;
 	}
-	Mazoposiciones.push(new PosicionesCartas("L",4,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("L",4,NOFEDXHMLS,GHTWROCHVV));
 	
 
-	/*var posX=AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano))    )/2)+ (5 *((AnchoCarta/2)+ vSeparacion));*/
-	var posX=AnchoCarta;
-	if (vRonda<=14)
+	/*var NOFEDXHMLS=COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV))    )/2)+ (5 *((COIVBWRMCC/2)+ YAJVUBPNNW));*/
+	var NOFEDXHMLS=COIVBWRMCC;
+	if (LUCRWXJMDR<=14)
 	{	
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  5   *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  5   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  5  *((AnchoCarta/2)+ vSeparacion))*Signo) +  ((  (0+NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo)    ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  5  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) +  ((  (0+HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG)    ;
 	}
-	Mazoposiciones.push(new PosicionesCartas("L",5,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("L",5,NOFEDXHMLS,GHTWROCHVV));
 	
 	
 	
-	var posX=vSeparacion+5;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*6))    )/2)+ (5 *((AnchoCarta/2)+ vSeparacion))+(AnchoCarta/2)+(vSeparacion);
-	Mazoposiciones.push(new PosicionesCartas("L_0",0,posX,posY));
+	var NOFEDXHMLS=YAJVUBPNNW+5;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*6))    )/2)+ (5 *((COIVBWRMCC/2)+ YAJVUBPNNW))+(COIVBWRMCC/2)+(YAJVUBPNNW);
+	ETAUVLWEYR.push(new HMNHQKBORK("L_0",0,NOFEDXHMLS,GHTWROCHVV));
 	
 	//Robada
-	var posX=AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*6))    )/2)+ (5 *((AnchoCarta/2)+ vSeparacion));
-	Mazoposiciones.push(new PosicionesCartas("L",99,posX,posY));
+	var NOFEDXHMLS=COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*6))    )/2)+ (5 *((COIVBWRMCC/2)+ YAJVUBPNNW));
+	ETAUVLWEYR.push(new HMNHQKBORK("L",99,NOFEDXHMLS,GHTWROCHVV));
 	
 
 	
 
-	var posX=game_objeto.world.width-AnchoCarta;
-	if (vRonda<=4)
+	var NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	if (LUCRWXJMDR<=4)
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  2    *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  2    *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  2  *((AnchoCarta/2)+ vSeparacion))*Signo) -  ((  (6-NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo) -vFormulaAjuste    ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  2  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -  ((  (6-HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -vFormulaAjuste    ;
 	}
 	
-	Mazoposiciones.push(new PosicionesCartas("R",3,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("R",3,NOFEDXHMLS,GHTWROCHVV));
 	
 	
 	
-	var posX=game_objeto.world.width-AnchoCarta;
-	if (vRonda<=4)
+	var NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	if (LUCRWXJMDR<=4)
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  1    *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  1    *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  1  *((AnchoCarta/2)+ vSeparacion))*Signo) -  ((  (6-NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo)   -vFormulaAjuste  ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  1  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -  ((  (6-HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG)   -vFormulaAjuste  ;
 	}
-	Mazoposiciones.push(new PosicionesCartas("R",4,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("R",4,NOFEDXHMLS,GHTWROCHVV));
 	
 
 
-	var posX=game_objeto.world.width-AnchoCarta;
-	if (vRonda<=4)
+	var NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	if (LUCRWXJMDR<=4)
 	{	
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  0   *((AnchoCarta/2)+ vSeparacion))*Signo);
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  0   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
 	}
 	else
 	{
-		var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  0  *((AnchoCarta/2)+ vSeparacion))*Signo) -  ((  (6-NumeroCartasMano)  *((AnchoCarta/2)+ vSeparacion))*Signo) -vFormulaAjuste    ;
+		var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  0  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -  ((  (6-HVWPIFFCEV)  *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG) -vFormulaAjuste    ;
 	}
-	Mazoposiciones.push(new PosicionesCartas("R",5,posX,posY));
+	ETAUVLWEYR.push(new HMNHQKBORK("R",5,NOFEDXHMLS,GHTWROCHVV));
 	
 
-	var posX=game_objeto.world.width-AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*NumeroCartasMano)) )/2)+ ((  0   *((AnchoCarta/2)+ vSeparacion))*Signo);
-	Mazoposiciones.push(new PosicionesCartas("R_5",0,posX,posY));
+	var NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*HVWPIFFCEV)) )/2)+ ((  0   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
+	ETAUVLWEYR.push(new HMNHQKBORK("R_5",0,NOFEDXHMLS,GHTWROCHVV));
 	
 	
-	var posX=game_objeto.world.width-(AnchoCarta+vSeparacion)*2;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*6)) )/2)- ((  1   *((AnchoCarta/2)+ vSeparacion))*Signo);
-	Mazoposiciones.push(new PosicionesCartas("R_0",0,posX,posY));
+	var NOFEDXHMLS=YMHIHSNADE.world.width-(COIVBWRMCC+YAJVUBPNNW)*2;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*6)) )/2)- ((  1   *((COIVBWRMCC/2)+ YAJVUBPNNW))*HGFPUSYJWG);
+	ETAUVLWEYR.push(new HMNHQKBORK("R_0",0,NOFEDXHMLS,GHTWROCHVV));
 	
 	
 	
 	//Robada
-	var posX=game_objeto.world.width-AnchoCarta;
-	var posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-(((AnchoCarta/2)*6)) )/2)+ (0 *((AnchoCarta/2)+ vSeparacion));
-	Mazoposiciones.push(new PosicionesCartas("R",99,posX,posY));
+	var NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	var GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-(((COIVBWRMCC/2)*6)) )/2)+ (0 *((COIVBWRMCC/2)+ YAJVUBPNNW));
+	ETAUVLWEYR.push(new HMNHQKBORK("R",99,NOFEDXHMLS,GHTWROCHVV));
 	
 
 //////////////////////////////////////////////////////////////////
 
 	
-	PosicionCartasCentro();
+	XIYTYOBTYD();
 }
 
 
-PosicionCartasCentro=function()
+XIYTYOBTYD=function()
 {
-	posX_D=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (4 *((AnchoCarta)));
-	posY_D=CentroIrreal+( (AnchoCarta))-(AnchoCarta/5)-25;
-	posAngle_D=0;
+	VUFCMULFSR=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (4 *((COIVBWRMCC)));
+	QTQIWVWEOI=PXEBTYBHGS+( (COIVBWRMCC))-(COIVBWRMCC/5)-25;
+	DDONCKKEVJ=0;
 		
-	posX_U=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (4 *(AnchoCarta));
-	posY_U=CentroIrreal-( (AnchoCarta/2))-15;
-	posAngle_U=0;
+	GHGYTYYGNN=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (4 *(COIVBWRMCC));
+	HJGJWOCUMN=PXEBTYBHGS-( (COIVBWRMCC/2))-15;
+	NXXLHVGDFY=0;
 
-	posX_L=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (4 *(AnchoCarta))-(AnchoCarta)+(AnchoCarta/5);
-	posY_L=CentroIrreal-10;//+( 1*(AnchoCarta+ vSeparacion));
-	posAngle_L=-90;
+	IXWMVXRIVW=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (4 *(COIVBWRMCC))-(COIVBWRMCC)+(COIVBWRMCC/5);
+	QFPBRSSRCY=PXEBTYBHGS-10;//+( 1*(COIVBWRMCC+ YAJVUBPNNW));
+	MALHKNCITQ=-90;
 	//sprite.angle
 
-	posX_R=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)  +  AnchoCarta )/2)+ (5 *((AnchoCarta)))-(AnchoCarta/5);
-	posY_R=CentroIrreal-10;//+( 1*(AnchoCarta+ vSeparacion));
-	posAngle_R=+90;
+	HCTVQVJJIB=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)  +  COIVBWRMCC )/2)+ (5 *((COIVBWRMCC)))-(COIVBWRMCC/5);
+	IWGTWFENXM=PXEBTYBHGS-10;//+( 1*(COIVBWRMCC+ YAJVUBPNNW));
+	WPVNAOXVJH=+90;
 }

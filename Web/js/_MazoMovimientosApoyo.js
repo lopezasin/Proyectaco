@@ -1,130 +1,130 @@
-ï»¿PuntosFin=function()
+ï»¿OTGNMRHTVK=function()
 {
-	return ((MarcadorNuestro>=PuntosGanar || MarcadorRival>=PuntosGanar) && SonVueltas==true);	
+	return ((UHHXSNXXJK>=JLVDFTPUNI || PXGXKDDNFK>=JLVDFTPUNI) && EVAILWGGKX==true);	
 }
 
-MuestraDorsoCante=function(JugadorQueMueve,texto,puntos)
+HUCLBWTDFV=function(UHTPGPRUJA,AWCCMSCOPO,OMDVKATFLQ)
 {
-	var Letra;
-	var Carta1;
-	var Carta2;
-	var Mano;
-	var id1;
-	var id2;
+	var STLEOJDWSU;
+	var MUNNUSLXFH;
+	var FWXWCWPXPK;
+	var XACEBCSJAB;
+	var DVWJGSLMYC;
+	var VMMMRXJYSL;
 	var i;
-	var twCarta1;
-	var twCarta2;
-	var Cartilla1;
-	var Cartilla2;
-	var Voltear;
-	var Cartilla1Name;
-	var Cartilla2Name;
+	var GRNXLBNUJR;
+	var YGYIBEIGPR;
+	var JQGKJGKCKJ;
+	var IUQYICUQIU;
+	var JSHKAHUIQE;
+	var NBVBVBNVCQ;
+	var JHKDVHWODW;
 	
 	
 		
-	Letra=DevuelveUbicacionCarta(JugadorQueMueve);
-	if (Letra=="D")
+	STLEOJDWSU=HHOPUSIABJ(UHTPGPRUJA);
+	if (STLEOJDWSU=="D")
 	{
-		Mano=MazoD;
+		XACEBCSJAB=AGKVNAGGLB;
 	}
-	if (Letra=="U")
+	if (STLEOJDWSU=="U")
 	{
-		Mano=MazoU
+		XACEBCSJAB=TWJONOKGHC
 	}
-	if (Letra=="L")
+	if (STLEOJDWSU=="L")
 	{
-		Mano=MazoL
+		XACEBCSJAB=KNVKGHHTYC
 	}
-	if (Letra=="R")
+	if (STLEOJDWSU=="R")
 	{
-		Mano=MazoR;
+		XACEBCSJAB=CBCNHFGWLU;
 	}
 	
-	if (texto=="oros")
+	if (AWCCMSCOPO=="oros")
 	{
-		id1=8;
-		id2=10;
+		DVWJGSLMYC=8;
+		VMMMRXJYSL=10;
 	}
-	if (texto=="copas")
+	if (AWCCMSCOPO=="copas")
 	{
-		id1=18;
-		id2=20;
+		DVWJGSLMYC=18;
+		VMMMRXJYSL=20;
 	}
-	if (texto=="espadas")
+	if (AWCCMSCOPO=="espadas")
 	{
-		id1=28;
-		id2=30;
+		DVWJGSLMYC=28;
+		VMMMRXJYSL=30;
 	}		
-	if (texto=="bastos")
+	if (AWCCMSCOPO=="bastos")
 	{
-		id1=38;
-		id2=40;
+		DVWJGSLMYC=38;
+		VMMMRXJYSL=40;
 	}	
 	
 
-	for (i=0;i<=Mano.length-1;i++)
+	for (i=0;i<=XACEBCSJAB.length-1;i++)
 	{
-		log(false,"CARTAAAAAAAASSSS: "+Mano[i].cartilla.name);
-		if(Mano[i].cartilla.name==id1  )
+		log(false,"CARTAAAAAAAASSSS: "+XACEBCSJAB[i].TNFAGGMKXD.name);
+		if(XACEBCSJAB[i].TNFAGGMKXD.name==DVWJGSLMYC  )
 		{
-				var posicion1=i;
+				var QLOWMPCLQW=i;
 		}
 		
-		if(Mano[i].cartilla.name==id2  )
+		if(XACEBCSJAB[i].TNFAGGMKXD.name==VMMMRXJYSL  )
 		{
-				var posicion2=i;
+				var GTAHPENEVN=i;
 		}
 	}
 	
-	Cartilla1=Mano[posicion1].cartilla;
-	Cartilla1Name=Mano[posicion1].cartilla.name
-	Cartilla2=Mano[posicion2].cartilla;
-	Cartilla2Name=Mano[posicion2].cartilla;
+	JQGKJGKCKJ=XACEBCSJAB[QLOWMPCLQW].TNFAGGMKXD;
+	NBVBVBNVCQ=XACEBCSJAB[QLOWMPCLQW].TNFAGGMKXD.name
+	IUQYICUQIU=XACEBCSJAB[GTAHPENEVN].TNFAGGMKXD;
+	JHKDVHWODW=XACEBCSJAB[GTAHPENEVN].TNFAGGMKXD;
 	
-	if (puntos==20 && Letra!="D")
+	if (OMDVKATFLQ==20 && STLEOJDWSU!="D")
 	{
 
 			try
 			{
-				Cartilla1.loadTexture(Cartilla1.name, 0);
+				JQGKJGKCKJ.loadTexture(JQGKJGKCKJ.name, 0);
 			}
 			catch(e){}
 			
-			twCarta1 = game_objeto.add.tween(Cartilla1).to( { alpha: 1 }, 2000, EfectoTween1, true);
-			twCarta1.onComplete.add(  function(){
+			GRNXLBNUJR = YMHIHSNADE.add.tween(JQGKJGKCKJ).to( { alpha: 1 }, 2000, KYFMRVNHIQ, true);
+			GRNXLBNUJR.onComplete.add(  function(){
 					
 					try
 					{
-						Voltear=true;
-						for (i=0;i<=MazoCentral.length-1;i++)
+						JSHKAHUIQE=true;
+						for (i=0;i<=VDKOVQXHON.length-1;i++)
 						{
-							if (MazoCentral[i].Cartilla.name==Cartilla1Name)
+							if (VDKOVQXHON[i].AAJNQWXHMY.name==NBVBVBNVCQ)
 							{
-								Voltear=false;
+								JSHKAHUIQE=false;
 							}
 						}	
-						ArreglaReversos();
+						CHJKAHKJHC();
 					}
 					catch(e)
 					{
-						Voltear=false;
+						JSHKAHUIQE=false;
 						
 					}
 
 					
-					if (Voltear==true)
+					if (JSHKAHUIQE==true)
 					{
-						//ArreglaReversos();
+						//CHJKAHKJHC();
 						/*try
 						{
-							Cartilla1.loadTexture(ReversoGlobal, 0);
+							JQGKJGKCKJ.loadTexture(RCYRGXLWBR, 0);
 							
 						}
 						catch(e)
 						{
 							try
 							{
-								Cartilla1.loadTexture("Reverso", 0);
+								JQGKJGKCKJ.loadTexture("Reverso", 0);
 							}
 							catch(e){}
 						
@@ -135,45 +135,45 @@ MuestraDorsoCante=function(JugadorQueMueve,texto,puntos)
 			
 			try
 			{
-				Cartilla2.loadTexture(Cartilla2.name, 0);
+				IUQYICUQIU.loadTexture(IUQYICUQIU.name, 0);
 			}
 			catch(e){}
 			
-			twCarta2 = game_objeto.add.tween(Cartilla2).to( { alpha: 1 }, 2000, EfectoTween1, true);
-			twCarta2.onComplete.add(  function(){
+			YGYIBEIGPR = YMHIHSNADE.add.tween(IUQYICUQIU).to( { alpha: 1 }, 2000, KYFMRVNHIQ, true);
+			YGYIBEIGPR.onComplete.add(  function(){
 					
 					try
 					{
-						ArreglaReversos();
-						Voltear=true;
-						for (i=0;i<=MazoCentral.length-1;i++)
+						CHJKAHKJHC();
+						JSHKAHUIQE=true;
+						for (i=0;i<=VDKOVQXHON.length-1;i++)
 						{
-							if (MazoCentral[i].Cartilla.name==Cartilla2Name)
+							if (VDKOVQXHON[i].AAJNQWXHMY.name==JHKDVHWODW)
 							{
-								Voltear=false;
+								JSHKAHUIQE=false;
 							}
 						}	
 					}
 					catch(e)
 					{
-						Voltear=false;
-						//ArreglaReversos();
+						JSHKAHUIQE=false;
+						//CHJKAHKJHC();
 					}
 
 					
-					if (Voltear==true)
+					if (JSHKAHUIQE==true)
 					{
-						//ArreglaReversos();
+						//CHJKAHKJHC();
 						/*try
 						{
-							Cartilla2.loadTexture(ReversoGlobal, 0);
+							IUQYICUQIU.loadTexture(RCYRGXLWBR, 0);
 							
 						}
 						catch(e)
 						{
 							try
 							{
-								Cartilla2.loadTexture("Reverso", 0);
+								IUQYICUQIU.loadTexture("Reverso", 0);
 							}
 							catch(e){}
 						
@@ -191,48 +191,48 @@ MostrarTodasCartas=function(){
 	var i;
 	//try
 	//{
-		for (i=0;i<=MazoL.length-1;i++)
+		for (i=0;i<=KNVKGHHTYC.length-1;i++)
 		{
-			MazoL[i].cartilla.loadTexture(MazoL[i].cartilla.name, 0);
+			KNVKGHHTYC[i].TNFAGGMKXD.loadTexture(KNVKGHHTYC[i].TNFAGGMKXD.name, 0);
 		}
-		for (i=0;i<=MazoU.length-1;i++)
+		for (i=0;i<=TWJONOKGHC.length-1;i++)
 		{
-			MazoU[i].cartilla.loadTexture(MazoU[i].cartilla.name, 0);
+			TWJONOKGHC[i].TNFAGGMKXD.loadTexture(TWJONOKGHC[i].TNFAGGMKXD.name, 0);
 		}		
-		for (i=0;i<=MazoR.length-1;i++)
+		for (i=0;i<=CBCNHFGWLU.length-1;i++)
 		{
-			MazoR[i].cartilla.loadTexture(MazoR[i].cartilla.name, 0);
+			CBCNHFGWLU[i].TNFAGGMKXD.loadTexture(CBCNHFGWLU[i].TNFAGGMKXD.name, 0);
 		}		
 	//}
 	//catch(e){}
 
 }
 
-MostrarAnverso=function(cartilla){
-	if (SiempreBocaArriba==false)
+NAYBJTKIKA=function(TNFAGGMKXD){
+	if (HBFBHWJQSQ==false)
 	{
 		try
 		{
-			cartilla.loadTexture(cartilla.name, 0);
+			TNFAGGMKXD.loadTexture(TNFAGGMKXD.name, 0);
 		}
 		catch(e){}
 	}
 }
 
-MostrarReverso=function(cartilla){	
-	if (SiempreBocaArriba==false)
+XNFDNBQFUA=function(TNFAGGMKXD){	
+	if (HBFBHWJQSQ==false)
 	{
-		//log(true,"El reverso global es: "+ReversoGlobal)
+		//log(true,"El reverso global es: "+RCYRGXLWBR)
 		try
 		{
-			cartilla.loadTexture(ReversoGlobal, 0);
+			TNFAGGMKXD.loadTexture(RCYRGXLWBR, 0);
 		}
 		catch(e)
 		{
-			log(true,"El reverso con el catch "+cartilla.key);
+			log(true,"El reverso con el catch "+TNFAGGMKXD.key);
 			try
 			{
-				cartilla.loadTexture('Reverso', 0);
+				TNFAGGMKXD.loadTexture('Reverso', 0);
 			}
 			catch(u)
 			{}
@@ -241,78 +241,78 @@ MostrarReverso=function(cartilla){
 	
 	
 }
-Cambiar7Ajeno=function(JugadorQueMueve,KeyMover,RondaParam,turnoParam){
+NPOUCHQXMY=function(UHTPGPRUJA,SJVCMXWVVI,TKWCTNGROU,LDCCGSIBKW){
   var i;
-  var Mano;
-  var LetraMazo;
-  var Encontrada=false;
+  var XACEBCSJAB;
+  var UBWRXKMTQN;
+  var LSKPLOTYIB=false;
   
-  //BotonSiete.visible=false;
-BotonSiete.loadTexture('Boton_cambiar_7_off', 0);
+  //YGTNAODFHW.visible=false;
+YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);
   
-  LetraMazo=DevuelveUbicacionCarta(JugadorQueMueve);
-   log(false,"Jugador 7: "+JugadorQueMueve+"Letra: "+LetraMazo+" KEY: "+KeyMover)
+  UBWRXKMTQN=HHOPUSIABJ(UHTPGPRUJA);
+   log(false,"SSUNXNEEHN 7: "+UHTPGPRUJA+"STLEOJDWSU: "+UBWRXKMTQN+" KEY: "+SJVCMXWVVI)
    
-  	if (LetraMazo=="D"){
-		Mano=MazoD;
+  	if (UBWRXKMTQN=="D"){
+		XACEBCSJAB=AGKVNAGGLB;
 	}
-    if (LetraMazo=="L"){
-		Mano=MazoL;
+    if (UBWRXKMTQN=="L"){
+		XACEBCSJAB=KNVKGHHTYC;
 	}
-    if (LetraMazo=="U"){
-		Mano=MazoU;
+    if (UBWRXKMTQN=="U"){
+		XACEBCSJAB=TWJONOKGHC;
 	}
-    if (LetraMazo=="R"){
-		Mano=MazoR;
+    if (UBWRXKMTQN=="R"){
+		XACEBCSJAB=CBCNHFGWLU;
 	}	
 	
-	for (i=0;i<=Mano.length-1;i++)
+	for (i=0;i<=XACEBCSJAB.length-1;i++)
 	{
-		if(Mano[i].cartilla.name==KeyMover)
+		if(XACEBCSJAB[i].TNFAGGMKXD.name==SJVCMXWVVI)
 		{
-			Encontrada=true;
+			LSKPLOTYIB=true;
 			break;
 		}
 	}
 	
-	if (Encontrada==true)
+	if (LSKPLOTYIB==true)
 	{
 		log(false,"ENCONTRADA");
-		CartaMover=Mano[i].cartilla
-		MostrarAnverso(CartaMover);
-		CartaMover.sendToBack();
+		NJGFWACAPY=XACEBCSJAB[i].TNFAGGMKXD
+		NAYBJTKIKA(NJGFWACAPY);
+		NJGFWACAPY.sendToBack();
 				
-		CartaTriunfo.push(new Carta(Mano[i].palo,Mano[i].idCarta,Mano[i].valor,Mano[i].cartilla));
+		FBSDMRLVEL.push(new TVYNYTCQYW(XACEBCSJAB[i].SGCSHJVERI,XACEBCSJAB[i].UUOPKETETA,XACEBCSJAB[i].HVCFEWNDRF,XACEBCSJAB[i].TNFAGGMKXD));
 		
-		Grupo7.add(Mano[i].cartilla);
-		game_objeto.world.bringToTop(MazoCentral);
-		game_objeto.world.bringToTop(MazoD);
+		COTMMCVJWP.add(XACEBCSJAB[i].TNFAGGMKXD);
+		YMHIHSNADE.world.bringToTop(VDKOVQXHON);
+		YMHIHSNADE.world.bringToTop(AGKVNAGGLB);
 		
-		Mano.splice(i,1);
-		ReubicarCartas(Mano,LetraMazo);
+		XACEBCSJAB.splice(i,1);
+		OROGRNBISW(XACEBCSJAB,UBWRXKMTQN);
 		
 
 		
 		
 		
-		twEsp7 = game_objeto.add.tween(CartaMover);
-		twEsp7.to( {x:(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6))  - (vSeparacion*8) +  AnchoCarta)/2)+ (1 *(AnchoCarta+ vSeparacion))
-		,y:CentroIrreal,
+		HHBPAROITT = YMHIHSNADE.add.tween(NJGFWACAPY);
+		HHBPAROITT.to( {x:(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6))  - (YAJVUBPNNW*8) +  COIVBWRMCC)/2)+ (1 *(COIVBWRMCC+ YAJVUBPNNW))
+		,y:PXEBTYBHGS,
 		angle : 90
-		}, 500, EfectoTween2);		
+		}, 500, BSXWFYLCEW);		
 		
-		twEsp7.onComplete.add( 			
+		HHBPAROITT.onComplete.add( 			
 			function () {
-				FinalizaCambio7(Mano,LetraMazo,JugadorQueMueve,RondaParam,turnoParam);
+				GNAHFPUEID(XACEBCSJAB,UBWRXKMTQN,UHTPGPRUJA,TKWCTNGROU,LDCCGSIBKW);
 			} ,this)
 
-		if (LetraMazo=="D")
+		if (UBWRXKMTQN=="D")
 		{
-			//game_objeto.add.tween(CartaMover.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
-			game_objeto.add.tween(CartaMover.scale).to( {x:1,y:1}, vVelocidadCartas, EfectoTween2,true);
+			//YMHIHSNADE.add.tween(NJGFWACAPY.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+			YMHIHSNADE.add.tween(NJGFWACAPY.scale).to( {x:1,y:1}, IRXOKNWTLV, BSXWFYLCEW,true);
 		}					
 		
-		twEsp7.start();	
+		HHBPAROITT.start();	
 	}
 	else{
 		//log(false,"NO ENCONTRADA");
@@ -320,170 +320,170 @@ BotonSiete.loadTexture('Boton_cambiar_7_off', 0);
 	
 }
 
-Cambiar7 =function()
+QPGADJGDVQ =function()
 {
 	var i;
-	var CartaMover;
-	var Encontrada=false;
+	var NJGFWACAPY;
+	var LSKPLOTYIB=false;
 	
-	if (BotonSiete.key=="Boton_cambiar_7_on")
+	if (YGTNAODFHW.key=="Boton_cambiar_7_on")
 	{
-		//BotonSiete.visible=false;
-		BotonSiete.loadTexture('Boton_cambiar_7_off', 0);
+		//YGTNAODFHW.visible=false;
+		YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);
 			
-		for (i=0;i<=MazoD.length-1;i++)
+		for (i=0;i<=AGKVNAGGLB.length-1;i++)
 		{
-			if(MazoD[i].valor==7 && MazoD[i].palo==Triunfo)
+			if(AGKVNAGGLB[i].HVCFEWNDRF==7 && AGKVNAGGLB[i].SGCSHJVERI==TGTQPBEQFR)
 			{
-				Encontrada=true;
+				LSKPLOTYIB=true;
 				break;
 			}
 		}
 		
-		if (Encontrada==true)
+		if (LSKPLOTYIB==true)
 		{
 			
-			if (ModoMultijugador==true)
+			if (EGPDVIEJEL==true)
 			{
 
 				/////////////
 			
-				var Hora=Date.now();
-				var ObjectSend=function( Habitacion,JugadorQueMueve,Cartilla, SonVueltas, Partida, JugadorFull, JugadorSala, Nombre,
-					IdMsg,ClientId,SalaID,Mensaje){
-					 this.Habitacion=Habitacion
-					 this.JugadorQueMueve=JugadorQueMueve
-					 this.Cartilla=Cartilla
-					 this.SonVueltas=SonVueltas
-					 this.Partida=Partida
-					 this.JugadorFull=JugadorFull
-					 this.JugadorSala=JugadorSala
-					 this.Nombre=Nombre
+				var QKVJASWVEO=Date.now();
+				var GXNRNMAAKW=function( DFBVDPETGO,UHTPGPRUJA,AAJNQWXHMY, EVAILWGGKX, KXAWTTIEGG, OBTBPOULAV, AURESXCGMK, WWKVHIMWYD,
+					OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+					 this.DFBVDPETGO=DFBVDPETGO
+					 this.UHTPGPRUJA=UHTPGPRUJA
+					 this.AAJNQWXHMY=AAJNQWXHMY
+					 this.EVAILWGGKX=EVAILWGGKX
+					 this.KXAWTTIEGG=KXAWTTIEGG
+					 this.OBTBPOULAV=OBTBPOULAV
+					 this.AURESXCGMK=AURESXCGMK
+					 this.WWKVHIMWYD=WWKVHIMWYD
 					
 														 
-					 this.IdMsg=IdMsg
-					 this.ClientId=ClientId
-					 this.SalaID=SalaID
-					 this.Mensaje=Mensaje
+					 this.OYJAHGADFQ=OYJAHGADFQ
+					 this.OJPXTRQDKS=OJPXTRQDKS
+					 this.LYHKNIMVEB=LYHKNIMVEB
+					 this.RHOLNWBOXR=RHOLNWBOXR
 					 
-					 this.Fecha=new Date(Date.now());
+					 this.EBAPPJFYSW=new Date(Date.now());
 				 }
-				var ArrayAccionesDesconexionesLocal=[];
-				ArrayAccionesDesconexionesLocal.splice(0,1000);
+				var QPHHGPRJAI=[];
+				QPHHGPRJAI.splice(0,1000);
 
 					
-				var IdMsg=Math.random()*100000;
-				var Objeto=new ObjectSend(Habitacion,SoyElJugador,MazoD[i].cartilla.name, SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[SoyElJugador-1].JugadorFull,ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala, ArrayDelaPropiaSala[SoyElJugador-1].Nombre,
-					IdMsg,ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala,Habitacion,'enviar cambio7');
-				ArrayAccionesDesconexiones.push(Objeto);
-				ArrayAccionesDesconexionesLocal.push(Objeto);
+				var OYJAHGADFQ=Math.random()*100000;
+				var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,TFSXFTYVGQ,AGKVNAGGLB[i].TNFAGGMKXD.name, EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK, XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD,
+					OYJAHGADFQ,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,DFBVDPETGO,'WROHETMDHX');
+				NBEJWDVLLV.push(KCPHFPSPLQ);
+				QPHHGPRJAI.push(KCPHFPSPLQ);
 
 
-				socket.emit('enviar cambio7',ArrayAccionesDesconexionesLocal[0],
-				 function(idMensaje)
+				socket.emit('WROHETMDHX',QPHHGPRJAI[0],
+				 function(XQLEOGMJYG)
 				 {			 
-					EliminarColaMensajes(idMensaje,'enviar cambio7');
+					EXBCVLOIYJ(XQLEOGMJYG,'WROHETMDHX');
 				 }
 				);						
-				ArrayAccionesDesconexionesLocal.splice(0,1000);	
+				QPHHGPRJAI.splice(0,1000);	
 
 				
 				/////////////	
 				
 				
-				//socket.emit('enviar cambio7', Habitacion,SoyElJugador,MazoD[i].cartilla.name, SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[SoyElJugador-1].JugadorFull,ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala, ArrayDelaPropiaSala[SoyElJugador-1].Nombre) ;
+				//socket.emit('WROHETMDHX', DFBVDPETGO,TFSXFTYVGQ,AGKVNAGGLB[i].TNFAGGMKXD.name, EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK, XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD) ;
 			}
 			
-			CartaMover=MazoD[i].cartilla
-			//CartaMover.sendToBack();
-			//DesHabilitarClick(CartaMover);
+			NJGFWACAPY=AGKVNAGGLB[i].TNFAGGMKXD
+			//NJGFWACAPY.sendToBack();
+			//VRLYJAAHUE(NJGFWACAPY);
 			
-			CartaTriunfo.push(new Carta(MazoD[i].palo,MazoD[i].idCarta,MazoD[i].valor,MazoD[i].cartilla,5,MazoD[i].jugador));
-			DesHabilitarClick(CartaTriunfo.length-1);
-			//GrupoMazo.add(CartaTriunfo[0].cartilla);
-			Grupo7.add(MazoD[i].cartilla);
-			game_objeto.world.bringToTop(MazoCentral);
-			game_objeto.world.bringToTop(MazoD);
+			FBSDMRLVEL.push(new TVYNYTCQYW(AGKVNAGGLB[i].SGCSHJVERI,AGKVNAGGLB[i].UUOPKETETA,AGKVNAGGLB[i].HVCFEWNDRF,AGKVNAGGLB[i].TNFAGGMKXD,5,AGKVNAGGLB[i].jugador));
+			VRLYJAAHUE(FBSDMRLVEL.length-1);
+			//GSXGWASLIY.add(FBSDMRLVEL[0].TNFAGGMKXD);
+			COTMMCVJWP.add(AGKVNAGGLB[i].TNFAGGMKXD);
+			YMHIHSNADE.world.bringToTop(VDKOVQXHON);
+			YMHIHSNADE.world.bringToTop(AGKVNAGGLB);
 			
-			//CartaTriunfo[1].cartilla.moveDown();
+			//FBSDMRLVEL[1].TNFAGGMKXD.moveDown();
 			
-			MazoD.splice(i,1);
-			ReubicarCartas(MazoD,"D");
+			AGKVNAGGLB.splice(i,1);
+			OROGRNBISW(AGKVNAGGLB,"D");
 			
 
 			
 			
 			
-			twEsp7 = game_objeto.add.tween(CartaMover);
-			twEsp7.to( {x:(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6))  - (vSeparacion*8) +  AnchoCarta)/2)+ (1 *(AnchoCarta+ vSeparacion))
-			,y:CentroIrreal,
+			HHBPAROITT = YMHIHSNADE.add.tween(NJGFWACAPY);
+			HHBPAROITT.to( {x:(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6))  - (YAJVUBPNNW*8) +  COIVBWRMCC)/2)+ (1 *(COIVBWRMCC+ YAJVUBPNNW))
+			,y:PXEBTYBHGS,
 			angle : 90
-			}, 500, EfectoTween2);		
+			}, 500, BSXWFYLCEW);		
 			
-			twEsp7.onComplete.add( 
+			HHBPAROITT.onComplete.add( 
 			
 				function () {
-					DesHabilitarClick(CartaMover);
-					FinalizaCambio7(MazoD,"D",SoyElJugador);
+					VRLYJAAHUE(NJGFWACAPY);
+					GNAHFPUEID(AGKVNAGGLB,"D",TFSXFTYVGQ);
 				}
 			 ,this)		
 			
-			twEsp7.start();	
-			game_objeto.add.tween(CartaMover.scale).to( {x:1,y:1}, vVelocidadCartas, EfectoTween2,true);
+			HHBPAROITT.start();	
+			YMHIHSNADE.add.tween(NJGFWACAPY.scale).to( {x:1,y:1}, IRXOKNWTLV, BSXWFYLCEW,true);
 		}
 	}
 }
 
-FinalizaCambio7=function(Mano,Letra,JugadorCambia7,RondaParam,turnoParam){
+GNAHFPUEID=function(XACEBCSJAB,STLEOJDWSU,RRWWKUVRLD,TKWCTNGROU,LDCCGSIBKW){
 	
-	var posX;
-	var posY;
-	var angulo;
+	var NOFEDXHMLS;
+	var GHTWROCHVV;
+	var MOFGFYOVIG;
 	
 		
-	Mano.push(new Carta(CartaTriunfo[0].palo,CartaTriunfo[0].idCarta,CartaTriunfo[0].valor,CartaTriunfo[0].cartilla,7,JugadorCambia7));
-	//GrupoD.add(CartaTriunfo[0].cartilla);
+	XACEBCSJAB.push(new TVYNYTCQYW(FBSDMRLVEL[0].SGCSHJVERI,FBSDMRLVEL[0].UUOPKETETA,FBSDMRLVEL[0].HVCFEWNDRF,FBSDMRLVEL[0].TNFAGGMKXD,7,RRWWKUVRLD));
+	//RXKKPILDQT.add(FBSDMRLVEL[0].TNFAGGMKXD);
 	
-	CartaTriunfo.shift();
+	FBSDMRLVEL.shift();
 	
-	//var AnchoCarta=Mano[Mano.length-1].cartilla.width;
+	//var COIVBWRMCC=XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.width;
 	
-	if (Letra=="D")
+	if (STLEOJDWSU=="D")
 	{
-		posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)   +  AnchoCarta)/2)+ (5 *(AnchoCarta+ vSeparacion));
-		posY=game_objeto.world.height-AnchoCarta;
-		angulo=Mano[Mano.length-1].cartilla.angle - 90;
-		MostrarAnverso(Mano[Mano.length-1].cartilla);
-		GrupoD.add(Mano[Mano.length-1].cartilla);
+		NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)   +  COIVBWRMCC)/2)+ (5 *(COIVBWRMCC+ YAJVUBPNNW));
+		GHTWROCHVV=YMHIHSNADE.world.height-COIVBWRMCC;
+		MOFGFYOVIG=XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.angle - 90;
+		NAYBJTKIKA(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+		RXKKPILDQT.add(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
 	}
 	
-	if (Letra=="R")
+	if (STLEOJDWSU=="R")
 	{
-		//posX=game_objeto.world.height-AnchoCarta;
-		//posY=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)  +  AnchoCarta  )    /2)+      (0 *(AnchoCarta+ vSeparacion));
+		//NOFEDXHMLS=YMHIHSNADE.world.height-COIVBWRMCC;
+		//GHTWROCHVV=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)  +  COIVBWRMCC  )    /2)+      (0 *(COIVBWRMCC+ YAJVUBPNNW));
 		
-	 posX=game_objeto.world.width-AnchoCarta;
-	 posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)   +  AnchoCarta)/2)+ (0 *(AnchoCarta+ vSeparacion));
+	 NOFEDXHMLS=YMHIHSNADE.world.width-COIVBWRMCC;
+	 GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)   +  COIVBWRMCC)/2)+ (0 *(COIVBWRMCC+ YAJVUBPNNW));
 		
-		angulo=Mano[Mano.length-1].cartilla.angle + 180;
-		MostrarReverso(Mano[Mano.length-1].cartilla);
-		GrupoR.add(Mano[Mano.length-1].cartilla);
+		MOFGFYOVIG=XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.angle + 180;
+		XNFDNBQFUA(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+		BDRJVGFWQH.add(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
 	}	
 	
-	if (Letra=="L")
+	if (STLEOJDWSU=="L")
 	{
-		posX=AnchoCarta;
-	    posY=(( game_objeto.world.height-vHorizontalDerechaPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)   +  AnchoCarta)/2)+ (5 *(AnchoCarta+ vSeparacion));
-		angulo=Mano[Mano.length-1].cartilla.angle + 0;
-		MostrarReverso(Mano[Mano.length-1].cartilla);
-		GrupoL.add(Mano[Mano.length-1].cartilla);
+		NOFEDXHMLS=COIVBWRMCC;
+	    GHTWROCHVV=(( YMHIHSNADE.world.height-GAMFUXNGTH-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)   +  COIVBWRMCC)/2)+ (5 *(COIVBWRMCC+ YAJVUBPNNW));
+		MOFGFYOVIG=XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.angle + 0;
+		XNFDNBQFUA(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+		SYXHGDSJDY.add(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
 		log(false,"Parte izquierda");
 	}	
 
-	if (Letra=="U")
+	if (STLEOJDWSU=="U")
 	{
-		posX=(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)  +  AnchoCarta  )    /2)+      (0 *(AnchoCarta+ vSeparacion));
-		posY=AnchoCarta;	
+		NOFEDXHMLS=(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)  +  COIVBWRMCC  )    /2)+      (0 *(COIVBWRMCC+ YAJVUBPNNW));
+		GHTWROCHVV=COIVBWRMCC;	
 		
 		
 
@@ -493,300 +493,300 @@ FinalizaCambio7=function(Mano,Letra,JugadorCambia7,RondaParam,turnoParam){
 		
 		
 		
-		angulo=Mano[Mano.length-1].cartilla.angle - 90;
-		MostrarReverso(Mano[Mano.length-1].cartilla);
-		GrupoU.add(Mano[Mano.length-1].cartilla);
+		MOFGFYOVIG=XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.angle - 90;
+		XNFDNBQFUA(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+		PBHYCULPGK.add(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
 	}
 		
 	
 
 	log(false,"Mueve la carta...");	
-	twEsp7 = game_objeto.add.tween(Mano[Mano.length-1].cartilla);
-	twEsp7.to( {x:posX
-		,y:posY,
-		angle : angulo
-		}, 500, EfectoTween2);		
-twEsp7.onComplete.add(	function () {
-					ReubicarCartas(Mano,Letra,false,false,Mano[Mano.length-1].cartilla.name);
-					if (Letra=="D"){
-						HabilitarClick(Mano[Mano.length-1].cartilla);
-						PreparaCaracteristicasMano();
+	HHBPAROITT = YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+	HHBPAROITT.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
+		angle : MOFGFYOVIG
+		}, 500, BSXWFYLCEW);		
+HHBPAROITT.onComplete.add(	function () {
+					OROGRNBISW(XACEBCSJAB,STLEOJDWSU,false,false,XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.name);
+					if (STLEOJDWSU=="D"){
+						HJDIMRVCSU(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+						JQSOOBSDDS();
 					}
 					else{
-						//MostrarReverso(Mano[Mano.length-1].cartilla);
+						//XNFDNBQFUA(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
 					}
-					//if (RondaParam!=undefined && turnoParam!=undefined) //Si viene de ajeno y no del click
+					//if (TKWCTNGROU!=undefined && LDCCGSIBKW!=undefined) //Si viene de ajeno y no del click
 					//{
-					MueveAlTablero_bufferEspecial7(RondaParam,turnoParam);
+					UODKOBCGYM(TKWCTNGROU,LDCCGSIBKW);
 					//}
 				}
 				,this)
 	
 
 		
-	twEsp7.start();
+	HHBPAROITT.start();
 	
-	if (Letra=="D")	
+	if (STLEOJDWSU=="D")	
 	{
 			
-		game_objeto.add.tween(Mano[Mano.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
+		YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 	}		
-	MostrarOcultarBotonCante(); //2017/04/18
+	LMGBDQDXWP(); //2017/04/18
 
 }
 
 
 TengoEl7=function(){
 	var i;
-	var Tengo7=false;
+	var JSAVOOUOYD=false;
 	
-	if (Mazo.length>0)
+	if (FXGSEGRXKC.length>0)
 	{
-		for (i=0;i<=MazoD.length-1;i++)
+		for (i=0;i<=AGKVNAGGLB.length-1;i++)
 		{
-			if(MazoD[i].valor==7 && MazoD[i].palo==Triunfo)
+			if(AGKVNAGGLB[i].HVCFEWNDRF==7 && AGKVNAGGLB[i].SGCSHJVERI==TGTQPBEQFR)
 			{
-				Tengo7=true;
+				JSAVOOUOYD=true;
 				break;
 			}
 		}
 	}
-	return Tengo7;
+	return JSAVOOUOYD;
 }
 
 
 
 
 
-ActualizaMarcador=function(ParaQuien,puntos){
+LQJEJOOAPH=function(SCWJTHLKWF,OMDVKATFLQ){
 	
 
-	var TextoNuestro;
-	var TextoRival;
-	var Devuelve;
+	var MLFDVPXWYK;
+	var DSCVVNAYWK;
+	var QOWECQVXCM;
 	
 	//CRITICO
-	if (ParaQuien=="N")
+	if (SCWJTHLKWF=="N")
 	{
-		MarcadorNuestro=MarcadorNuestro+puntos;
+		UHHXSNXXJK=UHHXSNXXJK+OMDVKATFLQ;
 	}
 	else
 	{
-		MarcadorRival=MarcadorRival+puntos;
+		PXGXKDDNFK=PXGXKDDNFK+OMDVKATFLQ;
 	}
 	
 	
-	if (MarcadorNuestro>50){
-		TextoNuestro=MarcadorNuestro-50 + " Buenas";
+	if (UHHXSNXXJK>50){
+		MLFDVPXWYK=UHHXSNXXJK-50 + " Buenas";
 	}
 	else{
-		TextoNuestro=MarcadorNuestro+ " Malas";	
+		MLFDVPXWYK=UHHXSNXXJK+ " Malas";	
 	}
-	if (MarcadorRival>50){
-		TextoRival=MarcadorRival-50 + " Buenas";
+	if (PXGXKDDNFK>50){
+		DSCVVNAYWK=PXGXKDDNFK-50 + " Buenas";
 	}
 	else{
-		TextoRival=MarcadorRival+ " Malas";	
+		DSCVVNAYWK=PXGXKDDNFK+ " Malas";	
 	}	
 	
-	TextMarcador.text=TextoNuestro+"\n"+TextoRival;
+	ATTUXTNNKX.text=MLFDVPXWYK+"\n"+DSCVVNAYWK;
 	
-	if ( PuntosFin()==true )
+	if ( OTGNMRHTVK()==true )
 	{
-		CrearTextoPuntuacion(); 
-		Devuelve=false;
+		WWAYLOUPUQ(); 
+		QOWECQVXCM=false;
 	}	
 	else
 	{
-		Devuelve=true;
+		QOWECQVXCM=true;
 	}
 	
-	log(false,"Nosotros "+MarcadorNuestro);
-	log(false,"Rival "+MarcadorRival);
+	log(false,"Nosotros "+UHHXSNXXJK);
+	log(false,"YOBEPVEEMW "+PXGXKDDNFK);
 	
-	return Devuelve;
+	return QOWECQVXCM;
 }
 
-TextoCante=function(JugadorQueMueve,puntos,texto){
+LGDEYPLFSA=function(UHTPGPRUJA,OMDVKATFLQ,AWCCMSCOPO){
 
 	var style = { font: "bold 32px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
 	var text;
 	var timerCante;
 					//  The Text is positioned at 0, 100
-	text = game_objeto.add.text(0, 0, DevolverTexto, style);
+	text = YMHIHSNADE.add.text(0, 0, NJWWPODLWD, style);
 	text.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
 	//  We'll set the bounds to be from x0, y100 and be 800px wide by 100px high
 	text.setTextBounds(0, 100, 800, 100);
-	//  Start the timer running - this is important!
+	//  Start the TKXPPGUPVV running - this is important!
 	//  It won't start automatically, allowing you to hook it to button events and the like.
-	timerCante = game_objeto.time.create(false);
-	timerCante.add(3000, EliminaTextoPantalla, this,text);
+	timerCante = YMHIHSNADE.time.create(false);
+	timerCante.add(3000, FYYEWMEHBU, this,text);
 	timerCante.start();
 }
 
-EstaCantado=function(palo){
+SRFFTPLVMJ=function(SGCSHJVERI){
 	var i;
-	var Cantado=false;
-	for (i=0;i<=RegistrarCantes.length-1;i++)
+	var WIEMLCTGXO=false;
+	for (i=0;i<=FOQUJVEYFC.length-1;i++)
 	{
-		if (RegistrarCantes[i]==palo){
-			Cantado=true;
+		if (FOQUJVEYFC[i]==SGCSHJVERI){
+			WIEMLCTGXO=true;
 			break;
 		}
 	}
 
-	return Cantado;
+	return WIEMLCTGXO;
 }
 
-PosibleCante=function(MazoJugador){
+PosibleCante=function(BMCBJHBJWH){
 	var i;
-	var ReyOros=false;
-	var SotaOros=false;
-	var ReyCopas=false;
-	var SotaCopas=false;
-	var ReyEspadas=false;
-	var SotaEspadas=false;
-	var ReyBastos=false;
-	var SotaBastos=false;
-	var CanteDisponible=false;
+	var CIPQYKQBMR=false;
+	var SWIGVTVMDU=false;
+	var UUSWYWBMGP=false;
+	var BFXFLFDAPV=false;
+	var UBNODRNAGX=false;
+	var UNROHJICCV=false;
+	var VREOAIDYYY=false;
+	var MCTHFYHCXF=false;
+	var TGTTLELLIS=false;
 	
-	for (i=0; i<=MazoJugador.length-1;i++)
+	for (i=0; i<=BMCBJHBJWH.length-1;i++)
 	{
-		if (MazoJugador[i].valorReal==10 && MazoJugador[i].palo=="oros"){
-			ReyOros=true;
+		if (BMCBJHBJWH[i].VVRCMEUNOJ==10 && BMCBJHBJWH[i].SGCSHJVERI=="oros"){
+			CIPQYKQBMR=true;
 		}
 		
-		if (MazoJugador[i].valorReal==10 && MazoJugador[i].palo=="copas"){
-			ReyCopas=true;
+		if (BMCBJHBJWH[i].VVRCMEUNOJ==10 && BMCBJHBJWH[i].SGCSHJVERI=="copas"){
+			UUSWYWBMGP=true;
 		}
-		if (MazoJugador[i].valorReal==10 && MazoJugador[i].palo=="espadas"){
-			ReyEspadas=true;
+		if (BMCBJHBJWH[i].VVRCMEUNOJ==10 && BMCBJHBJWH[i].SGCSHJVERI=="espadas"){
+			UBNODRNAGX=true;
 		}	
 	
-		if (MazoJugador[i].valorReal==10 && MazoJugador[i].palo=="bastos"){
-			ReyBastos=true;
+		if (BMCBJHBJWH[i].VVRCMEUNOJ==10 && BMCBJHBJWH[i].SGCSHJVERI=="bastos"){
+			VREOAIDYYY=true;
 		}	
 		
-		if (MazoJugador[i].valorReal==9 && MazoJugador[i].palo=="oros"){
-			SotaOros=true;
+		if (BMCBJHBJWH[i].VVRCMEUNOJ==9 && BMCBJHBJWH[i].SGCSHJVERI=="oros"){
+			SWIGVTVMDU=true;
 		}
 		
-		if (MazoJugador[i].valorReal==9 && MazoJugador[i].palo=="copas"){
-			SotaCopas=true;
+		if (BMCBJHBJWH[i].VVRCMEUNOJ==9 && BMCBJHBJWH[i].SGCSHJVERI=="copas"){
+			BFXFLFDAPV=true;
 		}
-		if (MazoJugador[i].valorReal==9 && MazoJugador[i].palo=="espadas"){
-			SotaEspadas=true;
+		if (BMCBJHBJWH[i].VVRCMEUNOJ==9 && BMCBJHBJWH[i].SGCSHJVERI=="espadas"){
+			UNROHJICCV=true;
 		}	
 	
-		if (MazoJugador[i].valorReal==9 && MazoJugador[i].palo=="bastos"){
-			SotaBastos=true;
+		if (BMCBJHBJWH[i].VVRCMEUNOJ==9 && BMCBJHBJWH[i].SGCSHJVERI=="bastos"){
+			MCTHFYHCXF=true;
 		}			
 	}
 	
-	if ( (ReyOros==true && SotaOros==true && EstaCantado("oros")==false) ||
-		(ReyCopas==true && SotaCopas==true && EstaCantado("copas")==false) ||
-		(ReyEspadas==true && SotaEspadas==true && EstaCantado("espadas")==false) ||		
-		(ReyBastos==true && SotaBastos==true && EstaCantado("bastos")==false) 	
+	if ( (CIPQYKQBMR==true && SWIGVTVMDU==true && SRFFTPLVMJ("oros")==false) ||
+		(UUSWYWBMGP==true && BFXFLFDAPV==true && SRFFTPLVMJ("copas")==false) ||
+		(UBNODRNAGX==true && UNROHJICCV==true && SRFFTPLVMJ("espadas")==false) ||		
+		(VREOAIDYYY==true && MCTHFYHCXF==true && SRFFTPLVMJ("bastos")==false) 	
 
 	)
 	{
-		CanteDisponible=true;
+		TGTTLELLIS=true;
 	}	
 	else
 	{
-		CanteDisponible=false;
+		TGTTLELLIS=false;
 	}
 	
-	return CanteDisponible;
+	return TGTTLELLIS;
 
 }
 
 
 
-MostrarOcultarBotonCante=function(){
-	var Baza;
+LMGBDQDXWP=function(){
+	var SRCGCMADME;
 	var i;
-	var Companero;
-	var Rival1;
-	var Rival2;
+	var QBXGANOVYU;
+	var YBWNGQGIHW;
+	var LDDXAIVDNC;
 
-	log(true,"Cantes TamaÃ±o: "+ MazoCentral.length);
+	log(true,"Cantes TamaÃ±o: "+ VDKOVQXHON.length);
 	//alert("llega a cantar 0");
-	if (MazoCentral.length==0 || MazoCentral.length==1)
+	if (VDKOVQXHON.length==0 || VDKOVQXHON.length==1)
 	{
 	
-		if (SoyElJugador==1)
+		if (TFSXFTYVGQ==1)
 		{
-			Companero=3;
-			Rival1=2;
-			Rival2=4;
+			QBXGANOVYU=3;
+			YBWNGQGIHW=2;
+			LDDXAIVDNC=4;
 		}
-		if (SoyElJugador==2)
+		if (TFSXFTYVGQ==2)
 		{
-			Companero=4;
-			Rival1=1;
-			Rival2=3;
+			QBXGANOVYU=4;
+			YBWNGQGIHW=1;
+			LDDXAIVDNC=3;
 		}
-		if (SoyElJugador==3)
+		if (TFSXFTYVGQ==3)
 		{
-			Companero=1;
-			Rival1=2;
-			Rival2=4;
+			QBXGANOVYU=1;
+			YBWNGQGIHW=2;
+			LDDXAIVDNC=4;
 		}
-		if (SoyElJugador==4)
+		if (TFSXFTYVGQ==4)
 		{
-			Companero=2;
-			Rival1=1;
-			Rival2=3;
+			QBXGANOVYU=2;
+			YBWNGQGIHW=1;
+			LDDXAIVDNC=3;
 		}		
 		
 		
-		if ( vRonda>1)
+		if ( LUCRWXJMDR>1)
 		{
-			if (ModoMultijugador==false)
+			if (EGPDVIEJEL==false)
 			{
-				if (BazaNuestraGlobal==true)
+				if (PPTWRPRLSI==true)
 				{
 					//alert("llega a cantar");
-					Cantar(3);
+					VSBOFQVPVQ(3);
 				}
 				else
 				{
 					//alert("llega a cantar 2");
-					Cantar(2);
-					Cantar(4);
+					VSBOFQVPVQ(2);
+					VSBOFQVPVQ(4);
 				}
 			}
 			else
 			{
-				if (SoyElJugador==QuienTomaElControl)
+				if (TFSXFTYVGQ==ESKTEXAVHU)
 				{
-					if (BazaNuestraGlobal==true)
+					if (PPTWRPRLSI==true)
 					{
-						for (i=0;i<=ArrayJugadoresDesconectados.length-1;i++)
+						for (i=0;i<=KYDWXPGHVY.length-1;i++)
 						{
-							if (ArrayJugadoresDesconectados[i].Jugador==Companero)
+							if (KYDWXPGHVY[i].SSUNXNEEHN==QBXGANOVYU)
 							{
 								//alert("hasta la cocina 1");
-								Cantar(Companero);
+								VSBOFQVPVQ(QBXGANOVYU);
 							}
 						}							
 					}
 					else
 					{
 						//alert("algo pasa");
-						for (i=0;i<=ArrayJugadoresDesconectados.length-1;i++)
+						for (i=0;i<=KYDWXPGHVY.length-1;i++)
 						{
-							//alert(ArrayJugadoresDesconectados[i]);
-							if (ArrayJugadoresDesconectados[i].Jugador==Rival1)
+							//alert(KYDWXPGHVY[i]);
+							if (KYDWXPGHVY[i].SSUNXNEEHN==YBWNGQGIHW)
 							{
 								//alert("hasta la cocina 2");
-								Cantar(Rival1);
+								VSBOFQVPVQ(YBWNGQGIHW);
 							}
-							if (ArrayJugadoresDesconectados[i].Jugador==Rival2)
+							if (KYDWXPGHVY[i].SSUNXNEEHN==LDDXAIVDNC)
 							{
 								//alert("hasta la cocina 3");
-								Cantar(Rival2);
+								VSBOFQVPVQ(LDDXAIVDNC);
 							}							
 						}						
 					}
@@ -795,85 +795,85 @@ MostrarOcultarBotonCante=function(){
 			}
 		}
 	
-		log(true,"Cantes Baza Nuestra: "+BazaNuestraGlobal);
-		log(true,"Cantes Posible Cante "+PosibleCante(MazoD));
-		if (BazaNuestraGlobal==true && PosibleCante(MazoD)==true )
+		log(true,"Cantes SRCGCMADME Nuestra: "+PPTWRPRLSI);
+		log(true,"Cantes Posible Cante "+PosibleCante(AGKVNAGGLB));
+		if (PPTWRPRLSI==true && PosibleCante(AGKVNAGGLB)==true )
 		{
-			//BotonCantar.visible=true;	
-			BotonCantar.loadTexture('Boton_cantar_on', 0);			
+			//IEQDMBJCAY.visible=true;	
+			IEQDMBJCAY.loadTexture('Boton_cantar_on', 0);			
 		}
 		else{
-			//BotonCantar.visible=false;
-			BotonCantar.loadTexture('Boton_cantar_off', 0);			
+			//IEQDMBJCAY.visible=false;
+			IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);			
 		}	
 		
-		if (BazaNuestraGlobal==true && TengoEl7()==true)
+		if (PPTWRPRLSI==true && TengoEl7()==true)
 		{
-			//BotonSiete.visible=true;
-			BotonSiete.loadTexture('Boton_cambiar_7_on', 0);
+			//YGTNAODFHW.visible=true;
+			YGTNAODFHW.loadTexture('Boton_cambiar_7_on', 0);
 		}
 		else
 		{
-			//BotonSiete.visible=false;
-			BotonSiete.loadTexture('Boton_cambiar_7_off', 0);
+			//YGTNAODFHW.visible=false;
+			YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);
 		}
 		
 		
 	}
 	else
 	{
-		//BotonSiete.visible=false;
-		//BotonCantar.visible=false;
-		BotonCantar.loadTexture('Boton_cantar_off', 0);
-		BotonSiete.loadTexture('Boton_cambiar_7_off', 0);
+		//YGTNAODFHW.visible=false;
+		//IEQDMBJCAY.visible=false;
+		IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);
+		YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);
 	}
 	
 }
 
-EnviarCante=function(Habitacion,JugadorQueMueve,Puntos, Palo, SonVueltas, Partida, JugadorFull,JugadorSala,Nombre)
+BHWUWOPQCB=function(DFBVDPETGO,UHTPGPRUJA,PAXBGDCANU, FHEFFYUQFX, EVAILWGGKX, KXAWTTIEGG, OBTBPOULAV,AURESXCGMK,WWKVHIMWYD)
 {
 	
 	
 		/////////////
 
-	var Hora=Date.now();
-	var ObjectSend=function( Habitacion,JugadorQueMueve,Puntos, Palo, SonVueltas, Partida, JugadorFull,JugadorSala,Nombre,
-		IdMsg,ClientId,SalaID,Mensaje){
-		 this.Habitacion=Habitacion
-		 this.JugadorQueMueve=JugadorQueMueve
-		 this.Puntos=Puntos
-		 this.Palo=Palo
-		 this.SonVueltas=SonVueltas
-		 this.Partida=Partida
-		 this.JugadorFull=JugadorFull
-		 this.JugadorSala=JugadorSala
-		 this.Nombre=Nombre
+	var QKVJASWVEO=Date.now();
+	var GXNRNMAAKW=function( DFBVDPETGO,UHTPGPRUJA,PAXBGDCANU, FHEFFYUQFX, EVAILWGGKX, KXAWTTIEGG, OBTBPOULAV,AURESXCGMK,WWKVHIMWYD,
+		OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+		 this.DFBVDPETGO=DFBVDPETGO
+		 this.UHTPGPRUJA=UHTPGPRUJA
+		 this.PAXBGDCANU=PAXBGDCANU
+		 this.FHEFFYUQFX=FHEFFYUQFX
+		 this.EVAILWGGKX=EVAILWGGKX
+		 this.KXAWTTIEGG=KXAWTTIEGG
+		 this.OBTBPOULAV=OBTBPOULAV
+		 this.AURESXCGMK=AURESXCGMK
+		 this.WWKVHIMWYD=WWKVHIMWYD
 											 
-		 this.IdMsg=IdMsg
-		 this.ClientId=ClientId
-		 this.SalaID=SalaID
-		 this.Mensaje=Mensaje
+		 this.OYJAHGADFQ=OYJAHGADFQ
+		 this.OJPXTRQDKS=OJPXTRQDKS
+		 this.LYHKNIMVEB=LYHKNIMVEB
+		 this.RHOLNWBOXR=RHOLNWBOXR
 		 
-		 this.Fecha=new Date(Date.now());
+		 this.EBAPPJFYSW=new Date(Date.now());
 	 }
-	var ArrayAccionesDesconexionesLocal=[];
-	ArrayAccionesDesconexionesLocal.splice(0,1000);
+	var QPHHGPRJAI=[];
+	QPHHGPRJAI.splice(0,1000);
 
 		
-	var IdMsg=Math.random()*100000;
-	var Objeto=new ObjectSend( Habitacion,JugadorQueMueve,Puntos, Palo, SonVueltas, Partida, JugadorFull,JugadorSala,Nombre,
-		IdMsg,JugadorSala,Habitacion,'enviar cante');
-	ArrayAccionesDesconexiones.push(Objeto);
-	ArrayAccionesDesconexionesLocal.push(Objeto);
+	var OYJAHGADFQ=Math.random()*100000;
+	var KCPHFPSPLQ=new GXNRNMAAKW( DFBVDPETGO,UHTPGPRUJA,PAXBGDCANU, FHEFFYUQFX, EVAILWGGKX, KXAWTTIEGG, OBTBPOULAV,AURESXCGMK,WWKVHIMWYD,
+		OYJAHGADFQ,AURESXCGMK,DFBVDPETGO,'OSMNKAMXMY');
+	NBEJWDVLLV.push(KCPHFPSPLQ);
+	QPHHGPRJAI.push(KCPHFPSPLQ);
 
 
-	socket.emit('enviar cante',ArrayAccionesDesconexionesLocal[0],
-	 function(idMensaje)
+	socket.emit('OSMNKAMXMY',QPHHGPRJAI[0],
+	 function(XQLEOGMJYG)
 	 {			 
-		EliminarColaMensajes(idMensaje,'enviar cante');
+		EXBCVLOIYJ(XQLEOGMJYG,'OSMNKAMXMY');
 	 }
 	);						
-	ArrayAccionesDesconexionesLocal.splice(0,1000);	
+	QPHHGPRJAI.splice(0,1000);	
 
 	
 	/////////////	
@@ -881,383 +881,383 @@ EnviarCante=function(Habitacion,JugadorQueMueve,Puntos, Palo, SonVueltas, Partid
 	
 }
 
-Cantar=function(JugadorQueMueve){
+VSBOFQVPVQ=function(UHTPGPRUJA){
 	var i;
-	var ReyOros=false;
-	var SotaOros=false;
-	var ReyCopas=false;
-	var SotaCopas=false;
-	var ReyEspadas=false;
-	var SotaEspadas=false;
-	var ReyBastos=false;
-	var SotaBastos=false;
-	var palo;
-	var puntos=0;
-	var MazoJuego=[];
-	var LetraMazo;
+	var CIPQYKQBMR=false;
+	var SWIGVTVMDU=false;
+	var UUSWYWBMGP=false;
+	var BFXFLFDAPV=false;
+	var UBNODRNAGX=false;
+	var UNROHJICCV=false;
+	var VREOAIDYYY=false;
+	var MCTHFYHCXF=false;
+	var SGCSHJVERI;
+	var OMDVKATFLQ=0;
+	var YDMAEKLTIK=[];
+	var UBWRXKMTQN;
 	
-	//BotonCantar.visible=false;
-	if ( (BotonCantar.key=="Boton_cantar_on" && JugadorQueMueve==SoyElJugador) || JugadorQueMueve!=SoyElJugador )
+	//IEQDMBJCAY.visible=false;
+	if ( (IEQDMBJCAY.key=="Boton_cantar_on" && UHTPGPRUJA==TFSXFTYVGQ) || UHTPGPRUJA!=TFSXFTYVGQ )
 	{
-		if (BotonCantar.key=="Boton_cantar_on" && JugadorQueMueve==SoyElJugador)
+		if (IEQDMBJCAY.key=="Boton_cantar_on" && UHTPGPRUJA==TFSXFTYVGQ)
 		{
-			BotonCantar.loadTexture('Boton_cantar_off', 0);
+			IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);
 		}
 				
 		
 	//alert("kk");
-		if (ModoMultijugador==true){
-			//MazoJuego=MazoD;
-			 LetraMazo=DevuelveUbicacionCarta(JugadorQueMueve);
-			 //alert(LetraMazo);
-			 if (LetraMazo=="D")
+		if (EGPDVIEJEL==true){
+			//YDMAEKLTIK=AGKVNAGGLB;
+			 UBWRXKMTQN=HHOPUSIABJ(UHTPGPRUJA);
+			 //alert(UBWRXKMTQN);
+			 if (UBWRXKMTQN=="D")
 			 {
-				MazoJuego=MazoD;
+				YDMAEKLTIK=AGKVNAGGLB;
 			 }
-			 if (LetraMazo=="U")
+			 if (UBWRXKMTQN=="U")
 			 {
-				MazoJuego=MazoU;
+				YDMAEKLTIK=TWJONOKGHC;
 			 }
-			 if(LetraMazo=="L")
+			 if(UBWRXKMTQN=="L")
 			 {
-				MazoJuego=MazoL;
+				YDMAEKLTIK=KNVKGHHTYC;
 			 }
-			 if (LetraMazo=="R")
+			 if (UBWRXKMTQN=="R")
 			 {
-				MazoJuego=MazoR;
+				YDMAEKLTIK=CBCNHFGWLU;
 			 }
 		}
 		else
 		{
-			if (JugadorQueMueve==1)
+			if (UHTPGPRUJA==1)
 			{
-				MazoJuego=MazoD;
+				YDMAEKLTIK=AGKVNAGGLB;
 			}
 
-			if (JugadorQueMueve==2)
+			if (UHTPGPRUJA==2)
 			{
-				MazoJuego=MazoR;
+				YDMAEKLTIK=CBCNHFGWLU;
 			}
-			if (JugadorQueMueve==3)
+			if (UHTPGPRUJA==3)
 			{
-				MazoJuego=MazoU;
+				YDMAEKLTIK=TWJONOKGHC;
 			}
-			if (JugadorQueMueve==4)
+			if (UHTPGPRUJA==4)
 			{
-				MazoJuego=MazoL;
+				YDMAEKLTIK=KNVKGHHTYC;
 			}	
 		}
 
 		
-		for (i=0; i<=MazoJuego.length-1;i++)
+		for (i=0; i<=YDMAEKLTIK.length-1;i++)
 		{
-			if (MazoJuego[i].valorReal==10 && MazoJuego[i].palo=="oros" ){
-				ReyOros=true;	
+			if (YDMAEKLTIK[i].VVRCMEUNOJ==10 && YDMAEKLTIK[i].SGCSHJVERI=="oros" ){
+				CIPQYKQBMR=true;	
 			}
 			
-			if (MazoJuego[i].valorReal==10 && MazoJuego[i].palo=="copas" ){
-				ReyCopas=true;
+			if (YDMAEKLTIK[i].VVRCMEUNOJ==10 && YDMAEKLTIK[i].SGCSHJVERI=="copas" ){
+				UUSWYWBMGP=true;
 			}
-			if (MazoJuego[i].valorReal==10 && MazoJuego[i].palo=="espadas"){
-				ReyEspadas=true;
+			if (YDMAEKLTIK[i].VVRCMEUNOJ==10 && YDMAEKLTIK[i].SGCSHJVERI=="espadas"){
+				UBNODRNAGX=true;
 			}	
 		
-			if (MazoJuego[i].valorReal==10 && MazoJuego[i].palo=="bastos"){
-				ReyBastos=true;
+			if (YDMAEKLTIK[i].VVRCMEUNOJ==10 && YDMAEKLTIK[i].SGCSHJVERI=="bastos"){
+				VREOAIDYYY=true;
 			}	
 			
-			if (MazoJuego[i].valorReal==9 && MazoJuego[i].palo=="oros"){
-				SotaOros=true;
+			if (YDMAEKLTIK[i].VVRCMEUNOJ==9 && YDMAEKLTIK[i].SGCSHJVERI=="oros"){
+				SWIGVTVMDU=true;
 			}
 			
-			if (MazoJuego[i].valorReal==9 && MazoJuego[i].palo=="copas"){
-				SotaCopas=true;
+			if (YDMAEKLTIK[i].VVRCMEUNOJ==9 && YDMAEKLTIK[i].SGCSHJVERI=="copas"){
+				BFXFLFDAPV=true;
 			}
-			if (MazoJuego[i].valorReal==9 && MazoJuego[i].palo=="espadas"){
-				SotaEspadas=true;
+			if (YDMAEKLTIK[i].VVRCMEUNOJ==9 && YDMAEKLTIK[i].SGCSHJVERI=="espadas"){
+				UNROHJICCV=true;
 			}	
 		
-			if (MazoJuego[i].valorReal==9 && MazoJuego[i].palo=="bastos"){
-				SotaBastos=true;
+			if (YDMAEKLTIK[i].VVRCMEUNOJ==9 && YDMAEKLTIK[i].SGCSHJVERI=="bastos"){
+				MCTHFYHCXF=true;
 			}			
 		}	
 
-		if ( ReyOros==true && SotaOros==true && EstaCantado("oros")==false) 
+		if ( CIPQYKQBMR==true && SWIGVTVMDU==true && SRFFTPLVMJ("oros")==false) 
 		{
 			log(false,"Canta en Oros");
-			if (Triunfo=="oros")
+			if (TGTQPBEQFR=="oros")
 			{
-				if (ModoMultijugador==true)
+				if (EGPDVIEJEL==true)
 				{
-					EnviarCante(Habitacion,JugadorQueMueve,40,"oros", SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala, ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre) ;
-					GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,false,true,false,false);
+					BHWUWOPQCB(DFBVDPETGO,UHTPGPRUJA,40,"oros", EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK, XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD) ;
+					WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,true,false,false);
 				}
-				TextoBocadillo(JugadorQueMueve,"oros",true,40);
-				//MarcadorNuestro=MarcadorNuestro+40;
+				XIAPNYIGXV(UHTPGPRUJA,"oros",true,40);
+				//UHHXSNXXJK=UHHXSNXXJK+40;
 			}
 			else
 			{
-				if (ModoMultijugador==true)
+				if (EGPDVIEJEL==true)
 				{
-					EnviarCante(Habitacion,JugadorQueMueve,20,"oros",SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre) ;
-					GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,true,false,false,false);
+					BHWUWOPQCB(DFBVDPETGO,UHTPGPRUJA,20,"oros",EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD) ;
+					WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,true,false,false,false);
 				}
-				TextoBocadillo(JugadorQueMueve,"oros",true,20);
-				//MarcadorNuestro=MarcadorNuestro+20;
+				XIAPNYIGXV(UHTPGPRUJA,"oros",true,20);
+				//UHHXSNXXJK=UHHXSNXXJK+20;
 			}
-			RegistrarCantes.push("oros")
+			FOQUJVEYFC.push("oros")
 		}
 		
-		if ( ReyCopas==true && SotaCopas==true && EstaCantado("copas")==false)
+		if ( UUSWYWBMGP==true && BFXFLFDAPV==true && SRFFTPLVMJ("copas")==false)
 		{
 			log(false,"Canta en copas");
-			if (Triunfo=="copas")
+			if (TGTQPBEQFR=="copas")
 			{
-				if (ModoMultijugador==true)
+				if (EGPDVIEJEL==true)
 				{			
-					EnviarCante(Habitacion,JugadorQueMueve,40,"copas",SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre) ;
+					BHWUWOPQCB(DFBVDPETGO,UHTPGPRUJA,40,"copas",EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD) ;
 					
-					GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,false,true,false,false);
+					WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,true,false,false);
 				}
-				//TextoCante("Las 40");
-				//MarcadorNuestro=MarcadorNuestro+40;
-				TextoBocadillo(JugadorQueMueve,"copas",true,40);
+				//LGDEYPLFSA("Las 40");
+				//UHHXSNXXJK=UHHXSNXXJK+40;
+				XIAPNYIGXV(UHTPGPRUJA,"copas",true,40);
 			}
 			else
 			{
-				if (ModoMultijugador==true)
+				if (EGPDVIEJEL==true)
 				{
-					EnviarCante(Habitacion,JugadorQueMueve,20,"copas", SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre);
+					BHWUWOPQCB(DFBVDPETGO,UHTPGPRUJA,20,"copas", EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD);
 					
-					GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,true,false,false,false);
+					WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,true,false,false,false);
 				}
-				//TextoCante("20 en copas");
-				//MarcadorNuestro=MarcadorNuestro+20;
-				TextoBocadillo(JugadorQueMueve,"copas",true,20);
+				//LGDEYPLFSA("20 en copas");
+				//UHHXSNXXJK=UHHXSNXXJK+20;
+				XIAPNYIGXV(UHTPGPRUJA,"copas",true,20);
 			}
-			RegistrarCantes.push("copas")
+			FOQUJVEYFC.push("copas")
 			
 		}
 
-		if ( ReyEspadas==true && SotaEspadas==true && EstaCantado("espadas")==false)
+		if ( UBNODRNAGX==true && UNROHJICCV==true && SRFFTPLVMJ("espadas")==false)
 		{
 			log(false,"Canta en espadas");
-			if (Triunfo=="espadas")
+			if (TGTQPBEQFR=="espadas")
 			{
-				if (ModoMultijugador==true)
+				if (EGPDVIEJEL==true)
 				{
-					EnviarCante(Habitacion,JugadorQueMueve,40,"espadas", SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre);
+					BHWUWOPQCB(DFBVDPETGO,UHTPGPRUJA,40,"espadas", EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD);
 					
-					GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,false,true,false,false);
+					WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,true,false,false);
 				}
-				//TextoCante("Las 40");
-				//MarcadorNuestro=MarcadorNuestro+40;
-				TextoBocadillo(JugadorQueMueve,"espadas",true,40);
+				//LGDEYPLFSA("Las 40");
+				//UHHXSNXXJK=UHHXSNXXJK+40;
+				XIAPNYIGXV(UHTPGPRUJA,"espadas",true,40);
 			}
 			else
 			{
-				if (ModoMultijugador==true)
+				if (EGPDVIEJEL==true)
 				{
-					EnviarCante(Habitacion,JugadorQueMueve,20,"espadas", SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre);
+					BHWUWOPQCB(DFBVDPETGO,UHTPGPRUJA,20,"espadas", EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD);
 					
-					GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,true,false,false,false);
+					WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,true,false,false,false);
 				}
-				//TextoCante("20 en espadas");
-				//MarcadorNuestro=MarcadorNuestro+20;
-				TextoBocadillo(JugadorQueMueve,"espadas",true,20);
+				//LGDEYPLFSA("20 en espadas");
+				//UHHXSNXXJK=UHHXSNXXJK+20;
+				XIAPNYIGXV(UHTPGPRUJA,"espadas",true,20);
 			}
-			RegistrarCantes.push("espadas")
+			FOQUJVEYFC.push("espadas")
 		}
 		
-		if ( ReyBastos==true && SotaBastos==true && EstaCantado("bastos")==false)
+		if ( VREOAIDYYY==true && MCTHFYHCXF==true && SRFFTPLVMJ("bastos")==false)
 		{
 			log(false,"Canta en bastos");
-			if (Triunfo=="bastos")
+			if (TGTQPBEQFR=="bastos")
 			{
-				if (ModoMultijugador==true)
+				if (EGPDVIEJEL==true)
 				{
-					EnviarCante(Habitacion,JugadorQueMueve,40,"bastos", SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre);
+					BHWUWOPQCB(DFBVDPETGO,UHTPGPRUJA,40,"bastos", EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD);
 					
-					GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,false,true,false,false);
+					WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,true,false,false);
 				}
-				//TextoCante("Las 40");
-				//MarcadorNuestro=MarcadorNuestro+40;
-				TextoBocadillo(JugadorQueMueve,"bastos",true,40);
+				//LGDEYPLFSA("Las 40");
+				//UHHXSNXXJK=UHHXSNXXJK+40;
+				XIAPNYIGXV(UHTPGPRUJA,"bastos",true,40);
 			}
 			else
 			{
-				if (ModoMultijugador==true)
+				if (EGPDVIEJEL==true)
 				{
-					EnviarCante(Habitacion,JugadorQueMueve,20,"bastos", SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre);
+					BHWUWOPQCB(DFBVDPETGO,UHTPGPRUJA,20,"bastos", EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD);
 					
-					GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,true,false,false,false);
+					WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,true,false,false,false);
 				}
-				//TextoCante("20 en bastos");
-				//MarcadorNuestro=MarcadorNuestro+20;
-				TextoBocadillo(JugadorQueMueve,"bastos",true,20);
+				//LGDEYPLFSA("20 en bastos");
+				//UHHXSNXXJK=UHHXSNXXJK+20;
+				XIAPNYIGXV(UHTPGPRUJA,"bastos",true,20);
 			}
-			RegistrarCantes.push("bastos")
+			FOQUJVEYFC.push("bastos")
 		}	
-		if ( PuntosFin()==true)
+		if ( OTGNMRHTVK()==true)
 		{
-			CrearTextoPuntuacion(); 
+			WWAYLOUPUQ(); 
 		}	
 	}
 	
 }
 
-ColorManoPosibles=function(CartaOpcional){
+IXLQLKYFRI=function(IUYUIHVKJW){
 	var i;
 
-	//if (vRonda>=RondaArrastre){
-		//if (CartaOpcional==undefined){
-			if (vTurno==SoyElJugador)
+	//if (LUCRWXJMDR>=SNVWBLGBPJ){
+		//if (IUYUIHVKJW==undefined){
+			if (DVNRTQIWGL==TFSXFTYVGQ)
 			{
-				for (i=0;i<=MazoD.length-1;i++)
+				for (i=0;i<=AGKVNAGGLB.length-1;i++)
 				{
-					if (ValidadorReglas(MazoD[i],SoyElJugador)==true)
+					if (XPSRYGDPNI(AGKVNAGGLB[i],TFSXFTYVGQ)==true)
 					{
-						MazoD[i].cartilla.tint=Phaser.Color.getColor(255,255,255);
+						AGKVNAGGLB[i].TNFAGGMKXD.tint=Phaser.Color.getColor(255,255,255);
 					}
 					else
 					{
-						MazoD[i].cartilla.tint=Phaser.Color.getColor(110,110,110);
+						AGKVNAGGLB[i].TNFAGGMKXD.tint=Phaser.Color.getColor(110,110,110);
 					}		
 				}
 			}
 			else
 			{
-				for (i=0;i<=MazoD.length-1;i++)
+				for (i=0;i<=AGKVNAGGLB.length-1;i++)
 				{
-					MazoD[i].cartilla.tint=Phaser.Color.getColor(255,255,255);
+					AGKVNAGGLB[i].TNFAGGMKXD.tint=Phaser.Color.getColor(255,255,255);
 				}
 			}
 		//}
 		/*else
 		{
 					
-					if (ValidadorReglas(CartaOpcional,SoyElJugador)==true || vRonda<=RondaArrastre  )
+					if (XPSRYGDPNI(IUYUIHVKJW,TFSXFTYVGQ)==true || LUCRWXJMDR<=SNVWBLGBPJ  )
 					{
-						CartaOpcional.cartilla.tint=Phaser.Color.getColor(255,255,255);
+						IUYUIHVKJW.TNFAGGMKXD.tint=Phaser.Color.getColor(255,255,255);
 					}
 					else
 					{
-						CartaOpcional.cartilla.tint=Phaser.Color.getColor(110,110,110);
+						IUYUIHVKJW.TNFAGGMKXD.tint=Phaser.Color.getColor(110,110,110);
 					}		
 		}*/
 	//}
 	/*else
 	{
-		for (i=0;i<=MazoD.length-1;i++)
+		for (i=0;i<=AGKVNAGGLB.length-1;i++)
 		{
-			if (ValidadorReglas(MazoD[i],SoyElJugador)==true)
+			if (XPSRYGDPNI(AGKVNAGGLB[i],TFSXFTYVGQ)==true)
 			{
-				MazoD[i].cartilla.tint=Phaser.Color.getColor(255,255,255);
+				AGKVNAGGLB[i].TNFAGGMKXD.tint=Phaser.Color.getColor(255,255,255);
 			}
 			else
 			{
-				MazoD[i].cartilla.tint=Phaser.Color.getColor(110,110,110);
+				AGKVNAGGLB[i].TNFAGGMKXD.tint=Phaser.Color.getColor(110,110,110);
 			}		
 		}
 	}*/
 }
 
-ValidadorReglas=function(Carta,JugadorQueMueve){
+XPSRYGDPNI=function(TVYNYTCQYW,UHTPGPRUJA){
 	
-	var lReturn;
-	var ArrayFicticio=[];
+	var GMLVJEFHPL;
+	var JEOOIEYAWD=[];
 	var i;
-	var Letra;
-	var MazoActual=[];
+	var STLEOJDWSU;
+	var ROKSCTPBNI=[];
 	
-	Letra=DevuelveUbicacionCarta(JugadorQueMueve)
-	if (Letra=="D")
+	STLEOJDWSU=HHOPUSIABJ(UHTPGPRUJA)
+	if (STLEOJDWSU=="D")
 	{
-		MazoActual=MazoD;
+		ROKSCTPBNI=AGKVNAGGLB;
 	}
-	if (Letra=="U")
+	if (STLEOJDWSU=="U")
 	{
-		MazoActual=MazoU;
+		ROKSCTPBNI=TWJONOKGHC;
 	}	
-	if (Letra=="R")
+	if (STLEOJDWSU=="R")
 	{
-		MazoActual=MazoR;
+		ROKSCTPBNI=CBCNHFGWLU;
 	}
-	if (Letra=="L")
+	if (STLEOJDWSU=="L")
 	{
-		MazoActual=MazoL;
+		ROKSCTPBNI=KNVKGHHTYC;
 	}	
 	
 	
-	if (MazoCentral.length==0 || vRonda<=RondaArrastre)
+	if (VDKOVQXHON.length==0 || LUCRWXJMDR<=SNVWBLGBPJ)
 	{
-		lReturn=true;
+		GMLVJEFHPL=true;
 	}
 	else
 	{
 	
 		
-		if (RTengoMismoPalo(MazoActual)==true){
-			log(false,"Tengo del mismo palo");
+		if (IMVFJBDBXG(ROKSCTPBNI)==true){
+			log(false,"Tengo del mismo SGCSHJVERI");
 			
-			ArrayFicticio.splice(0,4);
-			for (i=0;i<=MazoCentral.length-1;i++){
-				ArrayFicticio.push(new CartaBazaNuestra(MazoCentral[i].palo,MazoCentral[i].valorReal,MazoCentral[i].jugador ));
-				//log(false,ArrayFicticio[i].palo+" - "+ArrayFicticio[i].valorReal+" - "+ArrayFicticio[i].jugador);		
+			JEOOIEYAWD.splice(0,4);
+			for (i=0;i<=VDKOVQXHON.length-1;i++){
+				JEOOIEYAWD.push(new UYOMGORTXR(VDKOVQXHON[i].SGCSHJVERI,VDKOVQXHON[i].VVRCMEUNOJ,VDKOVQXHON[i].jugador ));
+				//log(false,JEOOIEYAWD[i].SGCSHJVERI+" - "+JEOOIEYAWD[i].VVRCMEUNOJ+" - "+JEOOIEYAWD[i].jugador);		
 			}
 			
 			
-			if (RBazaEsNuestra(ArrayFicticio,JugadorQueMueve)==true){
-				log(false,"La Baza es nuestra");
-				if (Carta.palo==MazoCentral[0].palo){
-					log(false,"La carta es del mismo palo");
-					lReturn=true;
+			if (VMLEORHBGI(JEOOIEYAWD,UHTPGPRUJA)==true){
+				log(false,"La SRCGCMADME es nuestra");
+				if (TVYNYTCQYW.SGCSHJVERI==VDKOVQXHON[0].SGCSHJVERI){
+					log(false,"La carta es del mismo SGCSHJVERI");
+					GMLVJEFHPL=true;
 				}
 				else{
-					log(false,"La carta NO es del mismo palo");
-					lReturn=false;
+					log(false,"La carta NO es del mismo SGCSHJVERI");
+					GMLVJEFHPL=false;
 				}
 			}
 			else{
 				//PreparaArray metiendo carta
-				log(false,"NO es nuestra Baza..");
-				ArrayFicticio.splice(0,4);
-				for (i=0;i<=MazoCentral.length-1;i++){
-					ArrayFicticio.push(new CartaBazaNuestra(MazoCentral[i].palo,MazoCentral[i].valorReal,MazoCentral[i].jugador ));					
+				log(false,"NO es nuestra SRCGCMADME..");
+				JEOOIEYAWD.splice(0,4);
+				for (i=0;i<=VDKOVQXHON.length-1;i++){
+					JEOOIEYAWD.push(new UYOMGORTXR(VDKOVQXHON[i].SGCSHJVERI,VDKOVQXHON[i].VVRCMEUNOJ,VDKOVQXHON[i].jugador ));					
 				}
-				ArrayFicticio.push(new CartaBazaNuestra(Carta.palo,Carta.valorReal,JugadorQueMueve ));
-				log(false,ArrayFicticio[ArrayFicticio.length-1].palo+" - "+ArrayFicticio[ArrayFicticio.length-1].valorReal+" - "+ArrayFicticio[ArrayFicticio.length-1].jugador);
+				JEOOIEYAWD.push(new UYOMGORTXR(TVYNYTCQYW.SGCSHJVERI,TVYNYTCQYW.VVRCMEUNOJ,UHTPGPRUJA ));
+				log(false,JEOOIEYAWD[JEOOIEYAWD.length-1].SGCSHJVERI+" - "+JEOOIEYAWD[JEOOIEYAWD.length-1].VVRCMEUNOJ+" - "+JEOOIEYAWD[JEOOIEYAWD.length-1].jugador);
 				
-				if (RBazaEsNuestra(ArrayFicticio,JugadorQueMueve)==true){
-					log(false,"La Baza no sería nuestra");
-					if (Carta.palo==MazoCentral[0].palo){
-						log(false,"Es del mismo palo");
-						lReturn=true;
+				if (VMLEORHBGI(JEOOIEYAWD,UHTPGPRUJA)==true){
+					log(false,"La SRCGCMADME no sería nuestra");
+					if (TVYNYTCQYW.SGCSHJVERI==VDKOVQXHON[0].SGCSHJVERI){
+						log(false,"Es del mismo SGCSHJVERI");
+						GMLVJEFHPL=true;
 					}	
 					else{
-						log(false,"No es del mismo palo");
-						lReturn=false;
+						log(false,"No es del mismo SGCSHJVERI");
+						GMLVJEFHPL=false;
 					}
 				}
 				else{
-					if (RHariaBaza("MismoPalo",JugadorQueMueve,MazoActual)==true){
-						log(false,"Haría Baza con otra carta del mismo palo");
-						lReturn=false;
+					if (BNKCXIHKDW("MismoPalo",UHTPGPRUJA,ROKSCTPBNI)==true){
+						log(false,"Haría SRCGCMADME con otra carta del mismo SGCSHJVERI");
+						GMLVJEFHPL=false;
 					}
 					else{
-						log(false,"NO haría Baza con otra carta del mismo palo");
-						//lReturn=true;
-						if (Carta.palo==MazoCentral[0].palo)
+						log(false,"NO haría SRCGCMADME con otra carta del mismo SGCSHJVERI");
+						//GMLVJEFHPL=true;
+						if (TVYNYTCQYW.SGCSHJVERI==VDKOVQXHON[0].SGCSHJVERI)
 						{
-							lReturn=true;
+							GMLVJEFHPL=true;
 						}
 						else
 						{
-							if (RTengoMismoPalo(MazoActual)==true){
-								lReturn=false;				
+							if (IMVFJBDBXG(ROKSCTPBNI)==true){
+								GMLVJEFHPL=false;				
 							}
 							else{
-								lReturn=true;
+								GMLVJEFHPL=true;
 							}
 						}
 						
@@ -1269,75 +1269,75 @@ ValidadorReglas=function(Carta,JugadorQueMueve){
 		else
 		{
 		
-			ArrayFicticio.splice(0,4);
-			for (i=0;i<=MazoCentral.length-1;i++){
-				ArrayFicticio.push(new CartaBazaNuestra(MazoCentral[i].palo,MazoCentral[i].valorReal,MazoCentral[i].jugador ));
-				//log(false,ArrayFicticio[i].palo+" - "+ArrayFicticio[i].valorReal+" - "+ArrayFicticio[i].jugador);
+			JEOOIEYAWD.splice(0,4);
+			for (i=0;i<=VDKOVQXHON.length-1;i++){
+				JEOOIEYAWD.push(new UYOMGORTXR(VDKOVQXHON[i].SGCSHJVERI,VDKOVQXHON[i].VVRCMEUNOJ,VDKOVQXHON[i].jugador ));
+				//log(false,JEOOIEYAWD[i].SGCSHJVERI+" - "+JEOOIEYAWD[i].VVRCMEUNOJ+" - "+JEOOIEYAWD[i].jugador);
 			}
 			
-			if (RBazaEsNuestra(ArrayFicticio,JugadorQueMueve)==true){
-				lReturn=true;
+			if (VMLEORHBGI(JEOOIEYAWD,UHTPGPRUJA)==true){
+				GMLVJEFHPL=true;
 			}
 			else{
 				
 				
-				ArrayFicticio.splice(0,4);
-				for (i=0;i<=MazoCentral.length-1;i++){
-					ArrayFicticio.push(new CartaBazaNuestra(MazoCentral[i].palo,MazoCentral[i].valorReal,MazoCentral[i].jugador ));
-					//log(false,ArrayFicticio[i].palo+" - "+ArrayFicticio[i].valorReal+" - "+ArrayFicticio[i].jugador);
+				JEOOIEYAWD.splice(0,4);
+				for (i=0;i<=VDKOVQXHON.length-1;i++){
+					JEOOIEYAWD.push(new UYOMGORTXR(VDKOVQXHON[i].SGCSHJVERI,VDKOVQXHON[i].VVRCMEUNOJ,VDKOVQXHON[i].jugador ));
+					//log(false,JEOOIEYAWD[i].SGCSHJVERI+" - "+JEOOIEYAWD[i].VVRCMEUNOJ+" - "+JEOOIEYAWD[i].jugador);
 				}
-				ArrayFicticio.push(new CartaBazaNuestra(Carta.palo,Carta.valorReal,JugadorQueMueve ));
-				//log(false,ArrayFicticio[ArrayFicticio.length-1].palo+" - "+ArrayFicticio[ArrayFicticio.length-1].valorReal+" - "+ArrayFicticio[ArrayFicticio.length-1].jugador);
+				JEOOIEYAWD.push(new UYOMGORTXR(TVYNYTCQYW.SGCSHJVERI,TVYNYTCQYW.VVRCMEUNOJ,UHTPGPRUJA ));
+				//log(false,JEOOIEYAWD[JEOOIEYAWD.length-1].SGCSHJVERI+" - "+JEOOIEYAWD[JEOOIEYAWD.length-1].VVRCMEUNOJ+" - "+JEOOIEYAWD[JEOOIEYAWD.length-1].jugador);
 				
-				if (RBazaEsNuestra(ArrayFicticio,JugadorQueMueve)==true){
-					lReturn=true;
+				if (VMLEORHBGI(JEOOIEYAWD,UHTPGPRUJA)==true){
+					GMLVJEFHPL=true;
 				}
 				else{
-					if (RHariaBaza("OtroPalo",JugadorQueMueve,MazoActual)==true){
-						lReturn=false;
+					if (BNKCXIHKDW("OtroPalo",UHTPGPRUJA,ROKSCTPBNI)==true){
+						GMLVJEFHPL=false;
 					}
 					else{
-						lReturn=true;
+						GMLVJEFHPL=true;
 					}
 				}
 			}
 		}
 	}
 	
-	return lReturn;
+	return GMLVJEFHPL;
 	
 }
 
-log=function(Mostrar,Texto){
+log=function(MYQCQNOJGH,RPHWVBBGIM){
 	
-	if (Mostrar==true)
+	if (MYQCQNOJGH==true)
 	{
-		//console.log(Texto);
+		//console.log(RPHWVBBGIM);
 	}	
 }
 
-RHariaBaza=function(Naturaleza,JugadorQueMueve,MazoActual){
+BNKCXIHKDW=function(WIXBCPBSJI,UHTPGPRUJA,ROKSCTPBNI){
 	
 	var i;
 	var u;
-	var lEncontrado;
-	var ArrayFicticio=[];
+	var IRFWBJNIMN;
+	var JEOOIEYAWD=[];
 	
-	lEncontrado=false;
-	if (Naturaleza=="MismoPalo")
+	IRFWBJNIMN=false;
+	if (WIXBCPBSJI=="MismoPalo")
 	{
-		for (i=0;i<=MazoActual.length-1;i++)
+		for (i=0;i<=ROKSCTPBNI.length-1;i++)
 		{
-			if(lEncontrado==false){
-			ArrayFicticio.splice(0,4);
-			for (u=0;u<=MazoCentral.length-1;u++){
-				ArrayFicticio.push(new CartaBazaNuestra(MazoCentral[u].palo,MazoCentral[u].valorReal,MazoCentral[u].jugador ));
+			if(IRFWBJNIMN==false){
+			JEOOIEYAWD.splice(0,4);
+			for (u=0;u<=VDKOVQXHON.length-1;u++){
+				JEOOIEYAWD.push(new UYOMGORTXR(VDKOVQXHON[u].SGCSHJVERI,VDKOVQXHON[u].VVRCMEUNOJ,VDKOVQXHON[u].jugador ));
 			}
 			
-			if (MazoCentral[0].palo==MazoActual[i].palo){
-				ArrayFicticio.push(new CartaBazaNuestra(MazoActual[i].palo,MazoActual[i].valorReal,JugadorQueMueve ));
-				if (RBazaEsNuestra(ArrayFicticio,JugadorQueMueve)==true){
-					lEncontrado=true;
+			if (VDKOVQXHON[0].SGCSHJVERI==ROKSCTPBNI[i].SGCSHJVERI){
+				JEOOIEYAWD.push(new UYOMGORTXR(ROKSCTPBNI[i].SGCSHJVERI,ROKSCTPBNI[i].VVRCMEUNOJ,UHTPGPRUJA ));
+				if (VMLEORHBGI(JEOOIEYAWD,UHTPGPRUJA)==true){
+					IRFWBJNIMN=true;
 					break;
 				}			
 			}	
@@ -1345,20 +1345,20 @@ RHariaBaza=function(Naturaleza,JugadorQueMueve,MazoActual){
 		}	
 	}
 
-	if (Naturaleza=="MismoPaloSinBaza")
+	if (WIXBCPBSJI=="MismoPaloSinBaza")
 	{
-		for (i=0;i<=MazoActual.length-1;i++)
+		for (i=0;i<=ROKSCTPBNI.length-1;i++)
 		{
-			if(lEncontrado==false){
-			ArrayFicticio.splice(0,4);
-			for (u=0;u<=MazoCentral.length-1;u++){
-				ArrayFicticio.push(new CartaBazaNuestra(MazoCentral[u].palo,MazoCentral[u].valorReal,MazoCentral[u].jugador ));
+			if(IRFWBJNIMN==false){
+			JEOOIEYAWD.splice(0,4);
+			for (u=0;u<=VDKOVQXHON.length-1;u++){
+				JEOOIEYAWD.push(new UYOMGORTXR(VDKOVQXHON[u].SGCSHJVERI,VDKOVQXHON[u].VVRCMEUNOJ,VDKOVQXHON[u].jugador ));
 			}
 			
-			if (MazoCentral[0].palo==MazoActual[i].palo){
-				ArrayFicticio.push(new CartaBazaNuestra(MazoActual[i].palo,MazoActual[i].valorReal,JugadorQueMueve ));
-				if (RBazaEsNuestra(ArrayFicticio,JugadorQueMueve)==true){
-					lEncontrado=true;
+			if (VDKOVQXHON[0].SGCSHJVERI==ROKSCTPBNI[i].SGCSHJVERI){
+				JEOOIEYAWD.push(new UYOMGORTXR(ROKSCTPBNI[i].SGCSHJVERI,ROKSCTPBNI[i].VVRCMEUNOJ,UHTPGPRUJA ));
+				if (VMLEORHBGI(JEOOIEYAWD,UHTPGPRUJA)==true){
+					IRFWBJNIMN=true;
 					break;
 				}			
 			}	
@@ -1367,19 +1367,19 @@ RHariaBaza=function(Naturaleza,JugadorQueMueve,MazoActual){
 	}
 
 	
-	if (Naturaleza=="OtroPalo")
+	if (WIXBCPBSJI=="OtroPalo")
 	{
-		for (i=0;i<=MazoActual.length-1;i++){
-			if(lEncontrado==false){
-			ArrayFicticio.splice(0,4);
-			for (u=0;u<=MazoCentral.length-1;u++){
-				ArrayFicticio.push(new CartaBazaNuestra(MazoCentral[u].palo,MazoCentral[u].valorReal,MazoCentral[u].jugador ));
+		for (i=0;i<=ROKSCTPBNI.length-1;i++){
+			if(IRFWBJNIMN==false){
+			JEOOIEYAWD.splice(0,4);
+			for (u=0;u<=VDKOVQXHON.length-1;u++){
+				JEOOIEYAWD.push(new UYOMGORTXR(VDKOVQXHON[u].SGCSHJVERI,VDKOVQXHON[u].VVRCMEUNOJ,VDKOVQXHON[u].jugador ));
 			}
 			
-			if (MazoCentral[0].palo!=MazoActual[i].palo){
-				ArrayFicticio.push(new CartaBazaNuestra(MazoActual[i].palo,MazoActual[i].valorReal,JugadorQueMueve ));
-				if (RBazaEsNuestra(ArrayFicticio,JugadorQueMueve)==true){
-					lEncontrado=true;
+			if (VDKOVQXHON[0].SGCSHJVERI!=ROKSCTPBNI[i].SGCSHJVERI){
+				JEOOIEYAWD.push(new UYOMGORTXR(ROKSCTPBNI[i].SGCSHJVERI,ROKSCTPBNI[i].VVRCMEUNOJ,UHTPGPRUJA ));
+				if (VMLEORHBGI(JEOOIEYAWD,UHTPGPRUJA)==true){
+					IRFWBJNIMN=true;
 					break;
 				}			
 			}	
@@ -1388,57 +1388,57 @@ RHariaBaza=function(Naturaleza,JugadorQueMueve,MazoActual){
 	
 	}
 	
-	return lEncontrado;
+	return IRFWBJNIMN;
 	
 }
 
-RTengoMismoPalo=function(MazoActual){
+IMVFJBDBXG=function(ROKSCTPBNI){
 	
 	
 	var i;
-	var lReturn;
-	lReturn=false;
-	for (i=0;i<=MazoActual.length-1;i++){
-		if (MazoActual[i].palo==MazoCentral[0].palo){
-			lReturn=true;
+	var GMLVJEFHPL;
+	GMLVJEFHPL=false;
+	for (i=0;i<=ROKSCTPBNI.length-1;i++){
+		if (ROKSCTPBNI[i].SGCSHJVERI==VDKOVQXHON[0].SGCSHJVERI){
+			GMLVJEFHPL=true;
 			break;
 		}	
 	}
-	return lReturn;
+	return GMLVJEFHPL;
 	
 }
 
 
-RBazaEsNuestra=function(ArraySimulado,JugadorQueMueve){
+VMLEORHBGI=function(MAUODEDWED,UHTPGPRUJA){
 	
 	
 	var i;
-	var vaGanando;
-	var BazaNuestra;
-	var valorSuperar;
-	var paloSuperar
+	var TTJFVWDTMG;
+	var LECTUTFGKY;
+	var QJXRLWRPYD;
+	var ESHLDBNEQI
 	
 		
-		for (i=0;i<=ArraySimulado.length-1;i++)
+		for (i=0;i<=MAUODEDWED.length-1;i++)
 		{
 	
 		
-		//log(false,"Dentro-- "+ ArraySimulado[i].palo +" - "+ArraySimulado[i].valorReal+" - "+ArraySimulado[i].jugador);
+		//log(false,"Dentro-- "+ MAUODEDWED[i].SGCSHJVERI +" - "+MAUODEDWED[i].VVRCMEUNOJ+" - "+MAUODEDWED[i].jugador);
 		
 			if (i==0){
-				valorSuperar=ArraySimulado[i].valorReal;
-				paloSuperar=ArraySimulado[i].palo;
-				vaGanando=ArraySimulado[i].jugador;				
+				QJXRLWRPYD=MAUODEDWED[i].VVRCMEUNOJ;
+				ESHLDBNEQI=MAUODEDWED[i].SGCSHJVERI;
+				TTJFVWDTMG=MAUODEDWED[i].jugador;				
 			}
 		
-			if ( (ArraySimulado[i].valorReal>valorSuperar && ArraySimulado[i].palo==paloSuperar)
-				|| (  ArraySimulado[i].palo==Triunfo && paloSuperar!=Triunfo )
+			if ( (MAUODEDWED[i].VVRCMEUNOJ>QJXRLWRPYD && MAUODEDWED[i].SGCSHJVERI==ESHLDBNEQI)
+				|| (  MAUODEDWED[i].SGCSHJVERI==TGTQPBEQFR && ESHLDBNEQI!=TGTQPBEQFR )
 			)
 			{
 
-			valorSuperar=ArraySimulado[i].valorReal;
-			paloSuperar=ArraySimulado[i].palo;
-			vaGanando=ArraySimulado[i].jugador;
+			QJXRLWRPYD=MAUODEDWED[i].VVRCMEUNOJ;
+			ESHLDBNEQI=MAUODEDWED[i].SGCSHJVERI;
+			TTJFVWDTMG=MAUODEDWED[i].jugador;
 			
 			
 			}
@@ -1447,358 +1447,358 @@ RBazaEsNuestra=function(ArraySimulado,JugadorQueMueve){
 		}
 		
 			
-		if (JugadorQueMueve==1){
-			if (vaGanando==1){
-				BazaNuestra=true;
+		if (UHTPGPRUJA==1){
+			if (TTJFVWDTMG==1){
+				LECTUTFGKY=true;
 			}
-			if (vaGanando==2){
-				BazaNuestra=false;
+			if (TTJFVWDTMG==2){
+				LECTUTFGKY=false;
 			}
-			if (vaGanando==3){
-				BazaNuestra=true;
+			if (TTJFVWDTMG==3){
+				LECTUTFGKY=true;
 			}
-			if (vaGanando==4){
-				BazaNuestra=false;
+			if (TTJFVWDTMG==4){
+				LECTUTFGKY=false;
 			}			
 		}
-		if (JugadorQueMueve==2){
-			if (vaGanando==2){
-				BazaNuestra=true;
+		if (UHTPGPRUJA==2){
+			if (TTJFVWDTMG==2){
+				LECTUTFGKY=true;
 			}
-			if (vaGanando==3){
-				BazaNuestra=false;
+			if (TTJFVWDTMG==3){
+				LECTUTFGKY=false;
 			}
-			if (vaGanando==4){
-				BazaNuestra=true;
+			if (TTJFVWDTMG==4){
+				LECTUTFGKY=true;
 			}
-			if (vaGanando==1){
-				BazaNuestra=false;
+			if (TTJFVWDTMG==1){
+				LECTUTFGKY=false;
 			}			
 		}
-		if (JugadorQueMueve==3){
-			if (vaGanando==3){
-				BazaNuestra=true;
+		if (UHTPGPRUJA==3){
+			if (TTJFVWDTMG==3){
+				LECTUTFGKY=true;
 			}
-			if (vaGanando==4){
-				BazaNuestra=false;
+			if (TTJFVWDTMG==4){
+				LECTUTFGKY=false;
 			}
-			if (vaGanando==1){
-				BazaNuestra=true;
+			if (TTJFVWDTMG==1){
+				LECTUTFGKY=true;
 			}
-			if (vaGanando==2){
-				BazaNuestra=false;
+			if (TTJFVWDTMG==2){
+				LECTUTFGKY=false;
 			}			
 		}
-		if (JugadorQueMueve==4){
-			if (vaGanando==4){
-				BazaNuestra=true;
+		if (UHTPGPRUJA==4){
+			if (TTJFVWDTMG==4){
+				LECTUTFGKY=true;
 			}
-			if (vaGanando==1){
-				BazaNuestra=false;
+			if (TTJFVWDTMG==1){
+				LECTUTFGKY=false;
 			}
-			if (vaGanando==2){
-				BazaNuestra=true;
+			if (TTJFVWDTMG==2){
+				LECTUTFGKY=true;
 			}
-			if (vaGanando==3){
-				BazaNuestra=false;
+			if (TTJFVWDTMG==3){
+				LECTUTFGKY=false;
 			}			
 		}	
 
-	return BazaNuestra;
+	return LECTUTFGKY;
 	
 }
-DevuelveUbicacionCarta=function(JugadorMazo){
+HHOPUSIABJ=function(HGCJHQJCEI){
 	
-	var posicionMazo="D";
-	log(true,"Dentro de DevuelveUbicacion "+SoyElJugador+" "+JugadorMazo)
+	var DNNXCWARGV="D";
+	log(true,"Dentro de DevuelveUbicacion "+TFSXFTYVGQ+" "+HGCJHQJCEI)
 	
-	if(SoyElJugador==1)
+	if(TFSXFTYVGQ==1)
 	{
-		if (JugadorMazo==1){
-			posicionMazo="D"
+		if (HGCJHQJCEI==1){
+			DNNXCWARGV="D"
 		}
-		if (JugadorMazo==2){
-			posicionMazo="R"
+		if (HGCJHQJCEI==2){
+			DNNXCWARGV="R"
 		}
-		if (JugadorMazo==3){
-			posicionMazo="U"
+		if (HGCJHQJCEI==3){
+			DNNXCWARGV="U"
 		}
-		if (JugadorMazo==4){
-			posicionMazo="L"
+		if (HGCJHQJCEI==4){
+			DNNXCWARGV="L"
 		}	
 	}
 	
-	if(SoyElJugador==2)
+	if(TFSXFTYVGQ==2)
 	{
-		if (JugadorMazo==2){
-			posicionMazo="D"
+		if (HGCJHQJCEI==2){
+			DNNXCWARGV="D"
 		}
-		if (JugadorMazo==3){
-			posicionMazo="R"
+		if (HGCJHQJCEI==3){
+			DNNXCWARGV="R"
 		}
-		if (JugadorMazo==4){
-			posicionMazo="U"
+		if (HGCJHQJCEI==4){
+			DNNXCWARGV="U"
 		}
-		if (JugadorMazo==1){
-			posicionMazo="L"
+		if (HGCJHQJCEI==1){
+			DNNXCWARGV="L"
 		}
 	}
 
-	if(SoyElJugador==3)
+	if(TFSXFTYVGQ==3)
 	{
-		if (JugadorMazo==3){
-			posicionMazo="D"
+		if (HGCJHQJCEI==3){
+			DNNXCWARGV="D"
 		}
-		if (JugadorMazo==4){
-			posicionMazo="R"
+		if (HGCJHQJCEI==4){
+			DNNXCWARGV="R"
 		}
-		if (JugadorMazo==1){
-			posicionMazo="U"
+		if (HGCJHQJCEI==1){
+			DNNXCWARGV="U"
 		}
-		if (JugadorMazo==2){
-			posicionMazo="L"
+		if (HGCJHQJCEI==2){
+			DNNXCWARGV="L"
 		}
 	}
 
-	if(SoyElJugador==4)
+	if(TFSXFTYVGQ==4)
 	{
-		if (JugadorMazo==4){
-			posicionMazo="D"
+		if (HGCJHQJCEI==4){
+			DNNXCWARGV="D"
 		}
-		if (JugadorMazo==1){
-			posicionMazo="R"
+		if (HGCJHQJCEI==1){
+			DNNXCWARGV="R"
 		}
-		if (JugadorMazo==2){
-			posicionMazo="U"
+		if (HGCJHQJCEI==2){
+			DNNXCWARGV="U"
 		}
-		if (JugadorMazo==3){
-			posicionMazo="L"
+		if (HGCJHQJCEI==3){
+			DNNXCWARGV="L"
 		}
 	}	
 	
-	log(false,"Va a Devolver.."+posicionMazo);
-	return posicionMazo;
+	log(false,"Va a RTOSLKFWHC.."+DNNXCWARGV);
+	return DNNXCWARGV;
 }
 
 
-DevuelveJugadorSegunMazo=function(LetraMazo){
-	var Jugador;
+JHIEHWIMCB=function(UBWRXKMTQN){
+	var SSUNXNEEHN;
 	
-	if(SoyElJugador==1)
+	if(TFSXFTYVGQ==1)
 	{
-		if (LetraMazo=="D"){
-			Jugador=1;
+		if (UBWRXKMTQN=="D"){
+			SSUNXNEEHN=1;
 		}
-		if (LetraMazo=="R"){
-			Jugador=2;
+		if (UBWRXKMTQN=="R"){
+			SSUNXNEEHN=2;
 		}
-		if (LetraMazo=="U"){
-			Jugador=3;
+		if (UBWRXKMTQN=="U"){
+			SSUNXNEEHN=3;
 		}
-		if (LetraMazo=="L"){
-			Jugador=4;
+		if (UBWRXKMTQN=="L"){
+			SSUNXNEEHN=4;
 		}	
 	}
 	
-	if(SoyElJugador==2)
+	if(TFSXFTYVGQ==2)
 	{
-		if (LetraMazo=="D"){
-			Jugador=2;
+		if (UBWRXKMTQN=="D"){
+			SSUNXNEEHN=2;
 		}
-		if (LetraMazo=="R"){
-			Jugador=3;
+		if (UBWRXKMTQN=="R"){
+			SSUNXNEEHN=3;
 		}
-		if (LetraMazo=="U"){
-			Jugador=4;
+		if (UBWRXKMTQN=="U"){
+			SSUNXNEEHN=4;
 		}
-		if (LetraMazo=="L"){
-			Jugador=1;
+		if (UBWRXKMTQN=="L"){
+			SSUNXNEEHN=1;
 		}	
 	}
 	
-	if(SoyElJugador==3)
+	if(TFSXFTYVGQ==3)
 	{
-		if (LetraMazo=="D"){
-			Jugador=3;
+		if (UBWRXKMTQN=="D"){
+			SSUNXNEEHN=3;
 		}
-		if (LetraMazo=="R"){
-			Jugador=4;
+		if (UBWRXKMTQN=="R"){
+			SSUNXNEEHN=4;
 		}
-		if (LetraMazo=="U"){
-			Jugador=1;
+		if (UBWRXKMTQN=="U"){
+			SSUNXNEEHN=1;
 		}
-		if (LetraMazo=="L"){
-			Jugador=2;
+		if (UBWRXKMTQN=="L"){
+			SSUNXNEEHN=2;
 		}	
 	}
 
-	if(SoyElJugador==4)
+	if(TFSXFTYVGQ==4)
 	{
-		if (LetraMazo=="D"){
-			Jugador=4;
+		if (UBWRXKMTQN=="D"){
+			SSUNXNEEHN=4;
 		}
-		if (LetraMazo=="R"){
-			Jugador=1;
+		if (UBWRXKMTQN=="R"){
+			SSUNXNEEHN=1;
 		}
-		if (LetraMazo=="U"){
-			Jugador=2;
+		if (UBWRXKMTQN=="U"){
+			SSUNXNEEHN=2;
 		}
-		if (LetraMazo=="L"){
-			Jugador=3;
+		if (UBWRXKMTQN=="L"){
+			SSUNXNEEHN=3;
 		}	
 	}	
 	
-	return Jugador;
+	return SSUNXNEEHN;
 }
 
-Esconde_Mazo=function(QuienReparte){
+NABJPTUWJA=function(RDBQUAVHEP){
 	var i;
-	var posicionMazo;
+	var DNNXCWARGV;
 	
-	if(SoyElJugador==1)
+	if(TFSXFTYVGQ==1)
 	{
-		if (QuienReparte==1){
-			posicionMazo="D"
+		if (RDBQUAVHEP==1){
+			DNNXCWARGV="D"
 		}
-		if (QuienReparte==2){
-			posicionMazo="R"
+		if (RDBQUAVHEP==2){
+			DNNXCWARGV="R"
 		}
-		if (QuienReparte==3){
-			posicionMazo="U"
+		if (RDBQUAVHEP==3){
+			DNNXCWARGV="U"
 		}
-		if (QuienReparte==4){
-			posicionMazo="L"
+		if (RDBQUAVHEP==4){
+			DNNXCWARGV="L"
 		}	
 	}
 	
-	if(SoyElJugador==2)
+	if(TFSXFTYVGQ==2)
 	{
-		if (QuienReparte==2){
-			posicionMazo="D"
+		if (RDBQUAVHEP==2){
+			DNNXCWARGV="D"
 		}
-		if (QuienReparte==3){
-			posicionMazo="R"
+		if (RDBQUAVHEP==3){
+			DNNXCWARGV="R"
 		}
-		if (QuienReparte==4){
-			posicionMazo="U"
+		if (RDBQUAVHEP==4){
+			DNNXCWARGV="U"
 		}
-		if (QuienReparte==1){
-			posicionMazo="L"
+		if (RDBQUAVHEP==1){
+			DNNXCWARGV="L"
 		}
 	}
 
-	if(SoyElJugador==3)
+	if(TFSXFTYVGQ==3)
 	{
-		if (QuienReparte==3){
-			posicionMazo="D"
+		if (RDBQUAVHEP==3){
+			DNNXCWARGV="D"
 		}
-		if (QuienReparte==4){
-			posicionMazo="R"
+		if (RDBQUAVHEP==4){
+			DNNXCWARGV="R"
 		}
-		if (QuienReparte==1){
-			posicionMazo="U"
+		if (RDBQUAVHEP==1){
+			DNNXCWARGV="U"
 		}
-		if (QuienReparte==2){
-			posicionMazo="L"
+		if (RDBQUAVHEP==2){
+			DNNXCWARGV="L"
 		}
 	}
 
-	if(SoyElJugador==4)
+	if(TFSXFTYVGQ==4)
 	{
-		if (QuienReparte==4){
-			posicionMazo="D"
+		if (RDBQUAVHEP==4){
+			DNNXCWARGV="D"
 		}
-		if (QuienReparte==1){
-			posicionMazo="R"
+		if (RDBQUAVHEP==1){
+			DNNXCWARGV="R"
 		}
-		if (QuienReparte==2){
-			posicionMazo="U"
+		if (RDBQUAVHEP==2){
+			DNNXCWARGV="U"
 		}
-		if (QuienReparte==3){
-			posicionMazo="L"
+		if (RDBQUAVHEP==3){
+			DNNXCWARGV="L"
 		}
 	}	
 
 	
-	if (posicionMazo=="D"){
-		for(i=0;i<=Mazo.length-1;i++){
-			Mazo[i].cartilla.x=game_objeto.world.centerX+(i/2);
-			Mazo[i].cartilla.y=game_objeto.world.height-(AltoCartaEscalado)-(Mazo[i].cartilla.height/2)-(vSeparacion*2)-70;	
+	if (DNNXCWARGV=="D"){
+		for(i=0;i<=FXGSEGRXKC.length-1;i++){
+			FXGSEGRXKC[i].TNFAGGMKXD.x=YMHIHSNADE.world.centerX+(i/2);
+			FXGSEGRXKC[i].TNFAGGMKXD.y=YMHIHSNADE.world.height-(PPLOSJIWHO)-(FXGSEGRXKC[i].TNFAGGMKXD.height/2)-(YAJVUBPNNW*2)-70;	
 		}
 	}
 	
-	if (posicionMazo=="U"){
-		for(i=0;i<=Mazo.length-1;i++){
-			Mazo[i].cartilla.x=game_objeto.world.centerX+(i/2);
-			Mazo[i].cartilla.y=(Mazo[i].cartilla.height)+(Mazo[i].cartilla.height/2)+(vSeparacion*2);	;	
+	if (DNNXCWARGV=="U"){
+		for(i=0;i<=FXGSEGRXKC.length-1;i++){
+			FXGSEGRXKC[i].TNFAGGMKXD.x=YMHIHSNADE.world.centerX+(i/2);
+			FXGSEGRXKC[i].TNFAGGMKXD.y=(FXGSEGRXKC[i].TNFAGGMKXD.height)+(FXGSEGRXKC[i].TNFAGGMKXD.height/2)+(YAJVUBPNNW*2);	;	
 		}
 	}
 	
-	if (posicionMazo=="L"){
-		for(i=0;i<=Mazo.length-1;i++){
-			Mazo[i].cartilla.x=(Mazo[i].cartilla.height)+(Mazo[i].cartilla.height/2)+(vSeparacion*2)+(i/2);
-			Mazo[i].cartilla.y=CentroIrreal;	
-			//Mazo[i].cartilla.angle=90;
+	if (DNNXCWARGV=="L"){
+		for(i=0;i<=FXGSEGRXKC.length-1;i++){
+			FXGSEGRXKC[i].TNFAGGMKXD.x=(FXGSEGRXKC[i].TNFAGGMKXD.height)+(FXGSEGRXKC[i].TNFAGGMKXD.height/2)+(YAJVUBPNNW*2)+(i/2);
+			FXGSEGRXKC[i].TNFAGGMKXD.y=PXEBTYBHGS;	
+			//FXGSEGRXKC[i].TNFAGGMKXD.angle=90;
 		}
 	}
 
-	if (posicionMazo=="R"){
-		for(i=0;i<=Mazo.length-1;i++){
-			Mazo[i].cartilla.x=game_objeto.world.width-(Mazo[i].cartilla.height)-(Mazo[i].cartilla.height/2)-(vSeparacion*3)+(i/2);
-			Mazo[i].cartilla.y=CentroIrreal;	
+	if (DNNXCWARGV=="R"){
+		for(i=0;i<=FXGSEGRXKC.length-1;i++){
+			FXGSEGRXKC[i].TNFAGGMKXD.x=YMHIHSNADE.world.width-(FXGSEGRXKC[i].TNFAGGMKXD.height)-(FXGSEGRXKC[i].TNFAGGMKXD.height/2)-(YAJVUBPNNW*3)+(i/2);
+			FXGSEGRXKC[i].TNFAGGMKXD.y=PXEBTYBHGS;	
 		}
 	}
 	
 };
 
 
-MoverMazo=function(){
-		//var AnchoCarta=Mazo[Mazo.length-1].cartilla.width;
+SESLFOEJHY=function(){
+		//var COIVBWRMCC=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.width;
 		var i;
 		var u;
-		var Encontrado;
+		var VEFCIYHBGC;
 		
-		for(i=0;i<=Mazo.length-1;i++){
+		for(i=0;i<=FXGSEGRXKC.length-1;i++){
 					
-			var s = game_objeto.add.tween(Mazo[i].cartilla);
-			s.to( {x:(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6)) - (vSeparacion*5)  +  AnchoCarta  )    /2)+      (0 *(AnchoCarta+ vSeparacion))+(i/2),
-			y:CentroIrreal}, 500, EfectoTween1);	
+			var s = YMHIHSNADE.add.tween(FXGSEGRXKC[i].TNFAGGMKXD);
+			s.to( {x:(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6)) - (YAJVUBPNNW*5)  +  COIVBWRMCC  )    /2)+      (0 *(COIVBWRMCC+ YAJVUBPNNW))+(i/2),
+			y:PXEBTYBHGS}, 500, KYFMRVNHIQ);	
 			s.start();
 			
 		}
 		
 
 		
-		if (ModoMultijugador==true)
+		if (EGPDVIEJEL==true)
 		{
-			//alert("Moviendo Mazo");
+			//alert("Moviendo FXGSEGRXKC");
 			
 			////////////////////////////////////////////////////////////////////
 			//
-				CalculaControl();
+				IOJCRKJSRL();
 			
-				var TiempoParaturno=120;
+				var JHKSJDHVKJ=120;
 		
-				timerestoylisto.loop(1000, function(){	//1.0.6
+				BGHJGDWJVI.loop(1000, function(){	//1.0.6
 				
 					
 				
-					if (TiempoParaturno<=0 || PartidaComenzada==true)
+					if (JHKSJDHVKJ<=0 || MYQBNBVHKU==true)
 					{
-						timerestoylisto.stop();
+						BGHJGDWJVI.stop();
 						
 					}
 					else
 					{
 						EnviarEstoyListo();
-						TiempoParaturno=TiempoParaturno-1;
+						JHKSJDHVKJ=JHKSJDHVKJ-1;
 					}
 					
 					//console.log("Reloj");
 				
 					
 				});
-				timerestoylisto.start();
+				BGHJGDWJVI.start();
 				
 			
 			//
@@ -1808,24 +1808,24 @@ MoverMazo=function(){
 		}
 		else
 		{
-			PreparaCaracteristicasMano();
-			//log(true,"IA Desde Mover Mazo");
+			JQSOOBSDDS();
+			//log(true,"IA Desde Mover FXGSEGRXKC");
 			
-			//var timer = game_objeto.time.create(false);
-			var TiempoPensarTirada=TiempoPensar(vTurno);
-			//var	timer = game_objeto.time.create(false);
-			timer.stop();
-			timer.add(TiempoPensarTirada, function(){
-				timer.stop(); 
+			//var TKXPPGUPVV = YMHIHSNADE.time.create(false);
+			var PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
+			//var	TKXPPGUPVV = YMHIHSNADE.time.create(false);
+			TKXPPGUPVV.stop();
+			TKXPPGUPVV.add(PLKOPTSHBQ, function(){
+				TKXPPGUPVV.stop(); 
 			//console.log("IA DESDE mover mazo");
-			IA(SoyElJugador);} );
-			timer.start();			
+			IA(TFSXFTYVGQ);} );
+			TKXPPGUPVV.start();			
 		}
 		
-		BotonCantar.visible=true;
-		BotonSiete.visible=true;
-		//BotonSalir.x=xSalir;
-		//BotonSalir.visible=true;
+		IEQDMBJCAY.visible=true;
+		YGTNAODFHW.visible=true;
+		//CUUKQAGFEB.x=QETACVSHAR;
+		//CUUKQAGFEB.visible=true;
 
 };
 
@@ -1834,40 +1834,40 @@ EnviarEstoyListo=function()
 	var i;
 	
 	
-	if (PartidaComenzada==false)//1.0.6
+	if (MYQBNBVHKU==false)//1.0.6
 	{
 	
-			var ObjectSend=function( Habitacion,JugadorSala,idPartida,
-				IdMsg,ClientId,SalaID,Mensaje){
-				 this.Habitacion=Habitacion
-				 this.JugadorSala=JugadorSala
-				 this.idPartida=idPartida
+			var GXNRNMAAKW=function( DFBVDPETGO,AURESXCGMK,MQUGCIUQII,
+				OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+				 this.DFBVDPETGO=DFBVDPETGO
+				 this.AURESXCGMK=AURESXCGMK
+				 this.MQUGCIUQII=MQUGCIUQII
 									 
-				 this.IdMsg=IdMsg
-				 this.ClientId=ClientId
-				 this.SalaID=SalaID
-				 this.Mensaje=Mensaje
+				 this.OYJAHGADFQ=OYJAHGADFQ
+				 this.OJPXTRQDKS=OJPXTRQDKS
+				 this.LYHKNIMVEB=LYHKNIMVEB
+				 this.RHOLNWBOXR=RHOLNWBOXR
 				 
-				 this.Fecha=new Date(Date.now());
+				 this.EBAPPJFYSW=new Date(Date.now());
 			 }
-			var ArrayAccionesDesconexionesLocal=[];
-			ArrayAccionesDesconexionesLocal.splice(0,1000);
+			var QPHHGPRJAI=[];
+			QPHHGPRJAI.splice(0,1000);
 
 				
-			var IdMsg=Math.random()*100000;
-			var Objeto=new ObjectSend(Habitacion,socket.id,idPartida,
-				IdMsg,ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala,Habitacion,'Estoy listo');
-			ArrayAccionesDesconexiones.push(Objeto);
-			ArrayAccionesDesconexionesLocal.push(Objeto);
+			var OYJAHGADFQ=Math.random()*100000;
+			var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,socket.id,MQUGCIUQII,
+				OYJAHGADFQ,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,DFBVDPETGO,'BKEMJDLQQM');
+			NBEJWDVLLV.push(KCPHFPSPLQ);
+			QPHHGPRJAI.push(KCPHFPSPLQ);
 
 
-			socket.emit('Estoy listo',ArrayAccionesDesconexionesLocal[0],
-			 function(idMensaje)
+			socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
+			 function(XQLEOGMJYG)
 			 {			 
-				EliminarColaMensajes(idMensaje,'Estoy listo');
+				EXBCVLOIYJ(XQLEOGMJYG,'BKEMJDLQQM');
 			 }
 			);						
-			ArrayAccionesDesconexionesLocal.splice(0,1000);	
+			QPHHGPRJAI.splice(0,1000);	
 
 
 
@@ -1892,49 +1892,49 @@ EnviarEstoyListo=function()
 		//Testando
 		//1.0.4 Uno por otro
 		//console.log("Llamada 1");
-		CalculaControl();
-		//RecalculaDesconectados();
+		IOJCRKJSRL();
+		//LRYVPILWKS();
 		
-		if (QuienTomaElControl==SoyElJugador)
+		if (ESKTEXAVHU==TFSXFTYVGQ)
 		{
-			for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+			for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 			{
-				if (ArrayDelaPropiaSala[i].Desconectado==true )
+				if (XPBCVAGCDQ[i].XJARYUVBCB==true )
 				{
-					//socket.emit('Estoy listo', Habitacion,ArrayDelaPropiaSala[i].JugadorSala);
+					//socket.emit('BKEMJDLQQM', DFBVDPETGO,XPBCVAGCDQ[i].AURESXCGMK);
 					
 					
-						var ObjectSend=function( Habitacion,JugadorSala,idPartida,
-						IdMsg,ClientId,SalaID,Mensaje){
-						 this.Habitacion=Habitacion
-						 this.JugadorSala=JugadorSala
-						 this.idPartida=idPartida
+						var GXNRNMAAKW=function( DFBVDPETGO,AURESXCGMK,MQUGCIUQII,
+						OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+						 this.DFBVDPETGO=DFBVDPETGO
+						 this.AURESXCGMK=AURESXCGMK
+						 this.MQUGCIUQII=MQUGCIUQII
 											 
-						 this.IdMsg=IdMsg
-						 this.ClientId=ClientId
-						 this.SalaID=SalaID
-						 this.Mensaje=Mensaje
+						 this.OYJAHGADFQ=OYJAHGADFQ
+						 this.OJPXTRQDKS=OJPXTRQDKS
+						 this.LYHKNIMVEB=LYHKNIMVEB
+						 this.RHOLNWBOXR=RHOLNWBOXR
 						 
-						 this.Fecha=new Date(Date.now());
+						 this.EBAPPJFYSW=new Date(Date.now());
 					 }
-					var ArrayAccionesDesconexionesLocal=[];
-					ArrayAccionesDesconexionesLocal.splice(0,1000);
+					var QPHHGPRJAI=[];
+					QPHHGPRJAI.splice(0,1000);
 
 						
-					var IdMsg=Math.random()*100000;
-					var Objeto=new ObjectSend(Habitacion,ArrayDelaPropiaSala[i].JugadorSala,idPartida,
-						IdMsg,ArrayDelaPropiaSala[i].JugadorSala,Habitacion,'Estoy listo');
-					ArrayAccionesDesconexiones.push(Objeto);
-					ArrayAccionesDesconexionesLocal.push(Objeto);
+					var OYJAHGADFQ=Math.random()*100000;
+					var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,XPBCVAGCDQ[i].AURESXCGMK,MQUGCIUQII,
+						OYJAHGADFQ,XPBCVAGCDQ[i].AURESXCGMK,DFBVDPETGO,'BKEMJDLQQM');
+					NBEJWDVLLV.push(KCPHFPSPLQ);
+					QPHHGPRJAI.push(KCPHFPSPLQ);
 
 
-					socket.emit('Estoy listo',ArrayAccionesDesconexionesLocal[0],
-					 function(idMensaje)
+					socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
+					 function(XQLEOGMJYG)
 					 {			 
-						EliminarColaMensajes(idMensaje,'Estoy listo');
+						EXBCVLOIYJ(XQLEOGMJYG,'BKEMJDLQQM');
 					 }
 					);						
-					ArrayAccionesDesconexionesLocal.splice(0,1000);	
+					QPHHGPRJAI.splice(0,1000);	
 					
 				}
 			}
@@ -1945,39 +1945,39 @@ EnviarEstoyListo=function()
 	}
 }
 
-RecalculaDesconectados=function()
+LRYVPILWKS=function()
 {
 	var i;
-	var FuerzaComienzo;
+	var OLJVOASCTV;
 	var u;
-	var Encontrado;
-	var Desconectados=0;
+	var VEFCIYHBGC;
+	var UHYCGYFWYJ=0;
 	
-	//console.log("RecalculaDesconectados..");
-	for (i=0;i<=ArrayDelaPropiaSala.length-1;i++)
+	//console.log("LRYVPILWKS..");
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
-		if (ArrayDelaPropiaSala[i].Desconectado==true)
+		if (XPBCVAGCDQ[i].XJARYUVBCB==true)
 		{
 			
 			
-			Encontrado=false;
+			VEFCIYHBGC=false;
 			//console.log("Bucle For");
-			for ( var u=0;u<=ArrayJugadoresDesconectados.length-1;u++)
+			for ( var u=0;u<=KYDWXPGHVY.length-1;u++)
 			{
 					
-				//console.log("compara "+ ArrayJugadoresDesconectadosID[u]+" con "+ArrayDelaPropiaSala[i].JugadorSala);
-				if (ArrayJugadoresDesconectados[u].JugadorSala==ArrayDelaPropiaSala[i].JugadorSala)
+				//console.log("compara "+ ArrayJugadoresDesconectadosID[u]+" con "+XPBCVAGCDQ[i].AURESXCGMK);
+				if (KYDWXPGHVY[u].AURESXCGMK==XPBCVAGCDQ[i].AURESXCGMK)
 				{
-					Encontrado=true;
+					VEFCIYHBGC=true;
 				}
 			
 			}
 			
-			if (Encontrado==false)
+			if (VEFCIYHBGC==false)
 			{
 				
-				ArrayJugadoresDesconectados.push( new ObjetoDesconexion ( (i+1),ArrayDelaPropiaSala[i].JugadorSala ));
-				//ArrayJugadoresDesconectadosID.push(ArrayDelaPropiaSala[i].JugadorSala);
+				KYDWXPGHVY.push( new UVYJLLYCYD ( (i+1),XPBCVAGCDQ[i].AURESXCGMK ));
+				//ArrayJugadoresDesconectadosID.push(XPBCVAGCDQ[i].AURESXCGMK);
 			}
 
 			
@@ -1986,24 +1986,24 @@ RecalculaDesconectados=function()
 		else
 		{
 			//1.0.6
-			Encontrado=false;
+			VEFCIYHBGC=false;
 
-			for ( var u=0;u<=ArrayJugadoresDesconectados.length-1;u++)
+			for ( var u=0;u<=KYDWXPGHVY.length-1;u++)
 			{
 					
-				//console.log("compara "+ ArrayJugadoresDesconectadosID[u]+" con "+ArrayDelaPropiaSala[i].JugadorSala);
-				if (ArrayJugadoresDesconectados[u].JugadorSala==ArrayDelaPropiaSala[i].JugadorSala)
+				//console.log("compara "+ ArrayJugadoresDesconectadosID[u]+" con "+XPBCVAGCDQ[i].AURESXCGMK);
+				if (KYDWXPGHVY[u].AURESXCGMK==XPBCVAGCDQ[i].AURESXCGMK)
 				{
-					Encontrado=true;
+					VEFCIYHBGC=true;
 					break;
 				}
 			
 			}
 			
-			if (Encontrado==true)
+			if (VEFCIYHBGC==true)
 			{
 				
-				ArrayJugadoresDesconectados.splice(u,1);
+				KYDWXPGHVY.splice(u,1);
 			}		
 			//1.0.6
 			
@@ -2012,48 +2012,48 @@ RecalculaDesconectados=function()
 	}
 	
 }
-SacaTriunfo=function(){
+QYYXUWQADX=function(){
 
-	SemaforoRepartos.splice(0,100);
-	SemaforoTextoPuntuacion.splice(0,100);
+	DCOXIXEBRJ.splice(0,100);
+	JEHYBALODM.splice(0,100);
 	
-	var s = game_objeto.add.tween(Mazo[Mazo.length-1].cartilla);
-		s.to( {x:(( game_objeto.world.width-vHorizontalPorqueSi-((AnchoCarta*6))  - (vSeparacion*8) +  AnchoCarta)/2)+ (1 *(AnchoCarta+ vSeparacion))
-		,y:CentroIrreal,
+	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		s.to( {x:(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6))  - (YAJVUBPNNW*8) +  COIVBWRMCC)/2)+ (1 *(COIVBWRMCC+ YAJVUBPNNW))
+		,y:PXEBTYBHGS,
 		angle : 90
-		}, 500, EfectoTween1);		
+		}, 500, KYFMRVNHIQ);		
 		
-		s.onComplete.add(MoverMazo,this)		
+		s.onComplete.add(SESLFOEJHY,this)		
 		
 		s.start();
 		
 		
 		
-		CartaTriunfo.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,5,Mazo[Mazo.length-1].jugador));
-		MostrarAnverso(Mazo[Mazo.length-1].cartilla);
-		//CartaTriunfo[CartaTriunfo.length-1].cartilla.moveDown();
-		Grupo7.add(CartaTriunfo[CartaTriunfo.length-1].cartilla);
-		game_objeto.world.bringToTop(GrupoMazo);
-		game_objeto.world.bringToTop(GrupoD);
-		Triunfo=CartaTriunfo[CartaTriunfo.length-1].palo;
-		//Mazo[Mazo.length-1].cartilla.tint =  Phaser.Color.getColor(100,100,100);
-		Mazo.pop();
+		FBSDMRLVEL.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,5,FXGSEGRXKC[FXGSEGRXKC.length-1].jugador));
+		NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+		//FBSDMRLVEL[FBSDMRLVEL.length-1].TNFAGGMKXD.moveDown();
+		COTMMCVJWP.add(FBSDMRLVEL[FBSDMRLVEL.length-1].TNFAGGMKXD);
+		YMHIHSNADE.world.bringToTop(GSXGWASLIY);
+		YMHIHSNADE.world.bringToTop(RXKKPILDQT);
+		TGTQPBEQFR=FBSDMRLVEL[FBSDMRLVEL.length-1].SGCSHJVERI;
+		//FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.tint =  Phaser.Color.getColor(100,100,100);
+		FXGSEGRXKC.pop();
 		
-		if (ModoMultijugador==true)
+		if (EGPDVIEJEL==true)
 		{
-			ObjTurnoD.visible=true;
-			ObjTurnoR.visible=true;
-			ObjTurnoU.visible=true;
-			ObjTurnoL.visible=true;
+			DHJGJHGWCY.visible=true;
+			GJHWUYGCBN.visible=true;
+			UYIUYIUYIU.visible=true;
+			BNVUWCOWEC.visible=true;
 		}
-		//onSocketComenzadPartida();
+		//NUWTGXUUTS();
 		
-		//alert(vTurno);
+		//alert(DVNRTQIWGL);
 		
-		//CalculaControl();
+		//IOJCRKJSRL();
 		
-		//ContadorTurno();
-		//PreparaCaracteristicasMano();
+		//JWXRWCVLGC();
+		//JQSOOBSDDS();
 };
 
 function checkOverlap(spriteA, spriteB) {
@@ -2072,63 +2072,63 @@ function checkOverlap(spriteA, spriteB) {
 
 
 
-function Moviendo_Carta(sprite) {
+function WTNGDOQIWY(sprite) {
   var s;
   var i;
 //  log(false,"co");
-//log(false,"mide moviendo.. "+MazoD.length);
-	for (var i=MazoD.length-1;i>=0;i--){
-	   if (checkOverlap(sprite, MazoD[i].cartilla))
+//log(false,"mide moviendo.. "+AGKVNAGGLB.length);
+	for (var i=AGKVNAGGLB.length-1;i>=0;i--){
+	   if (checkOverlap(sprite, AGKVNAGGLB[i].TNFAGGMKXD))
 		{
-			MazoD[i].cartilla.tint=Phaser.Color.getColor(175,200,111);
+			AGKVNAGGLB[i].TNFAGGMKXD.tint=Phaser.Color.getColor(175,200,111);
 		}
 		else{
-			//if (vTurno==SoyElJugador){
-				//ColorManoPosibles(sprite);
-			MazoD[i].cartilla.tint=Phaser.Color.getColor(255,255,255);
-			//ColorManoPosibles();
+			//if (DVNRTQIWGL==TFSXFTYVGQ){
+				//IXLQLKYFRI(sprite);
+			AGKVNAGGLB[i].TNFAGGMKXD.tint=Phaser.Color.getColor(255,255,255);
+			//IXLQLKYFRI();
 			//}
 			//else
 			//{
-			//	MazoD[i].cartilla.tint=Phaser.Color.getColor(255,255,255);
+			//	AGKVNAGGLB[i].TNFAGGMKXD.tint=Phaser.Color.getColor(255,255,255);
 			//}			
 		}
-		//ColorManoPosibles();
+		//IXLQLKYFRI();
 		//sprite.tint=Phaser.Color.getColor(255,255,255);
 	}	
 }
 
-function Parar_Drag(sprite) {
+function IHSCVAKSDJ(sprite) {
   var s;
-  var Colision=false;	
+  var CYDMXACGSH=false;	
   var i;
   var k;
   var text;
 	//console.log("ESTADO CONEXION "+socket.socket.connected);
 	log(false,"KEYYYYYYYYYYYYYYYYYYYY "+sprite.name);
 	log(false,"elimina");
-	if (1==1) //(!tw1.isRunning && !tw2.isRunning && !tw3.isRunning && !tw4.isRunning && !twEsp7.isRunning && !twReu.isRunning && !twRec1.isRunning && !twRec2.isRunning && !twRec3.isRunning)
+	if (1==1) //(!PQUFIBKJJH.isRunning && !LJRRHVSVKD.isRunning && !LCYAHFBDTT.isRunning && !NEPGDYQDEI.isRunning && !HHBPAROITT.isRunning && !EWXBTDLSHW.isRunning && !BDEFDQUJJE.isRunning && !CKOUBGTDUF.isRunning && !JLFYUAKDIJ.isRunning)
 	{
 	
-		/*for (i=0;i<=MazoD.length-1;i++){
-			MazoD[i].cartilla.tint=Phaser.Color.getColor(255,255,255);
+		/*for (i=0;i<=AGKVNAGGLB.length-1;i++){
+			AGKVNAGGLB[i].TNFAGGMKXD.tint=Phaser.Color.getColor(255,255,255);
 		}*/
-		ColorManoPosibles();
+		IXLQLKYFRI();
 
-		for (i=0;i<=MazoD.length-1;i++){
-		   if (i!=MazoD.length-1){
-			   if (checkOverlap(sprite, MazoD[i].cartilla) && checkOverlap(sprite, MazoD[i+1].cartilla))
+		for (i=0;i<=AGKVNAGGLB.length-1;i++){
+		   if (i!=AGKVNAGGLB.length-1){
+			   if (checkOverlap(sprite, AGKVNAGGLB[i].TNFAGGMKXD) && checkOverlap(sprite, AGKVNAGGLB[i+1].TNFAGGMKXD))
 			   {
-				Trucaposicion(sprite,MazoD,MazoD[i+1].posicion-0.5)
-				Colision=true;			
+				VOHGWKGYGY(sprite,AGKVNAGGLB,AGKVNAGGLB[i+1].NPYBJSHIFL-0.5)
+				CYDMXACGSH=true;			
 				
 				break;
 			   }
 			   else
 			   {
-					if (checkOverlap(sprite, MazoD[i].cartilla)) {					
-						Trucaposicion(sprite,MazoD,MazoD[i].posicion-0.5)
-						Colision=true;					
+					if (checkOverlap(sprite, AGKVNAGGLB[i].TNFAGGMKXD)) {					
+						VOHGWKGYGY(sprite,AGKVNAGGLB,AGKVNAGGLB[i].NPYBJSHIFL-0.5)
+						CYDMXACGSH=true;					
 						break;
 					}
 					else{
@@ -2140,10 +2140,10 @@ function Parar_Drag(sprite) {
 			}
 			else
 			{
-				if (checkOverlap(sprite, MazoD[i].cartilla)) {		
+				if (checkOverlap(sprite, AGKVNAGGLB[i].TNFAGGMKXD)) {		
 					log(false,"La última");	
-					Trucaposicion(sprite,MazoD,MazoD[i].posicion+0.5)	
-					Colision=true;					
+					VOHGWKGYGY(sprite,AGKVNAGGLB,AGKVNAGGLB[i].NPYBJSHIFL+0.5)	
+					CYDMXACGSH=true;					
 					break;
 				}
 				else{
@@ -2154,131 +2154,131 @@ function Parar_Drag(sprite) {
 			}
 		}
 		
-		if (Colision==false){
-			for (i=0;i<=MazoD.length-1;i++){
-				if (sprite.name==MazoD[i].cartilla.name){
-					var posicionX=devuelveX("D",MazoD[i].posicion);
-					var posicionY=devuelveY("D",MazoD[i].posicion)
+		if (CYDMXACGSH==false){
+			for (i=0;i<=AGKVNAGGLB.length-1;i++){
+				if (sprite.name==AGKVNAGGLB[i].TNFAGGMKXD.name){
+					var posicionX=WIEVLYANFM("D",AGKVNAGGLB[i].NPYBJSHIFL);
+					var posicionY=FIGQBSJQGA("D",AGKVNAGGLB[i].NPYBJSHIFL)
 					break;
 				}
 			}
 			
-			//ape if(ValidaMovimientoJugadorSinActualizarRapido(vRonda,SoyElJugador)==true)
+			//ape if(ValidaMovimientoJugadorSinActualizarRapido(LUCRWXJMDR,TFSXFTYVGQ)==true)
 			//{
 				//como quiero que todo siga igual, pong este if, que me fastidiaba los turnos, y en el siguiente, la misma condición.
-				log(true, "LON "+MazoCentral.length)
-				log(true,"turnoOOO ANTES "+vTurno);
-				//QuienGanaManoResultado(SoyElJugador);
+				log(true, "LON "+VDKOVQXHON.length)
+				log(true,"turnoOOO ANTES "+DVNRTQIWGL);
+				//EVHFMHFMJU(TFSXFTYVGQ);
 				
-				log(true,"turnoOOO DESPUES "+vTurno);
+				log(true,"turnoOOO DESPUES "+DVNRTQIWGL);
 			//}
 			//else
 			//{
-			//	//console.log("ERRO: NO puedo mover desde parar drag "+vRonda+" "+SoyElJugador);
+			//	//console.log("ERRO: NO puedo mover desde parar drag "+LUCRWXJMDR+" "+TFSXFTYVGQ);
 			//}
 			
-			log(true,"turnoOOO "+vTurno);
-			//console.log("tw1: "+tw1.isRunning); 
-			//console.log("tw2: "+tw2.isRunning); 
-			//console.log("tw3: "+tw3.isRunning); 
-			//console.log("tw4: "+tw4.isRunning); 
-			//console.log("twEsp7: "+twEsp7.isRunning); 
-			//console.log("twReu: "+twReu.isRunning); 
-			//console.log("twRec1: "+twRec1.isRunning); 
-			//console.log("twRec2: "+twRec2.isRunning); 
-			//console.log("twRec3: "+twRec3.isRunning); 
-			//console.log("Marcadores: "+MarcadorNuestro+" "+MarcadorRival+" "+PuntosGanar); 
-			for (var k=0;k<=SemaforoRondas.length-1;k++){
-				//console.log("SEM: "+SemaforoRondas[k].Ronda+" "+SemaforoRondas[k].Jugador);
+			log(true,"turnoOOO "+DVNRTQIWGL);
+			//console.log("PQUFIBKJJH: "+PQUFIBKJJH.isRunning); 
+			//console.log("LJRRHVSVKD: "+LJRRHVSVKD.isRunning); 
+			//console.log("LCYAHFBDTT: "+LCYAHFBDTT.isRunning); 
+			//console.log("NEPGDYQDEI: "+NEPGDYQDEI.isRunning); 
+			//console.log("HHBPAROITT: "+HHBPAROITT.isRunning); 
+			//console.log("EWXBTDLSHW: "+EWXBTDLSHW.isRunning); 
+			//console.log("BDEFDQUJJE: "+BDEFDQUJJE.isRunning); 
+			//console.log("CKOUBGTDUF: "+CKOUBGTDUF.isRunning); 
+			//console.log("JLFYUAKDIJ: "+JLFYUAKDIJ.isRunning); 
+			//console.log("Marcadores: "+UHHXSNXXJK+" "+PXGXKDDNFK+" "+JLVDFTPUNI); 
+			for (var k=0;k<=KTBOJTXFEU.length-1;k++){
+				//console.log("SEM: "+KTBOJTXFEU[k].AGTXFNIKQD+" "+KTBOJTXFEU[k].SSUNXNEEHN);
 			}	
 
-			//console.log("Partida: "+PartidaComenzada);
-			//console.log("vTurno: "+vTurno);
-			//console.log("Soy: "+SoyElJugador);
-			//console.log("Son Vueltas: "+SonVueltas);
-			//console.log("Marcadores: "+MarcadorNuestro+" - "+MarcadorRival);
+			//console.log("KXAWTTIEGG: "+MYQBNBVHKU);
+			//console.log("DVNRTQIWGL: "+DVNRTQIWGL);
+			//console.log("Soy: "+TFSXFTYVGQ);
+			//console.log("Son Vueltas: "+EVAILWGGKX);
+			//console.log("Marcadores: "+UHHXSNXXJK+" - "+PXGXKDDNFK);
 			
-			if ( ( Math.abs(sprite.x-posicionX)<=MazoD[MazoD.length-1].cartilla.width*1.5 &&
-				Math.abs(sprite.y-posicionY)<=MazoD[MazoD.length-1].cartilla.height*1.5 && vTurno==SoyElJugador)	&& 
-				(!tw1.isRunning && !tw2.isRunning && !tw3.isRunning && !tw4.isRunning && !twEsp7.isRunning && !twReu.isRunning && !twRec1.isRunning && !twRec2.isRunning && !twRec3.isRunning) &&
-				PartidaComenzada==true 
-				&&  ( (MarcadorNuestro<PuntosGanar && MarcadorRival<PuntosGanar)|| SonVueltas==false )
+			if ( ( Math.abs(sprite.x-posicionX)<=AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD.width*1.5 &&
+				Math.abs(sprite.y-posicionY)<=AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD.height*1.5 && DVNRTQIWGL==TFSXFTYVGQ)	&& 
+				(!PQUFIBKJJH.isRunning && !LJRRHVSVKD.isRunning && !LCYAHFBDTT.isRunning && !NEPGDYQDEI.isRunning && !HHBPAROITT.isRunning && !EWXBTDLSHW.isRunning && !BDEFDQUJJE.isRunning && !CKOUBGTDUF.isRunning && !JLFYUAKDIJ.isRunning) &&
+				MYQBNBVHKU==true 
+				&&  ( (UHHXSNXXJK<JLVDFTPUNI && PXGXKDDNFK<JLVDFTPUNI)|| EVAILWGGKX==false )
 				)
 
-				//&& ValidaMovimientoJugadorSinActualizarRapido(vRonda,SoyElJugador)==true 
+				//&& ValidaMovimientoJugadorSinActualizarRapido(LUCRWXJMDR,TFSXFTYVGQ)==true 
 			{
 
-				if (ValidadorReglas(MazoD[i],SoyElJugador)==true)
+				if (XPSRYGDPNI(AGKVNAGGLB[i],TFSXFTYVGQ)==true)
 				{
 					//New
-					//ape SemaforoRondasRapido.push(new ObjetoJugadoresRonda(vRonda,SoyElJugador) );
+					//ape XYXCEMMRDC.push(new NQMQGXXHIL(LUCRWXJMDR,TFSXFTYVGQ) );
 					
-					if (ValidaMovimientoJugadorSinActualizar(vRonda,SoyElJugador)==true)
+					if (ValidaMovimientoJugadorSinActualizar(LUCRWXJMDR,TFSXFTYVGQ)==true)
 					{
-						timer.stop(); //Mucho miedo 29/04/2017
-						SemaforoRondas.push(new ObjetoJugadoresRonda(vRonda,SoyElJugador) );
-						//console.log("BLOQUEO DESDE Parar_Drag "+SoyElJugador+" "+vRonda);
+						TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
+						KTBOJTXFEU.push(new NQMQGXXHIL(LUCRWXJMDR,TFSXFTYVGQ) );
+						//console.log("BLOQUEO DESDE IHSCVAKSDJ "+TFSXFTYVGQ+" "+LUCRWXJMDR);
 						
 						//1.0.4
 						
-						OcultarBotones();
-						if (ModoMultijugador==false)
+						GLFVIKHXMD();
+						if (EGPDVIEJEL==false)
 						{
-							MazoCentral.push(new Carta(MazoD[i].palo,MazoD[i].idCarta,MazoD[i].valor,MazoD[i].cartilla,null,SoyElJugador,null,null));//no hace falta la Fecha hora del server
+							VDKOVQXHON.push(new TVYNYTCQYW(AGKVNAGGLB[i].SGCSHJVERI,AGKVNAGGLB[i].UUOPKETETA,AGKVNAGGLB[i].HVCFEWNDRF,AGKVNAGGLB[i].TNFAGGMKXD,null,TFSXFTYVGQ,null,null));//no hace falta la EBAPPJFYSW hora del server
 							
-							MueveAlTablero(sprite,"D",vRonda,SoyElJugador);
-							MazoD.splice(i,1);	
-							ReubicarCartas(MazoD,"D");
+							QTIPILDEPH(sprite,"D",LUCRWXJMDR,TFSXFTYVGQ);
+							AGKVNAGGLB.splice(i,1);	
+							OROGRNBISW(AGKVNAGGLB,"D");
 						}
 						else
 						{
 							
 							
-							/*var ObjectSend=function( Habitacion,SoyElJugador,Cartilla,Turno, RondaParam, 
-								IdMsg,ClientId,SalaID,Mensaje){
-								 this.Habitacion=Habitacion
-								 this.SoyElJugador=SoyElJugador
-								 this.Cartilla=Cartilla
+							/*var GXNRNMAAKW=function( DFBVDPETGO,TFSXFTYVGQ,AAJNQWXHMY,Turno, TKWCTNGROU, 
+								OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+								 this.DFBVDPETGO=DFBVDPETGO
+								 this.TFSXFTYVGQ=TFSXFTYVGQ
+								 this.AAJNQWXHMY=AAJNQWXHMY
 								 this.Turno=Turno
-								 this.Ronda=RondaParam
+								 this.AGTXFNIKQD=TKWCTNGROU
 																	 
-								 this.IdMsg=IdMsg
-								 this.ClientId=ClientId
-								 this.SalaID=SalaID
-								 this.Mensaje=Mensaje
+								 this.OYJAHGADFQ=OYJAHGADFQ
+								 this.OJPXTRQDKS=OJPXTRQDKS
+								 this.LYHKNIMVEB=LYHKNIMVEB
+								 this.RHOLNWBOXR=RHOLNWBOXR
 								 
-								 this.Fecha=new Date(Date.now());
+								 this.EBAPPJFYSW=new Date(Date.now());
 							 }
-							var ArrayAccionesDesconexionesLocal=[];
-							ArrayAccionesDesconexionesLocal.splice(0,1000);
+							var QPHHGPRJAI=[];
+							QPHHGPRJAI.splice(0,1000);
 								
 								
-							var ArrayAccionesDesconexionesLocal=[];
-							ArrayAccionesDesconexionesLocal.splice(0,1000);
+							var QPHHGPRJAI=[];
+							QPHHGPRJAI.splice(0,1000);
 		 
 								
-							var IdMsg=Math.random()*100000;
-							var Objeto=new ObjectSend(Habitacion,SoyElJugador,MazoD[i].cartilla.name,SoyElJugador, vRonda,
-								IdMsg,ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala,Habitacion,'enviar carta centro solo yo');
-							ArrayAccionesDesconexiones.push(Objeto);
-							ArrayAccionesDesconexionesLocal.push(Objeto);
+							var OYJAHGADFQ=Math.random()*100000;
+							var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,TFSXFTYVGQ,AGKVNAGGLB[i].TNFAGGMKXD.name,TFSXFTYVGQ, LUCRWXJMDR,
+								OYJAHGADFQ,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,DFBVDPETGO,'RYUDYPPOXW solo yo');
+							NBEJWDVLLV.push(KCPHFPSPLQ);
+							QPHHGPRJAI.push(KCPHFPSPLQ);
 		
 							if (socket!=undefined)
 							{
-								socket.emit('enviar carta centro solo yo',ArrayAccionesDesconexionesLocal[0],
-								 function(idMensaje)
+								socket.emit('RYUDYPPOXW solo yo',QPHHGPRJAI[0],
+								 function(XQLEOGMJYG)
 								 {			 
-									EliminarColaMensajes(idMensaje,'enviar carta centro solo yo');
+									EXBCVLOIYJ(XQLEOGMJYG,'RYUDYPPOXW solo yo');
 								 }
 								);						
-								ArrayAccionesDesconexionesLocal.splice(0,1000);	
+								QPHHGPRJAI.splice(0,1000);	
 							}*/
 						
 						}
 						
 						
 						
-						//console.log("Acabo de introducir "+MazoCentral[MazoCentral.length-1].palo+" "+MazoCentral[MazoCentral.length-1].valor);
+						//console.log("Acabo de introducir "+VDKOVQXHON[VDKOVQXHON.length-1].SGCSHJVERI+" "+VDKOVQXHON[VDKOVQXHON.length-1].HVCFEWNDRF);
 						
 						
 						
@@ -2287,62 +2287,62 @@ function Parar_Drag(sprite) {
 						
 								
 						
-						if (ModoMultijugador==true)
+						if (EGPDVIEJEL==true)
 						{
 							
 							
 							/////////////
 							vNoEsta=false; //1.0.8
 							
-							var Hora=Date.now();
-							var ObjectSend=function( Habitacion,SoyElJugador,Cartilla,Turno, RondaParam, SonVueltas,Partida,JugadorFull,JugadorSala,Nombre,
-								IdMsg,ClientId,SalaID,Mensaje){
-								 this.Habitacion=Habitacion
-								 this.SoyElJugador=SoyElJugador
-								 this.Cartilla=Cartilla
+							var QKVJASWVEO=Date.now();
+							var GXNRNMAAKW=function( DFBVDPETGO,TFSXFTYVGQ,AAJNQWXHMY,Turno, TKWCTNGROU, EVAILWGGKX,KXAWTTIEGG,OBTBPOULAV,AURESXCGMK,WWKVHIMWYD,
+								OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+								 this.DFBVDPETGO=DFBVDPETGO
+								 this.TFSXFTYVGQ=TFSXFTYVGQ
+								 this.AAJNQWXHMY=AAJNQWXHMY
 								 this.Turno=Turno
-								 this.Ronda=RondaParam
-								 this.SonVueltas=SonVueltas
-								 this.Partida=Partida
-								 this.JugadorFull=JugadorFull
-								 this.JugadorSala=JugadorSala
-								 this.Nombre=Nombre
+								 this.AGTXFNIKQD=TKWCTNGROU
+								 this.EVAILWGGKX=EVAILWGGKX
+								 this.KXAWTTIEGG=KXAWTTIEGG
+								 this.OBTBPOULAV=OBTBPOULAV
+								 this.AURESXCGMK=AURESXCGMK
+								 this.WWKVHIMWYD=WWKVHIMWYD
 								 
-								 this.IdMsg=IdMsg
-								 this.ClientId=ClientId
-								 this.SalaID=SalaID
-								 this.Mensaje=Mensaje
+								 this.OYJAHGADFQ=OYJAHGADFQ
+								 this.OJPXTRQDKS=OJPXTRQDKS
+								 this.LYHKNIMVEB=LYHKNIMVEB
+								 this.RHOLNWBOXR=RHOLNWBOXR
 								 
-								 this.Fecha=new Date(Date.now());
+								 this.EBAPPJFYSW=new Date(Date.now());
 							 }
-							var ArrayAccionesDesconexionesLocal=[];
-							ArrayAccionesDesconexionesLocal.splice(0,1000);
+							var QPHHGPRJAI=[];
+							QPHHGPRJAI.splice(0,1000);
 		 
 								
-							var IdMsg=Math.random()*100000;
-							var Objeto=new ObjectSend(Habitacion,SoyElJugador,MazoD[i].cartilla.name,vTurno, vRonda, SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),
-								ArrayDelaPropiaSala[SoyElJugador-1].JugadorFull,ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala,
-								ArrayDelaPropiaSala[SoyElJugador-1].Nombre,
-								IdMsg,ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala,Habitacion,'enviar carta centro');
-							ArrayAccionesDesconexiones.push(Objeto);
-							ArrayAccionesDesconexionesLocal.push(Objeto);
+							var OYJAHGADFQ=Math.random()*100000;
+							var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,TFSXFTYVGQ,AGKVNAGGLB[i].TNFAGGMKXD.name,DVNRTQIWGL, LUCRWXJMDR, EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),
+								XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,
+								XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD,
+								OYJAHGADFQ,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,DFBVDPETGO,'RYUDYPPOXW');
+							NBEJWDVLLV.push(KCPHFPSPLQ);
+							QPHHGPRJAI.push(KCPHFPSPLQ);
 
 
-							socket.emit('enviar carta centro',ArrayAccionesDesconexionesLocal[0],
-							 function(idMensaje)
+							socket.emit('RYUDYPPOXW',QPHHGPRJAI[0],
+							 function(XQLEOGMJYG)
 							 {			 
-								EliminarColaMensajes(idMensaje,'enviar carta centro');
-								//ReubicarCartas(MazoD,"D");
-									/*//console.log("Borrar: Hola"+idMensaje+" - "+CartaMovida);
-									//console.log("Borrar: Lon "+MazoD.length);
-									for (var j=0;j<=MazoD.length-1;j++)
+								EXBCVLOIYJ(XQLEOGMJYG,'RYUDYPPOXW');
+								//OROGRNBISW(AGKVNAGGLB,"D");
+									/*//console.log("Borrar: Hola"+XQLEOGMJYG+" - "+CartaMovida);
+									//console.log("Borrar: Lon "+AGKVNAGGLB.length);
+									for (var j=0;j<=AGKVNAGGLB.length-1;j++)
 									{
-										//console.log("Borrar Recorro "+MazoD[j].name);
-										if (MazoD[j].name==CartaMovida)
+										//console.log("Borrar Recorro "+AGKVNAGGLB[j].name);
+										if (AGKVNAGGLB[j].name==CartaMovida)
 										{
 											//console.log("Borrar: Elimino "+CartaMovida)
-											MazoD.splice(j,1);	
-											ReubicarCartas(MazoD,"D");
+											AGKVNAGGLB.splice(j,1);	
+											OROGRNBISW(AGKVNAGGLB,"D");
 											break;
 										}
 									}*/
@@ -2350,7 +2350,7 @@ function Parar_Drag(sprite) {
 
 							 }
 							);						
-							ArrayAccionesDesconexionesLocal.splice(0,1000);	
+							QPHHGPRJAI.splice(0,1000);	
   
 							
 							/////////////							
@@ -2358,16 +2358,16 @@ function Parar_Drag(sprite) {
 							
 							
 							
-							//socket.emit('enviar carta centro', Habitacion,SoyElJugador,MazoD[i].cartilla.name,vTurno, vRonda, SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[SoyElJugador-1].JugadorFull,ArrayDelaPropiaSala[SoyElJugador-1].JugadorSala,ArrayDelaPropiaSala[SoyElJugador-1].Nombre) ;
-							if (MazoD[i].palo==Triunfo)
+							//socket.emit('RYUDYPPOXW', DFBVDPETGO,TFSXFTYVGQ,AGKVNAGGLB[i].TNFAGGMKXD.name,DVNRTQIWGL, LUCRWXJMDR, EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD) ;
+							if (AGKVNAGGLB[i].SGCSHJVERI==TGTQPBEQFR)
 							{
-								if (MazoD[i].valor==1)
+								if (AGKVNAGGLB[i].HVCFEWNDRF==1)
 								{
-									GrabarResultado(SoyElJugador,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,false,false,true,false);
+									WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,true,false);
 								}
-								if (MazoD[i].valor==3)
+								if (AGKVNAGGLB[i].HVCFEWNDRF==3)
 								{
-									GrabarResultado(SoyElJugador,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,false,false,false,true);
+									WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,false,true);
 								}
 							}
 						}
@@ -2384,16 +2384,16 @@ function Parar_Drag(sprite) {
 			else
 			{
 				//alert("reubica");
-				ReubicarCartas(MazoD,"D");
-				if (vTurno!=SoyElJugador  && (Math.abs(sprite.x-posicionX)<=MazoD[MazoD.length-1].cartilla.width &&
-				Math.abs(sprite.y-posicionY)<=MazoD[MazoD.length-1].cartilla.height)  ){
+				OROGRNBISW(AGKVNAGGLB,"D");
+				if (DVNRTQIWGL!=TFSXFTYVGQ  && (Math.abs(sprite.x-posicionX)<=AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD.width &&
+				Math.abs(sprite.y-posicionY)<=AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD.height)  ){
 		
 					
 						//  The Text is positioned at 0, 100
-						text = game_objeto.add.text(0, 0, textoturno());
+						text = YMHIHSNADE.add.text(0, 0, SVLGSBPKGJ());
 					
-						text.x=game_objeto.world.centerX;
-						text.y=game_objeto.world.centerY+30
+						text.x=YMHIHSNADE.world.centerX;
+						text.y=YMHIHSNADE.world.centerY+30
 						
 						text.anchor.set(0.5);
 						text.align = 'center';
@@ -2411,8 +2411,8 @@ function Parar_Drag(sprite) {
 
 						
 						//  It won't start automatically, allowing you to hook it to button events and the like.
-						var timertextoturno = game_objeto.time.create(false);
-						timertextoturno.add(1500, EliminaTextoPantalla, this,text);
+						var timertextoturno = YMHIHSNADE.time.create(false);
+						timertextoturno.add(1500, FYYEWMEHBU, this,text);
 						timertextoturno.start();
 						
 
@@ -2425,103 +2425,103 @@ function Parar_Drag(sprite) {
 		}
 		else
 		{
-			ReubicarCartas(MazoD,"D");
+			OROGRNBISW(AGKVNAGGLB,"D");
 		}	
 	}
 	
 	
 }
 
-RobarCartas1=function(RondaParam,turnoParam){
-	var LetraMazo;
-	var spriteRobar;
-	var Mano;
+CGCMEMLMAG=function(TKWCTNGROU,LDCCGSIBKW){
+	var UBWRXKMTQN;
+	var DWTJCXXKNS;
+	var XACEBCSJAB;
 	
-	//if (MarcadorNuestro<PuntosGanar && MarcadorRival<PuntosGanar)
+	//if (UHHXSNXXJK<JLVDFTPUNI && PXGXKDDNFK<JLVDFTPUNI)
 	//{
 		
-		var turnoFicticio=turnoParam;
+		var VJGLUDIXWN=LDCCGSIBKW;
 		
 		log(false,"Intenta robar..");
-		if (Mazo.length>0){
+		if (FXGSEGRXKC.length>0){
 		
-		spriteRobar=Mazo[Mazo.length-1].cartilla
-		LetraMazo=DevuelveUbicacionCarta(turnoFicticio);
+		DWTJCXXKNS=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+		UBWRXKMTQN=HHOPUSIABJ(VJGLUDIXWN);
 		
-		if (LetraMazo=="U"){
-			var Mano=MazoU;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle;
-			MostrarReverso(Mazo[Mazo.length-1].cartilla);
-			GrupoU.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="U"){
+			var XACEBCSJAB=TWJONOKGHC;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle;
+			XNFDNBQFUA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			PBHYCULPGK.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="D"){
-			var Mano=MazoD;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle;
-			MostrarAnverso(Mazo[Mazo.length-1].cartilla);
-			GrupoD.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="D"){
+			var XACEBCSJAB=AGKVNAGGLB;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle;
+			NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			RXKKPILDQT.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="L"){
-			var Mano=MazoL;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle+90;
-			MostrarReverso(Mazo[Mazo.length-1].cartilla);
-			GrupoL.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="L"){
+			var XACEBCSJAB=KNVKGHHTYC;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle+90;
+			XNFDNBQFUA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			SYXHGDSJDY.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="R"){
-			var Mano=MazoR;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle+270;
-			MostrarReverso(Mazo[Mazo.length-1].cartilla);
-			GrupoR.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="R"){
+			var XACEBCSJAB=CBCNHFGWLU;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle+270;
+			XNFDNBQFUA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			BDRJVGFWQH.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}	
 		
-		log(false,"Tamaño de la mano "+Mano.length);
+		log(false,"Tamaño de la mano "+XACEBCSJAB.length);
 		
 			
 			
-			Mano.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,5,Mazo[Mazo.length-1].jugador));
-			ReproducirSonido('_Reparto');
+			XACEBCSJAB.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,5,FXGSEGRXKC[FXGSEGRXKC.length-1].jugador));
+			EABXADHEVT('WWYKUMYJBJ');
 			
 			
-			if (LetraMazo=="D"){
-				PreparaCaracteristicasMano();
+			if (UBWRXKMTQN=="D"){
+				JQSOOBSDDS();
 			}
 			
-			Mazo.pop();
+			FXGSEGRXKC.pop();
 			
 			
 			
-			var posX=devuelveX(LetraMazo,99);
-			log(false,"X de "+LetraMazo+" "+posX);
-			var posY=devuelveY(LetraMazo,99);
+			var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,99);
+			log(false,"X de "+UBWRXKMTQN+" "+NOFEDXHMLS);
+			var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,99);
 				
-			//if (LetraMazoReubicar=="L"){
-					//DesHabilitarClick(Mano[Mano.length-1].cartilla);
-			if (Mazo.length>0){
-				tw1 = game_objeto.add.tween(Mano[Mano.length-1].cartilla);
-						tw1.to( {x:posX
-						,y:posY
-						,angle:angleCarta
+			//if (NCKMGYLDRO=="L"){
+					//VRLYJAAHUE(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+			if (FXGSEGRXKC.length>0){
+				PQUFIBKJJH = YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+						PQUFIBKJJH.to( {x:NOFEDXHMLS
+						,y:GHTWROCHVV
+						,angle:KKQWKUGGSI
 						}
-						, vVelocidadRobar, EfectoTween1);
-						tw1.onComplete.add(//RobarCartas2,this)
+						, BQUYYUASDK, KYFMRVNHIQ);
+						PQUFIBKJJH.onComplete.add(//BHRQQCWPGM,this)
 							function () {
-								ReubicarCartas(Mano,LetraMazo);
-								RobarCartas2(RondaParam,turnoParam); //Truco para poder pasar por parámetro
+								OROGRNBISW(XACEBCSJAB,UBWRXKMTQN);
+								BHRQQCWPGM(TKWCTNGROU,LDCCGSIBKW); //Truco para poder pasar por parámetro
 							}
 						);
-						if (LetraMazo=="D")
+						if (UBWRXKMTQN=="D")
 						{
-							game_objeto.add.tween(Mano[Mano.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
+							YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 						}
-						tw1.start();
+						PQUFIBKJJH.start();
 			}
 			else
 			{
 				log(false,"No quedan cartas");
-				log(false,"Mazo grr: "+Mazo[0].valor+" "+Mazo[0].palo);
+				log(false,"FXGSEGRXKC grr: "+FXGSEGRXKC[0].HVCFEWNDRF+" "+FXGSEGRXKC[0].SGCSHJVERI);
 			}
 			
-			if (CartaTriunfo.length>0){
-				CartaTriunfo[CartaTriunfo.length-1].cartilla.moveDown();	
+			if (FBSDMRLVEL.length>0){
+				FBSDMRLVEL[FBSDMRLVEL.length-1].TNFAGGMKXD.moveDown();	
 			}
 		}
 	//}
@@ -2529,185 +2529,185 @@ RobarCartas1=function(RondaParam,turnoParam){
 
 
 
-RobarCartas2=function(RondaParam,turnoParam){
-	var LetraMazo;
-	var spriteRobar;
-	var Mano;
+BHRQQCWPGM=function(TKWCTNGROU,LDCCGSIBKW){
+	var UBWRXKMTQN;
+	var DWTJCXXKNS;
+	var XACEBCSJAB;
 	
-	//if (MarcadorNuestro<PuntosGanar && MarcadorRival<PuntosGanar)
+	//if (UHHXSNXXJK<JLVDFTPUNI && PXGXKDDNFK<JLVDFTPUNI)
 	//{
 	
-		var turnoFicticio=turnoParam+1;
+		var VJGLUDIXWN=LDCCGSIBKW+1;
 		
-		if (Mazo.length>0){
+		if (FXGSEGRXKC.length>0){
 		
-		/*log(false,"vTurno: "+vTurno);
-		log(false,"vTurno Ficticio: "+turnoFicticio);*/
-		if (turnoFicticio>4){
-			turnoFicticio=turnoFicticio-4;
+		/*log(false,"DVNRTQIWGL: "+DVNRTQIWGL);
+		log(false,"DVNRTQIWGL Ficticio: "+VJGLUDIXWN);*/
+		if (VJGLUDIXWN>4){
+			VJGLUDIXWN=VJGLUDIXWN-4;
 		}
 		
-		//log(false,"vTurno Ficticio Modificicado: "+turnoFicticio);
-		spriteRobar=Mazo[Mazo.length-1].cartilla
+		//log(false,"DVNRTQIWGL Ficticio Modificicado: "+VJGLUDIXWN);
+		DWTJCXXKNS=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
 		
-		//log(false,"Robada 2 "+Mazo[Mazo.length-1].valor+" de "+Mazo[Mazo.length-1].palo);
+		//log(false,"Robada 2 "+FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF+" de "+FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI);
 		
 		
-		LetraMazo=DevuelveUbicacionCarta(turnoFicticio);
-		//log(false,"Letra: "+LetraMazo);
+		UBWRXKMTQN=HHOPUSIABJ(VJGLUDIXWN);
+		//log(false,"STLEOJDWSU: "+UBWRXKMTQN);
 		
-		if (LetraMazo=="U"){
-			var Mano=MazoU;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle;
-			MostrarReverso(Mazo[Mazo.length-1].cartilla);
-			GrupoU.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="U"){
+			var XACEBCSJAB=TWJONOKGHC;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle;
+			XNFDNBQFUA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			PBHYCULPGK.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="D"){
-			var Mano=MazoD;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle;
-			MostrarAnverso(Mazo[Mazo.length-1].cartilla);
-			GrupoD.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="D"){
+			var XACEBCSJAB=AGKVNAGGLB;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle;
+			NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			RXKKPILDQT.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="L"){
-			var Mano=MazoL;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle+90;
-			MostrarReverso(Mazo[Mazo.length-1].cartilla);
-			GrupoL.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="L"){
+			var XACEBCSJAB=KNVKGHHTYC;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle+90;
+			XNFDNBQFUA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			SYXHGDSJDY.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="R"){
-			var Mano=MazoR;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle+270;
-			MostrarReverso(Mazo[Mazo.length-1].cartilla);
-			GrupoR.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="R"){
+			var XACEBCSJAB=CBCNHFGWLU;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle+270;
+			XNFDNBQFUA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			BDRJVGFWQH.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}	
 		
-		//if (Mano.length<6){
-			Mano.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,5,Mazo[Mazo.length-1].jugador));
-			ReproducirSonido('_Reparto');
+		//if (XACEBCSJAB.length<6){
+			XACEBCSJAB.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,5,FXGSEGRXKC[FXGSEGRXKC.length-1].jugador));
+			EABXADHEVT('WWYKUMYJBJ');
 			
-			if (LetraMazo=="D"){
-				PreparaCaracteristicasMano();
+			if (UBWRXKMTQN=="D"){
+				JQSOOBSDDS();
 			}
 			
-			Mazo.pop();
+			FXGSEGRXKC.pop();
 			
 			
 			
-			var posX=devuelveX(LetraMazo,99);
-			var posY=devuelveY(LetraMazo,99);
-			log(false,"X de "+LetraMazo+" "+posX);
+			var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,99);
+			var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,99);
+			log(false,"X de "+UBWRXKMTQN+" "+NOFEDXHMLS);
 				
-			if (Mazo.length>0){
-					//DesHabilitarClick(Mano[Mano.length-1].cartilla);
-					tw1 = game_objeto.add.tween(Mano[Mano.length-1].cartilla);
-						tw1.to( {x:posX
-						,y:posY
-						,angle:angleCarta
+			if (FXGSEGRXKC.length>0){
+					//VRLYJAAHUE(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+					PQUFIBKJJH = YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+						PQUFIBKJJH.to( {x:NOFEDXHMLS
+						,y:GHTWROCHVV
+						,angle:KKQWKUGGSI
 						}
-						, vVelocidadRobar, EfectoTween1);
-						tw1.onComplete.add(//RobarCartas3,this)
+						, BQUYYUASDK, KYFMRVNHIQ);
+						PQUFIBKJJH.onComplete.add(//NDYHJQQAUL,this)
 							function () {
-								ReubicarCartas(Mano,LetraMazo);
-								RobarCartas3(RondaParam,turnoParam); //Truco para poder pasar por parámetro
+								OROGRNBISW(XACEBCSJAB,UBWRXKMTQN);
+								NDYHJQQAUL(TKWCTNGROU,LDCCGSIBKW); //Truco para poder pasar por parámetro
 							}
 						);
-						if (LetraMazo=="D")
+						if (UBWRXKMTQN=="D")
 						{
-							game_objeto.add.tween(Mano[Mano.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
+							YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 						}
-						tw1.start();
+						PQUFIBKJJH.start();
 			}
-			if (CartaTriunfo.length>0){
-				CartaTriunfo[CartaTriunfo.length-1].cartilla.moveDown();	
+			if (FBSDMRLVEL.length>0){
+				FBSDMRLVEL[FBSDMRLVEL.length-1].TNFAGGMKXD.moveDown();	
 			}
 		}
 	//}
 }
 
 
-RobarCartas3=function(RondaParam,turnoParam){
-	var LetraMazo;
-	var spriteRobar;
-	var Mano;
+NDYHJQQAUL=function(TKWCTNGROU,LDCCGSIBKW){
+	var UBWRXKMTQN;
+	var DWTJCXXKNS;
+	var XACEBCSJAB;
 	
-	//if (MarcadorNuestro<PuntosGanar && MarcadorRival<PuntosGanar)
+	//if (UHHXSNXXJK<JLVDFTPUNI && PXGXKDDNFK<JLVDFTPUNI)
 	//{
-		var turnoFicticio=turnoParam+2;
-		if (turnoFicticio>4){
-			turnoFicticio=turnoFicticio-4;
+		var VJGLUDIXWN=LDCCGSIBKW+2;
+		if (VJGLUDIXWN>4){
+			VJGLUDIXWN=VJGLUDIXWN-4;
 		}
 		
-		if (Mazo.length>0){
+		if (FXGSEGRXKC.length>0){
 		
-		spriteRobar=Mazo[Mazo.length-1].cartilla
-		//log(false,"Robada 3 "+Mazo[Mazo.length-1].valor+" de "+Mazo[Mazo.length-1].palo);
+		DWTJCXXKNS=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+		//log(false,"Robada 3 "+FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF+" de "+FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI);
 		
-		LetraMazo=DevuelveUbicacionCarta(turnoFicticio);
+		UBWRXKMTQN=HHOPUSIABJ(VJGLUDIXWN);
 		
-		if (LetraMazo=="U"){
-			var Mano=MazoU;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle;
-			MostrarReverso(Mazo[Mazo.length-1].cartilla);
-			GrupoU.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="U"){
+			var XACEBCSJAB=TWJONOKGHC;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle;
+			XNFDNBQFUA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			PBHYCULPGK.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="D"){
-			var Mano=MazoD;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle;
-			MostrarAnverso(Mazo[Mazo.length-1].cartilla);
-			GrupoD.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="D"){
+			var XACEBCSJAB=AGKVNAGGLB;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle;
+			NAYBJTKIKA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			RXKKPILDQT.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="L"){
-			var Mano=MazoL;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle+90;
-			MostrarReverso(Mazo[Mazo.length-1].cartilla);
-			GrupoL.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="L"){
+			var XACEBCSJAB=KNVKGHHTYC;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle+90;
+			XNFDNBQFUA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			SYXHGDSJDY.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="R"){
-			var Mano=MazoR;
-			var angleCarta=Mazo[Mazo.length-1].cartilla.angle+270;
-			MostrarReverso(Mazo[Mazo.length-1].cartilla);
-			GrupoR.add(Mazo[Mazo.length-1].cartilla);
+		if (UBWRXKMTQN=="R"){
+			var XACEBCSJAB=CBCNHFGWLU;
+			var KKQWKUGGSI=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle+270;
+			XNFDNBQFUA(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+			BDRJVGFWQH.add(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		}	
 		
-		//if (Mano.length<6){
-			Mano.push(new Carta(Mazo[Mazo.length-1].palo,Mazo[Mazo.length-1].idCarta,Mazo[Mazo.length-1].valor,Mazo[Mazo.length-1].cartilla,5,Mazo[Mazo.length-1].jugador));
-			ReproducirSonido('_Reparto');
+		//if (XACEBCSJAB.length<6){
+			XACEBCSJAB.push(new TVYNYTCQYW(FXGSEGRXKC[FXGSEGRXKC.length-1].SGCSHJVERI,FXGSEGRXKC[FXGSEGRXKC.length-1].UUOPKETETA,FXGSEGRXKC[FXGSEGRXKC.length-1].HVCFEWNDRF,FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD,5,FXGSEGRXKC[FXGSEGRXKC.length-1].jugador));
+			EABXADHEVT('WWYKUMYJBJ');
 			
-			if (LetraMazo=="D"){
-				PreparaCaracteristicasMano();
+			if (UBWRXKMTQN=="D"){
+				JQSOOBSDDS();
 			}
 			
-			Mazo.pop();
+			FXGSEGRXKC.pop();
 			
 			
 			
-			var posX=devuelveX(LetraMazo,99);
-			var posY=devuelveY(LetraMazo,99);
-			log(false,"X de "+LetraMazo+" "+posX);
+			var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,99);
+			var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,99);
+			log(false,"X de "+UBWRXKMTQN+" "+NOFEDXHMLS);
 				
-			if (Mazo.length>0 || CartaTriunfo.length>0){
-					//DesHabilitarClick(Mano[Mano.length-1].cartilla);
-					tw1 = game_objeto.add.tween(Mano[Mano.length-1].cartilla);
-						tw1.to( {x:posX
-						,y:posY
-						,angle:angleCarta
+			if (FXGSEGRXKC.length>0 || FBSDMRLVEL.length>0){
+					//VRLYJAAHUE(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+					PQUFIBKJJH = YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+						PQUFIBKJJH.to( {x:NOFEDXHMLS
+						,y:GHTWROCHVV
+						,angle:KKQWKUGGSI
 						}
-						, vVelocidadRobar, EfectoTween1);
-					tw1.onComplete.add(//RobarCartas4,this)
+						, BQUYYUASDK, KYFMRVNHIQ);
+					PQUFIBKJJH.onComplete.add(//TMUBOPUYAH,this)
 							function () {
-								ReubicarCartas(Mano,LetraMazo);
-								RobarCartas4(RondaParam,turnoParam); //Truco para poder pasar por parámetro
+								OROGRNBISW(XACEBCSJAB,UBWRXKMTQN);
+								TMUBOPUYAH(TKWCTNGROU,LDCCGSIBKW); //Truco para poder pasar por parámetro
 							}
 						);
-						if (LetraMazo=="D")
+						if (UBWRXKMTQN=="D")
 						{
-							game_objeto.add.tween(Mano[Mano.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
+							YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 						}
-						tw1.start();
+						PQUFIBKJJH.start();
 			}
 			
-			if (CartaTriunfo.length>0){
-				CartaTriunfo[CartaTriunfo.length-1].cartilla.moveDown();	
+			if (FBSDMRLVEL.length>0){
+				FBSDMRLVEL[FBSDMRLVEL.length-1].TNFAGGMKXD.moveDown();	
 			}
 		}
 	//}
@@ -2715,141 +2715,141 @@ RobarCartas3=function(RondaParam,turnoParam){
 
 
 
-RobarCartas4=function(RondaParam,turnoParam){
-	var LetraMazo;
-	var spriteRobar;
-	var Mano;
+TMUBOPUYAH=function(TKWCTNGROU,LDCCGSIBKW){
+	var UBWRXKMTQN;
+	var DWTJCXXKNS;
+	var XACEBCSJAB;
 	var MazoMover=[];
 	var i;
 	
-	//if (MarcadorNuestro<PuntosGanar && MarcadorRival<PuntosGanar)
+	//if (UHHXSNXXJK<JLVDFTPUNI && PXGXKDDNFK<JLVDFTPUNI)
 	//{
-		var turnoFicticio=turnoParam+3;
-		if (turnoFicticio>4){
-			turnoFicticio=turnoFicticio-4;
+		var VJGLUDIXWN=LDCCGSIBKW+3;
+		if (VJGLUDIXWN>4){
+			VJGLUDIXWN=VJGLUDIXWN-4;
 		}
 		
-		if (Mazo.length>0 || CartaTriunfo.length>0 ){
+		if (FXGSEGRXKC.length>0 || FBSDMRLVEL.length>0 ){
 		
 		log(false,"koooo")
 		
-		if(Mazo.length>0){
-			MazoMover=Mazo;		
+		if(FXGSEGRXKC.length>0){
+			MazoMover=FXGSEGRXKC;		
 			//log(false,"Error");
 			
 		}
 		else{
-			MazoMover=CartaTriunfo;		
-			//log(false,"Robada4 "+CartaTriunfo[MazoMover.length-1].valor+" de "+CartaTriunfo[MazoMover.length-1].palo);
-			//log(false,"Robada4 "+CartaTriunfo[CartaTriunfo.length-1].valor+" de "+CartaTriunfo[CartaTriunfo.length-1].palo);
+			MazoMover=FBSDMRLVEL;		
+			//log(false,"Robada4 "+FBSDMRLVEL[MazoMover.length-1].HVCFEWNDRF+" de "+FBSDMRLVEL[MazoMover.length-1].SGCSHJVERI);
+			//log(false,"Robada4 "+FBSDMRLVEL[FBSDMRLVEL.length-1].HVCFEWNDRF+" de "+FBSDMRLVEL[FBSDMRLVEL.length-1].SGCSHJVERI);
 		}
 		
-		spriteRobar=MazoMover[MazoMover.length-1].cartilla;
-		//log(false,"Robada4 "+MazoMover[MazoMover.length-1].valor+" de "+MazoMover[MazoMover.length-1].palo);
+		DWTJCXXKNS=MazoMover[MazoMover.length-1].TNFAGGMKXD;
+		//log(false,"Robada4 "+MazoMover[MazoMover.length-1].HVCFEWNDRF+" de "+MazoMover[MazoMover.length-1].SGCSHJVERI);
 		
-		LetraMazo=DevuelveUbicacionCarta(turnoFicticio);
+		UBWRXKMTQN=HHOPUSIABJ(VJGLUDIXWN);
 		
-		if (LetraMazo=="U"){
-			var Mano=MazoU;
-			var angleCarta=MazoMover[MazoMover.length-1].cartilla.angle;
-			//MostrarReverso(MazoMover[MazoMover.length-1].cartilla);
+		if (UBWRXKMTQN=="U"){
+			var XACEBCSJAB=TWJONOKGHC;
+			var KKQWKUGGSI=MazoMover[MazoMover.length-1].TNFAGGMKXD.angle;
+			//XNFDNBQFUA(MazoMover[MazoMover.length-1].TNFAGGMKXD);
 			for (i=0;i<=MazoMover.length-1;i++)
 			{
-				MostrarReverso(MazoMover[i].cartilla);
+				XNFDNBQFUA(MazoMover[i].TNFAGGMKXD);
 			}
 			
-			GrupoU.add(MazoMover[MazoMover.length-1].cartilla);
+			PBHYCULPGK.add(MazoMover[MazoMover.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="D"){
-			var Mano=MazoD;
-			var angleCarta=MazoMover[MazoMover.length-1].cartilla.angle;
-			MostrarAnverso(MazoMover[MazoMover.length-1].cartilla);
-			GrupoD.add(MazoMover[MazoMover.length-1].cartilla);
+		if (UBWRXKMTQN=="D"){
+			var XACEBCSJAB=AGKVNAGGLB;
+			var KKQWKUGGSI=MazoMover[MazoMover.length-1].TNFAGGMKXD.angle;
+			NAYBJTKIKA(MazoMover[MazoMover.length-1].TNFAGGMKXD);
+			RXKKPILDQT.add(MazoMover[MazoMover.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="L"){
-			var Mano=MazoL;
-			var angleCarta=MazoMover[MazoMover.length-1].cartilla.angle+90;
-			//MostrarReverso(MazoMover[MazoMover.length-1].cartilla);
+		if (UBWRXKMTQN=="L"){
+			var XACEBCSJAB=KNVKGHHTYC;
+			var KKQWKUGGSI=MazoMover[MazoMover.length-1].TNFAGGMKXD.angle+90;
+			//XNFDNBQFUA(MazoMover[MazoMover.length-1].TNFAGGMKXD);
 			for (i=0;i<=MazoMover.length-1;i++)
 			{
-				MostrarReverso(MazoMover[i].cartilla);
+				XNFDNBQFUA(MazoMover[i].TNFAGGMKXD);
 			}
-			GrupoL.add(MazoMover[MazoMover.length-1].cartilla);
+			SYXHGDSJDY.add(MazoMover[MazoMover.length-1].TNFAGGMKXD);
 		}
-		if (LetraMazo=="R"){
-			var Mano=MazoR;
-			var angleCarta=MazoMover[MazoMover.length-1].cartilla.angle+270;
-			//MostrarReverso(MazoMover[MazoMover.length-1].cartilla);
+		if (UBWRXKMTQN=="R"){
+			var XACEBCSJAB=CBCNHFGWLU;
+			var KKQWKUGGSI=MazoMover[MazoMover.length-1].TNFAGGMKXD.angle+270;
+			//XNFDNBQFUA(MazoMover[MazoMover.length-1].TNFAGGMKXD);
 			for (i=0;i<=MazoMover.length-1;i++)
 			{
-				MostrarReverso(MazoMover[i].cartilla);
+				XNFDNBQFUA(MazoMover[i].TNFAGGMKXD);
 			}
-			GrupoR.add(MazoMover[MazoMover.length-1].cartilla);
+			BDRJVGFWQH.add(MazoMover[MazoMover.length-1].TNFAGGMKXD);
 		}	
 		
-		//if (Mano.length<6){ // Hay que poner este control porque si no pasa varias veces en multijugador
-		Mano.push(new Carta(MazoMover[MazoMover.length-1].palo,MazoMover[MazoMover.length-1].idCarta,MazoMover[MazoMover.length-1].valor,MazoMover[MazoMover.length-1].cartilla,5,
+		//if (XACEBCSJAB.length<6){ // Hay que poner este control porque si no pasa varias veces en multijugador
+		XACEBCSJAB.push(new TVYNYTCQYW(MazoMover[MazoMover.length-1].SGCSHJVERI,MazoMover[MazoMover.length-1].UUOPKETETA,MazoMover[MazoMover.length-1].HVCFEWNDRF,MazoMover[MazoMover.length-1].TNFAGGMKXD,5,
 		MazoMover[MazoMover.length-1].jugador));
 		
-		ReproducirSonido('_Reparto');
+		EABXADHEVT('WWYKUMYJBJ');
 		
-		if (LetraMazo=="D"){
-			PreparaCaracteristicasMano();
+		if (UBWRXKMTQN=="D"){
+			JQSOOBSDDS();
 		}
 		
 		MazoMover.pop();
 		
 		if (MazoMover.length==0){
-			angleCarta=angleCarta-90;
+			KKQWKUGGSI=KKQWKUGGSI-90;
 		}
 		
-		var posX=devuelveX(LetraMazo,99);
-		var posY=devuelveY(LetraMazo,99);
-		log(false,"X de "+LetraMazo+" "+posX);	
-		//if (LetraMazoReubicar=="L"){
-				//DesHabilitarClick(Mano[Mano.length-1].cartilla);
-				tw1 = game_objeto.add.tween(Mano[Mano.length-1].cartilla);
-					tw1.to( {x:posX
-					,y:posY
-					,angle:angleCarta
+		var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,99);
+		var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,99);
+		log(false,"X de "+UBWRXKMTQN+" "+NOFEDXHMLS);	
+		//if (NCKMGYLDRO=="L"){
+				//VRLYJAAHUE(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+				PQUFIBKJJH = YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD);
+					PQUFIBKJJH.to( {x:NOFEDXHMLS
+					,y:GHTWROCHVV
+					,angle:KKQWKUGGSI
 					}
-					, vVelocidadCartasReordernar, EfectoTween1);
-					tw1.onComplete.add( function(){ 
-					ReubicarCartas(Mano,LetraMazo);
-					EliminarDeLaMesa(RondaParam);
+					, MDYSFNYPYP, KYFMRVNHIQ);
+					PQUFIBKJJH.onComplete.add( function(){ 
+					OROGRNBISW(XACEBCSJAB,UBWRXKMTQN);
+					DFCCHCJBNP(TKWCTNGROU);
 					} 
 					)
-					if (LetraMazo=="D")
+					if (UBWRXKMTQN=="D")
 					{
-						game_objeto.add.tween(Mano[Mano.length-1].cartilla.scale).to( {x:vEscaladoCarta,y:vEscaladoCarta}, vVelocidadCartas, EfectoTween2,true);
+						YMHIHSNADE.add.tween(XACEBCSJAB[XACEBCSJAB.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 					}
-					tw1.start();
+					PQUFIBKJJH.start();
 		//}
-				if (CartaTriunfo.length>0){
-					CartaTriunfo[CartaTriunfo.length-1].cartilla.moveDown();	
+				if (FBSDMRLVEL.length>0){
+					FBSDMRLVEL[FBSDMRLVEL.length-1].TNFAGGMKXD.moveDown();	
 				}
 		
 		
 		}
-		MostrarOcultarBotonCante();
+		LMGBDQDXWP();
 	//}
 }
 
 
-EliminaTextoPantalla=function(text){
+FYYEWMEHBU=function(text){
 text.destroy();
 }
 
 
 
-Trucaposicion=function(sprite, Array, nuevaposicion){
+VOHGWKGYGY=function(sprite, Array, BBSGITWRQX){
 	//Envía la posición al resto de compañeros
 	for (var i=0; i<=Array.length-1; i++){
-		if (Array[i].cartilla.name==sprite.name){
-			Array[i].posicion=nuevaposicion;	
-			if (ModoMultijugador==true)
+		if (Array[i].TNFAGGMKXD.name==sprite.name){
+			Array[i].NPYBJSHIFL=BBSGITWRQX;	
+			if (EGPDVIEJEL==true)
 			{
-				socket.emit('enviar posicion', Habitacion,SoyElJugador,Array[i].cartilla.name,nuevaposicion) ;
+				socket.emit('SSPKARCWJW', DFBVDPETGO,TFSXFTYVGQ,Array[i].TNFAGGMKXD.name,BBSGITWRQX) ;
 			}
 			break;
 		}
@@ -2857,96 +2857,96 @@ Trucaposicion=function(sprite, Array, nuevaposicion){
 	
 }
 
-devuelveX=function(Mazo,posicion){
-	for(var i = 0; i < Mazoposiciones.length; i++) {
-		if (Mazoposiciones[i].Mazo==Mazo && Mazoposiciones[i].posicion==posicion){
-			return Mazoposiciones[i].x;
+WIEVLYANFM=function(FXGSEGRXKC,NPYBJSHIFL){
+	for(var i = 0; i < ETAUVLWEYR.length; i++) {
+		if (ETAUVLWEYR[i].FXGSEGRXKC==FXGSEGRXKC && ETAUVLWEYR[i].NPYBJSHIFL==NPYBJSHIFL){
+			return ETAUVLWEYR[i].x;
 		}		
 	}
 }
 
-devuelveY=function(Mazo,posicion){
-	for(var i = 0; i < Mazoposiciones.length; i++) {
-		if (Mazoposiciones[i].Mazo==Mazo && Mazoposiciones[i].posicion==posicion){
-			return Mazoposiciones[i].y;
+FIGQBSJQGA=function(FXGSEGRXKC,NPYBJSHIFL){
+	for(var i = 0; i < ETAUVLWEYR.length; i++) {
+		if (ETAUVLWEYR[i].FXGSEGRXKC==FXGSEGRXKC && ETAUVLWEYR[i].NPYBJSHIFL==NPYBJSHIFL){
+			return ETAUVLWEYR[i].y;
 		}		
 	}
 }
 	
-ReubicarCartas=function(MazoReubicar,LetraMazoReubicar,efectoSacarCarta,KeyMover,KeyDesde7){
+OROGRNBISW=function(JYVKHLQLIM,NCKMGYLDRO,BBUAAVEPDC,SJVCMXWVVI,KeyDesde7){
 	
 	
 	var i;
 	//Para que cuando robe el 7 sea la última
-	for (var i=0;i<=MazoReubicar.length-1;i++)
+	for (var i=0;i<=JYVKHLQLIM.length-1;i++)
 	{
-		if (MazoReubicar[i].cartilla.name==KeyDesde7)
+		if (JYVKHLQLIM[i].TNFAGGMKXD.name==KeyDesde7)
 		{
-			MazoReubicar[i].posicion=10;
+			JYVKHLQLIM[i].NPYBJSHIFL=10;
 		}
 	}
 
 	
-	MazoReubicar.sort(sort_by('posicion', false, parseFloat));
+	JYVKHLQLIM.sort(sort_by('NPYBJSHIFL', false, parseFloat));
 	
-	for (var i=0;i<=MazoReubicar.length-1;i++)
+	for (var i=0;i<=JYVKHLQLIM.length-1;i++)
 	{
-		MazoReubicar[i].posicion=i;
+		JYVKHLQLIM[i].NPYBJSHIFL=i;
 	}
 
 
 
-	if (efectoSacarCarta==true){
+	if (BBUAAVEPDC==true){
 
-		for (var i=0;i<=MazoReubicar.length-1;i++){
-			if (MazoReubicar[i].cartilla.name==KeyMover){
+		for (var i=0;i<=JYVKHLQLIM.length-1;i++){
+			if (JYVKHLQLIM[i].TNFAGGMKXD.name==SJVCMXWVVI){
 				break;
 			}
 		}	
 		
-		PosicionCartas(LetraMazoReubicar)
-		var posX=devuelveX(LetraMazoReubicar,i);
-		var posY=devuelveY(LetraMazoReubicar,i);
+		SUMEMLHUFX(NCKMGYLDRO)
+		var NOFEDXHMLS=WIEVLYANFM(NCKMGYLDRO,i);
+		var GHTWROCHVV=FIGQBSJQGA(NCKMGYLDRO,i);
 		
-		if (LetraMazoReubicar=="L"){
-				DesHabilitarClick(MazoReubicar[i].cartilla);
-				twReu = game_objeto.add.tween(MazoReubicar[i].cartilla);
-				twReu.to( {x:posX+ MazoReubicar[MazoReubicar.length-1].cartilla.width
-				,y:posY
+		if (NCKMGYLDRO=="L"){
+				VRLYJAAHUE(JYVKHLQLIM[i].TNFAGGMKXD);
+				EWXBTDLSHW = YMHIHSNADE.add.tween(JYVKHLQLIM[i].TNFAGGMKXD);
+				EWXBTDLSHW.to( {x:NOFEDXHMLS+ JYVKHLQLIM[JYVKHLQLIM.length-1].TNFAGGMKXD.width
+				,y:GHTWROCHVV
 				}
-				, vVelocidadCartasReordernar, EfectoTween1);
-				twReu.onComplete.add(EfectosReordenarCartasPrevioL,this)
+				, MDYSFNYPYP, KYFMRVNHIQ);
+				EWXBTDLSHW.onComplete.add(BWTIWMVDQQ,this)
 				
-				twReu.start();
+				EWXBTDLSHW.start();
 		}
-		if (LetraMazoReubicar=="R"){
-			DesHabilitarClick(MazoReubicar[i].cartilla);
-			twReu = game_objeto.add.tween(MazoReubicar[i].cartilla);
-				twReu.to( {x:posX- MazoReubicar[MazoReubicar.length-1].cartilla.width
-				,y:posY
+		if (NCKMGYLDRO=="R"){
+			VRLYJAAHUE(JYVKHLQLIM[i].TNFAGGMKXD);
+			EWXBTDLSHW = YMHIHSNADE.add.tween(JYVKHLQLIM[i].TNFAGGMKXD);
+				EWXBTDLSHW.to( {x:NOFEDXHMLS- JYVKHLQLIM[JYVKHLQLIM.length-1].TNFAGGMKXD.width
+				,y:GHTWROCHVV
 				}
-				, vVelocidadCartasReordernar, EfectoTween1);
-				twReu.onComplete.add(EfectosReordenarCartasPrevioR,this)
+				, MDYSFNYPYP, KYFMRVNHIQ);
+				EWXBTDLSHW.onComplete.add(BQNUWYNWUM,this)
 				
-				twReu.start();
+				EWXBTDLSHW.start();
 		}		
-		if (LetraMazoReubicar=="U"){
-			DesHabilitarClick(MazoReubicar[i].cartilla);
-			twReu = game_objeto.add.tween(MazoReubicar[i].cartilla);
-				twReu.to( {x:posX
-				,y:posY+ MazoReubicar[MazoReubicar.length-1].cartilla.width
+		if (NCKMGYLDRO=="U"){
+			VRLYJAAHUE(JYVKHLQLIM[i].TNFAGGMKXD);
+			EWXBTDLSHW = YMHIHSNADE.add.tween(JYVKHLQLIM[i].TNFAGGMKXD);
+				EWXBTDLSHW.to( {x:NOFEDXHMLS
+				,y:GHTWROCHVV+ JYVKHLQLIM[JYVKHLQLIM.length-1].TNFAGGMKXD.width
 				}
-				, vVelocidadCartasReordernar, EfectoTween1);
-				twReu.onComplete.add(EfectosReordenarCartasPrevioU,this)
+				, MDYSFNYPYP, KYFMRVNHIQ);
+				EWXBTDLSHW.onComplete.add(IASDVOABBB,this)
 				
-				twReu.start();
+				EWXBTDLSHW.start();
 		}	
 		
 		
 	}
 	else
 	{
-		EfectosReordenarCartas(LetraMazoReubicar);
+		XVQSVMPDII(NCKMGYLDRO);
 	}
 	
 	
@@ -2955,183 +2955,183 @@ ReubicarCartas=function(MazoReubicar,LetraMazoReubicar,efectoSacarCarta,KeyMover
 
 }
 
-EfectosReordenarCartasPrevioR=function(){
-	EfectosReordenarCartas("R");
+BQNUWYNWUM=function(){
+	XVQSVMPDII("R");
 }
 
 
-EfectosReordenarCartasPrevioL=function(){
-	EfectosReordenarCartas("L");
+BWTIWMVDQQ=function(){
+	XVQSVMPDII("L");
 }
 
-EfectosReordenarCartasPrevioU=function(){
-	EfectosReordenarCartas("U");
+IASDVOABBB=function(){
+	XVQSVMPDII("U");
 }
 
 
-EfectosReordenarCartas=function(LetraMazo){
+XVQSVMPDII=function(UBWRXKMTQN){
 	
 	
 	
-	var MazoReordenar=[];
-	if (LetraMazo=="U"){
-		MazoReordenar=MazoU;
+	var NNLCEDVGOV=[];
+	if (UBWRXKMTQN=="U"){
+		NNLCEDVGOV=TWJONOKGHC;
 	}
-	if (LetraMazo=="D"){
-		MazoReordenar=MazoD;
+	if (UBWRXKMTQN=="D"){
+		NNLCEDVGOV=AGKVNAGGLB;
 	}
-	if (LetraMazo=="L"){
-		MazoReordenar=MazoL;
+	if (UBWRXKMTQN=="L"){
+		NNLCEDVGOV=KNVKGHHTYC;
 	}
-	if (LetraMazo=="R"){
-		MazoReordenar=MazoR;
+	if (UBWRXKMTQN=="R"){
+		NNLCEDVGOV=CBCNHFGWLU;
 	}
 
-	PosicionCartas(LetraMazo)
+	SUMEMLHUFX(UBWRXKMTQN)
 	
 	
-	if (MazoReordenar.length>=1)
+	if (NNLCEDVGOV.length>=1)
 	{
 	
 
-	var posX=devuelveX(LetraMazo,0);
-	var posY=devuelveY(LetraMazo,0);
+	var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,0);
+	var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,0);
 	
 	
-	//log(false,"REORDENANDO X: Mazo "+LetraMazo+" "+posX);
-	//log(false,"REORDENANDO Y: Mazo "+LetraMazo+" "+posY);
+	//log(false,"REORDENANDO X: FXGSEGRXKC "+UBWRXKMTQN+" "+NOFEDXHMLS);
+	//log(false,"REORDENANDO Y: FXGSEGRXKC "+UBWRXKMTQN+" "+GHTWROCHVV);
 	
 	
-	twReu = game_objeto.add.tween(MazoReordenar[0].cartilla);
-		twReu.to( {x:posX
-		,y:posY
+	EWXBTDLSHW = YMHIHSNADE.add.tween(NNLCEDVGOV[0].TNFAGGMKXD);
+		EWXBTDLSHW.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		twReu.start();
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		EWXBTDLSHW.start();
 	}
 
-	if (MazoReordenar.length>=2)
+	if (NNLCEDVGOV.length>=2)
 	{	
 	
-		var posX=devuelveX(LetraMazo,1);
-		var posY=devuelveY(LetraMazo,1);
+		var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,1);
+		var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,1);
 		
-	//log(false,"REORDENANDO X: Mazo "+LetraMazo+" "+posX);
-	//log(false,"REORDENANDO Y: Mazo "+LetraMazo+" "+posY);
+	//log(false,"REORDENANDO X: FXGSEGRXKC "+UBWRXKMTQN+" "+NOFEDXHMLS);
+	//log(false,"REORDENANDO Y: FXGSEGRXKC "+UBWRXKMTQN+" "+GHTWROCHVV);
 	
-	twReu= game_objeto.add.tween(MazoReordenar[1].cartilla);
-		twReu.to( {x:posX
-		,y:posY
+	EWXBTDLSHW= YMHIHSNADE.add.tween(NNLCEDVGOV[1].TNFAGGMKXD);
+		EWXBTDLSHW.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		twReu.start();
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		EWXBTDLSHW.start();
 	}
 
-	if (MazoReordenar.length>=3)
+	if (NNLCEDVGOV.length>=3)
 	{
 	
-	//log(false,"REORDENANDO X: Mazo "+LetraMazo+" "+posX);
-	//log(false,"REORDENANDO Y: Mazo "+LetraMazo+" "+posY);
+	//log(false,"REORDENANDO X: FXGSEGRXKC "+UBWRXKMTQN+" "+NOFEDXHMLS);
+	//log(false,"REORDENANDO Y: FXGSEGRXKC "+UBWRXKMTQN+" "+GHTWROCHVV);
 	
 	
-		var posX=devuelveX(LetraMazo,2);
-		var posY=devuelveY(LetraMazo,2);
+		var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,2);
+		var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,2);
 	
 	
-	twReu = game_objeto.add.tween(MazoReordenar[2].cartilla);
-		twReu.to( {x:posX
-		,y:posY
+	EWXBTDLSHW = YMHIHSNADE.add.tween(NNLCEDVGOV[2].TNFAGGMKXD);
+		EWXBTDLSHW.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		twReu.start();
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		EWXBTDLSHW.start();
 	}
 
-	if (MazoReordenar.length>=4)
+	if (NNLCEDVGOV.length>=4)
 	{
-		if (Mazo.length>0)
+		if (FXGSEGRXKC.length>0)
 	{
-		var posX=devuelveX(LetraMazo,3);
-		var posY=devuelveY(LetraMazo,3);
+		var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,3);
+		var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,3);
 	}
 	else
 	{
-		if(LetraMazo=="R")
+		if(UBWRXKMTQN=="R")
 		{
-			var posX=devuelveX(LetraMazo,3);
-			var posY=devuelveY(LetraMazo,3);
+			var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,3);
+			var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,3);
 		}
 		else
 		{
-			var posX=devuelveX(LetraMazo,3);
-			var posY=devuelveY(LetraMazo,3);
+			var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,3);
+			var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,3);
 		}
 	}
-	//log(false,"REORDENANDO X: Mazo "+LetraMazo+" "+posX);
-	//log(false,"REORDENANDO Y: Mazo "+LetraMazo+" "+posY);
+	//log(false,"REORDENANDO X: FXGSEGRXKC "+UBWRXKMTQN+" "+NOFEDXHMLS);
+	//log(false,"REORDENANDO Y: FXGSEGRXKC "+UBWRXKMTQN+" "+GHTWROCHVV);
 	
-	twReu = game_objeto.add.tween(MazoReordenar[3].cartilla);
-		twReu.to( {x:posX
-		,y:posY
+	EWXBTDLSHW = YMHIHSNADE.add.tween(NNLCEDVGOV[3].TNFAGGMKXD);
+		EWXBTDLSHW.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		twReu.start();
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		EWXBTDLSHW.start();
 	}
 	
-	if (MazoReordenar.length>=5)
+	if (NNLCEDVGOV.length>=5)
 	{	
-		var posX=devuelveX(LetraMazo,4);
-		var posY=devuelveY(LetraMazo,4);
+		var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,4);
+		var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,4);
 	
-	//log(false,"REORDENANDO X: Mazo "+LetraMazo+" "+posX);
-	//log(false,"REORDENANDO Y: Mazo "+LetraMazo+" "+posY);
+	//log(false,"REORDENANDO X: FXGSEGRXKC "+UBWRXKMTQN+" "+NOFEDXHMLS);
+	//log(false,"REORDENANDO Y: FXGSEGRXKC "+UBWRXKMTQN+" "+GHTWROCHVV);
 	
-	twReu = game_objeto.add.tween(MazoReordenar[4].cartilla);
-		twReu.to( {x:posX
-		,y:posY
+	EWXBTDLSHW = YMHIHSNADE.add.tween(NNLCEDVGOV[4].TNFAGGMKXD);
+		EWXBTDLSHW.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		twReu.start();		
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		EWXBTDLSHW.start();		
 	}
 		
-	if (MazoReordenar.length>=6)
+	if (NNLCEDVGOV.length>=6)
 	{		
 	
-		var posX=devuelveX(LetraMazo,5);
-		var posY=devuelveY(LetraMazo,5);
+		var NOFEDXHMLS=WIEVLYANFM(UBWRXKMTQN,5);
+		var GHTWROCHVV=FIGQBSJQGA(UBWRXKMTQN,5);
 	
-	//log(false,"REORDENANDO X: Mazo "+LetraMazo+" "+posX);
-	//log(false,"REORDENANDO Y: Mazo "+LetraMazo+" "+posY);
+	//log(false,"REORDENANDO X: FXGSEGRXKC "+UBWRXKMTQN+" "+NOFEDXHMLS);
+	//log(false,"REORDENANDO Y: FXGSEGRXKC "+UBWRXKMTQN+" "+GHTWROCHVV);
 	
-	twReu = game_objeto.add.tween(MazoReordenar[5].cartilla);
-		twReu.to( {x:posX
-		,y:posY
+	EWXBTDLSHW = YMHIHSNADE.add.tween(NNLCEDVGOV[5].TNFAGGMKXD);
+		EWXBTDLSHW.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		twReu.start();
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		EWXBTDLSHW.start();
 	}
 	
 }
 
-PreparaCaracteristicasMano=function(){
+JQSOOBSDDS=function(){
 var i;
 	
 		
-		for (i=0;i<=MazoD.length-1;i++){
-			MazoD[i].cartilla.inputEnabled = true;
-			MazoD[i].cartilla.input.enableDrag(false,true);
-			//MazoD[i].cartilla.input.allowVerticalDrag = false;
-			//MazoD[i].cartilla.events.onInputUp.add(MueveAlTablero);
-			MazoD[i].cartilla.events.onDragUpdate.add(Moviendo_Carta); 
-			MazoD[i].cartilla.events.onDragStop.add(Parar_Drag); 
+		for (i=0;i<=AGKVNAGGLB.length-1;i++){
+			AGKVNAGGLB[i].TNFAGGMKXD.inputEnabled = true;
+			AGKVNAGGLB[i].TNFAGGMKXD.input.enableDrag(false,true);
+			//AGKVNAGGLB[i].TNFAGGMKXD.input.allowVerticalDrag = false;
+			//AGKVNAGGLB[i].TNFAGGMKXD.events.onInputUp.add(QTIPILDEPH);
+			AGKVNAGGLB[i].TNFAGGMKXD.events.onDragUpdate.add(WTNGDOQIWY); 
+			AGKVNAGGLB[i].TNFAGGMKXD.events.onDragStop.add(IHSCVAKSDJ); 
 		}
-		ContadorTurno(1); //ILA 20170128 PELIGROSO. LO HE AÃ‘ADIDO
+		JWXRWCVLGC(1); //ILA 20170128 PELIGROSO. LO HE AÃ‘ADIDO
 }
 
-DesHabilitarClick=function(sprite){
+VRLYJAAHUE=function(sprite){
 	sprite.inputEnabled = false;
 }
 
-HabilitarClick=function(sprite){
+HJDIMRVCSU=function(sprite){
 	log(false,"Activa el sprite.");
 	sprite.inputEnabled = true;
 }
@@ -3150,121 +3150,121 @@ var sort_by = function(field, reverse, primer){
 }
 
 
-MoverCartaAjena=function(JugadorQueMueve,KeyMover,nuevaposicion){
-	//if (SoyElJugador!=JugadorQueMueve){
+RAVHQRVMNJ=function(UHTPGPRUJA,SJVCMXWVVI,BBSGITWRQX){
+	//if (TFSXFTYVGQ!=UHTPGPRUJA){
 		
-		if(SoyElJugador==1){
-			if (JugadorQueMueve==2){
-				OrganizarManoOrdenamiento(MazoR,"R",KeyMover,nuevaposicion);
+		if(TFSXFTYVGQ==1){
+			if (UHTPGPRUJA==2){
+				UFYWSHNLRM(CBCNHFGWLU,"R",SJVCMXWVVI,BBSGITWRQX);
 			}
-			if (JugadorQueMueve==3){
-				OrganizarManoOrdenamiento(MazoU,"U",KeyMover,nuevaposicion);
+			if (UHTPGPRUJA==3){
+				UFYWSHNLRM(TWJONOKGHC,"U",SJVCMXWVVI,BBSGITWRQX);
 			}
-			if (JugadorQueMueve==4){
-				OrganizarManoOrdenamiento(MazoL,"L",KeyMover,nuevaposicion);
+			if (UHTPGPRUJA==4){
+				UFYWSHNLRM(KNVKGHHTYC,"L",SJVCMXWVVI,BBSGITWRQX);
 			}		
 		}
 	
-		if(SoyElJugador==2){
-			if (JugadorQueMueve==3){
-				OrganizarManoOrdenamiento(MazoR,"R",KeyMover,nuevaposicion);
+		if(TFSXFTYVGQ==2){
+			if (UHTPGPRUJA==3){
+				UFYWSHNLRM(CBCNHFGWLU,"R",SJVCMXWVVI,BBSGITWRQX);
 			}
-			if (JugadorQueMueve==4){
-				OrganizarManoOrdenamiento(MazoU,"U",KeyMover,nuevaposicion);
+			if (UHTPGPRUJA==4){
+				UFYWSHNLRM(TWJONOKGHC,"U",SJVCMXWVVI,BBSGITWRQX);
 			}
-			if (JugadorQueMueve==1){
-				OrganizarManoOrdenamiento(MazoL,"L",KeyMover,nuevaposicion);
+			if (UHTPGPRUJA==1){
+				UFYWSHNLRM(KNVKGHHTYC,"L",SJVCMXWVVI,BBSGITWRQX);
 			}
 		
 		}	
 
-		if(SoyElJugador==3){
-			if (JugadorQueMueve==4){
-				OrganizarManoOrdenamiento(MazoR,"R",KeyMover,nuevaposicion);
+		if(TFSXFTYVGQ==3){
+			if (UHTPGPRUJA==4){
+				UFYWSHNLRM(CBCNHFGWLU,"R",SJVCMXWVVI,BBSGITWRQX);
 			}
-			if (JugadorQueMueve==1){
-				OrganizarManoOrdenamiento(MazoU,"U",KeyMover,nuevaposicion);
+			if (UHTPGPRUJA==1){
+				UFYWSHNLRM(TWJONOKGHC,"U",SJVCMXWVVI,BBSGITWRQX);
 			}
-			if (JugadorQueMueve==2){
-				OrganizarManoOrdenamiento(MazoL,"L",KeyMover,nuevaposicion);
+			if (UHTPGPRUJA==2){
+				UFYWSHNLRM(KNVKGHHTYC,"L",SJVCMXWVVI,BBSGITWRQX);
 			}		
 		}
 
-		if(SoyElJugador==4){
-			if (JugadorQueMueve==1){
-				OrganizarManoOrdenamiento(MazoR,"R",KeyMover,nuevaposicion);
+		if(TFSXFTYVGQ==4){
+			if (UHTPGPRUJA==1){
+				UFYWSHNLRM(CBCNHFGWLU,"R",SJVCMXWVVI,BBSGITWRQX);
 			}
-			if (JugadorQueMueve==2){
-				OrganizarManoOrdenamiento(MazoU,"U",KeyMover,nuevaposicion);
+			if (UHTPGPRUJA==2){
+				UFYWSHNLRM(TWJONOKGHC,"U",SJVCMXWVVI,BBSGITWRQX);
 			}
-			if (JugadorQueMueve==3){
-				OrganizarManoOrdenamiento(MazoL,"L",KeyMover,nuevaposicion);
+			if (UHTPGPRUJA==3){
+				UFYWSHNLRM(KNVKGHHTYC,"L",SJVCMXWVVI,BBSGITWRQX);
 			}	
 		}		
 	//}
 
 }
 
-OrganizarManoOrdenamiento=function(Mano,Letra,KeyMover,nuevaposicion){
-	for (var i=0;i<=Mano.length-1;i++){
-		if(Mano[i].cartilla.name==KeyMover){
-			Mano[i].posicion=nuevaposicion;
-			ReubicarCartas(Mano,Letra,true,KeyMover)
+UFYWSHNLRM=function(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,BBSGITWRQX){
+	for (var i=0;i<=XACEBCSJAB.length-1;i++){
+		if(XACEBCSJAB[i].TNFAGGMKXD.name==SJVCMXWVVI){
+			XACEBCSJAB[i].NPYBJSHIFL=BBSGITWRQX;
+			OROGRNBISW(XACEBCSJAB,STLEOJDWSU,true,SJVCMXWVVI)
 			break;
 		}
 	}
 }
 
 EfectosRecogerCartas1=function(){
-	//for (i=0;i<=MazoCentral.length-1;i++){
+	//for (i=0;i<=VDKOVQXHON.length-1;i++){
 	
 	var i;	
 		
-		//ArreglaReversos();
-		if (MazoCentralApoyo.length>=1){
+		//CHJKAHKJHC();
+		if (YBVSVUGPJG.length>=1){
 		//log(false,"RECOJO CARTA 1");
-			MostrarReverso(MazoCentralApoyo[0].cartilla);
+			XNFDNBQFUA(YBVSVUGPJG[0].TNFAGGMKXD);
 			
-			if (BazaNuestraGlobal==true){
-					for (i=1;i<=UltimaBazaNuestra.length;i++)
+			if (PPTWRPRLSI==true){
+					for (i=1;i<=XYRJNHOCRB.length;i++)
 					{
-						UltimaBazaNuestra.alpha=1;
+						XYRJNHOCRB.alpha=1;
 					}
-					UltimaBazaNuestra.splice(0,10);
-					DesHabilitarClick(MazoCentralApoyo[0].cartilla);
-					tw1 = game_objeto.add.tween(MazoCentralApoyo[0].cartilla);
-					tw1.to( {x: devuelveX("ULTIMA_Baza",0)
-					,y:devuelveY("ULTIMA_Baza",0),//game_objeto.world.height- MazoCentral[MazoCentral.length-1].cartilla.width,
+					XYRJNHOCRB.splice(0,10);
+					VRLYJAAHUE(YBVSVUGPJG[0].TNFAGGMKXD);
+					PQUFIBKJJH = YMHIHSNADE.add.tween(YBVSVUGPJG[0].TNFAGGMKXD);
+					PQUFIBKJJH.to( {x: WIEVLYANFM("ULTIMA_Baza",0)
+					,y:FIGQBSJQGA("ULTIMA_Baza",0),//YMHIHSNADE.world.height- VDKOVQXHON[VDKOVQXHON.length-1].TNFAGGMKXD.width,
 					angle:Math.floor(Math.random() * 360) + 1  
 					}
-					, vVelocidadCartasReordernar, EfectoTween1);
-					//tw1.onComplete.add(EfectosRecogerCartas2,this)						
-					tw1.start();
-					GrupoUltimaBaza.add(MazoCentralApoyo[0].cartilla);
-					MazoRecogido.push(MazoCentralApoyo[0].cartilla);
-					UltimaBazaNuestra.push(MazoCentralApoyo[0].cartilla);
-					HabilitarVerUltimaBaza(MazoCentralApoyo[0].cartilla);
+					, MDYSFNYPYP, KYFMRVNHIQ);
+					//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas2,this)						
+					PQUFIBKJJH.start();
+					WWFSQDQYYU.add(YBVSVUGPJG[0].TNFAGGMKXD);
+					KBESPOUXUK.push(YBVSVUGPJG[0].TNFAGGMKXD);
+					XYRJNHOCRB.push(YBVSVUGPJG[0].TNFAGGMKXD);
+					OYOANGYTVY(YBVSVUGPJG[0].TNFAGGMKXD);
 				}
 				else{
 				
-				for (i=1;i<=UltimaBazaRival.length;i++)
+				for (i=1;i<=HAJIKEVCFP.length;i++)
 				{
-					UltimaBazaRival.alpha=1;
+					HAJIKEVCFP.alpha=1;
 				}
-				UltimaBazaRival.splice(0,10);
-				DesHabilitarClick(MazoCentralApoyo[0].cartilla);
-				tw1 = game_objeto.add.tween(MazoCentralApoyo[0].cartilla);
-					tw1.to( {x:devuelveX("ULTIMA_Baza_Rival",0)
-					,y:devuelveY("ULTIMA_Baza_Rival",0),//0+ MazoCentral[MazoCentral.length-1].cartilla.width,
+				HAJIKEVCFP.splice(0,10);
+				VRLYJAAHUE(YBVSVUGPJG[0].TNFAGGMKXD);
+				PQUFIBKJJH = YMHIHSNADE.add.tween(YBVSVUGPJG[0].TNFAGGMKXD);
+					PQUFIBKJJH.to( {x:WIEVLYANFM("ULTIMA_Baza_Rival",0)
+					,y:FIGQBSJQGA("ULTIMA_Baza_Rival",0),//0+ VDKOVQXHON[VDKOVQXHON.length-1].TNFAGGMKXD.width,
 					angle:Math.floor(Math.random() * 360) + 1  
 					}
-					, vVelocidadCartasReordernar, EfectoTween1);
-					//tw1.onComplete.add(EfectosRecogerCartas2,this)			
-					tw1.start();
-					GrupoUltimaBaza.add(MazoCentralApoyo[0].cartilla);
-					MazoRecogidoRival.push(MazoCentralApoyo[0].cartilla);
-					UltimaBazaRival.push(MazoCentralApoyo[0].cartilla);
-					HabilitarVerUltimaBaza(MazoCentralApoyo[0].cartilla);
+					, MDYSFNYPYP, KYFMRVNHIQ);
+					//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas2,this)			
+					PQUFIBKJJH.start();
+					WWFSQDQYYU.add(YBVSVUGPJG[0].TNFAGGMKXD);
+					BRILHDFUSO.push(YBVSVUGPJG[0].TNFAGGMKXD);
+					HAJIKEVCFP.push(YBVSVUGPJG[0].TNFAGGMKXD);
+					OYOANGYTVY(YBVSVUGPJG[0].TNFAGGMKXD);
 			
 				}
 		//log(false,"fin RECOJO CARTA 1");
@@ -3274,43 +3274,43 @@ EfectosRecogerCartas1=function(){
 }
 
 EfectosRecogerCartas2=function(){
-	//for (i=0;i<=MazoCentral.length-1;i++){
-		if (MazoCentralApoyo.length>=2){		
+	//for (i=0;i<=VDKOVQXHON.length-1;i++){
+		if (YBVSVUGPJG.length>=2){		
 		//log(false,"RECOJO CARTA 2");
-			MostrarReverso(MazoCentralApoyo[1].cartilla);
+			XNFDNBQFUA(YBVSVUGPJG[1].TNFAGGMKXD);
 			
-			if (BazaNuestraGlobal==true){
-					DesHabilitarClick(MazoCentralApoyo[1].cartilla);
-					tw1 = game_objeto.add.tween(MazoCentralApoyo[1].cartilla);
-					tw1.to( {x:devuelveX("ULTIMA_Baza",0)
-					,y:devuelveY("ULTIMA_Baza",0),//game_objeto.world.height- MazoCentralApoyo[MazoCentralApoyo.length-1].cartilla.width,
+			if (PPTWRPRLSI==true){
+					VRLYJAAHUE(YBVSVUGPJG[1].TNFAGGMKXD);
+					PQUFIBKJJH = YMHIHSNADE.add.tween(YBVSVUGPJG[1].TNFAGGMKXD);
+					PQUFIBKJJH.to( {x:WIEVLYANFM("ULTIMA_Baza",0)
+					,y:FIGQBSJQGA("ULTIMA_Baza",0),//YMHIHSNADE.world.height- YBVSVUGPJG[YBVSVUGPJG.length-1].TNFAGGMKXD.width,
 					angle:Math.floor(Math.random() * 360) + 1  
 					}
-					, vVelocidadCartasReordernar, EfectoTween1);
-					//tw1.onComplete.add(EfectosRecogerCartas3,this)						
-					tw1.start();
+					, MDYSFNYPYP, KYFMRVNHIQ);
+					//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas3,this)						
+					PQUFIBKJJH.start();
 					
-					MazoRecogido.push(MazoCentralApoyo[1].cartilla);
-					UltimaBazaNuestra.push(MazoCentralApoyo[1].cartilla);
-					HabilitarVerUltimaBaza(MazoCentralApoyo[1].cartilla);
-					GrupoUltimaBaza.add(MazoCentralApoyo[1].cartilla);
+					KBESPOUXUK.push(YBVSVUGPJG[1].TNFAGGMKXD);
+					XYRJNHOCRB.push(YBVSVUGPJG[1].TNFAGGMKXD);
+					OYOANGYTVY(YBVSVUGPJG[1].TNFAGGMKXD);
+					WWFSQDQYYU.add(YBVSVUGPJG[1].TNFAGGMKXD);
 				}
 				else{
 					
-					DesHabilitarClick(MazoCentralApoyo[1].cartilla);
-					tw1 = game_objeto.add.tween(MazoCentralApoyo[1].cartilla);
-					tw1.to( {x:devuelveX("ULTIMA_Baza_Rival",0)
-					,y:devuelveY("ULTIMA_Baza_Rival",0),//0+ MazoCentralApoyo[MazoCentralApoyo.length-1].cartilla.width,
+					VRLYJAAHUE(YBVSVUGPJG[1].TNFAGGMKXD);
+					PQUFIBKJJH = YMHIHSNADE.add.tween(YBVSVUGPJG[1].TNFAGGMKXD);
+					PQUFIBKJJH.to( {x:WIEVLYANFM("ULTIMA_Baza_Rival",0)
+					,y:FIGQBSJQGA("ULTIMA_Baza_Rival",0),//0+ YBVSVUGPJG[YBVSVUGPJG.length-1].TNFAGGMKXD.width,
 					angle:Math.floor(Math.random() * 360) + 1  
 					}
-					, vVelocidadCartasReordernar, EfectoTween1);
-					//tw1.onComplete.add(EfectosRecogerCartas3,this)						
-					tw1.start();
+					, MDYSFNYPYP, KYFMRVNHIQ);
+					//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas3,this)						
+					PQUFIBKJJH.start();
 	
-					MazoRecogidoRival.push(MazoCentralApoyo[1].cartilla);
-					UltimaBazaRival.push(MazoCentralApoyo[1].cartilla);
-					HabilitarVerUltimaBaza(MazoCentralApoyo[1].cartilla);					
-					GrupoUltimaBaza.add(MazoCentralApoyo[1].cartilla);
+					BRILHDFUSO.push(YBVSVUGPJG[1].TNFAGGMKXD);
+					HAJIKEVCFP.push(YBVSVUGPJG[1].TNFAGGMKXD);
+					OYOANGYTVY(YBVSVUGPJG[1].TNFAGGMKXD);					
+					WWFSQDQYYU.add(YBVSVUGPJG[1].TNFAGGMKXD);
 				}
 		//log(false,"fin RECOJO CARTA 2");
 		}
@@ -3319,41 +3319,41 @@ EfectosRecogerCartas2=function(){
 }
 
 EfectosRecogerCartas3=function(){
-	//for (i=0;i<=MazoCentralApoyo.length-1;i++){
-		if (MazoCentralApoyo.length>=3){	
-			MostrarReverso(MazoCentralApoyo[2].cartilla);
+	//for (i=0;i<=YBVSVUGPJG.length-1;i++){
+		if (YBVSVUGPJG.length>=3){	
+			XNFDNBQFUA(YBVSVUGPJG[2].TNFAGGMKXD);
 		//	log(false,"RECOJO CARTA3");
-				if (BazaNuestraGlobal==true){
-					DesHabilitarClick(MazoCentralApoyo[2].cartilla);
-					tw1 = game_objeto.add.tween(MazoCentralApoyo[2].cartilla);
-					tw1.to( {x:devuelveX("ULTIMA_Baza",0)
-					,y:devuelveY("ULTIMA_Baza",0),//game_objeto.world.height- MazoCentralApoyo[MazoCentralApoyo.length-1].cartilla.width,
+				if (PPTWRPRLSI==true){
+					VRLYJAAHUE(YBVSVUGPJG[2].TNFAGGMKXD);
+					PQUFIBKJJH = YMHIHSNADE.add.tween(YBVSVUGPJG[2].TNFAGGMKXD);
+					PQUFIBKJJH.to( {x:WIEVLYANFM("ULTIMA_Baza",0)
+					,y:FIGQBSJQGA("ULTIMA_Baza",0),//YMHIHSNADE.world.height- YBVSVUGPJG[YBVSVUGPJG.length-1].TNFAGGMKXD.width,
 					angle:Math.floor(Math.random() * 360) + 1  
 					}
-					, vVelocidadCartasReordernar, EfectoTween1);
-					//tw1.onComplete.add(EfectosRecogerCartas4,this)					
-					tw1.start();
+					, MDYSFNYPYP, KYFMRVNHIQ);
+					//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas4,this)					
+					PQUFIBKJJH.start();
 					
-					MazoRecogido.push(MazoCentralApoyo[2].cartilla);
-					UltimaBazaNuestra.push(MazoCentralApoyo[2].cartilla);
-					HabilitarVerUltimaBaza(MazoCentralApoyo[2].cartilla);
-					GrupoUltimaBaza.add(MazoCentralApoyo[2].cartilla);				
+					KBESPOUXUK.push(YBVSVUGPJG[2].TNFAGGMKXD);
+					XYRJNHOCRB.push(YBVSVUGPJG[2].TNFAGGMKXD);
+					OYOANGYTVY(YBVSVUGPJG[2].TNFAGGMKXD);
+					WWFSQDQYYU.add(YBVSVUGPJG[2].TNFAGGMKXD);				
 				}
 				else{
-					DesHabilitarClick(MazoCentralApoyo[2].cartilla);
-					tw1= game_objeto.add.tween(MazoCentralApoyo[2].cartilla);
-					tw1.to( {x:devuelveX("ULTIMA_Baza_Rival",0)
-					,y:devuelveY("ULTIMA_Baza_Rival",0),//0+ MazoCentralApoyo[MazoCentralApoyo.length-1].cartilla.width,
+					VRLYJAAHUE(YBVSVUGPJG[2].TNFAGGMKXD);
+					PQUFIBKJJH= YMHIHSNADE.add.tween(YBVSVUGPJG[2].TNFAGGMKXD);
+					PQUFIBKJJH.to( {x:WIEVLYANFM("ULTIMA_Baza_Rival",0)
+					,y:FIGQBSJQGA("ULTIMA_Baza_Rival",0),//0+ YBVSVUGPJG[YBVSVUGPJG.length-1].TNFAGGMKXD.width,
 					angle:Math.floor(Math.random() * 360) + 1  
 					}
-					, vVelocidadCartasReordernar, EfectoTween1);
-					//tw1.onComplete.add(EfectosRecogerCartas4,this)					
-					tw1.start();
+					, MDYSFNYPYP, KYFMRVNHIQ);
+					//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas4,this)					
+					PQUFIBKJJH.start();
 					
-					MazoRecogidoRival.push(MazoCentralApoyo[2].cartilla);
-					UltimaBazaRival.push(MazoCentralApoyo[2].cartilla);
-					HabilitarVerUltimaBaza(MazoCentralApoyo[2].cartilla);					
-					GrupoUltimaBaza.add(MazoCentralApoyo[2].cartilla);
+					BRILHDFUSO.push(YBVSVUGPJG[2].TNFAGGMKXD);
+					HAJIKEVCFP.push(YBVSVUGPJG[2].TNFAGGMKXD);
+					OYOANGYTVY(YBVSVUGPJG[2].TNFAGGMKXD);					
+					WWFSQDQYYU.add(YBVSVUGPJG[2].TNFAGGMKXD);
 				}
 	//	log(false,"fin RECOJO CARTA 3");
 		}
@@ -3362,80 +3362,80 @@ EfectosRecogerCartas3=function(){
 }
 
 
-EfectosRecogerCartas4=function(RondaParam,turnoParam){
-	//for (i=0;i<=MazoCentralApoyo.length-1;i++){
+EfectosRecogerCartas4=function(TKWCTNGROU,LDCCGSIBKW){
+	//for (i=0;i<=YBVSVUGPJG.length-1;i++){
 	//log(false,"se mete 4");
-		if (MazoCentralApoyo.length>=4){
+		if (YBVSVUGPJG.length>=4){
 				
-			MostrarReverso(MazoCentralApoyo[3].cartilla);
+			XNFDNBQFUA(YBVSVUGPJG[3].TNFAGGMKXD);
 			//log(false,"RECOJO CARTA 4");
 		//	log(false,"Quiere Robar...");
-			if (BazaNuestraGlobal==true){
-					DesHabilitarClick(MazoCentralApoyo[3].cartilla);
-					tw1 = game_objeto.add.tween(MazoCentralApoyo[3].cartilla);
-					tw1.to( {x:devuelveX("ULTIMA_Baza",0)
-					,y:devuelveY("ULTIMA_Baza",0),//game_objeto.world.height- MazoCentralApoyo[MazoCentralApoyo.length-1].cartilla.width,
+			if (PPTWRPRLSI==true){
+					VRLYJAAHUE(YBVSVUGPJG[3].TNFAGGMKXD);
+					PQUFIBKJJH = YMHIHSNADE.add.tween(YBVSVUGPJG[3].TNFAGGMKXD);
+					PQUFIBKJJH.to( {x:WIEVLYANFM("ULTIMA_Baza",0)
+					,y:FIGQBSJQGA("ULTIMA_Baza",0),//YMHIHSNADE.world.height- YBVSVUGPJG[YBVSVUGPJG.length-1].TNFAGGMKXD.width,
 					angle:Math.floor(Math.random() * 360) + 1  
 					}
-					, vVelocidadCartasReordernar, EfectoTween1);
+					, MDYSFNYPYP, KYFMRVNHIQ);
 					
 					
 			
-					if (Mazo.length>0){
-						tw1.onComplete.add(//RobarCartas1,this)
+					if (FXGSEGRXKC.length>0){
+						PQUFIBKJJH.onComplete.add(//CGCMEMLMAG,this)
 							function () {
-							ForzarCambio7(RondaParam,turnoParam);
-							MazoRecogido.push(MazoCentralApoyo[3].cartilla)
-							UltimaBazaNuestra.push(MazoCentralApoyo[3].cartilla);
-							HabilitarVerUltimaBaza(MazoCentralApoyo[3].cartilla);
-							GrupoUltimaBaza.add(MazoCentralApoyo[3].cartilla);
-							//RobarCartas1(RondaParam,turnoParam); //Truco para poder pasar por parámetro
+							PPYGSSQBDV(TKWCTNGROU,LDCCGSIBKW);
+							KBESPOUXUK.push(YBVSVUGPJG[3].TNFAGGMKXD)
+							XYRJNHOCRB.push(YBVSVUGPJG[3].TNFAGGMKXD);
+							OYOANGYTVY(YBVSVUGPJG[3].TNFAGGMKXD);
+							WWFSQDQYYU.add(YBVSVUGPJG[3].TNFAGGMKXD);
+							//CGCMEMLMAG(TKWCTNGROU,LDCCGSIBKW); //Truco para poder pasar por parámetro
 						}
 						);
 					}
 					else
 					{
 						log(false,"se debería meter aquí");
-						MazoRecogido.push(MazoCentralApoyo[3].cartilla)
-						UltimaBazaNuestra.push(MazoCentralApoyo[3].cartilla);
-						HabilitarVerUltimaBaza(MazoCentralApoyo[3].cartilla);
-						GrupoUltimaBaza.add(MazoCentralApoyo[3].cartilla);
-						tw1.onComplete.add( function(){ EliminarDeLaMesa(RondaParam)} )
+						KBESPOUXUK.push(YBVSVUGPJG[3].TNFAGGMKXD)
+						XYRJNHOCRB.push(YBVSVUGPJG[3].TNFAGGMKXD);
+						OYOANGYTVY(YBVSVUGPJG[3].TNFAGGMKXD);
+						WWFSQDQYYU.add(YBVSVUGPJG[3].TNFAGGMKXD);
+						PQUFIBKJJH.onComplete.add( function(){ DFCCHCJBNP(TKWCTNGROU)} )
 					}
-					tw1.start();
+					PQUFIBKJJH.start();
 					
 				
 				}
 				else{
-					DesHabilitarClick(MazoCentralApoyo[3].cartilla);
-					tw1 = game_objeto.add.tween(MazoCentralApoyo[3].cartilla);
-					tw1.to( {x:devuelveX("ULTIMA_Baza_Rival",0)
-					,y:devuelveY("ULTIMA_Baza_Rival",0),//0+ MazoCentralApoyo[MazoCentralApoyo.length-1].cartilla.width,
+					VRLYJAAHUE(YBVSVUGPJG[3].TNFAGGMKXD);
+					PQUFIBKJJH = YMHIHSNADE.add.tween(YBVSVUGPJG[3].TNFAGGMKXD);
+					PQUFIBKJJH.to( {x:WIEVLYANFM("ULTIMA_Baza_Rival",0)
+					,y:FIGQBSJQGA("ULTIMA_Baza_Rival",0),//0+ YBVSVUGPJG[YBVSVUGPJG.length-1].TNFAGGMKXD.width,
 					angle:Math.floor(Math.random() * 360) + 1  
 					}
-					, vVelocidadCartasReordernar, EfectoTween1);
-					if (Mazo.length>0){
-						tw1.onComplete.add(//RobarCartas1,this)
+					, MDYSFNYPYP, KYFMRVNHIQ);
+					if (FXGSEGRXKC.length>0){
+						PQUFIBKJJH.onComplete.add(//CGCMEMLMAG,this)
 							function () {
-							ForzarCambio7(RondaParam,turnoParam);
-							MazoRecogidoRival.push(MazoCentralApoyo[3].cartilla);
-							UltimaBazaRival.push(MazoCentralApoyo[3].cartilla);
-							HabilitarVerUltimaBaza(MazoCentralApoyo[3].cartilla);
-							GrupoUltimaBaza.add(MazoCentralApoyo[3].cartilla);
-							//RobarCartas1(RondaParam,turnoParam); //Truco para poder pasar por parámetro
+							PPYGSSQBDV(TKWCTNGROU,LDCCGSIBKW);
+							BRILHDFUSO.push(YBVSVUGPJG[3].TNFAGGMKXD);
+							HAJIKEVCFP.push(YBVSVUGPJG[3].TNFAGGMKXD);
+							OYOANGYTVY(YBVSVUGPJG[3].TNFAGGMKXD);
+							WWFSQDQYYU.add(YBVSVUGPJG[3].TNFAGGMKXD);
+							//CGCMEMLMAG(TKWCTNGROU,LDCCGSIBKW); //Truco para poder pasar por parámetro
 						}
 						);
 					}	
 					else
 					{
 						log(false,"o aquí");
-						MazoRecogidoRival.push(MazoCentralApoyo[3].cartilla);
-						UltimaBazaRival.push(MazoCentralApoyo[3].cartilla);
-						HabilitarVerUltimaBaza(MazoCentralApoyo[3].cartilla);
-						GrupoUltimaBaza.add(MazoCentralApoyo[3].cartilla);
-						tw1.onComplete.add( function(){ EliminarDeLaMesa(RondaParam)})
+						BRILHDFUSO.push(YBVSVUGPJG[3].TNFAGGMKXD);
+						HAJIKEVCFP.push(YBVSVUGPJG[3].TNFAGGMKXD);
+						OYOANGYTVY(YBVSVUGPJG[3].TNFAGGMKXD);
+						WWFSQDQYYU.add(YBVSVUGPJG[3].TNFAGGMKXD);
+						PQUFIBKJJH.onComplete.add( function(){ DFCCHCJBNP(TKWCTNGROU)})
 					}					
-					tw1.start();
+					PQUFIBKJJH.start();
 					
 								
 			
@@ -3444,81 +3444,81 @@ EfectosRecogerCartas4=function(RondaParam,turnoParam){
 		}
 		
 		
-		//MazoCentralApoyo.splice(0,4);
+		//YBVSVUGPJG.splice(0,4);
 		
 }
 
-ForzarCambio7=function(RondaParam,turnoParam){
+PPYGSSQBDV=function(TKWCTNGROU,LDCCGSIBKW){
 	var i;
-	var Encontrada=false;
-	var JugadorMueve;
-	var CartaCambiar;
-	var LetraMazo;
+	var LSKPLOTYIB=false;
+	var EYCRTUIDMY;
+	var BQJIVKRBLA;
+	var UBWRXKMTQN;
 	
 	
-	for (i=0;i<=MazoD.length-1;i++){
-		if (MazoD[i].palo==Triunfo && MazoD[i].valor==7)
+	for (i=0;i<=AGKVNAGGLB.length-1;i++){
+		if (AGKVNAGGLB[i].SGCSHJVERI==TGTQPBEQFR && AGKVNAGGLB[i].HVCFEWNDRF==7)
 		{
-			Encontrada=true;
-			CartaCambiar= MazoD[i].cartilla.name;
-			LetraMazo="D";
+			LSKPLOTYIB=true;
+			BQJIVKRBLA= AGKVNAGGLB[i].TNFAGGMKXD.name;
+			UBWRXKMTQN="D";
 		}
 	}
 
-	for (i=0;i<=MazoR.length-1;i++){
-		if (MazoR[i].palo==Triunfo && MazoR[i].valor==7)
+	for (i=0;i<=CBCNHFGWLU.length-1;i++){
+		if (CBCNHFGWLU[i].SGCSHJVERI==TGTQPBEQFR && CBCNHFGWLU[i].HVCFEWNDRF==7)
 		{
-			Encontrada=true;
-			CartaCambiar= MazoR[i].cartilla.name;
-			LetraMazo="R";
+			LSKPLOTYIB=true;
+			BQJIVKRBLA= CBCNHFGWLU[i].TNFAGGMKXD.name;
+			UBWRXKMTQN="R";
 		}
 	}
 	
-	for (i=0;i<=MazoU.length-1;i++){
-		if (MazoU[i].palo==Triunfo && MazoU[i].valor==7)
+	for (i=0;i<=TWJONOKGHC.length-1;i++){
+		if (TWJONOKGHC[i].SGCSHJVERI==TGTQPBEQFR && TWJONOKGHC[i].HVCFEWNDRF==7)
 		{
-			Encontrada=true;
-			CartaCambiar= MazoU[i].cartilla.name;
-			LetraMazo="U";
+			LSKPLOTYIB=true;
+			BQJIVKRBLA= TWJONOKGHC[i].TNFAGGMKXD.name;
+			UBWRXKMTQN="U";
 		}
 	}
 	
-	for (i=0;i<=MazoL.length-1;i++){
-		if (MazoL[i].palo==Triunfo && MazoL[i].valor==7)
+	for (i=0;i<=KNVKGHHTYC.length-1;i++){
+		if (KNVKGHHTYC[i].SGCSHJVERI==TGTQPBEQFR && KNVKGHHTYC[i].HVCFEWNDRF==7)
 		{
-			Encontrada=true;
-			CartaCambiar= MazoL[i].cartilla.name;
-			LetraMazo="L";
+			LSKPLOTYIB=true;
+			BQJIVKRBLA= KNVKGHHTYC[i].TNFAGGMKXD.name;
+			UBWRXKMTQN="L";
 		}
 	}
 		
-	JugadorMueve=DevuelveJugadorSegunMazo(LetraMazo);
-	log(false,"La vRonda es " + RondaParam);
-	if (Encontrada==true && CartaTriunfo[0].valorReal>7 && RondaParam==5 &&  (  (BazaNuestraGlobal==true && (LetraMazo=="D" || LetraMazo=="U"))  ||  (BazaNuestraGlobal==false && (LetraMazo=="L" || LetraMazo=="R") )     )  ){
-		log(false,"Carta a cambiar "+CartaCambiar);
-		Cambiar7Ajeno(JugadorMueve,CartaCambiar,RondaParam,turnoParam); //Aprovecho la función Cambiar7Ajeno para los cambios forzados de última vRonda
-			//Debo arrastrar RondaParam,turnoParam porque lo usa RobarCartas1
+	EYCRTUIDMY=JHIEHWIMCB(UBWRXKMTQN);
+	log(false,"La LUCRWXJMDR es " + TKWCTNGROU);
+	if (LSKPLOTYIB==true && FBSDMRLVEL[0].VVRCMEUNOJ>7 && TKWCTNGROU==5 &&  (  (PPTWRPRLSI==true && (UBWRXKMTQN=="D" || UBWRXKMTQN=="U"))  ||  (PPTWRPRLSI==false && (UBWRXKMTQN=="L" || UBWRXKMTQN=="R") )     )  ){
+		log(false,"TVYNYTCQYW a cambiar "+BQJIVKRBLA);
+		NPOUCHQXMY(EYCRTUIDMY,BQJIVKRBLA,TKWCTNGROU,LDCCGSIBKW); //Aprovecho la función NPOUCHQXMY para los cambios forzados de última LUCRWXJMDR
+			//Debo arrastrar TKWCTNGROU,LDCCGSIBKW porque lo usa CGCMEMLMAG
 		
 	
 	}
 	else
 	{
-		RobarCartas1(RondaParam,turnoParam);
+		CGCMEMLMAG(TKWCTNGROU,LDCCGSIBKW);
 	}
 
 }
 
 
-EscribirTextoGuay=function(Texto,Tamano) {
+IEUIUCYUCC=function(RPHWVBBGIM,Tamano) {
 
 	var text;
 	var grd;
 	
 
-	text = game_objeto.add.text(0, 0, Texto);
+	text = YMHIHSNADE.add.text(0, 0, RPHWVBBGIM);
 	
-	text.x=game_objeto.world.centerX;
-	text.y=game_objeto.world.centerY
+	text.x=YMHIHSNADE.world.centerX;
+	text.y=YMHIHSNADE.world.centerY
 	
 	text.anchor.set(0.5);
     text.align = 'center';
@@ -3539,22 +3539,22 @@ EscribirTextoGuay=function(Texto,Tamano) {
 }
 
 
-RondaFinalizada=function(){
+BKBXOKMUUQ=function(){
 	
-	FinalizandoPartida=true; //1.0.8 Para controlar que si alguien desconecta no reparte echando leches (onsocketdesconectado)
-	LimpiandoPartida();
+	JHHWEKWEJK=true; //1.0.8 Para controlar que si alguien desconecta no reparte echando leches (onsocketdesconectado)
+	BRJIESNORM();
 	
 	
-	if (ModoMultijugador==true)
+	if (EGPDVIEJEL==true)
 	{
-		socket.emit('abre_sala_jugador', Habitacion,socket.id) ;
+		socket.emit('TXCYFYXTAI', DFBVDPETGO,socket.id) ;
 	}
 	
 	
-	if (SonVueltas==false)
+	if (EVAILWGGKX==false)
 	{		
 		
-		Recuento();
+		SYJLVBWPIM();
 	}
 
 }
@@ -3562,419 +3562,419 @@ RondaFinalizada=function(){
 
 
 
-Recuento=function(){
-	var Texto;
-	var TextoFormateado;
+SYJLVBWPIM=function(){
+	var RPHWVBBGIM;
+	var UYEUYIYECB;
 	log(true,"A contar..");
 
 	
-	ReproducirSonido('_Contar');	
-	TextoFormateado=EscribirTextoGuay("Â¡Â¡ A Contar !!",60);
+	EABXADHEVT('CAGCUMKBGA');	
+	UYEUYIYECB=IEUIUCYUCC("Â¡Â¡ A Contar !!",60);
 	
 	
-	twRec1 = game_objeto.add.tween(TextoFormateado).to( { x: game_objeto.world.centerX }, 800, EfectoTweenRebote);
-	twRec1.onComplete.add(
+	BDEFDQUJJE = YMHIHSNADE.add.tween(UYEUYIYECB).to( { x: YMHIHSNADE.world.centerX }, 800, QUXNHVVDDK);
+	BDEFDQUJJE.onComplete.add(
 		function (){
-			twRec2 = game_objeto.add.tween(TextoFormateado).to( { alpha: 0 }, 1000, EfectoTween1, false);
-			twRec2.onComplete.add(MueveRecogidasAlCentro,this);	
-			twRec2.start();
+			CKOUBGTDUF = YMHIHSNADE.add.tween(UYEUYIYECB).to( { alpha: 0 }, 1000, KYFMRVNHIQ, false);
+			CKOUBGTDUF.onComplete.add(SGVESYATVX,this);	
+			CKOUBGTDUF.start();
 		}		
 	);
-	twRec1.start();
-	log(true,"Recuento");
+	BDEFDQUJJE.start();
+	log(true,"SYJLVBWPIM");
 }
 
-MueveRecogidasAlCentro=function(){
+SGVESYATVX=function(){
 	
 	var i;
 	
-	//for (i=MazoRecogido.length-1;i>=0;i--)
-	log(false,"LLega a MueveRecogidasAlCentro");
-	if (MazoRecogido.length>0)
+	//for (i=KBESPOUXUK.length-1;i>=0;i--)
+	log(false,"LLega a SGVESYATVX");
+	if (KBESPOUXUK.length>0)
 	{
-		for (i=0;i<=MazoRecogido.length-1;i++)
+		for (i=0;i<=KBESPOUXUK.length-1;i++)
 		{
-			//MazoRecogido[i].moveDown();
-			DeshabilitarVerUltimaBaza(MazoRecogido[i])
-			MazoRecogido[i].bringToTop();
+			//KBESPOUXUK[i].moveDown();
+			UJTKROLWWS(KBESPOUXUK[i])
+			KBESPOUXUK[i].bringToTop();
 		}
 		
-		for (i=0;i<=MazoRecogidoRival.length-1;i++)
+		for (i=0;i<=BRILHDFUSO.length-1;i++)
 		{
 			
-			DeshabilitarVerUltimaBaza(MazoRecogidoRival[i])
+			UJTKROLWWS(BRILHDFUSO[i])
 			
 		}
 		
 		
-		for (i=MazoRecogido.length-1;i>=0;i--)
+		for (i=KBESPOUXUK.length-1;i>=0;i--)
 		{
-			//MazoRecogido[MazoRecogido.length-1].bringToTop();
+			//KBESPOUXUK[KBESPOUXUK.length-1].bringToTop();
 			
-			twRec2 = game_objeto.add.tween(MazoRecogido[i]);
-				twRec2.to( {x:game_objeto.world.centerX
-				,y:game_objeto.world.height-MazoRecogido[i].height//-MazoRecogido[i].width  //MazoRecogido[i].height-
+			CKOUBGTDUF = YMHIHSNADE.add.tween(KBESPOUXUK[i]);
+				CKOUBGTDUF.to( {x:YMHIHSNADE.world.centerX
+				,y:YMHIHSNADE.world.height-KBESPOUXUK[i].height//-KBESPOUXUK[i].width  //KBESPOUXUK[i].height-
 				,angle:0
-				}, 600, EfectoTween2);
+				}, 600, BSXWFYLCEW);
 			
 			if (i==0){
-				twRec2.onComplete.add(MueveParaContar,this)
+				CKOUBGTDUF.onComplete.add(MBCDQIAWIE,this)
 			}
 			
-			twRec2.start();
+			CKOUBGTDUF.start();
 				
-			twRec3 = game_objeto.add.tween(MazoRecogido[i].scale);
-			twRec3.to( {x:vEscalaUltimaBaza
-			,y:vEscalaUltimaBaza
+			JLFYUAKDIJ = YMHIHSNADE.add.tween(KBESPOUXUK[i].scale);
+			JLFYUAKDIJ.to( {x:XQNKTFDREN
+			,y:XQNKTFDREN
 			});		
-			twRec3.start();
+			JLFYUAKDIJ.start();
 				
 		}
 	}
 	else
 	{
-		CrearTextoPuntuacion();
+		WWAYLOUPUQ();
 	}
 }
 
-MueveParaContar=function(){
+MBCDQIAWIE=function(){
 		
 		var i;
 		
 
 		
-		if (MazoRecogido.length>0)
+		if (KBESPOUXUK.length>0)
 		{
-			MazoRecogido[MazoRecogido.length-1].bringToTop();
-			MostrarAnverso(MazoRecogido[MazoRecogido.length-1]);
-			//log(false,"debe mover "+MazoRecogido[MazoRecogido.length-1].name);
-			twRec2 = game_objeto.add.tween(MazoRecogido[MazoRecogido.length-1]);
-				twRec2.to( {x:game_objeto.world.centerX
-				,y: game_objeto.world.centerY-100, //0+(MazoRecogido[MazoRecogido.length-1].height)*2, //  CentroIrreal,  //MazoRecogido[i].height-
+			KBESPOUXUK[KBESPOUXUK.length-1].bringToTop();
+			NAYBJTKIKA(KBESPOUXUK[KBESPOUXUK.length-1]);
+			//log(false,"debe mover "+KBESPOUXUK[KBESPOUXUK.length-1].name);
+			CKOUBGTDUF = YMHIHSNADE.add.tween(KBESPOUXUK[KBESPOUXUK.length-1]);
+				CKOUBGTDUF.to( {x:YMHIHSNADE.world.centerX
+				,y: YMHIHSNADE.world.centerY-100, //0+(KBESPOUXUK[KBESPOUXUK.length-1].height)*2, //  PXEBTYBHGS,  //KBESPOUXUK[i].height-
 				angle:  Math.round(Math.random() * (180) - 45)//Math.floor(Math.random() * 90 ) + 1
-				}, 50, EfectoTween1); //1.0.8 Pasa de 100 a 50 milisegundos
+				}, 50, KYFMRVNHIQ); //1.0.8 Pasa de 100 a 50 milisegundos
 			
-			if (MazoRecogido.length>1)
+			if (KBESPOUXUK.length>1)
 			{
-				twRec2.onComplete.add(
+				CKOUBGTDUF.onComplete.add(
 				function () {
-					MazoRecogido[MazoRecogido.length-1].moveUp();
-					MazoRecogidoApoyo.push(MazoRecogido[MazoRecogido.length-1]);
-					ReproducirSonido('_Reparto');
-					MazoRecogido.pop();
-					MueveParaContar()
+					KBESPOUXUK[KBESPOUXUK.length-1].moveUp();
+					JLOISTPAPQ.push(KBESPOUXUK[KBESPOUXUK.length-1]);
+					EABXADHEVT('WWYKUMYJBJ');
+					KBESPOUXUK.pop();
+					MBCDQIAWIE()
 				},this)
 			}
 			else
 			{
-				twRec2.onComplete.add(
+				CKOUBGTDUF.onComplete.add(
 				function () {
-					MazoRecogidoApoyo.push(MazoRecogido[MazoRecogido.length-1]);
-					ReproducirSonido('_Reparto');
-					MazoRecogido.pop();
-					MueveParaContar()
-					MueveParaBarajar();
+					JLOISTPAPQ.push(KBESPOUXUK[KBESPOUXUK.length-1]);
+					EABXADHEVT('WWYKUMYJBJ');
+					KBESPOUXUK.pop();
+					MBCDQIAWIE()
+					JHKJWHCKWE();
 				},this)
 			}
-			twRec2.start();
+			CKOUBGTDUF.start();
 
 		}
 }
 
 
-MueveParaBarajar=function(){
+JHKJWHCKWE=function(){
 	var i;
-	var MoverX;
-	var MoverY;
-	var posicionMazoGanador;
-	var BazaNuestraConCartas=false;
+	var NYXTITDLCT;
+	var LGEVGUTGIL;
+	var BKDAVGJUHM;
+	var AONEAOAEKM=false;
 	
-	if (MazoRecogidoApoyo.length>0)
+	if (JLOISTPAPQ.length>0)
 	{
-		BazaNuestraConCartas=true;
+		AONEAOAEKM=true;
 	}
 	
 	
-	posicionMazoGanador=DevuelveUbicacionCarta(vTurno);
-	if(posicionMazoGanador=="D")
+	BKDAVGJUHM=HHOPUSIABJ(DVNRTQIWGL);
+	if(BKDAVGJUHM=="D")
 	{
-		MoverX=game_objeto.world.centerX;
-		MoverY=game_objeto.world.height+(MazoRecogidoApoyo[MazoRecogidoApoyo.length-1].height*2);
+		NYXTITDLCT=YMHIHSNADE.world.centerX;
+		LGEVGUTGIL=YMHIHSNADE.world.height+(JLOISTPAPQ[JLOISTPAPQ.length-1].height*2);
 	}
 
-	if(posicionMazoGanador=="U")
+	if(BKDAVGJUHM=="U")
 	{
-		MoverX=game_objeto.world.centerX;
-		MoverY=0-(MazoRecogidoApoyo[MazoRecogidoApoyo.length-1].height*2);
+		NYXTITDLCT=YMHIHSNADE.world.centerX;
+		LGEVGUTGIL=0-(JLOISTPAPQ[JLOISTPAPQ.length-1].height*2);
 	}	
 	
-	if(posicionMazoGanador=="L")
+	if(BKDAVGJUHM=="L")
 	{
-		MoverX=0-(MazoRecogidoApoyo[MazoRecogidoApoyo.length-1].width*2);
-		MoverY=CentroIrreal;
+		NYXTITDLCT=0-(JLOISTPAPQ[JLOISTPAPQ.length-1].width*2);
+		LGEVGUTGIL=PXEBTYBHGS;
 	}	
 
-	if(posicionMazoGanador=="R")
+	if(BKDAVGJUHM=="R")
 	{
-		MoverX=game_objeto.world.width+(MazoRecogidoApoyo[MazoRecogidoApoyo.length-1].width*2);
-		MoverY=CentroIrreal;
+		NYXTITDLCT=YMHIHSNADE.world.width+(JLOISTPAPQ[JLOISTPAPQ.length-1].width*2);
+		LGEVGUTGIL=PXEBTYBHGS;
 	}		
 	
-	log(false,"Tamaño Rival "+MazoRecogidoRival.length);
-	log(false,"Tamaño Apoyo "+MazoRecogidoApoyo.length);
-	if (MazoRecogidoRival.length>0)
+	log(false,"Tamaño YOBEPVEEMW "+BRILHDFUSO.length);
+	log(false,"Tamaño Apoyo "+JLOISTPAPQ.length);
+	if (BRILHDFUSO.length>0)
 	{
-		for (i=0;i<=MazoRecogidoRival.length-1;i++)
+		for (i=0;i<=BRILHDFUSO.length-1;i++)
 		{
-				twRec1 = game_objeto.add.tween(MazoRecogidoRival[i]);
-				twRec1.to( {x:MoverX
-				,y:MoverY,  			
-				}, 1000, EfectoTween2,false,500);			
+				BDEFDQUJJE = YMHIHSNADE.add.tween(BRILHDFUSO[i]);
+				BDEFDQUJJE.to( {x:NYXTITDLCT
+				,y:LGEVGUTGIL,  			
+				}, 1000, BSXWFYLCEW,false,500);			
 
-				if (BazaNuestraConCartas==false && i==MazoRecogidoRival.length-1)
+				if (AONEAOAEKM==false && i==BRILHDFUSO.length-1)
 				{
-					twRec1.onComplete.add(CrearTextoPuntuacion,this);
+					BDEFDQUJJE.onComplete.add(WWAYLOUPUQ,this);
 				}
 				
-				twRec1.start();
+				BDEFDQUJJE.start();
 		}	
 	}
 	
-	if (MazoRecogidoApoyo.length>0)
+	if (JLOISTPAPQ.length>0)
 	{
-		for (i=0;i<=MazoRecogidoApoyo.length-1;i++)
+		for (i=0;i<=JLOISTPAPQ.length-1;i++)
 		{
-				twRec2 = game_objeto.add.tween(MazoRecogidoApoyo[i]);
-				twRec2.to( {x:MoverX
-				,y:MoverY,  //MazoRecogidoApoyo[i].height-
+				CKOUBGTDUF = YMHIHSNADE.add.tween(JLOISTPAPQ[i]);
+				CKOUBGTDUF.to( {x:NYXTITDLCT
+				,y:LGEVGUTGIL,  //JLOISTPAPQ[i].height-
 				
-				}, 1000, EfectoTween2,false,500);
+				}, 1000, BSXWFYLCEW,false,500);
 				
-				if (BazaNuestraConCartas==true && i==MazoRecogidoApoyo.length-1)
+				if (AONEAOAEKM==true && i==JLOISTPAPQ.length-1)
 				{
-					twRec2.onComplete.add(CrearTextoPuntuacion,this);
+					CKOUBGTDUF.onComplete.add(WWAYLOUPUQ,this);
 				}				
 				
-				twRec2.start();
+				CKOUBGTDUF.start();
 		}
 	}
 	else{		
-		CrearTextoPuntuacion();
+		WWAYLOUPUQ();
 	}
 }
 
-CrearTextoPuntuacion=function() {
+WWAYLOUPUQ=function() {
 	
 	var text;
 	var text2;
     //  You can either set the tab size in the style object:
-	var TextoNuestro;
-	var TextoRival;
-	var RealmenteFinaliza;
-	var TiempoStop;
+	var MLFDVPXWYK;
+	var DSCVVNAYWK;
+	var OUENWKLUUA;
+	var QJUYVEJMEB;
 	
-	FinalizandoPartida=true; //1.0.8 Para controlar que si alguien desconecta no reparte echando leches (onsocketdesconectado)
+	JHHWEKWEJK=true; //1.0.8 Para controlar que si alguien desconecta no reparte echando leches (onsocketdesconectado)
 	
-	timerturno.stop();
+	HUUCUYFBLW.stop();
 	
 	MostrarTodasCartas();
-	//console.log("Texto puntuacion");
-	if (ValidaTextoPuntuacionJugador()==true)
+	//console.log("RPHWVBBGIM puntuacion");
+	if (HGFAUFDVDF()==true)
 	{
 		
-		if (SonVueltas==false)
+		if (EVAILWGGKX==false)
 		{
-			TiempoStop=0;
+			QJUYVEJMEB=0;
 		}
 		else
 		{
-			TiempoStop=2000;
+			QJUYVEJMEB=2000;
 		}
-		var	timer = game_objeto.time.create(false);
-		timer.add(TiempoStop, function()
+		var	TKXPPGUPVV = YMHIHSNADE.time.create(false);
+		TKXPPGUPVV.add(QJUYVEJMEB, function()
 		{
 		
 		
-			TextMarcador.visible=false;
-			TextTituloMarcador.visible=false;
-			var TurnoActual=vTurno;
+			ATTUXTNNKX.visible=false;
+			XQDPVWOUII.visible=false;
+			var SQIRFQMWSL=DVNRTQIWGL;
 
-			//game_objeto.tweens.pauseAll(); 
-			LimpiarSprites();
+			//YMHIHSNADE.tweens.pauseAll(); 
+			UIYIUCHWUH();
 			
 			
 			if (socket.id!=undefined)
 			{
-				if (ArrayInfoJugador.length>0)
+				if (PWMIBRSDCJ.length>0)
 				{
-					var JugadorPubli=ArrayInfoJugador[0].Nombre;
-					var JugadorFullPubli=ArrayInfoJugador[0].ProveedorID + '-'+ ArrayInfoJugador[0].RedSocial;
-					socket.emit('enviar_peticion_publicidad', socket.id,Version,ObjetoG) ;
+					var JugadorPubli=PWMIBRSDCJ[0].WWKVHIMWYD;
+					var JugadorFullPubli=PWMIBRSDCJ[0].FFRVOEAXTF + '-'+ PWMIBRSDCJ[0].BDYYDTFQAO;
+					socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
 				}
 				else
 				{
-					socket.emit('enviar_peticion_publicidad', socket.id,Version,ObjetoG) ;
+					socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
 				}
 				
 			}
 				
 			//CRITICO
-			if (BazaNuestraGlobal==true){
-				if (SonVueltas==false)
+			if (PPTWRPRLSI==true){
+				if (EVAILWGGKX==false)
 				{
-					MarcadorNuestro=MarcadorNuestro+10;
+					UHHXSNXXJK=UHHXSNXXJK+10;
 				}
 			}
 			else
 			{
-				if (SonVueltas==false)
+				if (EVAILWGGKX==false)
 				{
-					MarcadorRival=MarcadorRival+10;
+					PXGXKDDNFK=PXGXKDDNFK+10;
 				}
 			}
 			
 			
-			if (MarcadorNuestro>=PuntosGanar || MarcadorRival>=PuntosGanar)
+			if (UHHXSNXXJK>=JLVDFTPUNI || PXGXKDDNFK>=JLVDFTPUNI)
 			{
 				
-				RealmenteFinaliza=true;
+				OUENWKLUUA=true;
 			}
 			else
 			{
-				RealmenteFinaliza=false;
+				OUENWKLUUA=false;
 				
 			}
 			
 
-			if (SonVueltas==true)
+			if (EVAILWGGKX==true)
 			{
-				SonVueltas=false;	
+				EVAILWGGKX=false;	
 			}
 			else
 			{
-				SonVueltas=true;	
+				EVAILWGGKX=true;	
 			}
 			
-			if (RealmenteFinaliza==true)
+			if (OUENWKLUUA==true)
 			{
-				SonVueltas=false;	
-				LimpiandoPartida();
+				EVAILWGGKX=false;	
+				BRJIESNORM();
 			}
 			
 
 			
 			
-			if (MarcadorNuestro>50){
-				TextoNuestro=MarcadorNuestro-50 + " Buenas";
+			if (UHHXSNXXJK>50){
+				MLFDVPXWYK=UHHXSNXXJK-50 + " Buenas";
 			}
 			else{
-				TextoNuestro=MarcadorNuestro+ " Malas";	
+				MLFDVPXWYK=UHHXSNXXJK+ " Malas";	
 			}
 			
-			if (MarcadorRival>50){
-				TextoRival=MarcadorRival-50 + " Buenas";
+			if (PXGXKDDNFK>50){
+				DSCVVNAYWK=PXGXKDDNFK-50 + " Buenas";
 			}
 			else{
-				TextoRival=MarcadorRival+ " Malas";	
+				DSCVVNAYWK=PXGXKDDNFK+ " Malas";	
 			}	
 			
-			TextMarcador.text=TextoNuestro+"\n"+TextoRival;
+			ATTUXTNNKX.text=MLFDVPXWYK+"\n"+DSCVVNAYWK;
 				
-			TextoCampeon="Â¡Â¡ Vamos de vueltas !!";
-			if (MarcadorNuestro>=PuntosGanar && MarcadorRival>=PuntosGanar)
+			KMHMNPUINK="Â¡Â¡ Vamos de vueltas !!";
+			if (UHHXSNXXJK>=JLVDFTPUNI && PXGXKDDNFK>=JLVDFTPUNI)
 			{
-				if (BazaNuestraGlobal==true){
-					MarcadorPartidasNuestro++;
-					GrabarResultado(SoyElJugador,(MarcadorPartidasNuestro+MarcadorPartidasRival-1),SonVueltas,1,false,false,false,false);
-					//console.log("1. Marcador Nuestro: "+MarcadorPartidasNuestro+" Marcador Rival: "+MarcadorPartidasRival);
-					if (MarcadorPartidasNuestro==PartidasCoto)
+				if (PPTWRPRLSI==true){
+					JVQXQGYDHH++;
+					WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL-1),EVAILWGGKX,1,false,false,false,false);
+					//console.log("1. EXOQTFOAQQ VIYQDHWIAA: "+JVQXQGYDHH+" EXOQTFOAQQ YOBEPVEEMW: "+CNCCBHQJKL);
+					if (JVQXQGYDHH==MFENMIFPUA)
 					{
-						TextoCampeon="Â¡Â¡ Ganamos la partida y el coto !!";
-						ReproducirSonido("_Campeones");
+						KMHMNPUINK="Â¡Â¡ Ganamos la partida y el coto !!";
+						EABXADHEVT("JCGKEWDJBQ");
 					}
 					else
 					{
-						TextoCampeon="Â¡Â¡ Ganamos la partida !!";
-						ReproducirSonido("_Campeones");
+						KMHMNPUINK="Â¡Â¡ Ganamos la partida !!";
+						EABXADHEVT("JCGKEWDJBQ");
 					}
 					
 				}
 				else
 				{
-					MarcadorPartidasRival++;
-					GrabarResultado(SoyElJugador,(MarcadorPartidasNuestro+MarcadorPartidasRival-1),SonVueltas,2,false,false,false,false);
-					//console.log("2. Marcador Nuestro: "+MarcadorPartidasNuestro+" Marcador Rival: "+MarcadorPartidasRival);
-					if (MarcadorPartidasRival==PartidasCoto)
+					CNCCBHQJKL++;
+					WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL-1),EVAILWGGKX,2,false,false,false,false);
+					//console.log("2. EXOQTFOAQQ VIYQDHWIAA: "+JVQXQGYDHH+" EXOQTFOAQQ YOBEPVEEMW: "+CNCCBHQJKL);
+					if (CNCCBHQJKL==MFENMIFPUA)
 					{
-						TextoCampeon="Â¡Â¡ Otra vez serÃ¡. Hicieron las 10 Ãºltimas. Perdimos el coto  :(  !!";
-						ReproducirSonido("_OtraVezSera");
+						KMHMNPUINK="Â¡Â¡ Otra vez serÃ¡. Hicieron las 10 Ãºltimas. Perdimos el coto  :(  !!";
+						EABXADHEVT("YURJWRGUNO");
 					}
 					else
 					{
-						TextoCampeon="Hemos perdido. Ellos hicieron las 10 Ãºltimas. Â¡Â¡ A por ellos !!";
-						ReproducirSonido("_OtraVezSera");
+						KMHMNPUINK="Hemos perdido. Ellos hicieron las 10 Ãºltimas. Â¡Â¡ A por ellos !!";
+						EABXADHEVT("YURJWRGUNO");
 					}
 					
 				}
 			}
 			else
 			{
-				if(MarcadorNuestro>=PuntosGanar)
+				if(UHHXSNXXJK>=JLVDFTPUNI)
 				{
-					MarcadorPartidasNuestro++;
-					GrabarResultado(SoyElJugador,(MarcadorPartidasNuestro+MarcadorPartidasRival-1),SonVueltas,1,false,false,false,false);
-					//console.log("3. Marcador Nuestro: "+MarcadorPartidasNuestro+" Marcador Rival: "+MarcadorPartidasRival);
-					if (MarcadorPartidasNuestro==PartidasCoto)
+					JVQXQGYDHH++;
+					WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL-1),EVAILWGGKX,1,false,false,false,false);
+					//console.log("3. EXOQTFOAQQ VIYQDHWIAA: "+JVQXQGYDHH+" EXOQTFOAQQ YOBEPVEEMW: "+CNCCBHQJKL);
+					if (JVQXQGYDHH==MFENMIFPUA)
 					{
-						TextoCampeon="Â¡Â¡ Ganamos la partida y el coto !!";
-						ContadorNoticia=0;
-						ReproducirSonido("_Campeones");						
+						KMHMNPUINK="Â¡Â¡ Ganamos la partida y el coto !!";
+						ISVLSNLHWR=0;
+						EABXADHEVT("JCGKEWDJBQ");						
 					}
 					else
 					{
-						TextoCampeon="Â¡Â¡ Ganamos la partida !!";
-						ReproducirSonido("_Campeones");
+						KMHMNPUINK="Â¡Â¡ Ganamos la partida !!";
+						EABXADHEVT("JCGKEWDJBQ");
 					}
 					
 					
 				}
-				if(MarcadorRival>=PuntosGanar)
+				if(PXGXKDDNFK>=JLVDFTPUNI)
 				{
 					
-					MarcadorPartidasRival++;
-					GrabarResultado(SoyElJugador,(MarcadorPartidasNuestro+MarcadorPartidasRival-1),SonVueltas,2,false,false,false,false);
-					//console.log("4. Marcador Nuestro: "+MarcadorPartidasNuestro+" Marcador Rival: "+MarcadorPartidasRival);
+					CNCCBHQJKL++;
+					WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL-1),EVAILWGGKX,2,false,false,false,false);
+					//console.log("4. EXOQTFOAQQ VIYQDHWIAA: "+JVQXQGYDHH+" EXOQTFOAQQ YOBEPVEEMW: "+CNCCBHQJKL);
 					
-					if (MarcadorPartidasRival==PartidasCoto)
+					if (CNCCBHQJKL==MFENMIFPUA)
 					{
-						TextoCampeon="Â¡Â¡ Otra vez serÃ¡. Perdimos el coto  :(  !!";
-						ContadorNoticia=0;
-						ReproducirSonido("_OtraVezSera");						
+						KMHMNPUINK="Â¡Â¡ Otra vez serÃ¡. Perdimos el coto  :(  !!";
+						ISVLSNLHWR=0;
+						EABXADHEVT("YURJWRGUNO");						
 					}
 					else
 					{
-						TextoCampeon="Hemos perdido la partida. Â¡Â¡ A por ellos !!";
-						ReproducirSonido("_OtraVezSera");
+						KMHMNPUINK="Hemos perdido la partida. Â¡Â¡ A por ellos !!";
+						EABXADHEVT("YURJWRGUNO");
 					}
 				}
 			}
 			
 			
 			
-			if (MarcadorPartidasNuestro==PartidasCoto || MarcadorPartidasRival==PartidasCoto )
+			if (JVQXQGYDHH==MFENMIFPUA || CNCCBHQJKL==MFENMIFPUA )
 			{
 				var imagenFin;
 			
-				if (ModoMultijugador==true)
+				if (EGPDVIEJEL==true)
 				{
 					if (socket.id!=undefined)
 					{
-						socket.emit("NoResta", socket.id,Habitacion);
+						socket.emit("UIEWYIIWIW", socket.id,DFBVDPETGO);
 					}
 				}
 
 
-				if (MarcadorPartidasNuestro==PartidasCoto)
+				if (JVQXQGYDHH==MFENMIFPUA)
 				{
 					imagenFin='Copa';
 				}
@@ -3983,14 +3983,14 @@ CrearTextoPuntuacion=function() {
 					imagenFin='Perder';
 				}
 				
-				var Copa=game_objeto.add.sprite(game_objeto.world.width+500,game_objeto.world.centerY, imagenFin);
+				var Copa=YMHIHSNADE.add.sprite(YMHIHSNADE.world.width+500,YMHIHSNADE.world.centerY, imagenFin);
 				Copa.anchor.setTo(0.5,0.5);
 				
-				twRec1=game_objeto.add.tween(Copa).to( { x: game_objeto.world.centerX }, 1000, EfectoTweenRebote,true);
-				twRec1.onComplete.add(
+				BDEFDQUJJE=YMHIHSNADE.add.tween(Copa).to( { x: YMHIHSNADE.world.centerX }, 1000, QUXNHVVDDK,true);
+				BDEFDQUJJE.onComplete.add(
 					function (){
-						 ReproducirSonido("_CotoTerminado");
-						 game_objeto.add.tween(Copa).to( { alpha:0 }, 0, EfectoTween1, true, 3000);
+						 EABXADHEVT("TSYFNOWESC");
+						 YMHIHSNADE.add.tween(Copa).to( { alpha:0 }, 0, KYFMRVNHIQ, true, 3000);
 					}		
 				);
 				
@@ -4000,11 +4000,11 @@ CrearTextoPuntuacion=function() {
 			
 			
 			
-				text = game_objeto.add.text(game_objeto.world.centerX, game_objeto.world.centerY, TextoCampeon);
+				text = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY, KMHMNPUINK);
 				text.anchor.setTo(0.5,0.5);
 				
-				text.x=game_objeto.world.centerX;
-				text.y=game_objeto.world.centerY;
+				text.x=YMHIHSNADE.world.centerX;
+				text.y=YMHIHSNADE.world.centerY;
 				
 				text.anchor.set(0.5);
 				text.align = 'center';
@@ -4022,60 +4022,60 @@ CrearTextoPuntuacion=function() {
 				text.boundsAlignV= "middle";
 				
 				
-				twRec1 = game_objeto.add.tween(text).to( { alpha: 0 }, 1000, EfectoTween1, true,2000);
-				twRec1.onComplete.add(
+				BDEFDQUJJE = YMHIHSNADE.add.tween(text).to( { alpha: 0 }, 1000, KYFMRVNHIQ, true,2000);
+				BDEFDQUJJE.onComplete.add(
 					function()
 					{
 					
 							var y = document.getElementById("Clasificacion").rows[1].cells;
-							y[1].innerHTML = TextoNuestro;
-							y[2].innerHTML = MarcadorPartidasNuestro;
+							y[1].innerHTML = MLFDVPXWYK;
+							y[2].innerHTML = JVQXQGYDHH;
 							
 							var y = document.getElementById("Clasificacion").rows[2].cells;
-							y[1].innerHTML = TextoRival;
-							y[2].innerHTML = MarcadorPartidasRival;		
+							y[1].innerHTML = DSCVVNAYWK;
+							y[2].innerHTML = CNCCBHQJKL;		
 							
 							var d=document.getElementById('DivResultado');
 							d.style.display = 'block';
 							//d.style.zIndex=-100;
 							
-							if (RealmenteFinaliza==true)
+							if (OUENWKLUUA==true)
 							{
-								MarcadorNuestro=0;
-								MarcadorRival=0;
+								UHHXSNXXJK=0;
+								PXGXKDDNFK=0;
 
-								//LimpiarVariables();
+								//QSAXUCPASV();
 							}
 							//console.log("en este punto");
-							twRec2 = game_objeto.add.tween(text).to( { alpha: 0 }, 0, EfectoTween1, true,3000);
-							twRec2.onComplete.add( 
+							CKOUBGTDUF = YMHIHSNADE.add.tween(text).to( { alpha: 0 }, 0, KYFMRVNHIQ, true,3000);
+							CKOUBGTDUF.onComplete.add( 
 							
 								function()
 								{
 								
-									//var timer = game_objeto.time.create(false);
-									//timer.add(3000, function(){
+									//var TKXPPGUPVV = YMHIHSNADE.time.create(false);
+									//TKXPPGUPVV.add(3000, function(){
 							
 											var d=document.getElementById('DivResultado');
 											d.style.display = 'none';
 											//d.style.zIndex=-1;
 												
 												//console.log("deberia saltar");
-												if (MarcadorPartidasNuestro==PartidasCoto || MarcadorPartidasRival==PartidasCoto)
+												if (JVQXQGYDHH==MFENMIFPUA || CNCCBHQJKL==MFENMIFPUA)
 												{
-													MatarConexionDeMentira();
+													JHKWHCWKWC();
 
 												}
 												
 												else
 												{
 												
-													if (1==1) //ValidaTextoPuntuacionJugador()==true)
+													if (1==1) //HGFAUFDVDF()==true)
 													{	
-														SemaforoRepartos.splice(0,100);
-														SemaforoTextoPuntuacion.splice(0,100);
+														DCOXIXEBRJ.splice(0,100);
+														JEHYBALODM.splice(0,100);
 														//console.log("entra");
-														NuevaPartida(TurnoActual);
+														KPQSPDMKJE(SQIRFQMWSL);
 														
 														
 
@@ -4093,7 +4093,7 @@ CrearTextoPuntuacion=function() {
 								} 
 									
 							);
-								//timer.start();	
+								//TKXPPGUPVV.start();	
 								
 							
 							
@@ -4103,11 +4103,11 @@ CrearTextoPuntuacion=function() {
 			
 				);	
 		});	
-		timer.start();
+		TKXPPGUPVV.start();
 	}
 	else
 	{
-		//alert("grrr "+SoyElJugador);
+		//alert("grrr "+TFSXFTYVGQ);
 	}
 }
 
@@ -4115,335 +4115,335 @@ MatarConexion=function()
 {	
 	if (socket.id!=undefined)
 	{
-		MuestraErrorDesconexion=false;
+		YTUGCWECJC=false;
 		try
 		{
 			socket.disconnect();
 			//socket=null; //1.0.8 ivan
-			Habitacion=Math.floor(Math.random());
+			DFBVDPETGO=Math.floor(Math.random());
 		}
 		catch(e){}
 	}
-	Habitacion=Math.floor(Math.random()); //1.0.8 y lo de atrÃ¡s que he comentado
+	DFBVDPETGO=Math.floor(Math.random()); //1.0.8 y lo de atrÃ¡s que he comentado
 	
-	IntentaConexionInicial=true;
-	game_objeto.state.start("Level");
-	//ConectaServidor(); //1.0.8 Si no fallaba la consulta del rÃ¡nking desde logindesdeweb
+	PWGIQBBAWX=true;
+	YMHIHSNADE.state.start("Level");
+	//XEMENNVXGV(); //1.0.8 Si no fallaba la consulta del rÃ¡nking desde logindesdeweb
 }
 
 
-MatarConexionDeMentira=function()
+JHKWHCWKWC=function()
 {	
 
-	Habitacion=Math.floor(Math.random()); //1.0.8 y lo de atrÃ¡s que he comentado
+	DFBVDPETGO=Math.floor(Math.random()); //1.0.8 y lo de atrÃ¡s que he comentado
 	
-	IntentaConexionInicial=true;
-	game_objeto.state.start("Level");
-	//ConectaServidor(); //1.0.8 Si no fallaba la consulta del rÃ¡nking desde logindesdeweb
+	PWGIQBBAWX=true;
+	YMHIHSNADE.state.start("Level");
+	//XEMENNVXGV(); //1.0.8 Si no fallaba la consulta del rÃ¡nking desde logindesdeweb
 }
 
-LimpiarSprites=function(){
+UIYIUCHWUH=function(){
 	
 	var i;
 	
-	ObjTurnoR.visible=false;
-	ObjTurnoL.visible=false;
-	ObjTurnoU.visible=false;
-	ObjTurnoD.visible=false;
+	GJHWUYGCBN.visible=false;
+	BNVUWCOWEC.visible=false;
+	UYIUYIUYIU.visible=false;
+	DHJGJHGWCY.visible=false;
 	
-	for (i=0;i<=Mazo.length-1;i++)
+	for (i=0;i<=FXGSEGRXKC.length-1;i++)
 	{
-		Mazo[i].cartilla.destroy();
+		FXGSEGRXKC[i].TNFAGGMKXD.destroy();
 	}
 
-	for (i=0;i<=MazoR.length-1;i++)
+	for (i=0;i<=CBCNHFGWLU.length-1;i++)
 	{
-		MazoR[i].cartilla.destroy();
+		CBCNHFGWLU[i].TNFAGGMKXD.destroy();
 	}
 
-	for (i=0;i<=MazoL.length-1;i++)
+	for (i=0;i<=KNVKGHHTYC.length-1;i++)
 	{
-		MazoL[i].cartilla.destroy();
+		KNVKGHHTYC[i].TNFAGGMKXD.destroy();
 	}
 
-	for (i=0;i<=MazoU.length-1;i++)
+	for (i=0;i<=TWJONOKGHC.length-1;i++)
 	{
-		MazoU[i].cartilla.destroy();
+		TWJONOKGHC[i].TNFAGGMKXD.destroy();
 	}
-	for (i=0;i<=MazoD.length-1;i++)
+	for (i=0;i<=AGKVNAGGLB.length-1;i++)
 	{
-		MazoD[i].cartilla.destroy();
+		AGKVNAGGLB[i].TNFAGGMKXD.destroy();
 	}
 
 
-	for (i=0;i<=MazoCentral.length-1;i++)
+	for (i=0;i<=VDKOVQXHON.length-1;i++)
 	{
-		MazoCentral[i].cartilla.destroy();
+		VDKOVQXHON[i].TNFAGGMKXD.destroy();
 	}
 
 	
-	for (i=0;i<=MazoCentralApoyo.length-1;i++)
+	for (i=0;i<=YBVSVUGPJG.length-1;i++)
 	{
-		MazoCentralApoyo[i].cartilla.destroy();
+		YBVSVUGPJG[i].TNFAGGMKXD.destroy();
 	}
 	
-	for (i=0;i<=CartaTriunfo.length-1;i++)
+	for (i=0;i<=FBSDMRLVEL.length-1;i++)
 	{
-		CartaTriunfo[i].cartilla.destroy();
+		FBSDMRLVEL[i].TNFAGGMKXD.destroy();
 	}
 
-	for (i=0;i<=MazoRecogido.length-1;i++)
+	for (i=0;i<=KBESPOUXUK.length-1;i++)
 	{
-		MazoRecogido[i].destroy();
+		KBESPOUXUK[i].destroy();
 	}
 
-	for (i=0;i<=MazoRecogidoRival.length-1;i++)
+	for (i=0;i<=BRILHDFUSO.length-1;i++)
 	{
-		MazoRecogidoRival[i].destroy();
+		BRILHDFUSO[i].destroy();
 	}
 
 
-	Mazo.splice(0,100);
-	MazoR.splice(0,100);
-	MazoL.splice(0,100);
-	MazoU.splice(0,100);
-	MazoD.splice(0,100);
-	MazoCentral.splice(0,100);
-	MazoCentralApoyo.splice(0,100);
-	MazoCentralApoyo.splice(0,100);
-	CartaTriunfo.splice(0,100);
-	MazoRecogido.splice(0,100);
-	MazoRecogidoRival.splice(0,100);
+	FXGSEGRXKC.splice(0,100);
+	CBCNHFGWLU.splice(0,100);
+	KNVKGHHTYC.splice(0,100);
+	TWJONOKGHC.splice(0,100);
+	AGKVNAGGLB.splice(0,100);
+	VDKOVQXHON.splice(0,100);
+	YBVSVUGPJG.splice(0,100);
+	YBVSVUGPJG.splice(0,100);
+	FBSDMRLVEL.splice(0,100);
+	KBESPOUXUK.splice(0,100);
+	BRILHDFUSO.splice(0,100);
 	
 }
 		
-LimpiarVariables=function(){
+QSAXUCPASV=function(){
 
 var i;
 
 vNoEsta=false;
-FinalizandoPartida=false; //1.0.8
+JHHWEKWEJK=false; //1.0.8
 
-Noticia.visible=false;
-TextMarcador.visible=false;
-TextTituloMarcador.visible=false;
-BotonCantar.visible=false;
-BotonSiete.visible=false;
-textoContador.text="";
+BUJELVTIKU.visible=false;
+ATTUXTNNKX.visible=false;
+XQDPVWOUII.visible=false;
+IEQDMBJCAY.visible=false;
+YGTNAODFHW.visible=false;
+YJNIRPCWEI.text="";
 
-//game_objeto.tweens.pauseAll(); 
-ObjTurnoR.visible=false;
-ObjTurnoL.visible=false;
-ObjTurnoU.visible=false;
-ObjTurnoD.visible=false;
+//YMHIHSNADE.tweens.pauseAll(); 
+GJHWUYGCBN.visible=false;
+BNVUWCOWEC.visible=false;
+UYIUYIUYIU.visible=false;
+DHJGJHGWCY.visible=false;
 
 if (inputField!=undefined)
 {
 	inputField.visible=false;
 }
 log(true,"Limpiando variables..");
-for (i=0;i<=Mazo.length-1;i++)
+for (i=0;i<=FXGSEGRXKC.length-1;i++)
 {
-	Mazo[i].cartilla.destroy();
+	FXGSEGRXKC[i].TNFAGGMKXD.destroy();
 }
 
-for (i=0;i<=MazoR.length-1;i++)
+for (i=0;i<=CBCNHFGWLU.length-1;i++)
 {
-	MazoR[i].cartilla.destroy();
+	CBCNHFGWLU[i].TNFAGGMKXD.destroy();
 }
 
-for (i=0;i<=MazoL.length-1;i++)
+for (i=0;i<=KNVKGHHTYC.length-1;i++)
 {
-	MazoL[i].cartilla.destroy();
+	KNVKGHHTYC[i].TNFAGGMKXD.destroy();
 }
 
-for (i=0;i<=MazoU.length-1;i++)
+for (i=0;i<=TWJONOKGHC.length-1;i++)
 {
-	MazoU[i].cartilla.destroy();
+	TWJONOKGHC[i].TNFAGGMKXD.destroy();
 }
-for (i=0;i<=MazoD.length-1;i++)
+for (i=0;i<=AGKVNAGGLB.length-1;i++)
 {
-	MazoD[i].cartilla.destroy();
-}
-
-
-for (i=0;i<=MazoCentral.length-1;i++)
-{
-	MazoCentral[i].cartilla.destroy();
+	AGKVNAGGLB[i].TNFAGGMKXD.destroy();
 }
 
 
-for (i=0;i<=MazoCentralApoyo.length-1;i++)
+for (i=0;i<=VDKOVQXHON.length-1;i++)
 {
-	MazoCentralApoyo[i].cartilla.destroy();
+	VDKOVQXHON[i].TNFAGGMKXD.destroy();
 }
 
-for (i=0;i<=CartaTriunfo.length-1;i++)
+
+for (i=0;i<=YBVSVUGPJG.length-1;i++)
 {
-	CartaTriunfo[i].cartilla.destroy();
+	YBVSVUGPJG[i].TNFAGGMKXD.destroy();
 }
 
-for (i=0;i<=MazoRecogido.length-1;i++)
+for (i=0;i<=FBSDMRLVEL.length-1;i++)
 {
-	MazoRecogido[i].destroy();
+	FBSDMRLVEL[i].TNFAGGMKXD.destroy();
 }
 
-for (i=0;i<=MazoRecogidoRival.length-1;i++)
+for (i=0;i<=KBESPOUXUK.length-1;i++)
 {
-	MazoRecogidoRival[i].destroy();
+	KBESPOUXUK[i].destroy();
 }
 
-//BotonCantar.visible=false;
-//BotonSiete.visible=false;
-BotonCantar.loadTexture('Boton_cantar_off', 0);
-BotonSiete.loadTexture('Boton_cambiar_7_off', 0);
+for (i=0;i<=BRILHDFUSO.length-1;i++)
+{
+	BRILHDFUSO[i].destroy();
+}
 
-ArrayAccionesDesconexiones.splice(0,1000); //1.0.6
-Mazo.splice(0,100);
-MazoEnviar.splice(0,100);
-MazoR.splice(0,100);
-MazoL.splice(0,100);
-MazoU.splice(0,100);
-MazoD.splice(0,100);
-Mazoposiciones.splice(0,100);
-MazoCentral.splice(0,100);
-MazoCentralApoyo.splice(0,100);
-MazoCentralBuffer.splice(0,100);
-MazoCentralBufferEspecial7.splice(0,100);
-CartaTriunfo.splice(0,100);
-MazoRecogido.splice(0,100);
-MazoRecogidoApoyo.splice(0,100);
-MazoRecogidoRival.splice(0,100);
-SemaforoRondas.splice(0,100);
-SemaforoRondasRapido.splice(0,100);
-SemaforoAvatars.splice(0,100);
-vRonda=1;
-RondaJugada.splice(0,100);
-BazaNuestraGlobal=false;
-RegistrarCantes.splice(0,100);
-UltimaBazaNuestra.splice(0,100);
-UltimaBazaRival.splice(0,100);
-ArrayDescartePosible.splice(0,100);
-ArrayOKParejas.splice(0,100);
+//IEQDMBJCAY.visible=false;
+//YGTNAODFHW.visible=false;
+IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);
+YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);
+
+NBEJWDVLLV.splice(0,1000); //1.0.6
+FXGSEGRXKC.splice(0,100);
+WUHRYVMYBE.splice(0,100);
+CBCNHFGWLU.splice(0,100);
+KNVKGHHTYC.splice(0,100);
+TWJONOKGHC.splice(0,100);
+AGKVNAGGLB.splice(0,100);
+ETAUVLWEYR.splice(0,100);
+VDKOVQXHON.splice(0,100);
+YBVSVUGPJG.splice(0,100);
+WSHPROHDIV.splice(0,100);
+TTJKWKBPWO.splice(0,100);
+FBSDMRLVEL.splice(0,100);
+KBESPOUXUK.splice(0,100);
+JLOISTPAPQ.splice(0,100);
+BRILHDFUSO.splice(0,100);
+KTBOJTXFEU.splice(0,100);
+XYXCEMMRDC.splice(0,100);
+BSFNXQXOTD.splice(0,100);
+LUCRWXJMDR=1;
+KKPQLKMIQR.splice(0,100);
+PPTWRPRLSI=false;
+FOQUJVEYFC.splice(0,100);
+XYRJNHOCRB.splice(0,100);
+HAJIKEVCFP.splice(0,100);
+LSJCRLDUCH.splice(0,100);
+NKJHKJHHHE.splice(0,100);
 
 log(true,"Fin limpiando variables..");
 }
 
-LimpiarVariablesConexionNueva=function()
+WNEWPCNXPA=function()
 {
 	
 	vNoEsta=false;
-	FinalizandoPartida=false; //1.0.8
-	//game_objeto.tweens.pauseAll(); 
-	ObjTurnoR.visible=false;
-	ObjTurnoL.visible=false;
-	ObjTurnoU.visible=false;
-	ObjTurnoD.visible=false;
+	JHHWEKWEJK=false; //1.0.8
+	//YMHIHSNADE.tweens.pauseAll(); 
+	GJHWUYGCBN.visible=false;
+	BNVUWCOWEC.visible=false;
+	UYIUYIUYIU.visible=false;
+	DHJGJHGWCY.visible=false;
 	
 	
 	log(true,"Limpiando variables conexiÃ³n nueva..");
-	Habitacion=Math.floor(Math.random());
-	OcultaClasificacion();
+	DFBVDPETGO=Math.floor(Math.random());
+	YJEISFVFQY();
 	
-	SemaforoRepartos.splice(0,100);
-	SemaforoTextoPuntuacion.splice(0,100);
+	DCOXIXEBRJ.splice(0,100);
+	JEHYBALODM.splice(0,100);
 	
-	//LogicalTapeteRemoto=false;
-	//LogicalDorsoRemoto=false;
-	ArrayAccionesDesconexiones.splice(0,1000); //1.0.6
-	TextMarcador.visible=false;
-	TextTituloMarcador.visible=false;
-	textoContador.text="";
-	BotonCantar.visible=false;
-	BotonSiete.visible=false;
+	//NHLRWTHYVG=false;
+	//VKYLOUGFGR=false;
+	NBEJWDVLLV.splice(0,1000); //1.0.6
+	ATTUXTNNKX.visible=false;
+	XQDPVWOUII.visible=false;
+	YJNIRPCWEI.text="";
+	IEQDMBJCAY.visible=false;
+	YGTNAODFHW.visible=false;
 	
-	MarcadorNuestro=0;
-	MarcadorRival=0;
-	MarcadorPartidasNuestro=0;
-	MarcadorPartidasRival=0;
-	ArrayDelaPropiaSala.splice(0,1000);
-	ArrayJugadoresDesconectados.splice(0,1000);
+	UHHXSNXXJK=0;
+	PXGXKDDNFK=0;
+	JVQXQGYDHH=0;
+	CNCCBHQJKL=0;
+	XPBCVAGCDQ.splice(0,1000);
+	KYDWXPGHVY.splice(0,1000);
 	//ArrayJugadoresDesconectadosID.splice(0,1000);
-	SemaforoRondasRapido.splice(0,1000);
-	ArrayChatDeshabilitado.splice(0,1000);
-	ArrayOKParejas.splice(0,100);
+	XYXCEMMRDC.splice(0,1000);
+	QLNEIQGEDF.splice(0,1000);
+	NKJHKJHHHE.splice(0,100);
 	
-	QuienTomaElControl=0;
-	PartidaComenzada=false;
-	SonVueltas=false;
-	vRonda=1;
-	vTurno=1
+	ESKTEXAVHU=0;
+	MYQBNBVHKU=false;
+	EVAILWGGKX=false;
+	LUCRWXJMDR=1;
+	DVNRTQIWGL=1
 	
 	
 }
 
-NuevaPartida=function(TurnoActual)
+KPQSPDMKJE=function(SQIRFQMWSL)
 {
 	var i;
-	var ReparteEnSuNombre;
+	var LHRDGYYJLJ;
 	//console.log("repartiendo");
 	
-	var QuienReparte=TurnoActual; //ILA QuienReparte he puesto el var
+	var RDBQUAVHEP=SQIRFQMWSL; //ILA RDBQUAVHEP he puesto el var
 	
 	
-	if (ModoMultijugador==false)
+	if (EGPDVIEJEL==false)
 	{
 			//console.log("entra a repartir");
-			CrearBaraja(QuienReparte);	
+			ETKKAJPFXQ(RDBQUAVHEP);	
 	}
 	else
 	{		
 	
-		//1.0.6 if (MazoD.length==0 && MazoCentral.length==0 && MazoL.length==0 && MazoR.length==0 && ArrayDelaPropiaSala.length>=4)
-		//	if (MazoD.length==0 && MazoCentral.length==0 && MazoL.length==0 && MazoR.length==0 && ArrayDelaPropiaSala.length>=4)
+		//1.0.6 if (AGKVNAGGLB.length==0 && VDKOVQXHON.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && XPBCVAGCDQ.length>=4)
+		//	if (AGKVNAGGLB.length==0 && VDKOVQXHON.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && XPBCVAGCDQ.length>=4)
 		//{
 			//console.log("DE VUELTASSSS. EnvÃ­o la bataja y limpio variables");
 			
 			
-			//console.log("Turno actual: "+TurnoActual+" vTurno: "+vTurno+" Toma el control: "+QuienTomaElControl+" Soy: "+SoyElJugador+" Reparte "+QuienReparte);
-			if (QuienReparte==SoyElJugador || QuienTomaElControl==SoyElJugador)
+			//console.log("Turno actual: "+SQIRFQMWSL+" DVNRTQIWGL: "+DVNRTQIWGL+" Toma el control: "+ESKTEXAVHU+" Soy: "+TFSXFTYVGQ+" Reparte "+RDBQUAVHEP);
+			if (RDBQUAVHEP==TFSXFTYVGQ || ESKTEXAVHU==TFSXFTYVGQ)
 			{
 				
-				ReparteEnSuNombre=false;
-				for (i=0;i<=ArrayJugadoresDesconectados.length-1;i++)
+				LHRDGYYJLJ=false;
+				for (i=0;i<=KYDWXPGHVY.length-1;i++)
 				{
-					if (ArrayJugadoresDesconectados[i].Jugador==QuienReparte)
+					if (KYDWXPGHVY[i].SSUNXNEEHN==RDBQUAVHEP)
 					{
-						ReparteEnSuNombre=true;
+						LHRDGYYJLJ=true;
 					}
 					
 				}
 				
-				if (QuienReparte==SoyElJugador || ReparteEnSuNombre==true)
+				if (RDBQUAVHEP==TFSXFTYVGQ || LHRDGYYJLJ==true)
 				{
-					//console.log("Yo creo la baraja. Por cierto soy.. "+SoyElJugador+" y reparte "+QuienReparte);
+					//console.log("Yo creo la baraja. Por cierto soy.. "+TFSXFTYVGQ+" y reparte "+RDBQUAVHEP);
 					
-					if (ValidaRepartosJugador()==true) //1.0.8
+					if (OSBTHSJKFW()==true) //1.0.8
 					{
-						CrearBaraja(QuienReparte);	
+						ETKKAJPFXQ(RDBQUAVHEP);	
 						
-						log(false,MazoEnviar.length);
+						log(false,WUHRYVMYBE.length);
 						//log(false,"ROOM "+socket.room);
-						if (ModoMultijugador==true)
+						if (EGPDVIEJEL==true)
 						{
 							log(true,"... y la envÃ­o")
-							log(true,"EnvÃ­o que reparte: "+QuienReparte);
-							EnviarBaraja(MazoEnviar,Habitacion,QuienReparte,SonVueltas,ArrayDelaPropiaSala,(MarcadorPartidasNuestro+MarcadorPartidasRival));	
+							log(true,"EnvÃ­o que reparte: "+RDBQUAVHEP);
+							HKJWHCKHWQ(WUHRYVMYBE,DFBVDPETGO,RDBQUAVHEP,EVAILWGGKX,XPBCVAGCDQ,(JVQXQGYDHH+CNCCBHQJKL));	
 						}
 					}
 				}
 			}
 			//else
 			//{
-				/*if(MazoEnviarApoyo.length>0)
+				/*if(SXFHAGTGJT.length>0)
 				{
-					CrearBarajaRecibida(MazoEnviarApoyo,QuienReparte,true)
+					CLWUDOTYHT(SXFHAGTGJT,RDBQUAVHEP,true)
 				}*/
 				
 				//1.0.4
-				//if (ModoMultijugador==false)
+				//if (EGPDVIEJEL==false)
 				//{
-				//	CrearBaraja(QuienReparte);	
+				//	ETKKAJPFXQ(RDBQUAVHEP);	
 				//}
 				
 				//AQUI
@@ -4451,19 +4451,19 @@ NuevaPartida=function(TurnoActual)
 		}
 	//}
 }
-	//QuienReparte=4;
-	//vTurno=0;
-LimpiandoPartida=function()
+	//RDBQUAVHEP=4;
+	//DVNRTQIWGL=0;
+BRJIESNORM=function()
 {
-	textoContador.text="";
-	PartidaComenzada=false;
-	timerturno.stop();
-	//BotonCantar.visible=false;		
-	//BotonSiete.visible=false;	
-	BotonCantar.loadTexture('Boton_cantar_off', 0);
-	BotonSiete.loadTexture('Boton_cambiar_7_off', 0);
-	BotonCantar.visible=false;
-	BotonSiete.visible=false;
+	YJNIRPCWEI.text="";
+	MYQBNBVHKU=false;
+	HUUCUYFBLW.stop();
+	//IEQDMBJCAY.visible=false;		
+	//YGTNAODFHW.visible=false;	
+	IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);
+	YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);
+	IEQDMBJCAY.visible=false;
+	YGTNAODFHW.visible=false;
 }	
 
 
@@ -4473,140 +4473,140 @@ LimpiandoPartida=function()
 
 
 
-HabilitarVerUltimaBaza=function(sprite)
+OYOANGYTVY=function(sprite)
 {
 	sprite.inputEnabled = true;
 	sprite.input.disableDrag();
-	sprite.events.onInputDown.add(MuestraUltimaBaza);
+	sprite.events.onInputDown.add(GJFQTBUCRH);
 	
 }
 
-DeshabilitarVerUltimaBaza=function(sprite)
+UJTKROLWWS=function(sprite)
 {
 	sprite.inputEnabled = false;
 	//sprite.input.disableDrag();
-	//sprite.events.onInputDown.add(MuestraUltimaBaza);
+	//sprite.events.onInputDown.add(GJFQTBUCRH);
 	
 }
 
-MuestraUltimaBaza=function(sprite){
-	log(false,"mostrando última Baza");
+GJFQTBUCRH=function(sprite){
+	log(false,"mostrando última SRCGCMADME");
 	var i;
-	var VerUltimaBaza="Nuestro"
-	var Encontrado=false;
-	var MazoMostrarTemp;
-	MazoMostrar=[];
+	var CMWUMHNEHK="VIYQDHWIAA"
+	var VEFCIYHBGC=false;
+	var EDLRWACYRF;
+	GEFUYWBVWG=[];
 	
 	if (1==1)
 	{
 	
-		for (i=0;i<=MazoRecogido.length-1;i++)
+		for (i=0;i<=KBESPOUXUK.length-1;i++)
 		{
-			MazoRecogido[i].bringToTop();
-			if (sprite.name==MazoRecogido[i].name)
+			KBESPOUXUK[i].bringToTop();
+			if (sprite.name==KBESPOUXUK[i].name)
 			{
-				Encontrado=true;
-				VerUltimaBaza="Nuestro";
+				VEFCIYHBGC=true;
+				CMWUMHNEHK="VIYQDHWIAA";
 				break;
 			}
 		}	
 		
-		if (Encontrado==true){
-			MazoMostrarTemp=UltimaBazaNuestra;
+		if (VEFCIYHBGC==true){
+			EDLRWACYRF=XYRJNHOCRB;
 		}
 		else
 		{
-			for (i=0;i<=MazoRecogidoRival.length-1;i++)
+			for (i=0;i<=BRILHDFUSO.length-1;i++)
 			{
-				if (sprite.name==MazoRecogidoRival[i].name)
+				if (sprite.name==BRILHDFUSO[i].name)
 				{
-					Encontrado=true;
-					VerUltimaBaza="Rival";
+					VEFCIYHBGC=true;
+					CMWUMHNEHK="YOBEPVEEMW";
 					break;
 				}
 			}	
 			
-			if (Encontrado==true){
-				MazoMostrarTemp=UltimaBazaRival;
+			if (VEFCIYHBGC==true){
+				EDLRWACYRF=HAJIKEVCFP;
 			}
 		
 		}
 		
 		//Para evitar que se pare la recogida de cartas
-		for (i=0;i<=MazoMostrarTemp.length-1;i++)
+		for (i=0;i<=EDLRWACYRF.length-1;i++)
 		{
-			MazoMostrar.push(MazoMostrarTemp[i]);
-			GrupoUltimaBaza.add(MazoMostrar[i])
-			MostrarAnverso(MazoMostrar[i]);
-			MazoMostrar[i].bringToTop();
+			GEFUYWBVWG.push(EDLRWACYRF[i]);
+			WWFSQDQYYU.add(GEFUYWBVWG[i])
+			NAYBJTKIKA(GEFUYWBVWG[i]);
+			GEFUYWBVWG[i].bringToTop();
 		}
 		
 
 		
 		
-		//GrupoUltimaBaza.bringToTop();
+		//WWFSQDQYYU.bringToTop();
 		//log(false,"ENC"+ sprite.name);
-		if (Encontrado==true)
+		if (VEFCIYHBGC==true)
 		{
 
-		for(i=0;i<=MazoCentral.length-1;i++)
+		for(i=0;i<=VDKOVQXHON.length-1;i++)
 		{
-			MazoCentral[i].cartilla.alpha=0.2;
+			VDKOVQXHON[i].TNFAGGMKXD.alpha=0.2;
 		}
 		
 		
 			//log(false,"NO ENC");
-			twUB1 = game_objeto.add.tween(MazoMostrar[0].scale);
-			twUB1.to( {x:vEscalaUltimaBaza
-			,y:vEscalaUltimaBaza,
+			twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[0].scale);
+			twUB1.to( {x:XQNKTFDREN
+			,y:XQNKTFDREN,
 			angle:0  
 			}
-			, vVelocidadCartasReordernar, EfectoTween1);
+			, MDYSFNYPYP, KYFMRVNHIQ);
 			twUB1.start();			
 			
-			twUB1 = game_objeto.add.tween(MazoMostrar[0]);
-			twUB1.to( {x:game_objeto.world.centerX
-			,y:CentroIrreal,
+			twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[0]);
+			twUB1.to( {x:YMHIHSNADE.world.centerX
+			,y:PXEBTYBHGS,
 			angle:0  
 			}
-			, vVelocidadCartasReordernar, EfectoTween1);
+			, MDYSFNYPYP, KYFMRVNHIQ);
 			twUB1.start();		
 		
 
 
-		twUB1 = game_objeto.add.tween(MazoMostrar[1].scale);
-			twUB1.to( {x:vEscalaUltimaBaza
-			,y:vEscalaUltimaBaza,
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[1].scale);
+			twUB1.to( {x:XQNKTFDREN
+			,y:XQNKTFDREN,
 			angle:0  
 			}
-			, vVelocidadCartasReordernar, EfectoTween1);
+			, MDYSFNYPYP, KYFMRVNHIQ);
 			twUB1.start();			
 			
-		twUB1 = game_objeto.add.tween(MazoMostrar[1]);
-			twUB1.to( {x:game_objeto.world.centerX+(AnchoCarta*1)+(vSeparacion)
-			,y:CentroIrreal,
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[1]);
+			twUB1.to( {x:YMHIHSNADE.world.centerX+(COIVBWRMCC*1)+(YAJVUBPNNW)
+			,y:PXEBTYBHGS,
 			angle:0  
 			}
-			, vVelocidadCartasReordernar, EfectoTween1);
+			, MDYSFNYPYP, KYFMRVNHIQ);
 			twUB1.start();		
 		
 
 		
 		
-			twUB1 = game_objeto.add.tween(MazoMostrar[2].scale);
-			twUB1.to( {x:vEscalaUltimaBaza
-			,y:vEscalaUltimaBaza,
+			twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[2].scale);
+			twUB1.to( {x:XQNKTFDREN
+			,y:XQNKTFDREN,
 			angle:0  
 			}
-			, vVelocidadCartasReordernar, EfectoTween1);
+			, MDYSFNYPYP, KYFMRVNHIQ);
 			twUB1.start();			
 			
-		twUB1 = game_objeto.add.tween(MazoMostrar[2]);
-			twUB1.to( {x:game_objeto.world.centerX+(AnchoCarta*2)+(vSeparacion*2)
-			,y:CentroIrreal,
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[2]);
+			twUB1.to( {x:YMHIHSNADE.world.centerX+(COIVBWRMCC*2)+(YAJVUBPNNW*2)
+			,y:PXEBTYBHGS,
 			angle:0  
 			}
-			, vVelocidadCartasReordernar, EfectoTween1);
+			, MDYSFNYPYP, KYFMRVNHIQ);
 			twUB1.start();		
 		
 		
@@ -4614,22 +4614,22 @@ MuestraUltimaBaza=function(sprite){
 
 		
 		
-			twUB1 = game_objeto.add.tween(MazoMostrar[3].scale);
-			twUB1.to( {x:vEscalaUltimaBaza
-			,y:vEscalaUltimaBaza,
+			twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[3].scale);
+			twUB1.to( {x:XQNKTFDREN
+			,y:XQNKTFDREN,
 			angle:0  
 			}
-			, vVelocidadCartasReordernar, EfectoTween1);
+			, MDYSFNYPYP, KYFMRVNHIQ);
 			twUB1.start();			
 			
-			twUB1 = game_objeto.add.tween(MazoMostrar[3]);
-			twUB1.to( {x:game_objeto.world.centerX+(AnchoCarta*3)+(vSeparacion*3)
-			,y:CentroIrreal,
+			twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[3]);
+			twUB1.to( {x:YMHIHSNADE.world.centerX+(COIVBWRMCC*3)+(YAJVUBPNNW*3)
+			,y:PXEBTYBHGS,
 			angle:0  
 			}
-			, vVelocidadCartasReordernar, EfectoTween1);
+			, MDYSFNYPYP, KYFMRVNHIQ);
 			twUB1.onComplete.add( function(){
-				EfectoHacerPequenasUltimaBaza(MazoMostrar,VerUltimaBaza);
+				JKKJHKHSWV(GEFUYWBVWG,CMWUMHNEHK);
 				}
 			);
 			twUB1.start();		
@@ -4642,43 +4642,43 @@ MuestraUltimaBaza=function(sprite){
 
 
 
-EfectoHacerPequenasUltimaBaza=function(MazoMostrar,DeQuien){
+JKKJHKHSWV=function(GEFUYWBVWG,DeQuien){
 	
-		twUB1 = game_objeto.add.tween(MazoMostrar[0].scale);
-		twUB1.to( {x:vEscalaPequenas
-		,y:vEscalaPequenas
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[0].scale);
+		twUB1.to( {x:RABUWLOKWX
+		,y:RABUWLOKWX
 		}
-		, vVelocidadCartasReordernar, EfectoTween1,false,500);
+		, MDYSFNYPYP, KYFMRVNHIQ,false,500);
 		twUB1.start();		
 
 		
-		twUB1 = game_objeto.add.tween(MazoMostrar[1].scale);
-		twUB1.to( {x:vEscalaPequenas
-		,y:vEscalaPequenas
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[1].scale);
+		twUB1.to( {x:RABUWLOKWX
+		,y:RABUWLOKWX
 		}
-		, vVelocidadCartasReordernar, EfectoTween1,false,500);
+		, MDYSFNYPYP, KYFMRVNHIQ,false,500);
 		twUB1.start();		
 
 		
-		twUB1 = game_objeto.add.tween(MazoMostrar[2].scale);
-		twUB1.to( {x:vEscalaPequenas
-		,y:vEscalaPequenas
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[2].scale);
+		twUB1.to( {x:RABUWLOKWX
+		,y:RABUWLOKWX
 		}
-		, vVelocidadCartasReordernar, EfectoTween1,false,500);
+		, MDYSFNYPYP, KYFMRVNHIQ,false,500);
 		twUB1.start();		
 		
 //}
 //EfectosHacerPequenas2=function(){
-		twUB1 = game_objeto.add.tween(MazoMostrar[3].scale);
-		twUB1.to( {x:vEscalaPequenas
-		,y:vEscalaPequenas
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[3].scale);
+		twUB1.to( {x:RABUWLOKWX
+		,y:RABUWLOKWX
 		}
-		, vVelocidadCartasReordernar, EfectoTween1,false,500);
+		, MDYSFNYPYP, KYFMRVNHIQ,false,500);
 		
 		
 		twUB1.onComplete.add( function(){
 		
-			EfectoRecogerUltimaBaza(MazoMostrar,DeQuien);
+			EfectoRecogerUltimaBaza(GEFUYWBVWG,DeQuien);
 		
 		    });
 		
@@ -4691,83 +4691,83 @@ EfectoHacerPequenasUltimaBaza=function(MazoMostrar,DeQuien){
 
 
 
-EfectoRecogerUltimaBaza=function(MazoMostrar,DeQuien){
-	var posX;
-	var	posY;
+EfectoRecogerUltimaBaza=function(GEFUYWBVWG,DeQuien){
+	var NOFEDXHMLS;
+	var	GHTWROCHVV;
 	
-	if 	(DeQuien=="Nuestro"){
-		posX=devuelveX("ULTIMA_Baza",0);
-		posY=devuelveY("ULTIMA_Baza",0);
+	if 	(DeQuien=="VIYQDHWIAA"){
+		NOFEDXHMLS=WIEVLYANFM("ULTIMA_Baza",0);
+		GHTWROCHVV=FIGQBSJQGA("ULTIMA_Baza",0);
 	}
 	else{
-		//posX=devuelveX("D",98)- (AnchoCartaEscalado)-(AnchoCarta/2);
-		//posY=devuelveY("U",5);
+		//NOFEDXHMLS=WIEVLYANFM("D",98)- (SXSHBRJFIR)-(COIVBWRMCC/2);
+		//GHTWROCHVV=FIGQBSJQGA("U",5);
 		
-		posX=devuelveX("ULTIMA_Baza_Rival",0);
-		posY=devuelveY("ULTIMA_Baza_Rival",0);
+		NOFEDXHMLS=WIEVLYANFM("ULTIMA_Baza_Rival",0);
+		GHTWROCHVV=FIGQBSJQGA("ULTIMA_Baza_Rival",0);
 	}
 	
-		MostrarReverso(MazoMostrar[0]);
-		MostrarReverso(MazoMostrar[1]);
-		MostrarReverso(MazoMostrar[2]);
-		MostrarReverso(MazoMostrar[3]);
+		XNFDNBQFUA(GEFUYWBVWG[0]);
+		XNFDNBQFUA(GEFUYWBVWG[1]);
+		XNFDNBQFUA(GEFUYWBVWG[2]);
+		XNFDNBQFUA(GEFUYWBVWG[3]);
 
 	
-		twUB1 = game_objeto.add.tween(MazoMostrar[0]);
-		MazoMostrar[0].alpha=1;
-		twUB1.to( {x:posX
-		,y:posY,
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[0]);
+		GEFUYWBVWG[0].alpha=1;
+		twUB1.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
 		angle:Math.floor(Math.random() * 360) + 1  
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		//tw1.onComplete.add(EfectosRecogerCartas2,this)						
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas2,this)						
 		twUB1.start();
 		
 		
-		twUB1 = game_objeto.add.tween(MazoMostrar[1]);
-		MazoMostrar[1].alpha=1;
-		twUB1.to( {x:posX
-		,y:posY,
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[1]);
+		GEFUYWBVWG[1].alpha=1;
+		twUB1.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
 		angle:Math.floor(Math.random() * 360) + 1  
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		//tw1.onComplete.add(EfectosRecogerCartas2,this)						
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas2,this)						
 		twUB1.start();
 
 
-		twUB1 = game_objeto.add.tween(MazoMostrar[2]);
-		MazoMostrar[2].alpha=1;
-		twUB1.to( {x:posX
-		,y:posY,
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[2]);
+		GEFUYWBVWG[2].alpha=1;
+		twUB1.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
 		angle:Math.floor(Math.random() * 360) + 1  
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		//tw1.onComplete.add(EfectosRecogerCartas2,this)						
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas2,this)						
 		twUB1.start();		
 		
 		
 		
-		twUB1 = game_objeto.add.tween(MazoMostrar[3]);
-		MazoMostrar[3].alpha=1;
-		twUB1.to( {x:posX
-		,y:posY,
+		twUB1 = YMHIHSNADE.add.tween(GEFUYWBVWG[3]);
+		GEFUYWBVWG[3].alpha=1;
+		twUB1.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV,
 		angle:Math.floor(Math.random() * 360) + 1  
 		}
-		, vVelocidadCartasReordernar, EfectoTween1);
-		//tw1.onComplete.add(EfectosRecogerCartas2,this)						
+		, MDYSFNYPYP, KYFMRVNHIQ);
+		//PQUFIBKJJH.onComplete.add(EfectosRecogerCartas2,this)						
 		twUB1.start();
 		
-		for(i=0;i<=MazoCentral.length-1;i++)
+		for(i=0;i<=VDKOVQXHON.length-1;i++)
 		{
-			MazoCentral[i].cartilla.alpha=1;			
+			VDKOVQXHON[i].TNFAGGMKXD.alpha=1;			
 		}
-	/*	for(i=0;i<=UltimaBazaNuestra.length-1;i++)
+	/*	for(i=0;i<=XYRJNHOCRB.length-1;i++)
 		{
-			UltimaBazaNuestra[i].cartilla.alpha=1;
+			XYRJNHOCRB[i].TNFAGGMKXD.alpha=1;
 		}		
-		for(i=0;i<=UltimaBazaRival.length-1;i++)
+		for(i=0;i<=HAJIKEVCFP.length-1;i++)
 		{
-			UltimaBazaRival[i].cartilla.alpha=1;
+			HAJIKEVCFP[i].TNFAGGMKXD.alpha=1;
 		}	*/			
 }
 
@@ -4776,24 +4776,24 @@ function addquake() {
 	if(navigator.vibrate) {	
 		window.navigator.vibrate(300);
 	}
-  // define the camera offset for the quake
+  // define the camera offset for the VHYOFJEDUQ
    var margin = 50;
 	 // and set the world's bounds according to the given margin
 	 var x = -margin;
 	 var y = -margin;
 
-	 var w = game_objeto.world.width + margin * 2;
-	 var h = game_objeto.world.height + margin * 2;
-	 game_objeto.world.setBounds(x, y, w, h);
+	 var w = YMHIHSNADE.world.width + margin * 2;
+	 var h = YMHIHSNADE.world.height + margin * 2;
+	 YMHIHSNADE.world.setBounds(x, y, w, h);
 	  
 	 // we make sure camera is at position (0,0)
-	 game_objeto.world.camera.position.set(0);
+	 YMHIHSNADE.world.camera.position.set(0);
   
   var rumbleOffset = 20;
   
   // we need to move according to the camera's current position
   var properties = {
-    x: game_objeto.camera.x - rumbleOffset
+    x: YMHIHSNADE.camera.x - rumbleOffset
   };
   
   // we make it a relly fast movement
@@ -4808,14 +4808,14 @@ function addquake() {
   // we want to go back to the original position
   var yoyo = true;
   
-  var quake = game_objeto.add.tween(game_objeto.camera)
+  var VHYOFJEDUQ = YMHIHSNADE.add.tween(YMHIHSNADE.camera)
     .to(properties, duration, ease, autoStart, delay, repeat, yoyo);
   
   // we're using this line for the example to run indefinitely
-  quake.onComplete.addOnce(quakeEnd);
+  VHYOFJEDUQ.onComplete.addOnce(quakeEnd);
   
   // let the earthquake begins
-  quake.start();
+  VHYOFJEDUQ.start();
 }
 
 quakeEnd=function()
@@ -4824,73 +4824,73 @@ quakeEnd=function()
  //console.log("DEBE ARREGLAR CAMARA");	
   /*var x=0;
   var y=0;
-  var w=game_objeto.world.width;
-  var h=game_objeto.world.height;
+  var w=YMHIHSNADE.world.width;
+  var h=YMHIHSNADE.world.height;
  */
  	 var margin = -50;
 	 // and set the world's bounds according to the given margin
 	 var x = 0;
 	 var y = 0;
 
-	 var w = game_objeto.world.width + (margin * 2);
-	 var h = game_objeto.world.height+ (margin * 2);
+	 var w = YMHIHSNADE.world.width + (margin * 2);
+	 var h = YMHIHSNADE.world.height+ (margin * 2);
 	 
-  game_objeto.world.setBounds(x, y, w, h);
-  game_objeto.world.camera.position.set(0);
+  YMHIHSNADE.world.setBounds(x, y, w, h);
+  YMHIHSNADE.world.camera.position.set(0);
 	
 }
 
-OcultaClasificacion=function()
+YJEISFVFQY=function()
 {
 	var d=document.getElementById('DivResultado');
 	d.style.display = 'none';
 	//d.style.zIndex=-1;
 }
 
-EnviarBaraja=function(MazoEnviar,Habitacion,QuienReparte,SonVueltas,ArrayDelaPropiaSala,Partida)
+HKJWHCKHWQ=function(WUHRYVMYBE,DFBVDPETGO,RDBQUAVHEP,EVAILWGGKX,XPBCVAGCDQ,KXAWTTIEGG)
 {
 	
-	//socket.emit('enviar baraja', MazoEnviar,Habitacion,QuienReparte,SonVueltas,ArrayDelaPropiaSala,Partida);
+	//socket.emit('NQAQCOINMY', WUHRYVMYBE,DFBVDPETGO,RDBQUAVHEP,EVAILWGGKX,XPBCVAGCDQ,KXAWTTIEGG);
 	/////////////
 
-	var Hora=Date.now();
-	var ObjectSend=function( MazoEnviar,Habitacion,QuienReparte,SonVueltas,ArrayDelaPropiaSala,Partida,idPartida,
-		IdMsg,ClientId,SalaID,Mensaje){
-		 this.MazoEnviar=MazoEnviar
-		 this.Habitacion=Habitacion
-		 this.QuienReparte=QuienReparte
-		 this.SonVueltas=SonVueltas
-		 this.ArrayDelaPropiaSala=ArrayDelaPropiaSala
-		 this.Partida=Partida
-		 this.idPartida=idPartida
+	var QKVJASWVEO=Date.now();
+	var GXNRNMAAKW=function( WUHRYVMYBE,DFBVDPETGO,RDBQUAVHEP,EVAILWGGKX,XPBCVAGCDQ,KXAWTTIEGG,MQUGCIUQII,
+		OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+		 this.WUHRYVMYBE=WUHRYVMYBE
+		 this.DFBVDPETGO=DFBVDPETGO
+		 this.RDBQUAVHEP=RDBQUAVHEP
+		 this.EVAILWGGKX=EVAILWGGKX
+		 this.XPBCVAGCDQ=XPBCVAGCDQ
+		 this.KXAWTTIEGG=KXAWTTIEGG
+		 this.MQUGCIUQII=MQUGCIUQII
 											 
-		 this.IdMsg=IdMsg
-		 this.ClientId=ClientId
-		 this.SalaID=SalaID
-		 this.Mensaje=Mensaje
+		 this.OYJAHGADFQ=OYJAHGADFQ
+		 this.OJPXTRQDKS=OJPXTRQDKS
+		 this.LYHKNIMVEB=LYHKNIMVEB
+		 this.RHOLNWBOXR=RHOLNWBOXR
 		 
-		 this.Fecha=new Date(Date.now());
+		 this.EBAPPJFYSW=new Date(Date.now());
 	 }
-	var ArrayAccionesDesconexionesLocal=[];
-	ArrayAccionesDesconexionesLocal.splice(0,1000);
+	var QPHHGPRJAI=[];
+	QPHHGPRJAI.splice(0,1000);
 
 		
-	var IdMsg=Math.random()*100000;
-	idPartida=Math.random()*100000;
-	//console.log("Envio el id partida "+idPartida);
-	var Objeto=new ObjectSend(MazoEnviar,Habitacion,QuienReparte,SonVueltas,ArrayDelaPropiaSala,Partida,idPartida,
-		IdMsg,socket.id,Habitacion,'enviar baraja');
-	ArrayAccionesDesconexiones.push(Objeto);
-	ArrayAccionesDesconexionesLocal.push(Objeto);
+	var OYJAHGADFQ=Math.random()*100000;
+	MQUGCIUQII=Math.random()*100000;
+	//console.log("Envio el id partida "+MQUGCIUQII);
+	var KCPHFPSPLQ=new GXNRNMAAKW(WUHRYVMYBE,DFBVDPETGO,RDBQUAVHEP,EVAILWGGKX,XPBCVAGCDQ,KXAWTTIEGG,MQUGCIUQII,
+		OYJAHGADFQ,socket.id,DFBVDPETGO,'NQAQCOINMY');
+	NBEJWDVLLV.push(KCPHFPSPLQ);
+	QPHHGPRJAI.push(KCPHFPSPLQ);
 
 
-	socket.emit('enviar baraja',ArrayAccionesDesconexionesLocal[0],
-	 function(idMensaje)
+	socket.emit('NQAQCOINMY',QPHHGPRJAI[0],
+	 function(XQLEOGMJYG)
 	 {			 
-		EliminarColaMensajes(idMensaje,'enviar baraja');
+		EXBCVLOIYJ(XQLEOGMJYG,'NQAQCOINMY');
 	 }
 	);						
-	ArrayAccionesDesconexionesLocal.splice(0,1000);	
+	QPHHGPRJAI.splice(0,1000);	
 
 	
 	/////////////		
