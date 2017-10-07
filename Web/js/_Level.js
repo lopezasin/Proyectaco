@@ -1068,10 +1068,12 @@ var timerborrar = YMHIHSNADE.time.create(false);
 
 		function startRecognition(){
 		
-		alert("hola");
+		
 		window.plugins.speechRecognition.startListening(function(result){
 			// Show results in the console
+			alert(result);
 				BYBYBFHBOX(TFSXFTYVGQ,result ,false);
+				
 			}, function(err){
 				console.error(err);
 			}, {
