@@ -248,6 +248,48 @@ function onDeviceReady() {
 		catch(e)
 		{}
 		
+		
+		try
+		{
+		//	alert("s");
+		var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+		var recognition = new SpeechRecognition();
+
+		recognition.lang = "es-ES";
+		recognition.continuous = false;
+		recognition.interimResults = true;
+
+		recognition.onresult = function(event) {
+			Transcribe="";
+		  for (var i = event.resultIndex; i < event.results.length; i++) {
+			if(event.results[i].isFinal){
+			  //document.getElementById("text").innerHTML += event.results[i][0].transcript;
+			  Transcribe += event.results[i][0].transcript;
+			}
+			}
+			//console.log("FIN "+Transcribe);
+		}
+		recognition.onstart = function(event) { console.log(event); }
+		recognition.onerror = function(event) { console.log(event); }
+		recognition.onend = function(event) {console.log("kio");
+			
+			BYBYBFHBOX(TFSXFTYVGQ,Transcribe ,false);
+			//console.log("FIN2 "+Transcribe);
+			//console.log(event); 
+		}
+		}
+		catch(e)
+		{
+			//	alert("n");
+			console.log("Sin speech");
+			// Handle results
+
+
+			
+			
+			
+		}
+		
 		if( window.plugins)
 		{
 			var SO;

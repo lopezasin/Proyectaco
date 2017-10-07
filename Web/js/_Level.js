@@ -6,31 +6,6 @@ function Level() {
 }
 
 
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-var recognition = new SpeechRecognition();
-
-recognition.lang = "es-ES";
-recognition.continuous = false;
-recognition.interimResults = true;
-
-recognition.onresult = function(event) {
-	Transcribe="";
-  for (var i = event.resultIndex; i < event.results.length; i++) {
-    if(event.results[i].isFinal){
-      //document.getElementById("text").innerHTML += event.results[i][0].transcript;
-	  Transcribe += event.results[i][0].transcript;
-    }
-	}
-	//console.log("FIN "+Transcribe);
-}
-//recognition.onstart = function(event) { console.log(event); }
-//recognition.onerror = function(event) { console.log(event); }
-recognition.onend = function(event) { console.log("kio");
-	
-	BYBYBFHBOX(TFSXFTYVGQ,Transcribe ,false);
-	//console.log("FIN2 "+Transcribe);
-	//console.log(event); 
-}
 
 
 
@@ -55,6 +30,7 @@ else
 	JHGHJAGCMC='http://192.168.43.100:5000'		
 }
 
+var Transcribe="";
 var vReconectando=false;
 var vNoEsta;
 var BNCAIUQIJJ=false
@@ -333,6 +309,115 @@ var UVYJLLYCYD=function(SSUNXNEEHN,AURESXCGMK)
 	this.AURESXCGMK=AURESXCGMK
 }
 
+
+
+
+
+/*
+	function startRecognition(){
+		if (window.plugins)
+		{
+			window.plugins.speechRecognition.startListening(function(result){
+				// Show results in the console
+				console.log(result);
+			}, function(err){
+				console.error(err);
+			}, {
+				language: "es-ES",
+				showPopup: true
+			});
+		}
+	}
+
+	// Verify if recognition is available
+	if (window.plugins)
+	{
+		window.plugins.speechRecognition.isRecognitionAvailable(function(available){
+			if(!available){
+				console.log("Sorry, not available");
+			}
+
+			// Check if has permission to use the microphone
+			window.plugins.speechRecognition.hasPermission(function (isGranted){
+				if(isGranted){
+					startRecognition();
+				}else{
+					// Request the permission
+					window.plugins.speechRecognition.requestPermission(function (){
+						// Request accepted, start recognition
+						startRecognition();
+					}, function (err){
+						console.log(err);
+					});
+				}
+			}, function(err){
+				console.log(err);
+			});
+		}, function(err){
+			console.log(err);
+		});
+		
+		
+		
+		
+		window["speechRecognition"] = {
+				hasPermission: function(){
+					return new Promise(function(resolve, reject){
+						window.plugins.speechRecognition.hasPermission(function (isGranted){
+							resolve(isGranted);
+						}, function(err){
+							reject(err);
+						});
+					});
+				},
+				requestPermission: function(){
+					return new Promise(function(resolve, reject){
+						window.plugins.speechRecognition.requestPermission(function (){
+							resolve();
+						}, function (err){
+							reject();
+						});
+					});
+				},
+				startRecognition: function(settings){
+					return new Promise(function(resolve, reject){
+						window.plugins.speechRecognition.startListening(function(result){
+							resolve(result);
+						}, function(err){
+							reject(err);
+						}, settings);
+					});
+				},
+				getSupportedLanguages: function(){
+					return new Promise(function(resolve, reject){
+						window.plugins.speechRecognition.getSupportedLanguages(function(result){
+							resolve(result);
+						}, function(err){
+							reject(err);
+						});
+					});
+				},
+				isRecognitionAvailable: function(){
+					return new Promise(function(resolve, reject){
+						window.plugins.speechRecognition.isRecognitionAvailable(function(available){
+							resolve(available);
+						}, function(err){
+							reject(err);
+						});
+					});
+				},
+				stopListening: function(){
+					return new Promise(function(resolve, reject){
+						window.plugins.speechRecognition.stopListening(function(){
+							resolve();
+						}, function(err){
+							reject(err);
+						});
+					});
+				}
+			};
+	}
+*/
 
 var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC,FFRVOEAXTF,BDYYDTFQAO,UHYGLMAUNK,DNQIYVAFPR,XCXKVEEIOO,BUJELVTIKU,NBJHGSFSJS,MBMWBWUYUY,OIUIOWCHVW,NHWYTYUSYG){
 	this.WWKVHIMWYD=WWKVHIMWYD
