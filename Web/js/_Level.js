@@ -1066,6 +1066,20 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	
 };
 
+		function startRecognition(){
+		
+		alert("hola");
+		window.plugins.speechRecognition.startListening(function(result){
+			// Show results in the console
+				BYBYBFHBOX(TFSXFTYVGQ,result ,false);
+			}, function(err){
+				console.error(err);
+			}, {
+				language: "es-ES",
+				showPopup: false
+			});
+		}
+		
 SolicitaClasificacion=function()
 {
 	var OBTBPOULAV;

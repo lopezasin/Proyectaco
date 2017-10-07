@@ -250,22 +250,10 @@ function onDeviceReady() {
 		{}
 		
 		
-		function startRecognition(){
-		
-		alert("hola");
-		window.plugins.speechRecognition.startListening(function(result){
-			// Show results in the console
-				BYBYBFHBOX(TFSXFTYVGQ,result ,false);
-			}, function(err){
-				console.error(err);
-			}, {
-				language: "es-ES",
-				showPopup: false
-			});
-		}
+
 
 	// Verify if recognition is available
-		window.plugins.speechRecognition.isRecognitionAvailable(function(available){
+	/*	window.plugins.speechRecognition.isRecognitionAvailable(function(available){
 		if(!available){
 			alert("Sorry, not available");
 		}
@@ -288,7 +276,7 @@ function onDeviceReady() {
 		});
 	}, function(err){
 		alert(err);
-	});
+	});*/
 		
 		
 		/*try
