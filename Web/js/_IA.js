@@ -11,7 +11,7 @@
 	//console.log("IAIAOH");
 	
 	if (  ( (MYQBNBVHKU==true &&  UHHXSNXXJK<JLVDFTPUNI && PXGXKDDNFK<JLVDFTPUNI) ||  (EVAILWGGKX==false && MYQBNBVHKU==true)     ) 
-			)
+		&& OTGNMRHTVK()==false	)
 	{
 	
 		BMITYYFCGC=VDKOVQXHON.length+1;

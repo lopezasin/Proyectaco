@@ -6,13 +6,40 @@ function Level() {
 }
 
 
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+var recognition = new SpeechRecognition();
+
+recognition.lang = "es-ES";
+recognition.continuous = false;
+recognition.interimResults = true;
+
+recognition.onresult = function(event) {
+	Transcribe="";
+  for (var i = event.resultIndex; i < event.results.length; i++) {
+    if(event.results[i].isFinal){
+      //document.getElementById("text").innerHTML += event.results[i][0].transcript;
+	  Transcribe += event.results[i][0].transcript;
+    }
+	}
+	//console.log("FIN "+Transcribe);
+}
+//recognition.onstart = function(event) { console.log(event); }
+//recognition.onerror = function(event) { console.log(event); }
+recognition.onend = function(event) { console.log("kio");
+	
+	BYBYBFHBOX(TFSXFTYVGQ,Transcribe ,false);
+	//console.log("FIN2 "+Transcribe);
+	//console.log(event); 
+}
+
+
 
 
 var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var vProduccion=true;
+var vProduccion=false;
 
 var JHGHJAGCMC;
 if (vProduccion==true){
@@ -23,11 +50,12 @@ if (vProduccion==true){
 }
 else
 {
-	JHGHJAGCMC='http://localhost:5000'		
+	//JHGHJAGCMC='http://localhost:5000'		
 	//JHGHJAGCMC='http://192.168.1.100:5000'		
-	//JHGHJAGCMC='http://192.168.43.100:5000'		
+	JHGHJAGCMC='http://192.168.43.100:5000'		
 }
 
+var vReconectando=false;
 var vNoEsta;
 var BNCAIUQIJJ=false
 var JHHWEKWEJK=false;
@@ -53,8 +81,8 @@ var IJCSKNTKVH="";
 
 var JLVDFTPUNI=101;
 var MFENMIFPUA=3;
-var HLBMKNFUWL=1500;//milisegundos
-var GWFPRHAYQK=20;//segundos
+var HLBMKNFUWL=1500;//1500 milisegundos
+var GWFPRHAYQK=20;//20 segundos
 var XIQDONAJMM;
 var KVBNWXDTON;
 var RCYRGXLWBR;
@@ -116,7 +144,7 @@ var QLNEIQGEDF=[];
 var KYDWXPGHVY=[];
 var NBEJWDVLLV=[];
 //var ArrayJugadoresDesconectadosID=[];
-var XYXCEMMRDC=[];
+//var XYXCEMMRDC=[];
 var JEHYBALODM=[];
 var DCOXIXEBRJ=[];
 
@@ -187,6 +215,7 @@ var POEICHMHDL;
 var LNJDKEVPQE;
 var COIVBWRMCC=0;
 var SXSHBRJFIR=0;
+var BotonHablar;
 //Phaser.Easing.Quadratic.Out;
 //Phaser.Easing.Quartic;
 var KYFMRVNHIQ=Phaser.Easing.Linear.Out;
@@ -559,7 +588,12 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	//PUBDSNTIUS = YMHIHSNADE.time.create(false);	
 	
 	
-	YJNIRPCWEI = YMHIHSNADE.add.text(0, 0, "");
+	//YJNIRPCWEI = YMHIHSNADE.add.text(0, 0, ""); 1.0.9
+	YJNIRPCWEI=YMHIHSNADE.add.bitmapText(0, 100, 'MiFuenteAmarilla', 'BitmapText', 44);
+	YJNIRPCWEI.text="";
+	YJNIRPCWEI.anchor.set(0.5,0.5)
+	
+	
 	
 	PQUFIBKJJH=YMHIHSNADE.add.tween(YJNIRPCWEI).to( { alpha: 1 }, 1, KYFMRVNHIQ, true);
 	LJRRHVSVKD=YMHIHSNADE.add.tween(YJNIRPCWEI).to( { alpha: 1 }, 1, KYFMRVNHIQ, true);
@@ -593,29 +627,43 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	LCYAHFBDTT=YMHIHSNADE.add.tween(BRQFVLOBSF);
 	
 	var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
-	UWROMBGGSY=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+	/*UWROMBGGSY=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
 	HUPALFWPFI=YMHIHSNADE.add.text(-100, -100, "", IQVAAXFOXW);
 	BXYCJYDVRT=YMHIHSNADE.add.text(-100, -100, "", IQVAAXFOXW);
 	IRAIEARIWA=YMHIHSNADE.add.text(-100, -100, "", IQVAAXFOXW);
-	
-	var WNTTMAIFLB = { font: "bold 30px Arial", fill: "#fff", align: "right", boundsAlignH: "middle", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+	*/
+	/*UWROMBGGSY=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 18);
+	UWROMBGGSY.anchor.set(0.5,0.5);
+	HUPALFWPFI=YMHIHSNADE.add.bitmapText(-100, -100, 'MiFuenteAmarilla', 'BitmapText', 18);
+	HUPALFWPFI.anchor.set(0.5,0.5);
+	BXYCJYDVRT=YMHIHSNADE.add.bitmapText(-100, -100, 'MiFuenteAmarilla', 'BitmapText', 18);
+	BXYCJYDVRT.anchor.set(0.5,0.5);
+	IRAIEARIWA=YMHIHSNADE.add.bitmapText(-100, -100, 'MiFuenteAmarilla', 'BitmapText', 18);
+	IRAIEARIWA.anchor.set(0.5,0.5);
+	*/
+	/*var WNTTMAIFLB = { font: "bold 30px Arial", fill: "#fff", align: "right", boundsAlignH: "middle", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 	XQDPVWOUII=YMHIHSNADE.add.text(0, 0, "Ntros:\nEllos:", WNTTMAIFLB);
 	XQDPVWOUII.stroke = '#961918';
     XQDPVWOUII.strokeThickness = 4;
     XQDPVWOUII.fill = '#F8E600';		
 	XQDPVWOUII.visible=false;
-	XQDPVWOUII.setTextBounds(900,YMHIHSNADE.world.height-(PPLOSJIWHO*2),300,100)
-	
+	XQDPVWOUII.setTextBounds(900,YMHIHSNADE.world.height-(PPLOSJIWHO*2),300,100)*/
+	XQDPVWOUII=YMHIHSNADE.add.bitmapText(950, YMHIHSNADE.world.height-(PPLOSJIWHO*2), 'MiFuenteAmarilla', 'BitmapText', 25);
+	XQDPVWOUII.anchor.set(0.5,0.5)
+	XQDPVWOUII.text="Ntros:\nEllos:"
+	XQDPVWOUII.visible=false;
 
 	
-	var styleMarcador = { font: "bold 30px Arial", fill: "#fff", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
+	/*var styleMarcador = { font: "bold 30px Arial", fill: "#fff", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 	ATTUXTNNKX=YMHIHSNADE.add.text(0, 0, "", styleMarcador);
 	ATTUXTNNKX.visible=false;
 	ATTUXTNNKX.stroke = '#961918';
     ATTUXTNNKX.strokeThickness = 4;
     ATTUXTNNKX.fill = '#F8E600';		
-	ATTUXTNNKX.setTextBounds(990,YMHIHSNADE.world.height-(PPLOSJIWHO*2),300,100)
-	
+	ATTUXTNNKX.setTextBounds(990,YMHIHSNADE.world.height-(PPLOSJIWHO*2),300,100)*/
+	ATTUXTNNKX=YMHIHSNADE.add.bitmapText(1060, YMHIHSNADE.world.height-(PPLOSJIWHO*2), 'MiFuenteAmarilla', 'BitmapText', 25);
+	ATTUXTNNKX.anchor.set(0.5,0.5)
+	ATTUXTNNKX.visible=false;
 	
 	
 	/*var styleMarcador = { font: "bold 30px Arial", fill: "#fff", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
@@ -626,16 +674,21 @@ var timerborrar = YMHIHSNADE.time.create(false);
     TextCuentaAmigos.fill = '#F8E600';		*/
 	//TextCuentaAmigos.setTextBounds(990,YMHIHSNADE.world.height-(PPLOSJIWHO*2),300,100)
 
-	var styleMarcador = { font: "bold 24px Arial", fill: "#fff", boundsAlignH: "right", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 5000};	
+	
+	/*var styleMarcador = { font: "bold 24px Arial", fill: "#fff", boundsAlignH: "right", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 5000};	
 	JKLJKLRIRI=YMHIHSNADE.add.text(0, 0, "", styleMarcador);
 	JKLJKLRIRI.visible=false;
 	JKLJKLRIRI.stroke = '#961918';
     JKLJKLRIRI.strokeThickness = 4;
     JKLJKLRIRI.fill = '#F8E600';		
 	JKLJKLRIRI.setTextBounds(15,15,YMHIHSNADE.world.width-120,100)
+	*/
+	JKLJKLRIRI=YMHIHSNADE.add.bitmapText(-100, 100, 'MiFuenteAmarilla', 'BitmapText', 24);
+	JKLJKLRIRI.anchor.set(0.5,0.5)
+	//JKLJKLRIRI.x=500;
+	//JKLJKLRIRI= new Phaser.BitmapText(200, 100, 'MiFuente', 'BitmapText', 24);
 	
-
-	
+	console.log(JKLJKLRIRI.textWidth )
 	LHLJIPPLXD= YMHIHSNADE.add.button(400, 0, 'spr_cantar', function(){ 
 		TRKOSJTLDX();
 	}, this, 2, 1, 0);
@@ -664,6 +717,9 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	MNSLSOPOOP.anchor.setTo(0.5,0.5)
 	MNSLSOPOOP.visible=false;
 	
+	BotonHablar= YMHIHSNADE.add.button(150+YAJVUBPNNW, 110, 'Boton_sonido_off', function(){ recognition.start(); }, this, 2, 1, 0);;
+	BotonHablar.anchor.setTo(0.5,0.5)
+	BotonHablar.visible=true;	
 	
 		//UIYIUHCWVX.play();
 		//UUYECMNSZZ.play();
@@ -904,7 +960,7 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	YJNIRPCWEI.x=YMHIHSNADE.world.centerX;
 	YJNIRPCWEI.y=YMHIHSNADE.world.centerY+30
 	
-	YJNIRPCWEI.anchor.set(0.5);
+	/*YJNIRPCWEI.anchor.set(0.5);
     YJNIRPCWEI.align = 'center';
 
 
@@ -915,17 +971,20 @@ var timerborrar = YMHIHSNADE.time.create(false);
 
     YJNIRPCWEI.stroke = '#961918';
     YJNIRPCWEI.strokeThickness = 7;
-    YJNIRPCWEI.fill = '#F8E600';		
+    YJNIRPCWEI.fill = '#F8E600';	*/	
 		
 		
 		
 		
-	JBXCGDTWYW = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY, 'Esperando jugadores');
+	//JBXCGDTWYW = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY, 'Esperando jugadores');
+	JBXCGDTWYW=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'MiFuenteAmarilla', 'BitmapText', 50);
+	JBXCGDTWYW.text='Esperando jugadores';
+	JBXCGDTWYW.anchor.set(0.5,0.5);
 	JBXCGDTWYW.visible=false;
 	//log(true,"Se crea el mensaje");
 	
-	JBXCGDTWYW.anchor.set(0.5);
-    JBXCGDTWYW.align = 'center';
+	
+    /*JBXCGDTWYW.align = 'center';
 
 
     JBXCGDTWYW.font = 'Arial Black';
@@ -935,15 +994,19 @@ var timerborrar = YMHIHSNADE.time.create(false);
 
     JBXCGDTWYW.stroke = '#961918';
     JBXCGDTWYW.strokeThickness = 15;
-    JBXCGDTWYW.fill = '#F8E600';
+    JBXCGDTWYW.fill = '#F8E600';*/
 			
 			
-	NSNUIQUYIU = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'Un momento por favor... Esperando al resto de compañeros.');
+	//NSNUIQUYIU = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'Un momento por favor... Esperando al resto de compañeros.');
+	NSNUIQUYIU=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'MiFuenteAmarilla', 'BitmapText', 50);
+	NSNUIQUYIU.anchor.set(0.5,0.5);
+	NSNUIQUYIU.text='Un momento por favor...\n Esperando al resto de compañeros.'
 	NSNUIQUYIU.visible=false;
 	//log(true,"Se crea el mensaje");
 	
-	NSNUIQUYIU.anchor.set(0.5);
-    NSNUIQUYIU.align = 'center';
+	
+    
+	/*NSNUIQUYIU.align = 'center';
 
 
     NSNUIQUYIU.font = 'Arial Black';
@@ -955,14 +1018,16 @@ var timerborrar = YMHIHSNADE.time.create(false);
     NSNUIQUYIU.strokeThickness = 15;
     NSNUIQUYIU.fill = '#F8E600';			
 	NSNUIQUYIU.wordWrap= true;
-	NSNUIQUYIU.wordWrapWidth=1000;	
+	NSNUIQUYIU.wordWrapWidth=1000;	*/
 	
 
-	JSJSHSHSSE = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'Eligiendo pareja');
+	//JSJSHSHSSE = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'Eligiendo pareja');
+	JSJSHSHSSE=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'MiFuenteAmarilla', 'BitmapText', 44);
+	JSJSHSHSSE.anchor.set(0.5,0.5);
 	JSJSHSHSSE.visible=false;
 	//log(true,"Se crea el mensaje");
 	
-	JSJSHSHSSE.anchor.set(0.5);
+	/*JSJSHSHSSE.anchor.set(0.5);
     JSJSHSHSSE.align = 'center';
 
 
@@ -975,7 +1040,7 @@ var timerborrar = YMHIHSNADE.time.create(false);
     JSJSHSHSSE.strokeThickness = 15;
     JSJSHSHSSE.fill = '#F8E600';			
 	JSJSHSHSSE.wordWrap= true;
-	JSJSHSHSSE.wordWrapWidth=1000;	
+	JSJSHSHSSE.wordWrapWidth=1000;	*/
 	
 		inputField = YMHIHSNADE.add.inputField(10+YAJVUBPNNW, 25,{
 		font: "20px Arial",
@@ -2483,7 +2548,41 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,NBWHWUQAAA,OMDVKATFLQ, desdeServer)
 				
 				
 				
-				text = YMHIHSNADE.add.text(IFJRJXGGFY, CWWHRMDADQ , RPHWVBBGIM, style);
+				//text = YMHIHSNADE.add.text(IFJRJXGGFY, CWWHRMDADQ , RPHWVBBGIM, style);
+				text=YMHIHSNADE.add.bitmapText(IFJRJXGGFY, CWWHRMDADQ, 'MiFuenteAmarilla', 'BitmapText', 21);
+				text.anchor.set(0,0);
+				/*RPHWVBBGIM="Esto es una prueba de concepto que mola muchisimo"
+				var temp="";
+				var trozo1;
+				var trozo2;
+				var corta=0
+				var u;
+				var TextoFinal="";
+				for (var i=0;i<=RPHWVBBGIM.length;i++)
+				{
+					for (u=18;u>=0;u--)
+					{
+						if (RPHWVBBGIM[u]==" ")
+						{
+							corta=u;
+							break;
+						}
+					}
+					
+					
+					if (corta!=0)
+					{
+						trozo1=RPHWVBBGIM.substring(0,corta);
+						trozo2=RPHWVBBGIM.substring(corta);
+						TextoFinal=trozo1+"\n"+trozo2;
+						corta=0;
+					}
+					corta++;
+					
+
+				}*/
+				
+				text.text=wordwrap(RPHWVBBGIM,17);
 				text.alpha=0;
 				
 				DQKYYAPEEN = YMHIHSNADE.add.tween(FTBVKLREAE).to( { alpha: 1 }, 1500, KYFMRVNHIQ, true);
@@ -2504,6 +2603,79 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,NBWHWUQAAA,OMDVKATFLQ, desdeServer)
 	}
 	
 	
+}
+
+var wordwrap = function(long_string, max_char){
+if (long_string== null) { return " "; }
+else {
+
+var sum_length_of_words = function(word_array){
+    var out = 0;
+    if (word_array.length!=0){
+        for (var i=0; i<word_array.length; i++){
+            var word = word_array[i];
+            out = out + word.length;
+        }
+    };
+    return out;
+};
+
+
+var chunkString = function (str, length){
+    return str.match(new RegExp('.{1,' + length + '}', 'g'));
+};
+
+var splitLongWord = function (word, maxChar){
+    var out = [];
+    if( maxChar >= 1){
+        var wordArray = chunkString(word, maxChar-1);// just one under maxChar in order to add the innerword separator '-'
+        if(wordArray.length >= 1){
+            // Add every piece of word but the last, concatenated with '-' at the end
+            for(var i=0; i<(wordArray.length-1); i++){
+                var piece = wordArray[i] + "-";
+                out.push(piece);
+            }
+            // finally, add the last piece
+            out.push(wordArray[wordArray.length-1]);
+        }
+    }
+    // If nothing done, just use the same word
+    if(out.length == 0) {
+        out.push(word);
+    }
+    return out;
+}
+
+var split_out = [[]];
+var split_string = long_string.split(' ');
+for(var i=0; i<split_string.length; i++){
+    var word = split_string[i];
+
+    // If the word itself exceed the max length, split it,
+    if(word.length > max_char){
+        var wordPieces = splitLongWord(word, max_char);
+        for(var j=0;j<wordPieces.length;j++){
+            var wordPiece = wordPieces[j];
+            split_out = split_out.concat([[]]);
+            split_out[split_out.length-1] = split_out[split_out.length-1].concat(wordPiece);
+        }
+
+    } else {
+        // otherwise add it if possible
+        if ((sum_length_of_words(split_out[split_out.length-1]) + word.length+1) > max_char){
+          split_out = split_out.concat([[]]);
+        }
+
+        split_out[split_out.length-1] = split_out[split_out.length-1].concat(word);
+    }
+}
+
+for (var i=0; i<split_out.length; i++){
+    split_out[i] = split_out[i].join(" ");
+}
+
+return split_out.join('\n');
+};
 }
 
 BYBYBFHBOX=function(TFSXFTYVGQ,RPHWVBBGIM,NBWHWUQAAA)
@@ -2538,13 +2710,13 @@ XEMENNVXGV=function()
 		if (socket.id==undefined)
 		{
 			//console.log("Se mete a conectar");
-			socket = io.connect(JHGHJAGCMC,{reconnection: true,  reconnectionDelay: 3000,
+			socket = io.connect(JHGHJAGCMC,{reconnection: true,  reconnectionDelay: 2000,
 				reconnectionDelayMax : 4000,
 				reconnectionAttempts: 2,
 				'max reconnection attempts' : 2,
 				ForceNew : false,
-				connect_timeout : 5000,
-				timeout :5000
+				connect_timeout : 7000,
+				timeout :7000
 				//'connection timeout':5000
 				//timeout :5
 				// transports: ['websocket'],
@@ -2570,13 +2742,13 @@ XEMENNVXGV=function()
 			if (socket==undefined)
 			{
 			//console.log("Se mete a conectar 2");
-			socket = io.connect(JHGHJAGCMC,{reconnection: true,  reconnectionDelay: 3000,
+			socket = io.connect(JHGHJAGCMC,{reconnection: true,  reconnectionDelay: 2000,
 				reconnectionDelayMax : 4000,
 				reconnectionAttempts: 2,
 				'max reconnection attempts' : 2,
 				ForceNew : false,
-				connect_timeout : 5000,
-				timeout :5000
+				connect_timeout : 7000,
+				timeout :7000
 				//'connection timeout':5000
 				//timeout :5
 				//transports: ['websocket']
@@ -3028,7 +3200,12 @@ setEventHandlers = function () { //ESTE
 		  HAUSUTNHGI=true;
 	  }
 	  //console.log("jol");
-	  NOGEVUYFEW(data.UHTPGPRUJA,data.SJVCMXWVVI,data.Turno,data.AGTXFNIKQD,data.QKVJASWVEO)
+	  if (HAUSUTNHGI==true)
+	  {
+		DVNRTQIWGL=data.Turno;
+		LUCRWXJMDR=data.AGTXFNIKQD;
+		NOGEVUYFEW(data.UHTPGPRUJA,data.SJVCMXWVVI,data.Turno,data.AGTXFNIKQD,data.QKVJASWVEO)
+	  }
 	  
 	  return callback(data.OYJAHGADFQ);
   }
@@ -3063,7 +3240,12 @@ setEventHandlers = function () { //ESTE
 		  HAUSUTNHGI=true;
 	  }
 	
-	  NOGEVUYFEW(data.UHTPGPRUJA,data.SJVCMXWVVI,data.Turno,data.AGTXFNIKQD,data.QKVJASWVEO)
+	  if (HAUSUTNHGI==true)
+	  {
+		DVNRTQIWGL=data.Turno;
+		LUCRWXJMDR=data.AGTXFNIKQD;
+		NOGEVUYFEW(data.UHTPGPRUJA,data.SJVCMXWVVI,data.Turno,data.AGTXFNIKQD,data.QKVJASWVEO)
+	  }
 	  return callback(data.OYJAHGADFQ);
   }
   );
@@ -3132,7 +3314,7 @@ setEventHandlers = function () { //ESTE
  socket.on('TGUUXMBTHT', function(data,callback)
   {
 	  //console.log(data);
-	  BCVWETKAKG(data.SSUNXNEEHN,data.WWKVHIMWYD,data.posicionJugador,data.NuevoId)
+	  BCVWETKAKG(data.SSUNXNEEHN,data.WWKVHIMWYD,data.posicionJugador,data.NuevoId, data.ArraySalaEnviar)
 	  return callback(data.OYJAHGADFQ);
   }
   );
@@ -3150,13 +3332,13 @@ setEventHandlers = function () { //ESTE
  
 	socket.on('NNSGGWRWTY',HAJAHHHETE);
 	
-	socket.on('PPLWIHVSDV', function(data,callback)
+	/*socket.on('PPLWIHVSDV', function(data,callback)
 	  {
 		  //console.log(data);
 		  JHWIQQCLKD(data.DFBVDPETGO)
 		  return callback(data.OYJAHGADFQ);
 	  }
-	  );
+	  );*/
 	  
 	  socket.on('JHSJKVSKKW', function()
 	  {
@@ -3219,34 +3401,71 @@ onSocketErrorDesdeServer= function (NNWWUUQPPP,ErrorPublico) {
 JHWIQQCLKD=function(Sala)
 {
 	var i;
+	var lSalir=false;
 	//1.0.6
-	for (i=0;i<=NBEJWDVLLV.length-1;i++)
-	{
-		//console.log("Enviando el mensaje "+NBEJWDVLLV[0].OYJAHGADFQ+" de "+NBEJWDVLLV[0].OJPXTRQDKS);
-		//console.log("Comparo cliente "+NBEJWDVLLV[i].OJPXTRQDKS+" con "+ViejoSocket+" y sala "+NBEJWDVLLV[i].DFBVDPETGO+" con "+Sala);
-		//if ( (NBEJWDVLLV[i].OJPXTRQDKS==NuevoID || NBEJWDVLLV[i].OJPXTRQDKS===JugadorQueReconecta) && NBEJWDVLLV[i].DFBVDPETGO==Sala)
-		if ( NBEJWDVLLV[i].DFBVDPETGO==Sala)
-		{
-			
-			NBEJWDVLLV[i].OJPXTRQDKS=socket.id; //Cambio las colas de mensajes al nuevo socket.
-			
-			//console.log("Y lo emito "+NBEJWDVLLV[i].RHOLNWBOXR +" "+NBEJWDVLLV[0].OYJAHGADFQ+" de "+NBEJWDVLLV[0].OJPXTRQDKS); 	
-			 this.emit(NBEJWDVLLV[i].RHOLNWBOXR,NBEJWDVLLV[i],
-			 function(XQLEOGMJYG)
-			 {
-				
-				EXBCVLOIYJ(XQLEOGMJYG,'reconecto');
-				
-				
-			 }
-			);
-		}
-
-
-	}	
 	
+	
+	//1.0.9
+	i=NBEJWDVLLV.length;
+	while (i--)
+	{	
 
-	IOJCRKJSRL();
+		NBEJWDVLLV[i].OJPXTRQDKS=socket.id; //Cambio las colas de mensajes al nuevo socket.
+
+		 if (NBEJWDVLLV[i].RHOLNWBOXR.indexOf('NQAQCOINMY')>0) //Con NQAQCOINMY desconecto porque el usuario repartió la baraja para él, falló y fue otro usuario el que la volvió a ejecutar
+		 {
+			 lSalir=true;
+		 }		
+		 
+			 
+		 if (NBEJWDVLLV[i].RHOLNWBOXR.indexOf('enviar carta')>0 || NBEJWDVLLV[i].DFBVDPETGO!=Sala)  //1.0.9 Los envíos de cartas no se envían. Se supone que la IA tira
+		 {
+			NBEJWDVLLV[i].splice(i,1);
+		 }
+		 
+	
+	}
+	
+	if (lSalir==true)
+	{
+		FHKOYDXPCL();
+		
+	}
+	else
+	{
+	
+		for (i=0;i<=NBEJWDVLLV.length-1;i++)
+		{
+
+			//if ( NBEJWDVLLV[i].DFBVDPETGO==Sala)
+			//{				
+				
+				
+			 	
+				 
+				
+					 
+				 this.emit(NBEJWDVLLV[i].RHOLNWBOXR,NBEJWDVLLV[i],
+				 function(XQLEOGMJYG)
+				 {
+					
+					EXBCVLOIYJ(XQLEOGMJYG,'reconecto');
+					
+					
+				 }
+				);
+			//}
+			
+
+
+		}	
+		
+		//1.0.9
+		 this.emit('DameloMio');
+				
+	}
+
+	//IOJCRKJSRL();
 }
 
 HAJAHHHETE=function(NMNUEBBPOI)
@@ -3266,8 +3485,10 @@ HAJAHHHETE=function(NMNUEBBPOI)
 	{
 		JKLJKLRIRI.text=JKLJKLRIRI.text+"Contra el juego: "+NMNUEBBPOI.CuentaSolos+" personas";
 	}
+
+	JKLJKLRIRI.x=YMHIHSNADE.world.centerX + 250+(JKLJKLRIRI.textWidth/2);
 	
-	
+
 	/*JKLJKLRIRI.text="Contra el mundo: "+ NMNUEBBPOI.HJHKJHJKHE+" personas en línea\n"+"Contra amigos: "+NMNUEBBPOI.NSUIHIUEUE +" personas en línea\n"+
 		"Contra el juego: "+NMNUEBBPOI.CuentaSolos+" personas";
 	*/
@@ -3708,7 +3929,7 @@ CURCDCWNHB=function(CYHNPORXFJ)
 		{
 			tapete=tapete.replace('.jpg','_43.jpg');
 		}
-		console.log("ENTRO "+CYHNPORXFJ[0].MBMWBWUYUY)
+		//log("ENTRO "+CYHNPORXFJ[0].MBMWBWUYUY)
 		PWMIBRSDCJ.push(new AWXPNWRCHC(CYHNPORXFJ[0].WWKVHIMWYD,
 			CYHNPORXFJ[0].BONQVNOXDP,
 			CYHNPORXFJ[0].QHHQPXWFNG,
@@ -3909,7 +4130,12 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 	var u;
 	var NPYBJSHIFL;
 	var STLEOJDWSU;
-	
+	var x1;
+	var y1;
+	var x1text;
+	var y1text;
+	var UBWRXKMTQN;
+	var AjusteLetra=30;
 	//return true;
 	
 	log(true,"Desconecta el jugador ");
@@ -3969,10 +4195,10 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 	
 	
 	//console.log("MADRE MIA: "+TFSXFTYVGQ)
-	for(i=0;i<=KYDWXPGHVY.length-1;i++)
-	{		
+	//for(i=0;i<=KYDWXPGHVY.length-1;i++)
+	//{		
 		//console.log("-- JUGADORES DESCONECTADOS "+KYDWXPGHVY[i].SSUNXNEEHN);
-	}
+	//}
 	
 
 		//1.0.4
@@ -4036,10 +4262,78 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 		}			
 		
 	}
+	///////////
+	console.log("COMIENZA");
+	UBWRXKMTQN=HHOPUSIABJ(NPYBJSHIFL+1);
+	console.log("HA DEVUELTO "+UBWRXKMTQN);
+			if (UBWRXKMTQN=="D")
+			{				
+				x1=WIEVLYANFM("D_5",0)+110;
+				y1=FIGQBSJQGA("L_0",0)+20;
+				x1text=x1+125;
+				y1text=y1+35;
+			}
+			if (UBWRXKMTQN=="R")
+			{
+				if (JHJEWHFWNL==false)
+				{
+					x1=WIEVLYANFM("D_5",0)+245;
+				}
+				else
+				{
+					x1=WIEVLYANFM("R_5",0)-20;
+				}
+			
+				y1=FIGQBSJQGA("R_5",0)-147
+				
+					
+				x1text=x1+20;
+				y1text=y1+35;			
+				
+			}
+			if (UBWRXKMTQN=="U")
+			{
+				x1=WIEVLYANFM("D_0",0)+25;
+				if (JHJEWHFWNL==false)
+				{
+					y1=FIGQBSJQGA("R_5",0)-147;
+				}
+				else
+				{
+					y1=FIGQBSJQGA("U_0",0)-95;
+				}
+
+				x1text=x1+20;
+				y1text=y1+35;		
+			}
+			  
+			if (UBWRXKMTQN=="L")
+			{
+				x1=WIEVLYANFM("L_0",0);
+				y1=FIGQBSJQGA("L_0",0)+20;
+				x1text=x1+125;
+				y1text=y1+35;		
+				Desplazamiento=75;				
+			}
+	
+	
+	//////////
 	
 	if (NPYBJSHIFL==0)
 	{
+		UWROMBGGSY.x=x1text;
 		UWROMBGGSY.text="Ordenador 1";
+		if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+		{
+			UWROMBGGSY.x=UWROMBGGSY.x-(UWROMBGGSY.textWidth/2)-AjusteLetra;
+		}
+		else
+		{
+			UWROMBGGSY.x=UWROMBGGSY.x+(UWROMBGGSY.textWidth/2)-AjusteLetra;
+		}
+		UWROMBGGSY.y=y1text;
+
+		
 		XPBCVAGCDQ[NPYBJSHIFL].WWKVHIMWYD="Ordenador 1"
 		//IDKJKASOTQ.loadTexture('JHGHJAGCMC', 0);
 		QYBDUBOCBT.loadTexture('JHGHJAGCMC', 0);
@@ -4062,7 +4356,18 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 	
 	if (NPYBJSHIFL==1)
 	{
+		HUPALFWPFI.x=x1text;
 		HUPALFWPFI.text="Ordenador 2";
+		if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+		{
+			HUPALFWPFI.x=HUPALFWPFI.x-(HUPALFWPFI.textWidth/2)-AjusteLetra;
+		}
+		else
+		{
+			HUPALFWPFI.x=HUPALFWPFI.x+(HUPALFWPFI.textWidth/2)-AjusteLetra;
+		}
+		HUPALFWPFI.y=y1text;
+		
 		XPBCVAGCDQ[NPYBJSHIFL].WWKVHIMWYD="Ordenador 2"
 		BDQHBTUNWW.loadTexture('JHGHJAGCMC', 0);
 		BDQHBTUNWW.width=PJRPWGXEYM;
@@ -4079,7 +4384,19 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 		}	}	
 	if (NPYBJSHIFL==2)
 	{
+		BXYCJYDVRT.x=x1text;
 		BXYCJYDVRT.text="Ordenador 3";
+		if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+		{
+			BXYCJYDVRT.x=BXYCJYDVRT.x-(BXYCJYDVRT.textWidth/2)-AjusteLetra;
+		}
+		else
+		{
+			BXYCJYDVRT.x=BXYCJYDVRT.x+(BXYCJYDVRT.textWidth/2)-AjusteLetra;
+		}
+		BXYCJYDVRT.y=y1text;
+		
+		
 		XPBCVAGCDQ[NPYBJSHIFL].WWKVHIMWYD="Ordenador 3"
 		PRWBHVTUSC.loadTexture('JHGHJAGCMC', 0);
 		PRWBHVTUSC.width=PJRPWGXEYM;
@@ -4097,7 +4414,18 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 	}
 	if (NPYBJSHIFL==3)
 	{
+		IRAIEARIWA.x=x1text;
 		IRAIEARIWA.text="Ordenador 4";
+		if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+		{
+			IRAIEARIWA.x=IRAIEARIWA.x-(IRAIEARIWA.textWidth/2)-AjusteLetra;
+		}
+		else
+		{
+			IRAIEARIWA.x=IRAIEARIWA.x+(IRAIEARIWA.textWidth/2)-AjusteLetra;
+		}
+		IRAIEARIWA.y=y1text;		
+		
 		XPBCVAGCDQ[NPYBJSHIFL].WWKVHIMWYD="Ordenador 4"
 		BMWINQGWDD.loadTexture('JHGHJAGCMC', 0);
 		BMWINQGWDD.width=PJRPWGXEYM;
@@ -4122,7 +4450,7 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 	VWYRRWMSJI('XJARYUVBCB',NPYBJSHIFL);
 	if (MinutosSancion>0)
 	{
-		onSocketErrorDesdeServer("Error13",NombreDesconectado+" será sancionado con "+MinutosSancion+" minutos si no logra reconectar.");
+		onSocketErrorDesdeServer("Error13",NombreDesconectado+" será sancionado\n con "+MinutosSancion+" minutos si no logra reconectar.");
 	}
 
 	
@@ -4254,13 +4582,17 @@ VWYRRWMSJI=function(HOGPTRLBYH,NPYBJSHIFL)
 		);
 }
 
-BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,NuevoID)
+BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,NuevoID,ArraySalaEnviar)
 {
 	var LQPUBPQTJA;
 	var i;
 	var u;
 	var NPYBJSHIFL;
 	var STLEOJDWSU;
+	
+	//1.0.9
+	vReconectando=true;
+	HUUCUYFBLW.stop();
 	
 	//return true;
 	//PUBDSNTIUS.stop();
@@ -4296,17 +4628,38 @@ BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,Nuevo
 	}
 	
 	
-
-	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
+	//Para por si acaso no me he enterado de alguna desconexión mientras estaba desconectado
+	for (i=0;i<=ArraySalaEnviar.length-1;i++)
 	{
-		//console.log("PELICULA "+XPBCVAGCDQ[i].XJARYUVBCB);
+		//console.log("Actualizando id: "+XPBCVAGCDQ[i].AURESXCGMK+ " "+ JugadorQueReconecta);
+		for (u=0;i<=XPBCVAGCDQ.length-1;u++)
+		{
+			if (ArraySalaEnviar[i].AURESXCGMK==XPBCVAGCDQ[u].AURESXCGMK)
+			{
+				
+				XPBCVAGCDQ[u].XJARYUVBCB=ArraySalaEnviar[i].XJARYUVBCB;
+				XPBCVAGCDQ[u].AURESXCGMK=ArraySalaEnviar[i].AURESXCGMK;
+				//console.log("Mi nuevo id: "+NuevoID);
+				
+			}
+		}
+	}
+	
+	
+
+
+	if (XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK==JugadorQueReconecta)
+	{
+		JHWIQQCLKD(Sala);
 	}
 	
 	JHKJKHHJCC();
 
 	
 	VWYRRWMSJI('Conectado',NPYBJSHIFL);
-	IOJCRKJSRL();//1.0.6
+	//IOJCRKJSRL();//1.0.6  1.0.9
+	
+	vReconectando=false;
 	
 }
 
@@ -5002,6 +5355,7 @@ AAQWTFMQMA = function() {
 	var b;
 	var c;
 	var d;
+	var AjusteLetra=30;
 	
 	var Desplazamiento;
 
@@ -5031,8 +5385,8 @@ AAQWTFMQMA = function() {
 				//console.log("1.5");
 				var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", align: "left", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 				//console.log("1.6");
-				x1text=x1+85;
-				y1text=y1;
+				x1text=x1+125;
+				y1text=y1+35;
 				
 				Desplazamiento=75;
 
@@ -5060,9 +5414,9 @@ AAQWTFMQMA = function() {
 				//XPBCVAGCDQ[i].WWKVHIMWYD="Pepito Grillo es gay ya te digo";
 				//XPBCVAGCDQ[i].WWKVHIMWYD="Ivan";
 				var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", align: "right", boundsAlignH: "right", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
-				x1text=x1-200;
+				x1text=x1+20;
 				//x1text=100;
-				y1text=y1;	
+				y1text=y1+35;	
 				Desplazamiento=-55;				
 				
 			}
@@ -5081,8 +5435,8 @@ AAQWTFMQMA = function() {
 				
 				//XPBCVAGCDQ[i].WWKVHIMWYD="y algo mariposón. Tb lo se"
 				var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", align: "right", boundsAlignH: "right", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
-				x1text=x1-200;
-				y1text=y1;		
+				x1text=x1+20;
+				y1text=y1+35;		
 				Desplazamiento=-55;				
 			}
 			  
@@ -5096,8 +5450,8 @@ AAQWTFMQMA = function() {
 				//console.log("1.13");
 				var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", align: "left", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
 				//console.log("1.14");
-				x1text=x1+85;
-				y1text=y1;		
+				x1text=x1+125;
+				y1text=y1+35;		
 				Desplazamiento=75;				
 			}
 			//console.log("i "+i );
@@ -5148,16 +5502,31 @@ AAQWTFMQMA = function() {
 						XPLHSUIGIU = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1-35,OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,2));					
 					}
 					
-					UWROMBGGSY=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
-					UWROMBGGSY.setTextBounds(x1text, y1text, 190, 90);
+					//UWROMBGGSY=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+					//UWROMBGGSY.setTextBounds(x1text, y1text, 190, 90);
+					UWROMBGGSY=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 22);
+					UWROMBGGSY.anchor.set(0.5,0.5)
+					UWROMBGGSY.x=x1text;
+					
+					UWROMBGGSY.text="";
+					UWROMBGGSY.text=XPBCVAGCDQ[i].JJHFHGHSUI;
+					//UWROMBGGSY.text="Tengo Tengo Tengo";
+					if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+					{
+						UWROMBGGSY.x=UWROMBGGSY.x-(UWROMBGGSY.textWidth/2)-AjusteLetra;
+					}
+					else
+					{
+						UWROMBGGSY.x=UWROMBGGSY.x+(UWROMBGGSY.textWidth/2)-AjusteLetra;
+					}
+					UWROMBGGSY.y=y1text;
 					
 					//UWROMBGGSY.x=(x1text);
 					//UWROMBGGSY.y=(y1text);
 					//alert("jj");
 					//UWROMBGGSY.style=IQVAAXFOXW;
 					
-					UWROMBGGSY.text="";
-					UWROMBGGSY.text=XPBCVAGCDQ[i].JJHFHGHSUI;
+
 					
 					
 					
@@ -5177,8 +5546,23 @@ AAQWTFMQMA = function() {
 					}
 					else
 					{
-						UWROMBGGSY.text="";
+						//UWROMBGGSY.text="";
+						//UWROMBGGSY.text="Ordenador 1";
+						
+
+						UWROMBGGSY.x=x1text;						
 						UWROMBGGSY.text="Ordenador 1";
+						
+						if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+						{
+							UWROMBGGSY.x=UWROMBGGSY.x-(UWROMBGGSY.textWidth/2)-AjusteLetra;
+						}
+						else
+						{
+							UWROMBGGSY.x=UWROMBGGSY.x+(UWROMBGGSY.textWidth/2)-AjusteLetra;
+						}
+						UWROMBGGSY.y=y1text;
+					
 						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 1"
 						var key='JHGHJAGCMC'					
 						if (QYBDUBOCBT.x<0)
@@ -5224,17 +5608,32 @@ AAQWTFMQMA = function() {
 						NHGUGUEUER = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1-35,OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,2));							
 					}
 					
-					HUPALFWPFI=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+					/*HUPALFWPFI=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
 					HUPALFWPFI.setTextBounds(x1text, y1text, 190, 90);
 					
-				//	HUPALFWPFI.x=(x1text);
-				//	HUPALFWPFI.y=(y1text);
-					//HUPALFWPFI.setTextBounds(100, 100, 200, 200);
-					//HUPALFWPFI.style=IQVAAXFOXW;
+
+					
+					HUPALFWPFI.text="";
+					HUPALFWPFI.text=XPBCVAGCDQ[i].JJHFHGHSUI;*/
+					//console.log("RPHWVBBGIM jugador 2: "+XPBCVAGCDQ[i].WWKVHIMWYD);
+					
+					HUPALFWPFI=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 22);
+					HUPALFWPFI.anchor.set(0.5,0.5)
+					HUPALFWPFI.x=x1text;
 					
 					HUPALFWPFI.text="";
 					HUPALFWPFI.text=XPBCVAGCDQ[i].JJHFHGHSUI;
-					//console.log("RPHWVBBGIM jugador 2: "+XPBCVAGCDQ[i].WWKVHIMWYD);
+					//HUPALFWPFI.text="Tengo2 Tengo2 Tengo2";
+					if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+					{
+						HUPALFWPFI.x=HUPALFWPFI.x-(HUPALFWPFI.textWidth/2)-AjusteLetra;
+					}
+					else
+					{
+						HUPALFWPFI.x=HUPALFWPFI.x+(HUPALFWPFI.textWidth/2)-AjusteLetra;
+					}
+					HUPALFWPFI.y=y1text;
+					
 					
 					imagen2=XPBCVAGCDQ[i].QHHQPXWFNG
 					if (MMKMYKBXGH==undefined)
@@ -5253,8 +5652,23 @@ AAQWTFMQMA = function() {
 					}
 					else
 					{
-						HUPALFWPFI.text="";
+						//HUPALFWPFI.text="";
+						//HUPALFWPFI.text="Ordenador 2";
+						
+						HUPALFWPFI.x=x1text;						
 						HUPALFWPFI.text="Ordenador 2";
+						
+						if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+						{
+							HUPALFWPFI.x=HUPALFWPFI.x-(HUPALFWPFI.textWidth/2)-AjusteLetra;
+						}
+						else
+						{
+							HUPALFWPFI.x=HUPALFWPFI.x+(HUPALFWPFI.textWidth/2)-AjusteLetra;
+						}
+						HUPALFWPFI.y=y1text;
+						
+						
 						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 2"
 						var key='JHGHJAGCMC'					
 						if (BDQHBTUNWW.x<0)
@@ -5299,13 +5713,29 @@ AAQWTFMQMA = function() {
 						HGWUGIVGWP = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1-35,OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,2));			
 					}
 					
-					BXYCJYDVRT=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+					/*BXYCJYDVRT=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
 					BXYCJYDVRT.setTextBounds(x1text, y1text, 190, 90);
-					//BXYCJYDVRT.x=(x1text);
-					//BXYCJYDVRT.y=(y1text);
-					//BXYCJYDVRT.style=IQVAAXFOXW;
+					BXYCJYDVRT.text="";
+					BXYCJYDVRT.text=XPBCVAGCDQ[i].JJHFHGHSUI;*/
+					
+					BXYCJYDVRT=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 22);
+					BXYCJYDVRT.anchor.set(0.5,0.5)
+					BXYCJYDVRT.x=x1text;
+					
 					BXYCJYDVRT.text="";
 					BXYCJYDVRT.text=XPBCVAGCDQ[i].JJHFHGHSUI;
+					//BXYCJYDVRT.text="Tengo3 Tengo3 Tengo3";
+					if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+					{
+						BXYCJYDVRT.x=BXYCJYDVRT.x-(BXYCJYDVRT.textWidth/2)-AjusteLetra;
+					}
+					else
+					{
+						BXYCJYDVRT.x=BXYCJYDVRT.x+(BXYCJYDVRT.textWidth/2)-AjusteLetra;
+					}
+					BXYCJYDVRT.y=y1text;
+					
+					
 					//console.log("RPHWVBBGIM jugador 3: "+XPBCVAGCDQ[i].WWKVHIMWYD);
 					
 					imagen3=XPBCVAGCDQ[i].QHHQPXWFNG
@@ -5324,8 +5754,22 @@ AAQWTFMQMA = function() {
 					}
 					else
 					{
-						BXYCJYDVRT.text="";
+						//BXYCJYDVRT.text="";
+						//BXYCJYDVRT.text="Ordenador 3";
+						
+						BXYCJYDVRT.x=x1text;						
 						BXYCJYDVRT.text="Ordenador 3";
+						
+						if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+						{
+							BXYCJYDVRT.x=BXYCJYDVRT.x-(BXYCJYDVRT.textWidth/2)-AjusteLetra;
+						}
+						else
+						{
+							BXYCJYDVRT.x=BXYCJYDVRT.x+(BXYCJYDVRT.textWidth/2)-AjusteLetra;
+						}
+						BXYCJYDVRT.y=y1text;
+						
 						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 3"
 						var key='JHGHJAGCMC'					
 						if (PRWBHVTUSC.x<0)
@@ -5376,17 +5820,31 @@ AAQWTFMQMA = function() {
 						HGWYUYGVWO = YMHIHSNADE.add.sprite(x1+Desplazamiento,y1-35,OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,2));		
 					}
 					
-					IRAIEARIWA=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
+					/*IRAIEARIWA=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
 					IRAIEARIWA.setTextBounds(x1text, y1text, 190, 90);
-					//IRAIEARIWA.x=(x1text);
-					//IRAIEARIWA.y=(y1text);
-					//IRAIEARIWA.style=IQVAAXFOXW;
 					IRAIEARIWA.text="";
-					IRAIEARIWA.text=XPBCVAGCDQ[i].JJHFHGHSUI;
+					IRAIEARIWA.text=XPBCVAGCDQ[i].JJHFHGHSUI;*/
 					//console.log("RPHWVBBGIM jugador 4: "+XPBCVAGCDQ[i].WWKVHIMWYD);
 					
+					IRAIEARIWA=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 22);
+					IRAIEARIWA.anchor.set(0.5,0.5)
+					IRAIEARIWA.x=x1text;
+					
+					IRAIEARIWA.text="";
+					IRAIEARIWA.text=XPBCVAGCDQ[i].JJHFHGHSUI;
+					//IRAIEARIWA.text="Tengo4 Tengo4 Tengo4";
+					if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+					{
+						IRAIEARIWA.x=IRAIEARIWA.x-(IRAIEARIWA.textWidth/2)-AjusteLetra;
+					}
+					else
+					{
+						IRAIEARIWA.x=IRAIEARIWA.x+(IRAIEARIWA.textWidth/2)-AjusteLetra;
+					}
+					IRAIEARIWA.y=y1text;					
+					
 					imagen4=XPBCVAGCDQ[i].QHHQPXWFNG
-					imagen4=XPBCVAGCDQ[i].QHHQPXWFNG
+					
 					if (JNMGJTHVNF==undefined)
 					{
 						JNMGJTHVNF=new Phaser.Loader(YMHIHSNADE);
@@ -5405,8 +5863,21 @@ AAQWTFMQMA = function() {
 					}
 					else
 					{
-						IRAIEARIWA.text="";
+						//IRAIEARIWA.text="";
+						//IRAIEARIWA.text="Ordenador 4";
+						IRAIEARIWA.x=x1text;						
 						IRAIEARIWA.text="Ordenador 4";
+						if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
+						{
+							IRAIEARIWA.x=IRAIEARIWA.x-(IRAIEARIWA.textWidth/2)-AjusteLetra;
+						}
+						else
+						{
+							IRAIEARIWA.x=IRAIEARIWA.x+(IRAIEARIWA.textWidth/2)-AjusteLetra;
+						}
+						IRAIEARIWA.y=y1text;
+						
+						
 						XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 4"
 						var key='JHGHJAGCMC'					
 						if (BMWINQGWDD.x<0)
@@ -5427,7 +5898,7 @@ AAQWTFMQMA = function() {
  
  
  
-DRKFTTVQVC=function(){
+/*DRKFTTVQVC=function(){
 	 
 	var i;
 	var u;
@@ -5574,6 +6045,8 @@ DRKFTTVQVC=function(){
 	}	
 		
  } 
+ */
+ 
 IOJCRKJSRL=function()
 {
 	var i;
@@ -5762,32 +6235,31 @@ XWGQYYRRQO = function(UHTPGPRUJA,SJVCMXWVVI,BBSGITWRQX) {
  NOGEVUYFEW= function(UHTPGPRUJA,SJVCMXWVVI,turnoRecibido,SLGKDYQCAY,VMKDXVSQEY) {
 
 	//SVHMCOYULR("RECIBO..."+ SJVCMXWVVI+" y "+UHTPGPRUJA);
-	var Delay=10;
+	//var Delay=10;
 	
-	if (OTGNMRHTVK()==true)
+	//1.0.9 He comentado los delay lo de puntosfin
+	
+	/*if (OTGNMRHTVK()==true)
 	{
 		WWAYLOUPUQ(); 
 	}
 	else
-	{
+	{*/
 		
-	 //ape XYXCEMMRDC.push(new NQMQGXXHIL(SLGKDYQCAY,UHTPGPRUJA) );
-	 
-		//console.log("BLOQUEO DESDE SERVER RAPIDO- "+UHTPGPRUJA+" "+SLGKDYQCAY+" "+VMKDXVSQEY);
-		if (WSHPROHDIV.length>0) //1.0.6 Hago un delay
+		/*if (WSHPROHDIV.length>0) //1.0.6 Hago un delay
 		{
 			Delay=700*WSHPROHDIV.length;	
 		}
-		//console.log("se");
+
 		var timerdelay = YMHIHSNADE.time.create(false);
-			timerdelay.add(Delay, function(){
-				//console.log("si");
+			timerdelay.add(Delay, function(){*/
+
 				VPDVSDLPHG(UHTPGPRUJA,SJVCMXWVVI,SLGKDYQCAY,VMKDXVSQEY); 
-		}
+		/*}
 		);
-		timerdelay.start();
+		timerdelay.start();*/
 		
-	}
+	//}
 	
 
  }
@@ -5874,14 +6346,17 @@ YUXWLFWVRD=function()
 SVHMCOYULR=function(RPHWVBBGIM)
 {
 	//tocar 1000 y 50
-	var styleMarcador = { font: "bold 50px Arial", fill: "#fff", align: "center", boundsAlignH: "center", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 800};	
-	var BMQCYKJAHO=YMHIHSNADE.add.text(0, 0, RPHWVBBGIM, styleMarcador);
-	//ATTUXTNNKX.visible=false;
-	BMQCYKJAHO.stroke = '#961918';
+	//var styleMarcador = { font: "bold 50px Arial", fill: "#fff", align: "center", boundsAlignH: "center", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 800};	
+	//var BMQCYKJAHO=YMHIHSNADE.add.text(0, 0, RPHWVBBGIM, styleMarcador);
+	
+	var BMQCYKJAHO=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY, 'MiFuenteAmarilla', 'BitmapText', 50);
+	BMQCYKJAHO.anchor.set(0.5,0.5)
+	BMQCYKJAHO.text=RPHWVBBGIM;
+	/*BMQCYKJAHO.stroke = '#961918';
     BMQCYKJAHO.strokeThickness = 4;
     BMQCYKJAHO.fill = '#F8E600';		
 	//ATTUXTNNKX.setTextBounds(960,310,300,100)
-	BMQCYKJAHO.setTextBounds(100,150,1200,200)
+	BMQCYKJAHO.setTextBounds(100,150,1200,200)*/
 	
 	var	twMensajeError = YMHIHSNADE.add.tween(BMQCYKJAHO).to( { alpha: 0 }, 1500, KYFMRVNHIQ, true,1000);
 	

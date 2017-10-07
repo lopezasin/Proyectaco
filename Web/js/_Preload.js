@@ -27,6 +27,9 @@ Preload.prototype.preload = function() {
 	//this.load.pack("start", "assets/assets-pack.json");
 	//this.load.pack("level", "assets/assets-pack.json");
 	
+	this.load.bitmapFont('MiFuenteAmarilla', 'assets/fonts/font.png', 'assets/fonts/font.fnt');
+	 
+	
 	this.load.image('1', 'assets/images/Cartas/Oros/1.png');
 	this.load.image('2', 'assets/images/Cartas/Oros/2.png');
 	this.load.image('3', 'assets/images/Cartas/Oros/3.png');
