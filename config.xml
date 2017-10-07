@@ -34,7 +34,7 @@
 	<plugin name="cordova-plugin-vibration" spec="2.1.4" />
 	<plugin name="cordova-plugin-whitelist" spec="1.3.2" />
 	<plugin name="cordova-plugin-device" />
-	<plugin name="cordova plugin add cordova-plugin-speechrecognition" />
+	<plugin name="cordova-plugin-speechrecognition" />
 
 	<gap:plugin name="cordova-plugin-googleplus" source="npm">
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
