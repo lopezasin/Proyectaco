@@ -313,111 +313,12 @@ var UVYJLLYCYD=function(SSUNXNEEHN,AURESXCGMK)
 
 
 
-/*
-	function startRecognition(){
-		if (window.plugins)
-		{
-			window.plugins.speechRecognition.startListening(function(result){
-				// Show results in the console
-				console.log(result);
-			}, function(err){
-				console.error(err);
-			}, {
-				language: "es-ES",
-				showPopup: true
-			});
-		}
-	}
 
-	// Verify if recognition is available
-	if (window.plugins)
-	{
-		window.plugins.speechRecognition.isRecognitionAvailable(function(available){
-			if(!available){
-				console.log("Sorry, not available");
-			}
 
-			// Check if has permission to use the microphone
-			window.plugins.speechRecognition.hasPermission(function (isGranted){
-				if(isGranted){
-					startRecognition();
-				}else{
-					// Request the permission
-					window.plugins.speechRecognition.requestPermission(function (){
-						// Request accepted, start recognition
-						startRecognition();
-					}, function (err){
-						console.log(err);
-					});
-				}
-			}, function(err){
-				console.log(err);
-			});
-		}, function(err){
-			console.log(err);
-		});
+
 		
 		
-		
-		
-		window["speechRecognition"] = {
-				hasPermission: function(){
-					return new Promise(function(resolve, reject){
-						window.plugins.speechRecognition.hasPermission(function (isGranted){
-							resolve(isGranted);
-						}, function(err){
-							reject(err);
-						});
-					});
-				},
-				requestPermission: function(){
-					return new Promise(function(resolve, reject){
-						window.plugins.speechRecognition.requestPermission(function (){
-							resolve();
-						}, function (err){
-							reject();
-						});
-					});
-				},
-				startRecognition: function(settings){
-					return new Promise(function(resolve, reject){
-						window.plugins.speechRecognition.startListening(function(result){
-							resolve(result);
-						}, function(err){
-							reject(err);
-						}, settings);
-					});
-				},
-				getSupportedLanguages: function(){
-					return new Promise(function(resolve, reject){
-						window.plugins.speechRecognition.getSupportedLanguages(function(result){
-							resolve(result);
-						}, function(err){
-							reject(err);
-						});
-					});
-				},
-				isRecognitionAvailable: function(){
-					return new Promise(function(resolve, reject){
-						window.plugins.speechRecognition.isRecognitionAvailable(function(available){
-							resolve(available);
-						}, function(err){
-							reject(err);
-						});
-					});
-				},
-				stopListening: function(){
-					return new Promise(function(resolve, reject){
-						window.plugins.speechRecognition.stopListening(function(){
-							resolve();
-						}, function(err){
-							reject(err);
-						});
-					});
-				}
-			};
-	}
-*/
+	
 
 var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC,FFRVOEAXTF,BDYYDTFQAO,UHYGLMAUNK,DNQIYVAFPR,XCXKVEEIOO,BUJELVTIKU,NBJHGSFSJS,MBMWBWUYUY,OIUIOWCHVW,NHWYTYUSYG){
 	this.WWKVHIMWYD=WWKVHIMWYD
@@ -802,7 +703,12 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	MNSLSOPOOP.anchor.setTo(0.5,0.5)
 	MNSLSOPOOP.visible=false;
 	
-	BotonHablar= YMHIHSNADE.add.button(150+YAJVUBPNNW, 110, 'Boton_sonido_off', function(){ recognition.start(); }, this, 2, 1, 0);;
+	BotonHablar= YMHIHSNADE.add.button(150+YAJVUBPNNW, 110, 'Boton_sonido_off', function(){startRecognition(); }, this, 2, 1, 0);;
+	BotonHablar.anchor.setTo(0.5,0.5)
+	BotonHablar.visible=true;
+	
+	
+	BotonHablar= YMHIHSNADE.add.button(200+YAJVUBPNNW, 110, 'Boton_sonido_off', function(){window.plugins.speechRecognition.isRecognitionAvailable(); }, this, 2, 1, 0);;
 	BotonHablar.anchor.setTo(0.5,0.5)
 	BotonHablar.visible=true;	
 	

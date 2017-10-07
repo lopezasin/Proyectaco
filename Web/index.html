@@ -249,7 +249,46 @@ function onDeviceReady() {
 		{}
 		
 		
-		try
+		startRecognition=function(){
+		window.plugins.speechRecognition.startListening(function(result){
+			// Show results in the console
+			BYBYBFHBOX(TFSXFTYVGQ,result ,false);
+		}, function(err){
+			console.error(err);
+		}, {
+			language: "es-ES",
+			showPopup: true
+		});
+		}
+
+	// Verify if recognition is available
+		window.plugins.speechRecognition.isRecognitionAvailable(function(available){
+		if(!available){
+			alert("Sorry, not available");
+		}
+
+		// Check if has permission to use the microphone
+		window.plugins.speechRecognition.hasPermission(function (isGranted){
+			if(isGranted){
+				startRecognition();
+			}else{
+				// Request the permission
+				window.plugins.speechRecognition.requestPermission(function (){
+					// Request accepted, start recognition
+					startRecognition();
+				}, function (err){
+					alert(err);
+				});
+			}
+		}, function(err){
+		   alert(err);
+		});
+	}, function(err){
+		alert(err);
+	});
+		
+		
+		/*try
 		{
 		//	alert("s");
 		var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
@@ -289,6 +328,7 @@ function onDeviceReady() {
 			
 			
 		}
+		*/
 		
 		if( window.plugins)
 		{
