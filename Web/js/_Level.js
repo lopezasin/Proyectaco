@@ -708,10 +708,10 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	BotonHablar.visible=true;
 	
 	
-	BotonHablar= YMHIHSNADE.add.button(250+YAJVUBPNNW, 110, 'Boton_sonido_off', function(){window.plugins.speechRecognition.isRecognitionAvailable(); }, this, 2, 1, 0);;
+	/*BotonHablar= YMHIHSNADE.add.button(250+YAJVUBPNNW, 110, 'Boton_sonido_off', function(){window.plugins.speechRecognition.isRecognitionAvailable(); }, this, 2, 1, 0);;
 	BotonHablar.anchor.setTo(0.5,0.5)
 	BotonHablar.visible=true;	
-	
+	*/
 		//UIYIUHCWVX.play();
 		//UUYECMNSZZ.play();
 		//ZZJJJUHIHI.play();
