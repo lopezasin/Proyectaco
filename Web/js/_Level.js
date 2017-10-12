@@ -1113,11 +1113,15 @@ function startRecognition(){
 	{
 		try
 		{
+		socket.emit('Consola',"Habla");
 		window.plugins.speechRecognition.startListening(function(result){
 			// Show results in the console
 			//alert(result);
+			socket.emit('Consola',"No se");
+			
 			  	BotonHablarOff.visible=true;	
 				BotonHablarOn.visible=false;
+				socket.emit('Consola',result);
 				if (result!="")
 				{
 					BYBYBFHBOX(TFSXFTYVGQ,result ,false);
@@ -1125,6 +1129,7 @@ function startRecognition(){
 				
 			}, function(err){
 				console.error(err);
+				socket.emit('Consola',"Error "+err);
 			}, {
 				language: "es-ES",
 				showPopup: false

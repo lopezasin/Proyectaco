@@ -2110,6 +2110,7 @@ function IHSCVAKSDJ(sprite) {
 	//console.log("ESTADO CONEXION "+socket.socket.connected);
 	log(false,"KEYYYYYYYYYYYYYYYYYYYY "+sprite.name);
 	log(false,"elimina");
+	socket.emit('Consola',"Paro Drag");
 	if (1==1) //(!PQUFIBKJJH.isRunning && !LJRRHVSVKD.isRunning && !LCYAHFBDTT.isRunning && !NEPGDYQDEI.isRunning && !HHBPAROITT.isRunning && !EWXBTDLSHW.isRunning && !BDEFDQUJJE.isRunning && !CKOUBGTDUF.isRunning && !JLFYUAKDIJ.isRunning)
 	{
 	
