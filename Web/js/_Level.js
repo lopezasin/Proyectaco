@@ -1241,8 +1241,13 @@ function StopRecognition()
 {
 	if (window.plugins)
 	{
+		BotonHablarOff.visible=true;	
+		BotonHablarOn.visible=false;	
+	
 		try
 		{
+
+			
 			window.plugins.speechRecognition.stopListening(function(result){
 				socket.emit('Consola',"¡Parado! "+err);
 			}
