@@ -121,6 +121,37 @@ document.addEventListener('focus', function(){
 				$(this).addClass('activo');
 			}
 		});
+	
+	
+	    $('#alternar-panel-oculto').toggle( 
+ 
+			/* 
+				Primer click.
+				Función que descubre un panel oculto
+				y cambia el AWCCMSCOPO del botón.
+			*/
+			function(e){ 
+				$('#panel-oculto').slideDown();
+				$(this).text('Cerrar el panel');
+				e.preventDefault();
+			}, // Separamos las dos funciones con una coma
+		 
+			/* 
+				Segundo click.
+				Función que oculta el panel
+				y vuelve a cambiar el AWCCMSCOPO del botón.
+			*/
+			function(e){ 
+				$('#panel-oculto').slideUp();
+				$(this).text('MYQCQNOJGH el panel oculto');
+				e.preventDefault();
+			}
+	 
+		);
+	
+	
+	
+	
 	});
 	
 /*	$(document).ready(function(e){
@@ -673,6 +704,11 @@ border-spacing: 50em;
 <!-- "padding:0px;margin:0px;width:100vw; class="container"-->
 <body  style="background-color:rgb(0%, 0%, 0%);" > 
 
+
+
+
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -689,6 +725,12 @@ border-spacing: 50em;
 
   
 <div id="gamer" style="margin: 0px; padding:0px ;width:100%; height:100%; max-width: 100%; max-height: 100%">
+
+<div id="panel-oculto" style="display:inline-block;"></div>
+
+<div id="panel-oculto2" style="display:inline-block;">
+<a href="#" id="alternar-panel-oculto" style="background-color:#369;color:#fff;text-decoration:none;padding:10px 30px;display:inline-block !important;margin-bottom:30px;">MYQCQNOJGH el panel oculto</a>
+</div>
 
 <div id=DivResultado class="container" style="display:none" >
     
@@ -898,7 +940,12 @@ border-spacing: 50em;
 		 <a href="http://guiñotepro.es/privacidad/privacidad.html" target="_blank">política de privacidad</a>
 </div> 
 
+
+
 </div>
+
+
+ 
 
   <!-- <div id="DivFace" class="fb-like" data-href="https://www.facebook.com/guinotepro/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true">hola</div> -->
 

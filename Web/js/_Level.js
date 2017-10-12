@@ -26,10 +26,12 @@ if (vProduccion==true){
 else
 {
 	//JHGHJAGCMC='http://localhost:5000'		
-	//JHGHJAGCMC='http://192.168.1.100:5000'		
-	JHGHJAGCMC='http://192.168.43.100:5000'		
+	JHGHJAGCMC='http://192.168.1.100:5000'		
+	//JHGHJAGCMC='http://192.168.43.100:5000'		
 }
 
+var recognition;
+var UsuariosOnline=0;
 var Transcribe="";
 var vReconectando=false;
 var vNoEsta;
@@ -56,9 +58,19 @@ var ISVLSNLHWR=0;
 var IJCSKNTKVH="";
 
 var JLVDFTPUNI=101;
-var MFENMIFPUA=3;
+var MFENMIFPUA=1;
+
+var Rapido=true;
+var BucleManoCentro=0;
 var HLBMKNFUWL=1500;//1500 milisegundos
 var GWFPRHAYQK=20;//20 segundos
+
+if (Rapido==true)
+{
+	HLBMKNFUWL=6000;//1500 milisegundos
+	GWFPRHAYQK=20;//20 segundos
+}
+
 var XIQDONAJMM;
 var KVBNWXDTON;
 var RCYRGXLWBR;
@@ -112,6 +124,7 @@ var UOPIKJVEKS;
 var WWFSQDQYYU;
 var GSXGWASLIY;
 var COTMMCVJWP;
+var GrupoTextos;
 var GHFGHSIWCV;
 
 //OJO CON ESTOS ArrayS AL LIMPIAR VARIABLES
@@ -367,6 +380,11 @@ Level.prototype.create=function(){
 	//log(false, Math.floor(Math.random() * 360) + 1   );	
 	YMHIHSNADE=this;
 	
+	
+
+	
+	
+	
 	DFBVDPETGO=Math.floor(Math.random());
 	YJEISFVFQY();
 	
@@ -594,6 +612,7 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	UOPIKJVEKS = YMHIHSNADE.add.group();
 	WWFSQDQYYU = YMHIHSNADE.add.group();
 	COTMMCVJWP = YMHIHSNADE.add.group();
+	GrupoTextos=YMHIHSNADE.add.group();//1.0.9
 	
 	var BRQFVLOBSF=YMHIHSNADE.add.sprite(-200,-200,'1');
 	COIVBWRMCC=BRQFVLOBSF.width;
@@ -701,16 +720,28 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	BNMBJQQQQW.visible=false;
 	MNSLSOPOOP= YMHIHSNADE.add.button(50+YAJVUBPNNW, 110, 'Boton_sonido_off', SonidoOn, this, 2, 1, 0);;
 	MNSLSOPOOP.anchor.setTo(0.5,0.5)
-	MNSLSOPOOP.visible=false;
+	MNSLSOPOOP.visible=true;
 	
-	BotonHablar= YMHIHSNADE.add.button(150+YAJVUBPNNW, 110, 'Boton_sonido_off', function(){startRecognition(); }, this, 2, 1, 0);;
-	BotonHablar.anchor.setTo(0.5,0.5)
-	BotonHablar.visible=true;
+	BotonHablarOff= YMHIHSNADE.add.button(200+YAJVUBPNNW, 50, 'Boton_micro_off', function(){		
+		//BotonHablarOff.visible=false;	
+		//BotonHablarOn.visible=true; 
+		startRecognition(); }, this, 2, 1, 0);;
+	BotonHablarOff.anchor.setTo(0.5,0.5)
+	BotonHablarOff.visible=false;
+	
+	BotonHablarOn= YMHIHSNADE.add.button(200+YAJVUBPNNW, 50, 'Boton_micro_on', function(){
+		//BotonHablarOff.visible=true;	
+		//BotonHablarOn.visible=false;
+		StopRecognition(); 
+		}, this, 2, 1, 0);;
+	BotonHablarOn.anchor.setTo(0.5,0.5)
+	BotonHablarOn.visible=false;	
 	
 	
-	BotonHablar2= YMHIHSNADE.add.button(250+YAJVUBPNNW, 110, 'Boton_sonido_off', function(){window.plugins.speechRecognition.isRecognitionAvailable(); }, this, 2, 1, 0);;
+	/*BotonHablar2= YMHIHSNADE.add.button(250+YAJVUBPNNW, 110, 'Boton_sonido_off', function(){window.plugins.speechRecognition.isRecognitionAvailable(); }, this, 2, 1, 0);;
 	BotonHablar2.anchor.setTo(0.5,0.5)
 	BotonHablar2.visible=true;	
+	*/
 	
 		//UIYIUHCWVX.play();
 		//UUYECMNSZZ.play();
@@ -970,6 +1001,8 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	//JBXCGDTWYW = YMHIHSNADE.add.text(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY, 'Esperando jugadores');
 	JBXCGDTWYW=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'MiFuenteAmarilla', 'BitmapText', 50);
 	JBXCGDTWYW.text='Esperando jugadores';
+	GrupoTextos.add(JBXCGDTWYW);
+	YMHIHSNADE.world.bringToTop(GrupoTextos);
 	JBXCGDTWYW.anchor.set(0.5,0.5);
 	JBXCGDTWYW.visible=false;
 	//log(true,"Se crea el mensaje");
@@ -992,6 +1025,9 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	NSNUIQUYIU=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-50, 'MiFuenteAmarilla', 'BitmapText', 50);
 	NSNUIQUYIU.anchor.set(0.5,0.5);
 	NSNUIQUYIU.text='Un momento por favor...\n Esperando al resto de compañeros.'
+	GrupoTextos.add(NSNUIQUYIU);
+	YMHIHSNADE.world.bringToTop(GrupoTextos);
+	//NSNUIQUYIU.bringToTop();
 	NSNUIQUYIU.visible=false;
 	//log(true,"Se crea el mensaje");
 	
@@ -1034,9 +1070,9 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	JSJSHSHSSE.wordWrapWidth=1000;	*/
 	
 		inputField = YMHIHSNADE.add.inputField(10+YAJVUBPNNW, 25,{
-		font: "20px Arial",
+		font: "15px Arial",
 		height:30,
-		width:200,
+		width:120,
 		padding:5,
 		placeHolder: "¿algo que decir?",
 		borderRadius: 6,
@@ -1066,13 +1102,26 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	
 };
 
-		function startRecognition(){
-		
-		
+
+
+
+
+
+function startRecognition(){
+	Transcribe="";
+	if (window.plugins)
+	{
+		try
+		{
 		window.plugins.speechRecognition.startListening(function(result){
 			// Show results in the console
-			alert(result);
-				BYBYBFHBOX(TFSXFTYVGQ,result ,false);
+			//alert(result);
+			  	BotonHablarOff.visible=true;	
+				BotonHablarOn.visible=false;
+				if (result!="")
+				{
+					BYBYBFHBOX(TFSXFTYVGQ,result ,false);
+				}
 				
 			}, function(err){
 				console.error(err);
@@ -1081,6 +1130,110 @@ var timerborrar = YMHIHSNADE.time.create(false);
 				showPopup: false
 			});
 		}
+		catch(e)
+		{
+			SVHMCOYULR("Opción no disponible en tu dispositivo");
+			BotonHablarOff.visible=true;	
+			BotonHablarOn.visible=false;			
+		}
+	}
+	else
+	{
+		
+		try
+		{
+		//	alert("s");
+					  	BotonHablarOff.visible=false;	
+				BotonHablarOn.visible=true;
+				
+		var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+		recognition = new SpeechRecognition();
+
+		recognition.lang = "es-ES";
+		recognition.continuous = false;
+		recognition.interimResults = true;
+
+		recognition.onresult = function(event) {
+			Transcribe="";
+		  for (var i = event.resultIndex; i < event.results.length; i++) {
+			if(event.results[i].isFinal){
+			  //document.getElementById("text").innerHTML += event.results[i][0].transcript;
+			  Transcribe += event.results[i][0].transcript;
+			  	//BotonHablarOff.visible=true;	
+				//BotonHablarOn.visible=false;
+			}
+			}
+			//console.log("FIN "+Transcribe);
+		}
+		recognition.onstart = function(event) { 
+		console.log("empezando");
+		console.log(event); }
+		recognition.onerror = function(event) { 
+			SVHMCOYULR("Tienes que dar permisos al micrófono");
+			BotonHablarOff.visible=true;	
+			BotonHablarOn.visible=false;
+			console.log(event); }
+		recognition.onend = function(event) {
+			
+			if (Transcribe!="")
+			{
+				BYBYBFHBOX(TFSXFTYVGQ,Transcribe ,false);
+			}
+			
+			BotonHablarOff.visible=true;	
+			BotonHablarOn.visible=false;
+				
+			//console.log("FIN2 "+Transcribe);
+			//console.log(event); 
+		}
+		}
+		catch(e)
+		{
+			//	alert("n");
+			SVHMCOYULR("Opción no disponible en tu dispositivo");
+			BotonHablarOff.visible=true;	
+			BotonHablarOn.visible=false;			
+			// Handle results			
+		}	
+		
+		
+		console.log("Se mete a hablar");
+		try
+		{
+			recognition.start()
+		}
+		catch(e)
+		{
+			SVHMCOYULR("Opción no disponible en tu dispositivo");
+			BotonHablarOff.visible=true;	
+			BotonHablarOn.visible=false;
+		}
+
+	}
+	
+}
+
+function StopRecognition()
+{
+	if (window.plugins)
+	{
+		try
+		{
+			window.plugins.speechRecognition.stopListening();
+		}
+		catch(e)
+		{}
+	}
+	else
+	{
+		try{
+			recognition.stop();	
+		}
+		catch(e)
+		{}
+		
+	}
+}
 		
 SolicitaClasificacion=function()
 {
@@ -1469,7 +1622,8 @@ OcultarElegirPareja=function()
 MostrarFacebook=function()
 {
 	var d=document.getElementById('DivFace');
-	d.style.display = 'inline-block';	
+	//d.style.display = 'inline-block';	
+	d.style.display = 'none';	
 }
 
 NGHJWGJHWG=function()
@@ -2556,7 +2710,7 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,NBWHWUQAAA,OMDVKATFLQ, desdeServer)
 				
 				
 				//text = YMHIHSNADE.add.text(IFJRJXGGFY, CWWHRMDADQ , RPHWVBBGIM, style);
-				text=YMHIHSNADE.add.bitmapText(IFJRJXGGFY, CWWHRMDADQ, 'MiFuenteAmarilla', 'BitmapText', 21);
+				text=YMHIHSNADE.add.bitmapText(IFJRJXGGFY, CWWHRMDADQ, 'MiFuenteNegra', 'BitmapText', 24);
 				text.anchor.set(0,0);
 				/*RPHWVBBGIM="Esto es una prueba de concepto que mola muchisimo"
 				var temp="";
@@ -2588,8 +2742,9 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,NBWHWUQAAA,OMDVKATFLQ, desdeServer)
 					
 
 				}*/
-				
-				text.text=wordwrap(RPHWVBBGIM,17);
+				//esto es lo que pasa cuando tienes ganas de trabajar mucho
+				RPHWVBBGIM=RPHWVBBGIM.substring(0,42)
+				text.text=wordwrap(RPHWVBBGIM,15);
 				text.alpha=0;
 				
 				DQKYYAPEEN = YMHIHSNADE.add.tween(FTBVKLREAE).to( { alpha: 1 }, 1500, KYFMRVNHIQ, true);
@@ -3350,6 +3505,8 @@ setEventHandlers = function () { //ESTE
 	  socket.on('JHSJKVSKKW', function()
 	  {
 		  inputField.visible=false;
+		  BotonHablarOn.visible=false;
+		  BotonHablarOff.visible=false;
 	  });
 
 }; //ESTE
@@ -3485,6 +3642,7 @@ HAJAHHHETE=function(NMNUEBBPOI)
 	if (NMNUEBBPOI.HJHKJHJKHE!=-9999)
 	{
 		JKLJKLRIRI.text="Contra el mundo: "+ NMNUEBBPOI.HJHKJHJKHE+" personas\n"+"Contra amigos: "+NMNUEBBPOI.NSUIHIUEUE +" personas\n";
+		UsuariosOnline=NMNUEBBPOI.HJHKJHJKHE;
 	}
 	
 	
@@ -3492,8 +3650,15 @@ HAJAHHHETE=function(NMNUEBBPOI)
 	{
 		JKLJKLRIRI.text=JKLJKLRIRI.text+"Contra el juego: "+NMNUEBBPOI.CuentaSolos+" personas";
 	}
-
-	JKLJKLRIRI.x=YMHIHSNADE.world.centerX + 250+(JKLJKLRIRI.textWidth/2);
+	
+	if (XPBCVAGCDQ.length==0)
+	{
+		JKLJKLRIRI.x=YMHIHSNADE.world.centerX + 250+(JKLJKLRIRI.textWidth/2);
+	}
+	else
+	{
+		JKLJKLRIRI.x=YMHIHSNADE.world.centerX-125 + (JKLJKLRIRI.textWidth/2);
+	}
 	
 
 	/*JKLJKLRIRI.text="Contra el mundo: "+ NMNUEBBPOI.HJHKJHJKHE+" personas en línea\n"+"Contra amigos: "+NMNUEBBPOI.NSUIHIUEUE +" personas en línea\n"+
@@ -5231,9 +5396,19 @@ AAQWTFMQMA = function() {
 			log(true,XPBCVAGCDQ[i].EJOYNSESRD);
 			//console.log("CHAT "+PWMIBRSDCJ[0].MBMWBWUYUY);
 			inputField.visible=true;
+			BotonHablarOn.visible=false;
+			BotonHablarOff.visible=true;
+		  
 			if (PWMIBRSDCJ.length>0)
 			{
 				inputField.visible=PWMIBRSDCJ[0].MBMWBWUYUY;	 //1.0.8
+				
+				if (PWMIBRSDCJ[0].MBMWBWUYUY==false)
+				{
+					BotonHablarOn.visible=false;
+					BotonHablarOff.visible=false;
+				}
+				
 			}
 
 			
@@ -5278,7 +5453,7 @@ AAQWTFMQMA = function() {
 			} 
 		 }
 		 
-		 if (MMNORPWJDC==socket.id)
+		 if (MMNORPWJDC==socket.id && UsuariosOnline<=20)
 		 {			
 			HJKHDKJHWU.visible=true;
 		 }
@@ -6321,7 +6496,7 @@ YUXWLFWVRD=function()
 		//	{
 		if (YTUGCWECJC==true)
 		{
-			SVHMCOYULR("Revise su conexión a internet o inténtelo más tarde.");
+			SVHMCOYULR("Revise su conexión a internet\no inténtelo más tarde.");
 		}
 		YTUGCWECJC=true;
 		//	}

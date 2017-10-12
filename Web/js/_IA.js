@@ -183,7 +183,7 @@
 								
 								/////////////
 							
-								var QKVJASWVEO=Date.now();
+								/*var QKVJASWVEO=Date.now();
 								var GXNRNMAAKW=function( DFBVDPETGO,TFSXFTYVGQ,AAJNQWXHMY,Turno, TKWCTNGROU, 
 									OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
 									 this.DFBVDPETGO=DFBVDPETGO
@@ -217,7 +217,7 @@
 								 }
 								);						
 								QPHHGPRJAI.splice(0,1000);	
-	  
+								*/
 								
 								/////////////	
 								

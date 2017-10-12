@@ -2557,6 +2557,7 @@ DFCCHCJBNP=function(UPCWNPYAIE){
 		{
 			if (UHHXSNXXJK>=JLVDFTPUNI || PXGXKDDNFK>=JLVDFTPUNI)
 			{
+				console.log("Desde eliminar mesa");
 				WWAYLOUPUQ(); 
 			}
 		}
@@ -2640,8 +2641,11 @@ HQWFFUCQDR=function(SLGKDYQCAY,UHTPGPRUJA){
 OSBTHSJKFW=function(){
 	var HAUSUTNHGI=true;
 	var i;
+	
+	//1.0.9 Antes era con TFSXFTYVGQ. Ahora con MQUGCIUQII
+	
 		for (i=0;i<=DCOXIXEBRJ.length-1;i++){
-			if(DCOXIXEBRJ[i]==TFSXFTYVGQ){
+			if(DCOXIXEBRJ[i]==MQUGCIUQII){
 				HAUSUTNHGI=false;
 				break;
 			}
@@ -2649,7 +2653,7 @@ OSBTHSJKFW=function(){
 	
 	if (HAUSUTNHGI==true){
 	
-		DCOXIXEBRJ.push(TFSXFTYVGQ);
+		DCOXIXEBRJ.push(MQUGCIUQII);
 	//	//console.log("BLOQUEO DESDE SERVER RAPIDO (validando movimietno) "+UHTPGPRUJA+" "+SLGKDYQCAY);
 	}
 	//else{
@@ -2664,15 +2668,15 @@ HGFAUFDVDF=function(){
 	var i;
 	
 	for (i=0;i<=JEHYBALODM.length-1;i++){
-		if(JEHYBALODM[i]==TFSXFTYVGQ){
+		if(JEHYBALODM[i]==MQUGCIUQII){
 			HAUSUTNHGI=false;
 			break;
 		}
 	}
 	
 	if (HAUSUTNHGI==true){
-	
-		JEHYBALODM.push(TFSXFTYVGQ);
+		console.log("Bloquea la partida "+MQUGCIUQII)
+		JEHYBALODM.push(MQUGCIUQII);
 	//	//console.log("BLOQUEO DESDE SERVER RAPIDO (validando movimietno) "+UHTPGPRUJA+" "+SLGKDYQCAY);
 	}
 	//else{
@@ -2785,8 +2789,10 @@ RQMTWGKGIA=function(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDX
 				
 				log(true,"CREO QUE SE METE AQUI PARA MOVEL AL TABLERO "+UHTPGPRUJA);
 				NAYBJTKIKA(XACEBCSJAB[i].TNFAGGMKXD);
+				console.log("Mueve al tablero "+WXYPYAPQQJ);
 				QTIPILDEPH(XACEBCSJAB[i].TNFAGGMKXD,STLEOJDWSU,SLGKDYQCAY,UHTPGPRUJA);
 				XACEBCSJAB.splice(i,1);	
+				console.log("ENCONTRADA 1 "+WXYPYAPQQJ+" "+SJVCMXWVVI);
 				
 			}
 			
@@ -2800,6 +2806,7 @@ RQMTWGKGIA=function(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDX
 	//Para el de la pestaña siguiente, aun no tenía la carta en la mano, con lo que la busco en el FXGSEGRXKC.
 	
 	//VDKOVQXHON.length>=4 && 
+	console.log("ENCONTRADA 2 "+WXYPYAPQQJ+" "+SJVCMXWVVI);
 	if (WXYPYAPQQJ==false ){
 		log(true,"TVYNYTCQYW NO encontrada 1");
 		for (i=0;i<=FXGSEGRXKC.length-1;i++){
@@ -2819,6 +2826,7 @@ RQMTWGKGIA=function(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDX
 				{
 					log(true,"TVYNYTCQYW ENCONTRADA!!");
 					TTJKWKBPWO.push(new TVYNYTCQYW(FBSDMRLVEL[0].SGCSHJVERI,FBSDMRLVEL[0].UUOPKETETA,FBSDMRLVEL[0].HVCFEWNDRF,FBSDMRLVEL[0].TNFAGGMKXD,null,UHTPGPRUJA,SLGKDYQCAY,VMKDXVSQEY));
+					WXYPYAPQQJ=true; //1.0.9
 				
 				}
 				else{
@@ -2835,11 +2843,27 @@ RQMTWGKGIA=function(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDX
 		}
 	
 	}
-	
-
+	console.log("ENCONTRADA 3 "+WXYPYAPQQJ+" "+SJVCMXWVVI);
+	WXYPYAPQQJ=false;
+	if (WXYPYAPQQJ==false && BucleManoCentro<=3)
+	{
+		//console.log("Ha ocurrido un milagro");
+		var	timermanocentro = YMHIHSNADE.time.create(false);
+		timermanocentro.add(1000, function()
+		{
+			//console.log("Enbucle");
+			RQMTWGKGIA(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDXVSQEY);
+			BucleManoCentro++;
+		});	
+		timermanocentro.start();
+		
+	}
 	
 	
 	OROGRNBISW(XACEBCSJAB,STLEOJDWSU)
+	
+	
+
 	//}
 }
 
@@ -2847,6 +2871,7 @@ VPDVSDLPHG=function(UHTPGPRUJA,SJVCMXWVVI,SLGKDYQCAY,VMKDXVSQEY){
 	//console.log("Mover Centro Ajeno: Soy "+TFSXFTYVGQ+" Mueve "+UHTPGPRUJA+" la carta "+SJVCMXWVVI+" VDKOVQXHON mide: "+VDKOVQXHON.length);
 	
 	//if (TFSXFTYVGQ!=UHTPGPRUJA){
+		console.log("MUEVO CENTRO AJENO "+UHTPGPRUJA+" "+SJVCMXWVVI);
 		
 		if(TFSXFTYVGQ==1){
 			if (UHTPGPRUJA==1){

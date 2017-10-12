@@ -28,6 +28,7 @@ Preload.prototype.preload = function() {
 	//this.load.pack("level", "assets/assets-pack.json");
 	
 	this.load.bitmapFont('MiFuenteAmarilla', 'assets/fonts/font.png', 'assets/fonts/font.fnt');
+	this.load.bitmapFont('MiFuenteNegra', 'assets/fonts/fontblack.png', 'assets/fonts/fontblack.fnt');
 	 
 	
 	this.load.image('1', 'assets/images/Cartas/Oros/1.png');
@@ -112,6 +113,8 @@ Preload.prototype.preload = function() {
 	this.load.image('Boton_sonido_on', 'assets/images/sound_on.png');	
 	this.load.image('Boton_sonido_off', 'assets/images/sound_off.png');	
 	this.load.image('Boton_robots', 'assets/images/completar_robots.png');	
+	this.load.image('Boton_micro_off', 'assets/images/micro_off.png');	
+	this.load.image('Boton_micro_on', 'assets/images/micro_on.png');	
 	
 	this.load.image('Ninja', 'assets/images/nivel_ninja.png');	
 	this.load.image('Medalla', 'assets/images/medalla.png');	

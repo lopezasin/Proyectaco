@@ -48,6 +48,9 @@
 	if (EGPDVIEJEL==true)
 	{
 		inputField.visible=true;
+		BotonHablarOn.visible=false;
+		BotonHablarOff.visible=true;
+		
 		if (PWMIBRSDCJ.length>0)
 		{
 			inputField.visible=PWMIBRSDCJ[0].MBMWBWUYUY;	 //1.0.8
@@ -185,7 +188,7 @@
 				EUNGWSACEK();
 			}
 		}				
-
+		YMHIHSNADE.world.bringToTop(GrupoTextos);
 
 
 		//Lo vuelvo a restablecer

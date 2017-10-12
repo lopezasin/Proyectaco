@@ -593,6 +593,7 @@ LQJEJOOAPH=function(SCWJTHLKWF,OMDVKATFLQ){
 	
 	if ( OTGNMRHTVK()==true )
 	{
+		console.log("Desde actualiza marcador");
 		WWAYLOUPUQ(); 
 		QOWECQVXCM=false;
 	}	
@@ -1100,6 +1101,7 @@ VSBOFQVPVQ=function(UHTPGPRUJA){
 		}	
 		if ( OTGNMRHTVK()==true)
 		{
+			console.log("Desde cantar");
 			WWAYLOUPUQ(); 
 		}	
 	}
@@ -3576,7 +3578,7 @@ SYJLVBWPIM=function(){
 	log(true,"A contar..");
 
 	JHHWEKWEJK=true;//1.0.9
-	HGFAUFDVDF(); //1.0.9
+	
 	
 	EABXADHEVT('CAGCUMKBGA');	
 	UYEUYIYECB=IEUIUCYUCC("¡¡ A Contar !!",60);
@@ -3643,6 +3645,7 @@ SGVESYATVX=function(){
 	}
 	else
 	{
+		console.log("Desde recogidas al centro");
 		WWAYLOUPUQ();
 	}
 }
@@ -3762,6 +3765,7 @@ JHKJWHCKWE=function(){
 				
 				if (AONEAOAEKM==true && i==JLOISTPAPQ.length-1)
 				{
+					console.log("Desde ABWBCAJRXQ para barajar");
 					CKOUBGTDUF.onComplete.add(WWAYLOUPUQ,this);
 				}				
 				
@@ -3783,34 +3787,38 @@ WWAYLOUPUQ=function() {
 	var OUENWKLUUA;
 	var QJUYVEJMEB;
 	
-	JHHWEKWEJK=true; //1.0.8 Para controlar que si alguien desconecta no reparte echando leches (onsocketdesconectado)
-	
-	HUUCUYFBLW.stop();
-	
-	MostrarTodasCartas();
-	//console.log("RPHWVBBGIM puntuacion");
-	//1.0.9 if (HGFAUFDVDF()==true)
-	//{
+
+
+	if (HGFAUFDVDF()==true)
+	{
 		
+		JHHWEKWEJK=true; //1.0.8 Para controlar que si alguien desconecta no reparte echando leches (onsocketdesconectado)
+		HUUCUYFBLW.stop();
+		MostrarTodasCartas();
+	
 		if (EVAILWGGKX==false)
 		{
 			QJUYVEJMEB=0;
 		}
 		else
 		{
-			QJUYVEJMEB=2000;
+			QJUYVEJMEB=3500;
 		}
+		
+		
+		
 		var	TKXPPGUPVV = YMHIHSNADE.time.create(false);
 		TKXPPGUPVV.add(QJUYVEJMEB, function()
 		{
 		
-		
+			UIYIUCHWUH();
+			
 			ATTUXTNNKX.visible=false;
 			XQDPVWOUII.visible=false;
 			var SQIRFQMWSL=DVNRTQIWGL;
 
 			//YMHIHSNADE.tweens.pauseAll(); 
-			UIYIUCHWUH();
+			
 			
 			
 			if (socket.id!=undefined)
@@ -3900,6 +3908,7 @@ WWAYLOUPUQ=function() {
 					if (JVQXQGYDHH==MFENMIFPUA)
 					{
 						KMHMNPUINK="¡¡ Ganamos la partida\n y el coto !!";
+						//KMHMNPUINK="";
 						EABXADHEVT("JCGKEWDJBQ");
 					}
 					else
@@ -3916,12 +3925,14 @@ WWAYLOUPUQ=function() {
 					//console.log("2. EXOQTFOAQQ VIYQDHWIAA: "+JVQXQGYDHH+" EXOQTFOAQQ YOBEPVEEMW: "+CNCCBHQJKL);
 					if (CNCCBHQJKL==MFENMIFPUA)
 					{
-						KMHMNPUINK="¡¡ Otra vez será.\n Hicieron las 10 últimas.\n Perdimos el coto  :(  !!";
+						//KMHMNPUINK="¡¡ Otra vez será.\n Hicieron las 10 últimas.\n Perdimos el coto  :(  !!";
+						KMHMNPUINK="¡¡ Perdimos el coto  :(  !!";
 						EABXADHEVT("YURJWRGUNO");
 					}
 					else
 					{
-						KMHMNPUINK="Hemos perdido.\n Ellos hicieron las 10 últimas.\n ¡¡ A por ellos !!";
+						//KMHMNPUINK="Hemos perdido.\n Ellos hicieron las 10 últimas.\n ¡¡ A por ellos !!";
+						KMHMNPUINK="Hemos perdido la partida.\n ¡¡ A por ellos !!";
 						EABXADHEVT("YURJWRGUNO");
 					}
 					
@@ -3957,7 +3968,7 @@ WWAYLOUPUQ=function() {
 					
 					if (CNCCBHQJKL==MFENMIFPUA)
 					{
-						KMHMNPUINK="¡¡ Otra vez será.\n Perdimos el coto  :(  !!";
+						KMHMNPUINK="¡¡ Perdimos el coto  :(  !!";
 						ISVLSNLHWR=0;
 						EABXADHEVT("YURJWRGUNO");						
 					}
@@ -4072,15 +4083,15 @@ WWAYLOUPUQ=function() {
 											//d.style.zIndex=-1;
 												
 												//console.log("deberia saltar");
+												console.log("MARCADOR NUESTRO "+JVQXQGYDHH+" MARCADOR RIVAL " +CNCCBHQJKL+"  PARTIDASCOTO "+MFENMIFPUA)
 												if (JVQXQGYDHH==MFENMIFPUA || CNCCBHQJKL==MFENMIFPUA)
 												{
+													console.log("MATO LA CONEXION")
 													JHKWHCWKWC();
-
-												}
-												
+												}												
 												else
 												{
-												
+													console.log("NUEVO")
 													if (1==1) //HGFAUFDVDF()==true)
 													{	
 														DCOXIXEBRJ.splice(0,100);
@@ -4115,11 +4126,11 @@ WWAYLOUPUQ=function() {
 				);	
 		});	
 		TKXPPGUPVV.start();
-	//}
-	//else
-	//{
-		//alert("grrr "+TFSXFTYVGQ);
-	//}
+	}
+	else
+	{
+		console.log("No AWCCMSCOPO puntuación");
+	}
 }
 
 MatarConexion=function()
@@ -4235,6 +4246,7 @@ QSAXUCPASV=function(){
 
 var i;
 
+BucleManoCentro=0;
 vReconectando=false;
 vNoEsta=false;
 JHHWEKWEJK=false; //1.0.8
@@ -4255,6 +4267,8 @@ DHJGJHGWCY.visible=false;
 if (inputField!=undefined)
 {
 	inputField.visible=false;
+	BotonHablarOn.visible=false;
+	BotonHablarOff.visible=false;	
 }
 log(true,"Limpiando variables..");
 for (i=0;i<=FXGSEGRXKC.length-1;i++)
@@ -4347,6 +4361,7 @@ log(true,"Fin limpiando variables..");
 WNEWPCNXPA=function()
 {
 	
+	BucleManoCentro=0;
 	vReconectando=false;
 	vNoEsta=false;
 	JHHWEKWEJK=false; //1.0.8

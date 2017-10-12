@@ -105,9 +105,19 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 	if (EGPDVIEJEL==true)
 	{
 		inputField.visible=true;
+		
+		BotonHablarOn.visible=false;
+		BotonHablarOff.visible=true;
+			
 		if (PWMIBRSDCJ.length>0)
 		{
 			inputField.visible=PWMIBRSDCJ[0].MBMWBWUYUY;	 //1.0.8
+			
+			if (PWMIBRSDCJ[0].MBMWBWUYUY==false)
+			{
+				BotonHablarOn.visible=false;
+				BotonHablarOff.visible=false;
+			}			
 		}
 	}
 
@@ -320,6 +330,7 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 				EUNGWSACEK();
 			}
 		}				
+		YMHIHSNADE.world.bringToTop(GrupoTextos);
 		
 		DVNRTQIWGL=RDBQUAVHEP+1;
 		if (DVNRTQIWGL==5)
