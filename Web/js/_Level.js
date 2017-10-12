@@ -1111,6 +1111,8 @@ function startRecognition(){
 	Transcribe="";
 	if (window.plugins)
 	{
+		BotonHablarOff.visible=false;	
+		BotonHablarOn.visible=true
 		try
 		{
 		socket.emit('Consola',"Habla");
@@ -1119,20 +1121,23 @@ function startRecognition(){
 			//alert(result);
 			socket.emit('Consola',"No se");
 			
-			  	BotonHablarOff.visible=true;	
-				BotonHablarOn.visible=false;
+			  	BotonHablarOff.visible=false;	
+				BotonHablarOn.visible=true;
 				socket.emit('Consola',result);
-				if (result!="")
-				{
+				//if (result!="")
+				//{
 					BYBYBFHBOX(TFSXFTYVGQ,result ,false);
-				}
+					BotonHablarOff.visible=true;	
+					BotonHablarOn.visible=false;
+				//}
 				
 			}, function(err){
 				console.error(err);
 				socket.emit('Consola',"Error "+err);
 			}, {
 				language: "es-ES",
-				showPopup: false
+				showPopup: false,
+				matches :1
 			});
 		}
 		catch(e)
