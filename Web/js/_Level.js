@@ -1123,12 +1123,20 @@ function startRecognition(){
 			
 			  	BotonHablarOff.visible=false;	
 				BotonHablarOn.visible=true;
-				socket.emit('Consola',result);
+				
+				socket.emit('Consola resultado 1 ',result);
+				if (result.length>0)
+				{
+					result=result.substring(0, result.indexOf(',',1)+0)
+				}
+				
+				socket.emit('Consola resultado 2 ',result);
 				//if (result!="")
 				//{
-					BYBYBFHBOX(TFSXFTYVGQ,result ,false);
 					BotonHablarOff.visible=true;	
 					BotonHablarOn.visible=false;
+					BYBYBFHBOX(TFSXFTYVGQ,"MELON" ,false);
+
 				//}
 				
 			}, function(err){
@@ -1229,10 +1237,23 @@ function StopRecognition()
 	{
 		try
 		{
-			window.plugins.speechRecognition.stopListening();
+			window.plugins.speechRecognition.stopListening(function(result){
+				socket.emit('Consola',"¡Parado! "+err);
+			}
+			, function(err){
+				console.error(err);
+				BotonHablarOff.visible=true;	
+				BotonHablarOn.visible=false;				
+				socket.emit('Consola',"Error parando 1 "+err);
+			});
 		}
 		catch(e)
-		{}
+		{
+			BotonHablarOff.visible=true;	
+			BotonHablarOn.visible=false;
+			socket.emit('Consola',"Error parando 2 "+e);
+			
+		}
 	}
 	else
 	{
