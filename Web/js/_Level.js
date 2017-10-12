@@ -1125,18 +1125,21 @@ function startRecognition(){
 				//BotonHablarOn.visible=true;
 				
 				socket.emit('Consola',"Resultado 1 "+result);
-				if (result.length>0)
+				socket.emit('Consola',"Longitud 1 "+result.length);
+				var a=result;
+				socket.emit('Consola',"Cadena 1 "+a.substring(0,3));
+				/*if (result.length>0)
 				{
 					result=result.substring(0, result.indexOf(',',1)+0)
-				}
+				}*/
 				
-				socket.emit('Consola',"Resultado 2 "+result);
+				//socket.emit('Consola',"Resultado 2 "+result);
 				//if (result!="")
 				//{
 
-				/*	BYBYBFHBOX(TFSXFTYVGQ,"MELON" ,false);
+					BYBYBFHBOX(TFSXFTYVGQ,"MELON" ,false);
 					BotonHablarOff.visible=true;	
-					BotonHablarOn.visible=false;*/
+					BotonHablarOn.visible=false;
 
 				//}
 				
