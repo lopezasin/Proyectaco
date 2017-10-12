@@ -1124,17 +1124,17 @@ function startRecognition(){
 			  	//BotonHablarOff.visible=false;	
 				//BotonHablarOn.visible=true;
 				
-				socket.emit('Consola resultado 1 ',result);
-				/*if (result.length>0)
+				socket.emit('Consola',"Resultado 1 "+result);
+				if (result.length>0)
 				{
 					result=result.substring(0, result.indexOf(',',1)+0)
 				}
 				
-				socket.emit('Consola resultado 2 ',result);
+				socket.emit('Consola',"Resultado 2 "+result);
 				//if (result!="")
 				//{
 
-					BYBYBFHBOX(TFSXFTYVGQ,"MELON" ,false);
+				/*	BYBYBFHBOX(TFSXFTYVGQ,"MELON" ,false);
 					BotonHablarOff.visible=true;	
 					BotonHablarOn.visible=false;*/
 
