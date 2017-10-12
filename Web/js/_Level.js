@@ -1121,8 +1121,8 @@ function startRecognition(){
 			//alert(result);
 			socket.emit('Consola',"No se");
 			
-			  	BotonHablarOff.visible=false;	
-				BotonHablarOn.visible=true;
+			  	//BotonHablarOff.visible=false;	
+				//BotonHablarOn.visible=true;
 				
 				socket.emit('Consola resultado 1 ',result);
 				if (result.length>0)
@@ -1133,15 +1133,19 @@ function startRecognition(){
 				socket.emit('Consola resultado 2 ',result);
 				//if (result!="")
 				//{
+
+					BYBYBFHBOX(TFSXFTYVGQ,"MELON" ,false);
 					BotonHablarOff.visible=true;	
 					BotonHablarOn.visible=false;
-					BYBYBFHBOX(TFSXFTYVGQ,"MELON" ,false);
 
 				//}
 				
 			}, function(err){
 				console.error(err);
+									BotonHablarOff.visible=true;	
+					BotonHablarOn.visible=false;
 				socket.emit('Consola',"Error "+err);
+				
 			}, {
 				language: "es-ES",
 				showPopup: false,
