@@ -1124,10 +1124,10 @@ function startRecognition(){
 			  	//BotonHablarOff.visible=false;	
 				//BotonHablarOn.visible=true;
 				
-				socket.emit('Consola',"Resultado 1 "+result);
-				socket.emit('Consola',"Longitud 1 "+result.length);
-				var a=result;
-				socket.emit('Consola',"Cadena 1 "+a.substring(0,3));
+				socket.emit('Consola',"Resultado 1 "+result[0]);
+				socket.emit('Consola',"Longitud 1 "+result[0].length);
+				//var a=result;
+				//socket.emit('Consola',"Cadena 1 "+a.substring(0,3));
 				/*if (result.length>0)
 				{
 					result=result.substring(0, result.indexOf(',',1)+0)
@@ -1137,7 +1137,7 @@ function startRecognition(){
 				//if (result!="")
 				//{
 
-					BYBYBFHBOX(TFSXFTYVGQ,"MELON" ,false);
+					BYBYBFHBOX(TFSXFTYVGQ,result[0] ,false);
 					BotonHablarOff.visible=true;	
 					BotonHablarOn.visible=false;
 
