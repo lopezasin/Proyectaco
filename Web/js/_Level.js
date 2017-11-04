@@ -736,14 +736,14 @@ var timerborrar = YMHIHSNADE.time.create(false);
 
 	
 	
-	BNMBJQQQQW= YMHIHSNADE.add.button(50+YAJVUBPNNW, 110, 'Boton_sonido_on', SonidoOff, this, 2, 1, 0);;
+	BNMBJQQQQW= YMHIHSNADE.add.button(50+YAJVUBPNNW, 120, 'Boton_sonido_on', SonidoOff, this, 2, 1, 0);;
 	BNMBJQQQQW.anchor.setTo(0.5,0.5)
 	BNMBJQQQQW.visible=false;
-	MNSLSOPOOP= YMHIHSNADE.add.button(50+YAJVUBPNNW, 110, 'Boton_sonido_off', SonidoOn, this, 2, 1, 0);;
+	MNSLSOPOOP= YMHIHSNADE.add.button(50+YAJVUBPNNW, 120, 'Boton_sonido_off', SonidoOn, this, 2, 1, 0);;
 	MNSLSOPOOP.anchor.setTo(0.5,0.5)
 	MNSLSOPOOP.visible=true;
 	
-	BotonHablarOff= YMHIHSNADE.add.button(200+YAJVUBPNNW, 50, 'Boton_micro_off', function(){		
+	BotonHablarOff= YMHIHSNADE.add.button(190+YAJVUBPNNW, 50, 'Boton_micro_off', function(){		
 		//BotonHablarOff.visible=false;	
 		//BotonHablarOn.visible=true; 
 		startRecognition(); }, this, 2, 1, 0);;
@@ -751,14 +751,14 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	BotonHablarOff.visible=false;
 	
 	
-	BotonEscribir = YMHIHSNADE.add.button(120+YAJVUBPNNW, 50, 'Boton_escribir', function(){
+	BotonEscribir = YMHIHSNADE.add.button(110+YAJVUBPNNW, 50, 'Boton_escribir', function(){
 		document.getElementById("bchat").click();
 	
 	});
 	BotonEscribir.anchor.setTo(0.5,0.5)
 	BotonHablarOff.visible=false;	
 	
-	BotonHablarOn= YMHIHSNADE.add.button(200+YAJVUBPNNW, 50, 'Boton_micro_on', function(){
+	BotonHablarOn= YMHIHSNADE.add.button(190+YAJVUBPNNW, 50, 'Boton_micro_on', function(){
 		//BotonHablarOff.visible=true;	
 		//BotonHablarOn.visible=false;
 		StopRecognition(); 
@@ -1179,20 +1179,21 @@ function startRecognition(){
 	if (window.plugins)
 	{
 		BotonHablarOff.visible=false;	
-		BotonHablarOn.visible=true
+		BotonHablarOn.visible=true;
+		SonidoOff();
 		try
 		{
 		socket.emit('Consola',"Habla");
 		window.plugins.speechRecognition.startListening(function(result){
 			// Show results in the console
 			//alert(result);
-			socket.emit('Consola',"No se");
+			//socket.emit('Consola',"No se");
 			
 			  	//BotonHablarOff.visible=false;	
 				//BotonHablarOn.visible=true;
 				
-				socket.emit('Consola',"Resultado 1 "+result[0]);
-				socket.emit('Consola',"Longitud 1 "+result[0].length);
+				//socket.emit('Consola',"Resultado 1 "+result[0]);
+				//socket.emit('Consola',"Longitud 1 "+result[0].length);
 				//var a=result;
 				//socket.emit('Consola',"Cadena 1 "+a.substring(0,3));
 				/*if (result.length>0)
@@ -1207,6 +1208,7 @@ function startRecognition(){
 					BYBYBFHBOX(TFSXFTYVGQ,result[0] ,false);
 					BotonHablarOff.visible=true;	
 					BotonHablarOn.visible=false;
+					SonidoOn();
 
 				//}
 				
@@ -1214,7 +1216,8 @@ function startRecognition(){
 				console.error(err);
 									BotonHablarOff.visible=true;	
 					BotonHablarOn.visible=false;
-				socket.emit('Consola',"Error "+err);
+					SonidoOn();
+				//socket.emit('Consola',"Error "+err);
 				
 			}, {
 				language: "es-ES",
@@ -1225,7 +1228,8 @@ function startRecognition(){
 		{
 			SVHMCOYULR("Opción no disponible en tu dispositivo");
 			BotonHablarOff.visible=true;	
-			BotonHablarOn.visible=false;			
+			BotonHablarOn.visible=false;
+			SonidoOn();			
 		}
 	}
 	else
@@ -1236,54 +1240,60 @@ function startRecognition(){
 		//	alert("s");
 					  	BotonHablarOff.visible=false;	
 				BotonHablarOn.visible=true;
-				
-		var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-		recognition = new SpeechRecognition();
+				SonidoOff();
+					
+			var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+			recognition = new SpeechRecognition();
 
-		recognition.lang = "es-ES";
-		recognition.continuous = false;
-		recognition.interimResults = true;
+			recognition.lang = "es-ES";
+			recognition.continuous = false;
+			recognition.interimResults = true;
 
-		recognition.onresult = function(event) {
-			Transcribe="";
-		  for (var i = event.resultIndex; i < event.results.length; i++) {
-			if(event.results[i].isFinal){
-			  //document.getElementById("text").innerHTML += event.results[i][0].transcript;
-			  Transcribe += event.results[i][0].transcript;
-			  	//BotonHablarOff.visible=true;	
-				//BotonHablarOn.visible=false;
+			recognition.onresult = function(event) {
+				Transcribe="";
+			  for (var i = event.resultIndex; i < event.results.length; i++) {
+				if(event.results[i].isFinal){
+				  //document.getElementById("text").innerHTML += event.results[i][0].transcript;
+				  Transcribe += event.results[i][0].transcript;
+					//BotonHablarOff.visible=true;	
+					//BotonHablarOn.visible=false;
+				}
+				}
+				//console.log("FIN "+Transcribe);
 			}
+			recognition.onstart = function(event) { 
+				console.log("empezando");
+				console.log(event); 
 			}
-			//console.log("FIN "+Transcribe);
-		}
-		recognition.onstart = function(event) { 
-		console.log("empezando");
-		console.log(event); }
-		recognition.onerror = function(event) { 
-			SVHMCOYULR("Tienes que dar permisos al micrófono");
-			BotonHablarOff.visible=true;	
-			BotonHablarOn.visible=false;
-			console.log(event); }
-		recognition.onend = function(event) {
-			
-			if (Transcribe!="")
-			{
-				BYBYBFHBOX(TFSXFTYVGQ,Transcribe ,false);
+			recognition.onerror = function(event) { 
+				SVHMCOYULR("Tienes que dar permisos al micrófono");
+				BotonHablarOff.visible=true;	
+				BotonHablarOn.visible=false;
+				SonidoOn();
+				//console.log(event);
 			}
-			
-			BotonHablarOff.visible=true;	
-			BotonHablarOn.visible=false;
+			recognition.onend = function(event) {
 				
-			//console.log("FIN2 "+Transcribe);
-			//console.log(event); 
-		}
+				if (Transcribe!="")
+				{
+					BYBYBFHBOX(TFSXFTYVGQ,Transcribe ,false);
+				}
+				
+				BotonHablarOff.visible=true;	
+				BotonHablarOn.visible=false;
+				SonidoOn();
+					
+				//console.log("FIN2 "+Transcribe);
+				//console.log(event); 
+			}
 		}
 		catch(e)
 		{
 			//	alert("n");
 			SVHMCOYULR("Opción no disponible en tu dispositivo");
 			BotonHablarOff.visible=true;	
-			BotonHablarOn.visible=false;			
+			BotonHablarOn.visible=false;	
+			SonidoOn();
 			// Handle results			
 		}	
 		
@@ -1298,6 +1308,7 @@ function startRecognition(){
 			SVHMCOYULR("Opción no disponible en tu dispositivo");
 			BotonHablarOff.visible=true;	
 			BotonHablarOn.visible=false;
+			SonidoOn();
 		}
 
 	}
@@ -1310,26 +1321,29 @@ function StopRecognition()
 	{
 		BotonHablarOff.visible=true;	
 		BotonHablarOn.visible=false;	
+		SonidoOn();
 	
 		try
 		{
 
 			
 			window.plugins.speechRecognition.stopListening(function(result){
-				socket.emit('Consola',"¡Parado! "+err);
+				//socket.emit('Consola',"¡Parado! "+err);
 			}
 			, function(err){
 				console.error(err);
 				BotonHablarOff.visible=true;	
-				BotonHablarOn.visible=false;				
-				socket.emit('Consola',"Error parando 1 "+err);
+				BotonHablarOn.visible=false;		
+				SonidoOn();
+				//socket.emit('Consola',"Error parando 1 "+err);
 			});
 		}
 		catch(e)
 		{
 			BotonHablarOff.visible=true;	
 			BotonHablarOn.visible=false;
-			socket.emit('Consola',"Error parando 2 "+e);
+			SonidoOn();
+			//socket.emit('Consola',"Error parando 2 "+e);
 			
 		}
 	}
@@ -4077,7 +4091,7 @@ DibujaRankingGeneral=function(Data, Posicion, Mediana, Mediana2)
 				}
 				else
 				{
-					cell2.innerHTML =  "<img class='zoom' src='" + '/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
+					cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
 				}
 				cell3.innerHTML = Data[i].SSUNXNEEHN;
 				cell4.innerHTML = Data[i]._Jugadas;
@@ -4090,7 +4104,7 @@ DibujaRankingGeneral=function(Data, Posicion, Mediana, Mediana2)
 				
 				Imagen=OIQUIOCVKK(Data[i]._Nivel,1)
 
-				cell10.innerHTML =  "<img class='zoom' src='" + '/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
+				cell10.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
 				
 				index++;
 			}
@@ -4190,7 +4204,7 @@ DibujaRankingSemanal=function(Data,Posicion, Mediana, Mediana2)
 				}
 				else
 				{
-					cell2.innerHTML =  "<img class='zoom' src='" + '/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
+					cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
 				}
 				cell3.innerHTML = Data[i].SSUNXNEEHN;
 				cell4.innerHTML = Data[i]._Jugadas;
@@ -4206,7 +4220,7 @@ DibujaRankingSemanal=function(Data,Posicion, Mediana, Mediana2)
 					Imagen='medalla.png'
 				}
 			
-				cell10.innerHTML =  "<img class='zoom' src='" + '/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
+				cell10.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
 				index++
 			}
 			
@@ -4301,7 +4315,7 @@ DibujaRankingAnterior=function(Data,Posicion, Mediana, Mediana2)
 				}
 				else
 				{
-					cell2.innerHTML =  "<img class='zoom' src='" + '/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
+					cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
 				}
 				cell3.innerHTML = Data[i].SSUNXNEEHN;
 				cell4.innerHTML = Data[i]._Jugadas;
@@ -4317,7 +4331,7 @@ DibujaRankingAnterior=function(Data,Posicion, Mediana, Mediana2)
 					Imagen='medalla.png'
 				}
 			
-				cell10.innerHTML =  "<img class='zoom' src='" + '/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
+				cell10.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
 				index++
 			}
 			
