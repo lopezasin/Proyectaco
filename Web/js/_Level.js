@@ -2179,20 +2179,20 @@ RSHJSKMBRP=function(Tipo)
 			break;		
 			
 			case 2 :		
-			ref = cordova.InAppBrowser.open('/auth/facebook', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
 			break;	
 			
 			case 3 :		
-			ref = cordova.InAppBrowser.open('/auth/Instagram', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/Instagram', '_blank', 'location=no');
 			break;	
 			
 			case 4 :		
-			ref = cordova.InAppBrowser.open('/auth/Twitter', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/Twitter', '_blank', 'location=no');
 			break;	
 			
 			case 5 :		
 			TrucoNavegador=false;
-			ref = cordova.InAppBrowser.open('/contacto', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/contacto', '_blank', 'location=no');
 			break;
 		}
 		
