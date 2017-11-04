@@ -32,12 +32,16 @@
 <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+ <link href="lib/pagination.css" rel="stylesheet" type="text/css">
+
 <!-- <link rel="stylesheet" href="assets/font-awesome.min.css">font-awesome.min -->
 <title>GuiñotePro</title>
 
 <!-- <script src="http://xn--guiotepro-n6a.es:8080/target/target-script-min.js#anonymous"></script> -->
 <script src="lib/phaser.js"></script>
 <script src="lib/jquery.js"></script>
+<script src="lib/pagination.js"></script>
+
 <!-- <script src="lib/saveCPU.js"></script> -->
 <script src='socket.io/socket.io.js'></script>
 <!-- <script src="http://localhost:5000/socket.io/socket.io.js"></script> -->
@@ -62,7 +66,94 @@
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="cordova.js"></script>
 
-<script src="node_modules/phaser-input/build/phaser-input.js"></script>
+<!-- <script src="node_modules/phaser-input/build/phaser-input.js"></script> -->
+
+
+<script>
+    //$(function () {
+        function createPaginador(name,totalfilas, Posicion, Mediana, Mediana2) {
+
+			
+			$('#pagination-'+name).addHook('beforeInit', function () {
+                window.console && console.log('beforeInit...');
+
+				//return false;
+            });
+			
+			$('#pagination-'+name).addHook('afterPageOnClick', function () {
+                window.console && console.log('page click...');
+				
+					
+            });
+			
+			
+			$('#pagination-'+name).pagination({
+			//dataSource: 'https://api.flickr.com/services/feeds/photos_public.gne?tags=cat&tagmode=any&format=json&jsoncallback=?',
+			dataSource: JHGHJAGCMC+'/getclasificacion',
+			locator: 'items',
+			showGoInput : true,
+			showGoButton: true,
+			//totalNumber: 120,
+			pageSize: 50,
+			totalNumber :totalfilas,
+			className: 'paginationjs-theme-blue paginationjs-big',
+			
+			ajax: {
+				beforeSend: function() {
+					console.log("Envía pagination "+name);
+					//dataContainer.html('Loading data from flickr.com ...');
+				}
+				
+				,data: {dbType: name} 
+			},
+			callback: function(data, pagination) {
+				// template method of yourself
+				console.log("Recibe pagination");
+				//var html = template(data);
+				//console.log("Data "+data);
+				
+				//var kk=$.parseJSON ( data );
+				//var kk=JSON.parse(data);
+				//var kk=JSON.stringify(data);
+				//console.log("gg "+kk);
+				
+				//console.log("Data0 "+data[0].SSUNXNEEHN);
+				if (name=="general")
+				{
+					DibujaRankingGeneral(data, Posicion, Mediana, Mediana2);
+				}
+				else
+				{
+					if (name=="semanal")
+					{
+						console.log("Ranking semanal"+data)
+						DibujaRankingSemanal(data, Posicion, Mediana, Mediana2);
+					}
+					else
+					{
+						DibujaRankingAnterior(data, Posicion, Mediana, Mediana2);
+					}
+				}
+				//SRUKEMRQNI(data);
+				
+				//var kk=JSON.stringify(pagination);
+				//console.log("Pagination "+kk);
+				console.log("Name:"+ name);
+				//dataContainer.html(html);
+			}
+			})
+			
+			
+        }
+
+        //createDemo('demo1');
+    //});
+	
+	
+
+</script>
+
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -114,45 +205,53 @@ document.addEventListener('focus', function(){
 		$('#tabs a').click(function(event){
 			if (!$(this).hasClass('activo')){
 				$abrir=$('#' + $(this).attr("data-div"));
+				
 				$cerrar=$('#' + $('.activo').attr("data-div"));
 				$cerrar.slideUp();
 				$(".activo").removeClass('activo');
 				$abrir.slideDown();
 				$(this).addClass('activo');
+				
+				console.log("Abrir "+ $(this).attr("data-div"))
+				//socket.emit('WHGHJCGWWQ',socket.id,OBTBPOULAV);	
+				
 			}
 		});
 	
 	
-	    $('#alternar-panel-oculto').toggle( 
- 
-			/* 
-				Primer click.
-				Función que descubre un panel oculto
-				y cambia el AWCCMSCOPO del botón.
-			*/
-			function(e){ 
-				$('#panel-oculto').slideDown();
-				$(this).text('Cerrar el panel');
-				e.preventDefault();
-			}, // Separamos las dos funciones con una coma
-		 
-			/* 
-				Segundo click.
-				Función que oculta el panel
-				y vuelve a cambiar el AWCCMSCOPO del botón.
-			*/
-			function(e){ 
-				$('#panel-oculto').slideUp();
-				$(this).text('MYQCQNOJGH el panel oculto');
-				e.preventDefault();
+	   $('#bchat').click(function(event){
+		event.preventDefault();
+		$('#nchat').slideToggle();
+		$('#inputchat').focus().val('');
+	   });
+	   
+	   
+	   $('#bchatCancelar').click(function(event){
+		event.preventDefault();
+		$('#inputchat').focus().val('');
+		$('#nchat').slideToggle();		
+	   });
+	
+	    $('#fchat').submit(function(event){
+			event.preventDefault();
+			var mensaje=$('#inputchat').val();
+			$('#nchat').slideToggle();
+			if (mensaje!="")
+			{
+				BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
 			}
-	 
-		);
-	
-	
-	
+			//console.log(mensaje);
+		});
+		
+		
+	$('#blateral').click(function(event){
+		event.preventDefault();
+		$('#lateral').animate({width: "toggle"});
+	   });
 	
 	});
+	
+
 	
 /*	$(document).ready(function(e){
 		$('#DivClasificacion').css("height", $(window).height()-100);
@@ -231,7 +330,25 @@ document.addEventListener('focus', function(){
 
         });
 
-      });	  	  
+      });	  	
+
+
+	/*$('#demo').pagination({
+		dataSource: 'https://api.flickr.com/services/feeds/photos_public.gne?tags=cat&tagmode=any&format=json&jsoncallback=?',
+		locator: 'items',
+		totalNumber: 120,
+		pageSize: 20,
+		ajax: {
+			beforeSend: function() {
+				dataContainer.html('Loading data from flickr.com ...');
+			}
+		},
+		callback: function(data, pagination) {
+			// template method of yourself
+			var html = template(data);
+			dataContainer.html(html);
+		}
+	})*/	  
 	
 </script>
 
@@ -283,74 +400,7 @@ function onDeviceReady() {
 		
 
 
-	// Verify if recognition is available
-	/*	window.plugins.speechRecognition.isRecognitionAvailable(function(available){
-		if(!available){
-			alert("Sorry, not available");
-		}
 
-		// Check if has permission to use the microphone
-		window.plugins.speechRecognition.hasPermission(function (isGranted){
-			if(isGranted){
-				startRecognition();
-			}else{
-				// Request the permission
-				window.plugins.speechRecognition.requestPermission(function (){
-					// Request accepted, start recognition
-					startRecognition();
-				}, function (err){
-					alert(err);
-				});
-			}
-		}, function(err){
-		   alert(err);
-		});
-	}, function(err){
-		alert(err);
-	});*/
-		
-		
-		/*try
-		{
-		//	alert("s");
-		var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-		var recognition = new SpeechRecognition();
-
-		recognition.lang = "es-ES";
-		recognition.continuous = false;
-		recognition.interimResults = true;
-
-		recognition.onresult = function(event) {
-			Transcribe="";
-		  for (var i = event.resultIndex; i < event.results.length; i++) {
-			if(event.results[i].isFinal){
-			  //document.getElementById("text").innerHTML += event.results[i][0].transcript;
-			  Transcribe += event.results[i][0].transcript;
-			}
-			}
-			//console.log("FIN "+Transcribe);
-		}
-		recognition.onstart = function(event) { console.log(event); }
-		recognition.onerror = function(event) { console.log(event); }
-		recognition.onend = function(event) {console.log("kio");
-			
-			BYBYBFHBOX(TFSXFTYVGQ,Transcribe ,false);
-			//console.log("FIN2 "+Transcribe);
-			//console.log(event); 
-		}
-		}
-		catch(e)
-		{
-			//	alert("n");
-			console.log("Sin speech");
-			// Handle results
-
-
-			
-			
-			
-		}
-		*/
 		
 		if( window.plugins)
 		{
@@ -385,35 +435,6 @@ function onDeviceReady() {
 }
 
 
-
-/*var noSleep = new NoSleep();
-
-function enableNoSleep() {
-alert("si")
-  noSleep.enable();
-  //document.removeEventListener('click', enableNoSleep, false);
-}
-
-document.addEventListener('click', enableNoSleep, false);*/
-
-
-// Enable wake lock.
-// (must be wrapped in a user input event handler e.g. a mouse or touch handler)
-//document.addEventListener('click', enableNoSleep, false);
-
-/*document.addEventListener("offline", FunctionOffline, false);
- 
-function FunctionOffline() {
-    // Handle the offline event 
-	BotonMultijugador.tint=Phaser.Color.getColor(110,110,110);
-}
-
-document.addEventListener("offline", FunctionOnline, false);
- 
-function FunctionOnline() {
-    // Handle the offline event 
-	BotonMultijugador.tint=Phaser.Color.getColor(255,255,255);
-}*/
 
 document.addEventListener("backbutton", function (e) {
 	//e.preventDefault();
@@ -559,6 +580,7 @@ button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px;
 	border-spacing: 565em;
 } -->
 
+input:focus { outline:none; }
 
 #DivClasificacionContenedor {
 	position: absolute;
@@ -652,6 +674,39 @@ border-spacing: 50em;
 }
 
 
+
+
+#TablaClasificacionAnterior {
+    border-collapse: collapse;
+	border: 1px solid #ddd;
+	 width: 100%;
+} 
+
+#tr.TablaClasificacionAnterior {
+padding-bottom: 50em;
+border-spacing: 50em;
+    	float: none;
+	position: absolute; 
+} 
+
+#TablaClasificacionAnterior th, #TablaClasificacionAnterior td {
+    text-align: left;
+    padding: 5px;
+	font-size: 11px;
+}
+
+#TablaClasificacionAnterior tr:nth-child(even){background-color: #f2f2f2} 
+
+#TablaClasificacionAnterior th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+
+
  <!--    border-collapse: collapse; /* Collapse borders */
     	float: none;
 	position: absolute; 
@@ -696,6 +751,38 @@ border-spacing: 50em;
 	-o-border-radius: 1em 1em 0px 0px; 
 	border-radius: 1em 1em 0px 0px; }
 #tabs a.activo { background: #fff; font-size: 20px; color: #000; }
+
+
+
+
+
+       ul, li {
+            list-style: none;
+        }
+
+        #wrapper {
+            width: 900px;
+            margin: 20px auto;
+        }
+
+        .data-container {
+            margin-top: 5px;
+        }
+
+        .data-container ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .data-container li {
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            background: #eee;
+            color: #666;
+        }
+		
+		
+		
 </style>
 </head>
 <!-- <body class="container" style="margin:0px; padding:0px;width:100vw;height:100vh;background-image:url(back.png);" >  -->
@@ -707,6 +794,25 @@ border-spacing: 50em;
 
 
 
+<div id='nchat' style='position:absolute; top:0px; width: 100%; display:none; background: #82011c; text-align:center; z-index:10000'>
+<form id='fchat'>
+	<p style="color:#ffffff;font-size: 16px;padding-top:10" ;><b>¿Algo que decir?</b></p>
+	<input type='text' id='inputchat' autocomplete="off" style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' />
+	<input id='bchatEnviar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/enviar.png">
+	<input id='bchatCancelar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/cancelar_envio.png">
+	<button style='display:none'></button>
+</form>
+</div>
+
+<!-- <div id='lateral' style='background: #ff0; position: absolute; top:0px; bottom:0px; left:0px; width: 200px; z-index: 10001; display:none'></div> -->
+<div style='position:absolute;  bottom: 10px; left: 10px;'>
+<!-- El display node de bchat es lo que necesito para que no se vea y llamarlo desde el juego -->
+<button id='bchat' style='cursor:pointer;display:none'>abrir</button> 
+</div>
+
+<div style='position:absolute;  bottom: 50%; right: 10px;'>
+<button id='blateral'  style='cursor:pointer;display:none'>abrir lateral</button>
+</div>
 
 
 <div id="fb-root"></div>
@@ -726,11 +832,6 @@ border-spacing: 50em;
   
 <div id="gamer" style="margin: 0px; padding:0px ;width:100%; height:100%; max-width: 100%; max-height: 100%">
 
-<div id="panel-oculto" style="display:inline-block;"></div>
-
-<div id="panel-oculto2" style="display:inline-block;">
-<a href="#" id="alternar-panel-oculto" style="background-color:#369;color:#fff;text-decoration:none;padding:10px 30px;display:inline-block !important;margin-bottom:30px;">MYQCQNOJGH el panel oculto</a>
-</div>
 
 <div id=DivResultado class="container" style="display:none" >
     
@@ -764,11 +865,15 @@ border-spacing: 50em;
 	right: 30px;
 	" >
 	<!-- <form id="FormSalaAmigos"> -->
+
 		<input type="text" id="InputSalas" onKeyUp="FiltrarSalas()" placeholder="Buscar Salas..">
 		
 		<button type="button" id="BtnCrearSalas" class="btn btn-primary" onClick="LOIUJDIWPD()">Crear Sala</button>
 		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button>
-		<div id="lblAvisoSalas" style='color: #fff; font-size: 18px; text-shadow: 0px 0px 5px #000000;'>Las salas se eliminan transcurridos 7 días desde su último uso.</div> 
+		<div id="lblAvisoSalas" style='color: #fff; font-size: 18px; text-shadow: 0px 0px 5px #000000;'>Las salas se eliminan transcurridos 7 días desde su último uso.
+			
+		
+		</div> 
 		<div id='divtablasalas' style=' overflow: auto; background: rgba(255, 255, 255, 0.5);'>
 		<table id="TablaSalas" >
 		 <tr class="header">
@@ -785,51 +890,86 @@ border-spacing: 50em;
 	<!-- <div style='height: 40px; background: #fff; border-bottom: #ccc solid 1px;'>  -->
     	<div style='float: right;'><button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button></div>
         <!-- <div style='float: left; font-size: 15px; padding: 5px;'>La clasificación se calcula cada minuto. Partimos con 100 ptos. Ganar +2 ptos., Perder -1 pto., Retirarse -2 ptos. </div>  -->
+		
+		
+
 
      <!-- </div>  -->
     <div style='padding:10px'>
         <div id='tabs'>
-            <a href='#' id='acumulada' data-div="DivClasificacion" class=' activo'>Acumulada</a>
-            <a href='#' id='semanal'  data-div="DivClasificacionSemanal" class=' '>Semanal</a>
+           
+            <a href='#' id='semanal'  data-div="DivClasificacionSemanal" class=' activo'>Semanal</a>
+			<a href='#' id='anterior'  data-div="DivClasificacionAnterior" class=' '>Anterior</a>
+			<a href='#' id='acumulada' data-div="DivClasificacion" class=' '>Acumulada</a>
         </div>
-        <div id=DivClasificacion style='background: #fff; padding:10px;'>
+        <div id=DivClasificacion style='display: none;background: #fff; padding:10px;'>
 		<div id="TextoClasificacionGlobal" style='float: left; font-size: 15px; padding: 5px;font-weight: bold;'></div> 
-       
+    
+<!-- 				<div id="wrapper">
+					<section>
+						<div class="data-container"></div> -->
+						<div class="paginationjs-theme-blue" id="pagination-general"> </div>
+<!-- 					</section>
+				</div> -->
+
 		
                 <table id="TablaClasificacion"  >
                  <tr class="header">			
                     <th style="width:5%;">POSICIÓN</th>
                     <th style="width:10%;"> </th>
-                    <th style="width:30%;">JUGADOR</th>
+                    <th style="width:15%;">JUGADOR</th>
                     <th style="width:10%;">JUGADAS</th>
                     <th style="width:10%;">GANADAS</th>
                     <th style="width:10%;">PERDIDAS</th>
                     <th style="width:10%;">RETIRADAS</th>
-                    <th style="width:15%;">PUNTOS</th>
-                    <th style="width:15%;">NIVEL</th>
+					<th style="width:10%;">GRUPO</th>
+                    <th style="width:10%;">PUNTOS</th>
+                    <th style="width:10%;">NIVEL</th>
                   </tr>
                 </table>
     
         </div>
         
-        <div id=DivClasificacionSemanal style='display: none; background: #fff; padding:10px;'>
+        <div id=DivClasificacionSemanal style='background: #fff; padding:10px;'>
 		<div id="TextoClasificacionSemanal" style='float: left; font-size: 15px; padding: 5px;font-weight: bold;'></div> 
-				
+				<div class="paginationjs-theme-blue" id="pagination-semanal"> </div>
                 <table id="TablaClasificacionSemanal" >
                  <tr class="header">			
                     <th style="width:5%;">POSICIÓN</th>
                     <th style="width:10%;"> </th>
-                    <th style="width:30%;">JUGADOR</th>
+                    <th style="width:15%;">JUGADOR</th>
                     <th style="width:10%;">JUGADAS</th>
                     <th style="width:10%;">GANADAS</th>
                     <th style="width:10%;">PERDIDAS</th>
                     <th style="width:10%;">RETIRADAS</th>
-                    <th style="width:15%;">PUNTOS</th>
-                    <th style="width:15%;">TOP 5 SEMANA</th>
+					<th style="width:10%;">GRUPO</th>
+                    <th style="width:10%;">PUNTOS</th>
+                    <th style="width:10%;">TOP 5 SEMANA</th>
                   </tr>
                 </table>
     
         </div>
+		
+        <div id=DivClasificacionAnterior style='display: none; background: #fff; padding:10px;'>
+		<div id="TextoClasificacionAnterior" style='float: left; font-size: 15px; padding: 5px;font-weight: bold;'></div> 
+				<div class="paginationjs-theme-blue" id="pagination-anterior"> </div>
+                <table id="TablaClasificacionAnterior" >
+                 <tr class="header">			
+                    <th style="width:5%;">POSICIÓN</th>
+                    <th style="width:10%;"> </th>
+                    <th style="width:15%;">JUGADOR</th>
+                    <th style="width:10%;">JUGADAS</th>
+                    <th style="width:10%;">GANADAS</th>
+                    <th style="width:10%;">PERDIDAS</th>
+                    <th style="width:10%;">RETIRADAS</th>
+					<th style="width:10%;">GRUPO</th>
+                    <th style="width:10%;">PUNTOS</th>
+                    <th style="width:10%;">TOP 5 SEMANA</th>
+                  </tr>
+                </table>
+    
+        </div>
+		
     </div>
 </div>
 
@@ -937,7 +1077,7 @@ border-spacing: 50em;
 		<button onClick="RSHJSKMBRP(3)"><i class='fa fa-instagram'></i> Instagram</button>
 		<button onClick="RSHJSKMBRP(4)"><i class='fa fa-twitter'></i> Twitter</button>		
 		<br><br>	
-		 <a href="http://guiñotepro.es/privacidad/privacidad.html" target="_blank">política de privacidad</a>
+		 <a href="/privacidad/privacidad.html" target="_blank">política de privacidad</a>
 </div> 
 
 

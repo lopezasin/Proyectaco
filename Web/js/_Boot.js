@@ -71,7 +71,7 @@ Boot.prototype.create = function() {
 	// set the game settings, so now let's start the real preloader going
 	//this.game.scale.startFullScreen();
 	//this.game.plugins.add(new Phaser.Plugin.SaveCPU)
-	this.game.add.plugin(PhaserInput.Plugin);
+	//this.game.add.plugin(PhaserInput.Plugin);
 	this.game.state.start("Preload");
 };
 

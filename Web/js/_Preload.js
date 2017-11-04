@@ -115,6 +115,7 @@ Preload.prototype.preload = function() {
 	this.load.image('Boton_robots', 'assets/images/completar_robots.png');	
 	this.load.image('Boton_micro_off', 'assets/images/micro_off.png');	
 	this.load.image('Boton_micro_on', 'assets/images/micro_on.png');	
+	this.load.image('Boton_escribir', 'assets/images/teclado.png');
 	
 	this.load.image('Ninja', 'assets/images/nivel_ninja.png');	
 	this.load.image('Medalla', 'assets/images/medalla.png');	

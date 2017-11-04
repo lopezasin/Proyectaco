@@ -12,7 +12,7 @@
 	
 	JKLJKLRIRI.visible=false;
 	OcultarElegirPareja();
-	NKJHKJHHHE.splice(0,1000);	
+	//1.0.9 NKJHKJHHHE.splice(0,1000);	
 	CUUKQAGFEB.x=QETACVSHAR;
 	CUUKQAGFEB.visible=true;
 	QSAXUCPASV();
@@ -47,13 +47,13 @@
 
 	if (EGPDVIEJEL==true)
 	{
-		inputField.visible=true;
+		BotonEscribir.visible=true;
 		BotonHablarOn.visible=false;
 		BotonHablarOff.visible=true;
 		
 		if (PWMIBRSDCJ.length>0)
 		{
-			inputField.visible=PWMIBRSDCJ[0].MBMWBWUYUY;	 //1.0.8
+			BotonEscribir.visible=PWMIBRSDCJ[0].MBMWBWUYUY;	 //1.0.8
 		}
 		
 	}
@@ -199,7 +199,7 @@
 		{
 			DVNRTQIWGL=1
 		}
-		KKQJCHKQEP();
+		//KKQJCHKQEP();
 		//JQSOOBSDDS();
 		//MYQBNBVHKU=true;
 		//alert("grrr");

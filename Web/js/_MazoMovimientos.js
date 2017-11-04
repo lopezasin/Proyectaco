@@ -1713,10 +1713,10 @@ FRWLTWDFVM=function(SLGKDYQCAY,UHTPGPRUJA,JugadaDesdeBuffer){
 			}
 			
 			DVNRTQIWGL=TTJFVWDTMG;
-			KKQJCHKQEP();
-			MMMCNMNKTP=DVNRTQIWGL;
-			JWXRWCVLGC(UPCWNPYAIE);
 			
+			MMMCNMNKTP=DVNRTQIWGL;
+			//JWXRWCVLGC(UPCWNPYAIE);
+			//KKQJCHKQEP();	
 			
 			log(true,"DVNRTQIWGL VA GANANDO "+DVNRTQIWGL);
 			
@@ -2141,7 +2141,11 @@ XNYRSXYRGF=function(JugadorValidar)
 	{
 		NEHWUIWGWQ=NEHWUIWGWQ+2000;
 	}
-						
+					
+	if (Rapido==true)
+	{
+		NEHWUIWGWQ=200;
+	}
 	//NEHWUIWGWQ=5000;		
 	return NEHWUIWGWQ;
 }					
@@ -2166,15 +2170,15 @@ BSUNPMKJSM=function(UPCWNPYAIE)
 	//rec var TimerDesc=YMHIHSNADE.time.create(false);
 	//rec TimerDesc.stop(); //04/17		
 
-	if (TKXPPGUPVV.duration.toFixed(0)<=0)
-	{
-		TKXPPGUPVV.add(PLKOPTSHBQ, function()
-		{
+	//1.0.9 if (TKXPPGUPVV.duration.toFixed(0)<=0)
+	//1.0.9 {
+	//1.0.9 	TKXPPGUPVV.add(PLKOPTSHBQ, function()
+	//1.0.9 	{
 
 			//TimerDesc.stop();
-			TKXPPGUPVV.stop();
+	//1.0.9 		TKXPPGUPVV.stop();
 			//1.0.4 uno por otro		
-			LRYVPILWKS();
+			//1.0.9 LRYVPILWKS();
 			//console.log("Llamada 2");
 			//IOJCRKJSRL();
 			
@@ -2184,7 +2188,7 @@ BSUNPMKJSM=function(UPCWNPYAIE)
 			//console.log("Quien Toma el Control :"+ESKTEXAVHU+" Turno: "+DVNRTQIWGL+" Soy"+TFSXFTYVGQ+" "+KYDWXPGHVY.length);
 			
 			//console.log("UHYCGYFWYJ: "+KYDWXPGHVY.length);
-			
+			console.log("UHYCGYFWYJ total: "+KYDWXPGHVY.length);
 			for (i=0;i<=KYDWXPGHVY.length-1;i++)
 			{
 				//console.log("XJARYUVBCB "+KYDWXPGHVY[i].SSUNXNEEHN+" "+TFSXFTYVGQ+" "+ESKTEXAVHU+" "+DVNRTQIWGL);	
@@ -2227,20 +2231,21 @@ BSUNPMKJSM=function(UPCWNPYAIE)
 				
 			}
 		
-		});
-		TKXPPGUPVV.start();	
-	}
+		//1.0.9 });
+		//1.0.9 TKXPPGUPVV.start();	
+	//1.0.9 }
 }
 
 JWXRWCVLGC=function(UPCWNPYAIE)
 {
 	var JHKSJDHVKJ;
+	var vTiempoLoopTurno=1000;
 	
 	if (EGPDVIEJEL==true && VEMBUOOHLM==true)
 		{	
 			
 			//console.log("** Contador Turno");
-			BSUNPMKJSM( UPCWNPYAIE ); //10/02/2017
+			//1.0.9 BSUNPMKJSM( UPCWNPYAIE ); //10/02/2017
 			
 			
 			
@@ -2263,6 +2268,15 @@ JWXRWCVLGC=function(UPCWNPYAIE)
 				JHKSJDHVKJ=7; //1.0.9 7
 			}
 			
+			if (Rapido==true)
+			{
+				JHKSJDHVKJ=0.2;
+				vTiempoLoopTurno=200;
+			}
+			
+			
+			
+			
 			
 			//if (XPSRYGDPNI(AGKVNAGGLB[i],TFSXFTYVGQ)==true)
 			//{
@@ -2276,7 +2290,7 @@ JWXRWCVLGC=function(UPCWNPYAIE)
 
 								
 								HUUCUYFBLW = YMHIHSNADE.time.create(false);
-								HUUCUYFBLW.loop(1000, function(){
+								HUUCUYFBLW.loop(vTiempoLoopTurno, function(){
 									
 										//if (MYQBNBVHKU==false)
 										//{
@@ -2386,8 +2400,7 @@ AGLRWERBPD=function(UPCWNPYAIE){
 			log(true,"DVNRTQIWGL feo "+ DVNRTQIWGL);
 		
 	}
-	KKQJCHKQEP();
-	
+	KKQJCHKQEP();	
 	JWXRWCVLGC(UPCWNPYAIE);
 			
 }
@@ -2844,14 +2857,14 @@ RQMTWGKGIA=function(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDX
 	
 	}
 	console.log("ENCONTRADA 3 "+WXYPYAPQQJ+" "+SJVCMXWVVI);
-	WXYPYAPQQJ=false;
+	//WXYPYAPQQJ=false;
 	if (WXYPYAPQQJ==false && BucleManoCentro<=3)
 	{
 		//console.log("Ha ocurrido un milagro");
 		var	timermanocentro = YMHIHSNADE.time.create(false);
 		timermanocentro.add(1000, function()
 		{
-			//console.log("Enbucle");
+			console.log("Enbucle");
 			RQMTWGKGIA(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDXVSQEY);
 			BucleManoCentro++;
 		});	

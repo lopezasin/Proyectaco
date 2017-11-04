@@ -14,20 +14,39 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var vProduccion=false;
+var vProduccion=true;
+
 
 var JHGHJAGCMC;
+var MaquinaSinSSH
+var MaquinaSSH;
+
 if (vProduccion==true){
-	JHGHJAGCMC='http://35.158.124.54'
-	//JHGHJAGCMC='http://a.xn--guiotepro-n6a.es'
-	//JHGHJAGCMC='http://xn--guiotepro-n6a.es:5000'
-	//JHGHJAGCMC='http://54.93.97.50:5000'
+
+	
+	//MaquinaSSH="https://b.xn--guiotepro-n6a.com"
+	//MaquinaSinSSH="http://b.xn--guiotepro-n6a.com"
+	//JHGHJAGCMC="https://b.xn--guiotepro-n6a.com"
+	
+	//MaquinaSSH="http://b.xn--guiotepro-n6a.com"
+	//MaquinaSinSSH="http://b.xn--guiotepro-n6a.com"
+	JHGHJAGCMC="https://b.xn--guiotepro-n6a.com"
+
+
+	//MaquinaSSH="https://xn--guiotepro-n6a.es"
+	//JHGHJAGCMC="https://xn--guiotepro-n6a.es"
+
+
 }
 else
 {
-	//JHGHJAGCMC='http://localhost:5000'		
-	JHGHJAGCMC='http://192.168.1.100:5000'		
-	//JHGHJAGCMC='http://192.168.43.100:5000'		
+	JHGHJAGCMC='http://localhost:5000'		
+	//MaquinaSSH='http://localhost:5000'
+	//MaquinaSinSSH='http://localhost:5000'		
+	//JHGHJAGCMC='http://192.168.1.100:5000'		
+//	JHGHJAGCMC='http://192.168.43.100:5000'		
+//	MaquinaSSH='http://192.168.43.100:5000'	
+//	MaquinaSinSSH='http://192.168.43.100:5000'	
 }
 
 var recognition;
@@ -58,7 +77,7 @@ var ISVLSNLHWR=0;
 var IJCSKNTKVH="";
 
 var JLVDFTPUNI=101;
-var MFENMIFPUA=1;
+var MFENMIFPUA=3000;
 
 var Rapido=true;
 var BucleManoCentro=0;
@@ -67,10 +86,11 @@ var GWFPRHAYQK=20;//20 segundos
 
 if (Rapido==true)
 {
-	HLBMKNFUWL=6000;//1500 milisegundos
-	GWFPRHAYQK=20;//20 segundos
+	HLBMKNFUWL=300;//1500 milisegundos
+	GWFPRHAYQK=0.2;//20 segundos
 }
 
+var PrimeraVez=true;
 var XIQDONAJMM;
 var KVBNWXDTON;
 var RCYRGXLWBR;
@@ -138,7 +158,7 @@ var JEHYBALODM=[];
 var DCOXIXEBRJ=[];
 
 var PWMIBRSDCJ=[];
-var NKJHKJHHHE=[];
+//var NKJHKJHHHE=[];
 var ESKTEXAVHU;
 var MYQBNBVHKU=false;
 var UYIUYIUYIU;
@@ -205,6 +225,7 @@ var LNJDKEVPQE;
 var COIVBWRMCC=0;
 var SXSHBRJFIR=0;
 var BotonHablar;
+var BotonEscribir;
 //Phaser.Easing.Quadratic.Out;
 //Phaser.Easing.Quartic;
 var KYFMRVNHIQ=Phaser.Easing.Linear.Out;
@@ -729,6 +750,14 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	BotonHablarOff.anchor.setTo(0.5,0.5)
 	BotonHablarOff.visible=false;
 	
+	
+	BotonEscribir = YMHIHSNADE.add.button(120+YAJVUBPNNW, 50, 'Boton_escribir', function(){
+		document.getElementById("bchat").click();
+	
+	});
+	BotonEscribir.anchor.setTo(0.5,0.5)
+	BotonHablarOff.visible=false;	
+	
 	BotonHablarOn= YMHIHSNADE.add.button(200+YAJVUBPNNW, 50, 'Boton_micro_on', function(){
 		//BotonHablarOff.visible=true;	
 		//BotonHablarOn.visible=false;
@@ -929,16 +958,35 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	DHJGJHGWCY.anchor.setTo(0.5, 0.5)
 	DHJGJHGWCY.visible=false;
 
+	//console.log("Conectado "+socket.socket.connected);
+	if (JKCANKPQBB<=2)
+	{
+		PWGIQBBAWX=true;
+		console.log("Debe intentarlo");
+	}
+	else
+	{		
+		PWGIQBBAWX=false;	
+	}
 	
-	if (PWGIQBBAWX==true)
+	
+	//if (PWGIQBBAWX==true)
+	/*	try{
+		socket.disconnect();
+		}
+		catch(e){}*/
+		// || JKCANKPQBB<=4
+	console.log("Primera vez "+PrimeraVez);
+	if(EstoyConectado()==false && PrimeraVez==true)
 	{
 		
 		try
 		{
 			
-			//console.log("Conecta: Llamada level")			
+			//console.log("Conecta: Llamada level")	
+			console.log("Y lo intento");			
 			XEMENNVXGV();
-			if (socket.id!=undefined)
+			if (EstoyConectado()==true)
 			{
 					//alert("ko");			
 				//socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO) ;
@@ -969,14 +1017,32 @@ var timerborrar = YMHIHSNADE.time.create(false);
 			CMREMHOJIN();
 		}
 	}
-	PWGIQBBAWX=true;
+	
+	PrimeraVez=false;
+	
+	
+	/*if (JKCANKPQBB<=2)
+	{
+		PWGIQBBAWX=true;
+	
+	}
+	else
+	{		
+		PWGIQBBAWX=false;	
+	}*/
+	
+	
+	
+	
 	ERQHLTPETK=false;
 
-	if (socket.id!=undefined)
+	if (EstoyConectado()==true)
 	{
-		socket.emit('JKHWJKHIWF');
-	}
-		
+		if (EstoyConectado()==true)
+		{
+			socket.emit('JKHWJKHIWF');
+		}
+	}	
 	
 
 	YJNIRPCWEI.x=YMHIHSNADE.world.centerX;
@@ -1069,7 +1135,8 @@ var timerborrar = YMHIHSNADE.time.create(false);
 	JSJSHSHSSE.wordWrap= true;
 	JSJSHSHSSE.wordWrapWidth=1000;	*/
 	
-		inputField = YMHIHSNADE.add.inputField(10+YAJVUBPNNW, 25,{
+	
+		/*inputField = YMHIHSNADE.add.inputField(10+YAJVUBPNNW, 25,{
 		font: "15px Arial",
 		height:30,
 		width:120,
@@ -1080,9 +1147,9 @@ var timerborrar = YMHIHSNADE.time.create(false);
 		//blockInput:true,
 		//focusOutOnEnter:false
 		}
-		);
+		);*/
 		
-		inputField.visible=false;
+		BotonEscribir.visible=false;
 
 		//LOIUJDIWPD();
 	
@@ -1289,13 +1356,18 @@ SolicitaClasificacion=function()
 	}
 	else
 	{
-		console.log("aa "+PWMIBRSDCJ[0].OBTBPOULAV)
 		OBTBPOULAV=null;
 	}
 	
-	if (socket.id!=undefined)
+	
+	if (EstoyConectado()==true)
 	{
 		
+		socket.emit('WHGHJCGWWQ',socket.id,OBTBPOULAV);	
+	}
+	else
+	{
+		XEMENNVXGV();
 		socket.emit('WHGHJCGWWQ',socket.id,OBTBPOULAV);	
 	}
 }
@@ -1304,7 +1376,7 @@ RellenarSala=function()
 {
 	if (EGPDVIEJEL==true)
 	{
-		if(socket.id!=undefined)
+		if(EstoyConectado()==true)
 		{
 			//console.log("llega a rellenar");
 			socket.emit('NZBSUWWZXX',DFBVDPETGO,XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV)
@@ -1664,8 +1736,8 @@ OcultarElegirPareja=function()
 MostrarFacebook=function()
 {
 	var d=document.getElementById('DivFace');
-	//d.style.display = 'inline-block';	
-	d.style.display = 'none';	
+	d.style.display = 'inline-block';	
+	//d.style.display = 'none';	
 }
 
 NGHJWGJHWG=function()
@@ -1763,8 +1835,22 @@ RespuestaPareja=function(Seleccion)
 	
 	XPBCVAGCDQ[ParejaOriginal-1].KKUYGYRGYG=OrdenDelModificado;
 
-
+	console.log("JSKXXDPSDS pareja Control: "+ESKTEXAVHU+" "+XPBCVAGCDQ.length);
+	//console.log()
+	var QuienTomaElControlTemporal=XPBCVAGCDQ[ESKTEXAVHU-1].AURESXCGMK;
+	
 	XPBCVAGCDQ.sort(sort_by('KKUYGYRGYG', false, parseFloat));
+	
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
+	{
+		if (XPBCVAGCDQ[i].AURESXCGMK==QuienTomaElControlTemporal)
+		{
+			ESKTEXAVHU=(i+1);
+			break;
+		}
+	}
+	
+	
 	
 	
 	
@@ -1806,8 +1892,10 @@ RespuestaPareja=function(Seleccion)
 	
 	
 	KYDWXPGHVY.splice(0,1000) //Importante no quitarlo. Al hacer los giros con el array de jugadores, hay que volver a calcular los desconectados y por eso se limpia el array
+	
+	LRYVPILWKS();
 	//console.log("Llamada 1")
-	IOJCRKJSRL();
+	//IOJCRKJSRL();
 	
 }
 
@@ -1833,6 +1921,8 @@ RespuestaSalir=function(JSKXXDPSDS)
 		else
 		{
 			FHKOYDXPCL();
+			MatarConexion();
+			XEMENNVXGV();
 		}
 	}
 	else
@@ -2009,25 +2099,25 @@ RSHJSKMBRP=function(Tipo)
 		switch (Tipo){	
 		
 			case 1 :		
-			ref = window.open(JHGHJAGCMC+'/auth/google', '_self');
+			ref = window.open('/auth/google', '_self');
 					
 			break;		
 			
 			case 2 :		
-			ref = window.open(JHGHJAGCMC+'/auth/facebook', '_self');
+			ref = window.open('/auth/facebook', '_self');
 			break;	
 			
 			case 3 :		
-			ref = window.open(JHGHJAGCMC+'/auth/Instagram', '_self');
+			ref = window.open('/auth/Instagram', '_self');
 			break;	
 			
 			case 4 :		
-			ref = window.open(JHGHJAGCMC+'/auth/Twitter', '_self');
+			ref = window.open('/auth/Twitter', '_self');
 			break;	
 			
 			case 5 :		
 			TrucoNavegador=false;
-			ref = window.open(JHGHJAGCMC+'/contacto');
+			ref = window.open('/contacto');
 			break;				
 		}
 	}
@@ -2075,20 +2165,20 @@ RSHJSKMBRP=function(Tipo)
 			break;		
 			
 			case 2 :		
-			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open('/auth/facebook', '_blank', 'location=no');
 			break;	
 			
 			case 3 :		
-			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/Instagram', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open('/auth/Instagram', '_blank', 'location=no');
 			break;	
 			
 			case 4 :		
-			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/Twitter', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open('/auth/Twitter', '_blank', 'location=no');
 			break;	
 			
 			case 5 :		
 			TrucoNavegador=false;
-			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/contacto', '_blank', 'location=no');
+			ref = cordova.InAppBrowser.open('/contacto', '_blank', 'location=no');
 			break;
 		}
 		
@@ -2885,11 +2975,11 @@ return split_out.join('\n');
 BYBYBFHBOX=function(TFSXFTYVGQ,RPHWVBBGIM,NBWHWUQAAA)
 {
 	RPHWVBBGIM=RPHWVBBGIM.substring(0,60)
-	inputField.resetText();
+	//inputField.resetText();
 	XIAPNYIGXV(TFSXFTYVGQ,RPHWVBBGIM,NBWHWUQAAA)
 	if (EGPDVIEJEL==true && NBWHWUQAAA==false)
 	{
-		socket.emit('HXUNTIAKHM', RPHWVBBGIM,DFBVDPETGO,TFSXFTYVGQ) ;
+		socket.emit('HXUNTIAKHM', RPHWVBBGIM,DFBVDPETGO,TFSXFTYVGQ,XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV,XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD) ;
 	}
 }
 
@@ -2909,18 +2999,20 @@ XEMENNVXGV=function()
 		YTUGCWECJC=true;
 	}*/
 	//console.log("Entra a conectar");
+	//console.log("Socket.id "+socket.id)
 	try
 	{
-		if (socket.id==undefined)
+		//if (socket.id==undefined)
+		if(EstoyConectado()==false)
 		{
 			//console.log("Se mete a conectar");
 			socket = io.connect(JHGHJAGCMC,{reconnection: true,  reconnectionDelay: 2000,
-				reconnectionDelayMax : 4000,
-				reconnectionAttempts: 2,
-				'max reconnection attempts' : 2,
-				ForceNew : false,
-				connect_timeout : 7000,
-				timeout :7000
+					reconnectionDelayMax : 2500,
+					reconnectionAttempts: 4,
+					'max reconnection attempts' : 4,
+					ForceNew : false,
+					connect_timeout : 2000,
+					timeout :2000
 				//'connection timeout':5000
 				//timeout :5
 				// transports: ['websocket'],
@@ -2941,37 +3033,38 @@ XEMENNVXGV=function()
 	}
 	catch(err) 
 	{
-		try
+		/*try
 		{
-			if (socket==undefined)
+			//if (socket==undefined)
+			if(EstoyConectado()==false)
 			{
 			//console.log("Se mete a conectar 2");
-			socket = io.connect(JHGHJAGCMC,{reconnection: true,  reconnectionDelay: 2000,
-				reconnectionDelayMax : 4000,
-				reconnectionAttempts: 2,
-				'max reconnection attempts' : 2,
-				ForceNew : false,
-				connect_timeout : 7000,
-				timeout :7000
-				//'connection timeout':5000
-				//timeout :5
-				//transports: ['websocket']
-				//'force new connection': true
-			}
-			);
-			
-			//BNCAIUQIJJ=false;
-			//if (BNCAIUQIJJ==false)
-			//{
-			//	BNCAIUQIJJ=true;
-				setEventHandlers();				
-			//}
+				socket = io.connect(MaquinaSinSSH,{reconnection: true,  reconnectionDelay: 2000,
+					reconnectionDelayMax : 2500,
+					reconnectionAttempts: 4,
+					'max reconnection attempts' : 4,
+					ForceNew : false,
+					connect_timeout : 2000,
+					timeout :2000
+					//'connection timeout':5000
+					//timeout :5
+					//transports: ['websocket']
+					//'force new connection': true
+				}
+				);
+				
+				//BNCAIUQIJJ=false;
+				//if (BNCAIUQIJJ==false)
+				//{
+				//	BNCAIUQIJJ=true;
+					setEventHandlers();				
+				//}
 				
 			}
 		}
 		catch(err){
 			//console.log("Problema reconectando");
-		}
+		}*/
 	}
 	//console.log("Intento de reconexión "+JKCANKPQBB);
 
@@ -2993,7 +3086,7 @@ JVEHDHOEEM=function(NoConectar){
 		//BNCAIUQIJJ=false;
 		//console.log("Conecta: Llamada JVEHDHOEEM")		
 	
-		/*if (socket.id!=undefined)
+		/*if (EstoyConectado()==true)
 		{
 			YTUGCWECJC=false;
 			try
@@ -3005,10 +3098,10 @@ JVEHDHOEEM=function(NoConectar){
 			catch(e){}
 		}*/
 		
-		if (NoConectar!=true) //Creaba sockets sin conocimiento
-		{
+		//if (NoConectar!=true) //Creaba sockets sin conocimiento
+		//{
 			XEMENNVXGV();
-		}
+		//}
 		
 		DVNRTQIWGL=1; //1.0.4
 		UEHYPTREIH.visible=false;
@@ -3034,7 +3127,7 @@ JVEHDHOEEM=function(NoConectar){
 		//JKLJKLRIRI.text="KK";
 		
 		
-		if (socket.id!=undefined)
+		if (EstoyConectado()==true)
 		{
 			//console.log("Arriba");
 			socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
@@ -3069,7 +3162,7 @@ KKJJKHAJHK=function(Modalidad,Sala)
 
 	NFARLTEOCI();
 	
-	if (socket.id!=undefined)
+	if (EstoyConectado()==true)
 	{
 		socket.emit('PRHGDXYEOQ', socket.id, true,Modalidad,Sala,SFKLFIJOIO,ObjetoG) ; //0: LXGKVFJUFT  1: Amigos
 	}
@@ -3309,37 +3402,81 @@ setEventHandlers = function () { //ESTE
   
   
   socket.on('connect', AYAOSXTCBR);
+  
+  socket.on('reconnect_attempt', function()
+  {
+	  JKCANKPQBB++;
+	  console.log("Intento de conexión "+JKCANKPQBB);
+	
+	if (EGPDVIEJEL==true)
+	{
+		//var timerErrorConexion = YMHIHSNADE.time.create(false);
+		//timerErrorConexion.add(5000,function(){
+		//	timerErrorConexion.stop();
+		//	if (EstoyConectado()==true)
+		//	{
+
+		if (JKCANKPQBB==2)
+		{
+			if (YTUGCWECJC==true)
+			{
+				SVHMCOYULR("Intentando reconectar...");
+			}
+		}
+		YTUGCWECJC=true;
+	
+
+		if (JKCANKPQBB>=4)	
+		{
+			//FHKOYDXPCL(); 1.0.81
+			//JHKWHCWKWC();
+			FHKOYDXPCL(); //madremia
+			MatarConexion();			
+			
+		}
+		
+			
+	}
+
+
+	  
+  });
+  
+  
+  
   socket.on('reconnect', function()
   {
+	  JKCANKPQBB=0;
+	  
 	  var i;
 	  if (MYQBNBVHKU==false)
 	  {
 		  //MatarConexion();
 		  FHKOYDXPCL(); //madremia
+			MatarConexion();
+			XEMENNVXGV();		  
 	  }
 	  else
-	  {
-	 
-	  JKCANKPQBB=0;
-	  //console.log("ARRAY DE LA SALA "+XPBCVAGCDQ);
-	  if (XPBCVAGCDQ.length>0) 
-	  {
-		  SVHMCOYULR("Reconectando..."+ XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD);	
-		  socket.emit("Reconectado", XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,XPBCVAGCDQ[TFSXFTYVGQ-1].Sala);
-	
-	
-	  
-	  
-	  }
-	  else
-	  {
-		   //console.log("MUY RARO");
-		  if (EGPDVIEJEL==true)
+	  {		 
+		  
+		  //console.log("ARRAY DE LA SALA "+XPBCVAGCDQ);
+		  if (XPBCVAGCDQ.length>0) 
 		  {
-			//jojo FHKOYDXPCL();
-			FHKOYDXPCL(); //madremia
+			  SVHMCOYULR("¡Reconectado!"+ XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD);	
+			  socket.emit("Reconectado", XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,XPBCVAGCDQ[TFSXFTYVGQ-1].Sala);	  
+		  
 		  }
-	  }
+		  else
+		  {
+			   //console.log("MUY RARO");
+			  if (EGPDVIEJEL==true)
+			  {
+				//jojo FHKOYDXPCL();
+				FHKOYDXPCL(); //madremia
+				MatarConexion();
+				XEMENNVXGV();				
+			  }
+		  }
 	  }
   });
 
@@ -3352,7 +3489,8 @@ setEventHandlers = function () { //ESTE
   socket.on('OUPPFUDFTA', function(data,callback)
   {
 	  //console.log(data);
-	  NSIRYROROW(data.JugadoresEnSala,data.SalaJoin,data.ArrayEnviar)
+	  //console.log("En OUPPFUDFTA toma el control "+data.QuienTomaControl)
+	  NSIRYROROW(data.JugadoresEnSala,data.SalaJoin,data.ArrayEnviar,data.ESKTEXAVHU)
 	  return callback(data.OYJAHGADFQ);
   }
   );
@@ -3383,7 +3521,8 @@ setEventHandlers = function () { //ESTE
 	  
 	  if (data.DesdeDesconexion==true)
 	  {
-			  for (i=0;i<=NBEJWDVLLV.length-1;i++)
+			/* 1.0.9
+			for (i=0;i<=NBEJWDVLLV.length-1;i++)
 			  {
 					if(NBEJWDVLLV[i].RHOLNWBOXR=='RYUDYPPOXW' || NBEJWDVLLV[i].RHOLNWBOXR=='RYUDYPPOXW solo yo')
 					{
@@ -3396,7 +3535,10 @@ setEventHandlers = function () { //ESTE
 			{
 				//MatarConexion();
 				FHKOYDXPCL(); //madremia
+				MatarConexion();
+				XEMENNVXGV();				
 			}
+			*/
 	  
 	  }
 	  else
@@ -3406,8 +3548,8 @@ setEventHandlers = function () { //ESTE
 	  //console.log("jol");
 	  if (HAUSUTNHGI==true)
 	  {
-		DVNRTQIWGL=data.Turno;
-		LUCRWXJMDR=data.AGTXFNIKQD;
+		//1.0.9 DVNRTQIWGL=data.Turno;
+		//1.0.9 LUCRWXJMDR=data.AGTXFNIKQD;
 		NOGEVUYFEW(data.UHTPGPRUJA,data.SJVCMXWVVI,data.Turno,data.AGTXFNIKQD,data.QKVJASWVEO)
 	  }
 	  
@@ -3415,45 +3557,6 @@ setEventHandlers = function () { //ESTE
   }
   );
  
-  socket.on('ODSYQUFMDU', function(data,callback)
-  {
-	  
-	  var i;
-	  var HAUSUTNHGI=true;
-	  
-	  if (data.DesdeDesconexion==true)
-	  {
-			  for (i=0;i<=NBEJWDVLLV.length-1;i++)
-			  {
-					if(NBEJWDVLLV[i].RHOLNWBOXR=='RYUDYPPOXW' || NBEJWDVLLV[i].RHOLNWBOXR=='RYUDYPPOXW solo yo')
-					{
-						HAUSUTNHGI=false;
-						break;
-					}
-			  }
-			  
-			if (HAUSUTNHGI==false)
-			{
-				//MatarConexion();
-				FHKOYDXPCL(); //madremia
-			}
-	  
-	  }
-	  else
-	  {
-		  HAUSUTNHGI=true;
-	  }
-	
-	  if (HAUSUTNHGI==true)
-	  {
-		DVNRTQIWGL=data.Turno;
-		LUCRWXJMDR=data.AGTXFNIKQD;
-		NOGEVUYFEW(data.UHTPGPRUJA,data.SJVCMXWVVI,data.Turno,data.AGTXFNIKQD,data.QKVJASWVEO)
-	  }
-	  return callback(data.OYJAHGADFQ);
-  }
-  );
-  
   
   socket.on('VOJPSKOTNY', function(data,callback)
   {
@@ -3491,7 +3594,7 @@ setEventHandlers = function () { //ESTE
    socket.on('KJHKHEIEIE', function(data,callback)
   {
 	  //console.log(data);
-	  BMNBIWEGUY(data.QuienSoy)
+	  BMNBIWEGUY();
 	  return callback(data.OYJAHGADFQ);
   }
   );  
@@ -3508,7 +3611,7 @@ setEventHandlers = function () { //ESTE
   socket.on('GCOMOMYQBP', function(data,callback)
   {
 	  //console.log(data);
-	  GDRQVXOCBL(data.SSUNXNEEHN,data.WWKVHIMWYD,data.posicionJugador,data.MinutosSancion) //1.0.8 Añado MinutosSancion
+	  GDRQVXOCBL(data.SSUNXNEEHN,data.WWKVHIMWYD,data.posicionJugador,data.MinutosSancion,data.ESKTEXAVHU) //1.0.8 Añado MinutosSancion
 	  return callback(data.OYJAHGADFQ);
   }
   );
@@ -3518,7 +3621,7 @@ setEventHandlers = function () { //ESTE
  socket.on('TGUUXMBTHT', function(data,callback)
   {
 	  //console.log(data);
-	  BCVWETKAKG(data.SSUNXNEEHN,data.WWKVHIMWYD,data.posicionJugador,data.NuevoId, data.ArraySalaEnviar)
+	  BCVWETKAKG(data.SSUNXNEEHN,data.WWKVHIMWYD,data.posicionJugador,data.NuevoId, data.ArraySalaEnviar, data.ESKTEXAVHU)
 	  return callback(data.OYJAHGADFQ);
   }
   );
@@ -3546,7 +3649,7 @@ setEventHandlers = function () { //ESTE
 	  
 	  socket.on('JHSJKVSKKW', function()
 	  {
-		  inputField.visible=false;
+		  BotonEscribir.visible=false;
 		  BotonHablarOn.visible=false;
 		  BotonHablarOff.visible=false;
 	  });
@@ -3556,6 +3659,7 @@ setEventHandlers = function () { //ESTE
 
 onSocketErrorDesdeServer= function (NNWWUUQPPP,ErrorPublico) {
 	
+	//console.log("E R R O R "+ NNWWUUQPPP+" público: " +ErrorPublico)
 	
 	if (NNWWUUQPPP=="Error0" || NNWWUUQPPP=="Error2" || NNWWUUQPPP=="Error3" || NNWWUUQPPP=="Error4") //Errores de Login
 	{
@@ -3635,6 +3739,8 @@ JHWIQQCLKD=function(Sala)
 	if (lSalir==true)
 	{
 		FHKOYDXPCL();
+		MatarConexion();
+		XEMENNVXGV();		
 		
 	}
 	else
@@ -3716,10 +3822,25 @@ MCMWUEHUWH=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,NuevaP
 	var i;
 	
 	
+	var QuienTomaElControlTemporal=XPBCVAGCDQ[ESKTEXAVHU-1].AURESXCGMK;
+	
 	XPBCVAGCDQ=ArrayDelaPropiaSalaClienteOrdenada;
 	
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
+	{
+		if (XPBCVAGCDQ[i].AURESXCGMK==QuienTomaElControlTemporal)
+		{
+			ESKTEXAVHU=(i+1);
+			break;
+		}
+	}
+	
+	
+	
+	
 	KYDWXPGHVY.splice(0,1000); //Importante hacer esto porque han cambiado los órdenes
-	IOJCRKJSRL();
+	LRYVPILWKS();
+	//1.0.9 IOJCRKJSRL();
 	
 	
 	for (i=0; i<=XPBCVAGCDQ.length-1;i++)
@@ -3739,10 +3860,10 @@ MCMWUEHUWH=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,NuevaP
 	JHKJKHHJCC();
 	
 	
-	var GXNRNMAAKW=function( QuienSoy,
+	var GXNRNMAAKW=function( QuienSoy,MQUGCIUQII,
 		OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
-		 this.QuienSoy=TFSXFTYVGQ
-		 
+		 this.QuienSoy=QuienSoy
+		 this.MQUGCIUQII=MQUGCIUQII
 											 
 		 this.OYJAHGADFQ=OYJAHGADFQ
 		 this.OJPXTRQDKS=OJPXTRQDKS
@@ -3758,7 +3879,7 @@ MCMWUEHUWH=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,NuevaP
 
 		
 	var OYJAHGADFQ=Math.random()*100000;
-	var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,
+	var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,MQUGCIUQII,
 		OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
 	NBEJWDVLLV.push(KCPHFPSPLQ);
 	QPHHGPRJAI.push(KCPHFPSPLQ);
@@ -3781,7 +3902,7 @@ MCMWUEHUWH=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,NuevaP
 		{
 			//console.log("Enviando..");
 			var OYJAHGADFQ=Math.random()*100000;
-			var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ[i].AURESXCGMK,
+			var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ[i].AURESXCGMK,MQUGCIUQII,
 				OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
 			NBEJWDVLLV.push(KCPHFPSPLQ);
 			QPHHGPRJAI.push(KCPHFPSPLQ);
@@ -3808,12 +3929,13 @@ MCMWUEHUWH=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,NuevaP
 	
 }
 
-BMNBIWEGUY=function(QuienDaOK)
+BMNBIWEGUY=function()
 {
 	var i;
 	var IUWYUIYWIN=false;
-	NKJHKJHHHE.push(QuienDaOK);
+	//1.0.9 NKJHKJHHHE.push();
 	//console.log("Recibiendo respuestas: "+NKJHKJHHHE.length+" ");
+	console.log("Llega el OK de todos")
 	NNSHEUERGY();
 
 	
@@ -3827,30 +3949,29 @@ NNSHEUERGY=function()
 	
 	//console.log("Debe repartir.."+NKJHKJHHHE.length)
 	//IOJCRKJSRL();
-	IOJCRKJSRL();//1.0.6
+	//1.0.9 IOJCRKJSRL();//1.0.6
 	
-	if (NKJHKJHHHE.length==4 && AGKVNAGGLB.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && TWJONOKGHC.length==0)
+	console.log("Toma el control "+ESKTEXAVHU+" ..y soy "+TFSXFTYVGQ)
+	//console.log("Longitud parejas "+NKJHKJHHHE.length);
+	console.log("Longitud sala "+XPBCVAGCDQ.length)
+	//XPBCVAGCDQ
+	
+	//if (NKJHKJHHHE.length==4 && AGKVNAGGLB.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && TWJONOKGHC.length==0)
+	if (AGKVNAGGLB.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && TWJONOKGHC.length==0)	
 	{
 		
 		
 		if (XPBCVAGCDQ.length==4){
 		
-			/*for (i=0;i<=KYDWXPGHVY.length-1;i++)
-			{
-			//console.log("XJARYUVBCB "+ESKTEXAVHU);	
-				if (KYDWXPGHVY[i].AURESXCGMK==XPBCVAGCDQ[3].AURESXCGMK && TFSXFTYVGQ==ESKTEXAVHU)
-				{
-					IUWYUIYWIN=true;
-				}
-			}*/
-	
+
+			DVNRTQIWGL=1;
 			if ( TFSXFTYVGQ==ESKTEXAVHU)
 			{
 			 //if (XPBCVAGCDQ[3].AURESXCGMK==socket.id || IUWYUIYWIN==true){ //Se crea la baraja
 				
-				DVNRTQIWGL=1;
 				
-				if (OSBTHSJKFW()==true) //1.0.8
+				
+				if (1==1) //1.0.9 //if (OSBTHSJKFW()==true) //1.0.8
 				{
 					ETKKAJPFXQ(4);	//ILA RDBQUAVHEP
 					HKJWHCKHWQ(WUHRYVMYBE,DFBVDPETGO,4,EVAILWGGKX,XPBCVAGCDQ,(JVQXQGYDHH+CNCCBHQJKL)) ; //ILA RDBQUAVHEP
@@ -3863,7 +3984,9 @@ NNSHEUERGY=function()
 	}
 	
 }
-SRUKEMRQNI=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
+SRUKEMRQNI=function(LongitudTotalGeneral, LongitudTotalSemanal,LongitudTotalAnterior,
+	PosicionGlobal, PosicionSemanal, PosicionAnterior,
+	MedianaGlobal,MedianaGlobal2, MedianaSemanal, MedianaSemanal2, MedianaAnterior,MedianaAnterior2){
 	var i;
 	var row; 
 	var cell1;
@@ -3879,212 +4002,358 @@ SRUKEMRQNI=function(Data,ObjetoPosicionGlobal,ObjetoPosicionSemanal){
 	var index;
 	var TextoPosicion="";
 	
-	console.log(ObjetoPosicionGlobal._Posicion);
-	console.log(ObjetoPosicionGlobal._Puntos);
-
-	/*console.log(ObjetoPosicionSemanal._Posicion);
-	console.log(ObjetoPosicionSemanal._Puntos);*/
 	
 	NGHJWGJHWG();
 	
-	var table = document.getElementById("TextoClasificacionGlobal");
-	if (ObjetoPosicionGlobal._Puntos==0)
-	{
-		table.textContent="No sabemos quién eres. Entra con tu usuario en multijugador.";
-	}
-	else
-	{
-		if (ObjetoPosicionGlobal._Posicion==0)
-		{
-			TextoPosicion="No estás entre los 100 primeros."			
-		}
-		else
-		{
-			TextoPosicion="Estás en la posición "+ObjetoPosicionGlobal._Posicion+"."
-		}
-		
-		table.textContent= TextoPosicion+" Tienes "+ObjetoPosicionGlobal._Puntos+" ptos.";
-	}
+	createPaginador('general',LongitudTotalGeneral,PosicionGlobal,MedianaGlobal,MedianaGlobal2)
+	createPaginador('semanal',LongitudTotalSemanal,PosicionSemanal,MedianaSemanal, MedianaSemanal2)
+	createPaginador('anterior',LongitudTotalAnterior,PosicionAnterior,MedianaAnterior,MedianaAnterior2)
 	
 
-	var table = document.getElementById("TextoClasificacionSemanal");
-	if (ObjetoPosicionSemanal._Puntos==0)
-	{
-		table.textContent="No sabemos quién eres. Entra con tu usuario en multijugador.";
-	}
-	else
-	{
-		if (ObjetoPosicionSemanal._Posicion==0)
-		{
-			TextoPosicion="No estás entre los 100 primeros."			
-		}
-		else
-		{
-			TextoPosicion="Estás en la posición "+ObjetoPosicionSemanal._Posicion+"."
-		}
-		
-		table.textContent= TextoPosicion+" Tienes "+ObjetoPosicionSemanal._Puntos+" ptos.";
-	}	
-	
-	
-	
-	var table = document.getElementById("TablaClasificacion");
-	var rowCount = table.rows.length;
-
-
-	for (i = 1; i < rowCount; i++) {
-	  
-		table.deleteRow(1);
-	}
-
-	
-	
-	var d=document.getElementById('DivClasificacionContenedor');
-	d.style.display = 'inline-block';
-	
-	index=0;
-	for (i=0;i<=Data.length-1;i++)
-	{
-		if (Data[i]._Tipo==1)
-		{
-		
-			row=table.insertRow(index+1);
-			
-			cell1 = row.insertCell(0);
-			cell2 = row.insertCell(1);
-			cell3 = row.insertCell(2);
-			cell4 = row.insertCell(3);
-			cell5 = row.insertCell(4);
-			cell6 = row.insertCell(5);		
-			cell7 = row.insertCell(6);
-			cell8 = row.insertCell(7);
-			cell9 = row.insertCell(8);
-			
-			cell1.innerHTML = Data[i]._Posicion;
-			
-			
-			
-			if(Data[i].QHHQPXWFNG!=undefined)
-			{
-				cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
-				//cell2.innerHTML =  "<a href="+ Data[i].QHHQPXWFNG+" class='fancy'><img src="+ Data[i].QHHQPXWFNG+" style='max-width:140;max-height:140'></a>";
-			}
-			else
-			{
-				cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
-			}
-			cell3.innerHTML = Data[i].SSUNXNEEHN;
-			cell4.innerHTML = Data[i]._Jugadas;
-			cell5.innerHTML = Data[i]._Ganadas;
-			cell6.innerHTML = Data[i]._Perdidas;
-			cell7.innerHTML = Data[i]._Retiradas;
-			cell8.innerHTML = parseFloat(Data[i]._Puntos).toFixed(0);
-			
-			
-			Imagen=OIQUIOCVKK(Data[i]._Nivel,1)
-			/*if  (Data[i]._Nivel==1)
-			{
-				Imagen='nivel_pro.png'
-			}
-			if  (Data[i]._Nivel==2)
-			{
-				Imagen='nivel_ninja.png'
-			}		
-			if  (Data[i]._Nivel==3)
-			{
-				Imagen='nivel_mago.png'
-			}			
-			if  (Data[i]._Nivel==4)
-			{
-				Imagen='nivel_diplomado.png'
-			}	*/		
-			cell9.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
-			
-			index++;
-		}
-		
-		
-		
-		
-		
-		
-	
-	}
-	
-	
-	var table = document.getElementById("TablaClasificacionSemanal");
-	var rowCount = table.rows.length;
-
-
-	for (i = 1; i < rowCount; i++) {
-	  
-		table.deleteRow(1);
-	}
-
-	
-	index=0;
-	for (i=0;i<=Data.length-1;i++)
-	{
-		if (Data[i]._Tipo==2)
-		{
-			//console.log("Rellena");
-			row=table.insertRow(index+1);
-			
-			
-			cell1 = row.insertCell(0);
-			cell2 = row.insertCell(1);
-			cell3 = row.insertCell(2);
-			cell4 = row.insertCell(3);
-			cell5 = row.insertCell(4);
-			cell6 = row.insertCell(5);		
-			cell7 = row.insertCell(6);
-			cell8 = row.insertCell(7);
-			cell9 = row.insertCell(8);
-			
-			cell1.innerHTML = Data[i]._Posicion;
-			if(Data[i].QHHQPXWFNG!=undefined)
-			{
-				cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
-			}
-			else
-			{
-				cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
-			}
-			cell3.innerHTML = Data[i].SSUNXNEEHN;
-			cell4.innerHTML = Data[i]._Jugadas;
-			cell5.innerHTML = Data[i]._Ganadas;
-			cell6.innerHTML = Data[i]._Perdidas;
-			cell7.innerHTML = Data[i]._Retiradas;
-			cell8.innerHTML = parseFloat(Data[i]._Puntos).toFixed(0);
-			
-			Imagen="sin_logro.png";
-			if  (Data[i]._CampeonSemanal==true)
-			{
-				Imagen='medalla.png'
-			}
-		
-			cell9.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
-			index++
-		}
-		
-		
-		
-		
-		
-		
-	
-	}
-		
-	
-	
-	
-	
-	
-
-
-	
 
 }
+
+
+DibujaRankingGeneral=function(Data, Posicion, Mediana, Mediana2)
+{
+	var i;
+	var table = document.getElementById("TablaClasificacion");
+	var rowCount = table.rows.length;
+	var row; 
+	var cell1;
+	var cell2;
+	var cell3;
+	var cell4;
+	var cell5;
+	var cell6;
+	var cell7;
+	var cell8;
+	var cell9;
+	var cell10;
+	var Imagen;	
+	var index;
+	var TextoPosicion="";
+
+	if (Data!=null && Data.length>0)
+	{
+
+		for (i = 1; i < rowCount; i++) {
+		  
+			table.deleteRow(1);
+		}
+
+		
+		
+		var d=document.getElementById('DivClasificacionContenedor');
+		d.style.display = 'inline-block';
+		
+		index=0;
+		for (i=0;i<=Data.length-1;i++)
+		{
+			if (Data[i]._Tipo==1)
+			{
+			
+				row=table.insertRow(index+1);
+				
+				cell1 = row.insertCell(0);
+				cell2 = row.insertCell(1);
+				cell3 = row.insertCell(2);
+				cell4 = row.insertCell(3);
+				cell5 = row.insertCell(4);
+				cell6 = row.insertCell(5);		
+				cell7 = row.insertCell(6);
+				cell8 = row.insertCell(7);
+				cell9 = row.insertCell(8);
+				cell10 = row.insertCell(9);
+				
+				cell1.innerHTML = Data[i]._Posicion;
+				
+				
+				
+				if(Data[i].QHHQPXWFNG!=undefined)
+				{
+					cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
+					//cell2.innerHTML =  "<a href="+ Data[i].QHHQPXWFNG+" class='fancy'><img src="+ Data[i].QHHQPXWFNG+" style='max-width:140;max-height:140'></a>";
+				}
+				else
+				{
+					cell2.innerHTML =  "<img class='zoom' src='" + '/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
+				}
+				cell3.innerHTML = Data[i].SSUNXNEEHN;
+				cell4.innerHTML = Data[i]._Jugadas;
+				cell5.innerHTML = Data[i]._Ganadas;
+				cell6.innerHTML = Data[i]._Perdidas;
+				cell7.innerHTML = Data[i]._Retiradas;
+				cell8.innerHTML = Data[i]._Grupo;
+				cell9.innerHTML = Data[i]._Ratio //parseFloat(Data[i]._Puntos).toFixed(0);
+				
+				
+				Imagen=OIQUIOCVKK(Data[i]._Nivel,1)
+
+				cell10.innerHTML =  "<img class='zoom' src='" + '/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
+				
+				index++;
+			}
+			
+			
+			
+			
+			
+			
+		
+		}
+		
+		
+		console.log("Posicion Global "+Posicion);
+		var table = document.getElementById("TextoClasificacionGlobal");
+		if (Posicion==-1)
+		{
+			table.textContent="No sabemos quién eres. Entra con tu usuario en multijugador.";
+		}
+		else
+		{
+			if (Posicion==0)
+			{
+				table.textContent="No apareces en el ranking general.";
+			}
+			else
+			{
+				table.textContent="Estás en la posición "+Posicion+"."		
+			}				
+		}
+	
+			table.textContent=table.textContent+"\r\nPara estar en el grupo de los jugones, juega más de "+Mediana+" partidas."+
+		"\r\nPara estar en el grupo de los frecuentes, juega más de "+Mediana2+" partidas."
+	
+	}
+}
+
+
+DibujaRankingSemanal=function(Data,Posicion, Mediana, Mediana2)
+{
+	
+		var i;
+	
+	var row; 
+	var cell1;
+	var cell2;
+	var cell3;
+	var cell4;
+	var cell5;
+	var cell6;
+	var cell7;
+	var cell8;
+	var cell9;
+	var cell10;
+	
+	var Imagen;	
+	var index;
+	var TextoPosicion="";
+	
+	if (Data!=null && Data.length>0)
+	{
+		var table = document.getElementById("TablaClasificacionSemanal");
+		var rowCount = table.rows.length;
+
+		console.log("Dibujando ranking semanal "+Data.length);
+
+		for (i = 1; i < rowCount; i++) {
+		  
+			table.deleteRow(1);
+		}
+
+		
+		index=0;
+		for (i=0;i<=Data.length-1;i++)
+		{
+			if (Data[i]._Tipo==2)
+			{
+				//console.log("Rellena");
+				row=table.insertRow(index+1);
+				
+				
+				cell1 = row.insertCell(0);
+				cell2 = row.insertCell(1);
+				cell3 = row.insertCell(2);
+				cell4 = row.insertCell(3);
+				cell5 = row.insertCell(4);
+				cell6 = row.insertCell(5);		
+				cell7 = row.insertCell(6);
+				cell8 = row.insertCell(7);
+				cell9 = row.insertCell(8);
+				cell10 = row.insertCell(9);
+				
+				cell1.innerHTML = Data[i]._Posicion;
+				if(Data[i].QHHQPXWFNG!=undefined)
+				{
+					cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
+				}
+				else
+				{
+					cell2.innerHTML =  "<img class='zoom' src='" + '/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
+				}
+				cell3.innerHTML = Data[i].SSUNXNEEHN;
+				cell4.innerHTML = Data[i]._Jugadas;
+				cell5.innerHTML = Data[i]._Ganadas;
+				cell6.innerHTML = Data[i]._Perdidas;
+				cell7.innerHTML = Data[i]._Retiradas;
+				cell8.innerHTML = Data[i]._Grupo;
+				cell9.innerHTML = Data[i]._Ratio //parseFloat(Data[i]._Puntos).toFixed(0);
+				
+				Imagen="sin_logro.png";
+				if  (Data[i]._CampeonSemanal==true)
+				{
+					Imagen='medalla.png'
+				}
+			
+				cell10.innerHTML =  "<img class='zoom' src='" + '/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
+				index++
+			}
+			
+			
+			
+			
+			
+			
+		
+		}
+		
+		console.log("Posicion semanal "+Posicion);
+		var table = document.getElementById("TextoClasificacionSemanal");
+		if (Posicion==-1)
+		{
+			table.textContent="No sabemos quién eres. Entra con tu usuario en multijugador.";
+		}
+		else
+		{
+			if (Posicion==0)
+			{
+				table.textContent="No apareces en el ranking de esta semana.";
+			}
+			else
+			{
+				table.textContent="Estás en la posición "+Posicion+"."		
+			}				
+		}
+		
+		table.textContent=table.textContent+"\r\nPara estar en el grupo de los jugones, juega más de "+Mediana+" partidas."+
+		"\r\nPara estar en el grupo de los frecuentes, juega más de "+Mediana2+" partidas."
+	}	
+	
+}
+
+DibujaRankingAnterior=function(Data,Posicion, Mediana, Mediana2)
+{
+	
+		var i;
+	
+	var row; 
+	var cell1;
+	var cell2;
+	var cell3;
+	var cell4;
+	var cell5;
+	var cell6;
+	var cell7;
+	var cell8;
+	var cell9;
+	var cell10;
+	var Imagen;	
+	var index;
+	var TextoPosicion="";
+	
+	if (Data!=null && Data.length>0)
+	{
+		var table = document.getElementById("TablaClasificacionAnterior");
+		var rowCount = table.rows.length;
+
+
+		for (i = 1; i < rowCount; i++) {
+		  
+			table.deleteRow(1);
+		}
+
+		
+		index=0;
+		for (i=0;i<=Data.length-1;i++)
+		{
+			if (Data[i]._Tipo==3)
+			{
+				//console.log("Rellena");
+				row=table.insertRow(index+1);
+				
+				
+				cell1 = row.insertCell(0);
+				cell2 = row.insertCell(1);
+				cell3 = row.insertCell(2);
+				cell4 = row.insertCell(3);
+				cell5 = row.insertCell(4);
+				cell6 = row.insertCell(5);		
+				cell7 = row.insertCell(6);
+				cell8 = row.insertCell(7);
+				cell9 = row.insertCell(8);
+				cell10 = row.insertCell(9);
+				
+				cell1.innerHTML = Data[i]._Posicion;
+				if(Data[i].QHHQPXWFNG!=undefined)
+				{
+					cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
+				}
+				else
+				{
+					cell2.innerHTML =  "<img class='zoom' src='" + '/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
+				}
+				cell3.innerHTML = Data[i].SSUNXNEEHN;
+				cell4.innerHTML = Data[i]._Jugadas;
+				cell5.innerHTML = Data[i]._Ganadas;
+				cell6.innerHTML = Data[i]._Perdidas;
+				cell7.innerHTML = Data[i]._Retiradas;
+				cell8.innerHTML = Data[i]._Grupo;
+				cell9.innerHTML = Data[i]._Ratio //parseFloat(Data[i]._Puntos).toFixed(0);
+				
+				Imagen="sin_logro.png";
+				if  (Data[i]._CampeonSemanal==true)
+				{
+					Imagen='medalla.png'
+				}
+			
+				cell10.innerHTML =  "<img class='zoom' src='" + '/assets/images/'+Imagen + "' style='max-width:30;max-height:30' >";
+				index++
+			}
+			
+			
+			
+			
+			
+			
+		
+		}
+		
+		console.log("Posicion anterior "+Posicion);
+		var table = document.getElementById("TextoClasificacionAnterior");
+		if (Posicion==-1)
+		{
+			table.textContent="No sabemos quién eres. Entra con tu usuario en multijugador.";
+		}
+		else
+		{
+			if (Posicion==0)
+			{
+				table.textContent="No apareces en el ranking anterior.";
+			}
+			else
+			{
+				table.textContent="Estás en la posición "+Posicion+"."		
+			}				
+		}
+		
+				table.textContent=table.textContent+"\r\nPara estar en el grupo de los jugones, juega más de "+Mediana+" partidas."+
+		"\r\nPara estar en el grupo de los frecuentes, juega más de "+Mediana2+" partidas."
+		
+	}	
+	
+}
+
 QAFLUOOCBX=function(Validacion,Sala){
 	if (Validacion==true)
 	{
@@ -4110,6 +4379,8 @@ VSXSYEUABW=function(RPHWVBBGIM,Salir)
 		if (Salir==true)
 		{
 			FHKOYDXPCL();
+			MatarConexion();
+			XEMENNVXGV();			
 		}
 		
 	}
@@ -4122,12 +4393,31 @@ VSXSYEUABW=function(RPHWVBBGIM,Salir)
 
 FGRXSJFOOH=function()
 {
-	YUXWLFWVRD();
+	//YUXWLFWVRD();
+		console.log("fallido")
+	/*if (JHGHJAGCMC==MaquinaSSH)
+	{
+		JHGHJAGCMC=MaquinaSinSSH;
+	}
+	else
+	{
+		JHGHJAGCMC=MaquinaSSH;
+	}*/
 	
 }
 
 MNTKNVATCM=function()
 {
+	console.log("Caido "+ JHGHJAGCMC +" "+MaquinaSSH);
+	/*if (JHGHJAGCMC==MaquinaSSH)
+	{
+		JHGHJAGCMC=MaquinaSinSSH;
+	}
+	else
+	{
+		JHGHJAGCMC=MaquinaSSH;
+	}*/
+	console.log("MAQUINA CAMBIADA: "+JHGHJAGCMC)	
 	YUXWLFWVRD();
 }
 
@@ -4221,49 +4511,7 @@ DVCXGBTNWL=function(CYHNPORXFJ)
 	var i;
 	
 	//No puedo hacer destroys porque se revienta en los carteles de fin de partida
-		/*for (i=0;i<=FXGSEGRXKC.length-1;i++)
-		{
-			FXGSEGRXKC[i].TNFAGGMKXD.destroy();
-		}
 
-		for (i=0;i<=CBCNHFGWLU.length-1;i++)
-		{
-			CBCNHFGWLU[i].TNFAGGMKXD.destroy();
-		}
-
-		for (i=0;i<=KNVKGHHTYC.length-1;i++)
-		{
-			KNVKGHHTYC[i].TNFAGGMKXD.destroy();
-		}
-
-		for (i=0;i<=TWJONOKGHC.length-1;i++)
-		{
-			TWJONOKGHC[i].TNFAGGMKXD.destroy();
-		}
-		for (i=0;i<=AGKVNAGGLB.length-1;i++)
-		{
-			AGKVNAGGLB[i].TNFAGGMKXD.destroy();
-		}
-
-		for (i=0;i<=VDKOVQXHON.length-1;i++)
-		{
-			VDKOVQXHON[i].TNFAGGMKXD.destroy();
-		}
-
-		for (i=0;i<=FBSDMRLVEL.length-1;i++)
-		{
-			FBSDMRLVEL[i].TNFAGGMKXD.destroy();
-		}
-
-		for (i=0;i<=KBESPOUXUK.length-1;i++)
-		{
-			KBESPOUXUK[i].destroy();
-		}
-
-		for (i=0;i<=BRILHDFUSO.length-1;i++)
-		{
-			BRILHDFUSO[i].destroy();
-		}*/
 
 
 		//alert(CYHNPORXFJ[0].IRQGAFESIC);
@@ -4337,7 +4585,7 @@ DVCXGBTNWL=function(CYHNPORXFJ)
 
 
 
-GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion)
+GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion,QuienTomaControlServer)
 {
 	var LQPUBPQTJA;
 	var i;
@@ -4351,6 +4599,8 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 	var UBWRXKMTQN;
 	var AjusteLetra=30;
 	//return true;
+	
+	ESKTEXAVHU=NumeroJugadorSala(QuienTomaControlServer);
 	
 	log(true,"Desconecta el jugador ");
 	log(true,"JUGADOR QUE DESCONECTA "+JJHEHUIEGO);
@@ -4367,9 +4617,13 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 		}			
 		
 	}
-	IOJCRKJSRL();
+	//1.0.9 IOJCRKJSRL();
 	
-		//No se si sobra
+	LRYVPILWKS();
+	
+	
+	//No se si sobra
+	//1.0.9
 	if (MYQBNBVHKU==false && TFSXFTYVGQ==ESKTEXAVHU) //1.0.6
 	{	
 		var GXNRNMAAKW=function( DFBVDPETGO,AURESXCGMK,MQUGCIUQII,
@@ -4388,6 +4642,10 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 		var QPHHGPRJAI=[];
 		QPHHGPRJAI.splice(0,1000);
 
+		
+		//if(PrepararEnvioListo() ==true)
+		
+		
 			
 		var OYJAHGADFQ=Math.random()*100000;
 		var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,JJHEHUIEGO,MQUGCIUQII,
@@ -4396,6 +4654,10 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 		QPHHGPRJAI.push(KCPHFPSPLQ);
 
 
+		
+				
+		
+		
 		socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
 		 function(XQLEOGMJYG)
 		 {			 
@@ -4420,12 +4682,12 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 		{
 			if (TFSXFTYVGQ==ESKTEXAVHU && JVQXQGYDHH==0 && CNCCBHQJKL==0 && EVAILWGGKX==false && UHHXSNXXJK==0 && PXGXKDDNFK==0) //1.0.8 Nos aseguramos con UHHXSNXXJK y PXGXKDDNFK de que realmente la partida nunca comenzó
 			{
-				if (socket!=null)
+				if (EstoyConectado()==true)
 				{
-					var GXNRNMAAKW=function( QuienSoy,
+					var GXNRNMAAKW=function( QuienSoy,MQUGCIUQII,
 						OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
-						 this.QuienSoy=TFSXFTYVGQ
-						 
+						 this.QuienSoy=QuienSoy
+						 this.MQUGCIUQII=MQUGCIUQII
 															 
 						 this.OYJAHGADFQ=OYJAHGADFQ
 						 this.OJPXTRQDKS=OJPXTRQDKS
@@ -4441,7 +4703,7 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 
 						
 					var OYJAHGADFQ=Math.random()*100000;
-					var KCPHFPSPLQ=new GXNRNMAAKW(TFSXFTYVGQ,
+					var KCPHFPSPLQ=new GXNRNMAAKW(JJHEHUIEGO,MQUGCIUQII,
 						OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
 					NBEJWDVLLV.push(KCPHFPSPLQ);
 					QPHHGPRJAI.push(KCPHFPSPLQ);
@@ -4667,6 +4929,7 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,MinutosSancion
 		onSocketErrorDesdeServer("Error13",NombreDesconectado+" será sancionado\n con "+MinutosSancion+" minutos si no logra reconectar.");
 	}
 
+	BSUNPMKJSM(LUCRWXJMDR)
 	
 	//NNSHEUERGY();
 	/*if (TFSXFTYVGQ==ESKTEXAVHU && JVQXQGYDHH==0 && CNCCBHQJKL==0 && EVAILWGGKX==false && AGKVNAGGLB.length==0 && VDKOVQXHON.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && XPBCVAGCDQ.length>=4)
@@ -4796,13 +5059,14 @@ VWYRRWMSJI=function(HOGPTRLBYH,NPYBJSHIFL)
 		);
 }
 
-BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,NuevoID,ArraySalaEnviar)
+BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,NuevoID,ArraySalaEnviar,QuienTomaControlServer)
 {
 	var LQPUBPQTJA;
 	var i;
 	var u;
 	var NPYBJSHIFL;
 	var STLEOJDWSU;
+	
 	
 	//1.0.9
 	vReconectando=true;
@@ -4841,25 +5105,26 @@ BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,Nuevo
 		}
 	}
 	
+	ESKTEXAVHU=NumeroJugadorSala(QuienTomaControlServer);   //1.0.9
 	
 	//Para por si acaso no me he enterado de alguna desconexión mientras estaba desconectado
 	for (i=0;i<=ArraySalaEnviar.length-1;i++)
 	{
 		//console.log("Actualizando id: "+XPBCVAGCDQ[i].AURESXCGMK+ " "+ JugadorQueReconecta);
-		for (u=0;i<=XPBCVAGCDQ.length-1;u++)
+		for (u=0;u<=XPBCVAGCDQ.length-1;u++)
 		{
 			if (ArraySalaEnviar[i].AURESXCGMK==XPBCVAGCDQ[u].AURESXCGMK)
 			{
 				
 				XPBCVAGCDQ[u].XJARYUVBCB=ArraySalaEnviar[i].XJARYUVBCB;
-				XPBCVAGCDQ[u].AURESXCGMK=ArraySalaEnviar[i].AURESXCGMK;
+				//XPBCVAGCDQ[u].AURESXCGMK=ArraySalaEnviar[i].AURESXCGMK;
 				//console.log("Mi nuevo id: "+NuevoID);
 				
 			}
 		}
 	}
 	
-	
+	LRYVPILWKS();
 
 
 	if (XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK==JugadorQueReconecta)
@@ -5042,56 +5307,79 @@ function DJAOLUHAHL() {
 
 // Socket connected
 AYAOSXTCBR  = function() {
+	
 	JKCANKPQBB=0;
 	//console.log("CONECTADO");
  // log(false,'Conectado al servidor:')
   //console.log(socket.id);
   //console.log("kkk");
-  	if (socket.id!=undefined && ( UEHYPTREIH.visible==true || LNJDKEVPQE.visible==true  ))
+  console.log("Jj");
+	if (EstoyConectado()==true)
 	{
+		if (EstoyConectado()==true && ( UEHYPTREIH.visible==true || LNJDKEVPQE.visible==true  ))
+		{
+			
+			socket.emit('JKHWJKHIWF');
+		}
 		
-		socket.emit('JKHWJKHIWF');
-	}
-	
-  	if (socket.id!=undefined && UEHYPTREIH.visible==false ) //Solo se envia la peticion si no estoy en la pantalla principal
-	//Ya que si no aparece la pantalla de login al principio
-	{
-		if (MYQBNBVHKU==false)
+		if (EstoyConectado()==true && UEHYPTREIH.visible==false ) //Solo se envia la peticion si no estoy en la pantalla principal
+		//Ya que si no aparece la pantalla de login al principio
 		{
-			socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
-			socket.emit('SNEESSIXBK', SFKLFIJOIO);
+			if (MYQBNBVHKU==false && EGPDVIEJEL==true)
+			{
+				
+				socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
+				socket.emit('SNEESSIXBK', SFKLFIJOIO);
+			}
 		}
-	}
-	else
-	{
-		if (socket.id!=undefined)
+		else
 		{
-			//alert("ko");		
-			//console.log("Pide publi");
-			socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO) ;
-			
-			if (PWMIBRSDCJ.length>0)
+			if (EstoyConectado()==true)
 			{
-				var JugadorPubli=PWMIBRSDCJ[0].WWKVHIMWYD;
-				var JugadorFullPubli=PWMIBRSDCJ[0].FFRVOEAXTF + '-'+ PWMIBRSDCJ[0].BDYYDTFQAO;
-				socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
+				//alert("ko");		
+				//console.log("Pide publi");
+				socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO) ;
+				
+				if (PWMIBRSDCJ.length>0)
+				{
+					var JugadorPubli=PWMIBRSDCJ[0].WWKVHIMWYD;
+					var JugadorFullPubli=PWMIBRSDCJ[0].FFRVOEAXTF + '-'+ PWMIBRSDCJ[0].BDYYDTFQAO;
+					socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
+				}
+				else
+				{
+					socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
+				}
+				
+				
+				socket.emit('SNEESSIXBK', SFKLFIJOIO);
 			}
-			else
-			{
-				socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO,ObjetoG) ;
-			}
-			
-			
-			socket.emit('SNEESSIXBK', SFKLFIJOIO);
 		}
+		
+		
 	}
-
   //socket.emit('adduser', prompt("What's your name?"));
   
 };
 
+EstoyConectado=function()
+{
+	var Conectado=false;
+	
+	try
+	{
+		Conectado=socket.connected;
+	}
+	catch(e)
+	{
+		Conectado=false;
+		//console.log("Conectado2 "+socket.connected);
+	}
+	
+	return Conectado;
+}
 RWOCHOBYJY  = function() {
-  YUXWLFWVRD();
+	YUXWLFWVRD();
 };
 
 AAQWTFMQMA = function() {
@@ -5117,9 +5405,10 @@ AAQWTFMQMA = function() {
 	MYQBNBVHKU=true;
 	//alert("COMENZADA");
 	//console.log("Llamada 9");
-	IOJCRKJSRL();
+	//IOJCRKJSRL();
 	//console.log("Antes de prepararcaracteristicamano");
 	JQSOOBSDDS();	
+	KKQJCHKQEP();
 	//console.log("Después de prepararcaracteristicamano");
 	
  };
@@ -5304,11 +5593,29 @@ AAQWTFMQMA = function() {
 	
 	 
  }
- NSIRYROROW = function(conectados,room,HGIFKEMXAD) {
+ 
+ NumeroJugadorSala=function(QuienTomaControlServer)
+ {
+	 var i;
+	 var QOWECQVXCM=0;
+	 
+	 for (i=0;i<=XPBCVAGCDQ.length-1;i++)
+	 {
+		 if (XPBCVAGCDQ[i].AURESXCGMK==QuienTomaControlServer)
+		 {
+			 QOWECQVXCM=(i+1);
+		 }
+	 }
+	 return QOWECQVXCM;
+ }
+ 
+ NSIRYROROW = function(conectados,room,HGIFKEMXAD,QuienTomaControlServer) {
 	 NGHJWGJHWG();
 	 DFBVDPETGO=room;
 	 log(false,'conectados: '+conectados)
 	 log(false,'DFBVDPETGO: '+DFBVDPETGO)
+
+	 
 
 	
 	
@@ -5405,6 +5712,11 @@ AAQWTFMQMA = function() {
 			}
 		}			
 	}
+	
+	ESKTEXAVHU=NumeroJugadorSala(QuienTomaControlServer);
+	console.log("Toma el control al conectar: "+QuienTomaControlServer+" "+ESKTEXAVHU);
+	
+	LRYVPILWKS(); //1.0.9
 
 	if (LongitudArray<=2)
 	{
@@ -5416,7 +5728,7 @@ AAQWTFMQMA = function() {
 	}
 	
 	//console.log("Llamada 10");
-	IOJCRKJSRL();
+	//1.0.9 IOJCRKJSRL();
 
 	//Saco el bucle porque si se conecta el segundo, no sabe quien es
 	 for (var i=0;i<=XPBCVAGCDQ.length-1;i++){
@@ -5437,13 +5749,13 @@ AAQWTFMQMA = function() {
 			log(true,XPBCVAGCDQ[i].IRQGAFESIC);
 			log(true,XPBCVAGCDQ[i].EJOYNSESRD);
 			//console.log("CHAT "+PWMIBRSDCJ[0].MBMWBWUYUY);
-			inputField.visible=true;
+			BotonEscribir.visible=true;
 			BotonHablarOn.visible=false;
 			BotonHablarOff.visible=true;
 		  
 			if (PWMIBRSDCJ.length>0)
 			{
-				inputField.visible=PWMIBRSDCJ[0].MBMWBWUYUY;	 //1.0.8
+				BotonEscribir.visible=PWMIBRSDCJ[0].MBMWBWUYUY;	 //1.0.8
 				
 				if (PWMIBRSDCJ[0].MBMWBWUYUY==false)
 				{
@@ -6271,7 +6583,7 @@ AAQWTFMQMA = function() {
  } 
  */
  
-IOJCRKJSRL=function()
+/*IOJCRKJSRL=function()
 {
 	var i;
 	var u;
@@ -6284,38 +6596,10 @@ IOJCRKJSRL=function()
 	//console.log("Jugadores UHYCGYFWYJ: "+KYDWXPGHVY.length);
 	
 	var Vivo;
-	/*for (i=0;i<=XPBCVAGCDQ.length-1;i++)
-	{
-		
-		Vivo=true;
-		for (u=0;u<=KYDWXPGHVY.length-1;u++)
-		{
-			//console.log("SSUNXNEEHN desc "+KYDWXPGHVY[u].SSUNXNEEHN);
-			if ( (i+1)==KYDWXPGHVY[u].SSUNXNEEHN)
-			{
-				Vivo=false;	
-				//console.log("Muerto "+KYDWXPGHVY[u].SSUNXNEEHN);				
-			}		
-			else
-			{
-				//console.log("Vivo "+KYDWXPGHVY[u].SSUNXNEEHN);		
-			}
-		}	
-		if (Vivo==true)
-		{			
-			break;
-		}
-	}*/
+
 	
 	Vivo=true
-	
-	//for (i=0;i<=XPBCVAGCDQ.length-1;i++)
-	//{
-		//console.log("Volteando "+XPBCVAGCDQ[i].XJARYUVBCB+" "+XPBCVAGCDQ[i].SSUNXNEEHN);
 
-		
-	//}
-	
 	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
 		//console.log("Volteando "+XPBCVAGCDQ[i].XJARYUVBCB+" "+XPBCVAGCDQ[i].SSUNXNEEHN);
@@ -6329,12 +6613,12 @@ IOJCRKJSRL=function()
 	//console.log("Calculando el control.."+Vivo+" "+XPBCVAGCDQ.length+" "+KYDWXPGHVY.length)
 	if (Vivo==true)
 	{
-		ESKTEXAVHU=(i+1);
+		//1.0.9 ESKTEXAVHU=(i+1);
 		log(true,"TOMA EL CONTROL DSDE CONECTADOS: "+ESKTEXAVHU);
 		
 		//console.log("** Calcula Control");
 		//console.log("Hace el amago")
-		if (BSUNPMKJSM(LUCRWXJMDR)==true) //Para que cuando comience partida, empiece el contador en el jugador que corresponda. 
+		if (BSUNPMKJSM(LUCRWXJMDR)==true && LUCRWXJMDR==1) //1.0.9 Añado el LUCRWXJMDR==1    //Para que cuando comience partida, empiece el contador en el jugador que corresponda. 
 		//Con todos los cambios, dej� de funcionar.
 		{
 			JWXRWCVLGC(LUCRWXJMDR);
@@ -6346,7 +6630,7 @@ IOJCRKJSRL=function()
 	
 	
 	
-}
+}*/
  
 consol=function()
 {
@@ -6387,7 +6671,7 @@ if (QueHago==0)
 	
 	if ( //(RDBQUAVHEP!=TFSXFTYVGQ &&  XJARYUVBCB==true && ESKTEXAVHU==TFSXFTYVGQ  )  
 
-			(OSBTHSJKFW()==true) 
+			1==1 //1.0.9 (OSBTHSJKFW()==true) 
 			//!( RDBQUAVHEP==TFSXFTYVGQ ||  (RDBQUAVHEP!=TFSXFTYVGQ && ESKTEXAVHU==TFSXFTYVGQ && XJARYUVBCB==true))  
 		
 		) //(AGKVNAGGLB.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && TWJONOKGHC.length==0)
@@ -6477,7 +6761,7 @@ XWGQYYRRQO = function(UHTPGPRUJA,SJVCMXWVVI,BBSGITWRQX) {
 
 		var timerdelay = YMHIHSNADE.time.create(false);
 			timerdelay.add(Delay, function(){*/
-
+				console.log("LLEGA DESDE LEJOS "+UHTPGPRUJA)
 				VPDVSDLPHG(UHTPGPRUJA,SJVCMXWVVI,SLGKDYQCAY,VMKDXVSQEY); 
 		/*}
 		);
@@ -6529,39 +6813,8 @@ MCFSLYOMHE=function()
 
 YUXWLFWVRD=function()
 {
-	if (EGPDVIEJEL==true)
-	{
-		//var timerErrorConexion = YMHIHSNADE.time.create(false);
-		//timerErrorConexion.add(5000,function(){
-		//	timerErrorConexion.stop();
-		//	if (socket.id!=undefined)
-		//	{
-		if (YTUGCWECJC==true)
-		{
-			SVHMCOYULR("Revise su conexión a internet\no inténtelo más tarde.");
-		}
-		YTUGCWECJC=true;
-		//	}
-		//});
-		//timerErrorConexion.start();
-		
-		//socket.disconnect();
-		PWGIQBBAWX=false;
-		
+	ESKTEXAVHU=0;
 
-		
-		JKCANKPQBB++;
-		//if (JKCANKPQBB>=3 && EGPDVIEJEL==true)
-		if (JKCANKPQBB>=2)	
-		{
-			//FHKOYDXPCL(); 1.0.81
-			//JHKWHCWKWC();
-			FHKOYDXPCL(); //madremia
-			
-		}
-		
-			
-	}
 	
 	//YHNMANDWLT();
 	
@@ -6616,32 +6869,31 @@ FHKOYDXPCL=function()
 	//YJEISFVFQY(); //1.0.8 Daba problemas pero es que además se ejecuta en WNEWPCNXPA
 	QSAXUCPASV();	
 	WNEWPCNXPA();
-	PWGIQBBAWX=true;
+	/*if (JKCANKPQBB<=2)
+	{
+		PWGIQBBAWX=true;
+	}
+	else
+	{
+		PWGIQBBAWX=false;
+	}*/
 	ERQHLTPETK=true;
 	//YMHIHSNADE.state.start("Level");	
 	//1.0.6
 	
 	
-	MatarConexion();
+	//MatarConexion();
 	//BNCAIUQIJJ=false;
 }
 
-SalirDesdeLogueo=function()
+/*SalirDesdeLogueo=function()
 {
 	NFARLTEOCI();
 	EHUHWTYXOS=false;
 	//	WNEWPCNXPA();
 	YTUGCWECJC=false;
 	
-	//1.0.8
-	/*try 
-	{
-		socket.disconnect();
-		socket=null;
-		DFBVDPETGO=Math.floor(Math.random());
-	}
-	catch(e){}
-	*/
+
 	
 	//XIQDONAJMM.visible=true;
 	YJEISFVFQY();
@@ -6652,6 +6904,7 @@ SalirDesdeLogueo=function()
 	//1.0.8 jo XEMENNVXGV();
 	//JVEHDHOEEM();
 }
+*/
 
 EXBCVLOIYJ=function(XQLEOGMJYG,Origen)
 {
@@ -6725,6 +6978,9 @@ KKQJCHKQEP=function()
 		LIQHCBMZAX(BNVUWCOWEC);
 		LIQHCBMZAX(DHJGJHGWCY);
 	}	
+	
+	console.log("KKQJCHKQEP: Soy "+TFSXFTYVGQ+" Turno: "+DVNRTQIWGL+" Control:"+ESKTEXAVHU)
+	BSUNPMKJSM(DVNRTQIWGL);
 	
 	
 }	

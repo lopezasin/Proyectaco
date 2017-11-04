@@ -48638,11 +48638,18 @@ Phaser.GameObjectFactory.prototype = {
     * @param {Phaser.Group} [group] - Optional Group to add the object to. If not specified it will be added to the World group.
     * @return {Phaser.BitmapText} The newly created bitmapText object.
     */
-    bitmapText: function (x, y, font, text, size, group) {
+    bitmapText: function (x, y, font, text, size, group, alinea) {
 
         if (group === undefined) { group = this.world; }
 
         return group.add(new Phaser.BitmapText(this.game, x, y, font, text, size));
+		
+		//ILA
+		/*if (alinea==null ||alinea==undefined)
+		{
+			alinea='right';
+		}
+		return this.world.add( new Phaser.BitmapText(this.game, x, y, font, text, size, alinea));*/
 
     },
 
@@ -49108,6 +49115,7 @@ Phaser.GameObjectCreator.prototype = {
         return new Phaser.BitmapText(this.game, x, y, font, text, size, align);
 
     },
+	
 
     /**
     * Creates a new Phaser.Tilemap object.

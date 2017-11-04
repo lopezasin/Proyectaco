@@ -26,10 +26,11 @@
 		MGYJHGHWGC.splice(0,100);
 		//EVHFMHFMJU(DVNRTQIWGL);
 		
-		if (EGPDVIEJEL==false)
+		/*1.0.9 if (EGPDVIEJEL==false)
 		{
 			UHTPGPRUJA=DVNRTQIWGL;
-		}
+		}*/
+		UHTPGPRUJA=DVNRTQIWGL; //1.0.9
 		
 		
 		log(true,"IA JUGADOR QUE MUEVE "+UHTPGPRUJA);
