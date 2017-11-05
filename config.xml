@@ -44,7 +44,7 @@
   
   	<gap:plugin name="phonegap-facebook-plugin" source="npm">
   <param name="APP_ID" value="123400284870556" />
-  <param name="APP_NAME" value="GuiñotePro" />
+  <param name="APP_NAME" value="GuinotePro" />
   </gap:plugin>
 	
 	
