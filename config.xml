@@ -42,6 +42,10 @@
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
   </gap:plugin>
   
+  <platform name="android">
+    <preference name="android-minSdkVersion" value="15"/>
+ </platform>
+ 
   	<gap:plugin name="cordova-plugin-facebook4" source="npm">
   <param name="APP_ID" value="123400284870556" />
   <param name="APP_NAME" value="GuiñotePro" />
