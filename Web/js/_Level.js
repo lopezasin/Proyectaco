@@ -2190,7 +2190,7 @@ RSHJSKMBRP=function(Tipo)
 			
 			TrucoNavegador=false;
 			
-			facebookConnectPlugin.login(['id', 'emails', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified','photos'],
+			facebookConnectPlugin.login(["public_profile"],
 				fbLoginSuccess,
 				function (error) { alert("" + error) }
 			);
