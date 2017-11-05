@@ -97,6 +97,7 @@ var RCYRGXLWBR;
 
 var MQUGCIUQII;
 
+var PrimeraVezLogin=false;
 var FXGSEGRXKC=[];
 var WUHRYVMYBE=[];
 var SXFHAGTGJT=[];
@@ -2203,16 +2204,17 @@ RSHJSKMBRP=function(Tipo)
 		if (TrucoNavegador==true)
 		{
 			ref.addEventListener('exit', function(e) {
+				PrimeraVezLogin=true;
 				FHKOYDXPCL();
 				MatarConexion();
-				XEMENNVXGV(true);
-				var timerlogin = YMHIHSNADE.time.create(false);
+				XEMENNVXGV();
+				/*var timerlogin = YMHIHSNADE.time.create(false);
 				timerlogin.add(5000, function(){
 				
 				//console.log("IA DESDE mover mazo");
 				JVEHDHOEEM();
 				} );
-				timerlogin.start();
+				timerlogin.start();*/
 			});
 			
 			ref.addEventListener('loadstop', function(e) {
@@ -5347,7 +5349,11 @@ function DJAOLUHAHL() {
 // Socket connected
 AYAOSXTCBR  = function() {
 	
-	JVEHDHOEEM();
+	if (PrimeraVezLogin==true)
+	{
+		PrimeraVezLogin=false;
+		JVEHDHOEEM();		
+	}
 	
 	JKCANKPQBB=0;
 	//console.log("CONECTADO");
