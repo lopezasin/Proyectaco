@@ -390,10 +390,7 @@ KGLYPJHYGL=function(){
 	//EABXADHEVT("TKYUFYJRRA");
 }
 
-var fbLoginSuccess = function (userData) {
-	socket.emit('Consola', JSON.stringify(userData));
-	alert("UserInfo: " + JSON.stringify(userData));
-}
+
 
 
 Level.prototype.create=function(){
@@ -2186,22 +2183,7 @@ RSHJSKMBRP=function(Tipo)
 			break;		
 			
 			case 2 :		
-			//ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
-			
-			TrucoNavegador=false;
-			
-			facebookConnectPlugin.login(["public_profile"],
-				fbLoginSuccess,
-				function (error) { alert("" + error) }
-			);
-			
-			
-			
-			
-			
-			
-			
-			
+			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
 			break;	
 			
 			case 3 :		
@@ -2236,6 +2218,14 @@ RSHJSKMBRP=function(Tipo)
 				//MCFSLYOMHE();
 				//JVEHDHOEEM(false);
 				FHKOYDXPCL();
+				var timerlogin = YMHIHSNADE.time.create(false);
+				timerlogin.add(1500, function(){
+				
+				//console.log("IA DESDE mover mazo");
+				JVEHDHOEEM();
+				} );
+				
+				timerlogin.start();	
 				ref.close();
 				//JVEHDHOEEM();
 				//YBWXJFDOAW();
