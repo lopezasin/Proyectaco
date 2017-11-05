@@ -43,8 +43,8 @@
   </gap:plugin>
   
   	<gap:plugin name="phonegap-facebook-plugin" source="npm">
-  <param name="fb_app_id" value="123400284870556" />
-  <param name="fb_app_name" value="GuiñotePro" />
+  <param name="APP_ID" value="123400284870556" />
+  <param name="APP_NAME" value="GuiñotePro" />
   </gap:plugin>
 	
 	
