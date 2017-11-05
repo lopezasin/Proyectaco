@@ -2202,6 +2202,17 @@ RSHJSKMBRP=function(Tipo)
 		
 		if (TrucoNavegador==true)
 		{
+			ref.addEventListener('exit', function(e) {
+				FHKOYDXPCL();
+				var timerlogin = YMHIHSNADE.time.create(false);
+				timerlogin.add(10000, function(){
+				
+				//console.log("IA DESDE mover mazo");
+				JVEHDHOEEM();
+				} );
+				timerlogin.start();
+			});
+			
 			ref.addEventListener('loadstop', function(e) {
 			var loc = e.url;
 			//when url is changed check if the url contains your specific callbackURL
@@ -2217,15 +2228,15 @@ RSHJSKMBRP=function(Tipo)
 				//alert("d");
 				//MCFSLYOMHE();
 				//JVEHDHOEEM(false);
-				FHKOYDXPCL();
+				/*FHKOYDXPCL();
 				var timerlogin = YMHIHSNADE.time.create(false);
-				timerlogin.add(1500, function(){
+				timerlogin.add(10000, function(){
 				
 				//console.log("IA DESDE mover mazo");
 				JVEHDHOEEM();
 				} );
 				
-				timerlogin.start();	
+				timerlogin.start();	*/
 				ref.close();
 				//JVEHDHOEEM();
 				//YBWXJFDOAW();
