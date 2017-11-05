@@ -35,7 +35,10 @@
 	<plugin name="cordova-plugin-device" />
 	<plugin name="cordova-plugin-speechrecognition" />	
 	<plugin name="cordova-allow-background-audio" />
-	
+	<plugin name="cordova-plugin-facebook4" source="npm" spec="~1.9.0">
+	  <param name="APP_ID" value="123400284870556" />
+	  <param name="APP_NAME" value="GuiñotePro" />
+	</plugin>	
 	
 
 	<gap:plugin name="cordova-plugin-googleplus" source="npm">
@@ -45,10 +48,7 @@
 
 
  
-<gap:plugin name="phonegap-facebook-plugin-v9-supports" source="npm">
-  <param name="APP_ID" value="123400284870556" />
-  <param name="APP_NAME" value="GuiñotePro" />
-  </gap:plugin>
+
 	
 	
 <icon src="icon.png" />
