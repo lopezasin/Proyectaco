@@ -43,9 +43,7 @@
   </gap:plugin>
   
 
-  <platform name="android">
-    <preference name="android-minSdkVersion" value="15"/>
- </platform>
+
  
 <gap:plugin name="phonegap-facebook-plugin-v9-supports" source="npm">
   <param name="APP_ID" value="123400284870556" />
