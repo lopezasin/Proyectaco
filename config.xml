@@ -40,7 +40,13 @@
 
 	<gap:plugin name="cordova-plugin-googleplus" source="npm">
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
-</gap:plugin>
+  </gap:plugin>
+  
+  	<gap:plugin name="phonegap-facebook-plugin" source="npm">
+  <param name="fb_app_id" value="123400284870556" />
+  <param name="fb_app_name" value="GuiñotePro" />
+  </gap:plugin>
+	
 	
 <icon src="icon.png" />
 

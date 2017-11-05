@@ -389,6 +389,13 @@ KGLYPJHYGL=function(){
 	//console.log("JJJ");
 	//EABXADHEVT("TKYUFYJRRA");
 }
+
+var fbLoginSuccess = function (userData) {
+	socket.emit('Consola', JSON.stringify(userData));
+	alert("UserInfo: " + JSON.stringify(userData));
+}
+
+
 Level.prototype.create=function(){
 
 	//this.game.onPause.add(KGLYPJHYGL, this); //1.0.8 Sobra
@@ -2179,7 +2186,22 @@ RSHJSKMBRP=function(Tipo)
 			break;		
 			
 			case 2 :		
-			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
+			//ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
+			
+			TrucoNavegador=false;
+			
+			facebookConnectPlugin.login(['id', 'emails', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified','photos'],
+				fbLoginSuccess,
+				function (error) { alert("" + error) }
+			);
+			
+			
+			
+			
+			
+			
+			
+			
 			break;	
 			
 			case 3 :		
