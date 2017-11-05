@@ -2203,7 +2203,9 @@ RSHJSKMBRP=function(Tipo)
 		if (TrucoNavegador==true)
 		{
 			ref.addEventListener('exit', function(e) {
-				NFARLTEOCI();
+				FHKOYDXPCL();
+				MatarConexion();
+				XEMENNVXGV(true);
 				var timerlogin = YMHIHSNADE.time.create(false);
 				timerlogin.add(5000, function(){
 				
@@ -5344,6 +5346,8 @@ function DJAOLUHAHL() {
 
 // Socket connected
 AYAOSXTCBR  = function() {
+	
+	JVEHDHOEEM();
 	
 	JKCANKPQBB=0;
 	//console.log("CONECTADO");
