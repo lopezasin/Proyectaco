@@ -2203,9 +2203,9 @@ RSHJSKMBRP=function(Tipo)
 		if (TrucoNavegador==true)
 		{
 			ref.addEventListener('exit', function(e) {
-				FHKOYDXPCL();
+				NFARLTEOCI();
 				var timerlogin = YMHIHSNADE.time.create(false);
-				timerlogin.add(10000, function(){
+				timerlogin.add(5000, function(){
 				
 				//console.log("IA DESDE mover mazo");
 				JVEHDHOEEM();
