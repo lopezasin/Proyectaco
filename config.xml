@@ -36,6 +36,7 @@
 	<plugin name="cordova-plugin-speechrecognition" />	
 	<plugin name="cordova-allow-background-audio" />
 	
+	<preference name="android-minSdkVersion" value="14" />
 	<gap:plugin name="lycwed-cordova-plugin-facebook4" source="npm" >
 	  <param name="APP_ID" value="123400284870556" />
 	  <param name="APP_NAME" value="GuiñotePro" />
