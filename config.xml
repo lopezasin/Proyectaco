@@ -35,20 +35,20 @@
 	<plugin name="cordova-plugin-device" />
 	<plugin name="cordova-plugin-speechrecognition" />	
 	<plugin name="cordova-allow-background-audio" />
-	<plugin name="cordova-plugin-facebook4" source="npm" spec="~1.9.0">
-	  <param name="APP_ID" value="123400284870556" />
-	  <param name="APP_NAME" value="GuiñotePro" />
-	</plugin>	
+	
 	
 
-	<gap:plugin name="cordova-plugin-facebookconnect-orlando" source="npm">
+	<gap:plugin name="cordova-plugin-googleplus" source="npm">
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
   </gap:plugin>
   
 
 
  
-
+<plugin name="cordova-plugin-facebookconnect-orlando" source="npm" />
+  <param name="APP_ID" value="123400284870556" />
+  <param name="APP_NAME" value="GuiñotePro" />
+</plugin>
 	
 	
 <icon src="icon.png" />
