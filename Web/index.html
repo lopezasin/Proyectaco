@@ -1,7 +1,22 @@
 ﻿<html>
 <head>
 <title>Guiñote</title>
-<meta name="description" content="Juego de guiñote" />
+<script language="JavaScript">
+function redirectHttpToHttps()
+{
+    var httpURL= window.location.hostname + window.location.pathname + window.location.search;
+   	var httpsURL= "https://" + httpURL;
+    
+	console.log("Protocol "+window.location.protocol);
+
+	if (window.location.protocol=="http:")
+	{
+		window.location = httpsURL;
+	}
+}
+//redirectHttpToHttps();
+</script>
+<meta name="description" content="Juego de guiñote online. ¡Ya somos una gran red de guiñoter@os! ¡Únete y conviértete en un PRO del Guiñote!" />
 <meta charset="utf-8" />
 <meta http-equiv="Expires" content="no-cache">
 <meta http-equiv="Pragma" content="no-cache">
@@ -41,37 +56,28 @@
 <script src="lib/phaser.js"></script>
 <script src="lib/jquery.js"></script>
 <script src="lib/pagination.js"></script>
+<script type='application/javascript' src='lib/fastclick.js'></script>
 
 <!-- <script src="lib/saveCPU.js"></script> -->
 <script src='socket.io/socket.io.js'></script>
 <!-- <script src="http://localhost:5000/socket.io/socket.io.js"></script> -->
-<script src="js/_Main.js"></script>
-<script src="js/_Boot.js"></script>
-<script src="js/_Menu.js"></script>
-<script src="js/_Preload.js"></script>
-<script src="js/_Level.js"></script>
-<script src="js/_Carta.js"></script>
-<script src="js/_CrearBaraja.js"></script>
-<script src="js/_CrearBarajaRecibida.js"></script>
-<script src="js/_RepartosDesdeArriba.js"></script>
-<script src="js/_RepartosDesdeAbajo.js"></script>
-<script src="js/_RepartosDesdeDerecha.js"></script>
-<script src="js/_RepartosDesdeIzquierda.js"></script>
-<script src="js/_MazoMovimientos.js"></script>
-<script src="js/_MazoMovimientosApoyo.js"></script>
-<script src="js/_IA.js"></script>
+<script src="js/js.js</script>
 <!-- <script src="http://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.10&appId=123400284870556"></script> -->
 <!-- <script src="js/js.js"></script> -->
-<!-- <script src="NoSleep/NoSleep.js"></script> -->
+<!-- <script src="NoSleep/sleep.js"></script> -->
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="cordova.js"></script>
+
 
 <!-- <script src="node_modules/phaser-input/build/phaser-input.js"></script> -->
 
 
 <script>
+
+
+
     //$(function () {
-        function createPaginador(name,totalfilas, Posicion, Mediana, Mediana2) {
+        function FRMAJHNYJX(name,totalfilas, Posicion, PCWMELNBUL, NUGWBIYHIL) {
 
 			
 			$('#pagination-'+name).addHook('beforeInit', function () {
@@ -120,18 +126,18 @@
 				//console.log("Data0 "+data[0].SSUNXNEEHN);
 				if (name=="general")
 				{
-					DibujaRankingGeneral(data, Posicion, Mediana, Mediana2);
+					AIGEJGXGDJ(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
 				}
 				else
 				{
 					if (name=="semanal")
 					{
 						console.log("Ranking semanal"+data)
-						DibujaRankingSemanal(data, Posicion, Mediana, Mediana2);
+						BLKQMLBWWA(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
 					}
 					else
 					{
-						DibujaRankingAnterior(data, Posicion, Mediana, Mediana2);
+						DibujaRankingAnterior(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
 					}
 				}
 				//SRUKEMRQNI(data);
@@ -168,11 +174,14 @@
 
 <script type="text/javascript">
 
-
-
+window.addEventListener('load', function() {
+                new FastClick(document.body);
+}, false);
+ 
 document.addEventListener('focus', function(){ 
 	
 			BNMZBXWIDW=new Date();
+			//AJFQVFUKAP=true;
 		/*if ((BNMZBXWIDW-UJHVBJDGJD)/1000>=25 )
 		{
 			//No es necesario window.location.reload();
@@ -184,11 +193,18 @@ document.addEventListener('focus', function(){
 		<!-- //console.log("Hola")  -->
  <!-- });  -->
  document.addEventListener('pause', function(){
-	  // YMHIHSNADE.scale.refresh()
+	 		FHKOYDXPCL();
+		MHELAUXKXR();
+		XEMENNVXGV();	
+	  AJFQVFUKAP=true;
 	   
 		UJHVBJDGJD=new Date();
  }); 
 	document.addEventListener('resume', function(){
+		window.location.reload();
+		//FHKOYDXPCL();
+		//MHELAUXKXR();
+		//XEMENNVXGV();		
 	  // YMHIHSNADE.scale.refresh()
 	  
 		/*BNMZBXWIDW=new Date();
@@ -804,9 +820,11 @@ border-spacing: 50em;
 </form>
 </div>
 
-<!-- <div id='lateral' style='background: #ff0; position: absolute; top:0px; bottom:0px; left:0px; width: 200px; z-index: 10001; display:none'></div> -->
+<!-- <div id='lateral' style='background: #ff0; position: absolute; top:0px; bottom:0px; left:0px; width: 200px; z-index: 10001; display:none'> -->
+<!-- </div> -->
 <div style='position:absolute;  bottom: 10px; left: 10px;'>
-<!-- El display node de bchat es lo que necesito para que no se vea y llamarlo desde el juego -->
+
+<!-- El display none de bchat es lo que necesito para que no se vea y llamarlo desde el juego -->
 <button id='bchat' style='cursor:pointer;display:none'>abrir</button> 
 </div>
 
@@ -887,8 +905,12 @@ border-spacing: 50em;
 </div>
 <!-- style="font-size: 13px;width:80%;left:30px" -->
 <div id=DivClasificacionContenedor style="display:none;">
+
 	<!-- <div style='height: 40px; background: #fff; border-bottom: #ccc solid 1px;'>  -->
-    	<div style='float: right;'><button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button></div>
+    	<div style='float: right;'>
+		<a href="/privacidad/clasificacion_como.html" target="_blank">¿Cómo se calcula?</a>
+		<button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button>
+		</div>
         <!-- <div style='float: left; font-size: 15px; padding: 5px;'>La clasificación se calcula cada minuto. Partimos con 100 ptos. Ganar +2 ptos., Perder -1 pto., Retirarse -2 ptos. </div>  -->
 		
 		
@@ -915,15 +937,15 @@ border-spacing: 50em;
 		
                 <table id="TablaClasificacion"  >
                  <tr class="header">			
-                    <th style="width:5%;">POSICIÓN</th>
+                    <th style="width:5%;">RANK</th>
                     <th style="width:10%;"> </th>
                     <th style="width:15%;">JUGADOR</th>
-                    <th style="width:10%;">JUGADAS</th>
-                    <th style="width:10%;">GANADAS</th>
-                    <th style="width:10%;">PERDIDAS</th>
-                    <th style="width:10%;">RETIRADAS</th>
+                    <th style="width:10%;">JUG.</th>
+                    <th style="width:10%;">GAN.</th>
+                    <th style="width:10%;">PER.</th>
+                    <th style="width:10%;">RET.</th>
 					<th style="width:10%;">GRUPO</th>
-                    <th style="width:10%;">PUNTOS</th>
+                    <th style="width:10%;">PTOS.</th>
                     <th style="width:10%;">NIVEL</th>
                   </tr>
                 </table>
@@ -935,16 +957,16 @@ border-spacing: 50em;
 				<div class="paginationjs-theme-blue" id="pagination-semanal"> </div>
                 <table id="TablaClasificacionSemanal" >
                  <tr class="header">			
-                    <th style="width:5%;">POSICIÓN</th>
+                    <th style="width:5%;">RANK</th>
                     <th style="width:10%;"> </th>
                     <th style="width:15%;">JUGADOR</th>
-                    <th style="width:10%;">JUGADAS</th>
-                    <th style="width:10%;">GANADAS</th>
-                    <th style="width:10%;">PERDIDAS</th>
-                    <th style="width:10%;">RETIRADAS</th>
+                    <th style="width:10%;">JUG.</th>
+                    <th style="width:10%;">GAN.</th>
+                    <th style="width:10%;">PER.</th>
+                    <th style="width:10%;">RET.</th>
 					<th style="width:10%;">GRUPO</th>
-                    <th style="width:10%;">PUNTOS</th>
-                    <th style="width:10%;">TOP 5 SEMANA</th>
+                    <th style="width:10%;">PTOS.</th>
+                    <th style="width:10%;">TOP 5</th>
                   </tr>
                 </table>
     
@@ -958,13 +980,13 @@ border-spacing: 50em;
                     <th style="width:5%;">POSICIÓN</th>
                     <th style="width:10%;"> </th>
                     <th style="width:15%;">JUGADOR</th>
-                    <th style="width:10%;">JUGADAS</th>
-                    <th style="width:10%;">GANADAS</th>
-                    <th style="width:10%;">PERDIDAS</th>
-                    <th style="width:10%;">RETIRADAS</th>
+                    <th style="width:10%;">JUG.</th>
+                    <th style="width:10%;">GAN.</th>
+                    <th style="width:10%;">PER.</th>
+                    <th style="width:10%;">RET.</th>
 					<th style="width:10%;">GRUPO</th>
-                    <th style="width:10%;">PUNTOS</th>
-                    <th style="width:10%;">TOP 5 SEMANA</th>
+                    <th style="width:10%;">PTOS.</th>
+                    <th style="width:10%;">TOP 5</th>
                   </tr>
                 </table>
     
@@ -1055,9 +1077,9 @@ border-spacing: 50em;
 	  <label id="lblPareja" ><center>a</center></label>
 	  </div>
 	
-	 <button id=Pareja1 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaPareja(1)">a</button>
-	 <button id=Pareja2 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaPareja(2)" >a</button>
-	 <button id=Pareja3 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaPareja(3)" >a</button>
+	 <button id=Pareja1 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(1)">a</button>
+	 <button id=Pareja2 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(2)" >a</button>
+	 <button id=Pareja3 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(3)" >a</button>
 	
 </div>
 
@@ -1077,7 +1099,7 @@ border-spacing: 50em;
 		<button onClick="RSHJSKMBRP(3)"><i class='fa fa-instagram'></i> Instagram</button>
 		<button onClick="RSHJSKMBRP(4)"><i class='fa fa-twitter'></i> Twitter</button>		
 		<br><br>	
-		 <a href="/privacidad/privacidad.html" target="_blank">política de privacidad</a>
+		<a href="/privacidad/privacidad.html" target="_blank">política de privacidad</a>
 </div> 
 
 
