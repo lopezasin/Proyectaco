@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="es.guinotepro.guinotepro" version="1.0.9" versioncode="10009" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="es.guinotepro.guinotepro" version="1.0.7" versioncode="10007" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>GuiñotePro</name>
     <description>
         Videojuego de guiñote
@@ -21,10 +21,11 @@
 	<preference name="Orientation" value="landscape" /> 
 	
 	
-	<preference name="KeepRunning" value="false"/>
- <preference name="exit-on-suspend" value="true" /> 
-  <!-- <plugin name="cordova-plugin-background-mode" /> -->
+	<preference name="KeepRunning" value="true"/>
+	<preference name="exit-on-suspend" value="false" /> 
+    <plugin name="cordova-plugin-background-mode" />
   
+	<plugin name="cordova-plugin-powermanagement" />	
 	<plugin name="cordova-plugin-inappbrowser" spec="1.7.0" />
 	<plugin name="cordova-plugin-nativeaudio" spec="3.0.9" />
 	<plugin name="cordova-plugin-network-information" spec="1.3.2" />
@@ -34,7 +35,7 @@
 	<plugin name="cordova-plugin-whitelist" spec="1.3.2" />
 	<plugin name="cordova-plugin-device" />
 	<plugin name="cordova-plugin-speechrecognition" />	
-	<plugin name="cordova-allow-background-audio" />	
+	<plugin name="cordova-allow-background-audio" />
 	
 	
 
