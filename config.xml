@@ -47,7 +47,7 @@
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
 </gap:plugin>
 	
-<icon src="icon.png" />
+<!-- <icon src="icon.png" /> -->
 
 
 <icon gap:platform="ios" height="60" width="60" src="res/icons/ios/icon-60.png" />
