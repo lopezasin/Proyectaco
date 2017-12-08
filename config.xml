@@ -60,7 +60,7 @@
 <icon gap:platform="ios" height="76" width="76" src="res/icon/ios/icon-76.png" />
 <icon gap:platform="ios" height="152" width="152" src="res/icon/ios/icon-76-2x.png" />
 <icon gap:platform="ios" height="40" width="40" src="res/icon/ios/icon-40.png" />
-<icon gap:platform="ios" height="80" width="80" src="res/icon/ios/icon-40-2x.png" />
+<!-- <icon gap:platform="ios" height="80" width="80" src="res/icon/ios/icon-40-2x.png" /> -->
 <icon gap:platform="ios" height="57" width="57" src="res/icon/ios/icon-57.png" />
 <icon gap:platform="ios" height="114" width="114" src="res/icon/ios/icon-57-2x.png" />
 <icon gap:platform="ios" height="72" width="72" src="res/icon/ios/icon-72.png" />
