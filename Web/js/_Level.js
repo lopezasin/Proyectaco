@@ -4054,6 +4054,14 @@ onSocketControl=function(QuienTomaControlServer)
 	{
 		ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer);
 	}
+	else
+	{
+		if (XPBCVAGCDQ.length>=4) //con app no recibe quien manda
+		{
+			ESKTEXAVHU=TFSXFTYVGQ;
+		}
+	}
+	
 	GIDSSFEUNT(); //revo
 }
 
