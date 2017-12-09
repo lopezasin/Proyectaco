@@ -14,7 +14,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var KYLIAIETHX=false;
+var KYLIAIETHX=true;
 
 
 var JHGHJAGCMC;
