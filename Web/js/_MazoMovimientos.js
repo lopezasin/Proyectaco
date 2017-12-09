@@ -1189,6 +1189,10 @@ PMMTTJWRVR=function(TXLWIIINGQ){
 						console.log("OGGWQECXBK: mazo buffer "+TXLWIIINGQ);
 						OGGWQECXBK(TXLWIIINGQ,false,false); //desde mazo buffer
 					}
+					else
+					{
+						GIDSSFEUNT(); //peligroso
+					}
 				}
 				else
 				{

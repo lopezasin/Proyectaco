@@ -14,7 +14,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var KYLIAIETHX=true;
+var KYLIAIETHX=false;
 
 
 var JHGHJAGCMC;
@@ -4050,7 +4050,10 @@ setEventHandlers = function () { //ESTE
 onSocketControl=function(QuienTomaControlServer)
 {
 	console.log("Recibo el control "+QuienTomaControlServer)
-	ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer);
+	if (QuienTomaControlServer!=0)
+	{
+		ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer);
+	}
 	GIDSSFEUNT(); //revo
 }
 
@@ -4374,7 +4377,18 @@ OGGWQECXBK=function(TXLWIIINGQ,New)
 			//else
 			//{
 			//	console.log("RECU3");
-				GIDSSFEUNT();
+				if (vEstabaReconectando==false)
+				{
+					GIDSSFEUNT();
+				}
+				else
+				{
+					console.log("Veneno");					
+					socket.emit("dime_quien_controla");
+				}
+				
+				
+				
 			//}
 			//}
 			
@@ -5273,7 +5287,7 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,EFWXTVMKRH,Qui
 	
 	
 	console.log("DESCONECTADO: "+HMVFLEYPXM.length+" "+RLEHYYGBGQ.length)
-	
+
 	//if (JJHEHUIEGO!=XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK)
 	//{
 		if (KYLIAIETHX==false)
@@ -6405,6 +6419,8 @@ AAQWTFMQMA = function() {
  {
 	 var i;
 	 var QOWECQVXCM=0;
+	 var SoloYo;
+	 var UHYCGYFWYJ=0;
 	 
 	 for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	 {
@@ -6420,9 +6436,23 @@ AAQWTFMQMA = function() {
 		 for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 		 {
 			 console.log("Desglosando: "+XPBCVAGCDQ[i].AURESXCGMK);
+		/*	 if (XPBCVAGCDQ[i].XJARYUVBCB==true)
+			 {
+				 UHYCGYFWYJ++;
+			 }*/
 		 }		 
 		 //QOWECQVXCM=TFSXFTYVGQ;
-		 QOWECQVXCM=0;
+		 
+		/* if (UHYCGYFWYJ==4)
+		 {
+			QOWECQVXCM=TFSXFTYVGQ; 
+		 }
+		 else
+		 {
+			 QOWECQVXCM=0;
+		 }*/
+		 
+		 
 	 }
 	
 	if (KYLIAIETHX==false)
