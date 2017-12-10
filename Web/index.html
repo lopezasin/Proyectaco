@@ -77,7 +77,7 @@ function redirectHttpToHttps()
 
 
     //$(function () {
-        function createPaginador(name,totalfilas, Posicion, Mediana, Mediana2) {
+        function FRMAJHNYJX(name,totalfilas, Posicion, PCWMELNBUL, NUGWBIYHIL) {
 
 			
 			$('#pagination-'+name).addHook('beforeInit', function () {
@@ -95,7 +95,7 @@ function redirectHttpToHttps()
 			
 			$('#pagination-'+name).pagination({
 			//dataSource: 'https://api.flickr.com/services/feeds/photos_public.gne?tags=cat&tagmode=any&format=json&jsoncallback=?',
-			dataSource: Maquina+'/getclasificacion',
+			dataSource: JHGHJAGCMC+'/getclasificacion',
 			locator: 'items',
 			showGoInput : true,
 			showGoButton: true,
@@ -123,24 +123,24 @@ function redirectHttpToHttps()
 				//var kk=JSON.stringify(data);
 				////console.log("gg "+kk);
 				
-				////console.log("Data0 "+data[0].Jugador);
+				////console.log("Data0 "+data[0].SSUNXNEEHN);
 				if (name=="general")
 				{
-					DibujaRankingGeneral(data, Posicion, Mediana, Mediana2);
+					AIGEJGXGDJ(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
 				}
 				else
 				{
 					if (name=="semanal")
 					{
 						//console.log("Ranking semanal"+data)
-						DibujaRankingSemanal(data, Posicion, Mediana, Mediana2);
+						BLKQMLBWWA(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
 					}
 					else
 					{
-						DibujaRankingAnterior(data, Posicion, Mediana, Mediana2);
+						DibujaRankingAnterior(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
 					}
 				}
-				//onSocketClasificacion(data);
+				//SRUKEMRQNI(data);
 				
 				//var kk=JSON.stringify(pagination);
 				////console.log("Pagination "+kk);
@@ -180,18 +180,18 @@ window.addEventListener('load', function() {
  
 document.addEventListener('focus', function(){ 
 	
-			FechaFin=new Date();
+			BNMZBXWIDW=new Date();
 		
 }
 );
 
  document.addEventListener('pause', function(){
-	 		SalirConfirmado();
-		MatarConexion();
-		ConectaServidor();	
-	  vNoEsta=true;
+	 		FHKOYDXPCL();
+		MHELAUXKXR();
+		XEMENNVXGV();	
+	  AJFQVFUKAP=true;
 	   
-		FechaIni=new Date();
+		UJHVBJDGJD=new Date();
  }); 
 	document.addEventListener('resume', function(){
 		window.location.reload();
@@ -213,7 +213,7 @@ document.addEventListener('focus', function(){
 				$(this).addClass('activo');
 				
 				//console.log("Abrir "+ $(this).attr("data-div"))
-				//socket.emit('solicita_clasificacion',socket.id,JugadorFull);	
+				//socket.emit('WHGHJCGWWQ',socket.id,OBTBPOULAV);	
 				
 			}
 		});
@@ -238,7 +238,7 @@ document.addEventListener('focus', function(){
 			$('#nchat').slideToggle();
 			if (mensaje!="")
 			{
-				EnviarTextoBocadillo(SoyElJugador,mensaje ,false);
+				BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
 			}
 			////console.log(mensaje);
 		});
@@ -274,8 +274,8 @@ document.addEventListener('focus', function(){
            // url: 'post.php',
             data: $('#FormLogin').serialize(),
             success: function () {
-              //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
-			  //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
+              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+			  //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
 			  document.getElementById("inputChat").value="";
 			  document.getElementById("inputChat").value="";
 			 // document.getElementById("ko").focus();
@@ -299,7 +299,7 @@ document.addEventListener('focus', function(){
             data: $('#FormCrearSala').serialize(),
             success: function () {
 				CrearSala(document.getElementById("sala").value,document.getElementById("pass").value)
-              //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
+              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
 			 
 			 // document.getElementById("ko").focus();
             }
@@ -321,8 +321,8 @@ document.addEventListener('focus', function(){
            // url: 'post.php',
             data: $('#FormPasswordSala').serialize(),
             success: function () {
-				ValidaPasswordSala(document.getElementById("sala_pass").value,document.getElementById("pass_pass").value)
-              //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
+				RPEOWUSPJU(document.getElementById("sala_pass").value,document.getElementById("pass_pass").value)
+              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
 			 
 			 // document.getElementById("ko").focus();
             }
@@ -871,8 +871,8 @@ border-spacing: 50em;
 
 		<input type="text" id="InputSalas" onKeyUp="FiltrarSalas()" placeholder="Buscar Salas..">
 		
-		<button type="button" id="BtnCrearSalas" class="btn btn-primary" onClick="MostrarCrearSala()">Crear Sala</button>
-		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onClick="CancelarAmigos()">Cerrar</button>
+		<button type="button" id="BtnCrearSalas" class="btn btn-primary" onClick="LOIUJDIWPD()">Crear Sala</button>
+		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button>
 		<div id="lblAvisoSalas" style='color: #fff; font-size: 18px; text-shadow: 0px 0px 5px #000000;'>Las salas se eliminan transcurridos 7 días desde su último uso.
 			
 		
@@ -894,7 +894,7 @@ border-spacing: 50em;
 	<!-- <div style='height: 40px; background: #fff; border-bottom: #ccc solid 1px;'> /privacidad/clasificacion_como.html  -->
     	<div style='float: right;'>
 		<a onClick="Abre(2)" >¿Cómo se calcula?</a>
-		<button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="CancelarAmigos()">Cerrar</button>
+		<button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button>
 		</div>
         <!-- <div style='float: left; font-size: 15px; padding: 5px;'>La clasificación se calcula cada minuto. Partimos con 100 ptos. Ganar +2 ptos., Perder -1 pto., Retirarse -2 ptos. </div>  -->
 		
@@ -993,7 +993,7 @@ border-spacing: 50em;
 	</div>
 
 	 <button type="submit" class="btn btn-default">¡Crear Sala!</button>
-	 <button type="button" class="btn btn-default" onClick="CancelarAmigos()" >Cancelar</button>
+	 <button type="button" class="btn btn-default" onClick="NFARLTEOCI()" >Cancelar</button>
 
 	</form>
 </div>
@@ -1012,8 +1012,8 @@ border-spacing: 50em;
 	</div> -->
 	
 	 <button type="submit" class="btn btn-default">¡Entrar Sala!</button>
-	 <button type="button" class="btn btn-default" onClick="CancelarAmigos()" >Cancelar</button>
-	 <button id="btnEliminarSala" type="button" class="btn btn-default"  onclick="EliminarSalaDesdeCliente(document.getElementById('sala_pass').value)" >Eliminar Sala</button>
+	 <button type="button" class="btn btn-default" onClick="NFARLTEOCI()" >Cancelar</button>
+	 <button id="btnEliminarSala" type="button" class="btn btn-default"  onclick="PTBEWVCTBF(document.getElementById('sala_pass').value)" >Eliminar Sala</button>
 	 
 	</form>
 </div>
@@ -1062,27 +1062,27 @@ border-spacing: 50em;
 	  <label id="lblPareja" ><center>a</center></label>
 	  </div>
 	
-	 <button id=Pareja1 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaPareja(1)">a</button>
-	 <button id=Pareja2 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaPareja(2)" >a</button>
-	 <button id=Pareja3 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaPareja(3)" >a</button>
+	 <button id=Pareja1 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(1)">a</button>
+	 <button id=Pareja2 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(2)" >a</button>
+	 <button id=Pareja3 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(3)" >a</button>
 	
 </div>
 
 <div id="chat" style="display:none" >
 	<form  id="FormChat" class="form-horizontal"> 
 		<div class="form-group">
-			<input  type="text" class="form-control" id="inputChat" placeholder="enviar texto" autocomplete="off" maxlength="60" autocomplete="off">			
+			<input  type="text" class="form-control" id="inputChat" placeholder="HXUNTIAKHM" autocomplete="off" maxlength="60" autocomplete="off">			
 					
 		</div> 
 	</form>
 </div>
 <div id="Login" class='redondeado1em' style="display:none" width=1000>
-<div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onClick="CierraPantallaLogin()" ><i class='fa fa-times'></i></div>
+<div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onClick="MCFSLYOMHE()" ><i class='fa fa-times'></i></div>
 		Inicia sesión con<br>
-		<button onClick="LoginCordova(1)" style='margin-bottom: 7px'><i class='fa fa-google'></i> Google</button>
-		<button onClick="LoginCordova(2)" style='margin-bottom: 7px'><i class='fa fa-facebook-official'></i> Facebook</button>
-		<button onClick="LoginCordova(3)"><i class='fa fa-instagram'></i> Instagram</button>
-		<button onClick="LoginCordova(4)"><i class='fa fa-twitter'></i> Twitter</button>		
+		<button onClick="RSHJSKMBRP(1)" style='margin-bottom: 7px'><i class='fa fa-google'></i> Google</button>
+		<button onClick="RSHJSKMBRP(2)" style='margin-bottom: 7px'><i class='fa fa-facebook-official'></i> Facebook</button>
+		<button onClick="RSHJSKMBRP(3)"><i class='fa fa-instagram'></i> Instagram</button>
+		<button onClick="RSHJSKMBRP(4)"><i class='fa fa-twitter'></i> Twitter</button>		
 		<br><br>	
 		<a onClick="Abre(1)" >política de privacidad</a>
 </div> 
