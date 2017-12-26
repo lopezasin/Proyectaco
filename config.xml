@@ -28,6 +28,7 @@
 	
 	<preference name="KeepRunning" value="false"/>
  <preference name="exit-on-suspend" value="true" /> 
+ <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect --ignore-gpu-blacklist "/>
   <!-- <plugin name="cordova-plugin-background-mode" /> -->
   
 
