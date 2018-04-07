@@ -39,7 +39,7 @@ function redirectHttpToHttps()
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
+<!-- <link rel="manifest" href="/manifest.json"> -->
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
@@ -137,7 +137,14 @@ function redirectHttpToHttps()
 					}
 					else
 					{
-						DibujaRankingAnterior(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+						if (name=="30dias")
+						{
+							DibujaRanking30dias(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+						}
+						else
+						{						
+							DibujaRankingAnterior(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+						}
 					}
 				}
 				//SRUKEMRQNI(data);
@@ -221,27 +228,73 @@ document.addEventListener('focus', function(){
 	
 	   $('#bchat').click(function(event){
 		event.preventDefault();
-		$('#nchat').slideToggle();
-		$('#inputchat').focus().val('');
+		try
+		{
+			$('#nchat').slideToggle();
+			$('#inputchat').focus().val('');
+		}
+		catch(e){}
 	   });
 	   
 	   
 	   $('#bchatCancelar').click(function(event){
 		event.preventDefault();
-		$('#inputchat').focus().val('');
-		$('#nchat').slideToggle();		
+		try
+		{
+			$('#inputchat').focus().val('');
+			$('#nchat').slideToggle();		
+		}
+		catch(e){}
 	   });
 	
 	    $('#fchat').submit(function(event){
 			event.preventDefault();
-			var mensaje=$('#inputchat').val();
-			$('#nchat').slideToggle();
-			if (mensaje!="")
+			try
 			{
-				BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
+				var mensaje=$('#inputchat').val();
+				$('#nchat').slideToggle();
+				if (mensaje!="")
+				{					
+					BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
+				}
 			}
+			catch(e){}
 			////console.log(mensaje);
 		});
+		
+		//2.0.1
+		$('#bdenuncia').click(function(event){
+		event.preventDefault();
+		$('#ndenuncia').slideToggle();
+			//TUYTTXXUSX();
+		//$('#inputchat').focus().val('');
+	   });
+	   
+		$('#bdenunciaEnviar').click(function(event){
+		event.preventDefault();
+		$('#ndenuncia').slideToggle();
+			TUYTTXXUSX();
+		//$('#inputchat').focus().val('');
+	   });
+	   	   
+	   $('#bdenunciaCancelar').click(function(event){
+		event.preventDefault();
+		//$('#inputchat').focus().val('');
+		$('#ndenuncia').slideToggle();		
+	   });
+	
+	    $('#fdenuncia').submit(function(event){
+			event.preventDefault();
+			//var mensaje=$('#inputchat').val();
+			$('#ndenuncia').slideToggle();
+			//if (mensaje!="")
+			//{
+			//	BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
+			//}
+			////console.log(mensaje);
+		});
+		//2.0.1
+		
 		
 		
 	$('#blateral').click(function(event){
@@ -397,7 +450,13 @@ function onDeviceReady() {
 		catch(e)
 		{}
 		
-		
+		//In your 'deviceready' handler, set up your Analytics tracker:
+		window.ga.startTrackerWithId('UA-97842450-1', 30)
+		//where UA-XXXX-YY is your Google Analytics Mobile App property and 30 is the dispatch period (optional)
+
+		//To track a Screen (PageView):
+		window.ga.trackView('Guiñote')
+		window.ga.setAppVersion('2.0.1')
 
 
 
@@ -635,7 +694,7 @@ border-spacing: 50em;
 #TablaClasificacion th, #TablaClasificacion td {
     text-align: left;
     padding: 5px;
-	font-size: 11px;
+	font-size: 12px;
 }
 
 #TablaClasificacion tr:nth-child(even){background-color: #f2f2f2} 
@@ -693,7 +752,7 @@ border-spacing: 50em;
 #TablaClasificacionAnterior th, #TablaClasificacionAnterior td {
     text-align: left;
     padding: 5px;
-	font-size: 11px;
+	font-size: 12px;
 }
 
 #TablaClasificacionAnterior tr:nth-child(even){background-color: #f2f2f2} 
@@ -703,6 +762,33 @@ border-spacing: 50em;
     color: white;
 }
 
+
+
+#TablaClasificacion30dias {
+    border-collapse: collapse;
+	border: 1px solid #ddd;
+	 width: 100%;
+} 
+
+#tr.TablaClasificacion30dias {
+padding-bottom: 50em;
+border-spacing: 50em;
+    	float: none;
+	position: absolute; 
+} 
+
+#TablaClasificacion30dias th, #TablaClasificacion30dias td {
+    text-align: left;
+    padding: 5px;
+	font-size: 12px;
+}
+
+#TablaClasificacion30dias tr:nth-child(even){background-color: #f2f2f2} 
+
+#TablaClasificacion30dias th {
+    background-color: #4CAF50;
+    color: white;
+}
 
 
 
@@ -797,10 +883,23 @@ border-spacing: 50em;
 
 <div id='nchat' style='position:absolute; top:0px; width: 100%; display:none; background: #82011c; text-align:center; z-index:10000'>
 <form id='fchat'>
-	<p style="color:#ffffff;font-size: 16px;padding-top:10" ;><b>¿Algo que decir?</b></p>
+
+	<p style="color:#ffffff;font-size: 14px;padding-top:5" ;><b>¿Algo que decir?. IMPORTANTE: Las conversaciones son públicas y monitorizadas</p>
 	<input type='text' id='inputchat' autocomplete="off" style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' />
 	<input id='bchatEnviar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/enviar.png">
 	<input id='bchatCancelar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/cancelar_envio.png">
+	<button style='display:none'></button>
+</form>
+</div>
+
+
+<div id='ndenuncia' style='position:absolute; top:0px; width: 100%; display:none; background: #82011c; text-align:center; z-index:10000'>
+<form id='fdenuncia'>
+
+	<p style="color:#ffffff;font-size: 16px;padding-top:5" ;><b>¿Quieres denunciar un mal comportamiento?.</p>
+	<!-- <input type='text' id='inputchat' autocomplete="off" style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' /> -->
+	<input id='bdenunciaEnviar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/enviar.png">
+	<input id='bdenunciaCancelar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/cancelar_envio.png">
 	<button style='display:none'></button>
 </form>
 </div>
@@ -811,6 +910,10 @@ border-spacing: 50em;
 
 <!-- El display none de bchat es lo que necesito para que no se vea y llamarlo desde el juego -->
 <button id='bchat' style='cursor:pointer;display:none'>abrir</button> 
+</div>
+
+<!-- El display none de bdenuncia es lo que necesito para que no se vea y llamarlo desde el juego -->
+<button id='bdenuncia' style='cursor:pointer;display:none'>abrir</button> 
 </div>
 
 <div style='position:absolute;  bottom: 50%; right: 10px;'>
@@ -907,7 +1010,8 @@ border-spacing: 50em;
            
             <a href='#' id='semanal'  data-div="DivClasificacionSemanal" class=' activo'>Semanal</a>
 			<a href='#' id='anterior'  data-div="DivClasificacionAnterior" class=' '>Anterior</a>
-			<a href='#' id='acumulada' data-div="DivClasificacion" class=' '>Acumulada</a>
+			<a href='#' id='ultimos30dias' data-div="DivClasificacion30dias" class=' '>Últimos 30 días</a>
+			<a href='#' id='acumulada' data-div="DivClasificacion" class=' '>Acumulada</a>			
         </div>
         <div id=DivClasificacion style='display: none;background: #fff; padding:10px;'>
 		<div id="TextoClasificacionGlobal" style='float: left; font-size: 15px; padding: 5px;font-weight: bold;'></div> 
@@ -976,6 +1080,26 @@ border-spacing: 50em;
                 </table>
     
         </div>
+		
+        <div id=DivClasificacion30dias style='display: none; background: #fff; padding:10px;'>
+		<div id="TextoClasificacion30dias" style='float: left; font-size: 15px; padding: 5px;font-weight: bold;'></div> 
+				<div class="paginationjs-theme-blue" id="pagination-30dias"> </div>
+                <table id="TablaClasificacion30dias"  >
+                 <tr class="header">			
+                    <th style="width:5%;">RANK</th>
+                    <th style="width:10%;"> </th>
+                    <th style="width:15%;">JUGADOR</th>
+                    <th style="width:10%;">JUG.</th>
+                    <th style="width:10%;">GAN.</th>
+                    <th style="width:10%;">PER.</th>
+                    <th style="width:10%;">RET.</th>
+					<th style="width:10%;">GRUPO</th>
+                    <th style="width:10%;">PTOS.</th>
+                    <th style="width:10%;">NIVEL</th>
+                  </tr>
+                </table>
+    
+        </div>		
 		
     </div>
 </div>

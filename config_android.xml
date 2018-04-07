@@ -39,6 +39,7 @@
 	<plugin name="cordova-plugin-device" />
 	<plugin name="cordova-plugin-speechrecognition" />	
 	<plugin name="cordova-allow-background-audio" />
+	<plugin name="cordova-plugin-google-analytics" />
 
 
 	<gap:plugin name="cordova-plugin-googleplus" source="npm">
