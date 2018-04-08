@@ -61,7 +61,7 @@ Inicia=function()
 			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet,  preserveDrawingBuffer : true }
 			
 			
-			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: true,  antialias: false,  forceSetTimeOut: ForceSet }	
+
 			
 			
 					//var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet, preserveDrawingBuffer : true }
@@ -73,7 +73,7 @@ Inicia=function()
 			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet }
 	}
 	
-		
+			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: true,  antialias: true,  forceSetTimeOut: ForceSet }			
 			
 	var game = new Phaser.Game(config);// now add your states here
 
