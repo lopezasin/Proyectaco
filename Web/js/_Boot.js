@@ -49,7 +49,7 @@ Boot.prototype.init = function() {
 	{
 		this.stage.disableVisibilityChange = true;
 	}
-	//this.stage.disableVisibilityChange = false;
+	//this.stage.disableVisibilityChange = true;
 
 	
 	//this.stage.forceSetTimeOut = true;

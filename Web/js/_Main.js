@@ -45,7 +45,7 @@ Inicia=function()
 	{
 		 ForceSet=true;
 	}
-	// ForceSet=false;
+	// ForceSet=true;
 	
 	//
 	//ForceSet=false;
@@ -58,11 +58,11 @@ Inicia=function()
 	if ( MaliDetect()==true)
 	{
 			
-			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet,  preserveDrawingBuffer : true }
+			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet,  preserveDrawingBuffer : false }
 			
 					//var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet, preserveDrawingBuffer : true }
 					
-					//var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.CANVAS,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet }					
+					var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.CANVAS,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet }					
 	}
 	else
 	{
