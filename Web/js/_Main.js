@@ -45,7 +45,7 @@ Inicia=function()
 	{
 		 ForceSet=true;
 	}
-	 ForceSet=false;
+	// ForceSet=false;
 	
 	//
 	//ForceSet=false;
