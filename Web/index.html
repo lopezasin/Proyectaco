@@ -449,14 +449,19 @@ function onDeviceReady() {
 		}
 		catch(e)
 		{}
-		
-		//In your 'deviceready' handler, set up your Analytics tracker:
-		window.ga.startTrackerWithId('UA-97842450-1', 30)
-		//where UA-XXXX-YY is your Google Analytics Mobile App property and 30 is the dispatch period (optional)
+	
+		try
+		{	
+			//In your 'deviceready' handler, set up your Analytics tracker:
+			window.ga.startTrackerWithId('UA-97842450-1', 30)
+			//where UA-XXXX-YY is your Google Analytics Mobile App property and 30 is the dispatch period (optional)
 
-		//To track a Screen (PageView):
-		window.ga.trackView('Guiñote')
-		window.ga.setAppVersion('2.0.1')
+			//To track a Screen (PageView):
+			window.ga.trackView('Guiñote')
+			window.ga.setAppVersion('2.0.1')
+		}
+		catch(e)
+		{}
 
 
 
@@ -1009,8 +1014,8 @@ border-spacing: 50em;
         <div id='tabs'>
            
             <a href='#' id='semanal'  data-div="DivClasificacionSemanal" class=' activo'>Semanal</a>
-			<a href='#' id='anterior'  data-div="DivClasificacionAnterior" class=' '>Anterior</a>
-			<a href='#' id='ultimos30dias' data-div="DivClasificacion30dias" class=' '>Últimos 30 días</a>
+			<a href='#' id='anterior'  data-div="DivClasificacionAnterior" class=' '>Anterior</a>	
+			<a href='#' id='ultimos30dias' data-div="DivClasificacion30dias" class=' '>Últ. 30 días</a>					
 			<a href='#' id='acumulada' data-div="DivClasificacion" class=' '>Acumulada</a>			
         </div>
         <div id=DivClasificacion style='display: none;background: #fff; padding:10px;'>
