@@ -60,7 +60,7 @@ Boot.prototype.init = function() {
 
 	this.scale.pageAlignHorizontally = true;
 	this.scale.pageAlignVertically = false;
-	
+	//this.stage.smoothed = true;	
 	//this.scale.forceLandscape=true;
 	
 	//
@@ -85,7 +85,7 @@ Boot.prototype.create = function() {
 	// By this point the preloader assets have loaded to the cache, we've
 	// set the game settings, so now let's start the real preloader going
 	//this.game.scale.startFullScreen();
-	//this.game.plugins.add(new Phaser.Plugin.SaveCPU)
+	this.game.plugins.add(new Phaser.Plugin.SaveCPU)
 	//this.game.add.plugin(PhaserInput.Plugin);
 	this.game.state.start("Preload");
 };

@@ -58,21 +58,25 @@ Inicia=function()
 	if ( MaliDetect()==true)
 	{
 			
-			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet,  preserveDrawingBuffer : false }
+			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet,  preserveDrawingBuffer : true }
+			
+			
+			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: true,  antialias: false,  forceSetTimeOut: ForceSet }	
+			
 			
 					//var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet, preserveDrawingBuffer : true }
 					
-					var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.CANVAS,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet }					
+					//var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.CANVAS,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: //ForceSet }					
 	}
 	else
 	{
 			var config = {  width: ancho,  height: alto, id:'koko',  renderer: Phaser.AUTO,  parent: 'gamer',  transparent: false,  antialias: true,  forceSetTimeOut: ForceSet }
 	}
 	
-			
+		
 			
 	var game = new Phaser.Game(config);// now add your states here
-	
+
 	//{ preload: preload, create: create, update:update  }
 
 		
