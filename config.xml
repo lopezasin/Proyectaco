@@ -21,7 +21,7 @@
  <preference name='pgb-builder-version' value='1' />
 	
 
-
+<gap:config-file platform="android" parent="/manifest"> <application android:hardwareAccelerated="false" /> </gap:config-file>
 
 	<preference name="Orientation" value="landscape" /> 
 	
