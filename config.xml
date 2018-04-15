@@ -53,6 +53,7 @@
 </gap:plugin>
 	
 <!-- <icon src="icon.png" /> -->
+<icon src="res/icon/ios/icon-1024.png" width="1024" height="1024" />
 
 <icon gap:platform="ios" height="1024" width="1024" src="res/icon/ios/icon-1024.png" />
 <icon gap:platform="ios" height="60" width="60" src="res/icon/ios/icon-60.png" />
