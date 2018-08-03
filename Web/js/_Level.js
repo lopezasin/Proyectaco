@@ -2304,6 +2304,8 @@ function startRecognition(){
 				
 			}, function(err){
 				socket.emit('Consola',"Error 2 "+err);
+				SVHMCOYULR("Tienes que dar permisos. Desinstala e instala la app.\n"+
+				"Te los volveremos a solicitar")
 				console.error(err);
 					//HRGDCMPPKU.revive();	
 					//PANPKTGSCV.kill();
@@ -3426,7 +3428,17 @@ RSHJSKMBRP=function(Tipo)
 				function (obj) {
 				MCFSLYOMHE();	
 				//MITSNADNQS();
-				ObjetoG=obj;				
+				ObjetoG=obj;	
+
+				if (window.plugins.speechRecognition.hasPermission==false)
+				{
+					
+					var r = confirm("Si vas a usar el chat hablado,\ntienes que dar permisos.\n¿lo usarás?");
+					if (r == true) {
+						PermisoMicro();				
+					} 
+				}
+				
 				JVEHDHOEEM();
 				//socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
 				  //alert(JSON.stringify(obj)); // do something useful instead of alerting
@@ -3476,14 +3488,14 @@ RSHJSKMBRP=function(Tipo)
 			ref.addEventListener('exit', function(e) {
 
 				//PermisoMicro();			
-				/*if (window.plugins.speechRecognition.hasPermission==false)
+				if (window.plugins.speechRecognition.hasPermission==false)
 				{
 					
 					var r = confirm("Si vas a usar el chat hablado,\ntienes que dar permisos.\n¿lo usarás?");
 					if (r == true) {
 						PermisoMicro();				
 					} 
-				}*/
+				}
 
 				
 				
@@ -3507,7 +3519,7 @@ RSHJSKMBRP=function(Tipo)
 			//if (loc.search('http://xn--guiotepro-n6a.es/?HKCERVLWFB=g')>=0) {
 			//alert("a");	
 			if (loc.search('HKCERVLWFB')>=0) {	
-				PermisoMicro();	
+				
 				//alert("b");	
 				//SalirDesdeLogueo();	
 				//alert("c");
