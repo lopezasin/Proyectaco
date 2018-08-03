@@ -1602,7 +1602,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	BotonTeclado.width=UEHYPTREIH.width;
 	BotonTeclado.height=UEHYPTREIH.height;
 	BotonTeclado.anchor.setTo(0.5,0.5)
-	
+	BotonTeclado.kill();
 
 	if (RIHFCSEMIJ==undefined)
 	{
@@ -4941,6 +4941,7 @@ JVEHDHOEEM=function(NoConectar){
 		if (checkConnection()==true)
 		{	
 			////console.log("inicio si");
+			BotonTeclado.revive();
 			JKCANKPQBB=0;
 			CUUKQAGFEB.x=QETACVSHAR+150;
 			CUUKQAGFEB.revive();
