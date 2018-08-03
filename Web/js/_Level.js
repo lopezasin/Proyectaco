@@ -2266,7 +2266,7 @@ function startRecognition(){
 		//PANPKTGSCV.revive();
 		QMLHULBGCA();
 		
-		try
+		/*try
 		{
 		//socket.emit('Consola',"Habla");
 			var SpeechRecognition = window.plugins.speechRecognition;
@@ -2285,9 +2285,9 @@ function startRecognition(){
 			//HRGDCMPPKU.revive();	
 			//PANPKTGSCV.kill();
 			ACJHOIXLOV();			
-		}
+		}*/
 		
-		/*SISTEMA VIEJO
+		//SISTEMA VIEJO
 		try
 		{
 		//socket.emit('Consola',"Habla");
@@ -2321,7 +2321,7 @@ function startRecognition(){
 			//HRGDCMPPKU.revive();	
 			//PANPKTGSCV.kill();
 			ACJHOIXLOV();			
-		}*/
+		}
 	}
 	else
 	{
