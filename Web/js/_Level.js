@@ -829,6 +829,7 @@ Level.prototype.create=function(){
 		);
 	}
 
+
 	
 	if (BMANCBQGIU==undefined) //2.0.1 clave:rehuse
 	{
@@ -2238,14 +2239,14 @@ PermisoMicro=function()
 	var permiso;
 		permiso=window.plugins.speechRecognition.requestPermission()
 	
-	if (permiso==true)
+	/*if (permiso==true)
 	{
 		socket.emit('Consola',"Hay permiso");
 	}
 	else
 	{
 		socket.emit('Consola',"No Hay permiso");
-	}
+	}*/
 }	
 		
 		
@@ -2259,7 +2260,7 @@ function startRecognition(){
 	{
 		
 		
-		PermisoMicro();
+		//PermisoMicro();
 		
 		
 		//HRGDCMPPKU.kill();	
@@ -3473,6 +3474,18 @@ RSHJSKMBRP=function(Tipo)
 		if (IAYGNIKSFI==true)
 		{
 			ref.addEventListener('exit', function(e) {
+
+				if (window.plugins.speechRecognition.hasPermission==false)
+				{
+					
+					var r = confirm("Si vas a usar el chat hablado,\ntienes que dar permisos.\n¿lo usarás?");
+					if (r == true) {
+						PermisoMicro();				
+					} 
+				}
+
+				
+				
 				TDILLGNFGX=true;
 				FHKOYDXPCL();
 				MHELAUXKXR();
@@ -5013,6 +5026,8 @@ OCSBJTDODP=function(){
 	{
 		return false;
 	}*/
+		
+
 
 	XEMENNVXGV();
 	
