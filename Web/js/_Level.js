@@ -2238,7 +2238,14 @@ ACJHOIXLOV=function()
 PermisoMicro=function()
 {
 	var permiso;
-		permiso=window.plugins.speechRecognition.requestPermission()
+		permiso=window.plugins.speechRecognition.requestPermission(
+		function(){
+			FHKOYDXPCL();
+			MHELAUXKXR();
+			XEMENNVXGV();
+			JVEHDHOEEM();
+		}
+		)
 	
 	/*if (permiso==true)
 	{
