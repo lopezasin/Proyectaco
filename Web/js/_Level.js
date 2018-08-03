@@ -1010,7 +1010,7 @@ Level.prototype.create=function(){
 	/*	QETACVSHAR=(( YMHIHSNADE.world.width-AQONVWHHFT-((SXSHBRJFIR*6)) - (YAJVUBPNNW*5)  +  SXSHBRJFIR  )    /2)+      (19 *(SXSHBRJFIR+
 	YAJVUBPNNW))+COIVBWRMCC;
 	*/
-	
+
 	//CUUKQAGFEB= YMHIHSNADE.add.button(QETACVSHAR ,  YMHIHSNADE.world.height-45, 'salir', Salir , this, 2, 1, 0);
 	if (CUUKQAGFEB==undefined)
 	{
@@ -3430,15 +3430,9 @@ RSHJSKMBRP=function(Tipo)
 				//MITSNADNQS();
 				ObjetoG=obj;	
 
-				if (window.plugins.speechRecognition.hasPermission==false)
-				{
-					
-					var d=document.getElementById('DivAudioGoogle');
-					d.style.display = 'block';
-					
-				}
+
 				
-				//JVEHDHOEEM(); 2.0.7 pasa a respuestaaudiogoogle
+				JVEHDHOEEM();
 				
 				
 				//socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
@@ -3488,22 +3482,11 @@ RSHJSKMBRP=function(Tipo)
 		{
 			ref.addEventListener('exit', function(e) {
 
-				//PermisoMicro();			
-				if (window.plugins.speechRecognition.hasPermission==false)
-				{
-					
-					var d=document.getElementById('DivAudioOtros');
-					d.style.display = 'block';
-					
-				}
-
 				
-				
-				/*2.0.7 pasa a RespuestaAudioOtros
 				TDILLGNFGX=true;
 				FHKOYDXPCL();
 				MHELAUXKXR();
-				XEMENNVXGV();*/
+				XEMENNVXGV();
 				
 			});
 			
@@ -3532,7 +3515,9 @@ RSHJSKMBRP=function(Tipo)
 				} );
 				
 				timerlogin.start();	*/
+				PermisoMicro();
 				ref.close();
+				PermisoMicro();
 				//JVEHDHOEEM();
 				//YBWXJFDOAW();
 			}
