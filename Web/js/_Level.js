@@ -2304,8 +2304,8 @@ function startRecognition(){
 				
 			}, function(err){
 				socket.emit('Consola',"Error 2 "+err);
-				SVHMCOYULR("Tienes que dar permisos. Desinstala e instala la app.\n"+
-				"Te los volveremos a solicitar")
+				SVHMCOYULR("Tienes que dar permisos.\nDesinstala e instala la app.\n"+
+				"Te los volveremos a solicitar.")
 				console.error(err);
 					//HRGDCMPPKU.revive();	
 					//PANPKTGSCV.kill();
@@ -3433,13 +3433,14 @@ RSHJSKMBRP=function(Tipo)
 				if (window.plugins.speechRecognition.hasPermission==false)
 				{
 					
-					var r = confirm("Si vas a usar el chat hablado,\ntienes que dar permisos.\n¿lo usarás?");
-					if (r == true) {
-						PermisoMicro();				
-					} 
+					var d=document.getElementById('DivAudioGoogle');
+					d.style.display = 'block';
+					
 				}
 				
-				JVEHDHOEEM();
+				//JVEHDHOEEM(); 2.0.7 pasa a respuestaaudiogoogle
+				
+				
 				//socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
 				  //alert(JSON.stringify(obj)); // do something useful instead of alerting
 				  //alert(obj);
@@ -3491,25 +3492,19 @@ RSHJSKMBRP=function(Tipo)
 				if (window.plugins.speechRecognition.hasPermission==false)
 				{
 					
-					var r = confirm("Si vas a usar el chat hablado,\ntienes que dar permisos.\n¿lo usarás?");
-					if (r == true) {
-						PermisoMicro();				
-					} 
+					var d=document.getElementById('DivAudioOtros');
+					d.style.display = 'block';
+					
 				}
 
 				
 				
+				/*2.0.7 pasa a RespuestaAudioOtros
 				TDILLGNFGX=true;
 				FHKOYDXPCL();
 				MHELAUXKXR();
-				XEMENNVXGV();
-				/*var timerlogin = YMHIHSNADE.time.create(false);
-				timerlogin.add(5000, function(){
+				XEMENNVXGV();*/
 				
-				////console.log("IA DESDE mover mazo");
-				JVEHDHOEEM();
-				} );
-				timerlogin.start();*/
 			});
 			
 			ref.addEventListener('loadstop', function(e) {
@@ -3552,6 +3547,42 @@ RSHJSKMBRP=function(Tipo)
 	ref.removeEventListener('loadstart', myCallback);*/
 	
 }	
+
+RespuestaAudioGoogle=function(res)
+{
+	
+	var d=document.getElementById('DivAudioGoogle');
+	d.style.display = 'none';
+	
+	if (res==false)
+	{
+		JVEHDHOEEM();
+	}
+	else
+	{
+		PermisoMicro();
+	}
+}
+
+RespuestaAudioOtros=function(res)
+{
+	
+	var d=document.getElementById('DivAudioOtros');
+	d.style.display = 'none';
+	
+	if (res==false)
+	{
+		TDILLGNFGX=true;
+		FHKOYDXPCL();
+		MHELAUXKXR();
+		XEMENNVXGV();
+	}
+	else
+	{
+		PermisoMicro();
+	}
+}
+	
 	
 JTQKCQEDPC=function()
 {
@@ -5041,7 +5072,6 @@ OCSBJTDODP=function(){
 		return false;
 	}*/
 		
-
 
 	XEMENNVXGV();
 	
