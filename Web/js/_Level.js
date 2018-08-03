@@ -2259,7 +2259,7 @@ function startRecognition(){
 	{
 		
 		
-		//PermisoMicro();
+		PermisoMicro();
 		
 		
 		//HRGDCMPPKU.kill();	
