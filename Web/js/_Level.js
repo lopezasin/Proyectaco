@@ -3543,14 +3543,12 @@ RespuestaAudioGoogle=function(res)
 	var d=document.getElementById('DivAudioGoogle');
 	d.style.display = 'none';
 	
-	if (res==false)
-	{
-		JVEHDHOEEM();
-	}
-	else
+	if (res==true)
 	{
 		PermisoMicro();
 	}
+	RecienInstalado=false;
+	JVEHDHOEEM();
 }
 
 RespuestaAudioOtros=function(res)
@@ -4911,87 +4909,91 @@ JVEHDHOEEM=function(NoConectar){
 	}*/
 	if (RecienInstalado==true)
 	{
-		PermisoMicro();
-		socket.emit("RECIEN INSTALADO");
-	}
-	
-	if (checkConnection()==true)
-	{	
-		////console.log("inicio si");
-		JKCANKPQBB=0;
-		CUUKQAGFEB.x=QETACVSHAR+150;
-		CUUKQAGFEB.revive();
-		//BNCAIUQIJJ=false;
-		////console.log("Conecta: Llamada JVEHDHOEEM")		
-	
-		/*if (SNJCSVWFCC()==true)
-		{
-			YTUGCWECJC=false;
-			try
-			{
-				socket.disconnect();
-				socket=null; 
-				DFBVDPETGO=Math.floor(Math.random());
-			}
-			catch(e){}
-		}*/
-		
-		//if (NoConectar!=true) //Creaba sockets sin conocimiento
-		//{
-			XEMENNVXGV();
-		//}
-		
-		DVNRTQIWGL=1; //1.0.4
-		UEHYPTREIH.kill();
-		IBECDOLWLN.kill();
-		//POEICHMHDL.kill(); //1.0.8
-		RIHFCSEMIJ.kill();
-		//EFKTQSXAMA.kill();
-		//LNJDKEVPQE.kill();
-		
-		EGPDVIEJEL=true;
-		
-		QSAXUCPASV();
-		WNEWPCNXPA();
-		log(true,"Entra en multijugador");
-		
-		
-		//IEQDMBJCAY.frameName= 'cantar gris';		//asd
-		//YGTNAODFHW.frameName='cambiar 7 gris';
-		
-		PAHJCWBNJH();
-		NMABWIWAAA();
-		//YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);	//asd
-		
-		
-		
-		//log(false,User);
-
-		////console.log("J");
-		RevivirTextCuentaMundo();
-		//JKLJKLRIRI.text="KK";
-		
-		
-		if (SNJCSVWFCC()==true)
-		{
-			////console.log("Arriba");
-			socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
-			//socket.emit('WHGHJCGWWQ',socket.id);
-			socket.emit('JKHWJKHIWF');
-		
-		}
-		/*else 1.0.8
-		{
-			////console.log("Abajo");
-			//console.log("Conecta: Llamada InicioMultiJugador2 ");			
-			XEMENNVXGV();
-			
-		}*/
-
+		var d=document.getElementById('DivAudioGoogle');
+		d.style.display = 'block';
+		//socket.emit("RECIEN INSTALADO");
+		//RecienInstalado=false;
 	}
 	else
 	{
-		////console.log("inicio no");
+		if (checkConnection()==true)
+		{	
+			////console.log("inicio si");
+			JKCANKPQBB=0;
+			CUUKQAGFEB.x=QETACVSHAR+150;
+			CUUKQAGFEB.revive();
+			//BNCAIUQIJJ=false;
+			////console.log("Conecta: Llamada JVEHDHOEEM")		
+		
+			/*if (SNJCSVWFCC()==true)
+			{
+				YTUGCWECJC=false;
+				try
+				{
+					socket.disconnect();
+					socket=null; 
+					DFBVDPETGO=Math.floor(Math.random());
+				}
+				catch(e){}
+			}*/
+			
+			//if (NoConectar!=true) //Creaba sockets sin conocimiento
+			//{
+				XEMENNVXGV();
+			//}
+			
+			DVNRTQIWGL=1; //1.0.4
+			UEHYPTREIH.kill();
+			IBECDOLWLN.kill();
+			//POEICHMHDL.kill(); //1.0.8
+			RIHFCSEMIJ.kill();
+			//EFKTQSXAMA.kill();
+			//LNJDKEVPQE.kill();
+			
+			EGPDVIEJEL=true;
+			
+			QSAXUCPASV();
+			WNEWPCNXPA();
+			log(true,"Entra en multijugador");
+			
+			
+			//IEQDMBJCAY.frameName= 'cantar gris';		//asd
+			//YGTNAODFHW.frameName='cambiar 7 gris';
+			
+			PAHJCWBNJH();
+			NMABWIWAAA();
+			//YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);	//asd
+			
+			
+			
+			//log(false,User);
+
+			////console.log("J");
+			RevivirTextCuentaMundo();
+			//JKLJKLRIRI.text="KK";
+			
+			
+			if (SNJCSVWFCC()==true)
+			{
+				////console.log("Arriba");
+				socket.emit('PIXQSCGEJH', DFBVDPETGO,socket.id, false,SFKLFIJOIO,ObjetoG) ;
+				//socket.emit('WHGHJCGWWQ',socket.id);
+				socket.emit('JKHWJKHIWF');
+			
+			}
+			/*else 1.0.8
+			{
+				////console.log("Abajo");
+				//console.log("Conecta: Llamada InicioMultiJugador2 ");			
+				XEMENNVXGV();
+				
+			}*/
+
+		}
+		else
+		{
+			////console.log("inicio no");
+		}
 	}
 }
 
