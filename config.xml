@@ -30,11 +30,7 @@
 <preference name="KeepRunning" value="true"/>
 <preference name="exit-on-suspend" value="false" /> 
 
-<config-file platform="android" parent="/manifest" mode="delete">
-
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
-</config-file>
+<feature name="http://api.phonegap.com/1.0/media"/>
 <!-- <preference name="apiKey" value="e03d2f91dfd56f1615baf6d697c46428" />
 <preference name="MICROPHONE_USAGE_DESCRIPTION" value="chat con voz en videojuego" /> -->
 
