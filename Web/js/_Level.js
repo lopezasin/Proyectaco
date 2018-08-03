@@ -3475,14 +3475,15 @@ RSHJSKMBRP=function(Tipo)
 		{
 			ref.addEventListener('exit', function(e) {
 
-				if (window.plugins.speechRecognition.hasPermission==false)
+				PermisoMicro();			
+				/*if (window.plugins.speechRecognition.hasPermission==false)
 				{
 					
 					var r = confirm("Si vas a usar el chat hablado,\ntienes que dar permisos.\n¿lo usarás?");
 					if (r == true) {
 						PermisoMicro();				
 					} 
-				}
+				}*/
 
 				
 				
