@@ -1588,7 +1588,14 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	UEHYPTREIH.kill();
 
 	BotonTeclado= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX - 300, YMHIHSNADE.world.height-170, 'general', function(){
-		window.plugins.Keyboard.show();
+		try
+		{
+			Keyboard.show();
+		}
+		catch(e)
+		{
+			socket.emit('Consola teclado '+e)
+		}
 		
 	}, this, 'jugar_solo','jugar_solo','jugar_solo');
 		
