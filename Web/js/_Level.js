@@ -2269,6 +2269,7 @@ function startRecognition(){
 		try
 		{
 		//socket.emit('Consola',"Habla");
+			var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 		    AWUXXYKLPX = new SpeechRecognition();
 			AWUXXYKLPX.onresult = function(event) {
 				if (event.results.length > 0) {
@@ -2279,7 +2280,7 @@ function startRecognition(){
 		}
 		catch(e)
 		{
-			//socket.emit('Consola',"Error 1 "+e);
+			socket.emit('Consola',"Error 1 "+e);
 			SVHMCOYULR("Opción no "+e);
 			//HRGDCMPPKU.revive();	
 			//PANPKTGSCV.kill();
