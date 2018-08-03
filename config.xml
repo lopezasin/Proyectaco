@@ -30,7 +30,7 @@
 <preference name="KeepRunning" value="true"/>
 <preference name="exit-on-suspend" value="false" /> 
 
-<feature name="http://api.phonegap.com/1.0/media"/>
+<!-- <feature name="http://api.phonegap.com/1.0/media"/> -->
 <!-- <preference name="apiKey" value="e03d2f91dfd56f1615baf6d697c46428" />
 <preference name="MICROPHONE_USAGE_DESCRIPTION" value="chat con voz en videojuego" /> -->
 
@@ -52,6 +52,7 @@
 <plugin name="cordova-plugin-vibration" spec="2.1.4" />
 <plugin name="cordova-plugin-whitelist" spec="1.3.2" />
 <plugin name="cordova-plugin-google-analytics" />
+<plugin name="cordova-plugin-keyboard" />
 <!-- <plugin name="cordova-plugin-crosswalk-webview" /> -->
 	
 

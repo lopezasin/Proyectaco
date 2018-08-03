@@ -1587,6 +1587,15 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	
 	UEHYPTREIH.kill();
 
+	BotonTeclado= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX - 300, YMHIHSNADE.world.height-170, 'general', function(){
+		window.plugins.Keyboard.show();
+		
+	}, this, 'jugar_solo','jugar_solo','jugar_solo');
+		
+	BotonTeclado.width=UEHYPTREIH.width;
+	BotonTeclado.height=UEHYPTREIH.height;
+	BotonTeclado.anchor.setTo(0.5,0.5)
+	
 
 	if (RIHFCSEMIJ==undefined)
 	{
@@ -2311,10 +2320,9 @@ function startRecognition(){
 				//}
 				
 			}, function(err){
-				socket.emit('Consola',"Error 2 "+err);
-				SVHMCOYULR("Tienes que dar permisos.\nDesinstala e instala la app.\n"+
-				"Te los volveremos a solicitar.")
-				console.error(err);
+				//socket.emit('Consola',"Error 2 "+err);
+				//SVHMCOYULR("Tienes que dar permisos.\nDesinstala e instala la app.\n"+"Te los volveremos a solicitar.")
+				//console.error(err);
 					//HRGDCMPPKU.revive();	
 					//PANPKTGSCV.kill();
 					ACJHOIXLOV();
