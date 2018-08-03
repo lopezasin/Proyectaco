@@ -2269,7 +2269,7 @@ function startRecognition(){
 		try
 		{
 		//socket.emit('Consola',"Habla");
-			var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+			var SpeechRecognition = window.plugins.speechRecognition;
 		    AWUXXYKLPX = new SpeechRecognition();
 			AWUXXYKLPX.onresult = function(event) {
 				if (event.results.length > 0) {
