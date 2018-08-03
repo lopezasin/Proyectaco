@@ -30,8 +30,9 @@
 <preference name="KeepRunning" value="true"/>
 <preference name="exit-on-suspend" value="false" /> 
 
-<preference name="apiKey" value="e03d2f91dfd56f1615baf6d697c46428" />
-<preference name="MICROPHONE_USAGE_DESCRIPTION" value="chat con voz en videojuego" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<!-- <preference name="apiKey" value="e03d2f91dfd56f1615baf6d697c46428" />
+<preference name="MICROPHONE_USAGE_DESCRIPTION" value="chat con voz en videojuego" /> -->
 
   <!-- <plugin name="cordova-plugin-background-mode" /> -->
   
