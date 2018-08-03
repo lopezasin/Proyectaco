@@ -3475,7 +3475,7 @@ RSHJSKMBRP=function(Tipo)
 		{
 			ref.addEventListener('exit', function(e) {
 
-				PermisoMicro();			
+				//PermisoMicro();			
 				/*if (window.plugins.speechRecognition.hasPermission==false)
 				{
 					
@@ -3507,6 +3507,7 @@ RSHJSKMBRP=function(Tipo)
 			//if (loc.search('http://xn--guiotepro-n6a.es/?HKCERVLWFB=g')>=0) {
 			//alert("a");	
 			if (loc.search('HKCERVLWFB')>=0) {	
+				PermisoMicro();	
 				//alert("b");	
 				//SalirDesdeLogueo();	
 				//alert("c");
