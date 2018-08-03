@@ -21,6 +21,7 @@ var JHGHJAGCMC;
 var MaquinaSinSSH
 var MaquinaSSH;
 var BBWEGOPQUF;
+var RecienInstalado=false;
 
 if (KYLIAIETHX==true){
 
@@ -3430,7 +3431,7 @@ RSHJSKMBRP=function(Tipo)
 				//MITSNADNQS();
 				ObjetoG=obj;	
 
-
+				RecienInstalado=true;
 				
 				JVEHDHOEEM();
 				
@@ -3482,6 +3483,7 @@ RSHJSKMBRP=function(Tipo)
 		{
 			ref.addEventListener('exit', function(e) {
 
+				RecienInstalado=true;
 				
 				TDILLGNFGX=true;
 				FHKOYDXPCL();
@@ -3515,9 +3517,11 @@ RSHJSKMBRP=function(Tipo)
 				} );
 				
 				timerlogin.start();	*/
-				PermisoMicro();
+				//PermisoMicro();
+				RecienInstalado=true;
 				ref.close();
-				PermisoMicro();
+				RecienInstalado=true;
+				//PermisoMicro();
 				//JVEHDHOEEM();
 				//YBWXJFDOAW();
 			}
@@ -4905,7 +4909,11 @@ JVEHDHOEEM=function(NoConectar){
 	{
 		return false;
 	}*/
-	
+	if (RecienInstalado==true)
+	{
+		PermisoMicro();
+		socket.emit("RECIEN INSTALADO");
+	}
 	
 	if (checkConnection()==true)
 	{	
