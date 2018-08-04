@@ -539,14 +539,14 @@ var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC
 
 CierraChat=function()
 {
-	
-	/*var d=document.getElementById('nchat');
+	document.activeElement.blur();
+	var d=document.getElementById('nchat');
 	d.style.display='none'	
 	
-	var d=document.getElementById('gamer');
+	/*var d=document.getElementById('gamer');
 	d.style.display='block'*/
 	//alert("jj")
-	var d=document.getElementById('bchat');
+	/*var d=document.getElementById('bchat');
 	d.focus()
 	d.click();
 	
@@ -554,14 +554,17 @@ CierraChat=function()
 	d.style.display='none'	
 	
 	var d=document.getElementById('gamer');
-	d.style.display='block'
+	d.style.display='block'*/
 	
 	//Keyboard.hide();
 }
 
-CierraChat2=function()
+CierraChat2=function(AWCCMSCOPO)
 {
-	
+	if (AWCCMSCOPO=="")
+	{
+		CierraChat();
+	}
 	/*var d=document.getElementById('nchat');
 	d.style.display='none'	
 	
