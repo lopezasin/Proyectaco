@@ -291,6 +291,12 @@ document.addEventListener('focus', function(){
 				if (mensaje!="")
 				{					
 					BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
+					try
+					{
+						Keyboard.hide();
+					}
+					catch(e)
+					{}
 				}
 			}
 			catch(e){}
@@ -517,7 +523,11 @@ function onDeviceReady() {
 		catch(e)
 		{}
 
-
+		window.addEventListener('keyboardDidShow', function () {
+			// Describe your logic which will be run each time keyboard is shown.
+			Keyboard.hideFormAccessoryBar(true);
+			
+		});
 
 		
 		/* No hay background

@@ -1590,7 +1590,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	BotonTeclado= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX - 300, YMHIHSNADE.world.height-170, 'general', function(){
 		try
 		{
-			Keyboard.show();
+			Keyboard.hide();
 		}
 		catch(e)
 		{
@@ -1603,6 +1603,24 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	BotonTeclado.height=UEHYPTREIH.height;
 	BotonTeclado.anchor.setTo(0.5,0.5)
 	BotonTeclado.kill();
+	
+		BotonTeclado2= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX + 500, YMHIHSNADE.world.height-170, 'general', function(){
+		try
+		{
+			Keyboard.hideFormAccessoryBar(true);;
+		}
+		catch(e)
+		{
+			socket.emit('Consola teclado '+e)
+		}
+		
+	}, this, 'jugar_solo','jugar_solo','jugar_solo');
+		
+	BotonTeclado2.width=UEHYPTREIH.width;
+	BotonTeclado2.height=UEHYPTREIH.height;
+	BotonTeclado2.anchor.setTo(0.5,0.5)
+	BotonTeclado2.kill();
+	
 
 	if (RIHFCSEMIJ==undefined)
 	{
@@ -1831,7 +1849,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 			
 			////console.log("Conecta: Llamada level")	
 			//console.log("Y lo intento");			
-			XEMENNVXGV();
+			//XEMENNVXGV();
 			if (SNJCSVWFCC()==true)
 			{
 					//alert("ko");			
@@ -4669,7 +4687,7 @@ XIAPNYIGXV=function(UHTPGPRUJA,RPHWVBBGIM,NBWHWUQAAA,OMDVKATFLQ, desdeServer, TX
 					
 				}
 				
-				YMHIHSNADE.world.bringToTop(VTEVNYKAUB);
+				YMHIHSNADE.world.bringToTop(BNWHJGHWUW);
 
 	
 
@@ -4933,6 +4951,7 @@ JVEHDHOEEM=function(NoConectar){
 	{
 		var d=document.getElementById('DivAudioGoogle');
 		d.style.display = 'block';
+		
 		//socket.emit("RECIEN INSTALADO");
 		//RecienInstalado=false;
 	}
@@ -4942,6 +4961,7 @@ JVEHDHOEEM=function(NoConectar){
 		{	
 			////console.log("inicio si");
 			BotonTeclado.revive();
+			BotonTeclado2.revive();
 			JKCANKPQBB=0;
 			CUUKQAGFEB.x=QETACVSHAR+150;
 			CUUKQAGFEB.revive();
