@@ -620,7 +620,9 @@ function onDeviceReady() {
 			}
 		}*/
 		
-		
+			window.addEventListener('keyboardHeightWillChange', function (event) {
+				document.activeElement.blur();
+			});
 		
 		
 		window.open = cordova.InAppBrowser.open;

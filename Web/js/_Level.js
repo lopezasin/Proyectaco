@@ -1410,19 +1410,7 @@ Level.prototype.create=function(){
 	
 	MNSLSOPOOP.revive();
 
-	if (HRGDCMPPKU==undefined)
-	{
-		//HRGDCMPPKU.destroy();
-		HRGDCMPPKU= YMHIHSNADE.add.button(150+YAJVUBPNNW, 50, 'general', function(){	startRecognition(); }, this, 'micro_off','micro_off','micro_off');	
-		HRGDCMPPKU.anchor.setTo(0.5,0.5)
-	}
-	
-	
-		//HRGDCMPPKU.kill();	
-		//PANPKTGSCV.revive(); 
-		
-	//console.log("F16");
-	HRGDCMPPKU.kill();
+
 	
 	if (KAHCKJHQEO==undefined)
 	{
@@ -1470,7 +1458,19 @@ Level.prototype.create=function(){
 	PANPKTGSCV.kill();	
 	
 	
+	if (HRGDCMPPKU==undefined)
+	{
+		//HRGDCMPPKU.destroy();
+		HRGDCMPPKU= YMHIHSNADE.add.button(150+YAJVUBPNNW, 50, 'general', function(){	startRecognition(); }, this, 'micro_off','micro_off','micro_off');	
+		HRGDCMPPKU.anchor.setTo(0.5,0.5)
+	}
 	
+	
+		//HRGDCMPPKU.kill();	
+		//PANPKTGSCV.revive(); 
+		
+	//console.log("F16");
+	HRGDCMPPKU.kill();
 	
 	
 	
