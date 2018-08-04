@@ -556,7 +556,7 @@ CierraChat=function()
 	var d=document.getElementById('gamer');
 	d.style.display='block'
 	
-	Keyboard.hide();
+	//Keyboard.hide();
 }
 
 CierraChat2=function()
@@ -569,7 +569,7 @@ CierraChat2=function()
 	d.style.display='block'*/
 	//alert("jj")
 	
-	Keyboard.hide();
+	//Keyboard.hide();
 }
 
 function HMNHQKBORK(FXGSEGRXKC,NPYBJSHIFL,x,y) {
