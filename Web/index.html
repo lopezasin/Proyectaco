@@ -242,14 +242,14 @@ document.addEventListener('focus', function(){
 		//event.preventDefault();
 		try
 		{
-			$('#nchat').slideToggle();
-			$('#inputchat').focus().val('');
+		
+			$('#nchat').slideToggle();			
+			//$('#inputchat').ss
+			//$('#inputchat').focus().val('');
 			//$('#inputchat').focus();
 		}
 		catch(e){}
-	   });
-	   
-	   
+	   });	      
 	   $('#bchatCancelar').click(function(event){
 		//event.preventDefault();
 		try
@@ -264,17 +264,17 @@ document.addEventListener('focus', function(){
 		catch(e){}
 	   });
 	   
-	  /* $('#bchatCancelar2').click(function(event){
+	   $('#bchatCancelar2').click(function(event){
 		//event.preventDefault();
 		try
 		{
 		//alert("pp");
 			//$('#inputchat').focus().val('');
-			CierraChat();	
+			CierraChat2();	
 		}
 		catch(e){}
 	   });
-	   	   */
+	   	   
 	   
 	   	$('#bgprdCancelar').click(function(event){
 		event.preventDefault();
@@ -1049,7 +1049,7 @@ border-spacing: 50em;
 	<input type='text' id='inputchat'  autocomplete="off" style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' />
 	<input id='bchatEnviar' style='cursor:pointer;padding-left:20' align='absmiddle'  type=image src="assets/images/enviar.png">
 	<input id='bchatCancelar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/cancelar_envio.png">
-	<!-- <input id='bchatCancelar2' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/cancelar_envio.png"> -->
+	<input id='bchatCancelar2' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/cancelar_envio.png">
 	<!-- <button style='display:none'></button> -->
 <!-- </form> -->
 </div>

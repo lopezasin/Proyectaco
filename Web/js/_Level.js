@@ -549,6 +549,27 @@ CierraChat=function()
 	var d=document.getElementById('bchat');
 	d.focus()
 	d.click();
+	
+	var d=document.getElementById('nchat');
+	d.style.display='none'	
+	
+	var d=document.getElementById('gamer');
+	d.style.display='block'
+	
+	Keyboard.hide();
+}
+
+CierraChat2=function()
+{
+	
+	/*var d=document.getElementById('nchat');
+	d.style.display='none'	
+	
+	var d=document.getElementById('gamer');
+	d.style.display='block'*/
+	//alert("jj")
+	
+	Keyboard.hide();
 }
 
 function HMNHQKBORK(FXGSEGRXKC,NPYBJSHIFL,x,y) {
@@ -1999,6 +2020,8 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 		bolsa_dinero.frameName='bolsa_dinero'
 		bolsa_dinero.kill();
 	}
+	
+	//XEMENNVXGV();
 	
 	MuestraGBits(false);
 	
