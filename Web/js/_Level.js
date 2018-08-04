@@ -4885,7 +4885,7 @@ BYBYBFHBOX=function(TFSXFTYVGQ,RPHWVBBGIM,NBWHWUQAAA)
 {
 
 
-window.location.hash = '#gamer';
+	//window.location.hash = '#gamer';
 
 	try
 	{
