@@ -537,6 +537,12 @@ var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC
 	
 };
 
+CierraChat=function()
+{
+	//alert("llega");
+	var d=document.getElementById('nchat');
+	d.style.display='none'	
+}
 
 function HMNHQKBORK(FXGSEGRXKC,NPYBJSHIFL,x,y) {
 
@@ -1587,7 +1593,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	
 	UEHYPTREIH.kill();
 
-	BotonTeclado= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX - 300, YMHIHSNADE.world.height-170, 'general', function(){
+	/*BotonTeclado= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX - 300, YMHIHSNADE.world.height-170, 'general', function(){
 		try
 		{
 			Keyboard.hide();
@@ -1619,7 +1625,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	BotonTeclado2.width=UEHYPTREIH.width;
 	BotonTeclado2.height=UEHYPTREIH.height;
 	BotonTeclado2.anchor.setTo(0.5,0.5)
-	BotonTeclado2.kill();
+	BotonTeclado2.kill();*/
 	
 
 	if (RIHFCSEMIJ==undefined)
@@ -4960,8 +4966,8 @@ JVEHDHOEEM=function(NoConectar){
 		if (checkConnection()==true)
 		{	
 			////console.log("inicio si");
-			BotonTeclado.revive();
-			BotonTeclado2.revive();
+			//BotonTeclado.revive();
+			//BotonTeclado2.revive();
 			JKCANKPQBB=0;
 			CUUKQAGFEB.x=QETACVSHAR+150;
 			CUUKQAGFEB.revive();
