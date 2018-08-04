@@ -539,9 +539,12 @@ var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC
 
 CierraChat=function()
 {
-	//alert("llega");
+	
 	var d=document.getElementById('nchat');
 	d.style.display='none'	
+	
+		var d=document.getElementById('gamer');
+	d.style.display='block'	
 }
 
 function HMNHQKBORK(FXGSEGRXKC,NPYBJSHIFL,x,y) {
@@ -4880,6 +4883,10 @@ return split_out.join('\n');
 
 BYBYBFHBOX=function(TFSXFTYVGQ,RPHWVBBGIM,NBWHWUQAAA)
 {
+
+
+window.location.hash = '#gamer';
+
 	try
 	{
 		RPHWVBBGIM=RPHWVBBGIM.substring(0,60)
