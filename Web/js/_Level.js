@@ -5153,6 +5153,7 @@ OCSBJTDODP=function(){
 		return false;
 	}*/
 		
+	RateAPP();	
 
 	XEMENNVXGV();
 	

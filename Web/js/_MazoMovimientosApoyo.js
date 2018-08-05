@@ -18,6 +18,48 @@
 	YMHIHSNADE.add.tween(POUWEIOUWQ).to( { alpha: 1 }, 1500, KYFMRVNHIQ, true);
 }*/
 
+RateAPP=function()
+{
+	if( window.plugins)	
+	{
+		var AppRate;
+		  AppRate.preferences = {
+		  displayAppName: 'GuiñotePRO',
+		  usesUntilPrompt: 0,
+		  promptAgainForEachNewVersion: false,
+		  inAppReview: true,
+		  storeAppURL: {
+			ios: '1232782144',
+			android: 'market://details?id=es.guinotepro.guinotepro'
+		  },
+		  customLocale: {
+			title: "¡Valora %@!",
+			message: "Te necesitamos para seguir creciendo. ¡será rápido! :)",
+			cancelButtonLabel: "No, Gracias",
+			laterButtonLabel: "Más tarde",
+			rateButtonLabel: "Valorar ahora",
+			yesButtonLabel: "Sí",
+			noButtonLabel: "No",
+			appRatePromptTitle: '¿Te gusta %@?',
+			feedbackPromptTitle: '¿Algún comentario?',
+		  },
+		  callbacks: {
+			handleNegativeFeedback: function(){
+			  window.open('mailto:feedback@example.com','_system');
+			},
+			onRateDialogShow: function(callback){
+			  socket.emit('Consola','Ha pulsado rate');
+			},
+			onButtonClicked: function(buttonIndex){
+			 socket.emit('Consola','Ha pulsado botón '+buttonIndex);
+			}
+		  }
+		};
+		 
+		AppRate.promptForRating();
+	}
+}
+
 LLALALASCC=function()
 {
 	YGTNAODFHW.frameName='cambiar 7';
