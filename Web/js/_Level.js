@@ -1911,7 +1911,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 			
 			////console.log("Conecta: Llamada level")	
 			//console.log("Y lo intento");			
-			//XEMENNVXGV();
+			XEMENNVXGV(); //2.0.7
 			if (SNJCSVWFCC()==true)
 			{
 					//alert("ko");			
@@ -4967,6 +4967,14 @@ XEMENNVXGV=function()
 		if(SNJCSVWFCC()==false)
 		{
 			console.log("Se mete a conectar");
+	
+	if (MYQBNBVHKU==true)
+	{
+	var TextoGeneral3=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY+75, 'MiFuenteAmarilla', 'BitmapText', 18);
+	TextoGeneral3.anchor.set(0.5,0.5)
+	TextoGeneral3.text="Se mete a conectar";
+	}
+	
 			socket = io.connect(JHGHJAGCMC,{reconnection: true,  
 					reconnectionDelay: 2000,
 					reconnectionDelayMax : 2500,
@@ -4998,6 +5006,10 @@ XEMENNVXGV=function()
 	catch(err) 
 	{
 		console.log(err);
+			var TextoGeneral4=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY+150, 'MiFuenteAmarilla', 'BitmapText', 18);
+	TextoGeneral4.anchor.set(0.5,0.5)
+	TextoGeneral4.text="Error "+err;
+	
 	}
 	////console.log("Intento de reconexión "+JKCANKPQBB);
 
@@ -5006,6 +5018,20 @@ XEMENNVXGV=function()
 ConectaServidorPrueba=function()
 {
 	DesdeMinimizado=true;
+	
+	//BORRAR
+	SVHMCOYULR("RECUPERADO"); //borrar
+	var TextoGeneral=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-25, 'MiFuenteAmarilla', 'BitmapText', 18);
+	TextoGeneral.anchor.set(0.5,0.5)
+	TextoGeneral.text="RECUPERADO";
+		
+	var TextoGeneral2=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY+50, 'MiFuenteAmarilla', 'BitmapText', 18);
+	TextoGeneral2.anchor.set(0.5,0.5)
+	TextoGeneral2.text=SNJCSVWFCC();	
+	
+
+	//BORRAR
+
 	XEMENNVXGV();
 
 }
@@ -8726,6 +8752,14 @@ AYAOSXTCBR  = function() {
 	//console.log("CONECTADO");
 	var UYEUYIYECB="";
 	console.log("QKVJASWVEO caida "+UJHVBJDGJD);
+	
+	if (MYQBNBVHKU==true)
+	{
+	var TextoGeneral2=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY+160, 'MiFuenteAmarilla', 'BitmapText', 18);
+	TextoGeneral2.anchor.set(0.5,0.5)
+	TextoGeneral2.text="guau";
+	}
+	
 	if (XPBCVAGCDQ.length>0 && EGPDVIEJEL==true) //Significa que ya estoy en modo juego
 	{
 		
@@ -8791,7 +8825,10 @@ AYAOSXTCBR  = function() {
 	{
 		if (DesdeMinimizado==true)
 		{		
-			
+					var TextoGeneral3=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY+190, 'MiFuenteAmarilla', 'BitmapText', 18);
+	TextoGeneral3.anchor.set(0.5,0.5)
+	TextoGeneral3.text="casi";
+	
 			console.log("CONECTADO DESDE MINIMiZADO");
 			if (XPBCVAGCDQ.length>0) //2.0.7
 			{
