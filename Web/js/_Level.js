@@ -537,9 +537,33 @@ var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC
 	
 };
 
+SistemaOperativo=function()
+{
+	var SO;
+	
+	SO=""
+	if( window.plugins)
+	{
+		try
+		{
+			SO = device.platform;			
+		}
+		catch(e)
+		{
+			SO="Android";
+		}
+	}
+	
+	return SO;
+}
 CierraChat=function()
 {
-	document.activeElement.blur();
+	var SO=SistemaOperativo();
+	if (SO.toUpperCase()=="IOS")
+	{	
+		document.activeElement.blur();
+	}
+	
 	var d=document.getElementById('nchat');
 	d.style.display='none'	
 	
@@ -561,6 +585,7 @@ CierraChat=function()
 
 CierraChat2=function(AWCCMSCOPO)
 {
+	
 	if (AWCCMSCOPO=="")
 	{
 		CierraChat();

@@ -239,7 +239,7 @@ document.addEventListener('focus', function(){
 	
 	
 	   $('#bchat').click(function(event){
-		//event.preventDefault();
+		event.preventDefault();
 		try
 		{
 		
@@ -251,7 +251,7 @@ document.addEventListener('focus', function(){
 		catch(e){}
 	   });	      
 	   $('#bchatCancelar').click(function(event){
-		//event.preventDefault();
+		event.preventDefault();
 		try
 		{
 		//alert("pp");
@@ -345,6 +345,7 @@ document.addEventListener('focus', function(){
 		});
 		
 			$("#bchatEnviar").click(function (e) {
+				e.preventDefault();
 			//if (e.keyCode == 13) {
 			//alert("k");
 			try
