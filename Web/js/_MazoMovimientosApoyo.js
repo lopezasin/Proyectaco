@@ -22,8 +22,9 @@ RateAPP=function()
 {
 	if( window.plugins)	
 	{
-		var AppRate;
 		  AppRate.preferences = {
+			useLanguage: 'es',
+			simpleMode:false,
 		  displayAppName: 'GuiñotePRO',
 		  usesUntilPrompt: 0,
 		  promptAgainForEachNewVersion: false,

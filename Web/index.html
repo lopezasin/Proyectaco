@@ -330,7 +330,7 @@ document.addEventListener('focus', function(){
 				{					
 					BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
 					
-					CierraChat();	
+
 					/*try
 					{
 						//Keyboard.hide();
@@ -338,6 +338,7 @@ document.addEventListener('focus', function(){
 					catch(e)
 					{}*/
 				}
+				CierraChat();	
 			}
 			catch(e){}
 			}
@@ -620,7 +621,7 @@ function onDeviceReady() {
 			}
 		}*/
 		
-			window.addEventListener('keyboardWillHide', function (event) {
+			window.addEventListener('keyboardDidHide', function (event) {
 				document.activeElement.blur();
 			});
 		
