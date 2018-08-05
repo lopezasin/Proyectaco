@@ -24,7 +24,7 @@ RateAPP=function()
 	{
 		  AppRate.preferences = {
 			useLanguage: 'es',
-			simpleMode:false,
+			simpleMode:true,
 		  displayAppName: 'GuiñotePRO',
 		  usesUntilPrompt: 0,
 		  promptAgainForEachNewVersion: false,
@@ -41,8 +41,8 @@ RateAPP=function()
 			rateButtonLabel: "Valorar ahora",
 			yesButtonLabel: "Sí",
 			noButtonLabel: "No",
-			appRatePromptTitle: '¿Te gusta %@?',
-			feedbackPromptTitle: '¿Algún comentario?',
+			appRatePromptTitle: '¿Te gusta %@?'//,
+			//feedbackPromptTitle: '¿Algún comentario?'  
 		  },
 		  callbacks: {
 			handleNegativeFeedback: function(){
