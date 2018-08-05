@@ -250,6 +250,7 @@ document.addEventListener('focus', function(){
 		}
 		catch(e){}
 	   });	      
+	   
 	   $('#bchatCancelar').click(function(event){
 		event.preventDefault();
 		try
@@ -1051,7 +1052,7 @@ border-spacing: 50em;
 <!-- <form id='fchat'> -->
 
 	<p style="color:#ffffff;font-size: 14px;padding-top:5" ;><b>¿Algo que decir?. IMPORTANTE: Las conversaciones son públicas y monitorizadas</p>
-	<input type='text' id='inputchat'  onfocusout="CierraChat2(this.value)" autocomplete="off" style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' />
+	<input type='text' id='inputchat' autocomplete="off" style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' />
 	<input id='bchatEnviar' style='cursor:pointer;padding-left:20' align='absmiddle'  type=image src="assets/images/enviar.png">
 	<input id='bchatCancelar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/cancelar_envio.png">
 	<!-- <input id='bchatCancelar2' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/cancelar_envio.png"> -->
