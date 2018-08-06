@@ -49,10 +49,13 @@ RateAPP=function()
 			  window.open('mailto:feedback@example.com','_system');
 			},
 			onRateDialogShow: function(callback){
-			  socket.emit('Consola','Ha pulsado rate');
+			  //socket.emit('Consola','Ha pulsado rate');
 			},
 			onButtonClicked: function(buttonIndex){
-			 socket.emit('Consola','Ha pulsado botón '+buttonIndex);
+				if (PWMIBRSDCJ.length>0)
+				{
+					socket.emit('EnviaValoraApp', buttonIndex, PWMIBRSDCJ[0].OBTBPOULAV );
+				}
 			}
 		  }
 		};
