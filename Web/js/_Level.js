@@ -2058,7 +2058,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	MuestraGBits(false);
 	
 	
-	if (SNJCSVWFCC() && CotoGanado==true && AppVotada==false)
+	if (SNJCSVWFCC() && EGPDVIEJEL==true && CotoGanado==true && AppVotada==false)
 	{
 		PideVoto=false;
 		if (PWMIBRSDCJ.length>0)
@@ -2071,7 +2071,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 		
 		AppVotada=true; //Semaforo
 		
-		if (PideVoto==True)
+		if (PideVoto==true)
 		{
 			RateAPP();
 		}
