@@ -2059,8 +2059,8 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	
 	if (PWMIBRSDCJ.length>0)
 	{
-		SVHMCOYULR(SNJCSVWFCC() +" "+ CotoGanado+" "+AppVotada+" "+PWMIBRSDCJ[0].PreguntarSiGustaUser)
-		if (SNJCSVWFCC() && CotoGanado==true && AppVotada==false)
+		//SVHMCOYULR(SNJCSVWFCC() +" "+ CotoGanado+" "+AppVotada+" "+PWMIBRSDCJ[0].PreguntarSiGustaUser)
+		if (CotoGanado==true && AppVotada==false)
 		{
 			PideVoto=false;
 			if (PWMIBRSDCJ.length>0)
