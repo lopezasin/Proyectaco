@@ -54,6 +54,7 @@
 <plugin name="cordova-plugin-google-analytics" />
 <!-- <plugin name="cordova-plugin-keyboard" /> -->
 <plugin name="cordova-plugin-apprate" />
+<plugin name="cordova-plugin-iosmediavolume" />
 	
 
 <gap:plugin name="cordova-plugin-googleplus" source="npm" spec="5.1.1">

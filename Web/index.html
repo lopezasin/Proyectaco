@@ -216,12 +216,10 @@ document.addEventListener('focus', function(){
 	document.addEventListener('resume', function(){
 		//2.0.7 se lanza en el resume de phonegap window.location.reload();
 		//igual hay que quitarlo para android
-			var TextoGeneral=YMHIHSNADE.add.bitmapText(YMHIHSNADE.world.centerX, YMHIHSNADE.world.centerY-55, 'MiFuenteAmarilla', 'BitmapText', 18);
-	TextoGeneral.anchor.set(0.5,0.5)
-	TextoGeneral.text="RECUPERADO_MIERDER";
+
 		
 		var SO=SistemaOperativo();
-		if (SO.toUpperCase()=="IOS")
+		if (SO.toUpperCase()=="IOS") //Importante que no se meta por aquí Android, ya que le afecta otro resume
 		{	
 			GTRVLWPSYL();
 		}
