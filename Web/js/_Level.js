@@ -2057,8 +2057,8 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	
 	MuestraGBits(false);
 	
-	
-	if (SNJCSVWFCC() && EGPDVIEJEL==true && CotoGanado==true && AppVotada==false)
+	SVHMCOYULR(SNJCSVWFCC() +" "+ CotoGanado+" "+AppVotada+" "+PWMIBRSDCJ[0].PreguntarSiGustaUser)
+	if (SNJCSVWFCC() && CotoGanado==true && AppVotada==false)
 	{
 		PideVoto=false;
 		if (PWMIBRSDCJ.length>0)
@@ -7312,7 +7312,7 @@ CURCDCWNHB=function(CYHNPORXFJ)
 			
 			//alert(PWMIBRSDCJ[0].IRQGAFESIC);
 		
-		//console.log("emitter "+CYHNPORXFJ[0].AMBCNABIQQ);
+		console.log("gusta "+CYHNPORXFJ[0].PreguntarSiGustaUser);
 		if (CYHNPORXFJ[0].gprd==true)
 		{
 			

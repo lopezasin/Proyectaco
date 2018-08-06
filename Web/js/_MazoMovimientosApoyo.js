@@ -4836,7 +4836,10 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 					////console.log("1. EXOQTFOAQQ VIYQDHWIAA: "+JVQXQGYDHH+" EXOQTFOAQQ YOBEPVEEMW: "+CNCCBHQJKL);
 					if (JVQXQGYDHH==MFENMIFPUA)
 					{
-						CotoGanado=true;
+						if (EGPDVIEJEL==true)
+						{
+							CotoGanado=true;
+						}
 						KMHMNPUINK="¡¡ Ganamos la partida\n y el coto !!";
 						//KMHMNPUINK="";
 						EABXADHEVT("JCGKEWDJBQ");
@@ -4877,7 +4880,10 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 					////console.log("3. EXOQTFOAQQ VIYQDHWIAA: "+JVQXQGYDHH+" EXOQTFOAQQ YOBEPVEEMW: "+CNCCBHQJKL);
 					if (JVQXQGYDHH==MFENMIFPUA)
 					{
-						CotoGanado=true;
+						if (EGPDVIEJEL==true)
+						{
+							CotoGanado=true;
+						}
 						KMHMNPUINK="¡¡ Ganamos la partida\n y el coto !!";
 						ISVLSNLHWR=0;
 						EABXADHEVT("JCGKEWDJBQ");						
