@@ -2057,26 +2057,28 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	
 	MuestraGBits(false);
 	
-	SVHMCOYULR(SNJCSVWFCC() +" "+ CotoGanado+" "+AppVotada+" "+PWMIBRSDCJ[0].PreguntarSiGustaUser)
-	if (SNJCSVWFCC() && CotoGanado==true && AppVotada==false)
+	if (PWMIBRSDCJ.length>0)
 	{
-		PideVoto=false;
-		if (PWMIBRSDCJ.length>0)
+		SVHMCOYULR(SNJCSVWFCC() +" "+ CotoGanado+" "+AppVotada+" "+PWMIBRSDCJ[0].PreguntarSiGustaUser)
+		if (SNJCSVWFCC() && CotoGanado==true && AppVotada==false)
 		{
-			if (PWMIBRSDCJ[0].PreguntarSiGustaUser==true)
+			PideVoto=false;
+			if (PWMIBRSDCJ.length>0)
 			{
-				PideVoto=true;
+				if (PWMIBRSDCJ[0].PreguntarSiGustaUser==true)
+				{
+					PideVoto=true;
+				}
+			}
+			
+			AppVotada=true; //Semaforo
+			
+			if (PideVoto==true)
+			{
+				RateAPP();
 			}
 		}
-		
-		AppVotada=true; //Semaforo
-		
-		if (PideVoto==true)
-		{
-			RateAPP();
-		}
 	}
-	
 	//console.log("FIN");
 	
 };
