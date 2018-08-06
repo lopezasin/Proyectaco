@@ -2054,6 +2054,8 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	}
 	
 	//XEMENNVXGV();
+	///if (DesdeFinCoto==true)
+	//	Conecta
 	
 	MuestraGBits(false);
 	

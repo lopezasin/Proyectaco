@@ -5074,6 +5074,7 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 													//timerdelaymatarconexion.add(2000, function()
 													//{
 														MHELAUXKXR();
+														XEMENNVXGV();
 														//JHKWHCWKWC(); //2.0.7
 													//});
 													//timerdelaymatarconexion.start();
