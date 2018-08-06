@@ -35,7 +35,7 @@ RateAPP=function()
 		  },
 		  customLocale: {
 			title: "¡Valora %@!",
-			message: "Te necesitamos para seguir creciendo. ¡será rápido! :)",
+			message: "Te necesitamos para seguir creciendo.",
 			cancelButtonLabel: "No, Gracias",
 			laterButtonLabel: "Más tarde",
 			rateButtonLabel: "Valorar ahora",

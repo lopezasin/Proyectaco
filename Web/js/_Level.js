@@ -7316,7 +7316,7 @@ CURCDCWNHB=function(CYHNPORXFJ)
 			
 			//alert(PWMIBRSDCJ[0].IRQGAFESIC);
 		
-		console.log("gusta "+CYHNPORXFJ[0].PreguntarSiGustaUser);
+		//console.log("gusta "+CYHNPORXFJ[0].OBTBPOULAV);
 		if (CYHNPORXFJ[0].gprd==true)
 		{
 			
