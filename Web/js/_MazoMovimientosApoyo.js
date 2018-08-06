@@ -52,8 +52,10 @@ RateAPP=function()
 			  //socket.emit('Consola','Ha pulsado rate');
 			},
 			onButtonClicked: function(buttonIndex){
+				socket.emit('Consola','va a enviar '+buttonIndex);
 				if (PWMIBRSDCJ.length>0)
 				{
+					socket.emit('Consola','enviar '+buttonIndex+" "+PWMIBRSDCJ[0].OBTBPOULAV);
 					socket.emit('EnviaValoraApp', buttonIndex, PWMIBRSDCJ[0].OBTBPOULAV );
 				}
 			}
