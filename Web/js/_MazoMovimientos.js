@@ -188,8 +188,12 @@ TUYTTXXUSX=function()
 				UYEUYIYECB.kill();
 			});
 			
+			try
+			{
 			socket.emit('enviar_denuncia',XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV, MQUGCIUQII, XPBCVAGCDQ[TFSXFTYVGQ-1].Sala,
 			 XPBCVAGCDQ[TFSXFTYVGQ-1].Amigo)
+			}
+			catch(e){}
 		}
 	}
 }
@@ -200,7 +204,11 @@ EnviarGPRD_OK=function()
 	if (SNJCSVWFCC()==true)
 	{
 		console.log("Confirma GPRD "+PWMIBRSDCJ[0].OBTBPOULAV);
-		socket.emit('confirmar_gprd',PWMIBRSDCJ[0].OBTBPOULAV);
+		try
+		{
+			socket.emit('confirmar_gprd',PWMIBRSDCJ[0].OBTBPOULAV);
+		}
+		catch(e){}
 	}
 }
 
@@ -289,7 +297,11 @@ GIDSSFEUNT=function(SinIA)
 				//console.log("Nueva partida superorganizador");
 				if (KYLIAIETHX==false)
 				{
-					socket.emit("Consola","Nueva partida superorganizador monojugador "+TFSXFTYVGQ);
+					try
+					{
+						socket.emit("Consola","Nueva partida superorganizador monojugador "+TFSXFTYVGQ);
+					}
+					catch(e){}
 				}
 		
 				KPQSPDMKJE(DVNRTQIWGL); 
@@ -311,7 +323,11 @@ GIDSSFEUNT=function(SinIA)
 				console.log("Nueva partida superorganizador");
 				if (KYLIAIETHX==false)
 				{
-					socket.emit("Consola","Nueva partida superorganizador "+TFSXFTYVGQ);
+					try
+					{
+						socket.emit("Consola","Nueva partida superorganizador "+TFSXFTYVGQ);
+					}
+					catch(e){}
 				}
 		
 				KPQSPDMKJE(DVNRTQIWGL); 
@@ -1035,9 +1051,7 @@ CHJKAHKJHC=function()
 		}		
 		
 	}
-	catch(e)
-	{		
-	}
+	catch(e){}
 	
 }
 

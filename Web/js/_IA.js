@@ -290,76 +290,106 @@ IA=function(UHTPGPRUJA,RondaQueMueve){
 								
 								if (EGPDVIEJEL==true)
 								{
-									////console.log("ENVIO CARTA AL RESTO "+NJGFWACAPY+" AUTOMATICAMENTE CON DVNRTQIWGL "+UHTPGPRUJA)
+										////console.log("ENVIO CARTA AL RESTO "+NJGFWACAPY+" AUTOMATICAMENTE CON DVNRTQIWGL "+UHTPGPRUJA)
+										
+										
+						/////////////
 									
-									
-					/////////////
-								
-								var QKVJASWVEO=Date.now();
-								var GXNRNMAAKW=function( DFBVDPETGO,TFSXFTYVGQ,AAJNQWXHMY,Turno, TKWCTNGROU, EVAILWGGKX,KXAWTTIEGG,OBTBPOULAV,AURESXCGMK,WWKVHIMWYD,MQUGCIUQII,
-									OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
-									 this.DFBVDPETGO=DFBVDPETGO
-									 this.TFSXFTYVGQ=TFSXFTYVGQ
-									 this.AAJNQWXHMY=AAJNQWXHMY
-									 this.Turno=Turno
-									 this.AGTXFNIKQD=TKWCTNGROU
-									 this.EVAILWGGKX=EVAILWGGKX
-									 this.KXAWTTIEGG=KXAWTTIEGG
-									 this.OBTBPOULAV=OBTBPOULAV
-									 this.AURESXCGMK=AURESXCGMK
-									 this.WWKVHIMWYD=WWKVHIMWYD
-									 this.MQUGCIUQII=MQUGCIUQII
-									 
-									 this.OYJAHGADFQ=OYJAHGADFQ
-									 this.OJPXTRQDKS=OJPXTRQDKS
-									 this.LYHKNIMVEB=LYHKNIMVEB
-									 this.RHOLNWBOXR=RHOLNWBOXR
-									 
-									 this.EBAPPJFYSW=new Date(Date.now());
-								 }
-								var QPHHGPRJAI=[];
-								QPHHGPRJAI.splice(0,1000);
-			 
-									
-								var OYJAHGADFQ=Math.random()*100000;
-								var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,UHTPGPRUJA,NJGFWACAPY,UHTPGPRUJA, RondaQueMueve, EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),
-									XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,
-									XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD,MQUGCIUQII,
-									OYJAHGADFQ,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,DFBVDPETGO,'RYUDYPPOXW');
-								NBEJWDVLLV.push(KCPHFPSPLQ);
-								QPHHGPRJAI.push(KCPHFPSPLQ);
-								socket.emit("Consola","IA SSUNXNEEHN "+TFSXFTYVGQ+" Tiro por "+UHTPGPRUJA+" AGTXFNIKQD "+RondaQueMueve+" TVYNYTCQYW "+NJGFWACAPY);
-								if(NJGFWACAPY==1)
-								{
-									socket.emit("Consola","---------CULPABLE--------------IA SSUNXNEEHN "+TFSXFTYVGQ+" Tiro por "+UHTPGPRUJA+" AGTXFNIKQD "+RondaQueMueve+" TVYNYTCQYW "+NJGFWACAPY);
-								}
-								console.log("INVENTADA DE "+TFSXFTYVGQ+" representando a "+UHTPGPRUJA+" TVYNYTCQYW "+NJGFWACAPY+" "+RondaQueMueve)
-								socket.emit('RYUDYPPOXW',QPHHGPRJAI[0],
-								 function(XQLEOGMJYG)
-								 {			 
-									EXBCVLOIYJ(XQLEOGMJYG,'RYUDYPPOXW');
-								 }
-								);						
-								QPHHGPRJAI.splice(0,1000);	
-	  
-								
-								/////////////									
-									
-									
-									
-									
-									//socket.emit('RYUDYPPOXW', DFBVDPETGO,UHTPGPRUJA,NJGFWACAPY,UHTPGPRUJA, LUCRWXJMDR,EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD) ;
-									if (MGYJHGHWGC[i].SGCSHJVERI==TGTQPBEQFR)
+									var QKVJASWVEO=Date.now();
+									var GXNRNMAAKW=function( DFBVDPETGO,TFSXFTYVGQ,AAJNQWXHMY,Turno, TKWCTNGROU, EVAILWGGKX,KXAWTTIEGG,OBTBPOULAV,AURESXCGMK,WWKVHIMWYD,MQUGCIUQII,
+										OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+										 this.DFBVDPETGO=DFBVDPETGO
+										 this.TFSXFTYVGQ=TFSXFTYVGQ
+										 this.AAJNQWXHMY=AAJNQWXHMY
+										 this.Turno=Turno
+										 this.AGTXFNIKQD=TKWCTNGROU
+										 this.EVAILWGGKX=EVAILWGGKX
+										 this.KXAWTTIEGG=KXAWTTIEGG
+										 this.OBTBPOULAV=OBTBPOULAV
+										 this.AURESXCGMK=AURESXCGMK
+										 this.WWKVHIMWYD=WWKVHIMWYD
+										 this.MQUGCIUQII=MQUGCIUQII
+										 
+										 this.OYJAHGADFQ=OYJAHGADFQ
+										 this.OJPXTRQDKS=OJPXTRQDKS
+										 this.LYHKNIMVEB=LYHKNIMVEB
+										 this.RHOLNWBOXR=RHOLNWBOXR
+										 
+										 this.EBAPPJFYSW=new Date(Date.now());
+									 }
+									var QPHHGPRJAI=[];
+									QPHHGPRJAI.splice(0,1000);
+				 
+										
+									var OYJAHGADFQ=Math.random()*100000;
+									var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,UHTPGPRUJA,NJGFWACAPY,UHTPGPRUJA, RondaQueMueve, EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),
+										XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,
+										XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD,MQUGCIUQII,
+										OYJAHGADFQ,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,DFBVDPETGO,'RYUDYPPOXW');
+									NBEJWDVLLV.push(KCPHFPSPLQ);
+									QPHHGPRJAI.push(KCPHFPSPLQ);
+									/*socket.emit("Consola","IA SSUNXNEEHN "+TFSXFTYVGQ+" Tiro por "+UHTPGPRUJA+" AGTXFNIKQD "+RondaQueMueve+" TVYNYTCQYW "+NJGFWACAPY);
+									if(NJGFWACAPY==1)
 									{
-										if (MGYJHGHWGC[i].HVCFEWNDRF==1)
+										socket.emit("Consola","---------CULPABLE--------------IA SSUNXNEEHN "+TFSXFTYVGQ+" Tiro por "+UHTPGPRUJA+" AGTXFNIKQD "+RondaQueMueve+" TVYNYTCQYW "+NJGFWACAPY);
+									}*/
+									console.log("INVENTADA DE "+TFSXFTYVGQ+" representando a "+UHTPGPRUJA+" TVYNYTCQYW "+NJGFWACAPY+" "+RondaQueMueve)
+									
+									var timererror=YMHIHSNADE.time.create(false);
+									var ContinuarTry=true;
+									timererror.loop(200,function(){
+										console.log("Entra al TKXPPGUPVV")
+										try
 										{
-											WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,true,false);
+											
+											socket.emit('RYUDYPPOXW',QPHHGPRJAI[0],
+											 function(XQLEOGMJYG)
+											 {			 
+												EXBCVLOIYJ(XQLEOGMJYG,'RYUDYPPOXW');
+											 }
+											);
+																				
 										}
-										if (MGYJHGHWGC[i].HVCFEWNDRF==3)
+										catch(e)
 										{
-											WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,false,true);
-										}								
+											ContinuarTry=false;
+										}
+										
+										
+										if (ContinuarTry==true)
+										{
+											timererror.stop();
+											QPHHGPRJAI.splice(0,1000);	
+											
+
+											console.log("CONTINUA")
+				  
+											
+											/////////////									
+												
+												
+												
+											
+											//socket.emit('RYUDYPPOXW', DFBVDPETGO,UHTPGPRUJA,NJGFWACAPY,UHTPGPRUJA, LUCRWXJMDR,EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD) ;
+											if (MGYJHGHWGC[i].SGCSHJVERI==TGTQPBEQFR)
+											{
+												if (MGYJHGHWGC[i].HVCFEWNDRF==1)
+												{
+													WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,true,false);
+												}
+												if (MGYJHGHWGC[i].HVCFEWNDRF==3)
+												{
+													WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,false,true);
+												}								
+											}
+																						
+										}
+										//console.log("VUELTA");
 									}
+									);
+									timererror.start();
+									
+
 								}
 							}
 							else
