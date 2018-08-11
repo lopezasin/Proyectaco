@@ -378,6 +378,7 @@ GIDSSFEUNT=function(SinIA)
 							if (DVNRTQIWGL!=TFSXFTYVGQ)
 							{
 								HUUCUYFBLW.stop();
+								HUUCUYFBLW.remove();
 							}
 								
 							if (YJNIRPCWEI!=undefined)
@@ -416,7 +417,9 @@ GIDSSFEUNT=function(SinIA)
 								YJNIRPCWEI.text="";
 								YJNIRPCWEI.kill();
 								TKXPPGUPVV.stop();
+								TKXPPGUPVV.remove();
 								HUUCUYFBLW.stop();
+								HUUCUYFBLW.remove();
 								//socket.emit("Consola","IA desde 1. Soy el jugador "+TFSXFTYVGQ);
 								IA(DVNRTQIWGL,LUCRWXJMDR);
 								AJFQVFUKAP=true; //1.0.8	
@@ -462,9 +465,11 @@ GIDSSFEUNT=function(SinIA)
 			//console.log("Entra TKXPPGUPVV "+DVNRTQIWGL+" "+LUCRWXJMDR);
 			PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
 			TKXPPGUPVV.stop();
+			TKXPPGUPVV.remove();
 			TKXPPGUPVV.add(PLKOPTSHBQ, function()
 			{		
 				TKXPPGUPVV.stop();
+				TKXPPGUPVV.remove();
 				//console.log("IA Dos "+DVNRTQIWGL+" "+LUCRWXJMDR);
 				//socket.emit("Consola","IA desde 2. Soy el jugador "+TFSXFTYVGQ);
 				IA(DVNRTQIWGL,LUCRWXJMDR);
@@ -1082,7 +1087,9 @@ QTIPILDEPH=function(sprite,UBWRXKMTQN,SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 		if (EGPDVIEJEL==true)
 		{
 			HUUCUYFBLW.stop();
+			HUUCUYFBLW.remove();
 			TKXPPGUPVV.stop();
+			TKXPPGUPVV.remove();
 			YJNIRPCWEI.text="";
 		}	
 
@@ -1244,6 +1251,7 @@ FRWLTWDFVM=function(SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 		if (VDKOVQXHON.length>=4 ){
 		log(true,"DEBE LIMPIAR MESA");
 		TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
+		TKXPPGUPVV.remove();
 				TLGMUNNDGH=true; //por si cambia el turno que no me deje tirar
 				
 				UPCWNPYAIE=LUCRWXJMDR;
@@ -1751,7 +1759,9 @@ AGLRWERBPD=function(UPCWNPYAIE){
 	
 	
 	HUUCUYFBLW.stop();
+	HUUCUYFBLW.remove();
 	TKXPPGUPVV.stop();
+	TKXPPGUPVV.remove();
 	
 	
 	
@@ -2086,7 +2096,7 @@ HGFAUFDVDF=function(){
 	var i;
 	
 	for (i=0;i<=JEHYBALODM.length-1;i++){
-		//console.log("ValidaTexto: "+JEHYBALODM[i].MQUGCIUQII+" "+JEHYBALODM[i].estado)
+		console.log("ValidaTexto: "+JEHYBALODM[i].MQUGCIUQII+" "+JEHYBALODM[i].estado)
 		if(JEHYBALODM[i].MQUGCIUQII==MQUGCIUQII && JEHYBALODM[i].estado==1)
 		{
 			HAUSUTNHGI=true;
@@ -2096,12 +2106,15 @@ HGFAUFDVDF=function(){
 	}	
 
 	
+	console.log("SEMAFORO HGFAUFDVDF "+HAUSUTNHGI)
+	
 	return HAUSUTNHGI;
 }
 
 FinalizaTextoPuntuacionJugador=function(){
 	var HAUSUTNHGI=false;
 	var i;
+	
 	
 	for (i=0;i<=JEHYBALODM.length-1;i++){
 		if(JEHYBALODM[i].MQUGCIUQII==MQUGCIUQII ){ //2.0.1 Para por si acaso ha cambiado el MQUGCIUQII
@@ -2110,12 +2123,13 @@ FinalizaTextoPuntuacionJugador=function(){
 		}
 	}
 	
+	console.log("SEMAFORO 3")
 	//return HAUSUTNHGI;
 }
 
-CompruebaPartidaFinalizada=function(idPartidaComprobar)
+CompruebaPartidaFinalizada=function(idPartidaVieja,idPartidaNueva)
 {
-	var HAUSUTNHGI=true;
+	var HAUSUTNHGI=false;
 	var i;
 	
 	//console.log("ID "+MQUGCIUQII);
@@ -2127,10 +2141,10 @@ CompruebaPartidaFinalizada=function(idPartidaComprobar)
 	else 
 	{
 		for (i=0;i<=JEHYBALODM.length-1;i++){
-			console.log("estado semaforo "+JEHYBALODM[i].estado);
-			if(JEHYBALODM[i].MQUGCIUQII==MQUGCIUQII && (JEHYBALODM[i].estado==1 || JEHYBALODM[i].estado==2 ))
+			console.log("estado semaforo "+JEHYBALODM[i].MQUGCIUQII+"  "+MQUGCIUQII+"  "+JEHYBALODM[i].estado);
+			if(JEHYBALODM[i].MQUGCIUQII==idPartidaVieja && JEHYBALODM[i].estado==3) // (JEHYBALODM[i].estado==1 || JEHYBALODM[i].estado==2 ))
 			{
-				HAUSUTNHGI=false;
+				HAUSUTNHGI=true;
 				break;
 			}
 		}
@@ -2145,8 +2159,8 @@ CompruebaPartidaFinalizada=function(idPartidaComprobar)
 			this.estado=estado
 		}
 	
-		
-		JEHYBALODM.push( new ObjetoPartida(idPartidaComprobar,1));
+		console.log("SEMAFORO NUEVO "+idPartidaNueva)
+		JEHYBALODM.push( new ObjetoPartida(idPartidaNueva,1));
 		
 	}
 	
@@ -2171,14 +2185,14 @@ CompruebaPeticionReparto=function(idPartidaComprobar)
 		for (i=0;i<=JEHYBALODM.length-1;i++){
 			//console.log("estado semaforo "+JEHYBALODM[i].estado);
 			if(JEHYBALODM[i].MQUGCIUQII==idPartidaComprobar &&  JEHYBALODM[i].estado==3 ){
-				JEHYBALODM[i].estado==4
+				//JEHYBALODM[i].estado=4
 				HAUSUTNHGI=true;
 				break;
 			}
 		}
 	}
 	
-	
+	console.log("SEMAFORO REPARTO "+idPartidaComprobar+" "+HAUSUTNHGI)
 	
 	
 	return HAUSUTNHGI;

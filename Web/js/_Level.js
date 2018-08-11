@@ -14,7 +14,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var KYLIAIETHX=false;
+var KYLIAIETHX=true;
 
 
 var JHGHJAGCMC;
@@ -34,6 +34,7 @@ if (KYLIAIETHX==true){
 	//MaquinaSinSSH="http://b.xn--guiotepro-n6a.com"
 	//JHGHJAGCMC="https://b.xn--guiotepro-n6a.com"
 	JHGHJAGCMC="https://xn--guiotepro-n6a.es"
+	JHGHJAGCMC="https://a.xn--guiotepro-n6a.es"
 	//JHGHJAGCMC="https://b.xn--guiotepro-n6a.es"
 
 	
@@ -102,12 +103,12 @@ var ISVLSNLHWR=0;
 var IJCSKNTKVH="";
 
 var JLVDFTPUNI=101;
-var MFENMIFPUA=1;
+var MFENMIFPUA=3;
 
 var CotoGanado=false; //Para votar;
 var AppVotada=false;
 
-var EGSJHTESLW=true;
+var EGSJHTESLW=false;
 var RapidoEnDesconexiones=true;
 
 var VBMSLTWABI=0;
@@ -2647,11 +2648,19 @@ YPCWDEBGAS=function()
 		if(SNJCSVWFCC()==true)
 		{
 			console.log("llega a rellenar "+DFBVDPETGO+" "+XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV);
-			try
-			{
-				socket.emit('NZBSUWWZXX',DFBVDPETGO,XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV)
-			}
-			catch(e){}
+			
+			
+			var timererror=YMHIHSNADE.time.create(false);
+			timererror.loop(200,function(){										
+				try
+				{
+					socket.emit('NZBSUWWZXX',DFBVDPETGO,XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV)
+					timererror.stop();
+					timererror.remove();
+				}
+				catch(e){}
+			});
+			timererror.start();
 		}
 	}
 }
@@ -2719,46 +2728,48 @@ WTERKRAPBE=function(ABWBCAJRXQ,KXAWTTIEGG,SPWYNLHQXU,PAXBGDCANU,VRCARVJJPF,VGVSE
 {
 	
 	//ABWBCAJRXQ=TFSXFTYVGQ;
-
-	if (ABWBCAJRXQ==TFSXFTYVGQ || PermisoParaTomarControl(ABWBCAJRXQ)  )    
+	if (EGPDVIEJEL==true)
 	{
-		var XJARYUVBCB=XPBCVAGCDQ[ABWBCAJRXQ-1].XJARYUVBCB;
-		var FUAQHEGBCV=XPBCVAGCDQ[ABWBCAJRXQ-1].OBTBPOULAV;
-		var Name=XPBCVAGCDQ[ABWBCAJRXQ-1].WWKVHIMWYD;
-		var Socket=XPBCVAGCDQ[ABWBCAJRXQ-1].AURESXCGMK;
-		//var Socket=""; //2.0.7
-		////console.log(ABWBCAJRXQ+" Mi Socket: "+Socket);
-		var Sala=XPBCVAGCDQ[ABWBCAJRXQ-1].Sala;
-		var Amigo=XPBCVAGCDQ[ABWBCAJRXQ-1].Amigo;
-		var NBJHGSFSJS=XPBCVAGCDQ[ABWBCAJRXQ-1].NBJHGSFSJS;
-		
-		var Idas;
+		if (ABWBCAJRXQ==TFSXFTYVGQ || PermisoParaTomarControl(ABWBCAJRXQ)  )    
+		{
+			var XJARYUVBCB=XPBCVAGCDQ[ABWBCAJRXQ-1].XJARYUVBCB;
+			var FUAQHEGBCV=XPBCVAGCDQ[ABWBCAJRXQ-1].OBTBPOULAV;
+			var Name=XPBCVAGCDQ[ABWBCAJRXQ-1].WWKVHIMWYD;
+			var Socket=XPBCVAGCDQ[ABWBCAJRXQ-1].AURESXCGMK;
+			//var Socket=""; //2.0.7
+			////console.log(ABWBCAJRXQ+" Mi Socket: "+Socket);
+			var Sala=XPBCVAGCDQ[ABWBCAJRXQ-1].Sala;
+			var Amigo=XPBCVAGCDQ[ABWBCAJRXQ-1].Amigo;
+			var NBJHGSFSJS=XPBCVAGCDQ[ABWBCAJRXQ-1].NBJHGSFSJS;
+			
+			var Idas;
 
-		if (SPWYNLHQXU==true)
-		{	
-			Idas='v';
+			if (SPWYNLHQXU==true)
+			{	
+				Idas='v';
+			}
+			else
+			{
+				Idas='i';
+			}
+			
+			//if (XPBCVAGCDQ[ABWBCAJRXQ-1].XJARYUVBCB==true)
+			//{
+			//	Idas='d';
+			//}
+			
+			var ObjetoMoneda=null;
+			if (PAXBGDCANU>0)
+			{
+				var ObjetoMoneda=CalculaGBits();
+			}
+			
+			try
+			{
+				socket.emit('IUYWUIHCVW',FUAQHEGBCV,Name,Socket,Sala,KXAWTTIEGG,Idas,XJARYUVBCB,PAXBGDCANU,VRCARVJJPF,VGVSETFAFF,As,WJIXAEXYTP,Amigo,MQUGCIUQII,NBJHGSFSJS,ObjetoMoneda)
+			}
+			catch(e){}
 		}
-		else
-		{
-			Idas='i';
-		}
-		
-		//if (XPBCVAGCDQ[ABWBCAJRXQ-1].XJARYUVBCB==true)
-		//{
-		//	Idas='d';
-		//}
-		
-		var ObjetoMoneda=null;
-		if (PAXBGDCANU>0)
-		{
-			var ObjetoMoneda=CalculaGBits();
-		}
-		
-		try
-		{
-			socket.emit('IUYWUIHCVW',FUAQHEGBCV,Name,Socket,Sala,KXAWTTIEGG,Idas,XJARYUVBCB,PAXBGDCANU,VRCARVJJPF,VGVSETFAFF,As,WJIXAEXYTP,Amigo,MQUGCIUQII,NBJHGSFSJS,ObjetoMoneda)
-		}
-		catch(e){}
 	}
 }
 
@@ -3032,6 +3043,7 @@ VVCDGUUDWR=function(MuestraDIV)
 			if (JHKSJDHVKJ<=0)
 			{
 				HYSGUYGUYT.stop();
+				HYSGUYGUYT.remove();
 				if (SNJCSVWFCC()==true)
 				{
 					NXVIOTGLQV(2);
@@ -3059,6 +3071,7 @@ VVCDGUUDWR=function(MuestraDIV)
 NCTURHDRYW=function()
 {
 	HYSGUYGUYT.stop();
+	HYSGUYGUYT.remove();
 	var d=document.getElementById('DivEligePareja');
 	d.style.display = 'none';
 }
@@ -3242,7 +3255,8 @@ NXVIOTGLQV=function(AHGGSIUEBA)
 
 		try
 		{
-			socket.emit('IWOWOOKJKJ',QPHHGPRJAI[0],
+			console.log("Envio cambio pareja");
+			socket.emit('IWOWOOKJKJ',QPHHGPRJAI[0],			
 			 function(XQLEOGMJYG)
 			 {			 
 				EXBCVLOIYJ(XQLEOGMJYG,'IWOWOOKJKJ');
@@ -3252,11 +3266,15 @@ NXVIOTGLQV=function(AHGGSIUEBA)
 			
 			
 			KYDWXPGHVY.splice(0,1000) //Importante no quitarlo. Al hacer los giros con el array de jugadores, hay que volver a calcular los desconectados y por eso se limpia el array
+			LRYVPILWKS();
 		
 		}
-		catch(e){}
+		catch(e)
+		{
+			console.log("Envio cambio pareja error");
+		}
 		
-		LRYVPILWKS();
+		
 		////console.log("Llamada 1")
 		//IOJCRKJSRL();
 	}
@@ -3762,7 +3780,9 @@ JTQKCQEDPC=function()
 
 	GBROPWPVSK=true;
 	HUUCUYFBLW.stop();
+	HUUCUYFBLW.remove();
 	TKXPPGUPVV.stop();
+	TKXPPGUPVV.remove();
 	log(true,"Es el Turno de "+DVNRTQIWGL+". Yo soy "+TFSXFTYVGQ);
 
 
@@ -5560,6 +5580,7 @@ setEventHandlers = function () { //ESTE
 					{
 						socket.emit("Reconectado", XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,XPBCVAGCDQ[TFSXFTYVGQ-1].Sala,false,socket.id,MQUGCIUQII);	  
 						timererror.stop();
+						timererror.remove();
 					}
 					catch(e){
 					   SVHMCOYULR("¡Corregir!"+ XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD);
@@ -6076,6 +6097,21 @@ switch (Key)
 	return NMBAYQIQHE;
 }
 
+EliminaMensaje=function(ArrayPasar)
+{
+	var timererror=YMHIHSNADE.time.create(false);
+	timererror.loop(100,function()
+	{ 
+		try
+		{
+			socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ);
+			timererror.stop();
+			timererror.remove();
+		}
+		catch(e){}
+	});
+	timererror.start();
+}
 LVEMXLIFKA=function(ArrayTareasServidor,New)
 {
 	var i;
@@ -6297,11 +6333,8 @@ LVEMXLIFKA=function(ArrayTareasServidor,New)
 						case 'OUPPFUDFTA' :	//ok	
 							//console.log("Lanza tarea OUPPFUDFTA");
 							NSIRYROROW(ArrayPasar[0].JugadoresEnSala,ArrayPasar[0].SalaJoin,ArrayPasar[0].ArrayEnviar,ArrayPasar[0].ESKTEXAVHU,ArrayPasar[0].OYJAHGADFQ);	
-							try
-							{
-								socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
-							}
-							catch(e){}
+							
+							EliminaMensaje(ArrayPasar);
 						break;		
 						
 						case 'FFGKWCDVFE' :	//ok	
@@ -6312,11 +6345,7 @@ LVEMXLIFKA=function(ArrayTareasServidor,New)
 							 //{
 								 //console.log("Lanza tarea baraja "+ArrayPasar[0].OYJAHGADFQ);
 								KLDULSMKMA(ArrayPasar[0].data,ArrayPasar[0].RDBQUAVHEP,ArrayPasar[0].MQUGCIUQII,ArrayPasar[0].OYJAHGADFQ);	
-								try
-								{
-									socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
-								}
-								catch(e){}
+								EliminaMensaje(ArrayPasar);
 								 //console.log("Tarea baraja desde server");
 							 //}
 							 //else
@@ -6329,52 +6358,31 @@ LVEMXLIFKA=function(ArrayTareasServidor,New)
 						case 'VMCFXIVSKH' :	//ok	
 							//console.log("Lanza tarea posición");
 							  XWGQYYRRQO(ArrayPasar[0].UHTPGPRUJA,ArrayPasar[0].SJVCMXWVVI,ArrayPasar[0].BBSGITWRQX,ArrayPasar[0].OYJAHGADFQ);
-							  try
-							  {
-								socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
-							  }
-							  catch(e){}
+							  EliminaMensaje(ArrayPasar);
 						break;				
 						
 						case 'PMXHPCMRIF' :	//ok
 							console.log("Lanza tarea centro desde buffer "+ArrayPasar[0].OYJAHGADFQ);
 							NOGEVUYFEW(ArrayPasar[0].UHTPGPRUJA,ArrayPasar[0].SJVCMXWVVI,ArrayPasar[0].Turno,ArrayPasar[0].AGTXFNIKQD,ArrayPasar[0].QKVJASWVEO,ArrayPasar[0].OYJAHGADFQ);
-							try
-							{
-								socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
-							}
-							catch(e){}
+							EliminaMensaje(ArrayPasar);
 						break;				
 							
 						case 'VOJPSKOTNY' :	//ok
 							//console.log("Lanza tarea comenzad");
 							 NUWTGXUUTS(false,ArrayPasar[0].OYJAHGADFQ);
-							try
-							{
-								socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
-							}
-							catch(e){}
+							EliminaMensaje(ArrayPasar);
 						break;		
 						
 						case 'IPGXRVPSID' :	//ok
 							//console.log("Lanza tarea cante");
 							  TGLVJXEMKD(ArrayPasar[0].UHTPGPRUJA,ArrayPasar[0].OMDVKATFLQ,ArrayPasar[0].AWCCMSCOPO,ArrayPasar[0].OYJAHGADFQ);
-							  try
-							  {
-								socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
-							  }
-							  catch(e){}
+							  EliminaMensaje(ArrayPasar);
 						break;		
 				
 						case 'RNLCJXJTGF' :		//ok
 							//console.log("Lanza tarea cambio7");
 							  MBDMSUIWEH(ArrayPasar[0].UHTPGPRUJA,ArrayPasar[0].SJVCMXWVVI,ArrayPasar[0].OYJAHGADFQ);
-							  try
-							  {
-								socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
-							  }
-							  catch(e)
-							  {}
+							  EliminaMensaje(ArrayPasar);
 						break;		
 			  
 						/*case 'HKJSDHFUIW' :	 //ok
@@ -6388,22 +6396,12 @@ LVEMXLIFKA=function(ArrayTareasServidor,New)
 						case 'GCOMOMYQBP' :	//ok
 							console.log("Lanza tarea desconectado "+ArrayPasar[0].OYJAHGADFQ);
 							  GDRQVXOCBL(ArrayPasar[0].SSUNXNEEHN,ArrayPasar[0].WWKVHIMWYD,ArrayPasar[0].posicionJugador,ArrayPasar[0].EFWXTVMKRH,ArrayPasar[0].ESKTEXAVHU,ArrayPasar[0].OYJAHGADFQ) 
-							  try
-							  {
-								socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
-							  }
-							  catch(e)
-							  {}
+							  EliminaMensaje(ArrayPasar);
 						case 'TGUUXMBTHT' :	//ok
 							console.log("Lanza tarea reconectado desde buffer "+ArrayPasar[0].OYJAHGADFQ+" "+ArrayPasar[0].NuevoId);
 							console.log("Con estas tareas "+ArrayPasar[0].ArrayTareasServidor)
 							BCVWETKAKG(ArrayPasar[0].SSUNXNEEHN,ArrayPasar[0].WWKVHIMWYD,ArrayPasar[0].posicionJugador,ArrayPasar[0].NuevoId, ArrayPasar[0].ArraySalaEnviar, ArrayPasar[0].ESKTEXAVHU,ArrayPasar[0].ArrayTareasServidor,ArrayPasar[0].OYJAHGADFQ)
-							try
-							{
-								socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
-							}
-							catch(e)
-							{}
+							EliminaMensaje(ArrayPasar);
 						break;	
 
 						
@@ -6716,50 +6714,59 @@ MCMWUEHUWH=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,WHNGHD
 			OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
 		NBEJWDVLLV.push(KCPHFPSPLQ);
 		QPHHGPRJAI.push(KCPHFPSPLQ);
-		
-		try
-		{
-			socket.emit('JHWIEIWIIW',QPHHGPRJAI[0],  
-			 function(XQLEOGMJYG)
-			 {			 
-				EXBCVLOIYJ(XQLEOGMJYG,'JHWIEIWIIW');
-			 }
-			);	
-			QPHHGPRJAI.splice(0,1000);		
-		}
-		catch(e)
-		{}
+
+		var timererror=YMHIHSNADE.time.create(false);
+		timererror.loop(200,function(){		
+			try
+			{
+				//console.log("OK");
+				socket.emit('JHWIEIWIIW',QPHHGPRJAI[0],  
+				 function(XQLEOGMJYG)
+				 {			 
+					EXBCVLOIYJ(XQLEOGMJYG,'JHWIEIWIIW');
+				 }
+				);	
+				QPHHGPRJAI.splice(0,1000);		
+				timererror.stop();
+				timererror.remove();
+				
+				for (i=0;i<=XPBCVAGCDQ.length-1;i++)
+				{
+					if (TFSXFTYVGQ==ESKTEXAVHU && XPBCVAGCDQ[i].XJARYUVBCB==true)
+					{
+						////console.log("Enviando..");
+						var OYJAHGADFQ=Math.random()*100000;
+						var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ[i].AURESXCGMK,MQUGCIUQII,
+							OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
+						NBEJWDVLLV.push(KCPHFPSPLQ);
+						QPHHGPRJAI.push(KCPHFPSPLQ);
+						
+						try
+						{
+							socket.emit('JHWIEIWIIW',QPHHGPRJAI[0],  
+							 function(XQLEOGMJYG)
+							 {			 
+								EXBCVLOIYJ(XQLEOGMJYG,'JHWIEIWIIW');
+							 }
+							);	
+							QPHHGPRJAI.splice(0,1000);		
+						}
+						catch(e){}
+						//KYDWXPGHVY.splice(0,1000);
+				
+				
+					}
+				}
+			}
+			catch(e)
+			{}
+		});
+		timererror.start();
 		//KYDWXPGHVY.splice(0,1000);
 		
 		////console.log("Soy "+TFSXFTYVGQ+" "+ESKTEXAVHU);
 		
-		for (i=0;i<=XPBCVAGCDQ.length-1;i++)
-		{
-			if (TFSXFTYVGQ==ESKTEXAVHU && XPBCVAGCDQ[i].XJARYUVBCB==true)
-			{
-				////console.log("Enviando..");
-				var OYJAHGADFQ=Math.random()*100000;
-				var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ[i].AURESXCGMK,MQUGCIUQII,
-					OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
-				NBEJWDVLLV.push(KCPHFPSPLQ);
-				QPHHGPRJAI.push(KCPHFPSPLQ);
-				
-				try
-				{
-					socket.emit('JHWIEIWIIW',QPHHGPRJAI[0],  
-					 function(XQLEOGMJYG)
-					 {			 
-						EXBCVLOIYJ(XQLEOGMJYG,'JHWIEIWIIW');
-					 }
-					);	
-					QPHHGPRJAI.splice(0,1000);		
-				}
-				catch(e){}
-				//KYDWXPGHVY.splice(0,1000);
-		
-		
-			}
-		}
+
 	}
 	
 	////console.log("OGGWQECXBK: cambio parejas");
@@ -6776,7 +6783,7 @@ BMNBIWEGUY=function()
 	var IUWYUIYWIN=false;
 	//1.0.9 NKJHKJHHHE.push();
 	////console.log("Recibiendo respuestas: "+NKJHKJHHHE.length+" ");
-	//console.log("Llega el OK de todos")
+	console.log("Llega el OK de todos")
 	NNSHEUERGY();
 
 	
@@ -8011,19 +8018,31 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,EFWXTVMKRH,Qui
 			
 			
 			//1.0.6  && ESKTEXAVHU==TFSXFTYVGQ
-			/*if (AGKVNAGGLB.length==0 && VDKOVQXHON.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && XPBCVAGCDQ.length>=4 && ESKTEXAVHU==TFSXFTYVGQ && JHHWEKWEJK==false && FReconectando(true)==false) //1.0.8 JHHWEKWEJK==false)
-			{
-				//alert("jj");
-				console.log("Nueva partida desconecetado");
-				
-				KPQSPDMKJE(DVNRTQIWGL);
-								if (KYLIAIETHX==false)
+			
+			var timernuevapartida=YMHIHSNADE.time.create(false);
+			var TiempoParar=6;
+			timernuevapartida.loop(1000,function(){
+										
+				TiempoParar--;						
+				if (AGKVNAGGLB.length==0 && VDKOVQXHON.length==0 && KNVKGHHTYC.length==0 && CBCNHFGWLU.length==0 && XPBCVAGCDQ.length>=4 && ESKTEXAVHU==TFSXFTYVGQ && JHHWEKWEJK==true && FReconectando(true)==false && UEWYIUWIVW(DVNRTQIWGL)==false   ) //1.0.8 JHHWEKWEJK==false)
 				{
-					socket.emit("Consola","Nueva partida desconectado"+TFSXFTYVGQ);
+					//alert("jj");
+					console.log("Nueva partida desconectado");
+					
+					timernuevapartida.stop();
+					timernuevapartida.remove();
+					KPQSPDMKJE(DVNRTQIWGL);
+					
 				}
-				////console.log("Llamada 7");
-				//IOJCRKJSRL();
-			}*/
+				
+				if (TiempoParar<=0)
+				{
+					timernuevapartida.stop();
+					timernuevapartida.remove();
+					
+				}
+			});
+			timernuevapartida.start();
 		}
 	
 	}
@@ -8035,12 +8054,14 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,EFWXTVMKRH,Qui
 	
 	console.log("RECUPERA_ XJARYUVBCB");
 	
+	
+	//SVHMCOYULR("¡Recuperando! :)")
 	var timerdelay;
 	
 	timerdelay=YMHIHSNADE.time.create(false);
-	
 	timerdelay.add(5000, function()
 	{	
+		
 		console.log("DELAY");	
 		try
 		{
@@ -8048,6 +8069,7 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,EFWXTVMKRH,Qui
 		}
 		catch(e){}
 		timerdelay.stop();
+		timerdelay.remove();
 		OGGWQECXBK(TXLWIIINGQ,false,true); //Fuera para que se lance el superorganizador aunque no tenga tareas por hacer
 	}
 	);
@@ -8230,7 +8252,9 @@ BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,Nuevo
 				console.log("PARO EL TIEMPO");
 				
 				HUUCUYFBLW.stop();
+				HUUCUYFBLW.remove();
 				TKXPPGUPVV.stop();
+				TKXPPGUPVV.remove();
 			}
 			else
 			{
@@ -8968,6 +8992,7 @@ AYAOSXTCBR  = function() {
 						console.log("RECONECTADO MINIMIZADO");
 						socket.emit("Reconectado", XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,XPBCVAGCDQ[TFSXFTYVGQ-1].Sala,true,socket.id,MQUGCIUQII);	
 						timererror.stop();
+						timererror.remove();
 					}
 					catch(e)
 					{
@@ -10586,7 +10611,7 @@ if (QueHago==0)
 			console.log("Apunto de crear baraja recibida");
 			
 			
-			if (EGPDVIEJEL==true)
+			/*if (EGPDVIEJEL==true)
 			{
 				console.log("BORRO TODOS LOS TIMERS");
 				try
@@ -10595,14 +10620,25 @@ if (QueHago==0)
 					PPWJOWHOIW();
 				}
 				catch(e){}
-			}
+			}*/
 			
 			CVTBLMKIGL.loop(1000, function(){
 				console.log("dentro TKXPPGUPVV barajarecibida "+MQUGCIUQII+"   "+KKAJSKKAQC);
 				//log(true, "Dando vueltas como un capullo2 "+Data.length+" BDEFDQUJJE "+BDEFDQUJJE.isRunning+" CKOUBGTDUF "+CKOUBGTDUF.isRunning+" JLFYUAKDIJ "+JLFYUAKDIJ.isRunning+" PQUFIBKJJH "+PQUFIBKJJH.isRunning+" LJRRHVSVKD "+LJRRHVSVKD.isRunning+ "  LCYAHFBDTT "+LCYAHFBDTT.isRunning);
 				//if (!BDEFDQUJJE.isRunning  && !CKOUBGTDUF.isRunning  && !JLFYUAKDIJ.isRunning && !PQUFIBKJJH.isRunning && !LJRRHVSVKD.isRunning && !LCYAHFBDTT.isRunning)
 				//if (JEHYBALODM.length==0)
-				if (CompruebaPartidaFinalizada(KKAJSKKAQC)) //2.0.1 clave:reparto	
+					
+				/*var PartidaComprobar;
+				if (MQUGCIUQII==null || MQUGCIUQII==undefined )
+				{
+					PartidaComprobar=KKAJSKKAQC;
+				}
+				else
+				{
+					PartidaComprobar=MQUGCIUQII;
+				}*/
+				
+				if (CompruebaPartidaFinalizada(MQUGCIUQII,KKAJSKKAQC)) //2.0.1 clave:reparto	
 					{
 						console.log("dentro TKXPPGUPVV barajarecibida2");
 						//console.log("Dando vueltas como un capullo "+ KKAJSKKAQC);
@@ -10613,8 +10649,10 @@ if (QueHago==0)
 						}
 						BorrarTareasObsoletas();
 						CVTBLMKIGL.stop();
+						CVTBLMKIGL.remove();
 						console.log("Limpio CVTBLMKIGL en baraja desde server")
 						MMCDRVCGAV.stop(); //2.0.1
+						MMCDRVCGAV.remove();
 						MQUGCIUQII=KKAJSKKAQC;
 						CLWUDOTYHT(Data,RDBQUAVHEP,TXLWIIINGQ);
 					}
@@ -10725,7 +10763,9 @@ YUXWLFWVRD=function()
 		
 		console.log("QUEDAN "+TiempoAntesDesconexion);
 		HUUCUYFBLW.stop();
+		HUUCUYFBLW.remove();
 		TKXPPGUPVV.stop();
+		TKXPPGUPVV.remove();
 		//console.log("Toma el control a 0 desde Error Conexion");
 		ESKTEXAVHU=0;
 	}

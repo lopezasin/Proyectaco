@@ -46,8 +46,10 @@ CLWUDOTYHT=function(data,RDBQUAVHEP,TXLWIIINGQ){
 	HGMNXSIAPV=false;
 	
 	CVTBLMKIGL.stop();
+	CVTBLMKIGL.remove();
 	console.log("Limpio CVTBLMKIGL en CLWUDOTYHT")
 	MMCDRVCGAV.stop();
+	MMCDRVCGAV.remove();
 	
 	JKLJKLRIRI.kill();
 	NCTURHDRYW();

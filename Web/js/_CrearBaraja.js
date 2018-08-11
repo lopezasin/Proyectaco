@@ -441,8 +441,8 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 	
    });
 	
-	//FXGSEGRXKC=Phaser.ArrayUtils.shuffle(FXGSEGRXKC);
-	//WUHRYVMYBE=Phaser.ArrayUtils.shuffle(WUHRYVMYBE);
+	FXGSEGRXKC=Phaser.ArrayUtils.shuffle(FXGSEGRXKC);
+	WUHRYVMYBE=Phaser.ArrayUtils.shuffle(WUHRYVMYBE);
 
 
 	

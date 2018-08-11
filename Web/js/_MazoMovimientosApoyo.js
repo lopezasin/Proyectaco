@@ -811,17 +811,23 @@ QPGADJGDVQ=function(Jugador7)
 					NBEJWDVLLV.push(KCPHFPSPLQ);
 					QPHHGPRJAI.push(KCPHFPSPLQ);
 
-					try
-					{
-						socket.emit('WROHETMDHX',QPHHGPRJAI[0],
-						 function(XQLEOGMJYG)
-						 {			 
-							EXBCVLOIYJ(XQLEOGMJYG,'WROHETMDHX');
-						 }
-						);						
-						QPHHGPRJAI.splice(0,1000);	
-					}
-					catch(e){}
+					var timererror=YMHIHSNADE.time.create(false);
+					timererror.loop(200,function(){
+						try
+						{
+							socket.emit('WROHETMDHX',QPHHGPRJAI[0],
+							 function(XQLEOGMJYG)
+							 {			 
+								EXBCVLOIYJ(XQLEOGMJYG,'WROHETMDHX');
+							 }
+							);						
+							QPHHGPRJAI.splice(0,1000);	
+							timererror.stop();
+							timererror.remove();
+						}
+						catch(e){}
+					});
+					timererror.start();
 					
 					/////////////	
 					
@@ -1382,17 +1388,23 @@ BHWUWOPQCB=function(DFBVDPETGO,UHTPGPRUJA,PAXBGDCANU, FHEFFYUQFX, EVAILWGGKX, KX
 	NBEJWDVLLV.push(KCPHFPSPLQ);
 	QPHHGPRJAI.push(KCPHFPSPLQ);
 
-	try
-	{
-		socket.emit('OSMNKAMXMY',QPHHGPRJAI[0],
-		 function(XQLEOGMJYG)
-		 {			 
-			EXBCVLOIYJ(XQLEOGMJYG,'OSMNKAMXMY');
-		 }
-		);						
-		QPHHGPRJAI.splice(0,1000);	
-	}
-	catch(e){}
+	var timererror=YMHIHSNADE.time.create(false);
+	timererror.loop(200,function(){
+		try
+		{
+			socket.emit('OSMNKAMXMY',QPHHGPRJAI[0],
+			 function(XQLEOGMJYG)
+			 {			 
+				EXBCVLOIYJ(XQLEOGMJYG,'OSMNKAMXMY');
+			 }
+			);						
+			QPHHGPRJAI.splice(0,1000);
+			timererror.stop();
+			timererror.remove();
+		}
+		catch(e){}
+	});
+	timererror.start();
 	
 	/////////////	
 								
@@ -2410,19 +2422,27 @@ XSWEXRHSJY=function()
 				socket.emit('Consola','Envio listo desconecta '+TFSXFTYVGQ)
 			}*/
 			
-			try
-			{
-				socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
-				 function(XQLEOGMJYG)
-				 {			 
-					EXBCVLOIYJ(XQLEOGMJYG,'BKEMJDLQQM');
-				 }
-				);						
-				QPHHGPRJAI.splice(0,1000);	
-			}
-			catch(e){}
-
-		WRGLRODAXY();
+			var timererror=YMHIHSNADE.time.create(false);
+			timererror.loop(200,function(){
+				try
+				{
+					socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
+					 function(XQLEOGMJYG)
+					 {			 
+						EXBCVLOIYJ(XQLEOGMJYG,'BKEMJDLQQM');
+					 }
+					);						
+					QPHHGPRJAI.splice(0,1000);	
+					WRGLRODAXY();
+					
+					timererror.stop();
+					timererror.remove();
+					
+				}
+				catch(e){}
+			});
+			timererror.start();
+		
 		
 		/////////////////////////////////////////////////////////////
 		//Testando
@@ -2842,6 +2862,7 @@ function IHSCVAKSDJ(sprite) {
 					{
 						//console.log("grrr 3");
 						TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
+						TKXPPGUPVV.remove(); 
 						//1.0.9 KTBOJTXFEU.push(new NQMQGXXHIL(LUCRWXJMDR,TFSXFTYVGQ) );
 						////console.log("BLOQUEO DESDE IHSCVAKSDJ "+TFSXFTYVGQ+" "+LUCRWXJMDR);
 						
@@ -2904,31 +2925,29 @@ function IHSCVAKSDJ(sprite) {
 							NBEJWDVLLV.push(KCPHFPSPLQ);
 							QPHHGPRJAI.push(KCPHFPSPLQ);
 
+							//var timererror=YMHIHSNADE.time.create(false);
 							try
 							{							
 								socket.emit('RYUDYPPOXW',QPHHGPRJAI[0],
 								 function(XQLEOGMJYG)
 								 {			 
 									EXBCVLOIYJ(XQLEOGMJYG,'RYUDYPPOXW');
-									//OROGRNBISW(AGKVNAGGLB,"D");
-										/*////console.log("Borrar: Hola"+XQLEOGMJYG+" - "+CartaMovida);
-										////console.log("Borrar: Lon "+AGKVNAGGLB.length);
-										for (var j=0;j<=AGKVNAGGLB.length-1;j++)
-										{
-											////console.log("Borrar Recorro "+AGKVNAGGLB[j].name);
-											if (AGKVNAGGLB[j].name==CartaMovida)
-											{
-												////console.log("Borrar: Elimino "+CartaMovida)
-												AGKVNAGGLB.splice(j,1);	
-												OROGRNBISW(AGKVNAGGLB,"D");
-												break;
-											}
-										}*/
-										
-
 								 }
 								);						
 								QPHHGPRJAI.splice(0,1000);	
+								
+								if (AGKVNAGGLB[i].SGCSHJVERI==TGTQPBEQFR)
+								{
+									if (AGKVNAGGLB[i].HVCFEWNDRF==1)
+									{
+										WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,true,false);
+									}
+									if (AGKVNAGGLB[i].HVCFEWNDRF==3)
+									{
+										WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,false,true);
+									}
+								}
+							
 							}
 							catch(e){}
 							
@@ -2937,18 +2956,7 @@ function IHSCVAKSDJ(sprite) {
 							
 							
 							
-							//socket.emit('RYUDYPPOXW', DFBVDPETGO,TFSXFTYVGQ,AGKVNAGGLB[i].TNFAGGMKXD.name,DVNRTQIWGL, LUCRWXJMDR, EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD) ;
-							if (AGKVNAGGLB[i].SGCSHJVERI==TGTQPBEQFR)
-							{
-								if (AGKVNAGGLB[i].HVCFEWNDRF==1)
-								{
-									WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,true,false);
-								}
-								if (AGKVNAGGLB[i].HVCFEWNDRF==3)
-								{
-									WTERKRAPBE(TFSXFTYVGQ,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,false,true);
-								}
-							}
+
 						}
 
 						
@@ -4431,6 +4439,7 @@ JHKJWHCKWE=function(){
 			}	
 		}
 		
+		console.log("Mueve para barajar "+JLOISTPAPQ.length)
 		if (JLOISTPAPQ.length>0)
 		{
 			for (i=0;i<=JLOISTPAPQ.length-1;i++)
@@ -4600,7 +4609,7 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 	var QJUYVEJMEB;
 	var i;
 
-	//console.log("Crear AWCCMSCOPO puntuacion")
+	console.log("Crear AWCCMSCOPO puntuacion")
 	if (HGFAUFDVDF()==true) //2.0.1 Añado JHHWEKWEJK==false
 	{
 		
@@ -4621,7 +4630,9 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 		
 		JHHWEKWEJK=true; //1.0.8 Para controlar que si alguien desconecta no reparte echando leches (onsocketdesconectado)
 		HUUCUYFBLW.stop();
+		HUUCUYFBLW.remove();
 		TKXPPGUPVV.stop();
+		TKXPPGUPVV.remove();
 		UYAKDBNLTD();
 	
 		if (EVAILWGGKX==false || FReconectando(true)==true)
@@ -4980,7 +4991,7 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 											d.style.display = 'none';
 											//d.style.zIndex=-1;
 												
-												////console.log("deberia saltar");
+												console.log("deberia saltar");
 												//console.log("MARCADOR NUESTRO "+JVQXQGYDHH+" MARCADOR RIVAL " +CNCCBHQJKL+"  PARTIDASCOTO "+MFENMIFPUA)
 												if (JVQXQGYDHH==MFENMIFPUA || CNCCBHQJKL==MFENMIFPUA)
 												{
@@ -5011,7 +5022,7 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 														//JHHWEKWEJK=false;  2.0.7
 								
 														//console.log("Antes remove");
-														if (EGPDVIEJEL==false)
+														/*if (EGPDVIEJEL==false)
 														{
 															console.log("BORRO TODOS LOS TIMERS");
 															try
@@ -5020,7 +5031,7 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 																PPWJOWHOIW();
 															}
 															catch(e){}
-														}
+														}*/
 														
 														console.log("BORRA llega hasta aqui");
 														
@@ -5089,6 +5100,15 @@ MHELAUXKXR=function()
 {	
 
 	BNWHJGHWUW.removeAll(); //2.0.7 para poder chatear durante los recuentos. Que se mate en este momento.
+	console.log("BORRO TODOS LOS TIMERS");
+	try
+	{
+		YMHIHSNADE.time.removeAll()				
+		PPWJOWHOIW();
+	}
+	catch(e){}
+															
+															
 	console.log("He sido asesinado de verdad");
 	try
 	{
@@ -5227,27 +5247,33 @@ HGMNXSIAPV=false; //1.0.9
 if (HUUCUYFBLW!=undefined) //2.0.1 todo este if y el contenido
 {
 	HUUCUYFBLW.stop();
+	HUUCUYFBLW.remove();
 }
 if (HYSGUYGUYT!=undefined)
 {
 	HYSGUYGUYT.stop();
+	HYSGUYGUYT.remove();
 }
 if (BGHJGDWJVI!=undefined)
 {
 	BGHJGDWJVI.stop();
+	BGHJGDWJVI.remove();
 }	
 if (CVTBLMKIGL!=undefined)
 {
 	CVTBLMKIGL.stop();
+	CVTBLMKIGL.remove();
 	console.log("Limpio CVTBLMKIGL")
 }	
 if (MMCDRVCGAV!=undefined)
 {
 	MMCDRVCGAV.stop();
+	MMCDRVCGAV.remove();
 }	
 if (TKXPPGUPVV!=undefined)
 {
 	TKXPPGUPVV.stop();
+	TKXPPGUPVV.remove();
 }	
 
 
@@ -5617,13 +5643,15 @@ KPQSPDMKJE=function(SQIRFQMWSL)
 		
 			if (EGPDVIEJEL==false) //2.0.1
 			{
+				var idPartidaVieja=MQUGCIUQII;
+				
 				MQUGCIUQII=Math.random()*100000;
-				CompruebaPartidaFinalizada(MQUGCIUQII)
+				CompruebaPartidaFinalizada(idPartidaVieja,MQUGCIUQII)
 			}
 				
 			
 			var RDBQUAVHEP=SQIRFQMWSL; //ILA RDBQUAVHEP he puesto el var
-			//console.log("Nueva partidar")
+			console.log("Nueva partidar")
 
 			//var BRQFVLOBSF=YMHIHSNADE.add.image(-200,-200,'A01');
 			
@@ -5672,19 +5700,18 @@ KPQSPDMKJE=function(SQIRFQMWSL)
 								//console.log("Creo yo la baraja");
 								console.log("CREO LA BARAJA Y LA ENVIO")	;
 								
-								if (FReconectando()==false)
-								{
-									ETKKAJPFXQ(RDBQUAVHEP);	
-									
-									log(false,WUHRYVMYBE.length);
-									//log(false,"ROOM "+socket.room);
-									//console.log("A NQAQCOINMY");
-									log(true,"... y la envío")
-									log(true,"Envío que reparte: "+RDBQUAVHEP);
-									//console.log("A enviar baraja2");
-									HKJWHCKHWQ(WUHRYVMYBE,DFBVDPETGO,RDBQUAVHEP,EVAILWGGKX,XPBCVAGCDQ,(JVQXQGYDHH+CNCCBHQJKL));	
-								}
+
+								ETKKAJPFXQ(RDBQUAVHEP);	
 								
+								log(false,WUHRYVMYBE.length);
+								//log(false,"ROOM "+socket.room);
+								//console.log("A NQAQCOINMY");
+								log(true,"... y la envío")
+								log(true,"Envío que reparte: "+RDBQUAVHEP);
+								//console.log("A enviar baraja2");
+								HKJWHCKHWQ(WUHRYVMYBE,DFBVDPETGO,RDBQUAVHEP,EVAILWGGKX,XPBCVAGCDQ,(JVQXQGYDHH+CNCCBHQJKL));	
+							
+							
 							}
 						}
 					}
@@ -5717,7 +5744,9 @@ BRJIESNORM=function()
 	MYQBNBVHKU=false;
 	HGMNXSIAPV=false;
 	HUUCUYFBLW.stop();
+	HUUCUYFBLW.remove();
 	TKXPPGUPVV.stop();
+	TKXPPGUPVV.remove();
 	//IEQDMBJCAY.kill();		
 	//YGTNAODFHW.kill();	
 	//IEQDMBJCAY.loadTexture('Boton_cantar_off', 0);
@@ -6207,19 +6236,24 @@ HKJWHCKHWQ=function(WUHRYVMYBE,DFBVDPETGO,RDBQUAVHEP,EVAILWGGKX,XPBCVAGCDQ,KXAWT
 	QPHHGPRJAI.push(KCPHFPSPLQ);
 
 	//console.log("envio baraja");
-	try
-	{
-		socket.emit('NQAQCOINMY',QPHHGPRJAI[0],
-		 function(XQLEOGMJYG)
-		 {		
-			//console.log("la recibió el server");	 
-			EXBCVLOIYJ(XQLEOGMJYG,'NQAQCOINMY');
-		 }
-		);						
-		QPHHGPRJAI.splice(0,1000);	
-	}
-	catch(e){}
-
+	var timererror=YMHIHSNADE.time.create(false);
+	timererror.loop(200,function(){
+		try
+		{
+			socket.emit('NQAQCOINMY',QPHHGPRJAI[0],
+			 function(XQLEOGMJYG)
+			 {		
+				//console.log("la recibió el server");	 
+				EXBCVLOIYJ(XQLEOGMJYG,'NQAQCOINMY');
+			 }
+			);						
+			QPHHGPRJAI.splice(0,1000);	
+			timererror.stop();
+			timererror.remove();
+		}
+		catch(e){}
+	});
+	timererror.start();
 	
 	/////////////		
 }

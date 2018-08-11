@@ -37,7 +37,9 @@ IA=function(UHTPGPRUJA,RondaQueMueve){
 	////console.log("Llega a IA");
 	//alert("s");
 	TKXPPGUPVV.stop(); //1.0.9
+	TKXPPGUPVV.remove();
 	HUUCUYFBLW.stop(); //raka
+	HUUCUYFBLW.remove();
 	
 	////console.log("Turno "+DVNRTQIWGL+" Control: "+ESKTEXAVHU+" Soy: "+TFSXFTYVGQ+" Mandatory: "+Mandatory+" to fixed "+HUUCUYFBLW.duration.toFixed(0));
 	if (  ( (HGMNXSIAPV==true && MYQBNBVHKU==true &&  UHHXSNXXJK<JLVDFTPUNI && PXGXKDDNFK<JLVDFTPUNI) ||  (HGMNXSIAPV==true && EVAILWGGKX==false && MYQBNBVHKU==true)     ) 
@@ -54,7 +56,9 @@ IA=function(UHTPGPRUJA,RondaQueMueve){
 		
 	{
 		HUUCUYFBLW.stop();
+		HUUCUYFBLW.remove();
 		TKXPPGUPVV.stop();
+		TKXPPGUPVV.remove();
 		
 		////console.log("IA Venga vamos");
 		BMITYYFCGC=VDKOVQXHON.length+1;
@@ -359,6 +363,7 @@ IA=function(UHTPGPRUJA,RondaQueMueve){
 										if (ContinuarTry==true)
 										{
 											timererror.stop();
+											timererror.remove();
 											QPHHGPRJAI.splice(0,1000);	
 											
 
