@@ -2412,6 +2412,11 @@ XSWEXRHSJY=function()
 
 				
 			var OYJAHGADFQ=Math.random()*100000;
+			
+			var timererror=YMHIHSNADE.time.create(false);
+			timererror.loop(200,function(){
+			try
+			{
 			var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,socket.id,MQUGCIUQII,
 				OYJAHGADFQ,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,DFBVDPETGO,'BKEMJDLQQM');
 			NBEJWDVLLV.push(KCPHFPSPLQ);
@@ -2422,16 +2427,14 @@ XSWEXRHSJY=function()
 				socket.emit('Consola','Envio listo desconecta '+TFSXFTYVGQ)
 			}*/
 			
-			var timererror=YMHIHSNADE.time.create(false);
-			timererror.loop(200,function(){
-				try
-				{
+
 					socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
 					 function(XQLEOGMJYG)
 					 {			 
 						EXBCVLOIYJ(XQLEOGMJYG,'BKEMJDLQQM');
 					 }
-					);						
+					);	
+					console.log("Enviado listo "+MQUGCIUQII)
 					QPHHGPRJAI.splice(0,1000);	
 					WRGLRODAXY();
 					
@@ -2439,7 +2442,7 @@ XSWEXRHSJY=function()
 					timererror.remove();
 					
 				}
-				catch(e){}
+				catch(e){console.log("ERROR Enviado listo")}
 			});
 			timererror.start();
 		
@@ -2461,6 +2464,7 @@ WRGLRODAXY=function()
 {
 	var i;
 	
+		console.log("BKEMJDLQQM desconectados1");
 		if (ESKTEXAVHU==TFSXFTYVGQ)
 		{
 			for (i=0;i<=XPBCVAGCDQ.length-1;i++)
@@ -2488,6 +2492,11 @@ WRGLRODAXY=function()
 
 						
 					var OYJAHGADFQ=Math.random()*100000;
+					console.log("BKEMJDLQQM desconectados2");
+					try
+					{
+						
+						
 					var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,XPBCVAGCDQ[i].AURESXCGMK,MQUGCIUQII,
 						OYJAHGADFQ,XPBCVAGCDQ[i].AURESXCGMK,DFBVDPETGO,'BKEMJDLQQM');
 					NBEJWDVLLV.push(KCPHFPSPLQ);
@@ -2498,20 +2507,30 @@ WRGLRODAXY=function()
 						//socket.emit('Consola','Envio listo desconectados al inicio '+XPBCVAGCDQ[i].AURESXCGMK)
 					}*/
 					
-					try
-					{
+
 						socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
 						 function(XQLEOGMJYG)
 						 {			 
 							EXBCVLOIYJ(XQLEOGMJYG,'BKEMJDLQQM');
 						 }
 						);						
+						console.log("BKEMJDLQQM desconectados3");
 						QPHHGPRJAI.splice(0,1000);	
 					}
-					catch(e){}
+					catch(e){
+						console.log("BKEMJDLQQM desconectados4");
+					}
+				}
+				else
+				{
+					console.log("BKEMJDLQQM desconectados22");
 				}
 			}
 			
+		}
+		else
+		{
+			console.log("BKEMJDLQQM desconectados11 "+ESKTEXAVHU+" "+TFSXFTYVGQ);
 		}
 	
 }

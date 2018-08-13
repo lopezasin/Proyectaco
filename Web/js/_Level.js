@@ -14,7 +14,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var KYLIAIETHX=true;
+var KYLIAIETHX=false;
 
 
 var JHGHJAGCMC;
@@ -44,7 +44,7 @@ if (KYLIAIETHX==true){
 else
 {
 	BBWEGOPQUF=150;
-	JHGHJAGCMC='http://192.168.43.100:5000'		
+	JHGHJAGCMC='http://192.168.1.100:5000'		
 }
 
 //var TextoGeneral;
@@ -646,7 +646,16 @@ GTRVLWPSYL=function()
 				//MHELAUXKXR();
 				//XEMENNVXGV(); 
 				//window.location.reload(); //2.0.7
-				ConectaServidorPrueba();  //2.0.7
+				
+				
+				/*var timerdelayreconexion;
+				timerdelayreconexion=YMHIHSNADE.time.create(false);
+				timerdelayreconexion.add(10000, function()
+				{*/
+					ConectaServidorPrueba();  //2.0.7
+				/*}
+				);
+				timerdelayreconexion.start();*/
 		//	}
 		//);
 		//MatameApp.start();
@@ -1544,7 +1553,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 */
 	
 	//SIGUIENTE BLOQUE PRUEBAS
-	/*if (ANCNWHEHOW==undefined)
+	if (ANCNWHEHOW==undefined)
 	{
 		//ANCNWHEHOW.destroy();
 		ANCNWHEHOW= YMHIHSNADE.add.button(1100, 0, 'spr_cantar', function(){ 
@@ -1632,7 +1641,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 		}, this, 2, 1, 0);
 	}
 	MCABGEIGWI.kill();
-	*/
+	
 	
 	
 	if (UEHYPTREIH==undefined)
@@ -3246,6 +3255,8 @@ NXVIOTGLQV=function(AHGGSIUEBA)
 		var QPHHGPRJAI=[];
 		QPHHGPRJAI.splice(0,1000);
 
+		try
+		{
 			
 		var OYJAHGADFQ=Math.random()*100000;
 		var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ,DFBVDPETGO,4,POPEWFWERV,
@@ -3253,8 +3264,7 @@ NXVIOTGLQV=function(AHGGSIUEBA)
 		NBEJWDVLLV.push(KCPHFPSPLQ);
 		QPHHGPRJAI.push(KCPHFPSPLQ);
 
-		try
-		{
+
 			console.log("Envio cambio pareja");
 			socket.emit('IWOWOOKJKJ',QPHHGPRJAI[0],			
 			 function(XQLEOGMJYG)
@@ -5114,7 +5124,7 @@ XEMENNVXGV=function()
 ConectaServidorPrueba=function()
 {
 	DesdeMinimizado=true;
-	
+	AJFQVFUKAP=true;
 	XEMENNVXGV();
 
 }
@@ -5570,7 +5580,10 @@ setEventHandlers = function () { //ESTE
 			  //if (XPBCVAGCDQ.length>0) 
 			  //{
 				  SVHMCOYULR("¡Reconectado!"+ XPBCVAGCDQ[TFSXFTYVGQ-1].WWKVHIMWYD);
-				console.log("Envio al server reconectando "+socket.id);
+				try
+				{
+					console.log("Envio al server reconectando "+socket.id);
+				}catch(e){}
 				//alert("Envio al server reconectando "+socket.id)
 				var timererror=YMHIHSNADE.time.create(false);
 				var ContinuarTry=true;
@@ -6671,18 +6684,41 @@ MCMWUEHUWH=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,WHNGHD
 	LRYVPILWKS();
 	//1.0.9 IOJCRKJSRL();
 	
-	
-	for (i=0; i<=XPBCVAGCDQ.length-1;i++)
+	try
 	{
-		if (EstaArray(XPBCVAGCDQ[i].AURESXCGMK,socket.id))
+		for (i=0; i<=XPBCVAGCDQ.length-1;i++)
 		{
-			TFSXFTYVGQ=(i+1);
-			////console.log("CHANGE2: "+TFSXFTYVGQ)
-			////console.log("SOY con el trucaje"+TFSXFTYVGQ);
-		}
+			if (EstaArray(XPBCVAGCDQ[i].AURESXCGMK,socket.id))
+			{
+				TFSXFTYVGQ=(i+1);
+				////console.log("CHANGE2: "+TFSXFTYVGQ)
+				////console.log("SOY con el trucaje"+TFSXFTYVGQ);
+			}
 
+		}
 	}
+	catch(e)
+	{
+		//////////////
+		var	UYEUYIYECB=IEUIUCYUCC("Error cambiando parejas",40);		
 	
+		if (UYEUYIYECB!="")
+		{
+						
+			UYEUYIYECB.alpha=1
+			var tw = YMHIHSNADE.add.tween(UYEUYIYECB).to( { alpha: 0 }, 1000, KYFMRVNHIQ, true,4000);
+			tw.onComplete.add(function(){
+				UYEUYIYECB.kill();
+				
+				FHKOYDXPCL();
+				MHELAUXKXR();
+				XEMENNVXGV();	
+				
+				
+			});
+		}
+		////////////
+	}
 	////console.log("SOY "+TFSXFTYVGQ);
 	
 	//BSFNXQXOTD.splice(0,1000);
@@ -6707,18 +6743,19 @@ MCMWUEHUWH=function(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,WHNGHD
 
 		 var QPHHGPRJAI=[];
 		QPHHGPRJAI.splice(0,1000);
-
-			
 		var OYJAHGADFQ=Math.random()*100000;
+		var timererror=YMHIHSNADE.time.create(false);
+		timererror.loop(200,function(){		
+		try
+		{
+				
+		var dummie=socket.id; //no quitar. Lo hago para que pete y no meta en el array NBEJWDVLLV el HVCFEWNDRF repetidamente
 		var KCPHFPSPLQ=new GXNRNMAAKW(XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,MQUGCIUQII,
 			OYJAHGADFQ,socket.id,DFBVDPETGO,'JHWIEIWIIW');
 		NBEJWDVLLV.push(KCPHFPSPLQ);
 		QPHHGPRJAI.push(KCPHFPSPLQ);
 
-		var timererror=YMHIHSNADE.time.create(false);
-		timererror.loop(200,function(){		
-			try
-			{
+
 				//console.log("OK");
 				socket.emit('JHWIEIWIIW',QPHHGPRJAI[0],  
 				 function(XQLEOGMJYG)
@@ -8982,7 +9019,12 @@ AYAOSXTCBR  = function() {
 			if (XPBCVAGCDQ.length>0) //2.0.7
 			{
 				//SVHMCOYULR("¡¡ desde minimizado2 !!");
-				console.log("Envio al server en conected "+socket.id);
+				try
+				{
+					console.log("Envio al server en conected "+socket.id);
+				}
+				catch(e){}
+				
 				var timererror=YMHIHSNADE.time.create(false);
 				var ContinuarTry=true;
 				timererror.loop(200,function()
@@ -9576,13 +9618,16 @@ AAQWTFMQMA = function() {
 		}
 
 		
+		try
+		{
+			 if (EstaArray(MMNORPWJDC,socket.id)){ //Se crea la baraja
+				
+				DVNRTQIWGL=1;
+				VVCDGUUDWR(true);
 
-		 if (EstaArray(MMNORPWJDC,socket.id)){ //Se crea la baraja
-			
-			DVNRTQIWGL=1;
-			VVCDGUUDWR(true);
-
-		 }
+			 }
+		}
+		catch(e){}
 		
 	 }
 	 else
@@ -9595,23 +9640,27 @@ AAQWTFMQMA = function() {
 			} 
 		 }
 		 
-		 if (EstaArray(MMNORPWJDC,socket.id))
-		 {	
-			//if (TPUQKKKNMX<=40 || XPBCVAGCDQ[i].Amigo==true)
-			//console.log("Usuarios online "+TPUQKKKNMX);
-			if (TPUQKKKNMX<=40 || XPBCVAGCDQ[0].Amigo==true ) //2.0.1 pongo esto
-			{
-				HJKHDKJHWU.revive();
-			}
-			else
-			{
-				HJKHDKJHWU.kill();
-			}
-		 }
-		 else
+		 try
 		 {
-			HJKHDKJHWU.kill();
+			 if (EstaArray(MMNORPWJDC,socket.id))
+			 {	
+				//if (TPUQKKKNMX<=40 || XPBCVAGCDQ[i].Amigo==true)
+				//console.log("Usuarios online "+TPUQKKKNMX);
+				if (TPUQKKKNMX<=40 || XPBCVAGCDQ[0].Amigo==true ) //2.0.1 pongo esto
+				{
+					HJKHDKJHWU.revive();
+				}
+				else
+				{
+					HJKHDKJHWU.kill();
+				}
+			 }
+			 else
+			 {
+				HJKHDKJHWU.kill();
+			 }
 		 }
+		 catch(e){}
 		 
 		 
 	 }
