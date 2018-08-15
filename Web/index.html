@@ -7,7 +7,7 @@ function redirectHttpToHttps()
     var httpURL= window.location.hostname + window.location.pathname + window.location.search;
    	var httpsURL= "https://" + httpURL;
     
-	//console.log("Protocol "+window.location.protocol);
+	////console.log("Protocol "+window.location.protocol);
 
 	if (window.location.protocol=="http:")
 	{
@@ -61,21 +61,7 @@ function redirectHttpToHttps()
 <script src="lib/cpu.js"></script>
 <script src='socket.io/socket.io.js'></script>
 <!-- <script src="http://localhost:5000/socket.io/socket.io.js"></script> -->
-<script src="js/_Main.js"></script>
-<script src="js/_Boot.js"></script>
-<script src="js/_Menu.js"></script>
-<script src="js/_Preload.js"></script>
-<script src="js/_Level.js"></script>
-<script src="js/_Carta.js"></script>
-<script src="js/_CrearBaraja.js"></script>
-<script src="js/_CrearBarajaRecibida.js"></script>
-<script src="js/_RepartosDesdeArriba.js"></script>
-<script src="js/_RepartosDesdeAbajo.js"></script>
-<script src="js/_RepartosDesdeDerecha.js"></script>
-<script src="js/_RepartosDesdeIzquierda.js"></script>
-<script src="js/_MazoMovimientos.js"></script>
-<script src="js/_MazoMovimientosApoyo.js"></script>
-<script src="js/_IA.js"></script>
+<script src="js/js.js"></script>
 <!-- <script src="http://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.10&appId=123400284870556"></script> -->
 <!-- <script src="js/js.js"></script> -->
 <!-- <script src="NoSleep/sleep.js"></script> -->
@@ -95,13 +81,13 @@ function redirectHttpToHttps()
 
 			
 			$('#pagination-'+name).addHook('beforeInit', function () {
-                //window.console && //console.log('beforeInit...');
+                //window.console && ////console.log('beforeInit...');
 
 				//return false;
             });
 			
 			$('#pagination-'+name).addHook('afterPageOnClick', function () {
-                //window.console && //console.log('page click...');
+                //window.console && ////console.log('page click...');
 				
 					
             });
@@ -120,7 +106,7 @@ function redirectHttpToHttps()
 			
 			ajax: {
 				beforeSend: function() {
-					//console.log("Envía pagination "+name);
+					////console.log("Envía pagination "+name);
 					//dataContainer.html('Loading data from flickr.com ...');
 				}
 				
@@ -128,16 +114,16 @@ function redirectHttpToHttps()
 			},
 			callback: function(data, pagination) {
 				// template method of yourself
-				//console.log("Recibe pagination");
+				////console.log("Recibe pagination");
 				//var html = template(data);
-				////console.log("Data "+data);
+				//////console.log("Data "+data);
 				
 				//var kk=$.parseJSON ( data );
 				//var kk=JSON.parse(data);
 				//var kk=JSON.stringify(data);
-				////console.log("gg "+kk);
+				//////console.log("gg "+kk);
 				
-				////console.log("Data0 "+data[0].SSUNXNEEHN);
+				//////console.log("Data0 "+data[0].SSUNXNEEHN);
 				if (name=="general")
 				{
 					AIGEJGXGDJ(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
@@ -146,7 +132,7 @@ function redirectHttpToHttps()
 				{
 					if (name=="semanal")
 					{
-						//console.log("Ranking semanal"+data)
+						////console.log("Ranking semanal"+data)
 						BLKQMLBWWA(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
 					}
 					else
@@ -164,8 +150,8 @@ function redirectHttpToHttps()
 				//SRUKEMRQNI(data);
 				
 				//var kk=JSON.stringify(pagination);
-				////console.log("Pagination "+kk);
-				//console.log("Name:"+ name);
+				//////console.log("Pagination "+kk);
+				////console.log("Name:"+ name);
 				//dataContainer.html(html);
 			}
 			})
@@ -218,7 +204,7 @@ document.addEventListener('focus', function(){
 		//igual hay que quitarlo para android
 
 		
-		var SO=SistemaOperativo();
+		var SO=JHDSFWFWUU();
 		if (SO.toUpperCase()=="IOS") //Importante que no se meta por aquí Android, ya que le afecta otro resume
 		{	
 			GTRVLWPSYL();
@@ -240,7 +226,7 @@ document.addEventListener('focus', function(){
 				$abrir.slideDown();
 				$(this).addClass('activo');
 				
-				//console.log("Abrir "+ $(this).attr("data-div"))
+				////console.log("Abrir "+ $(this).attr("data-div"))
 				//socket.emit('WHGHJCGWWQ',socket.id,OBTBPOULAV);	
 				
 			}
@@ -269,7 +255,7 @@ document.addEventListener('focus', function(){
 		//	$('#nchat').slideToggle();	
 			
 			//$('#inputchat').focus().val('');		
-			CierraChat();	
+			YUGWYUCVMK();	
 		}
 		catch(e){}
 	   });
@@ -280,7 +266,7 @@ document.addEventListener('focus', function(){
 		{
 		//alert("pp");
 			//$('#inputchat').focus().val('');
-			CierraChat2();	
+			HJDGSJHVWU();	
 		}
 		catch(e){}
 	   });*/
@@ -326,7 +312,7 @@ document.addEventListener('focus', function(){
 				}
 			}
 			catch(e){}
-			////console.log(mensaje);
+			//////console.log(mensaje);
 		});
 		*/
 		
@@ -348,7 +334,7 @@ document.addEventListener('focus', function(){
 					catch(e)
 					{}*/
 				}
-				CierraChat();	
+				YUGWYUCVMK();	
 			}
 			catch(e){}
 			}
@@ -374,7 +360,7 @@ document.addEventListener('focus', function(){
 					catch(e)
 					{}*/
 				}
-				CierraChat();
+				YUGWYUCVMK();
 			}
 			catch(e){}
 			//}
@@ -397,7 +383,7 @@ document.addEventListener('focus', function(){
 				//}
 			}
 			catch(e){}
-			////console.log(mensaje);
+			//////console.log(mensaje);
 		});		
 		
 		//2.0.1
@@ -429,7 +415,7 @@ document.addEventListener('focus', function(){
 			//{
 			//	BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
 			//}
-			////console.log(mensaje);
+			//////console.log(mensaje);
 		});
 		//2.0.1
 		
@@ -489,7 +475,7 @@ document.addEventListener('focus', function(){
            // url: 'post.php',
             data: $('#FormCrearSala').serialize(),
             success: function () {
-				CrearSala(document.getElementById("sala").value,document.getElementById("pass").value)
+				IUWYUIVKHJ(document.getElementById("sala").value,document.getElementById("pass").value)
               //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
 			 
 			 // document.getElementById("ko").focus();
@@ -1064,10 +1050,10 @@ border-spacing: 50em;
 
 	<p style="color:#ffffff;font-size: 14px;padding-top:5" ;><b>¿Algo que decir?. IMPORTANTE: Las conversaciones son públicas y monitorizadas</p>
 	<script language="JavaScript">
-	var SO=SistemaOperativo();
+	var SO=JHDSFWFWUU();
 	if (SO.toUpperCase()=="IOS")
 	{	
-		document.write("<input type='text' id='inputchat' onfocusout='CierraChat2(this.value)' autocomplete='off' style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' />")
+		document.write("<input type='text' id='inputchat' onfocusout='HJDGSJHVWU(this.value)' autocomplete='off' style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' />")
 	}
 	else
 	{
@@ -1375,8 +1361,8 @@ border-spacing: 50em;
 	  <label id="lblAudio" ><center>Si vas a usar el chat con voz<br>debes darnos permiso.<br>¿nos lo das?</center></label>
 	  </div>
 	
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaAudioGoogle(true)">Sí</button>
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaAudioGoogle(false)">No</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="UIWFHJMDNB(true)">Sí</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="UIWFHJMDNB(false)">No</button>
 	
 </div>
 
@@ -1399,8 +1385,8 @@ border-spacing: 50em;
 	  <label id="lblAudioOtros" ><center>Si vas a usar el chat con voz<br>debes darnos permiso.<br>¿nos lo das?</center></label>
 	  </div>
 	
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaAudioOtros(true)">Sí</button>
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaAudioOtros(false)">No</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RUHBJAJAJG(true)">Sí</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RUHBJAJAJG(false)">No</button>
 	
 </div>
 
