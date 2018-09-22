@@ -5,14 +5,15 @@
 function redirectHttpToHttps()
 {
     var httpURL= window.location.hostname + window.location.pathname + window.location.search;
-   	var httpsURL= "https://" + httpURL;
-    
-	////console.log("Protocol "+window.location.protocol);
+        var httpsURL= "https://" + httpURL;
 
-	if (window.location.protocol=="http:")
-	{
-		window.location = httpsURL;
-	}
+        httpsURL2=httpsURL.replace('www.','');
+        console.log("URL2 "+ window.location.hostname);
+
+        if (window.location.protocol=="http:" || httpsURL.indexOf('www')>0 )
+        {
+                window.location = httpsURL2;
+        }
 }
 //redirectHttpToHttps();
 </script>
@@ -582,7 +583,7 @@ function onDeviceReady() {
 
 			//To track a Screen (PageView):
 			window.ga.trackView('Guiñote');
-			window.ga.setAppVersion('2.0.8035');
+			window.ga.setAppVersion('2.0.8036');
 			window.ga.setAllowIDFACollection(true);
 		}
 		catch(e)
