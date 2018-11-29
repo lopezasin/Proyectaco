@@ -813,18 +813,18 @@ StorageGet=function(Consulta)
 	{
 		if (Consulta=="SonidoOnOff")
 		{
-			if (localStorage.SonidoOnOff=="false")
+			if (localStorage.SonidoOnOff=="true" || localStorage.SonidoOnOff==undefined)
 			{
-				QOWECQVXCM=false;
+				QOWECQVXCM=true;
 			}	
 			else
 			{
-				QOWECQVXCM=true;
+				QOWECQVXCM=false;
 			}
 		}
-		if (Consulta=="NXNXBWBBWL")
+		if (Consulta=="NXNXBWBBWL" )
 		{
-			if (localStorage.NXNXBWBBWL=="1")
+			if (localStorage.NXNXBWBBWL=="1" || localStorage.NXNXBWBBWL==undefined)
 			{
 				QOWECQVXCM=1;
 				
@@ -836,7 +836,7 @@ StorageGet=function(Consulta)
 		}		
 		if (Consulta=="AudioChascarrillos")
 		{
-			if (localStorage.AudioChascarrillos=="true")
+			if (localStorage.AudioChascarrillos=="true"  || localStorage.AudioChascarrillos==undefined)
 			{
 				QOWECQVXCM=true;
 				
@@ -849,7 +849,7 @@ StorageGet=function(Consulta)
 
 		if (Consulta=="AudioCantes")
 		{
-			if (localStorage.AudioCantes=="true")
+			if (localStorage.AudioCantes=="true"  || localStorage.AudioCantes==undefined)
 			{
 				QOWECQVXCM=true;
 				
@@ -862,7 +862,7 @@ StorageGet=function(Consulta)
 
 		if (Consulta=="AudioCartas")
 		{
-			if (localStorage.AudioCartas=="true")
+			if (localStorage.AudioCartas=="true"  || localStorage.AudioCartas==undefined)
 			{
 				QOWECQVXCM=true;
 				
