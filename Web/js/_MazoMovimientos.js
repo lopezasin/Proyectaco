@@ -295,7 +295,7 @@ GIDSSFEUNT=function(SinIA)
 					catch(e){}
 				}*/
 				//console.log('Consola', 'Nueva desde SuperOrganizador1')
-				KPQSPDMKJE(DVNRTQIWGL,false); 
+				KPQSPDMKJE(vTurnoConsumido,false); //vTurnoConsumido 2.0.8.37
 			}
 			else
 			{
@@ -321,7 +321,7 @@ GIDSSFEUNT=function(SinIA)
 					catch(e){}
 				}*/
 				//console.log('Consola', 'Nueva desde SuperOrganizador2')
-				KPQSPDMKJE(DVNRTQIWGL,false); 
+				KPQSPDMKJE(vTurnoConsumido,false); //vTurnoConsumido 2.0.8.37
 			}
 			else
 			{
@@ -360,70 +360,75 @@ GIDSSFEUNT=function(SinIA)
 
 						
 						//HUUCUYFBLW = YMHIHSNADE.time.create(false);
-						HUUCUYFBLW.loop(KKKKSKSSKW, function(){			
-
-							if (DVNRTQIWGL!=TFSXFTYVGQ)
-							{
-								HUUCUYFBLW.stop();
-								HUUCUYFBLW.remove();
-							}
-								
-							if (YJNIRPCWEI!=undefined)
-							{
-								YJNIRPCWEI.revive();
-								YJNIRPCWEI.text="";
-							}
+						if (MYQBNBVHKU==true)
+						{
+							//console.log("Tiempo turno "+KKKKSKSSKW)
 							
-							if (JHKSJDHVKJ>GWFPRHAYQK)
-							{
-								YJNIRPCWEI.text="";
-							}
-							else
-							{
-								
-								if (MYQBNBVHKU==true &&  (GBROPWPVSK==false && MNAGVJHWOW()==false ) )
+							HUUCUYFBLW.loop(KKKKSKSSKW, function()
+							{			
+								//console.log("Dando vueltas")
+								if (DVNRTQIWGL!=TFSXFTYVGQ)
 								{
-									//textoContador2=YMHIHSNADE.add.bitmapText(0, 40, 'MiFuenteAmarilla', 'BitmapText', 44);
-									//textoContador2.text="KOO";
+									HUUCUYFBLW.stop();
+									HUUCUYFBLW.remove();
+								}
 									
-									
-									//VTEVNYKAUB.add(textoContador2);
-									//YJNIRPCWEI.revive();
-									YJNIRPCWEI.text="Es mi turno "+JHKSJDHVKJ;
-									//YJNIRPCWEI.tint=Phaser.Color.getColor(110,110,110);
-									//YMHIHSNADE.world.bringToTop(VTEVNYKAUB);
+								if (YJNIRPCWEI!=undefined)
+								{
+									YJNIRPCWEI.revive();
+									YJNIRPCWEI.text="";
 								}
 								
-							}
-
-							
-							if (JHKSJDHVKJ<=0 && (GBROPWPVSK==false && MNAGVJHWOW()==false ) )
-							{
-								YJNIRPCWEI.text="";
-								YJNIRPCWEI.kill();
-								TKXPPGUPVV.stop();
-								TKXPPGUPVV.remove();
-								HUUCUYFBLW.stop();
-								HUUCUYFBLW.remove();
-								//socket.emit("Consola","IA desde 1. Soy el jugador "+TFSXFTYVGQ);
-								if (GBROPWPVSK==false && MNAGVJHWOW()==false ) 
+								if (JHKSJDHVKJ>GWFPRHAYQK)
 								{
-									//IA(DVNRTQIWGL,LUCRWXJMDR,MQUGCIUQII);
-									LlamadaIA(DVNRTQIWGL,LUCRWXJMDR,MQUGCIUQII);
+									YJNIRPCWEI.text="";
 								}
-								AJFQVFUKAP=true; //1.0.8	
-								UWYHEIVJHX=0;
-							}
-							else
-							{
-								JHKSJDHVKJ=JHKSJDHVKJ-1;
-								UWYHEIVJHX=JHKSJDHVKJ;
-							}
-					
-						});				
-						HUUCUYFBLW.start();
+								else
+								{
+									
+									if (MYQBNBVHKU==true &&  (GBROPWPVSK==false && MNAGVJHWOW()==false ) )
+									{
+										//textoContador2=YMHIHSNADE.add.bitmapText(0, 40, 'MiFuenteAmarilla', 'BitmapText', 44);
+										//textoContador2.text="KOO";
+										
+										
+										//VTEVNYKAUB.add(textoContador2);
+										//YJNIRPCWEI.revive();
+										YJNIRPCWEI.text="Es mi turno "+JHKSJDHVKJ;
+										//YJNIRPCWEI.tint=Phaser.Color.getColor(110,110,110);
+										//YMHIHSNADE.world.bringToTop(VTEVNYKAUB);
+									}
+									
+								}
+
+								
+								if (JHKSJDHVKJ<=0 && (GBROPWPVSK==false && MNAGVJHWOW()==false ) )
+								{
+									YJNIRPCWEI.text="";
+									YJNIRPCWEI.kill();
+									TKXPPGUPVV.stop();
+									TKXPPGUPVV.remove();
+									HUUCUYFBLW.stop();
+									HUUCUYFBLW.remove();
+									//socket.emit("Consola","IA desde 1. Soy el jugador "+TFSXFTYVGQ);
+									if (GBROPWPVSK==false && MNAGVJHWOW()==false ) 
+									{
+										//IA(DVNRTQIWGL,LUCRWXJMDR,MQUGCIUQII);
+										LlamadaIA(DVNRTQIWGL,LUCRWXJMDR,MQUGCIUQII);
+									}
+									AJFQVFUKAP=true; //1.0.8	
+									UWYHEIVJHX=0;
+								}
+								else
+								{
+									JHKSJDHVKJ=JHKSJDHVKJ-1;
+									UWYHEIVJHX=JHKSJDHVKJ;
+								}
+						
+							});				
+							HUUCUYFBLW.start();
+						}
 					}
-
 				}
 				else
 				{
@@ -518,20 +523,39 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='SndNano';
 			}
 			//SFVDEVFFCR.play();
+			
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}
+			
 			break;	
 			
 		case 'WWYKUMYJBJ' :
 			IQQIXCCBNV='VKEJRPCHKN';
 			//VKEJRPCHKN.play();
+			if (SonidoCartas==false)
+			{
+				IQQIXCCBNV="";
+			}
+			
 			break;
 
 		case 'CVRQKCGIRI' :
 			IQQIXCCBNV='LFWPDMQYKH';
+			if (SonidoCartas==false)
+			{
+				IQQIXCCBNV="";
+			}
 			//LFWPDMQYKH.play();
 			break;
 		
 		case 'BNSLLGGORP' :
 			IQQIXCCBNV='BHLJBCKLKE';
+			if (SonidoCantes==false)
+			{
+				IQQIXCCBNV="";
+			}			
 			//BHLJBCKLKE.play();
 			break;	
 		
@@ -546,22 +570,38 @@ switch (OTBFIOUAIV)
 			{			
 				IQQIXCCBNV='SFVDEVFFCR';
 			}
-			//SFVDEVFFCR.play();
+			
+			if (SonidoCantes==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;		
 		
 		case 'LFYAQLIDAI' :
 			IQQIXCCBNV='KMBKTLXURD';
-			//KMBKTLXURD.play();
+			
+			if (SonidoCantes==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;		
 		
 		case 'CEDKIIHEHO' :
 			IQQIXCCBNV='UIYIEWUHCI';
-			//UIYIEWUHCI.play();
+			
+			if (SonidoCantes==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;		
 
 		case '_Veinte' :
 			IQQIXCCBNV='Snd20';
-			//Snd20.play();
+			
+			if (SonidoCantes==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;						
 			
 		case 'CPBEWFVQIJ' :
@@ -578,6 +618,10 @@ switch (OTBFIOUAIV)
 				//GMKJKKAKMH.play();
 			}
 
+			if (SonidoCantes==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;		
 			
 			
@@ -594,6 +638,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='JHGVBSHGIW';
 				//JHGVBSHGIW.play();
 			}
+			
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;	
 
 		case 'CLVBGPCTEJ' :
@@ -609,6 +658,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='IUIUOPPWCC';
 				//IUIUOPPWCC.play();
 			}
+			
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;	
 			
 	
@@ -627,6 +681,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='MWLXRMDQXK';
 				//MWLXRMDQXK.play();
 			}
+			
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;	
 			
 		
@@ -641,7 +700,13 @@ switch (OTBFIOUAIV)
 			{
 				IQQIXCCBNV='NUSHIUSPKE';
 				//NUSHIUSPKE.play();
-			}					
+			}	
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}	
+			
 			break;	
 			
 		case '_Primo' :
@@ -651,7 +716,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='SndPrimo';
 				//DPIDINSQVF.play();
 			}
-				
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;					
 			
 		case '_Gafas' :
@@ -661,7 +730,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='NNXHHWHWWW';
 				//DPIDINSQVF.play();
 			}
-				
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}	
+			
 			break;				
 
 		case 'JCGKEWDJBQ' :
@@ -701,7 +774,11 @@ switch (OTBFIOUAIV)
 			{
 				IQQIXCCBNV='GERQISACAV';
 			}
-			//GERQISACAV.play();
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;		
 
 		case 'CAGCUMKBGA' :
@@ -714,12 +791,20 @@ switch (OTBFIOUAIV)
 			{
 				IQQIXCCBNV='HJGWHJDGJP';
 			}
-			//TSXDMBDDID.play();
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;	
 
 		case 'TSYFNOWESC' :
 			IQQIXCCBNV='VLVITFRSLA';
-			//VLVITFRSLA.play();
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;		
 
 		case 'XKBVJQJRBV' :
@@ -749,6 +834,10 @@ switch (OTBFIOUAIV)
 				PPOQCOUQCE=true;
 			}							
 	
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;		
 
 		case 'LMAYDDUATD' :
@@ -777,7 +866,11 @@ switch (OTBFIOUAIV)
 				//AZZHJKWPLD.play();
 				PPOQCOUQCE=true;
 			}					
-		
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}			
 			break;	
 
 		case 'YURJWRGUNO' :
@@ -834,7 +927,11 @@ switch (OTBFIOUAIV)
 				//UUYECMNSZZ.play();
 				PPOQCOUQCE=true;
 			}						
-							
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;		
 
 		case 'OTSNYLXEHR' :
@@ -849,7 +946,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='HKHCMJEIUU';
 				//HKHCMJEIUU.play();
 			}	
-			
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;	
 			
 		case '_HayPROS' :
@@ -863,7 +964,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='UUQGJQGJAM';
 				
 			}
-			
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;		
 
 		case '_HayProfesionales' :
@@ -877,6 +982,11 @@ switch (OTBFIOUAIV)
 			{
 				IQQIXCCBNV='LWHWUIWHIL';
 			}
+	
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;		
 			
 			
@@ -900,7 +1010,11 @@ switch (OTBFIOUAIV)
 				PPOQCOUQCE=true;
 				//HKHCMJEIUU.play();
 			}	
-			
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;				
 
 						
@@ -917,12 +1031,21 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='UWYIUWJHGS';
 				//JDPOTVNRCT.play();
 			}			
-			
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;		
 
 		case '_Ultimas' :
 			IQQIXCCBNV='NBIQIUICLA';
 			//NBIQIUICLA.play();
+
+			if (SonidoCantes==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;	
 			
 		case '_Grano' :
@@ -932,6 +1055,11 @@ switch (OTBFIOUAIV)
 			{
 				IQQIXCCBNV='JBCWHUIWCW';
 				//JBCWHUIWCW.play();
+			}	
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
 			}				
 			break;						
 			
@@ -959,7 +1087,12 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='AZZHJKWPLD';
 				//AZZHJKWPLD.play();
 				PPOQCOUQCE=true;
-			}						
+			}	
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}	
 			break;		
 
 	case '_Puntos_mas15' :
@@ -992,7 +1125,12 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='AZZHJKWPLD';
 				//AZZHJKWPLD.play();
 				PPOQCOUQCE=true;
-			}						
+			}		
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;						
 
 		case '_Chatarrero' :
@@ -1012,7 +1150,11 @@ switch (OTBFIOUAIV)
 			{
 				IQQIXCCBNV='SndTaustano';
 			}
-					
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;	
 
 		case '_Suerte' :
@@ -1046,7 +1188,11 @@ switch (OTBFIOUAIV)
 			{
 				IQQIXCCBNV='SndPensar';
 			}				
-					
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;	
 		
 		case '_Escupe' :
@@ -1057,7 +1203,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='ZZJJJUHIHI';
 				//ZZJJJUHIHI.play();
 			}						
-					
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;			
 
 		case '_GuinoteOtro' :
@@ -1068,7 +1218,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='BVUWCEFEGY';
 				//BVUWCEFEGY.play();
 			}						
-					
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;		
 
 		case '_Faldas' :
@@ -1079,7 +1233,11 @@ switch (OTBFIOUAIV)
 				IQQIXCCBNV='LEUSNCUWAA';
 				//LEUSNCUWAA.play();
 			}						
-					
+
+			if (SonidoChascarrillos==false)
+			{
+				IQQIXCCBNV="";
+			}				
 			break;							
 	
 	}
@@ -1336,10 +1494,11 @@ FRWLTWDFVM=function(SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 		}		
 			
 		
-		if (VDKOVQXHON.length>=4 ){
-		log(true,"DEBE LIMPIAR MESA");
-		TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
-		TKXPPGUPVV.remove();
+		if (VDKOVQXHON.length>=4 )
+		{
+				log(true,"DEBE LIMPIAR MESA");
+				TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
+				TKXPPGUPVV.remove();
 				TLGMUNNDGH=true; //por si cambia el turno que no me deje tirar
 				
 				UPCWNPYAIE=LUCRWXJMDR;
@@ -1384,6 +1543,7 @@ FRWLTWDFVM=function(SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 			
 			//TTJFVWDTMG=1;
 			DVNRTQIWGL=TTJFVWDTMG;
+			vTurnoConsumido=TTJFVWDTMG;
 			
 			
 			MMMCNMNKTP=DVNRTQIWGL;
@@ -1459,6 +1619,8 @@ FRWLTWDFVM=function(SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 			}	
 			
 			log(true,"EXOQTFOAQQ FRWLTWDFVM: "+UHHXSNXXJK+" "+PXGXKDDNFK+" "+OTGBWFDOND);
+			
+			
 			
 			if (OTGBWFDOND==true)
 			{
@@ -1665,7 +1827,8 @@ FRWLTWDFVM=function(SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 		}
 		else
 		{
-			
+				BloqueoCartaCentro=false;
+				
 				if (VDKOVQXHON.length>0)
 				{
 					var PPOQCOUQCE=false;
@@ -1958,7 +2121,7 @@ JFILXLIVJN=function(TKWCTNGROU,LDCCGSIBKW,TXLWIIINGQ){
 
 DFCCHCJBNP=function(UPCWNPYAIE,TXLWIIINGQ){
 
-
+	BloqueoCartaCentro=false;
 	if (OTGNMRHTVK()==true && 1==2) // 1.0.9
 	{
 		//WWAYLOUPUQ(); 
@@ -2464,14 +2627,14 @@ RQMTWGKGIA=function(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDX
 	
 	if (WXYPYAPQQJ==false)
 	{
-		var	timermanocentro = YMHIHSNADE.time.create(true);
-		timermanocentro.add(2000, function()
+		var	JKWEHVJQXX = YMHIHSNADE.time.create(true);
+		JKWEHVJQXX.add(2000, function()
 		{
 			//console.log("RECUPERA_ organiza mano no encuentro carta");
 			DesbloquearID(TXLWIIINGQ);			
 			OGGWQECXBK(TXLWIIINGQ,true,false);
 		});
-		timermanocentro.start();
+		JKWEHVJQXX.start();
 	}
 
 	

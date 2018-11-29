@@ -231,6 +231,7 @@ PPWJOWHOIW=function()
 	CVTBLMKIGL=YMHIHSNADE.time.create(false);
 	MMCDRVCGAV=YMHIHSNADE.time.create(false);	
 	TKXPPGUPVV=YMHIHSNADE.time.create(false);
+	timerrecolector=YMHIHSNADE.time.create(false);
 }
 
 HUCLBWTDFV=function(UHTPGPRUJA,AWCCMSCOPO,OMDVKATFLQ)
@@ -2589,7 +2590,7 @@ QYYXUWQADX=function(TXLWIIINGQ){
 	XXXJKHDCJK=0;
 	vVecesReconectado=0;
 	
-	HJBVQUGKVY();
+	//HJBVQUGKVY();
 	
 	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		s.to( {x:(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6))  - (YAJVUBPNNW*8) +  COIVBWRMCC)/2)+ (1 *(COIVBWRMCC+ YAJVUBPNNW))
@@ -2727,10 +2728,7 @@ function IHSCVAKSDJ(sprite) {
 	//log(false,"elimina");
 	//socket.emit('Consola',"Paro Drag");
 	
-	
-	
-
-	
+	//console.log(navigator.deviceMemory)
 	//if (EGPDVIEJEL==true)
 	//{	
 		//if (KYLIAIETHX==false)
@@ -2788,7 +2786,7 @@ function IHSCVAKSDJ(sprite) {
 			}
 		}
 		
-		if (KYLIAIETHX==false)
+		if (KYLIAIETHX==false && vCampeonatoOasis==false)
 		{
 
 				
@@ -4551,7 +4549,7 @@ CalculaGBits=function()
 		GbitsNuevoDia=JHGQKGFQGB();
 		
 		
-		if (JVQXQGYDHH==MFENMIFPUA || CNCCBHQJKL==MFENMIFPUA)
+		if (FinCoto())
 		{
 			if (JVQXQGYDHH>CNCCBHQJKL)
 			{
@@ -4613,6 +4611,17 @@ CalculaGBits=function()
 	return ObjetoMoneda;
 }
 
+FinCoto=function()
+{
+	if (vCampeonatoOasis==true)
+	{
+		return ((JVQXQGYDHH+CNCCBHQJKL)==MFENMIFPUA)
+	}
+	else
+	{
+		return (JVQXQGYDHH==MFENMIFPUA || CNCCBHQJKL==MFENMIFPUA)
+	}
+}
 WWAYLOUPUQ=function(TXLWIIINGQ) {
 	
 	var AWCCMSCOPO;
@@ -4850,9 +4859,12 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 				}
 			}
 			
+			if (vCampeonatoOasis==true)
+			{
+				TextoCampeonato.text="Humanos: "+JVQXQGYDHH+" Robots: "+CNCCBHQJKL;
+			}
 			
-			
-			if (JVQXQGYDHH==MFENMIFPUA || CNCCBHQJKL==MFENMIFPUA )
+			if (FinCoto())
 			{
 				var imagenFin;
 			
@@ -4996,7 +5008,7 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 											//d.style.zIndex=-1;
 												
 												//console.log("deberia saltar");
-												if (JVQXQGYDHH==MFENMIFPUA || CNCCBHQJKL==MFENMIFPUA)
+												if (FinCoto())
 												{
 													//var timerdelaymatarconexion;
 													//timerdelaymatarconexion=YMHIHSNADE.time.create(false);
@@ -5139,7 +5151,7 @@ MHELAUXKXR=function()
 	
 	WNEWPCNXPA(); //2.0.1
 	QSAXUCPASV(); //2.0.1
-	YMHIHSNADE.state.start("Level",false,false);
+	YMHIHSNADE.state.start("Level",false,true); //2.0.8.37 el true
 	//XEMENNVXGV(); //1.0.8 Si no fallaba la consulta del ránking desde logindesdeweb
 }
 
@@ -5165,7 +5177,7 @@ JHKWHCWKWC=function()
 	{		
 		PWGIQBBAWX=false;	
 	}*/
-	YMHIHSNADE.state.start("Level",false,false);
+	YMHIHSNADE.state.start("Level",false,true); //2.0.8.37 el true
 	//XEMENNVXGV(); //1.0.8 Si no fallaba la consulta del ránking desde logindesdeweb
 }
 
@@ -5243,6 +5255,8 @@ AJFQVFUKAP=false;
 		
 MYQBNBVHKU=false; //1.0.9
 HGMNXSIAPV=false; //1.0.9
+
+UWYHEIVJHX=0; //2.0.8.37 Para que el contador de turno se recalcule
 
 if (HUUCUYFBLW!=undefined) //2.0.1 todo este if y el contenido
 {
@@ -5493,9 +5507,12 @@ WNEWPCNXPA=function()
 {
 	QSAXUCPASV();
 	
+	BloqueoCartaCentro=false;
 	IHSKJHKWCM=false; 
 
 	BHJCWGIUIU=false;
+	
+	UWYHEIVJHX=0; //2.0.8.37 Para que el contador de turno se recalcule
 	
 	MQUGCIUQII=null; //2.0.1 20180224 NO PONER EN LIMPIARVARIABLES	
 	FSKHWVCMCA=false;
@@ -5539,8 +5556,16 @@ WNEWPCNXPA=function()
 	
 	UHHXSNXXJK=0; //deshaz
 	PXGXKDDNFK=0;//deshaz
+	
+	MarcadorPartidasNuestroFin=JVQXQGYDHH;
+	MarcadorPartidasRivalFin=CNCCBHQJKL;	
+	
 	JVQXQGYDHH=0;
 	CNCCBHQJKL=0;
+	
+	
+
+	
 	XPBCVAGCDQ.splice(0,1000);
 	KYDWXPGHVY.splice(0,1000);
 	//ArrayJugadoresDesconectadosID.splice(0,1000);
@@ -5558,11 +5583,73 @@ WNEWPCNXPA=function()
 	
 	//UIYIUCHWUH(); 2.0.1 lo paso al Level
 }
+CargaOpcionesDefecto=function()
+{
+	var d=document.getElementById("SelectorBaraja");
+    d.selectedIndex=StorageGet("NXNXBWBBWL")
+	
+	var d=document.getElementById("OptAudioChascarrillo");
+    d.checked=StorageGet("AudioChascarrillos")	
+	
+	var d=document.getElementById("OptAudioCantes");
+    d.checked=StorageGet("AudioCantes")	
+	
+	var d=document.getElementById("OptAudioCartas");
+    d.checked=StorageGet("AudioCartas")		
+
+	
+	
+	var TipoBarajaIndex=StorageGet("NXNXBWBBWL");
+	if (TipoBarajaIndex==1)
+	{
+		NXNXBWBBWL="baraja_guinarte";
+	}
+	else
+	{
+		NXNXBWBBWL="baraja_pro";
+	}
+	
+	SonidoChascarrillos=StorageGet("AudioChascarrillos");
+	SonidoCantes=StorageGet("AudioCantes");
+	SonidoCartas=StorageGet("AudioCartas");
+	
+}
+
+CambioSelectorBaraja=function()
+{
+	var d=document.getElementById("SelectorBaraja");
+    console.log(d.selectedIndex);
+	StorageSet("NXNXBWBBWL",d.selectedIndex)
+}
+
+CambioSelectorAudioChascarrillos=function()
+{
+	var d=document.getElementById("OptAudioChascarrillo");
+    console.log(d.checked);
+	StorageSet("AudioChascarrillos",d.checked)
+}
+
+CambioSelectorAudioCantes=function()
+{
+	var d=document.getElementById("OptAudioCantes");
+    console.log(d.checked);
+	StorageSet("AudioCantes",d.checked)
+}
+
+CambioSelectorAudioCartas=function()
+{
+	var d=document.getElementById("OptAudioCartas");
+    console.log(d.checked);
+	StorageSet("AudioCartas",d.checked)
+}
 
 ACGJHQWGVB=function()
 {
 	//if (RXKKPILDQT==undefined)
 	//{
+		
+		CargaOpcionesDefecto();
+		
 		RXKKPILDQT = YMHIHSNADE.add.group();
 		SYXHGDSJDY = YMHIHSNADE.add.group();
 		BDRJVGFWQH = YMHIHSNADE.add.group();
@@ -5648,6 +5735,8 @@ KPQSPDMKJE=function(SQIRFQMWSL,TUTWNSAGSX)
 	
 	MMCDRVCGAV.stop();
 	MMCDRVCGAV.remove();	
+	
+	DVNRTQIWGL=SQIRFQMWSL; //2.0.8.37 Nuevo
 
 	var RDBQUAVHEP=SQIRFQMWSL; //ILA RDBQUAVHEP he puesto el var
 	//console.log("Nueva partida0")

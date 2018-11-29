@@ -18,6 +18,12 @@ CLWUDOTYHT=function(data,RDBQUAVHEP,TXLWIIINGQ){
 	var i;
 	var SEQJGUOFTO;
 	
+	NFARLTEOCI(); //2.0.8.37
+	
+	if (vCampeonatoOasis==true)
+	{
+		TextoCampeonato.text="Humanos: "+JVQXQGYDHH+" Robots: "+CNCCBHQJKL;
+	}
 	
 	ACGJHQWGVB();
 	
@@ -95,11 +101,21 @@ CLWUDOTYHT=function(data,RDBQUAVHEP,TXLWIIINGQ){
 		HRGDCMPPKU.revive();
 		KAHCKJHQEO.revive();
 		
+
+		
 		if (PWMIBRSDCJ.length>0)
 		{
 			IFMJVFFEQN.visible=PWMIBRSDCJ[0].MBMWBWUYUY;	 //1.0.8
 			PANPKTGSCV.visible=PWMIBRSDCJ[0].MBMWBWUYUY;
 			HRGDCMPPKU.visible=PWMIBRSDCJ[0].MBMWBWUYUY;
+		}
+		
+		if (vCampeonatoOasis==true)
+		{
+			KAHCKJHQEO.kill();
+			PANPKTGSCV.kill();
+			HRGDCMPPKU.kill();
+			IFMJVFFEQN.kill();
 		}
 		
 	}
@@ -166,7 +182,7 @@ CLWUDOTYHT=function(data,RDBQUAVHEP,TXLWIIINGQ){
 					
 				}			
 				
-				FXGSEGRXKC[i].TNFAGGMKXD = YMHIHSNADE.add.image(50,YMHIHSNADE.world.centerY/2, 'baraja_pro',XCKJMDNBYC);				
+				FXGSEGRXKC[i].TNFAGGMKXD = YMHIHSNADE.add.image(50,YMHIHSNADE.world.centerY/2, NXNXBWBBWL,XCKJMDNBYC);				
 				FXGSEGRXKC[i].TNFAGGMKXD.anchor.setTo(0.5, 0.5);
 			}
 			

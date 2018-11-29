@@ -34,7 +34,7 @@ Preload.prototype.preload = function() {
 	////console.log("antes pro");
 	this.load.atlas('baraja_pro', 'assets/images/Cartas/baraja_pro.png', 'assets/images/Cartas/baraja_pro.json',Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
 	////console.log("despues pro");
-	//this.load.atlas('baraja_guinarte', 'assets/images/Cartas/baraja_guinarte.png', 'assets/images/Cartas/baraja_guinarte.json',Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
+	this.load.atlas('baraja_guinarte', 'assets/images/Cartas/baraja_guinarte.png', 'assets/images/Cartas/baraja_guinarte.json',Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
 	////console.log("antes general");
 	this.load.atlas('general', 'assets/images/general.png', 'assets/images/general.json',Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
 	

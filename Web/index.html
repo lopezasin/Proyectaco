@@ -48,7 +48,7 @@ function redirectHttpToHttps()
 <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover"> 
 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
- <link href="lib/pagination.css" rel="stylesheet" type="text/css">
+<link href="lib/pagination.css" rel="stylesheet" type="text/css">
 
 <!-- <link rel="stylesheet" href="assets/font-awesome.min.css">font-awesome.min -->
 <title>GuiñotePro</title>
@@ -57,6 +57,11 @@ function redirectHttpToHttps()
 <script src="lib/phaser.js"></script>
 <script src="lib/jquery.js"></script>
 <script src="lib/pagination.js"></script>
+
+<link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+
 <!-- <script type='application/javascript' src='lib/fastclick.js'></script> -->
 
 <script src="lib/cpu.js"></script>
@@ -226,6 +231,16 @@ function redirectHttpToHttps()
 		
  }); 
 */
+
+$(document).ready(function(){
+  $('.vertical-center-4').slick({
+            dots: true,
+        vertical: false,
+        centerMode: false,
+        slidesToShow: 4,
+        slidesToScroll: 2
+  });
+});
 
     $(document).ready(function(e){
 		$('#divtablasalas').css("height", $(window).height()-100);
@@ -438,6 +453,9 @@ function redirectHttpToHttps()
 	$('#blateral').click(function(event){
 		event.preventDefault();
 		$('#lateral').animate({width: "toggle"});
+		
+		
+		CargaOpcionesDefecto();
 	   });
 	
 	});
@@ -1007,6 +1025,16 @@ border-spacing: 50em;
   left: 0;
 }
 
+#DivInstagram {
+  width: 250;
+  height: 30;
+  position: absolute;
+  top: 0;
+  left: 125;
+}
+
+
+
 #tabs { padding: 1px; padding-bottom: 0px; }
 #tabs a { 
 	text-decoration: none;
@@ -1058,6 +1086,8 @@ border-spacing: 50em;
 <body  style="background-color:rgb(0%, 0%, 0%);" > 
 
 
+  
+  
 <div id='DivGPRD' style='position:absolute; top:0px; width: 100%; display:none; background: #82011c; z-index:10000'>
 <form id='fgprd'>
 
@@ -1121,20 +1151,33 @@ border-spacing: 50em;
 </form>
 </div>
 
-<!-- <div id='lateral' style='background: #ff0; position: absolute; top:0px; bottom:0px; left:0px; width: 200px; z-index: 10001; display:none'> -->
-<!-- </div> -->
-<div style='position:absolute;  bottom: 10px; left: 10px;'>
+<div id='lateral' style='background: #ff0; position: absolute; top:0px; bottom:0px; left:0px; width: 200px; z-index: 10001; display:none'>  
+	Baraja<br>
+	<select id="SelectorBaraja" onchange="CambioSelectorBaraja()"> 
+	  <optgroup id="OptBaraja" label="Baraja">
+		<option value="Tradicional">Tradicional</option>
+		<option value="Asoc. Aragonesa Guiñote, Guiñarte">Guiñarte</option>
+	  </optgroup>	  
+	</select>
+	<br><br>
+	Opciones Audio<br>
+	<input type="checkbox" id="OptAudioChascarrillo" onchange="CambioSelectorAudioChascarrillos()">audio chascarrillos<br>
+	<input type="checkbox" id="OptAudioCantes" onchange="CambioSelectorAudioCantes()">audio cantes<br>
+	<input type="checkbox" id="OptAudioCartas" onchange="CambioSelectorAudioCartas()">audio cartas<br>
+</div>
+
+<!-- <div style='position:absolute;  bottom: 10px; left: 10px;'> -->
 
 <!-- El display none de bchat es lo que necesito para que no se vea y llamarlo desde el juego -->
 <button id='bchat' style='cursor:pointer;display:none'>abrir</button> 
-</div>
+<!-- </div> -->
 
 <!-- El display none de bdenuncia es lo que necesito para que no se vea y llamarlo desde el juego -->
 <button id='bdenuncia' style='cursor:pointer;display:none'>abrir</button> 
-</div>
+<!-- </div>  -->
 
 <div style='position:absolute;  bottom: 50%; right: 10px;'>
-<button id='blateral'  style='cursor:pointer;display:none'>abrir lateral</button>
+<button id='blateral'  style='cursor:pointer;display:inline-block'>abrir lateral</button>
 </div>
 
 
@@ -1145,7 +1188,7 @@ border-spacing: 50em;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.10&appId=123400284870556";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));</script> 
 
 
 
@@ -1155,6 +1198,20 @@ border-spacing: 50em;
   
 <div id="gamer" style="margin: 0px; padding:0px ;width:100%; height:100%; max-width: 100%; max-height: 100%">
 
+<!--   <section class="vertical-center-4 slider">
+    <div>
+      <img src="http://placehold.it/350x100?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=4">
+    </div>
+  </section> -->
 
 
 <div id=DivResultado class="container" style="display:none" >
@@ -1432,6 +1489,31 @@ border-spacing: 50em;
 	
 </div>
 
+<div id="DivIrA" class="container"  style="display:none; position: absolute;
+	top: 30%;
+	left: 55%;
+    font-size: 18px; /* Increase font-size */
+	width: 50%;
+	height: 150px;
+	margin-left: -30%;
+	background:#fff;border-radius: 5px;	
+	text-align:center;
+	z-index: 10;
+	border:1px solid;
+	" >
+	
+	
+	 <!-- <label id="lblSalir">a</label><br> -->
+	  <div style="text-align:center; margin-top: 10px; " >
+	  <label id="lblIrA" ><center>IrA</center></label>
+	   <label id="lblIrAWeb" class="hidden" ><center>Oculto</center></label>
+	  </div>
+	
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaIrA(true)">Sí</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaIrA(false)">No</button>
+	
+</div>
+
 <div id="DivEligePareja" class="container"  style="display:none; position: absolute;
 	top: 30%;
 	left: 55%;
@@ -1452,8 +1534,22 @@ border-spacing: 50em;
 	  </div>
 	
 	 <button id=Pareja1 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(1)">a</button>
+	 <img id=Foto1 src='a' style='max-width:30px;max-height:30px' >
+	 <img id=Nivel1 src='a' style='max-width:30px;max-height:30px' >
+	 <img id=CampeonSemanal1 src='a' style='max-width:30px;max-height:30px' >
+	 <label id="PosicionMes1" ><center>a</center></label>
+	 
 	 <button id=Pareja2 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(2)" >a</button>
+	 <img id=Foto2 src='a' style='max-width:30px;max-height:30px' >
+	 <img id=Nivel2 src='a' style='max-width:30px;max-height:30px' >
+	 <img id=CampeonSemanal2 src='a' style='max-width:30px;max-height:30px' >
+	 <label id="PosicionMes2" ><center>a</center></label>
+	 
 	 <button id=Pareja3 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(3)" >a</button>
+	 <img id=Foto3 src='a' style='max-width:30px;max-height:30px' >
+	 <img id=Nivel3 src='a' style='max-width:30px;max-height:30px' >
+	 <img id=CampeonSemanal3 src='a' style='max-width:30px;max-height:30px' >
+	 <label id="PosicionMes3" ><center>a</center></label>
 	
 </div>
 
@@ -1486,7 +1582,14 @@ border-spacing: 50em;
 
   <!-- <div id="DivFace" class="fb-like" data-href="https://www.facebook.com/guinotepro/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true">hola</div> -->
 
-<iframe id="DivFace" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fguinotepro&width=204&layout=button_count&action=like&size=large&show_faces=false&share=true&height=46&appId=123400284870556" width="204" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+<iframe id="DivFace" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fguinotepro&width=204&layout=button_count&action=like&size=large&show_faces=false&share=false&height=46&appId=123400284870556" width="204" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
+</iframe>
+
+<div id="DivInstagram" width="204" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
+ <img src="assets/images/insta.png" alt="Italian Trulli" style="width:28px;height:28px;" onclick="AbreNavegador('https://www.instagram.com/guinotepro')">
+<!-- <a href="http://www.instagram.com/guinotepro" id="InstagramImg">See an example!</a> -->
+</div>
+
 
 </body>
 

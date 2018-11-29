@@ -317,7 +317,7 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 	
 	//MQUGCIUQII=Math.random()*100000; //Es importante dejarlo aquí,  porque tb afecta al multijugador, aunque parezca que no.
 	//console.log("Creo la baraja");
-	
+	NFARLTEOCI(); //2.0.8.37
 	ACGJHQWGVB();
 	
 	
@@ -442,8 +442,8 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 	
    });
 	
-	FXGSEGRXKC=Phaser.ArrayUtils.shuffle(FXGSEGRXKC);
-	WUHRYVMYBE=Phaser.ArrayUtils.shuffle(WUHRYVMYBE);
+	//FXGSEGRXKC=Phaser.ArrayUtils.shuffle(FXGSEGRXKC);
+	//WUHRYVMYBE=Phaser.ArrayUtils.shuffle(WUHRYVMYBE);
 
 
 	
@@ -498,7 +498,7 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 					
 
 				
-					FXGSEGRXKC[i].TNFAGGMKXD = YMHIHSNADE.add.image(-100, YMHIHSNADE.world.centerY/2, 'baraja_pro',XCKJMDNBYC);  //WUHRYVMYBE
+					FXGSEGRXKC[i].TNFAGGMKXD = YMHIHSNADE.add.image(-100, YMHIHSNADE.world.centerY/2, NXNXBWBBWL,XCKJMDNBYC);  //WUHRYVMYBE
 					FXGSEGRXKC[i].TNFAGGMKXD.anchor.setTo(0.5, 0.5);
 					//YMHIHSNADE.add.image(-100, YMHIHSNADE.world.centerY/2, NXNXBWBBWL,XCKJMDNBYC);  //WUHRYVMYBE
 				}
