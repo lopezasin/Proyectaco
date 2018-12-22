@@ -9636,6 +9636,8 @@ function fileError4() {
 		  socket.emit("Consola",userData);
 		  
 		  facebookConnectPlugin.api("/me?fields=id,name,email", ["public_profile", "email"], function(response) {
+			   socket.emit("Consola","EO SOLO ");
+			   socket.emit("Consola","EO ID "+response.id);
 			 socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture);
 				},
 				fbErrorHandler
@@ -9643,6 +9645,10 @@ function fileError4() {
 
 		};
 		
+		fbErrorHandler=function()
+		{
+			 socket.emit("Consola","Error en api");
+		}
 AYAOSXTCBR  = function() {
 	
 			facebookConnectPlugin.login(["public_profile","email"], fbLoginSuccess,
