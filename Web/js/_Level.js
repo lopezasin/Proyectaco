@@ -9629,6 +9629,14 @@ function fileError4() {
 
 }
 // Socket connected
+
+		fbLoginSuccess = function (userData) {
+			alert("JOER")
+		   socket.emit("Consola","OJO");
+		  socket.emit("Consola",userData);
+
+		};
+		
 AYAOSXTCBR  = function() {
 	
 			facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
@@ -9637,11 +9645,7 @@ AYAOSXTCBR  = function() {
 		  }
 		);
 
-		var fbLoginSuccess = function (userData) {
-		   socket.emit("Consola","OJO");
-		  socket.emit("Consola",userData);
 
-		};
 		
 		
 	var UYEUYIYECB="";
