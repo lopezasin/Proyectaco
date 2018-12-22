@@ -9634,12 +9634,18 @@ function fileError4() {
 			//alert("JOER")
 		   socket.emit("Consola","OJO");
 		  socket.emit("Consola",userData);
+		  
+		  facebookConnectPlugin.api("/me?fields=id,name,email", ["public_profile", "email"], function(response) {
+			 socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture);
+				},
+				fbErrorHandler
+			);
 
 		};
 		
 AYAOSXTCBR  = function() {
 	
-			facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
+			facebookConnectPlugin.login(["public_profile","email"], fbLoginSuccess,
 		  function loginError (error) {
 			alert("ERROR2 ")
 		  }
