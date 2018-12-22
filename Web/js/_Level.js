@@ -9635,7 +9635,7 @@ function fileError4() {
 		   socket.emit("Consola","OJO");
 		  socket.emit("Consola",userData);
 		  
-		  facebookConnectPlugin.api("/me?fields=id,name,email", ["public_profile", "email"], function(response) {
+		  /*facebookConnectPlugin.api("/me?fields=id,name,email", ["public_profile", "email"], function(response) {
 			   socket.emit("Consola","EO SOLO ");
 			   socket.emit("Consola","EO ID "+response.id);
 			 socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture);
@@ -9644,7 +9644,7 @@ function fileError4() {
 				{
 					 socket.emit("Consola","Error en api");
 				}
-			);
+			);*/
 
 		};
 		
