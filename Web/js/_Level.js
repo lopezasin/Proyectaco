@@ -14,7 +14,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var KYLIAIETHX=true;
+var KYLIAIETHX=false;
 
 var BloqueoCartaCentro=false;
 var vCampeonatoOasis=false;
@@ -37,7 +37,6 @@ if (KYLIAIETHX==true){
 	JHGHJAGCMC="https://xn--guiotepro-n6a.es"
 	JHGHJAGCMC="https://dev.xn--guiotepro-n6a.es"
 	JHGHJAGCMC="https://3.121.155.23"
-	JHGHJAGCMC="https://xn--guiotepro-n6a.es"
 	//JHGHJAGCMC="https://a.xn--guiotepro-n6a.es"
 	//JHGHJAGCMC="https://b.xn--guiotepro-n6a.es"
 
@@ -5867,23 +5866,14 @@ OCSBJTDODP=function(){
 	
 	
 	
-		facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
-		  function loginError (error) {
-			alert("ERROR2 ")
-		  }
-		);
 
-		var fbLoginSuccess = function (userData) {
-		  //SVHMCOYULR("UserInfo: ");
 
-		};
-
-		
+	XEMENNVXGV();	
 		
 	if (1==2)
 	{
 
-	XEMENNVXGV();
+	
 	
 	if (VerEstable==true)
 	{
@@ -9640,6 +9630,19 @@ function fileError4() {
 // Socket connected
 AYAOSXTCBR  = function() {
 	
+			facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
+		  function loginError (error) {
+			alert("ERROR2 ")
+		  }
+		);
+
+		var fbLoginSuccess = function (userData) {
+		   socket.emit("Consola","OJO");
+		  socket.emit("Consola",userData);
+
+		};
+		
+		
 	var UYEUYIYECB="";
 	//console.log("QKVJASWVEO caida "+UJHVBJDGJD);
 	
