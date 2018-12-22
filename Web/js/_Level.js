@@ -9631,7 +9631,7 @@ function fileError4() {
 // Socket connected
 
 		fbLoginSuccess = function (userData) {
-			alert("JOER")
+			//alert("JOER")
 		   socket.emit("Consola","OJO");
 		  socket.emit("Consola",userData);
 
