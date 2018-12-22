@@ -14,7 +14,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 
-var KYLIAIETHX=false;
+var KYLIAIETHX=true;
 
 var BloqueoCartaCentro=false;
 var vCampeonatoOasis=false;
@@ -37,6 +37,7 @@ if (KYLIAIETHX==true){
 	JHGHJAGCMC="https://xn--guiotepro-n6a.es"
 	JHGHJAGCMC="https://dev.xn--guiotepro-n6a.es"
 	JHGHJAGCMC="https://3.121.155.23"
+	JHGHJAGCMC="https://xn--guiotepro-n6a.es"
 	//JHGHJAGCMC="https://a.xn--guiotepro-n6a.es"
 	//JHGHJAGCMC="https://b.xn--guiotepro-n6a.es"
 

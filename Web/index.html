@@ -646,12 +646,12 @@ function onDeviceReady() {
 		
 		
 		var fbLoginSuccess = function (userData) {
-		 alert("UserInfo: ", userData);
+		 alert("UserInfo: ", JSON.stringify(userData));
 		}
 
-		facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
+		facebookConnectPlugin.login(["public_profile","email"], fbLoginSuccess,
 		  function loginError (error) {
-			alert(error)
+			alert(JSON.stringify(error))
 		  }
 		);
 
