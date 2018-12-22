@@ -5869,7 +5869,7 @@ OCSBJTDODP=function(){
 	
 		facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 		  function loginError (error) {
-			alert("ERROR ")
+			alert("ERROR2 ")
 		  }
 		);
 
