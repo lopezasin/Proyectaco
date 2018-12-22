@@ -5867,14 +5867,14 @@ OCSBJTDODP=function(){
 	
 	
 	
-			facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
+		facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 		  function loginError (error) {
 			alert("ERROR ")
 		  }
 		);
 
 		var fbLoginSuccess = function (userData) {
-		  SVHMCOYULR("UserInfo: "+ userData);
+		  SVHMCOYULR("UserInfo: ");
 
 		};
 
