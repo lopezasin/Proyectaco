@@ -5864,8 +5864,24 @@ OCSBJTDODP=function(){
 	}*/
 		
 	//HJBVQUGKVY();	
+	
+			facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
+		  function loginError (error) {
+			alert("ERROR ")
+		  }
+		);
 
-		XEMENNVXGV();
+		var fbLoginSuccess = function (userData) {
+		  alert("UserInfo: "+ userData);
+
+		};
+
+		
+		
+	if (1==2)
+	{
+
+	XEMENNVXGV();
 	
 	if (VerEstable==true)
 	{
@@ -5911,6 +5927,8 @@ OCSBJTDODP=function(){
 	//{
 	//	VSXSYEUABW("Versión Obsoleta. Actualícese.",false);
 		
+	}
+	
 	}
 
 }
