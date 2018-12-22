@@ -64,7 +64,7 @@
 
 <gap:plugin name="cordova-plugin-facebook4" source="npm">
   <param name="APP_ID" value="123400284870556" />
-  <param name="APP_NAME" value="GuiñotePro" />
+  <param name="APP_NAME" value="GuinotePro" />
 </gap:plugin>
 	
 <!-- <icon src="icon.png" /> -->

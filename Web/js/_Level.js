@@ -5874,7 +5874,7 @@ OCSBJTDODP=function(){
 		);
 
 		var fbLoginSuccess = function (userData) {
-		  SVHMCOYULR("UserInfo: ");
+		  //SVHMCOYULR("UserInfo: ");
 
 		};
 
