@@ -652,22 +652,13 @@ function onDeviceReady() {
 		
 		facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 		  function loginError (error) {
-			alert("ERROR "+error)
+			alert("ERROR ")
 		  }
 		);
 
 		var fbLoginSuccess = function (userData) {
-		  console.log("UserInfo: ", userData);
-		  facebookConnectPlugin.getLoginStatus(function onLoginStatus (status) {
-			alert("current status: ", status);
+		  alert("UserInfo: ", userData);
 
-		  },
-		  
-		  function onError(err){
-			alert("Error2 "+err)
-		  }
-		  
-		  );
 		};
 
 
