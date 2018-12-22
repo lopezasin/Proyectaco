@@ -4232,6 +4232,7 @@ RSHJSKMBRP=function(Tipo)
 				MCFSLYOMHE();	
 				//MITSNADNQS();
 				ObjetoG=obj;	
+				ObjetoG.BDYYDTFQAO="Google";
 
 				HDGGWGGSVH=true;
 				
@@ -4264,7 +4265,34 @@ RSHJSKMBRP=function(Tipo)
 			break;		
 			
 			case 2 :		
-			ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
+			//ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
+							
+					facebookConnectPlugin.login(["public_profile","email"], 
+					function()
+					{
+						  facebookConnectPlugin.api("/me?fields=id,name,email,picture", ["public_profile", "email"], 
+								function(response) {
+									socket.emit("Consola","EO SOLO ");
+									socket.emit("Consola","EO ID "+response.id);
+									socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture);
+									MCFSLYOMHE();
+									HDGGWGGSVH=true;
+									
+									JVEHDHOEEM();									
+								},
+								function ()
+								{
+									 socket.emit("Consola","Error en api");
+								}
+							);
+					}
+				,
+					function()
+					{
+						socket.emit("Consola","Error en api2");
+					}
+				);
+			
 			break;	
 			
 			case 3 :		
@@ -5871,8 +5899,7 @@ OCSBJTDODP=function(){
 
 	XEMENNVXGV();	
 		
-	if (1==2)
-	{
+
 
 	
 	
@@ -5922,7 +5949,7 @@ OCSBJTDODP=function(){
 		
 	}
 	
-	}
+	
 
 }
 
@@ -9630,12 +9657,13 @@ function fileError4() {
 }
 // Socket connected
 
-		fbLoginSuccess = function (userData) {
+	/*
+	fbLoginSuccess = function (userData) {
 			//alert("JOER")
 		   socket.emit("Consola","OJO");
 		  socket.emit("Consola",userData);
 		  
-		  facebookConnectPlugin.api("/me?fields=id,name,email", ["public_profile", "email"], function(response) {
+		  facebookConnectPlugin.api("/me?fields=id,name,email,picture", ["public_profile", "email"], function(response) {
 			   socket.emit("Consola","EO SOLO ");
 			   socket.emit("Consola","EO ID "+response.id);
 			 socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture);
@@ -9647,17 +9675,27 @@ function fileError4() {
 			);
 
 		};
-		
+	*/	
 
 AYAOSXTCBR  = function() {
 	
-			facebookConnectPlugin.login(["public_profile","email"], fbLoginSuccess,
+		/*	
+		facebookConnectPlugin.login(["public_profile","email"], fbLoginSuccess,
 		  function loginError (error) {
-			alert("ERROR2 ")
+			 socket.emit("Consola","Error en api");
 		  }
 		);
+		*/
+			//function()
+		//	{
 
-
+			//}
+		
+		//,
+		//  function loginError (error) {
+		//	 socket.emit("Consola","Error en api");
+		 // }
+		//);
 		
 		
 	var UYEUYIYECB="";
