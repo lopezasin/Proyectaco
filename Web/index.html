@@ -645,16 +645,24 @@ function onDeviceReady() {
 		 }); 
 		
 		
-		var fbLoginSuccess = function (userData) {
+		/*var fbLoginSuccess = function (userData) {
 		 alert("UserInfo: ", JSON.stringify(userData));
 		}
-
+		*/
+		
 		facebookConnectPlugin.login(["public_profile","email"], fbLoginSuccess,
 		  function loginError (error) {
-			alert(JSON.stringify(error))
+			alert("ERROR "+error)
 		  }
 		);
 
+		var fbLoginSuccess = function (userData) {
+		  console.log("UserInfo: ", userData);
+		  facebookConnectPlugin.getLoginStatus(function onLoginStatus (status) {
+			alert("current status: ", status);
+
+		  });
+		};
 
 
 		try
