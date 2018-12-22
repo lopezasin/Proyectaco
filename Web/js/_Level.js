@@ -9640,15 +9640,15 @@ function fileError4() {
 			   socket.emit("Consola","EO ID "+response.id);
 			 socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture);
 				},
-				fbErrorHandler
+				function (fbErrorHandler)
+				{
+					 socket.emit("Consola","Error en api");
+				}
 			);
 
 		};
 		
-		fbErrorHandler=function()
-		{
-			 socket.emit("Consola","Error en api");
-		}
+
 AYAOSXTCBR  = function() {
 	
 			facebookConnectPlugin.login(["public_profile","email"], fbLoginSuccess,
