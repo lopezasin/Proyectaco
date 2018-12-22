@@ -650,7 +650,7 @@ function onDeviceReady() {
 		}
 		*/
 		
-		facebookConnectPlugin.login(["public_profile","email"], fbLoginSuccess,
+		facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 		  function loginError (error) {
 			alert("ERROR "+error)
 		  }
@@ -661,7 +661,13 @@ function onDeviceReady() {
 		  facebookConnectPlugin.getLoginStatus(function onLoginStatus (status) {
 			alert("current status: ", status);
 
-		  });
+		  },
+		  
+		  function onError(err){
+			alert("Error2 "+err)
+		  }
+		  
+		  );
 		};
 
 
