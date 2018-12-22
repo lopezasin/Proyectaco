@@ -35,6 +35,8 @@ if (KYLIAIETHX==true){
 	//MaquinaSinSSH="http://b.xn--guiotepro-n6a.com"
 	//JHGHJAGCMC="https://b.xn--guiotepro-n6a.com"
 	JHGHJAGCMC="https://xn--guiotepro-n6a.es"
+	JHGHJAGCMC="https://dev.xn--guiotepro-n6a.es"
+	JHGHJAGCMC="https://3.121.155.23"
 	//JHGHJAGCMC="https://a.xn--guiotepro-n6a.es"
 	//JHGHJAGCMC="https://b.xn--guiotepro-n6a.es"
 
@@ -105,6 +107,7 @@ var IJCSKNTKVH="";
 
 var JLVDFTPUNI=101;
 var MFENMIFPUA=1;
+var SoyBazan=true;
 
 var MQUIQKWTWS=false; //Para votar;
 var MNSVWQGJSZ=false;
@@ -397,6 +400,10 @@ var UWROMBGGSY;
 var HUPALFWPFI;
 var BXYCJYDVRT;
 var IRAIEARIWA;
+var textJugadorRank1;
+var textJugadorRank2;
+var textJugadorRank3;
+var textJugadorRank4;
 
 var IDKJKASOTQ;
 var MMKMYKBXGH;
@@ -550,7 +557,7 @@ var UVYJLLYCYD=function(SSUNXNEEHN,AURESXCGMK)
 
 var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC,FFRVOEAXTF,BDYYDTFQAO,UHYGLMAUNK,DNQIYVAFPR,XCXKVEEIOO,BUJELVTIKU,NBJHGSFSJS,MBMWBWUYUY,OIUIOWCHVW,NHWYTYUSYG,NMABCQQCDD,
 	AMBCNABIQQ,gprd,MSIUWFLWPD,UIWHVYYYYD,RERQEQFSDV,BNMSISPWOI,GGHGFTERRW,BCKDDFIRYT,HJKSDFLPEP,TTTTQJHGDQ,BMNSDBFJKS,
-	IrA,IrATexto,Posicion30)
+	IrA,IrATexto,Posicion30,EsPRO)
 	{
 	this.WWKVHIMWYD=WWKVHIMWYD
 	this.BONQVNOXDP=BONQVNOXDP
@@ -582,6 +589,7 @@ var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC
 	this.IrA=IrA
 	this.IrATexto=IrATexto
 	this.Posicion30=Posicion30
+	this.EsPRO=EsPRO
 	
 	this.OBTBPOULAV=FFRVOEAXTF+"-"+BDYYDTFQAO;
 	
@@ -746,6 +754,18 @@ JHGWGJHVVN=function()
 
 		IRAIEARIWA=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 22);
 		IRAIEARIWA.anchor.set(0.5,0.5)
+		
+		textJugadorRank1=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 22);
+		textJugadorRank1.anchor.set(0.5,0.5)
+
+		textJugadorRank2=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 22);
+		textJugadorRank2.anchor.set(0.5,0.5)
+
+		textJugadorRank3=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 22);
+		textJugadorRank3.anchor.set(0.5,0.5)
+
+		textJugadorRank4=YMHIHSNADE.add.bitmapText(0, 0, 'MiFuenteAmarilla', 'BitmapText', 22);
+		textJugadorRank4.anchor.set(0.5,0.5)		
 	}
 	
 	MMNXBIJWIW(true);
@@ -762,6 +782,7 @@ MMNXBIJWIW=function(MataTodos)
 		NBHWGUGUWB.kill();	
 		XPLHSUIGIU.kill();
 		UWROMBGGSY.kill();
+		textJugadorRank1.kill();
 		if (YMHIHSNADE.cache.checkImageKey('imagen1'))
 		{				
 			YMHIHSNADE.cache.removeImage('imagen1');
@@ -774,6 +795,7 @@ MMNXBIJWIW=function(MataTodos)
 		HGYGDVGQUY.kill();
 		NHGUGUEUER.kill();
 		HUPALFWPFI.kill();
+		textJugadorRank2.kill();
 		if (YMHIHSNADE.cache.checkImageKey('imagen2'))
 		{				
 			YMHIHSNADE.cache.removeImage('imagen2');
@@ -786,6 +808,7 @@ MMNXBIJWIW=function(MataTodos)
 		XXGUGUYWUW.kill();	
 		HGWUGIVGWP.kill();
 		BXYCJYDVRT.kill();
+		textJugadorRank3.kill();
 		if (YMHIHSNADE.cache.checkImageKey('imagen3'))
 		{				
 			YMHIHSNADE.cache.removeImage('imagen3');
@@ -798,6 +821,7 @@ MMNXBIJWIW=function(MataTodos)
 		XKIOHWGJHG.kill();		
 		HGWYUYGVWO.kill();
 		IRAIEARIWA.kill();
+		textJugadorRank4.kill();
 		if (YMHIHSNADE.cache.checkImageKey('imagen4'))
 		{				
 			YMHIHSNADE.cache.removeImage('imagen4');
@@ -824,14 +848,14 @@ StorageGet=function(Consulta)
 		}
 		if (Consulta=="NXNXBWBBWL" )
 		{
-			if (localStorage.NXNXBWBBWL=="1" || localStorage.NXNXBWBBWL==undefined)
+			if (localStorage.NXNXBWBBWL=="0" || localStorage.NXNXBWBBWL==undefined)
 			{
-				QOWECQVXCM=1;
+				QOWECQVXCM=0;
 				
 			}	
 			else
 			{
-				QOWECQVXCM=0;
+				QOWECQVXCM=1;
 			}
 		}		
 		if (Consulta=="AudioChascarrillos")
@@ -897,7 +921,7 @@ StorageGet=function(Consulta)
 			QOWECQVXCM=true;
 		}			
 	}	
-	console.log("NO SE "+localStorage.NXNXBWBBWL)
+	//console.log("NO SE "+localStorage.NXNXBWBBWL)
 	return QOWECQVXCM;
 }
 
@@ -2056,7 +2080,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	{
 		//BUJELVTIKU.destroy();
 			
-		BUJELVTIKU=YMHIHSNADE.add.button(x , YMHIHSNADE.world.height-45, 'general', ClickNoticia , this, 'imagen_turno');
+		BUJELVTIKU=YMHIHSNADE.add.button(x , YMHIHSNADE.world.height-45, 'general', ClickNoticia , this); //2.0.8.37 He quitado el último parámetro 'imagen_turno'
 		BUJELVTIKU.anchor.setTo(0.5,0.5);
 		BUJELVTIKU.x=230;
 		BUJELVTIKU.y=-500;
@@ -2113,8 +2137,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 			
 			XEMENNVXGV(); //2.0.7
 			if (SNJCSVWFCC()==true)
-			{
-					//alert("ko");			
+			{					//alert("ko");			
 				//socket.emit('EOMOFODTKB', socket.id,SFKLFIJOIO) ;
 				
 				if (PWMIBRSDCJ.length>0)
@@ -2266,6 +2289,12 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	//XEMENNVXGV();
 	///if (DesdeFinCoto==true)
 	//	Conecta
+	//hola=YMHIHSNADE.add.image(30,30,'Emoticono1');
+	hola=YMHIHSNADE.add.button(x , YMHIHSNADE.world.height-45, 'Emoticono1', MostrarElegirEmoticono , this);
+	hola.anchor.setTo(0.5, 0.5)
+	hola.scale.setTo(0.3,0.3);
+	hola.inputEnabled = true;
+	hola.input.enableDrag(false,true);
 	
 	JQDGHVJGUW(false);
 	
@@ -2316,7 +2345,7 @@ JHGQKGFQGB=function()
 
 JQDGHVJGUW=function()
 {
-	if (PWMIBRSDCJ.length>0)
+	if (PWMIBRSDCJ.length>0 && PWMIBRSDCJ[0].WWKVHIMWYD!="DesconocidoPRO")
 	{
 
 		
@@ -2838,7 +2867,8 @@ YPCWDEBGAS=function()
 			CKHBSQULIF.loop(200,function(){										
 				try
 				{
-					socket.emit('NZBSUWWZXX',DFBVDPETGO,XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV) //2.0.8.37 amigo  ,XPBCVAGCDQ[TFSXFTYVGQ-1].Amigo
+					socket.emit('NZBSUWWZXX',DFBVDPETGO,XPBCVAGCDQ[TFSXFTYVGQ-1].OBTBPOULAV, XPBCVAGCDQ[TFSXFTYVGQ-1].Amigo,
+						XPBCVAGCDQ[TFSXFTYVGQ-1].EsPRO) //2.0.8.37 amigo  ,XPBCVAGCDQ[TFSXFTYVGQ-1].Amigo
 					CKHBSQULIF.stop();
 					CKHBSQULIF.remove();
 				}
@@ -3132,9 +3162,9 @@ XHSDDIIBGG=function(VideoJuego)
 	
 }
 
-VVCDGUUDWR=function(MuestraDIV)
+MostrarElegirEmoticono=function()
 {
-	
+
 	var i;
 	var JHCGSIWICI="";
 	var NBIUIUCWUE="";
@@ -3157,12 +3187,14 @@ VVCDGUUDWR=function(MuestraDIV)
 	var PosicionMes2=0;
 	var PosicionMes3=0
 	
-	JKLJKLRIRI.kill();
+	
 	
 	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
 		//if (XPBCVAGCDQ[i].XJARYUVBCB==false || (XPBCVAGCDQ[i].XJARYUVBCB==true  && XPBCVAGCDQ[1].XJARYUVBCB==false ))
 		//{
+			console.log(XPBCVAGCDQ[i].AURESXCGMK+" "+XPBCVAGCDQ[i].WWKVHIMWYD)
+			
 			if ((i+1)!=TFSXFTYVGQ)
 			{
 				if (vueltas==0)
@@ -3238,6 +3270,219 @@ VVCDGUUDWR=function(MuestraDIV)
 						CampeonSemanal3='/assets/images/medalla.png'
 					}
 					PosicionMes3=XPBCVAGCDQ[i].Posicion30;
+					console.log("Posicion "+PosicionMes3)
+				}
+				vueltas++;
+			}
+		//}
+		
+	}
+	
+	
+	//for (i=0;i<=XPBCVAGCDQ.length-1;i++)
+	//{
+	//}
+	
+	var a;
+	
+	a=document.getElementById("JugadorEmoti1") 	
+	a.style.display = 'inline-block';
+	a=document.getElementById("JugadorEmoti2") 	
+	a.style.display =  'inline-block';
+	
+	a=document.getElementById("JugadorEmoti3") 	
+	a.style.display =  'inline-block';	
+	
+	
+	a=document.getElementById("JugadorEmoti1Nombre") 
+	a.textContent = JHCGSIWICI;
+	
+	//if (XPBCVAGCDQ[0].XJARYUVBCB==true && XPBCVAGCDQ[2].XJARYUVBCB==false)	{
+	//	a.style.display = 'none';
+	//}
+	
+	a=document.getElementById("JugadorEmoti2Nombre") 
+	a.textContent = NBIUIUCWUE;
+	
+	//if (XPBCVAGCDQ[1].XJARYUVBCB==true)
+	//{
+	//	a.style.display = 'none';
+	//}
+	
+	a=document.getElementById("JugadorEmoti3Nombre") 
+	a.textContent = UUYYYYCEWE;
+	
+	console.log("Player 1: "+JHCGSIWICI)
+	console.log("Player 2: "+NBIUIUCWUE)
+	console.log("Player 3: "+UUYYYYCEWE)
+	
+	//if (XPBCVAGCDQ[2].XJARYUVBCB==true  && XPBCVAGCDQ[0].XJARYUVBCB==false)
+	//{
+	//	a.style.display = 'none';
+	//}
+	
+	a=document.getElementById("FotoEmoti1") 
+	a.src = Foto1;
+	a=document.getElementById("FotoEmoti2") 
+	a.src = Foto2;
+	a=document.getElementById("FotoEmoti3") 
+	a.src = Foto3;	
+	
+
+	
+		
+	var d=document.getElementById('DivEmoticonos');
+	d.style.display = 'block';
+		
+     //$('#bchat').click()
+	
+	 $('.single-item').slick({
+          dots: true,
+            infinite: true
+      });
+
+	
+	
+}
+
+
+OcultarElegirEmoticono=function()
+{
+	var d=document.getElementById('DivEmoticonos');
+	d.style.display = 'none';	
+}
+
+
+VVCDGUUDWR=function(MuestraDIV)
+{
+	
+	var i;
+	var JHCGSIWICI="";
+	var NBIUIUCWUE="";
+	var UUYYYYCEWE="";
+	var IIIQIIQCKC="";
+	var KJHWJKHKJH="";
+	var IIIIUUWWWI="";
+	var vueltas=0;
+	var a;
+	var Foto1="";
+	var Foto2="";
+	var Foto3="";
+	var Nivel1="";
+	var Nivel2="";
+	var Nivel3="";
+	var CampeonSemanal1=false;
+	var CampeonSemanal2=false;
+	var CampeonSemanal3=false;
+	var PosicionMes1=0;
+	var PosicionMes2=0;
+	var PosicionMes3=0
+	
+	JKLJKLRIRI.kill();
+	
+	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
+	{
+		//if (XPBCVAGCDQ[i].XJARYUVBCB==false || (XPBCVAGCDQ[i].XJARYUVBCB==true  && XPBCVAGCDQ[1].XJARYUVBCB==false ))
+		//{
+			if ((i+1)!=TFSXFTYVGQ)
+			{
+				if (vueltas==0)
+				{
+					JHCGSIWICI=XPBCVAGCDQ[i].WWKVHIMWYD;
+					IIIQIIQCKC=XPBCVAGCDQ[i].AURESXCGMK;	
+					Foto1=XPBCVAGCDQ[i].QHHQPXWFNG;	
+					if (Foto1=="sin_foto")
+					{
+						Foto1='/assets/images/Cartas/Reversos/maquina.jpg';
+					}
+					else
+					{
+						if (Foto1==undefined)
+						{
+							Foto1='/assets/images/desconocido.png'
+						}
+					}
+					Nivel1='/assets/images/'+OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,1)	
+					CampeonSemanal1="/assets/images/sin_logro.png";
+					if  (XPBCVAGCDQ[i].NHWYTYUSYG==true || SoyBazan==true)
+					{
+						CampeonSemanal1='/assets/images/medalla.png'
+					}
+					
+					if (XPBCVAGCDQ[i].Posicion30!=99999  || SoyBazan==true)
+					{
+						PosicionMes1=XPBCVAGCDQ[i].Posicion30;
+					}
+					else
+					{
+						PosicionMes1=""
+					}
+					
+					console.log("Posicion "+PosicionMes1)
+				}
+				if (vueltas==1)
+				{
+					NBIUIUCWUE=XPBCVAGCDQ[i].WWKVHIMWYD;
+					KJHWJKHKJH=XPBCVAGCDQ[i].AURESXCGMK;	
+					Foto2=XPBCVAGCDQ[i].QHHQPXWFNG;	
+					if (Foto2=="sin_foto")
+					{
+						Foto2='/assets/images/Cartas/Reversos/maquina.jpg';
+					}
+					else
+					{
+						if (Foto2==undefined)
+						{
+							Foto2='/assets/images/desconocido.png'
+						}
+					}				
+					Nivel2='/assets/images/'+OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,1)	
+					CampeonSemanal2="/assets/images/sin_logro.png";
+					if  (XPBCVAGCDQ[i].NHWYTYUSYG==true  || SoyBazan==true)
+					{
+						CampeonSemanal2='/assets/images/medalla.png'
+					}	
+					if (XPBCVAGCDQ[i].Posicion30!=99999  || SoyBazan==true)
+					{
+						PosicionMes2=XPBCVAGCDQ[i].Posicion30;
+					}
+					else
+					{
+						PosicionMes2=""
+					}
+					console.log("Posicion "+PosicionMes2)					
+				}
+				if (vueltas==2)
+				{
+					UUYYYYCEWE=XPBCVAGCDQ[i].WWKVHIMWYD;
+					IIIIUUWWWI=XPBCVAGCDQ[i].AURESXCGMK;	
+					Foto3=XPBCVAGCDQ[i].QHHQPXWFNG;	
+					if (Foto3=="sin_foto")
+					{
+						Foto3='/assets/images/Cartas/Reversos/maquina.jpg';
+					}
+					else
+					{
+						if (Foto3==undefined)
+						{
+							Foto3='/assets/images/desconocido.png'
+						}
+					}					
+					Nivel3='/assets/images/'+OIQUIOCVKK(XPBCVAGCDQ[i].OIUIOWCHVW,1)	
+					CampeonSemanal3="/assets/images/sin_logro.png";
+					if  (XPBCVAGCDQ[i].NHWYTYUSYG==true  || SoyBazan==true)
+					{
+						CampeonSemanal3='/assets/images/medalla.png'
+					}
+					
+					if (XPBCVAGCDQ[i].Posicion30!=99999  || SoyBazan==true)
+					{
+						PosicionMes3=XPBCVAGCDQ[i].Posicion30;
+					}
+					else
+					{
+						PosicionMes3=""
+					}
 					console.log("Posicion "+PosicionMes3)
 				}
 				vueltas++;
@@ -3812,6 +4057,7 @@ MITSNADNQS=function()
 	POEICHMHDL.revive(); //1.0.8
 	
 	NCTURHDRYW();
+	OcultarElegirEmoticono();
 	IHSKJHKWCM=false;
 	
 	CUUKQAGFEB.kill(); //2.0.7
@@ -5442,6 +5688,7 @@ JHJGSFGJSW=function()
 	NNDHIWHIWL=true;
 	AJFQVFUKAP=true;
 	NCTURHDRYW(); //20180824
+	OcultarElegirEmoticono();
 	XEMENNVXGV();
 
 }
@@ -5780,7 +6027,7 @@ MDBPQGPDUY=function(sprite, spriteColision) {
 */
 
 var JHIWUIUYCJ = function(AURESXCGMK,Sala,Cerrada,WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,LIHWIHIUVH,XJARYUVBCB,UIEHFVKJSD,EJOYNSESRD,IRQGAFESIC,Amigo,OBTBPOULAV,KKUYGYRGYG, LKKDKDNMNR,JJHFHGHSUI,UHYGLMAUNK,NBJHGSFSJS,
-	OIUIOWCHVW,NHWYTYUSYG,NMABCQQCDD, AMBCNABIQQ,Posicion30){
+	OIUIOWCHVW,NHWYTYUSYG,NMABCQQCDD, AMBCNABIQQ,Posicion30,EsPRO){
 		
 	this.AURESXCGMK=AURESXCGMK;
 	this.Sala=Sala;
@@ -5804,6 +6051,7 @@ var JHIWUIUYCJ = function(AURESXCGMK,Sala,Cerrada,WWKVHIMWYD,BONQVNOXDP,QHHQPXWF
 	this.NMABCQQCDD=NMABCQQCDD; //2.0.1 20180210
 	this.AMBCNABIQQ=AMBCNABIQQ
 	this.Posicion30=Posicion30
+	this.EsPRO=EsPRO
 	
 	this.Viva=true;
 	this.Acabada=false;
@@ -6131,6 +6379,14 @@ setEventHandlers = function () { //ESTE
 	  return callback(data.OYJAHGADFQ);
   }
   );
+  
+    socket.on('enviar_emoticono_desde_server', function(data,callback)
+  {
+	  onSocketEnviarEmoticonosDesdeServer(data.Desde,data.Hasta,data.idEmoticono)
+	  return callback(data.OYJAHGADFQ);
+  }
+  );
+  
   
   
   socket.on('GCOMOMYQBP', function(data,callback)
@@ -6698,13 +6954,14 @@ LVEMXLIFKA=function(KJEWHVDJKS,New)
 				{
 					var Continua=true;
 					
-					
+					console.log("Pasa1")
 					
 					if (ArrayPasar[0].RHOLNWBOXR=='VOJPSKOTNY')
 					{
 						if (ArrayPasar[0].MQUGCIUQII!=MQUGCIUQII && MQUGCIUQII!=null)
 						{
 							Continua=false;
+							console.log("Error1 "+MQUGCIUQII+" "+ArrayPasar[0].MQUGCIUQII)
 						}
 					}
 					//console.log("llega 2. Continua "+Continua );
@@ -6721,7 +6978,7 @@ LVEMXLIFKA=function(KJEWHVDJKS,New)
 						//if (1==1)
 						{
 							
-							
+							console.log("Pasa gestor")
 							
 							switch (ArrayPasar[0].RHOLNWBOXR){	
 							
@@ -6760,7 +7017,7 @@ LVEMXLIFKA=function(KJEWHVDJKS,New)
 								case 'PMXHPCMRIF' :	//ok
 									//console.log("Lanza tarea centro desde buffer "+ArrayPasar[0].OYJAHGADFQ+" "+DevuelveNombreCartaDebug(ArrayPasar[0].SJVCMXWVVI)+
 									//"SSUNXNEEHN "+ArrayPasar[0].UHTPGPRUJA+" AGTXFNIKQD "+ArrayPasar[0].AGTXFNIKQD);
-									//console.log("bloqueado rapido "+BloqueoCartaCentro)
+									
 									if (BloqueoCartaCentro==false) //2.0.8.37 
 									{
 										
@@ -6769,6 +7026,7 @@ LVEMXLIFKA=function(KJEWHVDJKS,New)
 									}
 									else
 									{
+										console.log("bloqueado rapido "+BloqueoCartaCentro)
 										BorrarBloqueo(ArrayPasar[0].OYJAHGADFQ)										
 									}
 								break;				
@@ -6821,7 +7079,7 @@ LVEMXLIFKA=function(KJEWHVDJKS,New)
 						}
 						else
 						{
-							//console.log("Tarea bloqueada "+ArrayPasar[0].OYJAHGADFQ);
+							console.log("Tarea bloqueada "+ArrayPasar[0].OYJAHGADFQ);
 							//if (ArrayPasar[0].RHOLNWBOXR=="PMXHPCMRIF")
 							//{
 								//console.log("Tarea bloqueada "+DevuelveNombreCartaDebug(ArrayPasar[0].SJVCMXWVVI))
@@ -6830,6 +7088,10 @@ LVEMXLIFKA=function(KJEWHVDJKS,New)
 						}
 					}
 				
+				}
+				else
+				{
+					console.log("Debug "+HGMNXSIAPV+" "+MensajesRepartoFinalizado.indexOf(ArrayPasar[0].RHOLNWBOXR))
 				}
 				
 
@@ -7864,7 +8126,8 @@ CURCDCWNHB=function(CYHNPORXFJ)
 			CYHNPORXFJ[0].BMNSDBFJKS,
 			CYHNPORXFJ[0].IrA,
 			CYHNPORXFJ[0].IrATexto,
-			CYHNPORXFJ[0].Posicion30
+			CYHNPORXFJ[0].Posicion30,
+			CYHNPORXFJ[0].EsPRO
 			));
 			
 			//alert(PWMIBRSDCJ[0].IRQGAFESIC);
@@ -7904,7 +8167,8 @@ CURCDCWNHB=function(CYHNPORXFJ)
 				}
 			}			
 			
-			HSKJFHWVUV(PWMIBRSDCJ[0].IRQGAFESIC, PWMIBRSDCJ[0].NMABCQQCDD, PWMIBRSDCJ[0].EJOYNSESRD,PWMIBRSDCJ[0].BUJELVTIKU);
+			HSKJFHWVUV(PWMIBRSDCJ[0].IRQGAFESIC, PWMIBRSDCJ[0].NMABCQQCDD, PWMIBRSDCJ[0].EJOYNSESRD,PWMIBRSDCJ[0].BUJELVTIKU,
+				PWMIBRSDCJ[0].IrA,PWMIBRSDCJ[0].IrATexto);
 			
 
 			
@@ -7919,7 +8183,7 @@ CURCDCWNHB=function(CYHNPORXFJ)
 		}
 }
 
-HSKJFHWVUV=function(BNMBDWGEII,KJAHKJVENN, JHAGJIWEFI,EIWHVKJEDC)
+HSKJFHWVUV=function(BNMBDWGEII,KJAHKJVENN, JHAGJIWEFI,EIWHVKJEDC,NoticiaIrA,NoticiaIrATexto)
 {
 		
 		//DCIKAAMXTU=new Phaser.Loader(YMHIHSNADE); 2.0.1 03/02/2018
@@ -7988,15 +8252,15 @@ HSKJFHWVUV=function(BNMBDWGEII,KJAHKJVENN, JHAGJIWEFI,EIWHVKJEDC)
 		CBGXLQKDBG.onFileComplete.add( function() { GXFPVAOHBL();  }  );
 		CBGXLQKDBG.start();
 		
-		if (PWMIBRSDCJ[0].BUJELVTIKU!=null && ISVLSNLHWR<=2 && XPBCVAGCDQ.length!=4 && EHUHWTYXOS==false )
+		if (EIWHVKJEDC!=null && ISVLSNLHWR<=2 && XPBCVAGCDQ.length!=4 && EHUHWTYXOS==false )
 		{			
 			if ( ETJWOWNABD==undefined || ETJWOWNABD==null || ETJWOWNABD=="" )
 			{			
 				ETJWOWNABD=new Phaser.Loader(YMHIHSNADE);
 			}
 			
-			BUJELVTIKU.IrA=PWMIBRSDCJ[0].IrA; //2.0.8.37
-			BUJELVTIKU.IrATexto=PWMIBRSDCJ[0].IrATexto //2.0.8.37
+			BUJELVTIKU.IrA=NoticiaIrA; //2.0.8.37
+			BUJELVTIKU.IrATexto=NoticiaIrATexto //2.0.8.37
 			
 			ETJWOWNABD.crossOrigin ="Anonymous"
 			ETJWOWNABD.image(LLALAQDVQD, EIWHVKJEDC,true);
@@ -8024,13 +8288,11 @@ DVCXGBTNWL=function(CYHNPORXFJ)
 
 
 		//alert(CYHNPORXFJ[0].IRQGAFESIC);
+		
 		PWMIBRSDCJ.splice(0,1000);
 	
 		var tapete=CYHNPORXFJ[0].IRQGAFESIC;
-		/*if (JHJEWHFWNL==true) //2.0.1
-		{
-			tapete=tapete.replace('.jpg','_43.jpg');
-		}*/
+
 		PWMIBRSDCJ.push(new AWXPNWRCHC(CYHNPORXFJ[0].WWKVHIMWYD,
 			CYHNPORXFJ[0].BONQVNOXDP,
 			CYHNPORXFJ[0].QHHQPXWFNG,
@@ -8060,7 +8322,8 @@ DVCXGBTNWL=function(CYHNPORXFJ)
 			CYHNPORXFJ[0].BMNSDBFJKS,
 			CYHNPORXFJ[0].IrA,
 			CYHNPORXFJ[0].IrATexto,
-			CYHNPORXFJ[0].Posicion30			
+			CYHNPORXFJ[0].Posicion30,
+			CYHNPORXFJ[0].EsPRO			
 			));
 			
 			if (CYHNPORXFJ[0].DNQIYVAFPR==false)
@@ -8072,10 +8335,12 @@ DVCXGBTNWL=function(CYHNPORXFJ)
 				onSocketErrorDesdeServer("Error13",CYHNPORXFJ[0].XCXKVEEIOO); //1.0.8
 			}	
 			
+			
 
 
-		
-		HSKJFHWVUV(PWMIBRSDCJ[0].IRQGAFESIC, PWMIBRSDCJ[0].NMABCQQCDD, PWMIBRSDCJ[0].EJOYNSESRD,PWMIBRSDCJ[0].BUJELVTIKU);
+		//HSKJFHWVUV(PWMIBRSDCJ[0].IRQGAFESIC, PWMIBRSDCJ[0].NMABCQQCDD, PWMIBRSDCJ[0].EJOYNSESRD,PWMIBRSDCJ[0].BUJELVTIKU);
+		HSKJFHWVUV(CYHNPORXFJ[0].IRQGAFESIC, CYHNPORXFJ[0].NMABCQQCDD, CYHNPORXFJ[0].EJOYNSESRD,CYHNPORXFJ[0].BUJELVTIKU,
+			CYHNPORXFJ[0].IrA,CYHNPORXFJ[0].IrATexto);
 		
 		
 		
@@ -8207,6 +8472,17 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,EFWXTVMKRH,Qui
 		UBWRXKMTQN=HHOPUSIABJ(NPYBJSHIFL+1);
 		if (UBWRXKMTQN!=LetraMazoMio) //Me aseguro que no soy yo
 		{
+			var	JKWEHVJQXX = YMHIHSNADE.time.create(true);
+			JKWEHVJQXX.add(7000, function()
+			{
+				JHKJKHHJCC(true); //2.0.8.37 Sustituyo lo de abajo por limpiar código
+			});
+			JKWEHVJQXX.start();
+			
+			
+			
+			/*if(1==2)
+			{
 			if (UBWRXKMTQN=="D")
 			{				
 				x1=WIEVLYANFM("D_5",0)+110;
@@ -8391,6 +8667,7 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,EFWXTVMKRH,Qui
 					HGWYUYGVWO.kill();
 				}	
 			}	
+			}*/
 		}
 		
 		/* recuperar if (KYDWXPGHVY.length==0)
@@ -8465,7 +8742,7 @@ GDRQVXOCBL=function(JJHEHUIEGO,NombreDesconectado,posicionJugador,EFWXTVMKRH,Qui
 	var JKWEHVJQXX;
 	
 	//JKWEHVJQXX=YMHIHSNADE.time.create(false);
-	//JKWEHVJQXX.add(2000, function()
+	//JKWEHVJQXX.add(2000, function() 2.0.8.37
 	//{	
 		
 		/*//console.log("DELAY");	
@@ -8775,6 +9052,39 @@ BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,Nuevo
 		//else
 		//{
 		//}
+		
+		
+		if (XXDFSFRGHO==true)
+		{
+			IRXOKNWTLV=50;
+			MDYSFNYPYP=30;
+			PVQFVAAAEY=500;
+			BQUYYUASDK=30; 
+		}
+		
+		PHPJPBNRNH(TXLWIIINGQ); //2.0.8.37 Pongo todo este bloque en lugar del de abajo que he quitado con 1==2
+		if ( !(KJEWHVDJKS==false || KJEWHVDJKS==undefined || KJEWHVDJKS.length==0) )
+		{
+			if (XPBCVAGCDQ.length>0 && JHVKJDVHWW(XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,NuevoID))
+			{
+				LVEMXLIFKA(KJEWHVDJKS,true);
+			}
+			else
+			{
+				OGGWQECXBK(TXLWIIINGQ,false,false);
+			}
+		}	
+		else
+		{
+			//if (MNAGVJHWOW()==false && (TXLWIIINGQ!=false && TXLWIIINGQ!=undefined && TXLWIIINGQ!=null) )
+			//{
+				OGGWQECXBK(TXLWIIINGQ,false,false);
+			//}
+		}
+
+		
+		if (1==2) //2.0.8.37
+		{
 			
 			PHPJPBNRNH(TXLWIIINGQ);
 			if (XPBCVAGCDQ.length>0 && JHVKJDVHWW(XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK,NuevoID))
@@ -8808,7 +9118,7 @@ BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,Nuevo
 				if (TXLWIIINGQ!=false && TXLWIIINGQ!=undefined && TXLWIIINGQ!=null)
 				{
 					//var JKWEHVJQXX;
-					//JKWEHVJQXX=YMHIHSNADE.time.create(false);
+					//JKWEHVJQXX=YMHIHSNADE.time.create(false); 2.0.8.37
 					//JKWEHVJQXX.add(2000, function()
 					//{
 						//console.log("RECUPERA_ lanzador5");
@@ -8817,6 +9127,7 @@ BCVWETKAKG=function(JugadorQueReconecta,NombreDesconectado,posicionJugador,Nuevo
 					//JKWEHVJQXX.start();
 				}
 			}
+		}
 	}
 	else
 	{
@@ -9544,14 +9855,41 @@ AAQWTFMQMA = function() {
 	 var vivo=0;
 	 
 	IHSKJHKWCM=true; 
+	var JugadorElige=1000000;
 	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 	{
 		if (XPBCVAGCDQ[i].XJARYUVBCB==false)
 		{
-			vivo=i;
+			
+			if (XPBCVAGCDQ[i].Posicion30<JugadorElige) //2.0.8.37 Para que elija el mejor
+			{
+				vivo=i;
+				JugadorElige=XPBCVAGCDQ[i].Posicion30
+			}
 		}
 	}
-	 
+	
+
+/*
+		var MMNORPWJDC;
+		var JugadorElige=1000000;
+		for (i=0;i<=XPBCVAGCDQ.length-1;i++)
+		{
+			if (XPBCVAGCDQ[i].XJARYUVBCB==false)
+			{
+				console.log("Posicion30 "+XPBCVAGCDQ[i].Posicion30)
+				if (XPBCVAGCDQ[i].Posicion30<JugadorElige) //2.0.8.37 Para que elija el mejor
+				{
+					MMNORPWJDC=XPBCVAGCDQ[i].AURESXCGMK;
+					JugadorElige=XPBCVAGCDQ[i].Posicion30
+				}
+			}
+		}
+*/
+
+
+
+	
 	JBXCGDTWYW.kill();
 	if (XPBCVAGCDQ.length>0)
 	{
@@ -9882,7 +10220,7 @@ AAQWTFMQMA = function() {
 				XPBCVAGCDQ.push(new JHIWUIUYCJ(HGIFKEMXAD[i].AURESXCGMK,HGIFKEMXAD[i].Sala,false,HGIFKEMXAD[i].WWKVHIMWYD,
 					HGIFKEMXAD[i].BONQVNOXDP,QHHQPXWFNG,null,HGIFKEMXAD[i].XJARYUVBCB,HGIFKEMXAD[i].UIEHFVKJSD,HGIFKEMXAD[i].EJOYNSESRD,HGIFKEMXAD[i].IRQGAFESIC, HGIFKEMXAD[i].Amigo , HGIFKEMXAD[i].OBTBPOULAV, (i+1), "",HGIFKEMXAD[i].WWKVHIMWYD, HGIFKEMXAD[i].UHYGLMAUNK,HGIFKEMXAD[i].NBJHGSFSJS,
 					HGIFKEMXAD[i].OIUIOWCHVW,HGIFKEMXAD[i].NHWYTYUSYG,HGIFKEMXAD[i].NMABCQQCDD,HGIFKEMXAD[i].AMBCNABIQQ,
-					HGIFKEMXAD[i].Posicion30
+					HGIFKEMXAD[i].Posicion30,HGIFKEMXAD[i].EsPRO
 					));
 					
 					/*			XPBCVAGCDQ.push(new JHIWUIUYCJ(HGIFKEMXAD[i].AURESXCGMK,HGIFKEMXAD[i].Sala,false,HGIFKEMXAD[i].WWKVHIMWYD,
@@ -9995,11 +10333,11 @@ AAQWTFMQMA = function() {
 		{
 			if (XPBCVAGCDQ[i].XJARYUVBCB==false)
 			{
-				
+				console.log("Posicion30 "+XPBCVAGCDQ[i].Posicion30)
 				if (XPBCVAGCDQ[i].Posicion30<JugadorElige) //2.0.8.37 Para que elija el mejor
 				{
 					MMNORPWJDC=XPBCVAGCDQ[i].AURESXCGMK;
-					JugadorElige=XPBCVAGCDQ[i].AURESXCGMK
+					JugadorElige=XPBCVAGCDQ[i].Posicion30
 				}
 			}
 		}
@@ -10024,6 +10362,7 @@ AAQWTFMQMA = function() {
 			if (XPBCVAGCDQ[i].XJARYUVBCB==false)
 			{
 				MMNORPWJDC=XPBCVAGCDQ[i].AURESXCGMK;
+				JugadorElige=XPBCVAGCDQ[i].Posicion30
 			} 
 		 }
 		 
@@ -10110,7 +10449,7 @@ AAQWTFMQMA = function() {
  
 	 
 	 var RTOSLKFWHC="";
-	 if (OIUIOWCHVW==1)
+	 if (OIUIOWCHVW==1  || SoyBazan==true)
 	 {
 		 Logro='nivel_pro';
 		 Imagen='nivel_pro.png'
@@ -10408,6 +10747,18 @@ AAQWTFMQMA = function() {
 						UWROMBGGSY.revive();
 						
 						
+						textJugadorRank1.text="";
+						if (XPBCVAGCDQ[i].Posicion30!=99999)
+						{
+							textJugadorRank1.text="P: "+XPBCVAGCDQ[i].Posicion30;
+						}
+						else
+						{
+							textJugadorRank1.text=""
+						}
+						textJugadorRank1.revive();
+						
+						
 						XPBCVAGCDQ[i].WWKVHIMWYD=XPBCVAGCDQ[i].JJHFHGHSUI;
 						//UWROMBGGSY.text="Tengo Tengo Tengo";
 						if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
@@ -10419,6 +10770,11 @@ AAQWTFMQMA = function() {
 							UWROMBGGSY.x=UWROMBGGSY.x+(UWROMBGGSY.textWidth/2)-UIEHVJKSCN;
 						}
 						UWROMBGGSY.y=y1text;
+						textJugadorRank1.y=y1text;
+						
+						//textJugadorRank1.text="Rank: 2455"
+						textJugadorRank1.x=x1;
+						textJugadorRank1.y=y1-57;
 						
 						//UWROMBGGSY.x=(x1text);
 						//UWROMBGGSY.y=(y1text);
@@ -10475,13 +10831,17 @@ AAQWTFMQMA = function() {
 								
 								if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
 								{
-									UWROMBGGSY.x=UWROMBGGSY.x-(UWROMBGGSY.textWidth/2)-UIEHVJKSCN;
+									UWROMBGGSY.x=UWROMBGGSY.x-(UWROMBGGSY.textWidth/2)-UIEHVJKSCN;									
 								}
 								else
 								{
-									UWROMBGGSY.x=UWROMBGGSY.x+(UWROMBGGSY.textWidth/2)-UIEHVJKSCN;
+									UWROMBGGSY.x=UWROMBGGSY.x+(UWROMBGGSY.textWidth/2)-UIEHVJKSCN;									
 								}
 								UWROMBGGSY.y=y1text;
+								
+								textJugadorRank1.text="";
+								textJugadorRank1.x=x1;
+								textJugadorRank1.y=y1-57;
 							
 								XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 1"
 								var key='JHGHJAGCMC'					
@@ -10578,6 +10938,18 @@ AAQWTFMQMA = function() {
 						HUPALFWPFI.text="";
 						HUPALFWPFI.text=XPBCVAGCDQ[i].JJHFHGHSUI;
 						XPBCVAGCDQ[i].WWKVHIMWYD=XPBCVAGCDQ[i].JJHFHGHSUI;
+						
+						textJugadorRank2.text="";
+						if (XPBCVAGCDQ[i].Posicion30!=99999)
+						{
+							textJugadorRank2.text="P: "+XPBCVAGCDQ[i].Posicion30;
+						}
+						else
+						{
+							textJugadorRank1.text=""
+						}
+						textJugadorRank2.revive();						
+						
 						//HUPALFWPFI.text="Tengo2 Tengo2 Tengo2";
 						if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
 						{
@@ -10589,6 +10961,8 @@ AAQWTFMQMA = function() {
 						}
 						HUPALFWPFI.y=y1text;
 						
+						textJugadorRank2.x=x1;
+						textJugadorRank2.y=y1-57;						
 						
 						//imagen2=XPBCVAGCDQ[i].QHHQPXWFNG
 						if (MMKMYKBXGH!=undefined)
@@ -10641,6 +11015,9 @@ AAQWTFMQMA = function() {
 								}
 								HUPALFWPFI.y=y1text;
 								
+								textJugadorRank2.text="";
+								textJugadorRank2.x=x1;
+								textJugadorRank2.y=y1-57;									
 								
 								XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 2"
 								var key='JHGHJAGCMC'					
@@ -10723,6 +11100,19 @@ AAQWTFMQMA = function() {
 						BXYCJYDVRT.text="";
 						BXYCJYDVRT.text=XPBCVAGCDQ[i].JJHFHGHSUI;
 						XPBCVAGCDQ[i].WWKVHIMWYD=XPBCVAGCDQ[i].JJHFHGHSUI;
+						
+						textJugadorRank3.text="";
+						if (XPBCVAGCDQ[i].Posicion30!=99999)
+						{
+							textJugadorRank3.text="P: "+XPBCVAGCDQ[i].Posicion30;
+						}
+						else
+						{
+							textJugadorRank1.text=""
+						}
+						textJugadorRank3.revive();						
+						
+						
 						//BXYCJYDVRT.text="Tengo3 Tengo3 Tengo3";
 						if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
 						{
@@ -10734,7 +11124,8 @@ AAQWTFMQMA = function() {
 						}
 						BXYCJYDVRT.y=y1text;
 						
-						
+						textJugadorRank3.x=x1;
+						textJugadorRank3.y=y1-57;			
 						
 						//imagen3=XPBCVAGCDQ[i].QHHQPXWFNG
 						//imagen3=XPBCVAGCDQ[i].QHHQPXWFNG
@@ -10787,6 +11178,10 @@ AAQWTFMQMA = function() {
 									BXYCJYDVRT.x=BXYCJYDVRT.x+(BXYCJYDVRT.textWidth/2)-UIEHVJKSCN;
 								}
 								BXYCJYDVRT.y=y1text;
+								
+								textJugadorRank3.text="";
+								textJugadorRank3.x=x1;
+								textJugadorRank3.y=y1-57;									
 								
 								XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 3"
 								var key='JHGHJAGCMC'					
@@ -10872,6 +11267,20 @@ AAQWTFMQMA = function() {
 						IRAIEARIWA.text="";
 						IRAIEARIWA.text=XPBCVAGCDQ[i].JJHFHGHSUI;
 						XPBCVAGCDQ[i].WWKVHIMWYD=XPBCVAGCDQ[i].JJHFHGHSUI;
+						
+						textJugadorRank4.text="";
+						if (XPBCVAGCDQ[i].Posicion30!=99999)
+						{
+							textJugadorRank4.text="P: "+XPBCVAGCDQ[i].Posicion30;
+						}
+						else
+						{
+							textJugadorRank1.text=""
+						}
+						textJugadorRank4.revive();
+						
+					
+						
 						//IRAIEARIWA.text="Tengo4 Tengo4 Tengo4";
 						if (UBWRXKMTQN=="U" || UBWRXKMTQN=="R"  )
 						{
@@ -10881,7 +11290,10 @@ AAQWTFMQMA = function() {
 						{
 							IRAIEARIWA.x=IRAIEARIWA.x+(IRAIEARIWA.textWidth/2)-UIEHVJKSCN;
 						}
-						IRAIEARIWA.y=y1text;					
+						IRAIEARIWA.y=y1text;	
+						
+						textJugadorRank4.x=x1;
+						textJugadorRank4.y=y1-57;							
 						
 						//imagen4=XPBCVAGCDQ[i].QHHQPXWFNG
 				
@@ -10934,6 +11346,10 @@ AAQWTFMQMA = function() {
 									IRAIEARIWA.x=IRAIEARIWA.x+(IRAIEARIWA.textWidth/2)-UIEHVJKSCN;
 								}
 								IRAIEARIWA.y=y1text;
+								
+								textJugadorRank4.text="";
+								textJugadorRank4.x=x1;
+								textJugadorRank4.y=y1-57;	
 								
 								
 								XPBCVAGCDQ[i].WWKVHIMWYD="Ordenador 4"

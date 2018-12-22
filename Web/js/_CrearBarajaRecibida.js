@@ -59,6 +59,7 @@ CLWUDOTYHT=function(data,RDBQUAVHEP,TXLWIIINGQ){
 	
 	JKLJKLRIRI.kill();
 	NCTURHDRYW();
+	OcultarElegirEmoticono();
 	//1.0.9 NKJHKJHHHE.splice(0,1000);	
 	CUUKQAGFEB.x=QETACVSHAR;
 	CUUKQAGFEB.revive();

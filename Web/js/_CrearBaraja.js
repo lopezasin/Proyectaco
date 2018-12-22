@@ -340,6 +340,7 @@ ETKKAJPFXQ=function(RDBQUAVHEP){
 		
 		JKLJKLRIRI.kill();
 		NCTURHDRYW();
+		OcultarElegirEmoticono();
 		//NKJHKJHHHE.splice(0,1000);	
 		CUUKQAGFEB.x=QETACVSHAR;
 		CUUKQAGFEB.revive();

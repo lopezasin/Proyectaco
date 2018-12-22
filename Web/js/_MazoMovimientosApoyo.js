@@ -2626,6 +2626,7 @@ QYYXUWQADX=function(TXLWIIINGQ){
 		
 		HGMNXSIAPV=true;
 		//console.log("RECUPERA_ sacatriunfo");
+		BloqueoCartaCentro=false;
 		OGGWQECXBK(TXLWIIINGQ,false,false); //QYYXUWQADX
 		//NUWTGXUUTS();
 		
@@ -5008,12 +5009,13 @@ WWAYLOUPUQ=function(TXLWIIINGQ) {
 											//d.style.zIndex=-1;
 												
 												//console.log("deberia saltar");
-												if (FinCoto())
+												if (FinCoto() && 1==2)
 												{
 													//var timerdelaymatarconexion;
 													//timerdelaymatarconexion=YMHIHSNADE.time.create(false);
 													//timerdelaymatarconexion.add(2000, function()
 													//{
+														MostrarRevancha()
 														MHELAUXKXR();
 														XEMENNVXGV();
 														//JHKWHCWKWC(); //2.0.7
@@ -5244,6 +5246,11 @@ UIYIUCHWUH=function(){
 QSAXUCPASV=function(){
 
 var i;
+
+if (MNAGVJHWOW()==false) //2.0.8.37, junto con todos BloqueoCartaCentro
+{
+	BloqueoCartaCentro=false;
+}
 
 IHSKJHKWCM=false; 
 BHJCWGIUIU=false;
@@ -5587,6 +5594,15 @@ CargaOpcionesDefecto=function()
 {
 	var d=document.getElementById("SelectorBaraja");
     d.selectedIndex=StorageGet("NXNXBWBBWL")
+	if (d.selectedIndex==1)
+	{
+		NXNXBWBBWL="baraja_guinarte";
+	}
+	else
+	{
+		NXNXBWBBWL="baraja_pro";
+	}
+	
 	
 	var d=document.getElementById("OptAudioChascarrillo");
     d.checked=StorageGet("AudioChascarrillos")	
@@ -5599,15 +5615,8 @@ CargaOpcionesDefecto=function()
 
 	
 	
-	var TipoBarajaIndex=StorageGet("NXNXBWBBWL");
-	if (TipoBarajaIndex==1)
-	{
-		NXNXBWBBWL="baraja_guinarte";
-	}
-	else
-	{
-		NXNXBWBBWL="baraja_pro";
-	}
+	
+
 	
 	SonidoChascarrillos=StorageGet("AudioChascarrillos");
 	SonidoCantes=StorageGet("AudioCantes");
@@ -5618,21 +5627,18 @@ CargaOpcionesDefecto=function()
 CambioSelectorBaraja=function()
 {
 	var d=document.getElementById("SelectorBaraja");
-    console.log(d.selectedIndex);
 	StorageSet("NXNXBWBBWL",d.selectedIndex)
 }
 
 CambioSelectorAudioChascarrillos=function()
 {
 	var d=document.getElementById("OptAudioChascarrillo");
-    console.log(d.checked);
-	StorageSet("AudioChascarrillos",d.checked)
+    StorageSet("AudioChascarrillos",d.checked)
 }
 
 CambioSelectorAudioCantes=function()
 {
 	var d=document.getElementById("OptAudioCantes");
-    console.log(d.checked);
 	StorageSet("AudioCantes",d.checked)
 }
 

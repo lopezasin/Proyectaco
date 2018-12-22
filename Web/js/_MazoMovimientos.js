@@ -2226,7 +2226,291 @@ DFCCHCJBNP=function(UPCWNPYAIE,TXLWIIINGQ){
 	}
 }
 
+onSocketEnviarEmoticonosDesdeServer=function(JugadorDesde, JugadorHasta, idEmoticono)
+{
+	var AQuien;
+	var EfectoMovimiento;
+	var Efecto=0;
+	
+	var Rotar=true;
+	var Fadding=true;
+	var vTiempoEmotiMover=900;
+	var vTiempoEmotiDesaparecer=1000;
+	var STLEOJDWSU;
+	var DUHVSKZZZD=140;
+	var DesplazamientoD=200;
+	var posXDesde;
+	var posXHasta;
+	var posYDesde;
+	var posYHasta;	
+	
+	//var JugadorDesde=1;
+	//var JugadorHasta=4;
+	
+	var STLEOJDWSU=HHOPUSIABJ(JugadorDesde)
+	
+	if (STLEOJDWSU=="U")
+	{
+		posXDesde=YMHIHSNADE.world.centerX	;
+		posYDesde=0;	
+	}
+	if (STLEOJDWSU=="R")
+	{
+		posXDesde=YMHIHSNADE.world.width	;
+		posYDesde=YMHIHSNADE.world.centerY	;	
+	}	
+	if (STLEOJDWSU=="L")
+	{
+		posXDesde=0	;
+		posYDesde=YMHIHSNADE.world.centerY	;	
+	}		
+	if (STLEOJDWSU=="D")
+	{
+		posXDesde=YMHIHSNADE.world.centerX	;
+		posYDesde=YMHIHSNADE.world.height	;	
+	}		
+	
+	
+	STLEOJDWSU=HHOPUSIABJ(JugadorHasta)
+	
+	if (STLEOJDWSU=="U")
+	{
+		posXHasta=YMHIHSNADE.world.centerX	;
+		posYHasta=0+DUHVSKZZZD;	
+	}
+	if (STLEOJDWSU=="R")
+	{
+		posXHasta=YMHIHSNADE.world.width-DUHVSKZZZD	;
+		posYHasta=YMHIHSNADE.world.centerY	;	
+	}	
+	if (STLEOJDWSU=="L")
+	{
+		posXHasta=0+DUHVSKZZZD	;
+		posYHasta=YMHIHSNADE.world.centerY	;	
+	}		
+	if (STLEOJDWSU=="D")
+	{
+		posXHasta=YMHIHSNADE.world.centerX	;
+		posYHasta=YMHIHSNADE.world.height-DesplazamientoD	;	
+	}		
+		
+	
+	var EmoticonoEnviar=YMHIHSNADE.add.image(posXDesde,posYDesde,idEmoticono);
+	EmoticonoEnviar.anchor.setTo(0.5, 0.5)
 
+
+	   //     YMHIHSNADE.add.tween(EmoticonoEnviar).to({y: 240}, 1000, Phaser.Easing.Bounce.Out, true, 100, 0);
+
+	   
+	Efecto=Math.floor(Math.random() * 3) + 1 
+
+	if (Efecto==1) //Rebote
+	{
+		EfectoMovimiento= Phaser.Easing.Bounce.Out;
+		YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+	}
+
+	if (Efecto==2) 
+	{
+		EfectoMovimiento= Phaser.Easing.Sinusoidal.InOut;
+		YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+	}	
+	
+	if (Efecto==3) //Rebote
+	{
+		EfectoMovimiento= Phaser.Easing.Linear.None;
+		YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+	}	
+
+	Rotar=Math.floor(Math.random() * 5) + 1 
+	if (Rotar<=2)
+	{
+		Rotar=true;
+	}
+	else
+	{
+		Rotar=false;
+	}
+
+	if (Rotar==true && Efecto!=1 )
+	{
+		YMHIHSNADE.add.tween(EmoticonoEnviar).to({angle: 360}, vTiempoEmotiMover, Phaser.Easing.Cubic.In, true, 100, 0);
+	}
+	
+	/*Fadding=Math.floor(Math.random() * 10) + 1 
+	if (Fadding<=2)
+	{
+		Fadding=true;
+	}
+	else
+	{
+		Fadding=false;
+	}
+	
+	Fadding=false;
+	if (Fadding==true)
+	{
+		EmoticonoEnviar.alpha = 0;
+		YMHIHSNADE.add.tween(EmoticonoEnviar).to( { alpha: 1 }, vTiempoEmoti, Phaser.Easing.Linear.None, true, 20, 0);
+	}*/
+	
+	EmoticonoEnviar.scale.setTo(0.1,0.1)
+	EmoticonoEnviar.bringToTop();
+	var twEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar.scale).to( {x:0.3,y:0.3}, vTiempoEmotiMover, Phaser.Easing.Linear.None,true,vTiempoEmotiDesaparecer);
+	twEmoticono.onComplete.add(  function(){
+								//if (DQKYYAPEEN.isRunning==false && MJBCTSKUIB.isRunning==false)
+								//{
+									EmoticonoEnviar.bringToTop();
+									EmoticonoEnviar.kill();//2.0.1 clave:rehuse
+								//}
+								})
+	
+}
+
+CalculaQuienEmoticono=function(QuienSoy,Check)
+{
+	var QOWECQVXCM=0;
+	if(QuienSoy==1)
+	{
+		if (Check==1)
+		{
+			QOWECQVXCM=2
+		}
+		if (Check==2)
+		{
+			QOWECQVXCM=3
+		}
+		if (Check==3)
+		{
+			QOWECQVXCM=4
+		}	
+	}
+	if(QuienSoy==2)
+	{
+		if (Check==1)
+		{
+			QOWECQVXCM=1
+		}
+		if (Check==2)
+		{
+			QOWECQVXCM=3
+		}
+		if (Check==3)
+		{
+			QOWECQVXCM=4
+		}	
+	}	
+	if(QuienSoy==3)
+	{
+		if (Check==1)
+		{
+			QOWECQVXCM=1
+		}
+		if (Check==2)
+		{
+			QOWECQVXCM=2
+		}
+		if (Check==3)
+		{
+			QOWECQVXCM=4
+		}	
+	}	
+	if(QuienSoy==4)
+	{
+		if (Check==1)
+		{
+			QOWECQVXCM=1
+		}
+		if (Check==2)
+		{
+			QOWECQVXCM=2
+		}
+		if (Check==3)
+		{
+			QOWECQVXCM=3
+		}	
+	}	
+		
+	return QOWECQVXCM;
+}
+EnviarEmoticonoTodos=function()
+{
+		/////////////
+		var AQuien;
+		var idEmoticono="Emoticono1";
+		
+		var d=document.getElementById("JugadorEmoti1");
+		
+		
+		
+		if(d.checked)
+		{
+			AQuien=CalculaQuienEmoticono(TFSXFTYVGQ,1)
+			
+			
+			try
+			{
+				socket.emit('enviar_emoticono', TFSXFTYVGQ,AQuien, idEmoticono, DFBVDPETGO) ;
+				console.log("Lo envia")
+			}
+			catch(e){}		
+			d.checked=false;
+		}
+		
+		var d=document.getElementById("JugadorEmoti2");
+		if(d.checked)
+		{
+			
+			AQuien=CalculaQuienEmoticono(TFSXFTYVGQ,2)
+			if (AQuien>4)
+			{
+				AQuien=AQuien-4;
+			}
+			console.log("Checked2 Soy "+TFSXFTYVGQ+" y envio a "+AQuien)
+			
+			try
+			{
+				socket.emit('enviar_emoticono', TFSXFTYVGQ,AQuien, idEmoticono, DFBVDPETGO) ;
+			}
+			catch(e){}		
+			d.checked=false;
+		}		
+		
+		var d=document.getElementById("JugadorEmoti3");
+		if(d.checked)
+		{
+			AQuien=CalculaQuienEmoticono(TFSXFTYVGQ,3)
+			if (AQuien>4)
+			{
+				AQuien=AQuien-4;
+			}
+			console.log("Checked3 Soy "+TFSXFTYVGQ+" y envio a "+AQuien)
+			
+			try
+			{
+				socket.emit('enviar_emoticono', TFSXFTYVGQ,AQuien, idEmoticono, DFBVDPETGO) ;
+			}
+			catch(e){}		
+			d.checked=false;
+		}		
+		OcultarElegirEmoticono();
+}
+
+EnviarEmoticono=function(JSKXXDPSDS)
+{
+	
+	if (JSKXXDPSDS==1)
+	{
+		EnviarEmoticonoTodos()
+	}
+	else
+	{
+		OcultarElegirEmoticono()
+	}
+	
+
+	
+}
 HQWFFUCQDR=function(SLGKDYQCAY,UHTPGPRUJA,PartidaRecibida){
 	var HAUSUTNHGI=true
 	/*var i;

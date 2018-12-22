@@ -48,7 +48,7 @@ Preload.prototype.preload = function() {
 	
 	////console.log("despues general");
 
-
+	this.load.image('Emoticono1', 'assets/images/emoticonos/emoticono1.png');	
 	
 	this.load.image('Reverso', 'assets/images/Cartas/Reversos/reverso.png',true);	
 	this.load.image('JHGHJAGCMC', 'assets/images/Cartas/Reversos/maquina.jpg');	
