@@ -5865,6 +5865,8 @@ OCSBJTDODP=function(){
 		
 	//HJBVQUGKVY();	
 	
+	
+	
 			facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 		  function loginError (error) {
 			alert("ERROR ")
@@ -5872,7 +5874,7 @@ OCSBJTDODP=function(){
 		);
 
 		var fbLoginSuccess = function (userData) {
-		  alert("UserInfo: "+ userData);
+		  SVHMCOYULR("UserInfo: "+ userData);
 
 		};
 
