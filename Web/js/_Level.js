@@ -16,6 +16,7 @@ Level.prototype = proto;
 
 var KYLIAIETHX=false;
 
+
 var BloqueoCartaCentro=false;
 var vCampeonatoOasis=false;
 var JHGHJAGCMC;
