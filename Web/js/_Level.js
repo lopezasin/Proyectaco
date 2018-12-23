@@ -4273,8 +4273,9 @@ RSHJSKMBRP=function(Tipo)
 						  facebookConnectPlugin.api("/me?fields=id,name,email,picture", ["public_profile", "email"], 
 								function(response) {
 									socket.emit("Consola","EO SOLO ");
-									socket.emit("Consola","EO ID "+response.id);
-									socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.url);
+									//socket.emit("Consola","EO ID "+response.id);
+									socket.emit("Consola","EO "+response)
+									//socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.url);
 									MCFSLYOMHE();
 									HDGGWGGSVH=true;
 									
