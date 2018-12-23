@@ -4274,7 +4274,7 @@ RSHJSKMBRP=function(Tipo)
 								function(response) {
 									socket.emit("Consola","EO SOLO ");
 									socket.emit("Consola","EO ID "+response.id);
-									socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +JSON.stringify(response.picture));
+									socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.url);
 									MCFSLYOMHE();
 									HDGGWGGSVH=true;
 									
