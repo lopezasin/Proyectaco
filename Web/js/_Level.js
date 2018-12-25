@@ -4287,6 +4287,7 @@ RSHJSKMBRP=function(Tipo)
 													
 													ObjetoG=response;	
 													ObjetoG.BDYYDTFQAO="Facebook";
+													ObjetoG.userId=response.id //Para que funcione en la siguiente función como Facebook
 													//ObjetoG.TUTWNSAGSX=true;
 													
 													MCFSLYOMHE();
@@ -4329,12 +4330,13 @@ RSHJSKMBRP=function(Tipo)
 										
 										ObjetoG=response;	
 										ObjetoG.BDYYDTFQAO="Facebook";
+										ObjetoG.userId=response.id //Para que funcione en la siguiente función como Facebook
 										//ObjetoG.TUTWNSAGSX=false;
 										
 										MCFSLYOMHE();
 										HDGGWGGSVH=false;
 										
-										JVEHDHOEEM();									
+										//JVEHDHOEEM();									
 									},
 									function ()
 									{
