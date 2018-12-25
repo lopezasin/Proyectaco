@@ -4282,8 +4282,13 @@ RSHJSKMBRP=function(Tipo)
 												function(response) {
 													//socket.emit("Consola","EO SOLO ");
 													//socket.emit("Consola","EO ID "+response.id);
-													socket.emit("Consola",response)
-													//socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.data.url);
+													//socket.emit("Consola",response)
+													socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.data.url);
+													
+													ObjetoG=response;	
+													ObjetoG.BDYYDTFQAO="Facebook";
+													ObjetoG.TUTWNSAGSX=true;
+													
 													MCFSLYOMHE();
 													HDGGWGGSVH=true;
 													
@@ -4291,22 +4296,52 @@ RSHJSKMBRP=function(Tipo)
 												},
 												function ()
 												{
-													 socket.emit("Consola","Error en api");
+													 //socket.emit("Consola","Error en api");
 												}
 											);
 									}
 								,
 									function()
 									{
-										socket.emit("Consola","Error en api2");
+										//socket.emit("Consola","Error en api2");
 									}
 								);
 							}
 							else
 							{
-								socket.emit('Consola', "Uno "+response.authResponse.userID);
-								socket.emit('Consola', "Dos "+response.authResponse)
-								socket.emit('Consola', "WJIXAEXYTP "+JSON.stringify(response.authResponse))
+								//socket.emit('Consola', "Uno "+response.authResponse.userID);
+								//socket.emit('Consola', "Dos "+response.authResponse)
+								//socket.emit('Consola', "WJIXAEXYTP "+JSON.stringify(response.authResponse))
+								
+								/*ObjetoG=response;	
+								ObjetoG.BDYYDTFQAO="Facebook";
+								ObjetoG.TUTWNSAGSX=false;
+								
+								MCFSLYOMHE();
+								JVEHDHOEEM();	*/
+
+								  facebookConnectPlugin.api("/me?fields=id,name,email,picture", ["public_profile", "email"], 
+									function(response) {
+										//socket.emit("Consola","EO SOLO ");
+										//socket.emit("Consola","EO ID "+response.id);
+										//socket.emit("Consola",response)
+										socket.emit("Consola","EO2 "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.data.url);
+										
+										ObjetoG=response;	
+										ObjetoG.BDYYDTFQAO="Facebook";
+										ObjetoG.TUTWNSAGSX=false;
+										
+										MCFSLYOMHE();
+										HDGGWGGSVH=false;
+										
+										JVEHDHOEEM();									
+									},
+									function ()
+									{
+										 //socket.emit("Consola","Error en api");
+									}
+								);
+								
 							}
 						
 						}
