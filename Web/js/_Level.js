@@ -4283,11 +4283,11 @@ RSHJSKMBRP=function(Tipo)
 													//socket.emit("Consola","EO SOLO ");
 													//socket.emit("Consola","EO ID "+response.id);
 													//socket.emit("Consola",response)
-													socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.data.url);
+													//socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.data.url);
 													
 													ObjetoG=response;	
 													ObjetoG.BDYYDTFQAO="Facebook";
-													ObjetoG.TUTWNSAGSX=true;
+													//ObjetoG.TUTWNSAGSX=true;
 													
 													MCFSLYOMHE();
 													HDGGWGGSVH=true;
@@ -4325,11 +4325,11 @@ RSHJSKMBRP=function(Tipo)
 										//socket.emit("Consola","EO SOLO ");
 										//socket.emit("Consola","EO ID "+response.id);
 										//socket.emit("Consola",response)
-										socket.emit("Consola","EO2 "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.data.url);
+										//socket.emit("Consola","EO2 "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.data.url);
 										
 										ObjetoG=response;	
 										ObjetoG.BDYYDTFQAO="Facebook";
-										ObjetoG.TUTWNSAGSX=false;
+										//ObjetoG.TUTWNSAGSX=false;
 										
 										MCFSLYOMHE();
 										HDGGWGGSVH=false;
