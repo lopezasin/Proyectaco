@@ -1105,6 +1105,40 @@ Level.prototype.create=function(){
 				function (msg) {
 				 }
 		);
+		
+		
+		
+		//Simulo el modo silencioso para Facebook
+		facebookConnectPlugin.getLoginStatus(	
+		
+			function(response)
+			{
+		
+				if(response.status== 'connected')			
+				{
+			
+					  facebookConnectPlugin.api("/me?fields=id,name,email,picture", ["public_profile", "email"], 
+						function(response) {
+		
+							ObjetoG=response;	
+							ObjetoG.BDYYDTFQAO="Facebook";
+							ObjetoG.userId=response.id //Para que funcione en la siguiente función como Facebook
+														
+						},
+						function ()
+						{
+							 //socket.emit("Consola","Error en api");
+						}
+					);
+					
+				}
+			
+			}
+		);
+	
+					
+					
+					
 	}
 
 
