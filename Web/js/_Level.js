@@ -1099,6 +1099,7 @@ Level.prototype.create=function(){
 				},
 				function (obj) {
 					ObjetoG=obj;	
+					ObjetoG.BDYYDTFQAO="Google";
 				}
 				,
 				function (msg) {
@@ -4266,33 +4267,50 @@ RSHJSKMBRP=function(Tipo)
 			
 			case 2 :		
 			//ref = cordova.InAppBrowser.open(JHGHJAGCMC+'/auth/facebook', '_blank', 'location=no');
-							
-					facebookConnectPlugin.login(["public_profile","email"], 
-					function()
-					{
-						  facebookConnectPlugin.api("/me?fields=id,name,email,picture", ["public_profile", "email"], 
-								function(response) {
-									//socket.emit("Consola","EO SOLO ");
-									//socket.emit("Consola","EO ID "+response.id);
-									socket.emit("Consola",response)
-									//socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.url);
-									MCFSLYOMHE();
-									HDGGWGGSVH=true;
-									
-									JVEHDHOEEM();									
-								},
-								function ()
-								{
-									 socket.emit("Consola","Error en api");
-								}
-							);
-					}
-				,
-					function()
-					{
-						socket.emit("Consola","Error en api2");
-					}
-				);
+					
+					facebookConnectPlugin.getLoginStatus(	
+						
+						function(response)
+						{
+					
+							if(response.status!= 'connected')
+							{					
+								facebookConnectPlugin.login(["public_profile","email"], 
+									function()
+									{
+										  facebookConnectPlugin.api("/me?fields=id,name,email,picture", ["public_profile", "email"], 
+												function(response) {
+													//socket.emit("Consola","EO SOLO ");
+													//socket.emit("Consola","EO ID "+response.id);
+													socket.emit("Consola",response)
+													//socket.emit("Consola","EO "+response.id + " | " + response.name + " | " + response.email + " | " +response.picture.data.url);
+													MCFSLYOMHE();
+													HDGGWGGSVH=true;
+													
+													JVEHDHOEEM();									
+												},
+												function ()
+												{
+													 socket.emit("Consola","Error en api");
+												}
+											);
+									}
+								,
+									function()
+									{
+										socket.emit("Consola","Error en api2");
+									}
+								);
+							}
+							else
+							{
+								socket.emit('Consola', "Uno "+response.authResponse.userID);
+								socket.emit('Consola', "Dos "+response.authResponse)
+								socket.emit('Consola', "WJIXAEXYTP "+JSON.stringify(response.authResponse))
+							}
+						
+						}
+					);
 			
 			break;	
 			
