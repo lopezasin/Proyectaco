@@ -45,11 +45,7 @@
 	
 <plugin name="cordova-plugin-powermanagement" />		
 <plugin name="cordova-plugin-device" spec="1.1.7" />
-<<<<<<< HEAD
-<plugin name="cordova-plugin-googleplus" spec="6.0.0" />
-=======
-<plugin name="cordova-plugin-googleplus" spec="6.0.0" /> <!--5.1.1/> -->
->>>>>>> origin/Abril
+<plugin name="cordova-plugin-googleplus" spec="6.0.0" /> 
 <plugin name="cordova-plugin-facebook4" />
 <plugin name="cordova-plugin-inappbrowser" spec="1.7.0" />
 <plugin name="cordova-plugin-nativeaudio" spec="3.0.9" />
