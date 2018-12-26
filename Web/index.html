@@ -5,17 +5,17 @@
 function redirectHttpToHttps()
 {
     var httpURL= window.location.hostname + window.location.pathname + window.location.search;
-        var httpsURL= "https://" + httpURL;
+   	var httpsURL= "https://" + httpURL;
+   	
+	httpsURL2=httpsURL.replace('www.',''); 
+	console.log("URL2 "+ window.location.hostname);
 
-        httpsURL2=httpsURL.replace('www.','');
-        console.log("URL2 "+ window.location.hostname);
-
-        if (window.location.protocol=="http:" || httpsURL.indexOf('www')>0 )
-        {
-                window.location = httpsURL2;
-        }
+	if (window.location.protocol=="http:" || httpsURL.indexOf('www')>0 )
+	{
+		window.location = httpsURL2;
+	}
 }
-//redirectHttpToHttps();
+redirectHttpToHttps();
 </script>
 <meta name="description" content="Juego de guiñote online. ¡Ya somos una gran red de guiñoter@s! ¡Únete y conviértete en un PRO del Guiñote!" />
 <meta charset="utf-8" />
@@ -48,7 +48,7 @@ function redirectHttpToHttps()
 <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover"> 
 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-<link href="lib/pagination.css" rel="stylesheet" type="text/css">
+ <link href="lib/pagination.css" rel="stylesheet" type="text/css">
 
 <!-- <link rel="stylesheet" href="assets/font-awesome.min.css">font-awesome.min -->
 <title>GuiñotePro</title>
@@ -57,32 +57,12 @@ function redirectHttpToHttps()
 <script src="lib/phaser.js"></script>
 <script src="lib/jquery.js"></script>
 <script src="lib/pagination.js"></script>
-
-<link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
-<!-- <link rel="stylesheet" type="text/css" href="slick/slick/slick_ivan.css"/> -->
-<script type="text/javascript" src="slick/slick/slick.min.js"></script>
-
 <!-- <script type='application/javascript' src='lib/fastclick.js'></script> -->
 
 <script src="lib/cpu.js"></script>
 <script src='socket.io/socket.io.js'></script>
 <!-- <script src="http://localhost:5000/socket.io/socket.io.js"></script> -->
-<script src="js/_Main.js"></script>
-<script src="js/_Boot.js"></script>
-<script src="js/_Menu.js"></script>
-<script src="js/_Preload.js"></script>
-<script src="js/_Level.js"></script>
-<script src="js/_Carta.js"></script>
-<script src="js/_CrearBaraja.js"></script>
-<script src="js/_CrearBarajaRecibida.js"></script>
-<script src="js/_RepartosDesdeArriba.js"></script>
-<script src="js/_RepartosDesdeAbajo.js"></script>
-<script src="js/_RepartosDesdeDerecha.js"></script>
-<script src="js/_RepartosDesdeIzquierda.js"></script>
-<script src="js/_MazoMovimientos.js"></script>
-<script src="js/_MazoMovimientosApoyo.js"></script>
-<script src="js/_IA.js"></script>
+<script src="js/js.js"></script>
 <!-- <script src="http://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.10&appId=123400284870556"></script> -->
 <!-- <script src="js/js.js"></script> -->
 <!-- <script src="NoSleep/sleep.js"></script> -->
@@ -202,9 +182,11 @@ function redirectHttpToHttps()
 
 <script type="text/javascript">
 
-
+/*window.addEventListener('load', function() {
+                new FastClick(document.body);
+}, false);*/
  
-/*document.addEventListener('focus', function(){ 
+document.addEventListener('focus', function(){ 
 	
 			BNMZBXWIDW=new Date();
 		
@@ -222,35 +204,15 @@ function redirectHttpToHttps()
 		//2.0.7 se lanza en el resume de phonegap window.location.reload();
 		//igual hay que quitarlo para android
 
-		//FUTURE
-		//var SO=JHDSFWFWUU();
-		//if (SO.toUpperCase()=="IOS") //Importante que no se meta por aquí Android, ya que le afecta otro resume
-		//{	
-			// FUTURE GTRVLWPSYL();
-			JHJGSFGJSW(); //Pongo este nuevo  20180922
-		//}
+		
+		var SO=JHDSFWFWUU();
+		if (SO.toUpperCase()=="IOS") //Importante que no se meta por aquí Android, ya que le afecta otro resume
+		{	
+			GTRVLWPSYL();
+		}
 		
  }); 
-*/
 
-  <!-- $('.slideshow').slick(); -->
-  
-  
-$(document).ready(function(){
-      
-  $('.vertical-center-4').slick({
-            dots: true,
-        vertical: false,
-        centerMode: false,
-        slidesToShow: 4,
-        slidesToScroll: 2
-  });
-      
-      $('.single-item').slick({
-          dots: true,
-            infinite: true
-      });
-});
 
     $(document).ready(function(e){
 		$('#divtablasalas').css("height", $(window).height()-100);
@@ -460,22 +422,12 @@ $(document).ready(function(){
 		
 		
 		
-	   $('#blateral').click(function(event){
+	$('#blateral').click(function(event){
 		event.preventDefault();
 		$('#lateral').animate({width: "toggle"});
-		
-		
-		CargaOpcionesDefecto();
 	   });
-        
-        $('#cerrarlateral').click(function(event){
-            event.preventDefault();
-            $('#lateral').animate({width: "toggle"});
-	    });
 	
 	});
-    
-    
 	
 
 	
@@ -615,43 +567,7 @@ function FiltrarSalas() {
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-
-		document.addEventListener('focus', function(){ 
-			
-					BNMZBXWIDW=new Date();
-				
-		}
-		);
-
-		 document.addEventListener('pause', function(){
-				UJHVBJDGJD=new Date(Date.now());				
-				MatarConexionPrueba(); //2.0.7
-			
-		 }); 
-		 
-		 
-			document.addEventListener('resume', function(){
-				//2.0.7 se lanza en el resume de phonegap window.location.reload();
-				//igual hay que quitarlo para android
-
-				//FUTURE
-				//var SO=JHDSFWFWUU();
-				//if (SO.toUpperCase()=="IOS") //Importante que no se meta por aquí Android, ya que le afecta otro resume
-				//{	
-					// FUTURE GTRVLWPSYL();
-					JHJGSFGJSW(); //Pongo este nuevo  20180922
-				//}
-				
-		 }); 
 		
-		
-		/*var fbLoginSuccess = function (userData) {
-		 alert("UserInfo: ", JSON.stringify(userData));
-		}
-		*/
-		
-
-
 		try
 		{
 			window.powermanagement.acquire();
@@ -667,7 +583,7 @@ function onDeviceReady() {
 
 			//To track a Screen (PageView):
 			window.ga.trackView('Guiñote');
-			window.ga.setAppVersion('2.0.8036');
+			window.ga.setAppVersion('2.0.8035');
 			window.ga.setAllowIDFACollection(true);
 		}
 		catch(e)
@@ -728,77 +644,6 @@ document.addEventListener("backbutton", function (e) {
 
 </script>
 <style>
-    
-    #lateral { padding: 10px }
-    
-    #lateral select { padding:10px; border: #000 solid 1px; border-radius: 5px; width:100%; box-sizing: border-box; }
-    
-    #lateral label {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 15px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-#lateral label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-#lateral label:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-#lateral label input:checked ~ .checkmark {
-  background-color: #961918;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-#lateral label input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-#lateral label .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
 
     .zoom{
         /* Aumentamos la anchura y altura durante 2 segundos */
@@ -1121,16 +966,6 @@ border-spacing: 50em;
   left: 0;
 }
 
-#DivInstagram {
-  width: 250;
-  height: 30;
-  position: absolute;
-  top: 0;
-  left: 125;
-}
-
-
-
 #tabs { padding: 1px; padding-bottom: 0px; }
 #tabs a { 
 	text-decoration: none;
@@ -1182,9 +1017,6 @@ border-spacing: 50em;
 <body  style="background-color:rgb(0%, 0%, 0%);" > 
 
 
-
- 
-  
 <div id='DivGPRD' style='position:absolute; top:0px; width: 100%; display:none; background: #82011c; z-index:10000'>
 <form id='fgprd'>
 
@@ -1248,43 +1080,20 @@ border-spacing: 50em;
 </form>
 </div>
 
-<div id='lateral' style='background: #ffe800; border-right: #961918 solid 2px; position: absolute; top:0px; bottom:0px; left:0px; width: 200px; z-index: 10001; display:none'>  
-    <div id='cerrarlateral' style='position:absolute; cursor: pointer; top:0px; right: 10px; font-size: 20px; padding:5px; display: block;'>&times;</div>
-	<br>
-    Baraja<br>
-	<select id="SelectorBaraja" onchange="CambioSelectorBaraja()"> 
-	  <optgroup id="OptBaraja" label="Baraja">
-		<option value="Tradicional">Tradicional</option>
-		<option value="Asoc. Aragonesa Guiñote, Guiñarte">Guiñarte</option>
-	  </optgroup>	  
-	</select>
-	<br><br>
-	<h4 style='text-align: center; margin-top:20px;'>OPCIONES AUDIO</h4>
-    <label for="OptAudioChascarrillo">
-        <input type="checkbox" id="OptAudioChascarrillo" onchange="CambioSelectorAudioChascarrillos()">audio chascarrillos
-        <span class="checkmark"></span>
-    </label>
-    <label for="OptAudioCantes"><input type="checkbox" id="OptAudioCantes" onchange="CambioSelectorAudioCantes()">audio cantes
-    <span class="checkmark"></span>
-        
-    </label>
-    <label for="OptAudioCartas"><input type="checkbox" id="OptAudioCartas" onchange="CambioSelectorAudioCartas()">audio cartas
-    <span class="checkmark"></span>
-    </label>
-</div>
-
-<!-- <div style='position:absolute;  bottom: 10px; left: 10px;'> -->
+<!-- <div id='lateral' style='background: #ff0; position: absolute; top:0px; bottom:0px; left:0px; width: 200px; z-index: 10001; display:none'> -->
+<!-- </div> -->
+<div style='position:absolute;  bottom: 10px; left: 10px;'>
 
 <!-- El display none de bchat es lo que necesito para que no se vea y llamarlo desde el juego -->
 <button id='bchat' style='cursor:pointer;display:none'>abrir</button> 
-<!-- </div> -->
+</div>
 
 <!-- El display none de bdenuncia es lo que necesito para que no se vea y llamarlo desde el juego -->
 <button id='bdenuncia' style='cursor:pointer;display:none'>abrir</button> 
-<!-- </div>  -->
+</div>
 
 <div style='position:absolute;  bottom: 50%; right: 10px;'>
-<button id='blateral'  style='cursor:pointer;display:inline-block'>abrir lateral</button>
+<button id='blateral'  style='cursor:pointer;display:none'>abrir lateral</button>
 </div>
 
 
@@ -1295,39 +1104,16 @@ border-spacing: 50em;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.10&appId=123400284870556";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script> 
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
 
  <!-- style= "margin:0px; padding:0px;width:100%;height:100%" -->
   <!-- style= "min-height: 100%;min-width: 100%;margin:0px; padding:0px;width:100%;height:100%" -->
 
-<!--    <div class="contenedor_slick">
-	<div class="slideshow">
-		<div class="slide slide1"></div>
-		<div class="slide slide2"></div>
-		<div class="slide slide3"></div>
-	</div>
- </div> -->
+  
 <div id="gamer" style="margin: 0px; padding:0px ;width:100%; height:100%; max-width: 100%; max-height: 100%">
 
-
- 
- 
-<!--   <section class="vertical-center-4 slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-  </section> -->
 
 
 <div id=DivResultado class="container" style="display:none" >
@@ -1605,40 +1391,14 @@ border-spacing: 50em;
 	
 </div>
 
-<div id="DivIrA" class="container"  style="display:none; position: absolute;
+<div id="DivEligePareja" class="container"  style="display:none; position: absolute;
 	top: 30%;
 	left: 55%;
     font-size: 18px; /* Increase font-size */
-	width: 50%;
+	width: 60%;
 	height: 150px;
 	margin-left: -30%;
 	background:#fff;border-radius: 5px;	
-	text-align:center;
-	z-index: 10;
-	border:1px solid;
-	" >
-	
-	
-	 <!-- <label id="lblSalir">a</label><br> -->
-	  <div style="text-align:center; margin-top: 10px; " >
-	  <label id="lblIrA" ><center>IrA</center></label>
-	   <label id="lblIrAWeb" class="hidden" ><center>Oculto</center></label>
-	  </div>
-	
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaIrA(true)">Sí</button>
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaIrA(false)">No</button>
-	
-</div>
-
-<div id="DivEligePareja" class="container"  style="display:none; position: absolute;
-	top: 20%;
-	left: 55%;
-    font-size: 18px; /* Increase font-size */
-	width: 60%;
-	height: 230px;
-	margin-left: -30%;
-	background: rgba(255,255,255,0.9);
-    border-radius: 5px;	
 	text-align:center;
 	z-index: 10;
 	border:1px solid;
@@ -1649,95 +1409,11 @@ border-spacing: 50em;
 	  <div style="text-align:center; margin-top: 10px; " >
 	  <label id="lblPareja" ><center>a</center></label>
 	  </div>
-    <div style='display:inline-block'>
-         <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
-
-             <button id=Pareja1 type="button" class="btn btn-default" onClick="NXVIOTGLQV(1)">a</button>
-             <img id=Foto1 src='a' style='max-width:30px;max-height:30px' >
-             <img id=Nivel1 src='a' style='max-width:30px;max-height:30px' >
-             <img id=CampeonSemanal1 src='a' style='max-width:30px;max-height:30px' >
-             <label id="PosicionMes1" ><center>a</center></label>
-        </div>
-        <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
-         <button id=Pareja2 type="button" class="btn btn-default"  onClick="NXVIOTGLQV(2)" >a</button>
-         <img id=Foto2 src='a' style='max-width:30px;max-height:30px' >
-         <img id=Nivel2 src='a' style='max-width:30px;max-height:30px' >
-         <img id=CampeonSemanal2 src='a' style='max-width:30px;max-height:30px' >
-         <label id="PosicionMes2" ><center>a</center></label>
-        </div>
-        <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
-         <button id=Pareja3 type="button" class="btn btn-default"  onClick="NXVIOTGLQV(3)" >a</button>
-         <img id=Foto3 src='a' style='max-width:30px;max-height:30px' >
-         <img id=Nivel3 src='a' style='max-width:30px;max-height:30px' >
-         <img id=CampeonSemanal3 src='a' style='max-width:30px;max-height:30px' >
-         <label id="PosicionMes3" ><center>a</center></label>
-        </div>
-	</div>
-</div>
-
-
-<div id="DivEmoticonos" class="container"  style="display:none; position: absolute;
-	top: 60%;
-	left: 55%;
-    font-size: 18px; /* Increase font-size */
-	width: 60%;
-	height: 150px;
-	margin-left: -30%;
-	background:#fff;border-radius: 5px;	
-	text-align:center;
-	z-index: 10;
-	border:1px solid;
-	" >
-	<div style='display:flex; align-content: space-between;'>
-        <div><span style='font-size: 12px'>Seleciona el emoji</span>
-            
-            <div class='single-item' style='width: 100px; height: 100px; border: #961918 solid 1px;'>
-                <div>
-                    <table align='center' style='mtop10'>
-                    <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                    <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                    </table>
-                </div>
-                
-                <div>
-                    <table align='center' style='mtop10'>
-                    <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                    <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div>
-            <input type="checkbox" id="JugadorEmoti1">
-            <label id="JugadorEmoti1Nombre" ><center>a</center></label><br>
-            <img id=FotoEmoti1 src='a' style='max-width:30px;max-height:30px' >
-
-
-            <input type="checkbox" id="JugadorEmoti2">
-            <label id="JugadorEmoti2Nombre" ><center>a</center></label><br>
-            <img id=FotoEmoti2 src='a' style='max-width:30px;max-height:30px' >
-
-
-            <input type="checkbox" id="JugadorEmoti3">
-            <label id="JugadorEmoti3Nombre" ><center>a</center></label><br>
-            <img id=FotoEmoti3 src='a' style='max-width:30px;max-height:30px' >
-
-            <button id=EnviarEmoticono type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="EnviarEmoticono(1)">Enviar</button>
-            <button id=CancelarEmoticono type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="EnviarEmoticono(2)">Cancelar</button>
-        </div>
-    </div>
+	
+	 <button id=Pareja1 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(1)">a</button>
+	 <button id=Pareja2 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(2)" >a</button>
+	 <button id=Pareja3 type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="NXVIOTGLQV(3)" >a</button>
+	
 </div>
 
 <!-- <div id="chat" style="display:none" >
@@ -1769,14 +1445,7 @@ border-spacing: 50em;
 
   <!-- <div id="DivFace" class="fb-like" data-href="https://www.facebook.com/guinotepro/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true">hola</div> -->
 
-<iframe id="DivFace" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fguinotepro&width=204&layout=button_count&action=like&size=large&show_faces=false&share=false&height=46&appId=123400284870556" width="204" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
-</iframe>
-
-<div id="DivInstagram" width="204" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
- <img src="assets/images/insta.png" alt="Italian Trulli" style="width:28px;height:28px;" onclick="AbreNavegador('https://www.instagram.com/guinotepro')">
-<!-- <a href="http://www.instagram.com/guinotepro" id="InstagramImg">See an example!</a> -->
-</div>
-
+<iframe id="DivFace" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fguinotepro&width=204&layout=button_count&action=like&size=large&show_faces=false&share=true&height=46&appId=123400284870556" width="204" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
 </body>
 
