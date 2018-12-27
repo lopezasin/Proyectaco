@@ -69,7 +69,7 @@
 </gap:plugin>
 
 <config-file platform="ios" parent="NSPhotoLibraryUsageDescription" mode="replace">  
-      <string>App would like to access the library.</string> 
+      <string>App would like to access the library. Facebook Login required. Thanks!</string> 
 </config-file>
 	
 <!-- <icon src="icon.png" /> -->
