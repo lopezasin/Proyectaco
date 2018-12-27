@@ -67,6 +67,10 @@
   <param name="APP_ID" value="123400284870556" />
   <param name="APP_NAME" value="GuinotePro" />
 </gap:plugin>
+
+<config-file platform="ios" parent="NSPhotoLibraryUsageDescription" mode="replace">  
+      <string>App would like to access the library.</string> 
+</config-file>
 	
 <!-- <icon src="icon.png" /> -->
 <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024" />
