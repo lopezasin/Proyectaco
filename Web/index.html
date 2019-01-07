@@ -82,7 +82,11 @@ function redirectHttpToHttps()
 
 <script>
 
-
+$(document).ready(function(){
+    $("#SelectorBaraja").change(function() {
+        CambioSelectorBaraja();
+    });
+});
 
     //$(function () {
         function FRMAJHNYJX(name,totalfilas, Posicion, PCWMELNBUL, NUGWBIYHIL) {
@@ -653,7 +657,7 @@ function onDeviceReady() {
 
 			//To track a Screen (PageView):
 			window.ga.trackView('Guiñote');
-			window.ga.setAppVersion('2.0.8040');
+			window.ga.setAppVersion('2.0.8050');
 			window.ga.setAllowIDFACollection(true);
 		}
 		catch(e)
@@ -795,7 +799,7 @@ document.addEventListener("backbutton", function (e) {
     <div id='cerrarlateral' style='position:absolute; cursor: pointer; top:0px; right: 10px; font-size: 20px; padding:5px; display: block;'>Cerrar &times</div>
 	<br>
     Baraja<br>
-	<select id="SelectorBaraja" onchange="CambioSelectorBaraja()"> 
+	<select id="SelectorBaraja"> 
 	  <optgroup id="OptBaraja" label="Baraja">
 		<option value="Tradicional">Tradicional</option>
 		<option value="Asoc. Aragonesa Guiñote, Guiñarte">Guiñarte</option>
