@@ -652,13 +652,13 @@ function onDeviceReady() {
 		//try
 		//{	
 			//In your 'deviceready' handler, set up your Analytics tracker:
-			window.ga.startTrackerWithId('UA-97842450-1')
+			window.ga.startTrackerWithId('UA-97842450-1',30)
 			//where UA-XXXX-YY is your Google Analytics Mobile App property and 30 is the dispatch period (optional)
 
 			//To track a Screen (PageView):
-			window.ga.trackView('Guinote');
+			window.ga.trackView('index.html');
 			window.ga.setAppVersion('2.0.8050');
-			//window.ga.setAllowIDFACollection(true);
+			window.ga.setAllowIDFACollection(true);
 		//}
 		//catch(e)
 		//{}
