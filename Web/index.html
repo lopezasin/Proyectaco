@@ -665,7 +665,7 @@ function onDeviceReady() {
 			
 			//window.ga.setAllowIDFACollection(true);
 			
-			var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
+			var GA_LOCAL_STORAGE_KEY = device.uuid;
 			ga('create', 'UA-97842450-1', {
 			  'storage': 'none',
 			  'clientId': localStorage.getItem(GA_LOCAL_STORAGE_KEY)
@@ -675,7 +675,11 @@ function onDeviceReady() {
 			});
 
 			// THIS IS FOR FILE URL SUPPORT
-			ga('set', 'checkProtocolTask', function(){ /* noop */});
+		ga('set','checkProtocolTask',null);
+		ga('set','anonymizeIp',true);
+		ga('set','forceSSL',true);
+
+
 			ga('send', 'pageview');
 		//}
 		//catch(e)
