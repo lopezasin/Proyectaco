@@ -58,7 +58,6 @@ function redirectHttpToHttps()
 <script src="lib/phaser.js"></script>
 <script src="lib/jquery.js"></script>
 <script src="lib/pagination.js"></script>
-<script src="lib/analytics.js"></script>
 
 <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
@@ -182,17 +181,13 @@ $(document).ready(function(){
 
 
 <script>
-  /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-97842450-1', 'auto');
-  ga('send', 'pageview');*/
-  
-  
-  
-
+  ga('send', 'pageview');
 
 </script>
 
@@ -654,35 +649,27 @@ function onDeviceReady() {
 		catch(e)
 		{}
 	
-		//try
-		//{	
+		try
+		{	
 			//In your 'deviceready' handler, set up your Analytics tracker:
-			//window.ga.startTrackerWithId('UA-97842450-1',30, function()
-			//{
-			//	window.ga.trackEvent('Category', 'Action', 'Label', 1)
-			//})
-			//where UA-XXXX-YY is your Google Analytics Mobile App property and 30 is the dispatch period (optional)
-			//window.ga.setUserId('UA-97842450-1')
-			//window.ga.setAppVersion('2.0.8050');
-			//To track a Screen (PageView):
-			//window.ga.trackView('Guiñote', '', true);
+			/*window.ga.startTrackerWithId('UA-97842450-1', 30)
+			window.ga.trackView('Guiñote');
+			window.ga.setAppVersion('2.0.8050');
+			window.ga.setAllowIDFACollection(true);*/
 			
-			//window.ga.setAllowIDFACollection(true);
-			
-			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','gaU');
-gaU('create','UA-97842450-1',{'storage':'none','clientId':device.uuid});
-gaU('set','checkProtocolTask',null);
-//gaU('set','anonymizeIp',true);
-gaU('set','forceSSL',true);
-gaU('send','pageview',{'title':'I heart Cordova','page':'/index'});
-gaU('send','event',{'eventCategory':'My_Category','eventAction':'My_Action','eventLabel':'Event_Label','eventValue':11});
-			
-					//}
-		//catch(e)
-		//{}
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','gaU');
+			gaU('create','UA-97842450-1',{'storage':'none','clientId':device.uuid});
+			gaU('set','checkProtocolTask',null);
+			//gaU('set','anonymizeIp',true);
+			gaU('set','forceSSL',true);
+			gaU('send','pageview',{'title':'I heart GuiñotePro','page':'/index'});
+			gaU('send','event',{'eventCategory':'My_Category','eventAction':'My_Action','eventLabel':'Event_Label','eventValue':11});
+		}
+		catch(e)
+		{}
 
 		
 		/*window.addEventListener('keyboardDidShow', function () {
