@@ -1,6 +1,7 @@
 ﻿<html>
 <head>
 <title>Guiñote</title>
+<script src="https://apis.google.com/js/platform.js"  async defer> </script>
 <script language="JavaScript">
 function redirectHttpToHttps()
 {
@@ -44,6 +45,8 @@ function redirectHttpToHttps()
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="713259248814-i8i9ltbut7ggv321a90tkfm8t6bicjh4.apps.googleusercontent.com">
 <!--20190803 viewport-fit=cover debido a lo del keyboard -->
 <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover"> 
 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
@@ -59,6 +62,7 @@ function redirectHttpToHttps()
 <script src="lib/jquery.js"></script>
 <script src="lib/pagination.js"></script>
 
+
 <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 <!-- <link rel="stylesheet" type="text/css" href="slick/slick/slick_ivan.css"/> -->
@@ -69,7 +73,26 @@ function redirectHttpToHttps()
 <script src="lib/cpu.js"></script>
 <script src='socket.io/socket.io.js'></script>
 <!-- <script src="http://localhost:5000/socket.io/socket.io.js"></script> -->
-<script src="js/js.js"></script>
+
+<!-- <script src="js/js.js"></script> -->
+
+<script src="js/_Main.js"></script>
+<script src="js/_Boot.js"></script>
+<script src="js/_Menu.js"></script>
+<script src="js/_Preload.js"></script>
+<script src="js/_Level.js"></script>
+<script src="js/_Carta.js"></script>
+<script src="js/_CrearBaraja.js"></script>
+<script src="js/_CrearBarajaRecibida.js"></script>
+<script src="js/_RepartosDesdeArriba.js"></script>
+<script src="js/_RepartosDesdeAbajo.js"></script>
+<script src="js/_RepartosDesdeDerecha.js"></script>
+<script src="js/_RepartosDesdeIzquierda.js"></script>
+<script src="js/_MazoMovimientos.js"></script>
+<script src="js/_MazoMovimientosApoyo.js"></script>
+<script src="js/_IA.js"></script>
+
+
 <!-- <script src="http://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.10&appId=123400284870556"></script> -->
 <!-- <script src="js/js.js"></script> -->
 <!-- <script src="NoSleep/sleep.js"></script> -->
@@ -82,6 +105,13 @@ function redirectHttpToHttps()
 
 <script>
 
+function ieVersion(uaString) {
+  uaString = uaString || navigator.userAgent;
+  var match = /\b(MSIE |Trident.*?rv:|Edge\/)(\d+)/.exec(uaString);
+  if (match) return parseInt(match[2])
+}
+
+
 $(document).ready(function(){
     $("#SelectorBaraja").change(function() {
         CambioSelectorBaraja();
@@ -89,9 +119,9 @@ $(document).ready(function(){
 });
 
     //$(function () {
-        function FRMAJHNYJX(name,totalfilas, Posicion, PCWMELNBUL, NUGWBIYHIL) {
+        function FRMAJHNYJX(name,totalfilas, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX) {
 
-			
+			//console.log("hola")
 			$('#pagination-'+name).addHook('beforeInit', function () {
                 //window.console && ////console.log('beforeInit...');
 
@@ -112,7 +142,7 @@ $(document).ready(function(){
 			showGoInput : true,
 			showGoButton: true,
 			//totalNumber: 120,
-			pageSize: 50,
+			pageSize: Paginador,
 			totalNumber :totalfilas,
 			className: 'paginationjs-theme-blue paginationjs-big',
 			
@@ -120,6 +150,7 @@ $(document).ready(function(){
 				beforeSend: function() {
 					////console.log("Envía pagination "+name);
 					//dataContainer.html('Loading data from flickr.com ...');
+					
 				}
 				
 				,data: {dbType: name} 
@@ -138,24 +169,27 @@ $(document).ready(function(){
 				//////console.log("Data0 "+data[0].SSUNXNEEHN);
 				if (name=="general")
 				{
-					AIGEJGXGDJ(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+					//console.log("hola general "+TUTWNSAGSX)
+					AIGEJGXGDJ(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
 				}
 				else
 				{
 					if (name=="semanal")
 					{
-						////console.log("Ranking semanal"+data)
-						BLKQMLBWWA(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+						//console.log("hola semanal "+TUTWNSAGSX)
+						BLKQMLBWWA(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
 					}
 					else
 					{
 						if (name=="30dias")
 						{
-							DibujaRanking30dias(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+							//console.log("hola 30 "+TUTWNSAGSX)
+							DibujaRanking30dias(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
 						}
 						else
-						{						
-							DibujaRankingAnterior(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+						{		
+							//console.log("hola anterior "+TUTWNSAGSX)						
+							DibujaRankingAnterior(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
 						}
 					}
 				}
@@ -165,6 +199,7 @@ $(document).ready(function(){
 				//////console.log("Pagination "+kk);
 				////console.log("Name:"+ name);
 				//dataContainer.html(html);
+				TUTWNSAGSX=false;
 			}
 			})
 			
@@ -241,13 +276,15 @@ $(document).ready(function(){
       
       $('.single-item').slick({
           dots: true,
-            infinite: true
+            infinite: false
       });
       
       $('.multiple-items').slick({
           infinite: true,
           slidesToShow: 3,
-          slidesToScroll: 3,
+		          vertical: false,
+        centerMode: false,
+          slidesToScroll: 2,
           dots:true
         });
 });
@@ -644,12 +681,16 @@ function onDeviceReady() {
 				
 		 }); 
 		
-		try
+		CargaOpcionesDefecto();
+		if (PantallaActivaGlobal==true)
 		{
-			window.powermanagement.acquire();
+			try
+			{
+				window.powermanagement.acquire();
+			}
+			catch(e)
+			{}
 		}
-		catch(e)
-		{}
 	
 		try
 		{	
@@ -743,7 +784,7 @@ document.addEventListener("backbutton", function (e) {
 <form id='fgprd'>
 
 
-	<p style="color:#ffffff;font-size: 18px;padding-top:5; text-align:center" ;><b>¿Aceptas la política de privacidad?</p>
+	<p style="color:#ffffff;font-size: 18px;padding-top:5; text-align:center" ;><b>¿Aceptas la política de privacidad?</b></p>
 
 	 <div id="gp2" style='position:relative; left:50%,width: 100%;text-align: center;'>
 	<button id='bgprdEnviar' style="cursor:pointer;padding-left='absmiddle'">ACEPTO</button>
@@ -771,7 +812,7 @@ document.addEventListener("backbutton", function (e) {
 <div id='nchat' style='position:absolute; top:0px; width: 100%; display:none; background: #82011c; text-align:center; z-index:10000'>
 <!-- <form id='fchat'> -->
 
-	<p style="color:#ffffff;font-size: 14px;padding-top:5" ;><b>¿Algo que decir?. IMPORTANTE: Las conversaciones son públicas y monitorizadas</p>
+	<p style="color:#ffffff;font-size: 14px;padding-top:5" ;><b>¿Algo que decir?. IMPORTANTE: Las conversaciones son públicas y monitorizadas</b></p>
 	<script language="JavaScript">
 	var SO=JHDSFWFWUU();
 	if (SO.toUpperCase()=="IOS")
@@ -794,7 +835,7 @@ document.addEventListener("backbutton", function (e) {
 <div id='ndenuncia' style='position:absolute; top:0px; width: 100%; display:none; background: #82011c; text-align:center; z-index:10000'>
 <form id='fdenuncia'>
 
-	<p style="color:#ffffff;font-size: 16px;padding-top:5" ;><b>¿Quieres denunciar un mal comportamiento?.</p>
+	<p style="color:#ffffff;font-size: 16px;padding-top:5" ;><b>¿Quieres denunciar un mal comportamiento?.</b></p>
 	<!-- <input type='text' id='inputchat' autocomplete="off" style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' /> -->
 	<input id='bdenunciaEnviar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/enviar.png">
 	<input id='bdenunciaCancelar' style='cursor:pointer;padding-left:20' align='absmiddle' type=image src="assets/images/cancelar_envio.png">
@@ -825,6 +866,11 @@ document.addEventListener("backbutton", function (e) {
     <label for="OptAudioCartas"><input type="checkbox" id="OptAudioCartas" onchange="CambioSelectorAudioCartas()">audio cartas
     <span class="checkmark"></span>
     </label>
+	<h4 style='text-align: center; margin-top:20px;'>OTROS</h4>
+    </label>
+    <label for="OptPantallaActiva"><input type="checkbox" id="OptPantallaActiva" onchange="CambioSelectorPantallaActiva()">Pantalla siempre activa
+	<span class="checkmark"></span>
+    </label>			
 </div>
 
 <!-- <div style='position:absolute;  bottom: 10px; left: 10px;'> -->
@@ -849,7 +895,39 @@ document.addEventListener("backbutton", function (e) {
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.10&appId=123400284870556";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script> 
+}(document, 'script', 'facebook-jssdk'));
+
+
+function onSignIn(googleUser) {
+//	alert("ko");
+  var profile = googleUser.getBasicProfile();
+  
+	ObjetoG=googleUser;	
+	
+	
+	ObjetoG.BDYYDTFQAO="Google";
+	ObjetoG.userId=profile.getId()
+	ObjetoG.displayName=profile.getName();
+	ObjetoG.imageUrl=profile.getImageUrl();
+	ObjetoG.email=profile.getEmail();
+	
+	MCFSLYOMHE();	
+	JVEHDHOEEM();
+				
+	//console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+	//console.log('Name: ' + profile.getName());
+	//console.log('Image URL: ' + profile.getImageUrl());
+	//console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+
+function onSignInFailure(googleUser) {
+	//console.log("error");
+  
+}
+
+
+
+</script> 
 
 
 
@@ -862,7 +940,12 @@ document.addEventListener("backbutton", function (e) {
 		<div class="slide slide2"></div>
 		<div class="slide slide3"></div>
 	</div>
- </div> -->
+ </div> AQUI-->
+
+ 
+
+
+
 <div id="gamer" style="margin: 0px; padding:0px ;width:100%; height:100%; max-width: 100%; max-height: 100%">
 
 
@@ -1184,6 +1267,31 @@ document.addEventListener("backbutton", function (e) {
 	
 </div>
 
+<div id="DivMensaje" class="container"  style="display:none; position: absolute;
+	top: 30%;
+	left: 55%;
+    font-size: 16px; /* Increase font-size */
+	width: 50%;
+	height: 150px;
+	margin-left: -30%;
+	background:#fff;border-radius: 5px;	
+	text-align:center;
+	z-index: 10;
+	border:1px solid;
+	" >
+	
+	
+	 <!-- <label id="lblSalir">a</label><br> -->
+	  <div style="text-align:center; margin-top: 10px; " >
+	  <label id="lblMensaje" ><center>IrA</center></label>
+	   <!-- <label id="lblIrAWeb" class="hidden" ><center>Oculto</center></label> -->
+	  </div>
+	
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="CerrarMensaje()">Aceptar</button>
+	 <!-- <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaIrA(false)">No</button> -->
+	
+</div>
+
 <div id="DivEligePareja" class="container"  style="display:none; position: absolute;
 	top: 20%;
 	left: 55%;
@@ -1207,23 +1315,23 @@ document.addEventListener("backbutton", function (e) {
          <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
 
              <button id=Pareja1 type="button" class="btn btn-default" onClick="NXVIOTGLQV(1)">a</button>
-             <img id=Foto1 src='a' style='max-width:30px;max-height:30px' >
-             <img id=Nivel1 src='a' style='max-width:30px;max-height:30px' >
-             <img id=CampeonSemanal1 src='a' style='max-width:30px;max-height:30px' >
+             <img id=Foto1  style='max-width:30px;max-height:30px' >
+             <img id=Nivel1  style='max-width:30px;max-height:30px' >
+             <img id=CampeonSemanal1  style='max-width:30px;max-height:30px' >
              <label id="PosicionMes1" ><center>a</center></label>
         </div>
         <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
          <button id=Pareja2 type="button" class="btn btn-default"  onClick="NXVIOTGLQV(2)" >a</button>
-         <img id=Foto2 src='a' style='max-width:30px;max-height:30px' >
-         <img id=Nivel2 src='a' style='max-width:30px;max-height:30px' >
-         <img id=CampeonSemanal2 src='a' style='max-width:30px;max-height:30px' >
+         <img id=Foto2  style='max-width:30px;max-height:30px' >
+         <img id=Nivel2  style='max-width:30px;max-height:30px' >
+         <img id=CampeonSemanal2  style='max-width:30px;max-height:30px' >
          <label id="PosicionMes2" ><center>a</center></label>
         </div>
         <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
          <button id=Pareja3 type="button" class="btn btn-default"  onClick="NXVIOTGLQV(3)" >a</button>
-         <img id=Foto3 src='a' style='max-width:30px;max-height:30px' >
-         <img id=Nivel3 src='a' style='max-width:30px;max-height:30px' >
-         <img id=CampeonSemanal3 src='a' style='max-width:30px;max-height:30px' >
+         <img id=Foto3  style='max-width:30px;max-height:30px' >
+         <img id=Nivel3  style='max-width:30px;max-height:30px' >
+         <img id=CampeonSemanal3  style='max-width:30px;max-height:30px' >
          <label id="PosicionMes3" ><center>a</center></label>
         </div>
 	</div>
@@ -1246,12 +1354,14 @@ document.addEventListener("backbutton", function (e) {
 	<div style='display:flex; align-content: space-between;'>
         <div><span style='font-size: 12px; padding:10px; text-align: left'>Seleciona el emoji</span>
             
-            <div class='single-item' style='width: 100px; height: 150px; border: #961918 solid 1px;'>
+            <!-- <div class='single-item' style='width: 100px; height: 150px; border: #961918 solid 1px;'> -->
+			<div class='single-item' style='width: 500px; height: 150px; border: #961918 solid 1px;'>
                 <div>
                     <table align='center' style='mtop10'>
                     <tr>
+                        <td style='padding:3px;'><img src='emoji.png' width='40' onclick="alert('a');"></td>
                         <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
+						<td style='padding:3px;'><img src='emoji.png' width='40'></td>
                     </tr>
                     <tr>
                         <td style='padding:3px;'><img src='emoji.png' width='40'></td>
@@ -1261,10 +1371,14 @@ document.addEventListener("backbutton", function (e) {
                         <td style='padding:3px;'><img src='emoji.png' width='40'></td>
                         <td style='padding:3px;'><img src='emoji.png' width='40'></td>
                     </tr>
+				
                     </table>
                 </div>
+				
+           			<div>
+					</div>
                 
-                <div>
+<!--              <div>
                     
                     <table align='center' style='mtop10'>
                     <tr>
@@ -1280,26 +1394,26 @@ document.addEventListener("backbutton", function (e) {
                         <td style='padding:3px;'><img src='emoji.png' width='40'></td>
                     </tr>
                     </table>
-                </div>
+                </div>  -->
             </div>
         </div>
         <div >
-            <span style='font-size: 12px; padding:10px; text-align: center'>Seleciona los jugadores</span>
+            <span style='font-size: 12px; padding:10px; text-align: center'>Selecciona los jugadores</span>
             <table cellpadding=5 id='tablaEmoticono' style='border-collapse: collapse; border:none;'>
                 <tr>
                     <td valign='middle'><input type="checkbox" id="JugadorEmoti1"></td>
                     <td valign='middle'><label for="JugadorEmoti1" id="JugadorEmoti1Nombre" ><center>a</center></label></td>
-                    <td valign='middle'><img id=FotoEmoti1 src='a' style='max-width:30px;max-height:30px; margin:2px;' ></td>
+                    <td valign='middle'><img id=FotoEmoti1  style='max-width:30px;max-height:30px; margin:2px;' ></td>
                 </tr>
                 <tr>
                     <td valign='middle'><input type="checkbox" id="JugadorEmoti2"></td>
                     <td valign='middle'><label for="JugadorEmoti2" id="JugadorEmoti2Nombre" ><center>a</center></label></td>
-                    <td valign='middle'><img id=FotoEmoti2 src='a' style='max-width:30px;max-height:30px; margin:2px;' ></td>
+                    <td valign='middle'><img id=FotoEmoti2  style='max-width:30px;max-height:30px; margin:2px;' ></td>
                 </tr>
                 <tr>
                     <td valign='middle'><input type="checkbox" id="JugadorEmoti3"></td>
                     <td valign='middle'><label for="JugadorEmoti3" id="JugadorEmoti3Nombre" ><center>a</center></label></td>
-                    <td valign='middle'><img id=FotoEmoti3 src='a' style='max-width:30px;max-height:30px; margin:2px;' ></td>
+                    <td valign='middle'><img id=FotoEmoti3  style='max-width:30px;max-height:30px; margin:2px;' ></td>
                 </tr>
             </table>
 
@@ -1369,11 +1483,30 @@ document.addEventListener("backbutton", function (e) {
 
 <div id="Login" class='redondeado1em' style="display:none" width=1000>
 <div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onClick="MCFSLYOMHE()" ><i class='fa fa-times'></i></div>
-		Inicia sesión con<br>
-		<button onClick="RSHJSKMBRP(1)" style='margin-bottom: 7px'><i class='fa fa-google'></i> Google</button>
-		<button onClick="RSHJSKMBRP(2)" style='margin-bottom: 7px'><i class='fa fa-facebook-official'></i> Facebook</button>
-		<button onClick="RSHJSKMBRP(3)"><i class='fa fa-instagram'></i> Instagram</button>
-		<button onClick="RSHJSKMBRP(4)"><i class='fa fa-twitter'></i> Twitter</button>		
+		Inicia sesión con<br><br>
+		
+		<script>
+		if( window.plugins || ieVersion()!=undefined ) //Para que también se meta si es IE
+		{
+		  document.write("<button onClick='RSHJSKMBRP(1)' style='margin: 0 auto;width: 180px;'><i class='fa fa-google'></i> Google</button>")
+		}
+		else
+		{
+		
+			var htmlInjection="<div id='my-signin2'   style='margin: 0 auto;width: 180px;'"+
+			  " class='g-signin2'  data-longtitle='true' "+
+			  " data-onsuccess='onSignIn' "+
+			  "data-onfailure='onSignInFailure' ></div>"
+			  
+			 //console.log(htmlInjection) 
+			 document.write( htmlInjection);
+			
+		}
+		</script>
+		<button onClick="RSHJSKMBRP(2)" style="margin: 0 auto;width: 180px;"; ><i class='fa fa-facebook-official'></i> Facebook</button>
+		<button onClick="RSHJSKMBRP(3)" style="margin: 0 auto;width: 180px;"><i class='fa fa-instagram'></i> Instagram</button>
+		<button onClick="RSHJSKMBRP(4)" style="margin: 0 auto;width: 180px;"><i class='fa fa-twitter'></i> Twitter</button>		
+
 		<br><br>	
 		<a onClick="Abre(1)" >política de privacidad</a>
 </div> 
