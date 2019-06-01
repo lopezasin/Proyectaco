@@ -1,4 +1,5 @@
-﻿function EUNGWSACEK(TXLWIIINGQ){
+﻿'use strict';
+function EUNGWSACEK(TXLWIIINGQ){
 	XALJNKGKXN(TXLWIIINGQ);
 };
 

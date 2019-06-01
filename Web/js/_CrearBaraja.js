@@ -1,4 +1,5 @@
-﻿function DMLCWWNWRP()
+﻿'use strict';
+function DMLCWWNWRP()
 { 
 //alert('Se mete en tapete');
 //alert('Creo tapete '+NHLRWTHYVG);
@@ -308,17 +309,9 @@ function KKAHAHAHWJ()
 	////console.log("Lo mete");
 }
 
-function MuestraProblema(RPHWVBBGIM)
+function EstanTweensParados()
 {
-	var i;
-	var UnActivo=0;
-
-	
-	
-	//var TweensActivos=YMHIHSNADE.tweens.getAll() 
-	try
-	{
-		if	(!PQUFIBKJJH.isRunning && !LJRRHVSVKD.isRunning && !LCYAHFBDTT.isRunning && !NEPGDYQDEI.isRunning && !HHBPAROITT.isRunning 
+return !PQUFIBKJJH.isRunning && !LJRRHVSVKD.isRunning && !LCYAHFBDTT.isRunning && !NEPGDYQDEI.isRunning && !tw5.isRunning && !HHBPAROITT.isRunning 
 					&& !EWXBTDLSHW.isRunning && !BDEFDQUJJE.isRunning && !CKOUBGTDUF.isRunning && !JLFYUAKDIJ.isRunning
 					&& !PTHQXTTWIH.isRunning  && !IRQUWMEVQL.isRunning && !HIFQJUUVEU.isRunning && !JKSTORAHAM.isRunning
 				&& !TKXWTMCBFU.isRunning && !UEIQAMIDWY.isRunning && !GCKCAMPPHX.isRunning && !CFFVTFENDF.isRunning
@@ -326,7 +319,31 @@ function MuestraProblema(RPHWVBBGIM)
 		&& !MMSJJSJSUW.isRunning && !HGJCWICPWQ.isRunning && !QTQTQTQTQT.isRunning && !NXHWIWPWOW.isRunning
 		&& !JKHKJVHWPW.isRunning && !JKHKJVHWPW.isRunning  &&  !NBXIJWGIWP.isRunning && !TTCLPDJAMD.isRunning
 		&& !NMBDSKWHIU.isRunning && !twEfectoCanteGlobal1.isRunning && !twEfectoCanteGlobal2.isRunning && !twDesplazaDerechaGlobal.isRunning && !twDesplazaIzquierdaGlobal.isRunning
-		)
+		&& !twEnviarEmoticonoGlobal.isRunning && !twEnviarEmoticonoGlobalParaMi.isRunning
+}		
+		
+function MuestraProblema(RPHWVBBGIM)
+{
+	var i;
+	var UnActivo=0;
+
+	
+	
+	/*var TweensActivos=YMHIHSNADE.tweens.getAll() 
+	
+	console.log(TweensActivos)
+	for (i=0;i<=TweensActivos.length-1;i++)
+	{
+		if (TweensActivos[i].isRunning==true)
+		{
+			UnActivo=1;
+			break;
+		}
+	}*/
+	
+	try
+	{
+		if	( EstanTweensParados() )
 		{
 			UnActivo=0;
 		}
@@ -339,7 +356,8 @@ function MuestraProblema(RPHWVBBGIM)
 	{
 		UnActivo=0;
 	}
-	//console.log("TOTAL ACTIVOS "+UnActivo)
+	
+	console.log("TOTAL ACTIVOS "+UnActivo)
 	return UnActivo
 	
 	
@@ -368,25 +386,28 @@ function Renderizar(Render, RPHWVBBGIM)
 		
 		if (Render==true)
 		{
-			var timerRender=YMHIHSNADE.time.create(false);
-			timerRender.add(100, function()
+			if (EstoyClickando==false)
 			{
-				//
-				//console.log(TweensActivos)
-				
-				UnActivo=MuestraProblema(RPHWVBBGIM);
-				if (UnActivo==0 )
+				var timerRender=YMHIHSNADE.time.create(false);
+				timerRender.add(100, function()
 				{
-					YMHIHSNADE.state.game.lockRender=Render;
-					//console.log("¡Deshabilita! "+RPHWVBBGIM)
-				}
-				else
-				{
-					//console.log("No Deshabilita "+RPHWVBBGIM+" "+UnActivo)
-				}	
+					//
+					//console.log(TweensActivos)
+					
+					UnActivo=MuestraProblema(RPHWVBBGIM);
+					if (UnActivo==0 )
+					{
+						YMHIHSNADE.state.game.lockRender=Render;
+						//console.log("¡Deshabilita! "+RPHWVBBGIM)
+					}
+					else
+					{
+						//console.log("No Deshabilita "+RPHWVBBGIM+" "+UnActivo)
+					}	
 
-			});
-			timerRender.start();
+				});
+				timerRender.start();
+			}
 		}
 		else
 		{

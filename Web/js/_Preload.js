@@ -1,4 +1,5 @@
-﻿/**
+﻿'use strict';
+/**
  * Preload state.
  */
 function Preload() {
@@ -52,6 +53,8 @@ Preload.prototype.preload = function() {
 	////console.log("antes general");
 	this.load.atlas('general', 'assets/images/general.png', 'assets/images/general.json',Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
 	
+	this.load.atlas('emoticonos_server', 'assets/images/emoticonos_server.png', 'assets/images/emoticonos_server.json',Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
+	
 
 ////console.log(this.cache.checkImageKey('publi'));
 	//this.load.atlas('publi', 'assets/images/publi.png', 'assets/images/publi.json',Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
@@ -62,7 +65,7 @@ Preload.prototype.preload = function() {
 	
 	////console.log("despues general");
 
-	this.load.image('Emoticono1', 'assets/images/emoticonos/emoticono1.png');	
+	//this.load.image('Emoticono1', 'assets/images/emoticonos/emoticono1.png');	
 	
 	this.load.image('Reverso', 'assets/images/Cartas/Reversos/reverso.png',true);	
 	this.load.image('JHGHJAGCMC', 'assets/images/Cartas/Reversos/maquina.jpg');	

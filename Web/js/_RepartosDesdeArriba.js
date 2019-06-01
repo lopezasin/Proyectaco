@@ -1,4 +1,5 @@
-﻿function MLSPYKFFCM(TXLWIIINGQ){
+﻿'use strict';
+function MLSPYKFFCM(TXLWIIINGQ){
 	DLFGCWILYV(TXLWIIINGQ);
 };
 

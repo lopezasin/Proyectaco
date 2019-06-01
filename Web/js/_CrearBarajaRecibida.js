@@ -1,4 +1,5 @@
-﻿/*Destruye=function(imagen)
+﻿'use strict';
+/*Destruye=function(imagen)
 {
 	try{
 		//imagen.kill();
@@ -102,6 +103,7 @@ function CLWUDOTYHT(data,RDBQUAVHEP,TXLWIIINGQ)
 		PANPKTGSCV.kill();
 		HRGDCMPPKU.revive();
 		KAHCKJHQEO.revive();
+		BotonEmoticono.revive();
 		
 
 		
@@ -118,6 +120,7 @@ function CLWUDOTYHT(data,RDBQUAVHEP,TXLWIIINGQ)
 			PANPKTGSCV.kill();
 			HRGDCMPPKU.kill();
 			IFMJVFFEQN.kill();
+			BotonEmoticono.kill();
 		}
 		
 	}

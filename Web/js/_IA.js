@@ -1,4 +1,4 @@
-﻿	
+﻿'use strict';
 function UEWYIUWIVW(Quien)
 {
 	var i;

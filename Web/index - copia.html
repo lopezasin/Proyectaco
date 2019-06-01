@@ -112,10 +112,14 @@ function ieVersion(uaString) {
 }
 
 
-
+$(document).ready(function(){
+    $("#SelectorBaraja").change(function() {
+        CambioSelectorBaraja();
+    });
+});
 
     //$(function () {
-        function FRMAJHNYJX(name,totalfilas, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX) {
+        function createPaginador(name,totalfilas, Posicion, Mediana, Mediana2,PrimeraVez) {
 
 			//console.log("hola")
 			$('#pagination-'+name).addHook('beforeInit', function () {
@@ -133,7 +137,7 @@ function ieVersion(uaString) {
 			
 			$('#pagination-'+name).pagination({
 			//dataSource: 'https://api.flickr.com/services/feeds/photos_public.gne?tags=cat&tagmode=any&format=json&jsoncallback=?',
-			dataSource: JHGHJAGCMC+'/getclasificacion',
+			dataSource: Maquina+'/getclasificacion',
 			locator: 'items',
 			showGoInput : true,
 			showGoButton: true,
@@ -162,40 +166,40 @@ function ieVersion(uaString) {
 				//var kk=JSON.stringify(data);
 				//////console.log("gg "+kk);
 				
-				//////console.log("Data0 "+data[0].SSUNXNEEHN);
+				//////console.log("Data0 "+data[0].Jugador);
 				if (name=="general")
 				{
-					//console.log("hola general "+TUTWNSAGSX)
-					AIGEJGXGDJ(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
+					//console.log("hola general "+PrimeraVez)
+					DibujaRankingGeneral(data, Posicion, Mediana, Mediana2,PrimeraVez);
 				}
 				else
 				{
 					if (name=="semanal")
 					{
-						//console.log("hola semanal "+TUTWNSAGSX)
-						BLKQMLBWWA(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
+						//console.log("hola semanal "+PrimeraVez)
+						DibujaRankingSemanal(data, Posicion, Mediana, Mediana2,PrimeraVez);
 					}
 					else
 					{
 						if (name=="30dias")
 						{
-							//console.log("hola 30 "+TUTWNSAGSX)
-							DibujaRanking30dias(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
+							//console.log("hola 30 "+PrimeraVez)
+							DibujaRanking30dias(data, Posicion, Mediana, Mediana2,PrimeraVez);
 						}
 						else
 						{		
-							//console.log("hola anterior "+TUTWNSAGSX)						
-							DibujaRankingAnterior(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
+							//console.log("hola anterior "+PrimeraVez)						
+							DibujaRankingAnterior(data, Posicion, Mediana, Mediana2,PrimeraVez);
 						}
 					}
 				}
-				//SRUKEMRQNI(data);
+				//onSocketClasificacion(data);
 				
 				//var kk=JSON.stringify(pagination);
 				//////console.log("Pagination "+kk);
 				////console.log("Name:"+ name);
 				//dataContainer.html(html);
-				TUTWNSAGSX=false;
+				PrimeraVez=false;
 			}
 			})
 			
@@ -230,13 +234,13 @@ function ieVersion(uaString) {
  
 /*document.addEventListener('focus', function(){ 
 	
-			BNMZBXWIDW=new Date();
+			FechaFin=new Date();
 		
 }
 );
 
  document.addEventListener('pause', function(){
-		UJHVBJDGJD=new Date(Date.now());				
+		FechaIni=new Date(Date.now());				
 		MatarConexionPrueba(); //2.0.7
 	
  }); 
@@ -247,11 +251,11 @@ function ieVersion(uaString) {
 		//igual hay que quitarlo para android
 
 		//FUTURE
-		//var SO=JHDSFWFWUU();
+		//var SO=SistemaOperativo();
 		//if (SO.toUpperCase()=="IOS") //Importante que no se meta por aquí Android, ya que le afecta otro resume
 		//{	
-			// FUTURE GTRVLWPSYL();
-			JHJGSFGJSW(); //Pongo este nuevo  20180922
+			// FUTURE Recuperado();
+			ConectaServidorPrueba(); //Pongo este nuevo  20180922
 		//}
 		
  }); 
@@ -260,35 +264,35 @@ function ieVersion(uaString) {
   <!-- $('.slideshow').slick(); -->
   
   
-
-
-    $(document).ready(function(e){
-	
-
-	
-	   $("#SelectorBaraja").change(function() {
-        CambioSelectorBaraja();
-    });
-	
-  /*$('.vertical-center-4').slick({
+$(document).ready(function(){
+      
+  $('.vertical-center-4').slick({
             dots: true,
         vertical: false,
         centerMode: false,
         slidesToShow: 4,
         slidesToScroll: 2
-  });*/
+  });
       
+      $('.single-item').slick({
+            dots: true,
+            infinite: false,
+			centerMode: false,
+			slidesToShow: 1,
+			slidesToScroll: 1
+      });
+      
+      $('.multiple-items').slick({
+          infinite: true,
+          slidesToShow: 3,
+		          vertical: false,
+        centerMode: false,
+          slidesToScroll: 2,
+          dots:true
+        });
+});
 
-	  
-	  
-	  //console.log("SLICK" +$('.single-item').slick('slickCurrentSlide'));
-     // $('.single-item').slick('slickRemove',0)
-	  //console.log("SLICK" +$('.single-item').slick('slickCurrentSlide'));
-	  
-
-		
-
-		
+    $(document).ready(function(e){
 		$('#divtablasalas').css("height", $(window).height()-100);
 		
 		$('#tabs a').click(function(event){
@@ -302,7 +306,7 @@ function ieVersion(uaString) {
 				$(this).addClass('activo');
 				
 				////console.log("Abrir "+ $(this).attr("data-div"))
-				//socket.emit('WHGHJCGWWQ',socket.id,OBTBPOULAV);	
+				//socket.emit('solicita_clasificacion',socket.id,JugadorFull);	
 				
 			}
 		});
@@ -330,7 +334,7 @@ function ieVersion(uaString) {
 		//	$('#nchat').slideToggle();	
 			
 			//$('#inputchat').focus().val('');		
-			YUGWYUCVMK();	
+			CierraChat();	
 		}
 		catch(e){}
 	   });
@@ -341,7 +345,7 @@ function ieVersion(uaString) {
 		{
 		//alert("pp");
 			//$('#inputchat').focus().val('');
-			HJDGSJHVWU();	
+			CierraChat2();	
 		}
 		catch(e){}
 	   });*/
@@ -353,7 +357,7 @@ function ieVersion(uaString) {
 		{
 			//$('#inputchat').focus().val('');
 			$('#DivGPRD').slideToggle();		
-			MITSNADNQS();
+			ConfiguraPantallaInicio();
 		}
 		catch(e){}
 	   });
@@ -364,7 +368,7 @@ function ieVersion(uaString) {
 		{
 			//$('#inputchat').focus().val('');
 			$('#DivGPRD').slideToggle();		
-			MITSNADNQS();
+			ConfiguraPantallaInicio();
 		}
 		catch(e){}
 	   });
@@ -377,7 +381,7 @@ function ieVersion(uaString) {
 				$('#nchat').slideToggle();
 				if (mensaje!="")
 				{					
-					BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
+					EnviarTextoBocadillo(SoyElJugador,mensaje ,false);
 					try
 					{
 						Keyboard.hide();
@@ -399,7 +403,7 @@ function ieVersion(uaString) {
 				//$('#nchat').slideToggle();
 				if (mensaje!="")
 				{					
-					BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
+					EnviarTextoBocadillo(SoyElJugador,mensaje ,false);
 					
 
 					/*try
@@ -409,7 +413,7 @@ function ieVersion(uaString) {
 					catch(e)
 					{}*/
 				}
-				YUGWYUCVMK();	
+				CierraChat();	
 			}
 			catch(e){}
 			}
@@ -426,7 +430,7 @@ function ieVersion(uaString) {
 				//$('#nchat').slideToggle();
 				if (mensaje!="")
 				{					
-					BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
+					EnviarTextoBocadillo(SoyElJugador,mensaje ,false);
 					
 					/*try
 					{
@@ -435,7 +439,7 @@ function ieVersion(uaString) {
 					catch(e)
 					{}*/
 				}
-				YUGWYUCVMK();
+				CierraChat();
 			}
 			catch(e){}
 			//}
@@ -451,10 +455,10 @@ function ieVersion(uaString) {
 				//var mensaje=$('#inputchat').val();
 				$('#DivGPRD').slideToggle();
 					EnviarGPRD_OK();
-					YBWXJFDOAW();
+					ConfiguraPantallaMultijugador();
 				//if (mensaje!="")
 				//{					
-				//	BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
+				//	EnviarTextoBocadillo(SoyElJugador,mensaje ,false);
 				//}
 			}
 			catch(e){}
@@ -465,14 +469,14 @@ function ieVersion(uaString) {
 		$('#bdenuncia').click(function(event){
 		event.preventDefault();
 		$('#ndenuncia').slideToggle();
-			//TUYTTXXUSX();
+			//Denunciar();
 		//$('#inputchat').focus().val('');
 	   });
 	   
 		$('#bdenunciaEnviar').click(function(event){
 		event.preventDefault();
 		$('#ndenuncia').slideToggle();
-			TUYTTXXUSX();
+			Denunciar();
 		//$('#inputchat').focus().val('');
 	   });
 	   	   
@@ -488,7 +492,7 @@ function ieVersion(uaString) {
 			$('#ndenuncia').slideToggle();
 			//if (mensaje!="")
 			//{
-			//	BYBYBFHBOX(TFSXFTYVGQ,mensaje ,false);
+			//	EnviarTextoBocadillo(SoyElJugador,mensaje ,false);
 			//}
 			//////console.log(mensaje);
 		});
@@ -508,37 +512,6 @@ function ieVersion(uaString) {
             event.preventDefault();
             $('#lateral').animate({width: "toggle"});
 	    });
-		
-		/*	var d=document.getElementById('DivEmoticonos');
-		d.style.display = 'block';*/
-		$('.single-item').slick({
-			centerMode: false,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			  infinite: true
-			
-      });
-	  
-		$('.multiple-items').slick({
-          infinite: true,
-          slidesToShow: 2,
-		          //vertical: false,
-        centerMode: false,
-          slidesToScroll: 2,
-		  arrows: false,
-          dots:true
-        });
-	  
-	/*$('.single-item').on("reInit", function() {
-	console.log("init");
-		$('.single-item').css('display', 'block'); 
-		$('.single-item').get(0).slick.setPosition()
-	});*/
-	  
-	  //$('.single-item').slick('setPosition'); 
-	  
-		//d.style.display = 'none';
 	
 	});
     
@@ -567,8 +540,8 @@ function ieVersion(uaString) {
            // url: 'post.php',
             data: $('#FormLogin').serialize(),
             success: function () {
-              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
-			  //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+              //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
+			  //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
 			  document.getElementById("inputChat").value="";
 			  //document.getElementById("inputChat").value="";
 			 // document.getElementById("ko").focus();
@@ -591,8 +564,8 @@ function ieVersion(uaString) {
            // url: 'post.php',
             data: $('#FormCrearSala').serialize(),
             success: function () {
-				IUWYUIVKHJ(document.getElementById("sala").value,document.getElementById("pass").value)
-              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+				CrearSala(document.getElementById("sala").value,document.getElementById("pass").value)
+              //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
 			 
 			 // document.getElementById("ko").focus();
             }
@@ -614,8 +587,8 @@ function ieVersion(uaString) {
            // url: 'post.php',
             data: $('#FormPasswordSala').serialize(),
             success: function () {
-				RPEOWUSPJU(document.getElementById("sala_pass").value,document.getElementById("pass_pass").value)
-              //BYBYBFHBOX(TFSXFTYVGQ,document.getElementById("inputChat").value,false);
+				ValidaPasswordSala(document.getElementById("sala_pass").value,document.getElementById("pass_pass").value)
+              //EnviarTextoBocadillo(SoyElJugador,document.getElementById("inputChat").value,false);
 			 
 			 // document.getElementById("ko").focus();
             }
@@ -685,13 +658,13 @@ function onDeviceReady() {
 
 		document.addEventListener('focus', function(){ 
 			
-					BNMZBXWIDW=new Date();
+					FechaFin=new Date();
 				
 		}
 		);
 
 		 document.addEventListener('pause', function(){
-				UJHVBJDGJD=new Date(Date.now());				
+				FechaIni=new Date(Date.now());				
 				MatarConexionPrueba(); //2.0.7
 			
 		 }); 
@@ -702,11 +675,11 @@ function onDeviceReady() {
 				//igual hay que quitarlo para android
 
 				//FUTURE
-				//var SO=JHDSFWFWUU();
+				//var SO=SistemaOperativo();
 				//if (SO.toUpperCase()=="IOS") //Importante que no se meta por aquí Android, ya que le afecta otro resume
 				//{	
-					// FUTURE GTRVLWPSYL();
-					JHJGSFGJSW(); //Pongo este nuevo  20180922
+					// FUTURE Recuperado();
+					ConectaServidorPrueba(); //Pongo este nuevo  20180922
 				//}
 				
 		 }); 
@@ -826,7 +799,7 @@ document.addEventListener("backbutton", function (e) {
 	
 	<script>
     $(function(){
-      $("#includedContent").load(JHGHJAGCMC+"/gprd.html"); 
+      $("#includedContent").load(Maquina+"/gprd.html"); 
     });
 	</script>
 	<div id="includedContent"></div>
@@ -844,10 +817,10 @@ document.addEventListener("backbutton", function (e) {
 
 	<p style="color:#ffffff;font-size: 14px;padding-top:5" ;><b>¿Algo que decir?. IMPORTANTE: Las conversaciones son públicas y monitorizadas</b></p>
 	<script language="JavaScript">
-	var SO=JHDSFWFWUU();
+	var SO=SistemaOperativo();
 	if (SO.toUpperCase()=="IOS")
 	{	
-		document.write("<input type='text' id='inputchat' onfocusout='HJDGSJHVWU(this.value)' autocomplete='off' style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' />")
+		document.write("<input type='text' id='inputchat' onfocusout='CierraChat2(this.value)' autocomplete='off' style='padding: 5px; width: 50%; box-sizing: border-box; border-radius: 1em; border: #ccc solid 1px;' />")
 	}
 	else
 	{
@@ -935,14 +908,14 @@ function onSignIn(googleUser) {
 	ObjetoG=googleUser;	
 	
 	
-	ObjetoG.BDYYDTFQAO="Google";
+	ObjetoG.RedSocial="Google";
 	ObjetoG.userId=profile.getId()
 	ObjetoG.displayName=profile.getName();
 	ObjetoG.imageUrl=profile.getImageUrl();
 	ObjetoG.email=profile.getEmail();
 	
-	MCFSLYOMHE();	
-	JVEHDHOEEM();
+	CierraPantallaLogin();	
+	InicioMultiJugador();
 				
 	//console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 	//console.log('Name: ' + profile.getName());
@@ -1032,8 +1005,8 @@ function onSignInFailure(googleUser) {
 
 		<input type="text" id="InputSalas" onKeyUp="FiltrarSalas()" placeholder="Buscar Salas..">
 		
-		<button type="button" id="BtnCrearSalas" class="btn btn-primary" onClick="LOIUJDIWPD()">Crear Sala</button>
-		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button>
+		<button type="button" id="BtnCrearSalas" class="btn btn-primary" onClick="MostrarCrearSala()">Crear Sala</button>
+		<button type="button" id="BtnCerrarSalas" class="btn btn-primary" onClick="CancelarAmigos()">Cerrar</button>
 		<div id="lblAvisoSalas" style='color: #fff; font-size: 18px; text-shadow: 0px 0px 5px #000000;'>Las salas se eliminan transcurridos 7 días desde su último uso.
 			
 		
@@ -1055,7 +1028,7 @@ function onSignInFailure(googleUser) {
 	<!-- <div style='height: 40px; background: #fff; border-bottom: #ccc solid 1px;'> /privacidad/clasificacion_como.html  -->
     	<div style='float: right;'>
 		<a onClick="Abre(2)" >¿Cómo se calcula?</a>
-		<button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="NFARLTEOCI()">Cerrar</button>
+		<button type="button" id="BtnCerrarClasificacion" class="btn btn-primary" onClick="CancelarAmigos()">Cerrar</button>
 		</div>
         <!-- <div style='float: left; font-size: 15px; padding: 5px;'>La clasificación se calcula cada minuto. Partimos con 100 ptos. Ganar +2 ptos., Perder -1 pto., Retirarse -2 ptos. </div>  -->
 		
@@ -1175,7 +1148,7 @@ function onSignInFailure(googleUser) {
 	</div>
 
 	 <button type="submit" class="btn btn-default">¡Crear Sala!</button>
-	 <button type="button" class="btn btn-default" onClick="NFARLTEOCI()" >Cancelar</button>
+	 <button type="button" class="btn btn-default" onClick="CancelarAmigos()" >Cancelar</button>
 
 	</form>
 </div>
@@ -1194,8 +1167,8 @@ function onSignInFailure(googleUser) {
 	</div> -->
 	
 	 <button type="submit" class="btn btn-default">¡Entrar Sala!</button>
-	 <button type="button" class="btn btn-default" onClick="NFARLTEOCI()" >Cancelar</button>
-	 <button id="btnEliminarSala" type="button" class="btn btn-default"  onclick="PTBEWVCTBF(document.getElementById('sala_pass').value)" >Eliminar Sala</button>
+	 <button type="button" class="btn btn-default" onClick="CancelarAmigos()" >Cancelar</button>
+	 <button id="btnEliminarSala" type="button" class="btn btn-default"  onclick="EliminarSalaDesdeCliente(document.getElementById('sala_pass').value)" >Eliminar Sala</button>
 	 
 	</form>
 </div>
@@ -1243,8 +1216,8 @@ function onSignInFailure(googleUser) {
 	  <label id="lblAudio" ><center>Si vas a usar el chat con voz<br>debes darnos permiso.<br>¿nos lo das?</center></label>
 	  </div>
 	
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="UIWFHJMDNB(true)">Sí</button>
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="UIWFHJMDNB(false)">No</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaAudioGoogle(true)">Sí</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaAudioGoogle(false)">No</button>
 	
 </div>
 
@@ -1267,8 +1240,8 @@ function onSignInFailure(googleUser) {
 	  <label id="lblAudioOtros" ><center>Si vas a usar el chat con voz<br>debes darnos permiso.<br>¿nos lo das?</center></label>
 	  </div>
 	
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RUHBJAJAJG(true)">Sí</button>
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RUHBJAJAJG(false)">No</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaAudioOtros(true)">Sí</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaAudioOtros(false)">No</button>
 	
 </div>
 
@@ -1344,21 +1317,21 @@ function onSignInFailure(googleUser) {
     <div style='display:inline-block'>
          <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
 
-             <button id=Pareja1 type="button" class="btn btn-default" onClick="NXVIOTGLQV(1)">a</button>
+             <button id=Pareja1 type="button" class="btn btn-default" onClick="RespuestaPareja(1)">a</button>
              <img id=Foto1  style='max-width:30px;max-height:30px' >
              <img id=Nivel1  style='max-width:30px;max-height:30px' >
              <img id=CampeonSemanal1  style='max-width:30px;max-height:30px' >
              <label id="PosicionMes1" ><center>a</center></label>
         </div>
         <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
-         <button id=Pareja2 type="button" class="btn btn-default"  onClick="NXVIOTGLQV(2)" >a</button>
+         <button id=Pareja2 type="button" class="btn btn-default"  onClick="RespuestaPareja(2)" >a</button>
          <img id=Foto2  style='max-width:30px;max-height:30px' >
          <img id=Nivel2  style='max-width:30px;max-height:30px' >
          <img id=CampeonSemanal2  style='max-width:30px;max-height:30px' >
          <label id="PosicionMes2" ><center>a</center></label>
         </div>
         <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
-         <button id=Pareja3 type="button" class="btn btn-default"  onClick="NXVIOTGLQV(3)" >a</button>
+         <button id=Pareja3 type="button" class="btn btn-default"  onClick="RespuestaPareja(3)" >a</button>
          <img id=Foto3  style='max-width:30px;max-height:30px' >
          <img id=Nivel3  style='max-width:30px;max-height:30px' >
          <img id=CampeonSemanal3  style='max-width:30px;max-height:30px' >
@@ -1368,212 +1341,153 @@ function onSignInFailure(googleUser) {
 </div>
 
 
-
-<div id="DivEmoticonos" class="container" style="display:none;
-	position: absolute;
+<div id="DivEmoticonos" class="container"  style="display:none; position: absolute;
 	top: 50%;
     margin-top:-100px;
 	left: 35%;
-    font-size: 18px;
+    font-size: 18px; /* Increase font-size */
 	width: 90%;
 	height: 220px;
 	margin-left: -30%;
 	background:#fff;border-radius: 5px;	
 	text-align:center;
 	z-index: 10;
-	border: #981915 2px solid;"
-	>
+	border: #981915 2px solid;
+	" >
 	<!-- <div style='display:flex; align-content: space-between;'> -->
         <!-- <div> -->
 		
-    
+            
             <!-- <div class='single-item' style='width: 100px; height: 150px; border: #961918 solid 1px;'> -->
 			<!-- <div class='single-item' style='width: 400px; height: 150px; border: #961918 solid 1px;'> width: 30%; height: 80%; -->
 			<div id="seleccionaemoji">
-			<span style='font-size: 16px; padding:10px; text-align: left'>Selecciona un guiñoemoji</span>
+			<span style='font-size: 16px; padding:10px; text-align: left'>Selecciona el guiñoemoji</span>
 			</div>
-
-
-
-
-  			<div id="seleccionaemoji_carrusel" class='single-item' style='width: 47%; height: 85%; border: #fad718 solid 1px; float:left'>  
+			<div class='single-item' style='width: 47%; height: 85%; border: #fad718 solid 1px; float:left'>  
                 <!-- <div> -->
 				<!-- align='center' style='mtop10' -->
 				
-				<div>
+				<div></div> 
 				
 				
-                    <table  id='tablaEmojis' style='float:left'  >
+                    <table  style='width:100%'  >
                     <tr>
-                        <td id='emoj001' style='padding:3px;'><img src='assets/images/emoticonos/emoj001.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj001');"></td>
-                        <td id='emoj002' style='padding:3px;'><img src='assets/images/emoticonos/emoj002.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj002');"></td>
-						<td id='emoj003' style='padding:3px;'><img src='assets/images/emoticonos/emoj003.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj003');"></td>
-						<td id='emoj004' style='padding:3px;'><img src='assets/images/emoticonos/emoj004.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj004');"></td>
-					</tr>
-                   <tr>
-                       
-                        <td id='emoj005' style='padding:3px;'><img src='assets/images/emoticonos/emoj005.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj005');"></td>
-						<td id='emoj006' style='padding:3px;'><img src='assets/images/emoticonos/emoj006.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj006');"></td>
-                        <td id='emoj007' style='padding:3px;'><img src='assets/images/emoticonos/emoj007.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj007');"></td>
-                        <td id='emoj008' style='padding:3px;'><img src='assets/images/emoticonos/emoj008.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj008');"></td>						
+                        <td style='padding:3px;'><img src='emoji.png' width='40' onclick="alert('a');"></td>
+                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
+						<td style='padding:3px;'><img src='emoji.png' width='40'></td>
                     </tr>
-
+                    <tr>
+                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
+                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
+						<td style='padding:3px;'><img src='emoji.png' width='40'></td>
+                    </tr>
+                        <tr>
+                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
+                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
+						<td style='padding:3px;'><img src='emoji.png' width='40'></td>
+                    </tr>
 				
                     </table>
                 <!-- </div> -->
-				</div> 
-
 				
 
-				<div>
-				
-				
-                    <table   id='tablaEmojis2'   >
-                    <tr>
-						<td id='emoj009'  style='padding:3px;'><img src='assets/images/emoticonos/emoj009.png' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj009');"></td>
-						<td id='emoj010' style='padding:3px;'><img src='assets/images/emoticonos/emoj010.png' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj010');"></td>
-						<td id='emoj011' style='padding:3px;'><img src='assets/images/emoticonos/emoj011.png' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj011');"></td>
-						<td id='emoj012' style='padding:3px;'><img src='assets/images/emoticonos/emoj012.png' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj012');"></td>						
-                    </tr>
 
-				
-                    </table>
-                <!-- </div> -->
-				</div> 
                 
 
-            </div>      
-
-
-
-
-
-
-
-
+            </div>
         <!-- </div> -->
         <div style='width: 50%; height: 85%; border: #fad718 solid 1px ;float:left;margin-left:10px' >
             <span style='font-size: 16px; padding:10px; text-align: center'>Selecciona destinatarios</span>
-            <table cellpadding=5 id='tablaEmoticonoJugadores' style='margin-left:30px;border-collapse: collapse; border:none;'>
+            <table cellpadding=5 id='tablaEmoticono' style='margin-left:30px;border-collapse: collapse; border:none;'>
                 <tr>
                     <td valign='middle'><input type="checkbox" id="JugadorEmoti1"></td>
                     <td valign='middle'><label for="JugadorEmoti1" id="JugadorEmoti1Nombre" style='margin-left:3px;'><center>a</center></label></td>
-                    <td valign='middle'><img id=FotoEmoti1  style='max-width:30px;max-height:30px; margin-left:10px; margin-top:2px;' onclick="SeleccionaJugadorEmoti('JugadorEmoti1');" ></td>
+                    <td valign='middle'><img id=FotoEmoti1  style='max-width:30px;max-height:30px; margin-left:10px; margin-top:2px;' ></td>
                 </tr>
                 <tr>
                     <td valign='middle'><input type="checkbox" id="JugadorEmoti2"></td>
                     <td valign='middle'><label for="JugadorEmoti2" id="JugadorEmoti2Nombre" style='margin-left:3px;' ><center>a</center></label></td>
-                    <td valign='middle'><img id=FotoEmoti2  style='max-width:30px;max-height:30px; margin-left:10px; margin-top:2px;' onclick="SeleccionaJugadorEmoti('JugadorEmoti2');" ></td>
+                    <td valign='middle'><img id=FotoEmoti2  style='max-width:30px;max-height:30px; margin-left:10px; margin-top:2px;' ></td>
                 </tr>
                 <tr>
                     <td valign='middle'><input type="checkbox" id="JugadorEmoti3"></td>
                     <td valign='middle'><label for="JugadorEmoti3" id="JugadorEmoti3Nombre" style='margin-left:3px;'><center>a</center></label></td>
-                    <td valign='middle'><img id=FotoEmoti3  style='max-width:30px;max-height:30px; margin-left:10px; margin-top:2px;' onclick="SeleccionaJugadorEmoti('JugadorEmoti3');" ></td>
+                    <td valign='middle'><img id=FotoEmoti3  style='max-width:30px;max-height:30px; margin-left:10px; margin-top:2px;' ></td>
                 </tr>
             </table>
 
-            <button id=EnviarEmoticono type="button" class="btn btn-default" style='display:none;margin-top: 20px; ' onClick="EnviarEmoticono(1)">Enviar</button>
-            <button id=CancelarEmoticono type="button" class="btn btn-default" style='display:none;margin-top: 20px; ' onClick="EnviarEmoticono(2)">Cancelar</button> 
+            <button id=EnviarEmoticono type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="EnviarEmoticono(1)">Enviar</button>
+            <button id=CancelarEmoticono type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="EnviarEmoticono(2)">Cancelar</button>
         </div>
     <!-- </div> -->
 </div>
-<!-- top: 50%; -->
-<div id="DivTienda" class="container"  style="display:none;position: absolute;	
-	left: 0%;
-	top: 0px;
-    margin-top:30px;	
-    font-size: 18px; 
-	width: 80%; 
-	height: 500px ;
-	margin-left: 15%;
+
+<div id="DivTienda" class="container"  style="display:none; position: absolute;
+	top: 50%;
+    margin-top:-110px;
+	left: 55%;
+    font-size: 18px; /* Increase font-size */
+	width: 60%;
+	height: 220px;
+	margin-left: -30%;
 	background:#fff;border-radius: 5px;	
 	text-align:center;
 	z-index: 10;
 	border:1px solid;
 	" >
-	<!--/* 800px; 80% */
-	/* 400px;  80% */
-	 style='max-width:100%'  -->
     <div style='text-align: center'>
-        <H3 style='margin:5px;'>¡GuiñoTienda! Adquiere elementos molones</H4>
-		<H4 style='margin:5px;'>¡Desliza las imágenes para descubrir toda la tienda!</H4>
-    </div> 
-    <div class='multiple-items'   >
-        <div style='padding: 10px; '>
-            <img id=Art003 style='width: 450px; height: 250px;'  />
-            <!-- <br> -->
-            <!-- <button>Comprar</button> -->
-        </div>
-       <div style='padding: 10px; '>
-            <img id=Art004 style='width: 450px; height: 250px;'   />
-            <!-- <br> -->
-            <!-- <button>Comprar</button> -->
-        </div>
-
-    <!--    <div style='padding: 10px; width: 450px; height: 250px;'>
-            <img src='hdpi.png' style='max-width:100px' />
-            <!-- <br> -->
-            <!-- <button>Comprar</button> 
-        </div> -->
-     
-		
+        <H4 style='margin:5px;'>TIENDA</H4>
     </div>
-	 <button id=CancelarTienda type="button" class="btn btn-default"  onClick="CerrarTienda()">Salir</button> 
+    <div class='multiple-items'>
+        <div style='padding: 10px; width: 150px; height: 150px;'>
+            <img src='hdpi.png' style='max-width:100%' />
+            <br>
+            <button>Comprar</button>
+        </div>
+        <div style='padding: 10px; width: 150px; height: 150px;'>
+            <img src='hdpi.png' style='max-width:100%' />
+            <br>
+            <button>Comprar</button>
+        </div>
+        <div style='padding: 10px; width: 150px; height: 150px;'>
+            <img src='hdpi.png' style='max-width:100%' />
+            <br>
+            <button>Comprar</button>
+        </div>
+        <div style='padding: 10px; width: 150px; height: 150px;'>
+            <img src='hdpi.png' style='max-width:100%' />
+            <br>
+            <button>Comprar</button>
+        </div>
+        <div style='padding: 10px; width: 150px; height: 150px;'>
+            <img src='hdpi.png' style='max-width:100%' />
+            <br>
+            <button>Comprar</button>
+        </div>
+        <div style='padding: 10px; width: 150px; height: 150px;'>
+            <img src='hdpi.png' style='max-width:100%' />
+            <br>
+            <button>Comprar</button>
+        </div>
+    </div>
 </div>
-
-<div id="DivDetalleTienda" class="container"  style="display:none;position: absolute;	
-	left: 0%;
-	top: 0px;
-    margin-top:30px;	
-    font-size: 18px; 
-	width: 80%; 
-	height: 500px ;
-	margin-left: 15%;
-	background:#fff;border-radius: 5px;	
-	text-align:center;
-	z-index: 10;
-	border:1px solid;
-	" >
-
-	<div style="width:50%;float:left;margin-left:10px">
-		<label id="lblSaldo" ><center>a</center></label>
-	</div>
-	
-	<div style="width:50%;float:left;margin-left:10px">
-		<label id="lblDescripcionArticulo" ><center>a</center></label>
-	</div>
-	
-	<div style="width:50%;float:left;margin-left:10px">
-		<label id="lblNombreArticulo" ><center>a</center></label>
-	</div>
-	
-	<div style="width:50%;float:left;margin-left:10px">
-		<label id="lblPrecioArticulo" ><center>a</center></label>
-	</div>
-	
-	<div style="width:50%;float:left;margin-left:10px">
-		 <button id=BotonComprar type="button" class="btn btn-default"  ">Comprar</button> 
-	</div>
-	 <button id=CancelarDetalleTienda type="button" class="btn btn-default"  onClick="OcultarDetalleTienda()">Salir</button> 
-</div>
-
 <!-- <div id="chat" style="display:none" >
 	<form  id="FormChat" class="form-horizontal"> 
 		<div class="form-group">
-			<input  type="text" class="form-control" id="inputChat" placeholder="HXUNTIAKHM" autocomplete="off" maxlength="60" autocomplete="off">			
+			<input  type="text" class="form-control" id="inputChat" placeholder="enviar texto" autocomplete="off" maxlength="60" autocomplete="off">			
 					
 		</div> 
 	</form>
 </div> -->
 
 <div id="Login" class='redondeado1em' style="display:none" width=1000>
-<div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onClick="MCFSLYOMHE()" ><i class='fa fa-times'></i></div>
+<div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onClick="CierraPantallaLogin()" ><i class='fa fa-times'></i></div>
 		Inicia sesión con<br><br>
 		
 		<script>
 		if( window.plugins || ieVersion()!=undefined ) //Para que también se meta si es IE
 		{
-		  document.write("<button onClick='RSHJSKMBRP(1)' style='margin: 0 auto;width: 180px;'><i class='fa fa-google'></i> Google</button>")
+		  document.write("<button onClick='LoginCordova(1)' style='margin: 0 auto;width: 180px;'><i class='fa fa-google'></i> Google</button>")
 		}
 		else
 		{
@@ -1588,9 +1502,9 @@ function onSignInFailure(googleUser) {
 			
 		}
 		</script>
-		<button onClick="RSHJSKMBRP(2)" style="margin: 0 auto;width: 180px;"; ><i class='fa fa-facebook-official'></i> Facebook</button>
-		<button onClick="RSHJSKMBRP(3)" style="margin: 0 auto;width: 180px;"><i class='fa fa-instagram'></i> Instagram</button>
-		<button onClick="RSHJSKMBRP(4)" style="margin: 0 auto;width: 180px;"><i class='fa fa-twitter'></i> Twitter</button>		
+		<button onClick="LoginCordova(2)" style="margin: 0 auto;width: 180px;"; ><i class='fa fa-facebook-official'></i> Facebook</button>
+		<button onClick="LoginCordova(3)" style="margin: 0 auto;width: 180px;"><i class='fa fa-instagram'></i> Instagram</button>
+		<button onClick="LoginCordova(4)" style="margin: 0 auto;width: 180px;"><i class='fa fa-twitter'></i> Twitter</button>		
 
 		<br><br>	
 		<a onClick="Abre(1)" >política de privacidad</a>

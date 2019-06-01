@@ -1,4 +1,89 @@
-﻿function track(pagina)
+﻿'use strict';
+function SeleccionaEmoti(tabla,celda)
+{
+	
+	
+	var i;
+	var u;
+	var d;
+	var x;
+	//console.log(d.rows)
+	//var a=d.rows
+	var filas=0;
+	var columnas;
+	var actualtabla=""
+	
+	//
+	var allTables = document.getElementById("seleccionaemoji_carrusel").getElementsByTagName("table");
+	//console.log(allTables);
+	
+	for( x = 0; x < allTables.length; x++){
+		
+		if (allTables[x].id.indexOf("tablaEmojis")!=-1)
+		{
+			//console.log("ESTOY "+allTables[x].id)
+			d=document.getElementById(allTables[x].id)
+			filas=d.rows
+			for (i=0;i<=filas.length-1;i++)
+			{
+				columnas=filas[i].cells.length;
+				for (u=0;u<=columnas-1;u++)
+				{
+
+						filas[i].cells[u].style.backgroundColor="white";
+
+				}
+			}
+		}
+		
+		//td.innerHTML = // do something w/ inner html
+		//console.log("TABLA "+td);
+	}
+
+
+
+	//document.getElementById('slick-slide01').style.backgroundColor ="red";
+	//var d=document.getElementById('slick-slide01')
+
+	
+	//console.log( tabla +" *  "+celda)
+	d=document.getElementById(tabla)
+	filas=d.rows
+	for (i=0;i<=filas.length-1;i++)
+	{
+		
+		columnas=filas[i].cells.length;
+		//console.log(filas[i].cells)
+		for (u=0;u<=columnas-1;u++)
+		{
+			//console.log("Se mete")
+			if (filas[i].cells[u].id==celda)
+			{
+				filas[i].cells[u].style.backgroundColor="#66ff33";
+				EmoticonoGlobal=celda;
+			}
+			else
+			{
+				filas[i].cells[u].style.backgroundColor="white";
+			}
+			//console.log(filas[i].cells[u].style.backgroundColor)
+		}
+	}
+	//console.log(a[0].cells.length)
+	//var d =document.getElementById('slick-slide01')
+	//console.log(d);
+	//celda.style.backgroundColor="#66ff33" 
+}
+
+function SeleccionaJugadorEmoti(Check)
+{
+	var d=document.getElementById(Check);
+	d.checked= !(d.checked);	
+}
+
+
+
+function track(pagina)
 {
 	try
 	{
@@ -101,7 +186,7 @@ function HJBVQUGKVY()
 				  //socket.emit('Consola','Ha pulsado rate');
 				},
 				onButtonClicked: function(buttonIndex){
-					//socket.emit('Consola','va a enviar '+buttonIndex);
+					socket.emit('Consola','va a enviar '+buttonIndex);
 					if (PWMIBRSDCJ.length>0)
 					{
 						//socket.emit('Consola','enviar '+buttonIndex+" "+PWMIBRSDCJ[0].OBTBPOULAV);
@@ -606,7 +691,7 @@ function NPOUCHQXMY(UHTPGPRUJA,SJVCMXWVVI,TKWCTNGROU,LDCCGSIBKW,TXLWIIINGQ,Desde
   var XACEBCSJAB;
   var UBWRXKMTQN;
   var LSKPLOTYIB=false;
-  
+  var NJGFWACAPY;
   //YGTNAODFHW.kill();
 	//YGTNAODFHW.loadTexture('Boton_cambiar_7_off', 0);
 	//YGTNAODFHW.frameName='cambiar 7 gris';
@@ -2792,6 +2877,8 @@ function IHSCVAKSDJ(sprite) {
   var i;
   var k;
   var text;
+  
+  EstoyClickando=false;
 	//log(false,"KEYYYYYYYYYYYYYYYYYYYY "+sprite.name);
 	//log(false,"elimina");
 	//socket.emit('Consola',"Paro Drag");
@@ -3868,7 +3955,11 @@ var i;
 				//AGKVNAGGLB[i].TNFAGGMKXD.events.onInputUp.add(QTIPILDEPH);
 				//AGKVNAGGLB[i].TNFAGGMKXD.events.onDragUpdate.add(WTNGDOQIWY); 
 				
-				AGKVNAGGLB[i].TNFAGGMKXD.events.onInputDown.add(function(){Renderizar(true);});
+				AGKVNAGGLB[i].TNFAGGMKXD.events.onInputDown.add(function(){
+					Renderizar(true);
+					EstoyClickando=true;
+					console.log("clickando " +EstoyClickando)
+					});
 				AGKVNAGGLB[i].TNFAGGMKXD.events.onDragStop.add(IHSCVAKSDJ); 
 			//}
 		}
@@ -4283,7 +4374,7 @@ function IEUIUCYUCC(RPHWVBBGIM,Tamano) {
 
 	var AWCCMSCOPO;
 	var grd;
-	
+	var TextoGeneral;
 
 	//text = YMHIHSNADE.add.text(0, 0, RPHWVBBGIM);
 	if (RPHWVBBGIM!=null && RPHWVBBGIM!="") //si no sale rápido el mensaje acabando la partida
@@ -4807,6 +4898,7 @@ function WWAYLOUPUQ(TXLWIIINGQ) {
 	var OUENWKLUUA;
 	var QJUYVEJMEB;
 	var i;
+	var KMHMNPUINK;
 
 	//console.log("Crear AWCCMSCOPO puntuacion")
 	if (HGFAUFDVDF()==true) //2.0.1 Añado JHHWEKWEJK==false
@@ -5331,7 +5423,9 @@ function MHELAUXKXR()
 	
 	WNEWPCNXPA(); //2.0.1
 	QSAXUCPASV(); //2.0.1
+	
 	YMHIHSNADE.state.start("Level",false,true); //2.0.8.37 el true
+	
 	//XEMENNVXGV(); //1.0.8 Si no fallaba la consulta del ránking desde logindesdeweb
 }
 
@@ -5400,25 +5494,32 @@ function UIYIUCHWUH(){
 		COTMMCVJWP.removeAll();
 		//BNWHJGHWUW.removeAll(); 2.0.7 Excepción, para que puedan hablar en el chat mientras se reparte o cuenta. Lo pongo al acabar el coto.		
 		VTEVNYKAUB.removeAll();
+		GrupoEmojis.removeAll();
+		
+	
 		//console.log("BBBORRO4")
 		//console.log("Limpio")
-	
-		if (!NNXBXBHSHH.isRunning && !GSGGWGWGWG.isRunning && !OOQQOQOOID.isRunning && !NBMNABHJCG.isRunning && !twMensajeError.isRunning
+		if ( EstanTweensParados()  
+		/*!NNXBXBHSHH.isRunning && !GSGGWGWGWG.isRunning && !OOQQOQOOID.isRunning && !NBMNABHJCG.isRunning && !twMensajeError.isRunning
 		&& !MMSJJSJSUW.isRunning && !HGJCWICPWQ.isRunning && !QTQTQTQTQT.isRunning && !NXHWIWPWOW.isRunning && !BDEFDQUJJE.isRunning && !CKOUBGTDUF.isRunning
-		&& !JLFYUAKDIJ.isRunning && !PTHQXTTWIH.isRunning && !IRQUWMEVQL.isRunning && !HIFQJUUVEU.isRunning
+		&& !JLFYUAKDIJ.isRunning && !PTHQXTTWIH.isRunning && !IRQUWMEVQL.isRunning && !HIFQJUUVEU.isRunning*/
 		)
 		{
+			//console.log("previo limpia");	
 			try
 			{
+				//console.log("si limpia");	
+
 				YMHIHSNADE.tweens.removeAll();
 			}
 			catch(e){}
 		}	
-
-
+		
 	}
 	catch(e)
-	{}
+	{}	
+
+
 	
 	
 
@@ -5509,6 +5610,10 @@ DHJGJHGWCY.kill();
 	HRGDCMPPKU.kill();	
 	IFMJVFFEQN.kill()
 	KAHCKJHQEO.kill();
+	if (BotonEmoticono!=undefined)
+	{
+		BotonEmoticono.kill();
+	}
 //}
 log(true,"Limpiando variables..");
 
@@ -5891,6 +5996,7 @@ function ACGJHQWGVB()
 		COTMMCVJWP = YMHIHSNADE.add.group();
 		BNWHJGHWUW = YMHIHSNADE.add.group();
 		VTEVNYKAUB=YMHIHSNADE.add.group();//1.0.9
+		GrupoEmojis=YMHIHSNADE.add.group();
 	//}
 	VTEVNYKAUB.add(JBXCGDTWYW);
 	YMHIHSNADE.world.bringToTop(VTEVNYKAUB);
@@ -5906,6 +6012,12 @@ function ACGJHQWGVB()
 	LJRRHVSVKD=YMHIHSNADE.add.tween(BRQFVLOBSF);
 	LCYAHFBDTT=YMHIHSNADE.add.tween(BRQFVLOBSF);
 	NEPGDYQDEI=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	
+	tw5=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	HHBPAROITT=YMHIHSNADE.add.tween(BRQFVLOBSF);
+	EWXBTDLSHW=YMHIHSNADE.add.tween(BRQFVLOBSF);
+
+	
 	PTHQXTTWIH=YMHIHSNADE.add.tween(BRQFVLOBSF);
 	IRQUWMEVQL=YMHIHSNADE.add.tween(BRQFVLOBSF);
 	HIFQJUUVEU=YMHIHSNADE.add.tween(BRQFVLOBSF);	
@@ -5955,6 +6067,8 @@ function ACGJHQWGVB()
 	twEfectoCanteGlobal2=YMHIHSNADE.add.tween(BRQFVLOBSF); //2.0.8051
 	twDesplazaDerechaGlobal=YMHIHSNADE.add.tween(BRQFVLOBSF); //2.0.8051
 	twDesplazaIzquierdaGlobal=YMHIHSNADE.add.tween(BRQFVLOBSF); //2.0.8051
+	twEnviarEmoticonoGlobal=YMHIHSNADE.add.tween(BRQFVLOBSF); //2.0.8051
+	twEnviarEmoticonoGlobalParaMi=YMHIHSNADE.add.tween(BRQFVLOBSF); //2.0.8051
 
 
 	twMensajeError=YMHIHSNADE.add.tween(BRQFVLOBSF);
@@ -5974,10 +6088,11 @@ function KPQSPDMKJE(SQIRFQMWSL,TUTWNSAGSX)
 	DVNRTQIWGL=SQIRFQMWSL; //2.0.8.37 Nuevo
 
 	var RDBQUAVHEP=SQIRFQMWSL; //ILA RDBQUAVHEP he puesto el var
-	//console.log("Nueva partida0")
+	console.log("Nueva partida quien "+RDBQUAVHEP+" Soy "+TFSXFTYVGQ)
+	console.log("Permiso "+PermisoParaTomarControl(RDBQUAVHEP)+" Estoy conectado "+SNJCSVWFCC()+" Reconectando "+MNAGVJHWOW()+ " primera vez "+TUTWNSAGSX)
 	if ( (RDBQUAVHEP==TFSXFTYVGQ ||  PermisoParaTomarControl(RDBQUAVHEP) ) &&  ( (EGPDVIEJEL==true && SNJCSVWFCC() && (MNAGVJHWOW()==false || TUTWNSAGSX==true)    ) || EGPDVIEJEL==false ) )
 	{
-		//console.log("Nueva partida")
+		console.log("Nueva partida")
 		LHRDGYYJLJ=false;
 		for (i=0;i<=KYDWXPGHVY.length-1;i++)
 		{

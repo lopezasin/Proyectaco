@@ -1,4 +1,5 @@
-﻿window.onload = function() {
+﻿'use strict';
+window.onload = function() {
 
 var isCordovaApp = document.URL.indexOf('http://') === -1
 		&& document.URL.indexOf('https://') === -1;
@@ -16,6 +17,7 @@ function Inicia()
 	//////console.log("Entra a iniciar");
 	var ancho;
 	var alto;
+	var ForceSet;
 	
 	if (window.innerHeight/window.innerWidth<0.68)
 	{	

@@ -1,4 +1,14 @@
-﻿function GHDHJSKQIU()
+﻿'use strict';
+
+function onSocketArticuloComprado(Articulo, Precio)
+{
+	YUFGSLAHYS=-Precio;
+	CerrarTienda();
+	OcultarDetalleTienda();
+	JQDGHVJGUW();
+}
+
+function GHDHJSKQIU()
 {
 	var x=WIEVLYANFM("U_C",0)-COIVBWRMCC;
 	var y=FIGQBSJQGA("U_C",0)+(MKSLYEWQQS/2)+(YAJVUBPNNW);
@@ -492,7 +502,7 @@ function GIDSSFEUNT(SinIA)
 function LlamadaIA(TurnoRecibido,SLGKDYQCAY,PartidaRecibida)
 {
 
-	PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
+	var PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
 
 	TKXPPGUPVV.stop();
 	TKXPPGUPVV.remove();
@@ -2257,7 +2267,7 @@ function DFCCHCJBNP(UPCWNPYAIE,TXLWIIINGQ){
 	}
 }
 
-function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoticono)
+function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoticonoServer)
 {
 	var AQuien;
 	var EfectoMovimiento;
@@ -2274,6 +2284,7 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 	var posXHasta;
 	var posYDesde;
 	var posYHasta;	
+	var twDesplazamientoEmoticono;
 	
 	//var JugadorDesde=1;
 	//var JugadorHasta=4;
@@ -2322,11 +2333,17 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 	if (STLEOJDWSU=="D")
 	{
 		posXHasta=YMHIHSNADE.world.centerX	;
+		if (twEnviarEmoticonoGlobalParaMi.isRunning)
+		{
+			posXHasta=posXHasta+200
+		}
 		posYHasta=YMHIHSNADE.world.height-DesplazamientoD	;	
 	}		
 		
-	
-	var EmoticonoEnviar=YMHIHSNADE.add.image(posXDesde,posYDesde,idEmoticono);
+	Renderizar(true);
+	console.log("EMOTICONO "+idEmoticonoServer)
+	var EmoticonoEnviar=YMHIHSNADE.add.image(posXDesde,posYDesde,'emoticonos_server',idEmoticonoServer);
+	GrupoEmojis.add(EmoticonoEnviar);
 	EmoticonoEnviar.anchor.setTo(0.5, 0.5)
 
 
@@ -2338,20 +2355,26 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 	if (Efecto==1) //Rebote
 	{
 		EfectoMovimiento= Phaser.Easing.Bounce.Out;
-		YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+		twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
 	}
 
 	if (Efecto==2) 
 	{
 		EfectoMovimiento= Phaser.Easing.Sinusoidal.InOut;
-		YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+		twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
 	}	
 	
 	if (Efecto==3) //Rebote
 	{
 		EfectoMovimiento= Phaser.Easing.Linear.None;
-		YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+		twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
 	}	
+	twEnviarEmoticonoGlobal=twDesplazamientoEmoticono;
+	if (STLEOJDWSU=="D")
+	{
+		twEnviarEmoticonoGlobalParaMi=twDesplazamientoEmoticono;
+	}
+	
 
 	Rotar=Math.floor(Math.random() * 5) + 1 
 	if (Rotar<=2)
@@ -2365,7 +2388,8 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 
 	if (Rotar==true && Efecto!=1 )
 	{
-		YMHIHSNADE.add.tween(EmoticonoEnviar).to({angle: 360}, vTiempoEmotiMover, Phaser.Easing.Cubic.In, true, 100, 0);
+		twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({angle: 360}, vTiempoEmotiMover, Phaser.Easing.Cubic.In, true, 100, 0);
+		twEnviarEmoticonoGlobal=twDesplazamientoEmoticono;
 	}
 	
 	/*Fadding=Math.floor(Math.random() * 10) + 1 
@@ -2385,16 +2409,25 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 		YMHIHSNADE.add.tween(EmoticonoEnviar).to( { alpha: 1 }, vTiempoEmoti, Phaser.Easing.Linear.None, true, 20, 0);
 	}*/
 	
-	EmoticonoEnviar.scale.setTo(0.1,0.1)
+	EmoticonoEnviar.scale.setTo(0.3,0.3)
 	EmoticonoEnviar.bringToTop();
-	var twEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar.scale).to( {x:0.3,y:0.3}, vTiempoEmotiMover, Phaser.Easing.Linear.None,true,vTiempoEmotiDesaparecer);
+	var twEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar.scale).to( {x:1.2,y:1.2}, vTiempoEmotiMover, Phaser.Easing.Linear.None,true,vTiempoEmotiDesaparecer);
 	twEmoticono.onComplete.add(  function(){
 								//if (DQKYYAPEEN.isRunning==false && MJBCTSKUIB.isRunning==false)
 								//{
-									EmoticonoEnviar.bringToTop();
-									EmoticonoEnviar.kill();//2.0.1 clave:rehuse
+									twEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar.scale).to( {x:1.2,y:1.2}, 700, Phaser.Easing.Linear.None,true,0);
+									twEmoticono.onComplete.add(  function(){
+										EmoticonoEnviar.bringToTop();
+										EmoticonoEnviar.kill();//2.0.1 clave:rehuse
+										Renderizar(true);
+									});
 								//}
 								})
+	twEnviarEmoticonoGlobal=twEmoticono;
+	if (STLEOJDWSU=="D")
+	{	
+		twEnviarEmoticonoGlobalParaMi=twEmoticono;
+	}
 	
 }
 
@@ -2468,68 +2501,72 @@ function EnviarEmoticonoTodos()
 {
 		/////////////
 		var AQuien;
-		var idEmoticono="Emoticono1";
+		//var idEmoticono="Emoticono1";
+		var idEmoticono=EmoticonoGlobal;
 		
-		var d=document.getElementById("JugadorEmoti1");
-		
-		
-		
-		if(d.checked)
+		if (idEmoticono!="")
 		{
-			AQuien=CalculaQuienEmoticono(TFSXFTYVGQ,1)
+			var d=document.getElementById("JugadorEmoti1");
 			
 			
-			try
+			
+			if(d.checked)
 			{
-				socket.emit('enviar_emoticono', TFSXFTYVGQ,AQuien, idEmoticono, DFBVDPETGO) ;
-				//console.log("Lo envia")
+				AQuien=CalculaQuienEmoticono(TFSXFTYVGQ,1)
+				
+				
+				try
+				{
+					socket.emit('enviar_emoticono', TFSXFTYVGQ,AQuien, idEmoticono, DFBVDPETGO) ;
+					//console.log("Lo envia")
+				}
+				catch(e){}		
+				d.checked=false;
 			}
-			catch(e){}		
-			d.checked=false;
+			
+			var d=document.getElementById("JugadorEmoti2");
+			if(d.checked)
+			{
+				
+				AQuien=CalculaQuienEmoticono(TFSXFTYVGQ,2)
+				if (AQuien>4)
+				{
+					AQuien=AQuien-4;
+				}
+				//console.log("Checked2 Soy "+TFSXFTYVGQ+" y envio a "+AQuien)
+				
+				try
+				{
+					socket.emit('enviar_emoticono', TFSXFTYVGQ,AQuien, idEmoticono, DFBVDPETGO) ;
+				}
+				catch(e){}		
+				d.checked=false;
+			}		
+			
+			var d=document.getElementById("JugadorEmoti3");
+			if(d.checked)
+			{
+				AQuien=CalculaQuienEmoticono(TFSXFTYVGQ,3)
+				if (AQuien>4)
+				{
+					AQuien=AQuien-4;
+				}
+				//console.log("Checked3 Soy "+TFSXFTYVGQ+" y envio a "+AQuien)
+				
+				try
+				{
+					socket.emit('enviar_emoticono', TFSXFTYVGQ,AQuien, idEmoticono, DFBVDPETGO) ;
+				}
+				catch(e){}		
+				d.checked=false;
+			}		
 		}
-		
-		var d=document.getElementById("JugadorEmoti2");
-		if(d.checked)
-		{
-			
-			AQuien=CalculaQuienEmoticono(TFSXFTYVGQ,2)
-			if (AQuien>4)
-			{
-				AQuien=AQuien-4;
-			}
-			//console.log("Checked2 Soy "+TFSXFTYVGQ+" y envio a "+AQuien)
-			
-			try
-			{
-				socket.emit('enviar_emoticono', TFSXFTYVGQ,AQuien, idEmoticono, DFBVDPETGO) ;
-			}
-			catch(e){}		
-			d.checked=false;
-		}		
-		
-		var d=document.getElementById("JugadorEmoti3");
-		if(d.checked)
-		{
-			AQuien=CalculaQuienEmoticono(TFSXFTYVGQ,3)
-			if (AQuien>4)
-			{
-				AQuien=AQuien-4;
-			}
-			//console.log("Checked3 Soy "+TFSXFTYVGQ+" y envio a "+AQuien)
-			
-			try
-			{
-				socket.emit('enviar_emoticono', TFSXFTYVGQ,AQuien, idEmoticono, DFBVDPETGO) ;
-			}
-			catch(e){}		
-			d.checked=false;
-		}		
 		OcultarElegirEmoticono();
 }
 
 function EnviarEmoticono(JSKXXDPSDS)
 {
-	
+
 	if (JSKXXDPSDS==1)
 	{
 		EnviarEmoticonoTodos()

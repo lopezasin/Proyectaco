@@ -91,9 +91,9 @@
 	background: #fff; 
 	position: absolute; 
 	width: 250px; left: 50% !important; margin-left: -125px; 
-	height: 170px; top: 50% !important; margin-top:-75px;
+	height: 230px; top: 35% !important; margin-top:-75px;
 	padding: 15px;
-	padding-top: 27px;
+	padding-top: 10px;
 	text-align:center;
 	box-sizing: border-box;
 }
@@ -441,4 +441,7 @@ border-spacing: 50em;
             color: #666;
         }
 		
-    #tablaEmoticono label { position:relative; top: 5px; }	
+    #tablaEmoticonoJugadores label { position:relative; top: 5px; centerPadding: '60px'  }	
+	.colorSeleccion{
+                background-color: #ff00ff;
+            }

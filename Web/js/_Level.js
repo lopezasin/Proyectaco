@@ -1,4 +1,5 @@
-﻿/**
+﻿'use strict';
+/**
  * Level state.
  */
 function Level() {
@@ -16,7 +17,7 @@ Level.prototype = proto;
 
 var KYLIAIETHX=false;
 
-
+var EmoticonoGlobal="" //2.0.8051
 var BloqueoCartaCentro=false;
 var vCampeonatoOasis=false;
 var JHGHJAGCMC;
@@ -25,6 +26,8 @@ var MaquinaSSH;
 var BBWEGOPQUF;
 var HDGGWGGSVH=false;
 var Paginador=50;
+var MundoAntiguo=false;
+var EstoyClickando=false
 
 if (KYLIAIETHX==true){
 
@@ -60,6 +63,8 @@ var NNDHIWHIWL=false;
 var JDAHOQYHHV;
 var HUCHKABMAP;
 var CUUKQAGFEB;
+var JFRRFIXASB;
+var BotonBorrar2;
 //2.0.8.37 var BNMBJQQQQW;
 //var MNSLSOPOOP;
 var BotonConfiguracion;
@@ -165,6 +170,7 @@ var IHSKJHKWCM=false;
 var FSKHWVCMCA=false;
 var TLGMUNNDGH=false;
 var TDILLGNFGX=false;
+var PrimeraVezConectado=true;
 var KKXJHKJGVG=[];
 //var MazoBarajaBase2=[];
 var FXGSEGRXKC=[];
@@ -214,6 +220,7 @@ var WWFSQDQYYU;
 var GSXGWASLIY;
 var COTMMCVJWP;
 var VTEVNYKAUB;
+var GrupoEmojis;
 var BNWHJGHWUW;
 var GHFGHSIWCV;
 var POUWEIOUWQ;
@@ -245,6 +252,7 @@ var DHJGJHGWCY;
 var GJHWUYGCBN;
 
 var UUUIUYUSFS;
+var BotonEmoticono;
 
 
 var YTUGCWECJC=true;
@@ -327,6 +335,9 @@ var twEfectoCanteGlobal1; //2.0.8051
 var twEfectoCanteGlobal2; //2.0.8051
 var twDesplazaDerechaGlobal; //2.0.8051
 var twDesplazaIzquierdaGlobal; //2.0.8051
+var twEnviarEmoticonoGlobal;
+var twEnviarEmoticonoGlobalParaMi;
+var twMensajeError;
 
 var JKHKJVHWPW;
 var NBXIJWGIWP;
@@ -355,6 +366,7 @@ var PQUFIBKJJH;
 var LJRRHVSVKD;
 var LCYAHFBDTT;
 var NEPGDYQDEI;
+var tw5;
 var HHBPAROITT;
 var EWXBTDLSHW;
 var BDEFDQUJJE;
@@ -385,9 +397,12 @@ var UEHYPTREIH;
 var IBECDOLWLN;
 var EFKTQSXAMA;
 var POEICHMHDL;
+var BotonTienda;
 var LNJDKEVPQE;
 var COIVBWRMCC=0;
 var SXSHBRJFIR=0;
+var MKSLYEWQQS=0;
+var PPLOSJIWHO=0;
 var QOVBONVJSP;
 var IFMJVFFEQN;
 //Phaser.Easing.Quadratic.Out;
@@ -403,6 +418,7 @@ var HUUCUYFBLW;
 var HYSGUYGUYT;
 var BGHJGDWJVI;
 var TKXPPGUPVV;
+var timerrecolector;
 //var PUBDSNTIUS;
 var CVTBLMKIGL;
 var MMCDRVCGAV;
@@ -545,6 +561,10 @@ var UFHWJJDSWV=false;
 var MHJKHDFSGF=0;
 var YUFGSLAHYS=0;
 var AASSDSGGRB=false; //es un semáforo.
+var BotonCuentaPaloOros;
+var BotonCuentaPaloCopas;
+var BotonCuentaPaloEspadas;
+var BotonCuentaPaloBastos;
 //var cambiar=1;
 
 var ObjetoG;
@@ -1047,7 +1067,17 @@ Level.prototype.create=function(){
 
 	
 
+	BotonCuentaPaloOros=YMHIHSNADE.add.image(50, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
+	BotonCuentaPaloOros.loadTexture(NXNXBWBBWL,'1_oros', 0);
+
+	BotonCuentaPaloCopas=YMHIHSNADE.add.image(60, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
+	BotonCuentaPaloCopas.loadTexture(NXNXBWBBWL,'1_copas', 0);	
 	
+	BotonCuentaPaloEspadas=YMHIHSNADE.add.image(70, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
+	BotonCuentaPaloEspadas.loadTexture(NXNXBWBBWL,'1_espadas', 0);	
+	
+	BotonCuentaPaloBastos=YMHIHSNADE.add.image(80, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
+	BotonCuentaPaloBastos.loadTexture(NXNXBWBBWL,'1_bastos', 0);	
 	
 	if (BRQFVLOBSF==undefined)
 	{
@@ -1851,7 +1881,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 		TextoCampeonato.y=20
 	}
 	//SIGUIENTE BLOQUE PRUEBAS
-	if (KYLIAIETHX==false && 1==1)
+	if (KYLIAIETHX==false && 1==2)
 	{
 		if (ANCNWHEHOW==undefined)
 		{
@@ -1861,6 +1891,7 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 			
 				//console.log("TAMAÑO "+HMVFLEYPXM.length+" Control "+ESKTEXAVHU+" partida "+MQUGCIUQII)
 
+				LLKJWWDFFF()
 				//HMVFLEYPXM.sort(sort_by('EBAPPJFYSW', false));	
 				//console.log("NPYBJSHIFL ranking "+textJugadorRank1.x+" "+textJugadorRank1.y+" "+textJugadorRank1.text)
 				console.log("PROBLEMAS "+MuestraProblema());
@@ -2073,6 +2104,29 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	
 	
 	//1.0.8
+	
+	
+	
+		if (BotonTienda==undefined)
+	{
+		//POEICHMHDL.destroy();
+		BotonTienda= YMHIHSNADE.add.button(YMHIHSNADE.world.centerX + 420, YMHIHSNADE.world.centerY+20, 'general', MostrarTienda, this, 'boton_ranking','boton_ranking','boton_ranking');
+				
+		BotonTienda.width=BotonTienda.width;
+		BotonTienda.height=BotonTienda.height;
+		BotonTienda.anchor.setTo(0.5,0.5);
+		
+		if (JHJEWHFWNL==true)
+		{
+			BotonTienda.width=BotonTienda.width;
+			BotonTienda.height=BotonTienda.height;
+			BotonTienda.y=BotonTienda.y-110;
+			BotonTienda.x=BotonTienda.x+70;
+		}			
+	
+	}		
+	
+	BotonTienda.kill();
 	
 	if (EFKTQSXAMA==undefined)
 	{
@@ -2387,12 +2441,18 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 	}
 	
 
+	if (BotonEmoticono==undefined)
+	{
+		BotonEmoticono=YMHIHSNADE.add.button(x , YMHIHSNADE.world.height-45, 'general', MostrarElegirEmoticono,this,'cara_tapada','cara_tapada' );
+		BotonEmoticono.anchor.setTo(0.5, 0.5)
+		BotonEmoticono.kill();
+	}
+
 	
-	/*hola=YMHIHSNADE.add.button(x , YMHIHSNADE.world.height-45, 'Emoticono1', MostrarElegirEmoticono , this);
-	hola.anchor.setTo(0.5, 0.5)
-	hola.scale.setTo(0.3,0.3);
-	hola.inputEnabled = true;
-	hola.input.enableDrag(false,true);*/
+	
+	//hola.scale.setTo(0.3,0.3);
+	//hola.inputEnabled = true;
+	//hola.input.enableDrag(false,true);
 	
 	JQDGHVJGUW(false);
 	
@@ -2460,7 +2520,7 @@ function JQDGHVJGUW()
 		BJWEJKFWER.text="x "+MHJKHDFSGF;
 		BJWEJKFWER.x = YMHIHSNADE.world.width-160+(BJWEJKFWER.textWidth/2 );
 		BJWEJKFWER.align = 'left';
-		BJWEJKFWER.x=YMHIHSNADE.world.width-200;
+		BJWEJKFWER.x=YMHIHSNADE.world.width-160;
 		BJWEJKFWER.x = 1;
 		BJWEJKFWER.y=60;
 		BJWEJKFWER.revive();
@@ -2495,6 +2555,7 @@ function JQDGHVJGUW()
 			BJWEJKFWER.x = YMHIHSNADE.world.width-160+(BJWEJKFWER.textWidth/2 );
 			//BJWEJKFWER.text="x "+5;
 			
+			
 		}
 		
 		
@@ -2504,7 +2565,15 @@ function JQDGHVJGUW()
 
 function GVJKQGAAOQ()
 {
-	JGKQOAGEHK.x=YMHIHSNADE.world.width -300;
+	if (Math.abs(YUFGSLAHYS)<100)
+	{
+		JGKQOAGEHK.x=YMHIHSNADE.world.width -300;
+	}
+	else
+	{
+		JGKQOAGEHK.x=YMHIHSNADE.world.width -330;
+	}
+	
 	if(YUFGSLAHYS>0)
 	{
 		JGKQOAGEHK.y=60;
@@ -2521,7 +2590,9 @@ function GVJKQGAAOQ()
 	JGKQOAGEHK.height=0;
 	JGKQOAGEHK.alpha=1;
 	
-	var JHVJLQHUVQ
+	var JHVJLQHUVQ;
+	var CBJKQGHVQV;
+	
 		JHVJLQHUVQ = YMHIHSNADE.add.tween(JGKQOAGEHK.scale);
 		JHVJLQHUVQ.to( {x:1
 		,y:1
@@ -3033,6 +3104,7 @@ function YIQDWVLKWG()
 	{
 		return false;
 	}*/
+	Renderizar(true);
 	
 	if (checkConnection()==true)
 	{	
@@ -3051,6 +3123,7 @@ function YIQDWVLKWG()
 
 function PermisoParaTomarControl(UHTPGPRUJA)
 {
+	console.log("Permiso: Soy "+TFSXFTYVGQ+" Control "+ESKTEXAVHU+" Conectado "+UEWYIUWIVW(UHTPGPRUJA))
 	return ( (EGPDVIEJEL==true &&  TFSXFTYVGQ==ESKTEXAVHU && UEWYIUWIVW(UHTPGPRUJA)==false    )   || EGPDVIEJEL==false)
 	
 }
@@ -3205,6 +3278,19 @@ function LOIUJDIWPD(){
 }
 
 
+function CerrarTienda()
+{
+	var d=document.getElementById('DivTienda');
+	d.style.display = 'none';
+}
+
+function MostrarTienda()
+{
+	var d=document.getElementById('DivTienda');
+	d.style.display = '';
+		$('.multiple-items').slick('setPosition'); //corrige bug slick
+}
+
 function BHWJGHJGWI(){
 	
 	var d=document.getElementById('DivCrearSala');
@@ -3296,7 +3382,10 @@ function MostrarElegirEmoticono()
 	var PosicionMes1=0;
 	var PosicionMes2=0;
 	var PosicionMes3=0
-	
+
+			//var d=document.getElementById('DivEmoticonos');
+		//d.style.display = 'block';
+//$('.single-item').slick('setPosition'); 
 	
 	
 	for (i=0;i<=XPBCVAGCDQ.length-1;i++)
@@ -3443,15 +3532,24 @@ function MostrarElegirEmoticono()
 		
 	var d=document.getElementById('DivEmoticonos');
 	d.style.display = 'block';
-		
-     //$('#bchat').click()
 	
-	 /*$('.single-item').slick({
-          dots: true,
-            infinite: false
-      });*/
+	
+	var timerMuestraEmoticono=YMHIHSNADE.time.create(false);
+	timerMuestraEmoticono.add(100, function()
+	{	
+	
+	var d=document.getElementById('CancelarEmoticono');
+	d.style.display = '';	
+	
+		var d=document.getElementById('EnviarEmoticono');
+	d.style.display = '';	
+	
+		$('.single-item').slick('setPosition'); //corrige bug slick
+	
+	});	
+	timerMuestraEmoticono.start();
 
-	
+	//document.getElementById("DivEmoticonos").click();
 	
 }
 
@@ -3460,7 +3558,110 @@ function OcultarElegirEmoticono()
 {
 	var d=document.getElementById('DivEmoticonos');
 	d.style.display = 'none';	
+	
+	var d=document.getElementById('CancelarEmoticono');
+	d.style.display = 'none';	
+	var d=document.getElementById('EnviarEmoticono');
+	d.style.display = 'none';		
+	
 }
+
+function Comprar(Articulo)
+{
+	var OBTBPOULAV;
+	if (SNJCSVWFCC())
+	{
+
+		if (PWMIBRSDCJ.length>0)
+		{
+			OBTBPOULAV=PWMIBRSDCJ[0].OBTBPOULAV;
+			socket.emit('solicita_compra',socket.id,OBTBPOULAV,Articulo);	
+		}
+		else
+		{
+			OBTBPOULAV=null;
+		}
+		
+		
+	}
+}
+function MostrarDetalleTienda(Articulo,ArrayTienda)
+{
+	var RHOLNWBOXR;
+	var i;
+	var d;
+	//ArticuloGlobal
+
+	d=document.getElementById('DivDetalleTienda');
+	d.style.display = 'block';	
+			
+	d=document.getElementById('lblSaldo')
+	d.textContent = "Saldo: "+MHJKHDFSGF+" Guiñobits"
+
+	console.log("Articulo "+Articulo)
+	for (i=0;i<=ArrayTienda.length-1;i++)
+	{	
+		if (ArrayTienda[i]._id_articulo==Articulo)
+		{
+			
+			d=document.getElementById('BotonComprar');
+			d.onclick =  function() { Comprar(Articulo) }
+			
+
+	
+	
+			d=document.getElementById("lblDescripcionArticulo") 
+			d.textContent = ArrayTienda[i]._descripcion;	
+
+			d=document.getElementById("lblNombreArticulo") 
+			d.textContent = ArrayTienda[i]._nombre;				
+
+			d=document.getElementById("lblPrecioArticulo") 
+			d.textContent = ArrayTienda[i]._precio;		
+			console.log("Precio "+ ArrayTienda[i]._precio);
+
+			if (ArrayTienda[i]._precio>MHJKHDFSGF)
+			{
+				 document.getElementById("BotonComprar").disabled=true;
+			}
+			else
+			{
+				 document.getElementById("BotonComprar").disabled=false;
+			}
+		//var b=a.labels[0];
+			
+		
+			/*switch (Articulo)
+			{	
+			
+				case 1 :		
+				RHOLNWBOXR = "Cambia tu nombre en GuiñotePro, con la comodidad de no tener que hacerlo desde tu Red Social.\n";
+					"Nota: Nombres de caracter ofensivos o publicitarios serán rechazados."
+						
+				break;	
+
+				case 2 :		
+				RHOLNWBOXR = "Cambia tu foto en GuiñotePro, con la comodidad de no tener que hacerlo desde tu Red Social.\n";
+					"Nota: Nombres de caracter ofensiva o publicitaria será rechazada."
+						
+				break;	
+
+				
+			}*/
+
+			
+		}
+	}
+}
+
+
+function OcultarDetalleTienda()
+{
+	var d=document.getElementById('DivDetalleTienda');
+	d.style.display = 'none';	
+	
+}
+
 
 /*MuestraOcultaFotos=function(objeto,imagen)
 {
@@ -3894,6 +4095,7 @@ function NXVIOTGLQV(AHGGSIUEBA)
 	
 	var i;
 	var RDAEBQGCGW;
+	var POPEWFWERV;
 	//KKUYGYRGYG
 	var d=document.getElementById('DivEligePareja');
 	d.style.display = 'none';
@@ -4165,8 +4367,8 @@ function OQDXNSPREQ(NombreSala,Residual)
 	document.getElementById("sala_pass").value=NombreSala;
 	document.getElementById("pass_pass").value="";
 	
-	a=Residual.substring(0, Residual.length-2);
-	b=PWMIBRSDCJ[0].OBTBPOULAV.substring(0, PWMIBRSDCJ[0].OBTBPOULAV.indexOf('-',1)+0);
+	var a=Residual.substring(0, Residual.length-2);
+	var b=PWMIBRSDCJ[0].OBTBPOULAV.substring(0, PWMIBRSDCJ[0].OBTBPOULAV.indexOf('-',1)+0);
 	
 	
 	if (PWMIBRSDCJ[0].UHYGLMAUNK==true || PWMIBRSDCJ[0].OBTBPOULAV.substring(0, PWMIBRSDCJ[0].OBTBPOULAV.indexOf('-',1)+0)==   Residual.substring(0, Residual.length-2)  )
@@ -4255,6 +4457,7 @@ function MITSNADNQS()
 	MNBDJFHWHU();
 	HEUDCWFSMP();
 	POEICHMHDL.revive(); //1.0.8
+	BotonTienda.revive();
 	
 	NCTURHDRYW();
 	OcultarElegirEmoticono();
@@ -4266,6 +4469,10 @@ function MITSNADNQS()
 
 function YBWXJFDOAW()
 {
+	var APUVCXAYVN;
+	var PHMUHFKHBO;
+	var KYLVRIAAWF;
+	var VLHOFXLPJS;
 	
 	EFKTQSXAMA.revive();
 	LNJDKEVPQE.revive();
@@ -4322,7 +4529,13 @@ function YBWXJFDOAW()
 	var TXBFLEOYKI=YMHIHSNADE.add.tween(LNJDKEVPQE).to( { x: KYLVRIAAWF }, 400, BSXWFYLCEW,false);
 	TXBFLEOYKI.start();
 
+
+
+
 	var RDJFKUULTX=YMHIHSNADE.add.tween(EFKTQSXAMA).to( { y: PHMUHFKHBO  }, 400, KYFMRVNHIQ,false);
+	RDJFKUULTX.onComplete.add(function(){
+		Renderizar(false); //2.0.8054
+	})
 	RDJFKUULTX.start();
 	
 
@@ -6005,6 +6218,7 @@ function JVEHDHOEEM(NoConectar){
 	{
 		return false;
 	}*/
+	HJBVQUGKVY()
 	if (HDGGWGGSVH==true)
 	{
 		var d=document.getElementById('DivAudioGoogle');
@@ -6116,6 +6330,7 @@ function KKJJKHAJHK(UYWIUFCHJS,Sala)
 		
 		
 		POEICHMHDL.kill();
+		BotonTienda.kill();
 		BUJELVTIKU.kill();
 		CUUKQAGFEB.revive();
 		//1.0.8 CUUKQAGFEB.x=QETACVSHAR;
@@ -6142,6 +6357,7 @@ function LLKJWWDFFF()
 	{
 		return false;
 	}*/
+	Renderizar(true);
 	
 	if (checkConnection()==true)
 	{	
@@ -6186,6 +6402,7 @@ function OCSBJTDODP(){
 		UEHYPTREIH.kill();
 		IBECDOLWLN.kill();
 		POEICHMHDL.kill(); //1.0.8
+		BotonTienda.kill(); //2.0.8051
 		RIHFCSEMIJ.kill();
 		EFKTQSXAMA.kill();
 		LNJDKEVPQE.kill();
@@ -6385,6 +6602,7 @@ function setEventHandlers() { //ESTE
   
   
   socket.on('connect', AYAOSXTCBR);
+ 
   
   socket.on('reconnect_attempt', function()
   {
@@ -6538,6 +6756,8 @@ function setEventHandlers() { //ESTE
 	  
   }
   );
+  
+  socket.on('envia_articulo_comprado', onSocketArticuloComprado);
   
   socket.on('VMCFXIVSKH', function(data,callback)
   {
@@ -6785,9 +7005,38 @@ function setEventHandlers() { //ESTE
 		  PANPKTGSCV.kill();
 		  HRGDCMPPKU.kill();
 	  });
+	  
+	   socket.on('envia_tienda_desde_server', onSocketTiendaDesdeServer)
 
 }; //ESTE
 
+function onSocketTiendaDesdeServer(ArrayTienda)
+{
+	var i;
+	var Articulo
+	console.log("Array Tienda "+ArrayTienda[0]._descripcion)
+	var d=document.getElementById("JugadorEmoti1");
+	for (i=0;i<=ArrayTienda.length-1;i++)
+	{
+		//console.log("Busco "+ArrayTienda[i]._id_articulo)
+		var d=document.getElementById(ArrayTienda[i]._id_articulo);
+		if (d!=null)
+		{
+			d.src=ArrayTienda[i]._foto
+			Articulo=ArrayTienda[i]._id_articulo
+			//console.log(d)
+			d.onclick=function(){MostrarDetalleTienda(this.id,ArrayTienda)}
+			//function(){ alert(Articulo);
+			//console.log("Configuro el alert "+d.id)
+			//MostrarDetalleTienda(Articulo,ArrayTienda)
+			//}
+		}
+		else
+		{
+				console.log("No encuentro "+ArrayTienda[i]._id_articulo);
+		}
+	}
+}
 function ValidaControlServerValido(QuienTomaControlServer)
 {
 	var i;
@@ -6816,13 +7065,14 @@ function ValidaControlServerValido(QuienTomaControlServer)
 function onSocketControl(QuienTomaControlServer)
 {
 	//FUNCION OBSOLETA 2.0.8051
+	console.log("llega al control")
 	var ControlAnterior=ESKTEXAVHU;
 	
-	if (ValidaControlServerValido(QuienTomaControlServer))
-	{	
-		if (QuienTomaControlServer.ESKTEXAVHU!=0)
+	if (MundoAntiguo==true)
+	{
+		if (QuienTomaControlServer!=0)
 		{
-			ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer.ESKTEXAVHU);
+			ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer);
 			//console.log("Toma el control B: "+ESKTEXAVHU)
 			
 		}
@@ -6832,9 +7082,28 @@ function onSocketControl(QuienTomaControlServer)
 			{
 				ESKTEXAVHU=-1;
 			}
+		}		
+	}
+	else
+	{
+		if (ValidaControlServerValido(QuienTomaControlServer))
+		{	
+			if (QuienTomaControlServer.ESKTEXAVHU!=0)
+			{
+				ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer.ESKTEXAVHU);
+				//console.log("Toma el control B: "+ESKTEXAVHU)
+				
+			}
+			else
+			{
+				if (XPBCVAGCDQ.length>=4) //con app no recibe quien manda
+				{
+					ESKTEXAVHU=-1;
+				}
+			}
 		}
 	}
-	
+		
 	if (ESKTEXAVHU==TFSXFTYVGQ && ControlAnterior==0 && MNAGVJHWOW()==false)
 	{
 		TKXPPGUPVV.stop();
@@ -7597,7 +7866,7 @@ function onSocketErrorDesdeServer(NNWWUUQPPP,ErrorPublico) {
 
 	if (NNWWUUQPPP=="Error6") //Usuario en la sala
 	{
-		VSXSYEUABW(ErrorPublico, false)
+		VSXSYEUABW(ErrorPublico, true)
 	}
 	
 	if (NNWWUUQPPP=="Error7") //Contraseña Incorrecta
@@ -7677,6 +7946,7 @@ function MCMWUEHUWH(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,TXLWII
 {
 	var i;
 	
+	
 	var JKGHWJKGJW=0;
 	if (ESKTEXAVHU>0)
 	{
@@ -7745,6 +8015,7 @@ function MCMWUEHUWH(ArrayDelaPropiaSalaClienteOrdenada,QuienReparteServer,TXLWII
 	{
 		var IUWYUIYWIN=false;
 		//socket.emit('Consola','Soy pesao '+TFSXFTYVGQ)
+		console.log("Recibido "+QuienReparteServer+" "+MarcadorNuevo())
 		KPQSPDMKJE(QuienReparteServer,true); //2.0.8.37 Para que sea un sorteo el reparto inicial
 	
 		/*console.log("Después marcador nuevo")
@@ -7985,16 +8256,16 @@ if (TUTWNSAGSX==true)
 				
 				
 				
-				if(Data[i].QHHQPXWFNG!=undefined)
+				if(Data[i]._Foto!=undefined)
 				{
-					cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
+					cell2.innerHTML =  "<img class='zoom' src='" + Data[i]._Foto + "' style='max-width:30;max-height:30' >";
 					//cell2.innerHTML =  "<a href="+ Data[i].QHHQPXWFNG+" class='fancy'><img src="+ Data[i].QHHQPXWFNG+" style='max-width:140;max-height:140'></a>";
 				}
 				else
 				{
 					cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
 				}
-				cell3.innerHTML = Data[i].SSUNXNEEHN;
+				cell3.innerHTML = Data[i]._Jugador; //2.0.8051
 				cell4.innerHTML = Data[i]._Jugadas;
 				cell5.innerHTML = Data[i]._Ganadas;
 				cell6.innerHTML = Data[i]._Perdidas;
@@ -8114,16 +8385,16 @@ function DibujaRanking30dias(Data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX)
 				
 				
 				
-				if(Data[i].QHHQPXWFNG!=undefined)
+				if(Data[i]._Foto!=undefined)
 				{
-					cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
+					cell2.innerHTML =  "<img class='zoom' src='" + Data[i]._Foto + "' style='max-width:30;max-height:30' >";
 					//cell2.innerHTML =  "<a href="+ Data[i].QHHQPXWFNG+" class='fancy'><img src="+ Data[i].QHHQPXWFNG+" style='max-width:140;max-height:140'></a>";
 				}
 				else
 				{
 					cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
 				}
-				cell3.innerHTML = Data[i].SSUNXNEEHN;
+				cell3.innerHTML = Data[i]._Jugador;
 				cell4.innerHTML = Data[i]._Jugadas;
 				cell5.innerHTML = Data[i]._Ganadas;
 				cell6.innerHTML = Data[i]._Perdidas;
@@ -8236,15 +8507,15 @@ function BLKQMLBWWA(Data,Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX)
 				cell10 = row.insertCell(9);
 				
 				cell1.innerHTML = Data[i]._Posicion;
-				if(Data[i].QHHQPXWFNG!=undefined)
+				if(Data[i]._Foto!=undefined)
 				{
-					cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
+					cell2.innerHTML =  "<img class='zoom' src='" + Data[i]._Foto + "' style='max-width:30;max-height:30' >";
 				}
 				else
 				{
 					cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
 				}
-				cell3.innerHTML = Data[i].SSUNXNEEHN;
+				cell3.innerHTML = Data[i]._Jugador;
 				cell4.innerHTML = Data[i]._Jugadas;
 				cell5.innerHTML = Data[i]._Ganadas;
 				cell6.innerHTML = Data[i]._Perdidas;
@@ -8356,15 +8627,15 @@ function DibujaRankingAnterior(Data,Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX)
 				cell10 = row.insertCell(9);
 				
 				cell1.innerHTML = Data[i]._Posicion;
-				if(Data[i].QHHQPXWFNG!=undefined)
+				if(Data[i]._Foto!=undefined)
 				{
-					cell2.innerHTML =  "<img class='zoom' src='" + Data[i].QHHQPXWFNG + "' style='max-width:30;max-height:30' >";
+					cell2.innerHTML =  "<img class='zoom' src='" + Data[i]._Foto + "' style='max-width:30;max-height:30' >";
 				}
 				else
 				{
 					cell2.innerHTML =  "<img class='zoom' src='" + JHGHJAGCMC+'/assets/images/desconocido.png' + "' style='max-width:30;max-height:30' >";
 				}
-				cell3.innerHTML = Data[i].SSUNXNEEHN;
+				cell3.innerHTML = Data[i]._Jugador;
 				cell4.innerHTML = Data[i]._Jugadas;
 				cell5.innerHTML = Data[i]._Ganadas;
 				cell6.innerHTML = Data[i]._Perdidas;
@@ -8819,10 +9090,13 @@ function GDRQVXOCBL(JJHEHUIEGO,NombreDesconectado,posicionJugador,EFWXTVMKRH,Qui
 		//1.0.9 IOJCRKJSRL();
 		LRYVPILWKS();
 		
-		if (ValidaControlServerValido(QuienTomaControlServer)) //2.0.8051 critico
+		if (MundoAntiguo==false)
 		{
-			ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer.ESKTEXAVHU); //2.0.8051 critico. No basta con onsocketcontorl porque es posible que un recien reconectado no sepa del id del que lleva el turno
-			//console.log("Toma el control A: "+ESKTEXAVHU)
+			if (ValidaControlServerValido(QuienTomaControlServer)) //2.0.8051 critico
+			{
+				ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer.ESKTEXAVHU); //2.0.8051 critico. No basta con onsocketcontorl porque es posible que un recien reconectado no sepa del id del que lleva el turno
+				//console.log("Toma el control A: "+ESKTEXAVHU)
+			}
 		}
 		
 		
@@ -9235,10 +9509,13 @@ function BCVWETKAKG(JugadorQueReconecta,NombreDesconectado,posicionJugador,Nuevo
 			}
 		}
 		
-		if (ValidaControlServerValido(QuienTomaControlServer)) //2.0.8051 critico
+		if (MundoAntiguo==false)
 		{
-			ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer.ESKTEXAVHU); //2.0.8051 critico. No basta con onsocketcontorl porque es posible que un recien reconectado no sepa del id del que lleva el turno
-			//console.log("Toma el control A: "+ESKTEXAVHU)
+			if (ValidaControlServerValido(QuienTomaControlServer)) //2.0.8051 critico
+			{
+				ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer.ESKTEXAVHU); //2.0.8051 critico. No basta con onsocketcontorl porque es posible que un recien reconectado no sepa del id del que lleva el turno
+				//console.log("Toma el control A: "+ESKTEXAVHU)
+			}
 		}
 
 	/*if (QuienTomaControlServer!=0)
@@ -9992,6 +10269,14 @@ function AYAOSXTCBR() {
 	 // log(false,'Conectado al servidor:')
 		if (SNJCSVWFCC()==true)
 		{
+			//console.log("Se mete 1")
+			if ( PrimeraVezConectado==true)
+			{
+				//console.log("Se mete 2")
+				PrimeraVezConectado=false;
+				socket.emit('enviar_peticion_tienda', socket.id,SFKLFIJOIO) ;
+			}
+			
 			if (SNJCSVWFCC()==true && ( UEHYPTREIH.alive==true || LNJDKEVPQE.alive==true  ))
 			{
 				try
@@ -10451,6 +10736,7 @@ function AAQWTFMQMA() {
 	YHNMANDWLT();
 		
 	log(true,"Se borra "+LongitudArray);
+	console.log("Longitud "+LongitudArray);
 	for (i=0;i<=LongitudArray;i++){
 		if (HGIFKEMXAD[i].Sala==room)
 		{
@@ -10497,11 +10783,13 @@ function AAQWTFMQMA() {
 					1,true,HGIFKEMXAD[i].NMABCQQCDD,HGIFKEMXAD[i].AMBCNABIQQ
 					))	*/
 					
-					
-					if (ValidaControlServerValido(QuienTomaControlServer)) //2.0.8051 critico. Antes ni existía
+					if (MundoAntiguo==false)
 					{
-						ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer.ESKTEXAVHU); //2.0.8051 critico. No basta con onsocketcontorl porque es posible que un recien reconectado no sepa del id del que lleva el turno
-						//console.log("Toma el control A: "+ESKTEXAVHU)
+						if (ValidaControlServerValido(QuienTomaControlServer)) //2.0.8051 critico. Antes ni existía
+						{
+							ESKTEXAVHU=FHDOFSEVXQ(QuienTomaControlServer.ESKTEXAVHU); //2.0.8051 critico. No basta con onsocketcontorl porque es posible que un recien reconectado no sepa del id del que lleva el turno
+							//console.log("Toma el control A: "+ESKTEXAVHU)
+						}
 					}
 					
 					
@@ -10562,6 +10850,7 @@ function AAQWTFMQMA() {
 			PANPKTGSCV.kill();
 			HRGDCMPPKU.revive();
 			KAHCKJHQEO.revive();
+			BotonEmoticono.revive();
 		  
 
 			
@@ -10585,6 +10874,7 @@ function AAQWTFMQMA() {
 				PANPKTGSCV.kill();
 				HRGDCMPPKU.kill();
 				IFMJVFFEQN.kill();
+				BotonEmoticono.kill();
 			}
 
 			
@@ -10618,6 +10908,9 @@ function AAQWTFMQMA() {
 		
 		try
 		{
+			
+
+			
 			 if (JHVKJDVHWW(MMNORPWJDC,socket.id)){ //Se crea la baraja
 				
 				DVNRTQIWGL=1;
@@ -10829,8 +11122,21 @@ function AAQWTFMQMA() {
 						y1=FIGQBSJQGA("L_0",0)+70;
 					}
 					
-
-						
+					
+					BotonEmoticono.x=x1
+					if (JHJEWHFWNL==true)
+					{
+						BotonEmoticono.x=x1-10;
+						BotonEmoticono.y=y1-125
+					}
+					else
+					{
+						BotonEmoticono.y=y1-125
+						BotonEmoticono.x=x1-10;
+					}
+					
+//BotonEmoticono.y=YMHIHSNADE.world.centerY
+//BotonEmoticono.x=YMHIHSNADE.world.centerX					
 						
 					//XPBCVAGCDQ[i].WWKVHIMWYD="AWCCMSCOPO largo en la parte de abajo"
 					//var IQVAAXFOXW = { font: "bold 18px Arial", fill: "#fff", align: "left", boundsAlignH: "left", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth: 160};	
@@ -10987,6 +11293,10 @@ function AAQWTFMQMA() {
 							NBHWGUGUWB.y=KAYGSUERGV;
 							NBHWGUGUWB.revive();
 						}
+						else
+						{
+							NBHWGUGUWB.kill();
+						}
 						
 						if (XPLHSUIGIU!=undefined)
 						{
@@ -11002,6 +11312,10 @@ function AAQWTFMQMA() {
 							XPLHSUIGIU.x=UIDVHUKHVK;
 							XPLHSUIGIU.y=IOOWIOEUWO;
 							XPLHSUIGIU.revive();
+						}
+						else
+						{
+							XPLHSUIGIU.kill();
 						}
 						
 						if (UWROMBGGSY!=undefined)
@@ -11166,6 +11480,10 @@ function AAQWTFMQMA() {
 							HGYGDVGQUY.y=KAYGSUERGV;
 							HGYGDVGQUY.revive();
 						}
+						else
+						{
+							HGYGDVGQUY.kill();	
+						}
 						
 						if (NHGUGUEUER!=undefined)
 						{
@@ -11189,6 +11507,10 @@ function AAQWTFMQMA() {
 
 							
 							NHGUGUEUER.revive();
+						}
+						else
+						{
+							NHGUGUEUER.kill();		
 						}
 						
 						/*HUPALFWPFI=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
@@ -11338,6 +11660,10 @@ function AAQWTFMQMA() {
 							XXGUGUYWUW.y=KAYGSUERGV;
 							XXGUGUYWUW.revive();
 						}
+						else
+						{
+							XXGUGUYWUW.kill();	
+						}
 
 						if (HGWUGIVGWP!=undefined)
 						{
@@ -11351,6 +11677,10 @@ function AAQWTFMQMA() {
 							HGWUGIVGWP.x=UIDVHUKHVK;
 							HGWUGIVGWP.y=IOOWIOEUWO;
 							HGWUGIVGWP.revive();
+						}
+						else
+						{
+							HGWUGIVGWP.kill();		
 						}
 						
 						/*BXYCJYDVRT=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
@@ -11506,6 +11836,10 @@ function AAQWTFMQMA() {
 							XKIOHWGJHG.y=KAYGSUERGV;
 							XKIOHWGJHG.revive();
 						}
+						else
+						{
+							XKIOHWGJHG.kill();		
+						}
 						
 						/*if (HGWYUYGVWO!=undefined)
 						{
@@ -11519,6 +11853,10 @@ function AAQWTFMQMA() {
 							HGWYUYGVWO.x=UIDVHUKHVK;
 							HGWYUYGVWO.y=IOOWIOEUWO;
 							HGWYUYGVWO.revive();						
+						}
+						else
+						{
+							HGWYUYGVWO.kill();			
 						}
 						
 						/*IRAIEARIWA=YMHIHSNADE.add.text(0, 0, "",IQVAAXFOXW);
@@ -11806,6 +12144,7 @@ function MCFSLYOMHE()
 		UEHYPTREIH.revive();
 		IBECDOLWLN.revive();
 		POEICHMHDL.revive(); //1.0.8
+		BotonTienda.revive();
 		RIHFCSEMIJ.revive();
 		MNBDJFHWHU();
 		CUUKQAGFEB.kill(); //1.0.8

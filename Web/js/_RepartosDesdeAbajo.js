@@ -1,4 +1,5 @@
-﻿function MYGLJKSQBC(TXLWIIINGQ){
+﻿'use strict';
+function MYGLJKSQBC(TXLWIIINGQ){
 	Renderizar(true);
 	OOYMLWKRVM(TXLWIIINGQ);	
 };

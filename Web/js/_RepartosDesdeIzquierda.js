@@ -1,4 +1,5 @@
-﻿function RPMTCXIXGA(TXLWIIINGQ){
+﻿'use strict';
+function RPMTCXIXGA(TXLWIIINGQ){
 	Renderizar(true, "repartos1");
 	PPRNUIJOLC(TXLWIIINGQ);
 };

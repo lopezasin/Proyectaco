@@ -1,4 +1,5 @@
-﻿/**
+﻿'use strict';
+/**
  * Boot state.
  */
 function Boot() {
