@@ -37,7 +37,7 @@
 
   <!-- <plugin name="cordova-plugin-background-mode" /> -->
 
-<preference name="android-minSdkVersion" value="26" />  
+<!-- <preference name="android-minSdkVersion" value="26" />   -->
 <preference name="android-targetSdkVersion" value="28" /> 
 	
 	
