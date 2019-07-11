@@ -18,7 +18,7 @@ function EnviarAjax()
         //$("#message").empty();
         //$('#loading').show();
         $.ajax({
-            url: "http://localhost:3000/", // Url to which the request is send
+            url: "http://192.168.43.100:3000/", // Url to which the request is send
             type: "POST",             // Type of request to be send, called as method
             data: formData, // Data sent to server, a set of key/value pairs (i.e. form fields and values)
             contentType: false,       // The content type used when sending data to the server.
