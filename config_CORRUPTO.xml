@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<widget id="es.guinotepro.guinotepro" version="2.0.8061" versioncode="10036" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="es.guinotepro.guinotepro" version="2.0.8060" versioncode="10036" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>GuiñotePro</name>
     <description>
         Videojuego de guiñote
@@ -31,13 +31,15 @@
 <preference name="KeepRunning" value="true"/>
 <preference name="exit-on-suspend" value="false" /> 
 
+<!-- <preference name="android-targetSdkVersion" value="28" /> ESTO PARA CORREGIR LO DEL API 29 -->
+
 <!-- <feature name="http://api.phonegap.com/1.0/media"/> -->
 <!-- <preference name="apiKey" value="e03d2f91dfd56f1615baf6d697c46428" />
 <preference name="MICROPHONE_USAGE_DESCRIPTION" value="chat con voz en videojuego" /> -->
 
   <!-- <plugin name="cordova-plugin-background-mode" /> -->
   
-<!-- <preference name="android-targetSdkVersion" value="28" /> ESTO PARA CORREGIR LO DEL API 29 -->
+
 	
 	
 <plugin name="cordova-plugin-powermanagement" />		
@@ -56,11 +58,22 @@
 <plugin name="cordova-plugin-google-analytics" />
 <!-- <plugin name="cordova-plugin-keyboard" /> -->
 <plugin name="cordova-plugin-apprate" />
+
 <!-- <plugin name="cordova-plugin-iosmediavolume" /> -->
 	
-<plugin name="cc.fovea.cordova.purchase">
+<!-- <plugin name="cordova-plugin-purchases" /> ESTE FUNCIONA -->
+<!-- <plugin spec="https://github.com/j3k0/cordova-plugin-purchase.git#phonegap-cli-8.0.0">
     <param name="BILLING_KEY" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9zaSw/s4Or4TyebqxUAs3UWoWGwJsErJe2PvInCIHW/digf+r6bURqF3MtQNDFXtN86NterDFUrvhGDipUHchnQj9cMdHIabJVMygH9BQlHu2B8ZLvhJAEHtcTJ+ho4U7+pnx5pBTGf+ICxLhYa4XanBCdrJTQHFxCWv5+QtxmQqILbbRXWKIUVAZ816Rl44j0Vd1QIdZccgfhR4Gfw5f+aOkDaEfGng48MC2e33lGjadcTYfSqRrci8p6SpkTVT74zR9KEvVNYacoB/MYmBpCcwXGdou65yDS9vMPdc9Kx4CWV5pDlm+h0AlolEG/LEDij9Qdku/cXJuUv9K1TyQIDAQAB"/>
-</plugin> 	
+</plugin>  -->
+
+<!-- <plugin name="cc.fovea.cordova.purchase">
+    <param name="BILLING_KEY" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9zaSw/s4Or4TyebqxUAs3UWoWGwJsErJe2PvInCIHW/digf+r6bURqF3MtQNDFXtN86NterDFUrvhGDipUHchnQj9cMdHIabJVMygH9BQlHu2B8ZLvhJAEHtcTJ+ho4U7+pnx5pBTGf+ICxLhYa4XanBCdrJTQHFxCWv5+QtxmQqILbbRXWKIUVAZ816Rl44j0Vd1QIdZccgfhR4Gfw5f+aOkDaEfGng48MC2e33lGjadcTYfSqRrci8p6SpkTVT74zR9KEvVNYacoB/MYmBpCcwXGdou65yDS9vMPdc9Kx4CWV5pDlm+h0AlolEG/LEDij9Qdku/cXJuUv9K1TyQIDAQAB"/>
+</plugin> -->
+<plugin name="cordova-plugin-inapppurchase" />
+
+<gap:plugin name="cordova-plugin-googleplus" source="npm" >
+<param name= "play_store_key" value= "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9zaSw/s4Or4TyebqxUAs3UWoWGwJsErJe2PvInCIHW/digf+r6bURqF3MtQNDFXtN86NterDFUrvhGDipUHchnQj9cMdHIabJVMygH9BQlHu2B8ZLvhJAEHtcTJ+ho4U7+pnx5pBTGf+ICxLhYa4XanBCdrJTQHFxCWv5+QtxmQqILbbRXWKIUVAZ816Rl44j0Vd1QIdZccgfhR4Gfw5f+aOkDaEfGng48MC2e33lGjadcTYfSqRrci8p6SpkTVT74zR9KEvVNYacoB/MYmBpCcwXGdou65yDS9vMPdc9Kx4CWV5pDlm+h0AlolEG/LEDij9Qdku/cXJuUv9K1TyQIDAQAB" />
+</gap:plugin>
 
 <gap:plugin name="cordova-plugin-googleplus" source="npm" spec="6.0.0">
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
