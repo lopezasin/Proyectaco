@@ -1,12 +1,249 @@
 ﻿'use strict';
 
-function onSocketArticuloComprado(Articulo, Precio)
+
+/*function ActivaArticulo(Articulo)
 {
-	YUFGSLAHYS=-Precio;
-	CerrarTienda();
-	OcultarDetalleTienda();
-	JQDGHVJGUW();
+	
+	ArrayCompras.push(new ObjetoCompra(Articulo,Validez) );
+	
+	switch (Articulo)
+	{
+		case 'Art001': 
+		TiendaCambiarNombre(OBTBPOULAV,Articulo,Precio, NuevoNombre);
+		break;
+		
+		case 'Art002': 
+		TiendaCambiarFoto(OBTBPOULAV,Articulo,Precio, NuevaFoto);
+		break;								
+		
+		case 'Art003': 
+		
+		
+		break;
+		
+		case 'Art004':
+		TiendaPreferenciaElegir(OBTBPOULAV,Articulo,Precio);
+		break;			
+
+		case 'Art005':
+		TiendaEmojis(OBTBPOULAV,Articulo,Precio);
+		break;		
+
+										
+	}	
+
+}	
+
+*/
+function ValidarTodosArticulos()
+{
+	if (ValidaDisponibilidadArticulo('Art003'))
+	{
+		GlobalActivaCuentaPalos=true;
+	}
+	else
+	{
+		GlobalActivaCuentaPalos=false;
+	}
+	
+	ValidaDisponibilidadArticulo('Art001') //Para caducar los de Tipo EBAPPJFYSW
+	ValidaDisponibilidadArticulo('Art002') //Para caducar los de Tipo EBAPPJFYSW
+	ValidaDisponibilidadArticulo('Art005') //Para caducar los de Tipo EBAPPJFYSW
+	ValidaDisponibilidadArticulo('Art006') //Para caducar los de Tipo EBAPPJFYSW
+	ValidaDisponibilidadArticulo('Art007') //Para caducar los de Tipo EBAPPJFYSW
+	ValidaDisponibilidadArticulo('Art008') //Para caducar los de Tipo EBAPPJFYSW
+	ValidaDisponibilidadArticulo('Art009') //Para caducar los de Tipo EBAPPJFYSW
+}			
+			
+function ValidaDisponibilidadArticulo(Articulo)
+{
+	var i;
+	var Disponibilidad=false;
+	var TipoCaducidad; //1 Tiempo, 2 Cotos
+	var HayQueRestar=false;
+	//var prueba=-5;
+	
+	if (EGPDVIEJEL==true)
+	{
+		TipoCaducidad=CalculaCaducidad(Articulo);
+		/*switch (Articulo)
+		{
+
+			//case 'Art001': //Cambia WWKVHIMWYD
+			//TipoCaducidad=1; //EBAPPJFYSW			
+			//break;
+			
+			case 'Art003': //XRUDRJJNSI
+			TipoCaducidad=2; //Cotos			
+			break;
+			
+			case 'Art004': //Prioridad Elegir
+			TipoCaducidad=2; //Cotos			
+			break;			
+		}*/
+			
+		console.log("Tipo caducidad "+	TipoCaducidad);
+		for (i=0;i<=ArrayCompras.length-1;i++)
+		{
+			if (ArrayCompras[i].Articulo==Articulo)
+			{
+				Disponibilidad=true;
+				
+				if (TipoCaducidad==2)
+				{
+					ArrayCompras[i].ValidezCotos=ArrayCompras[i].ValidezCotos-1;
+					HayQueRestar=true
+					//prueba=ArrayCompras[i].ValidezCotos;
+					if (ArrayCompras[i].ValidezCotos<=0)
+					{
+						//Disponibilidad=false; que siempre haya disponibilidad. Ya se borrará del array y dejará de tener
+						ArrayCompras[i]["Borrar"]=true;
+					}
+				}
+				else
+				{
+					if (ArrayCompras[i].ValidezFecha<=new Date(Date.now()))
+					{
+						//Disponibilidad=false; que siempre haya disponibilidad. Ya se borrará del array y dejará de tener
+						ArrayCompras[i]["Borrar"]=true;
+					}					
+				}
+				break;
+			}
+		}
+		
+		
+		i=ArrayCompras.length;  
+		while (i--)
+		{
+			if (ArrayCompras[i]["Borrar"]==true)
+			{							
+				ArrayCompras.splice(i,1);				
+			}
+		}
+		
+		
+		if (TipoCaducidad==2 && HayQueRestar==true)
+		{
+			try
+			{
+				socket.emit('consume_articulo', PWMIBRSDCJ[0].OBTBPOULAV, Articulo);
+			}
+			catch(e){}
+		}			
+	}
+
+	
+	return Disponibilidad;
 }
+
+function IncorporaCompraInfoJugador(ArrayServerCompras)
+{
+	var i;
+	for (i=0;i<=ArrayServerCompras.length-1;i++)
+	{
+		console.log("Vienen compras del servidor "+ArrayServerCompras[i].Articulo);
+		IncorporaCompra(ArrayServerCompras[i]._id_articulo,ArrayServerCompras[i]._precio,ArrayServerCompras[i]._fecha_fin,ArrayServerCompras[i]._validez_cotos)	
+	}
+}
+
+function IncorporaCompra(Articulo,Precio,ValidezFecha,ValidezCotos)
+{
+	var i;
+	var VEFCIYHBGC=false;
+	
+	for (i=0;i<=ArrayCompras.length-1;i++)
+	{
+		if (ArrayCompras[i].Articulo==Articulo)
+		{
+			VEFCIYHBGC=true;
+			break;
+		}
+	}
+	
+	if (VEFCIYHBGC==false)
+	{
+		//console.log("Añado la compra");
+		ArrayCompras.push(new ObjetoCompra(Articulo,Precio,ValidezFecha,ValidezCotos) );
+	}
+	else
+	{
+		//console.log("NO Añado la compra");
+	}
+
+
+
+}
+	
+function appendLeadingZeroes(n){
+  if(n <= 9){
+    return "0" + n;
+  }
+  return n
+}
+
+
+	
+function onSocketArticuloComprado(Articulo,Precio,ValidezFecha, ValidezCotos)
+{
+	var TipoCaducidad;
+	
+	YUFGSLAHYS=-Precio;
+	//CerrarTienda();
+	//OcultarDetalleTienda();
+	Renderizar(true);
+	JQDGHVJGUW();
+	
+	document.getElementById("BotonComprar").disabled=true;
+	
+	TipoCaducidad=CalculaCaducidad(Articulo);
+	if (TipoCaducidad==1)
+	{
+		var current_datetime = new Date(ValidezFecha) //ValidezFecha;
+		var formatted_date = appendLeadingZeroes(current_datetime.getDate()) +'/'+ appendLeadingZeroes(current_datetime.getMonth() + 1) + '/' +current_datetime.getFullYear() + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
+
+		RPHWVBBGIM="¡Producto comprado correctamente!. Cambios ilimitados hasta el "+formatted_date;
+	}
+	else
+	{
+		RPHWVBBGIM="¡Producto comprado correctamente!. Válido para "+ValidezCotos+ " cotos.";
+	}
+	
+
+
+
+	switch (Articulo)
+	{	
+		case "Art001":
+		document.getElementById("DivCambiaNombre").style.visibility = "visible";
+		break;					
+		
+		case "Art002":
+		document.getElementById("DivCambiaFoto").style.visibility = "visible";
+		break;		
+		
+		case "Art009":
+		document.getElementById("DivCambiaFoto").style.visibility = "visible";
+		break;				
+	}			
+							
+	document.getElementById("lblArticuloYaComprado").textContent=RPHWVBBGIM
+	//ArrayCompras.push(new ObjetoCompra(Articulo,Precio,ValidezFecha,ValidezCotos) );
+	IncorporaCompra(Articulo,Precio,ValidezFecha,ValidezCotos)
+	
+	
+	
+}
+
+function onSocketArticuloDuplicado()
+{
+		CerrarTienda();
+		OcultarDetalleTienda();
+		Renderizar(true);
+		JQDGHVJGUW();
+		SVHMCOYULR("Ya tienes el artículo")
+}
+
 
 function GHDHJSKQIU()
 {
@@ -1337,12 +1574,34 @@ function CHJKAHKJHC()
 
 
 
-function QTIPILDEPH(sprite,UBWRXKMTQN,SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
+function QTIPILDEPH(sprite,UBWRXKMTQN,SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ,FHEFFYUQFX){
 	
 	
 	//raka
 	UWYHEIVJHX=0; //2.0.7 para que el contador del turno se recalcule
 	
+	switch (FHEFFYUQFX)
+	{
+		case "oros" :
+			ContadorPaloOros++;
+			textoCuentaPaloOros.text=ContadorPaloOros;
+		break;
+
+		case "copas" :
+			ContadorPaloCopas++;
+			textoCuentaPaloCopas.text=ContadorPaloCopas;
+		break;
+		
+		case "espadas" :
+			ContadorPaloEspadas++;
+			textoCuentaPaloEspadas.text=ContadorPaloEspadas;
+		break;
+
+		case "bastos" :
+		ContadorPaloBastos++;
+		textoCuentaPaloBastos.text=ContadorPaloBastos;
+		break;
+	}
 	
 	if (MYQBNBVHKU==false || LUCRWXJMDR==1)
 	{
@@ -1528,7 +1787,7 @@ function FRWLTWDFVM(SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 				log(true,"DEBE LIMPIAR MESA");
 				TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
 				TKXPPGUPVV.remove();
-				TLGMUNNDGH=true; //por si cambia el turno que no me deje tirar
+				//TLGMUNNDGH=true; Comentado 2.0.8054 //por si cambia el turno que no me deje tirar
 				
 				UPCWNPYAIE=LUCRWXJMDR;
 				//PNVKSWRTOJ++;
@@ -2341,94 +2600,98 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 	}		
 		
 	Renderizar(true);
-	console.log("EMOTICONO "+idEmoticonoServer)
+	//console.log("EMOTICONO "+idEmoticonoServer)
 	var EmoticonoEnviar=YMHIHSNADE.add.image(posXDesde,posYDesde,'emoticonos_server',idEmoticonoServer);
-	GrupoEmojis.add(EmoticonoEnviar);
-	EmoticonoEnviar.anchor.setTo(0.5, 0.5)
-
-
-	   //     YMHIHSNADE.add.tween(EmoticonoEnviar).to({y: 240}, 1000, Phaser.Easing.Bounce.Out, true, 100, 0);
-
-	   
-	Efecto=Math.floor(Math.random() * 3) + 1 
-
-	if (Efecto==1) //Rebote
-	{
-		EfectoMovimiento= Phaser.Easing.Bounce.Out;
-		twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
-	}
-
-	if (Efecto==2) 
-	{
-		EfectoMovimiento= Phaser.Easing.Sinusoidal.InOut;
-		twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
-	}	
 	
-	if (Efecto==3) //Rebote
+	if (EmoticonoEnviar.frameName!=undefined)
 	{
-		EfectoMovimiento= Phaser.Easing.Linear.None;
-		twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
-	}	
-	twEnviarEmoticonoGlobal=twDesplazamientoEmoticono;
-	if (STLEOJDWSU=="D")
-	{
-		twEnviarEmoticonoGlobalParaMi=twDesplazamientoEmoticono;
-	}
-	
+		GrupoEmojis.add(EmoticonoEnviar);
+		YMHIHSNADE.world.bringToTop(GrupoEmojis);
+		EmoticonoEnviar.anchor.setTo(0.5, 0.5)
 
-	Rotar=Math.floor(Math.random() * 5) + 1 
-	if (Rotar<=2)
-	{
-		Rotar=true;
-	}
-	else
-	{
-		Rotar=false;
-	}
 
-	if (Rotar==true && Efecto!=1 )
-	{
-		twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({angle: 360}, vTiempoEmotiMover, Phaser.Easing.Cubic.In, true, 100, 0);
+		   //     YMHIHSNADE.add.tween(EmoticonoEnviar).to({y: 240}, 1000, Phaser.Easing.Bounce.Out, true, 100, 0);
+
+		   
+		Efecto=Math.floor(Math.random() * 3) + 1 
+
+		if (Efecto==1) //Rebote
+		{
+			EfectoMovimiento= Phaser.Easing.Bounce.Out;
+			twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+		}
+
+		if (Efecto==2) 
+		{
+			EfectoMovimiento= Phaser.Easing.Sinusoidal.InOut;
+			twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+		}	
+		
+		if (Efecto==3) //Rebote
+		{
+			EfectoMovimiento= Phaser.Easing.Linear.None;
+			twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+		}	
 		twEnviarEmoticonoGlobal=twDesplazamientoEmoticono;
-	}
-	
-	/*Fadding=Math.floor(Math.random() * 10) + 1 
-	if (Fadding<=2)
-	{
-		Fadding=true;
-	}
-	else
-	{
+		if (STLEOJDWSU=="D")
+		{
+			twEnviarEmoticonoGlobalParaMi=twDesplazamientoEmoticono;
+		}
+		
+
+		Rotar=Math.floor(Math.random() * 5) + 1 
+		if (Rotar<=2)
+		{
+			Rotar=true;
+		}
+		else
+		{
+			Rotar=false;
+		}
+
+		if (Rotar==true && Efecto!=1 )
+		{
+			twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({angle: 360}, vTiempoEmotiMover, Phaser.Easing.Cubic.In, true, 100, 0);
+			twEnviarEmoticonoGlobal=twDesplazamientoEmoticono;
+		}
+		
+		/*Fadding=Math.floor(Math.random() * 10) + 1 
+		if (Fadding<=2)
+		{
+			Fadding=true;
+		}
+		else
+		{
+			Fadding=false;
+		}
+		
 		Fadding=false;
+		if (Fadding==true)
+		{
+			EmoticonoEnviar.alpha = 0;
+			YMHIHSNADE.add.tween(EmoticonoEnviar).to( { alpha: 1 }, vTiempoEmoti, Phaser.Easing.Linear.None, true, 20, 0);
+		}*/
+		
+		EmoticonoEnviar.scale.setTo(0.3,0.3)
+		EmoticonoEnviar.bringToTop();
+		var twEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar.scale).to( {x:1.2,y:1.2}, vTiempoEmotiMover, Phaser.Easing.Linear.None,true,vTiempoEmotiDesaparecer);
+		twEmoticono.onComplete.add(  function(){
+									//if (DQKYYAPEEN.isRunning==false && MJBCTSKUIB.isRunning==false)
+									//{
+										twEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar.scale).to( {x:1.2,y:1.2}, 700, Phaser.Easing.Linear.None,true,0);
+										twEmoticono.onComplete.add(  function(){
+											EmoticonoEnviar.bringToTop();
+											EmoticonoEnviar.kill();//2.0.1 clave:rehuse
+											Renderizar(true);
+										});
+									//}
+									})
+		twEnviarEmoticonoGlobal=twEmoticono;
+		if (STLEOJDWSU=="D")
+		{	
+			twEnviarEmoticonoGlobalParaMi=twEmoticono;
+		}
 	}
-	
-	Fadding=false;
-	if (Fadding==true)
-	{
-		EmoticonoEnviar.alpha = 0;
-		YMHIHSNADE.add.tween(EmoticonoEnviar).to( { alpha: 1 }, vTiempoEmoti, Phaser.Easing.Linear.None, true, 20, 0);
-	}*/
-	
-	EmoticonoEnviar.scale.setTo(0.3,0.3)
-	EmoticonoEnviar.bringToTop();
-	var twEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar.scale).to( {x:1.2,y:1.2}, vTiempoEmotiMover, Phaser.Easing.Linear.None,true,vTiempoEmotiDesaparecer);
-	twEmoticono.onComplete.add(  function(){
-								//if (DQKYYAPEEN.isRunning==false && MJBCTSKUIB.isRunning==false)
-								//{
-									twEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar.scale).to( {x:1.2,y:1.2}, 700, Phaser.Easing.Linear.None,true,0);
-									twEmoticono.onComplete.add(  function(){
-										EmoticonoEnviar.bringToTop();
-										EmoticonoEnviar.kill();//2.0.1 clave:rehuse
-										Renderizar(true);
-									});
-								//}
-								})
-	twEnviarEmoticonoGlobal=twEmoticono;
-	if (STLEOJDWSU=="D")
-	{	
-		twEnviarEmoticonoGlobalParaMi=twEmoticono;
-	}
-	
 }
 
 function CalculaQuienEmoticono(QuienSoy,Check)
@@ -2502,9 +2765,10 @@ function EnviarEmoticonoTodos()
 		/////////////
 		var AQuien;
 		//var idEmoticono="Emoticono1";
+		
 		var idEmoticono=EmoticonoGlobal;
 		
-		if (idEmoticono!="")
+		if (idEmoticono!="" && AccesoEmoji(idEmoticono) )
 		{
 			var d=document.getElementById("JugadorEmoti1");
 			
@@ -2921,7 +3185,7 @@ function RQMTWGKGIA(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDX
 						log(true,"CREO QUE SE METE AQUI PARA MOVEL AL TABLERO "+UHTPGPRUJA);
 						NAYBJTKIKA(XACEBCSJAB[i].TNFAGGMKXD);
 						//console.log("voy a mover al tablero "+TXLWIIINGQ);
-						QTIPILDEPH(XACEBCSJAB[i].TNFAGGMKXD,STLEOJDWSU,SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ);
+						QTIPILDEPH(XACEBCSJAB[i].TNFAGGMKXD,STLEOJDWSU,SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ,XACEBCSJAB[i].SGCSHJVERI); //2.0.8054 FHEFFYUQFX
 						XACEBCSJAB.splice(i,1);
 					//}
 					//else

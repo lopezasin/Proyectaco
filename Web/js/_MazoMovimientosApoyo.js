@@ -1,4 +1,161 @@
 ﻿'use strict';
+
+function EnviarAjax()
+{
+	var ObjetoTamano=showFileSize();
+	if (ObjetoTamano.Continua==true)
+	{
+	
+		document.getElementById('oct').value=PWMIBRSDCJ[0].OBTBPOULAV;
+		
+	
+		$(document).ready(function (e) {
+	
+    //$("#formdetalle").on('submit', (function (e) {
+
+		var formData = new FormData($('#formdetalle')[0]);
+       // e.preventDefault();
+        //$("#message").empty();
+        //$('#loading').show();
+        $.ajax({
+            url: "http://localhost:3000/", // Url to which the request is send
+            type: "POST",             // Type of request to be send, called as method
+            data: formData, // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+            contentType: false,       // The content type used when sending data to the server.
+            cache: false,             // To unable request pages to be cached
+            processData: false,
+            beforeSend: function () {
+               // $('.loader-img').show();
+			   console.log("Antes enviar")
+            },     // To send DOMDocument or non processed data file it is set to false
+            success: function (data)   // A function to be called if request succeeds
+            {
+				console.log("Después enviar")
+                /*$('.loader-img').hide();
+                if (data.trim() != "")
+                    $("#imresss").html(data);*/
+            }
+        });
+    //}));
+		})
+	}
+	
+
+}
+
+
+function showFileSize() 
+{
+    var input, file;
+	var Continua=true;
+	var RHOLNWBOXR="";
+	var Error;
+
+	var ObjetoError=function(Continua,RHOLNWBOXR)
+	{
+		this.Continua=Continua
+		this.RHOLNWBOXR=RHOLNWBOXR
+	}
+    // (Can't use `typeof FileReader === "function"` because apparently
+    // it comes back as "object" on some browsers. So just see if it's there
+    // at all.)
+    if (!window.FileReader) {
+        //bodyAppend("p", "The file API isn't supported on this browser yet.");
+        //return;
+		Continua=false;
+		RHOLNWBOXR="API no soportada en tu dispositivo";
+    }
+
+	if (Continua==true)
+	{
+		input = document.getElementById('file_to_upload');
+		if (!input) {
+			//bodyAppend("p", "Um, couldn't find the fileinput element.");
+			Continua=false;
+			RHOLNWBOXR="No encuentro FileImput";
+		}
+		else if (!input.files) {
+			//bodyAppend("p", "This browser doesn't seem to support the `files` property of file inputs.");
+			Continua=false;
+			RHOLNWBOXR="No soportado";
+		}
+		else if (!input.files[0]) {
+			//bodyAppend("p", "Please select a file before clicking 'Load'");
+			Continua=false;
+			RHOLNWBOXR="Selecciona un Fichero";
+		}
+		else {
+			file = input.files[0];
+		
+			//bodyAppend("p", "File " + file.name + " is " + file.size + " bytes in size");
+			if (file.size>=3*1024*1024)
+			{
+				Continua=false;
+				RHOLNWBOXR="Reduce el tamaño del fichero antes de subirlo";
+			}
+			else
+			{
+				var Extension=file.name.split('.').pop().toLowerCase()
+				if ( Extension!="jpg" &&  Extension!="jpeg" && Extension!="png" && Extension!="gif")
+				{
+					Continua=false;
+					RHOLNWBOXR="El fichero debe ser una imagen";					
+				}
+			}
+		}
+	}
+	
+	Error=new ObjetoError(Continua,RHOLNWBOXR)
+	console.log("Tamaño: "+Error.Continua+" "+Error.RHOLNWBOXR)
+	if (Error.Continua==false)
+	{
+		document.getElementById('TextErrorTienda').textContent=Error.RHOLNWBOXR
+	}
+	
+	return Error;
+}	
+
+function CambiarNombreJugador()
+{
+	try
+	{
+		if (document.getElementById('txtCambiaNombre').value!="" && PWMIBRSDCJ.length>0)
+		{
+			socket.emit('cambiar_nombre', PWMIBRSDCJ[0].OBTBPOULAV, document.getElementById('txtCambiaNombre').value);
+		}
+	}
+	catch(e){}
+}
+
+function ActivarCuentaPalos()
+{
+	if (GlobalActivaCuentaPalos==true)
+	{
+		BotonCuentaPaloOros.revive();
+		BotonCuentaPaloCopas.revive();
+		BotonCuentaPaloEspadas.revive();
+		BotonCuentaPaloBastos.revive();
+		
+		textoCuentaPaloOros.revive();
+		textoCuentaPaloCopas.revive();
+		textoCuentaPaloEspadas.revive();
+		textoCuentaPaloBastos.revive();	
+	}
+}
+
+function DesactivarCuentaPalos()
+{
+	BotonCuentaPaloOros.kill();
+	BotonCuentaPaloCopas.kill();
+	BotonCuentaPaloEspadas.kill();
+	BotonCuentaPaloBastos.kill();
+	
+	textoCuentaPaloOros.kill();
+	textoCuentaPaloCopas.kill();
+	textoCuentaPaloEspadas.kill();
+	textoCuentaPaloBastos.kill();
+}
+
 function SeleccionaEmoti(tabla,celda)
 {
 	
@@ -186,7 +343,7 @@ function HJBVQUGKVY()
 				  //socket.emit('Consola','Ha pulsado rate');
 				},
 				onButtonClicked: function(buttonIndex){
-					socket.emit('Consola','va a enviar '+buttonIndex);
+					//socket.emit('Consola','va a enviar '+buttonIndex);
 					if (PWMIBRSDCJ.length>0)
 					{
 						//socket.emit('Consola','enviar '+buttonIndex+" "+PWMIBRSDCJ[0].OBTBPOULAV);
@@ -2600,13 +2757,19 @@ function XSWEXRHSJY()
 
 function WRGLRODAXY()
 {
-	var i;
+		var i;
+		
+		//2.0.8054 Se intenta poner el loop pero falla por estar dentro de un bucle. La variable i va cambiando y no se comporta bien
 	
 		//console.log("BKEMJDLQQM desconectados1");
 		if (ESKTEXAVHU==TFSXFTYVGQ)
 		{
+			//console.log("Longitud arriba "+XPBCVAGCDQ.length);
+			//var Parar=(XPBCVAGCDQ.length-1);
+			//console.log("Parar "+Parar);
 			for (i=0;i<=XPBCVAGCDQ.length-1;i++)
 			{
+				//console.log("Vuelta "+i);
 				if (XPBCVAGCDQ[i].XJARYUVBCB==true )
 				{
 					//socket.emit('BKEMJDLQQM', DFBVDPETGO,XPBCVAGCDQ[i].AURESXCGMK);
@@ -2631,35 +2794,47 @@ function WRGLRODAXY()
 						
 					var OYJAHGADFQ=Math.random()*100000;
 					//console.log("BKEMJDLQQM desconectados2");
-					try
-					{
-						
-						
-					var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,XPBCVAGCDQ[i].AURESXCGMK,MQUGCIUQII,
-						OYJAHGADFQ,XPBCVAGCDQ[i].AURESXCGMK,DFBVDPETGO,'BKEMJDLQQM');
-					NBEJWDVLLV.push(KCPHFPSPLQ);
-					QPHHGPRJAI.push(KCPHFPSPLQ);
 
-					/*if (KYLIAIETHX==false)
-					{
-						//socket.emit('Consola','Envio listo desconectados al inicio '+XPBCVAGCDQ[i].AURESXCGMK)
-					}*/
-						
-						
-						//socket.emit('Consola','Envio listo desconectados: '+i+" "+ XPBCVAGCDQ[i].AURESXCGMK+" MQUGCIUQII "+MQUGCIUQII+" Hab: "+DFBVDPETGO);
+					//var CKHBSQULIF=YMHIHSNADE.time.create(false);
+					//var ContinuarTry=true;
+				
+					//CKHBSQULIF.loop(200,function(){
+						try
+						{
+							
+						//	console.log("HVCFEWNDRF de i "+i );
+						var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,XPBCVAGCDQ[i].AURESXCGMK,MQUGCIUQII,
+							OYJAHGADFQ,XPBCVAGCDQ[i].AURESXCGMK,DFBVDPETGO,'BKEMJDLQQM');
+						NBEJWDVLLV.push(KCPHFPSPLQ);
+						QPHHGPRJAI.push(KCPHFPSPLQ);
 
-						socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
-						 function(XQLEOGMJYG)
-						 {			 
-							EXBCVLOIYJ(XQLEOGMJYG,'BKEMJDLQQM');
-						 }
-						);						
-						//console.log("BKEMJDLQQM desconectados3");
-						QPHHGPRJAI.splice(0,1000);	
-					}
-					catch(e){
-						//console.log("BKEMJDLQQM desconectados4");
-					}
+						/*if (KYLIAIETHX==false)
+						{
+							//socket.emit('Consola','Envio listo desconectados al inicio '+XPBCVAGCDQ[i].AURESXCGMK)
+						}*/
+							
+							
+							//socket.emit('Consola','Envio listo desconectados: '+i+" "+ XPBCVAGCDQ[i].AURESXCGMK+" MQUGCIUQII "+MQUGCIUQII+" Hab: "+DFBVDPETGO);
+							//console.log("Enviando BKEMJDLQQM desconectados4");
+							socket.emit('BKEMJDLQQM',QPHHGPRJAI[0],
+							 function(XQLEOGMJYG)
+							 {			 
+								EXBCVLOIYJ(XQLEOGMJYG,'BKEMJDLQQM');
+							 }
+							);						
+							//console.log("BKEMJDLQQM desconectados3");
+							QPHHGPRJAI.splice(0,1000);	
+							
+							//CKHBSQULIF.stop();
+							//CKHBSQULIF.remove();
+						}
+						catch(e){
+							//console.log("Error BKEMJDLQQM desconectados4"+e);
+							//							CKHBSQULIF.stop();
+							//CKHBSQULIF.remove();
+						}
+					//});
+					//CKHBSQULIF.start();
 				}
 				else
 				{
@@ -2741,6 +2916,7 @@ function QYYXUWQADX(TXLWIIINGQ){
 	
 	//HJBVQUGKVY();
 	
+	ActivarCuentaPalos();
 
 	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
 		s.to( {x:(( YMHIHSNADE.world.width-AQONVWHHFT-((COIVBWRMCC*6))  - (YAJVUBPNNW*8) +  COIVBWRMCC)/2)+ (1 *(COIVBWRMCC+ YAJVUBPNNW))
@@ -2988,9 +3164,9 @@ function IHSCVAKSDJ(sprite) {
 				MYQBNBVHKU==true 
 				&& OTGNMRHTVK()==false //1.0.9
 				&& MNAGVJHWOW()==false //1.0.9
-				&& TLGMUNNDGH==false
+				//&& TLGMUNNDGH==false 2.0.8054
 				&& ( (EGPDVIEJEL==true && SNJCSVWFCC()) || EGPDVIEJEL==false) //1.0.9
-				&& HMVFLEYPXM.length==0
+				//&& HMVFLEYPXM.length==0 2.0.8054
 				)
 
 				//&& ValidaMovimientoJugadorSinActualizarRapido(LUCRWXJMDR,TFSXFTYVGQ)==true 
@@ -3013,7 +3189,7 @@ function IHSCVAKSDJ(sprite) {
 						{
 							VDKOVQXHON.push(new TVYNYTCQYW(AGKVNAGGLB[i].SGCSHJVERI,AGKVNAGGLB[i].UUOPKETETA,AGKVNAGGLB[i].HVCFEWNDRF,AGKVNAGGLB[i].TNFAGGMKXD,null,TFSXFTYVGQ,null,null,AGKVNAGGLB[i].MQUGCIUQII));//no hace falta la EBAPPJFYSW hora del server
 							
-							QTIPILDEPH(sprite,"D",LUCRWXJMDR,TFSXFTYVGQ,false);
+							QTIPILDEPH(sprite,"D",LUCRWXJMDR,TFSXFTYVGQ,false,AGKVNAGGLB[i].SGCSHJVERI);
 							AGKVNAGGLB.splice(i,1);	
 							OROGRNBISW(AGKVNAGGLB,"D");
 						}
@@ -4443,7 +4619,8 @@ function SYJLVBWPIM(TXLWIIINGQ){
 	//console.log("DEL recontando "+JHHWEKWEJK);
 	
 	//JHHWEKWEJK=true;//1.0.9 Lo quito en 2.0.1 Ya se llama en su llamada
-		
+	
+	DesactivarCuentaPalos();	
 		
 	EABXADHEVT('CAGCUMKBGA');	
 	UYEUYIYECB=IEUIUCYUCC("¡¡ A Contar !!",60);
@@ -4617,9 +4794,7 @@ function JHKJWHCKWE(){
 	{
 	}
 	
-	log(false,"Tama�o YOBEPVEEMW "+BRILHDFUSO.length);
-	log(false,"Tama�o Apoyo "+JLOISTPAPQ.length);
-	
+	 
 	
 	//try
 	//{
@@ -4822,7 +4997,7 @@ function CalculaGBits()
 				{
 					if(PWMIBRSDCJ!=undefined && PWMIBRSDCJ[0].TTTTQJHGDQ)
 					{
-						BNMSISPWOI=10;
+						BNMSISPWOI=5; //Antes 10 2.0.8051
 					}
 					else
 					{
@@ -4833,7 +5008,7 @@ function CalculaGBits()
 				{
 					if(PWMIBRSDCJ!=undefined && PWMIBRSDCJ[0].TTTTQJHGDQ)
 					{
-						BNMSISPWOI=5;
+						BNMSISPWOI=3; //Antes 5 2.0.8051
 					}
 					else
 					{
@@ -4845,9 +5020,10 @@ function CalculaGBits()
 			{
 
 
+
 				if(PWMIBRSDCJ!=undefined && PWMIBRSDCJ[0].TTTTQJHGDQ)
 				{
-					BNMSISPWOI=-4;
+					BNMSISPWOI=-2; //Antes -4 2.0.8051
 				}
 				else
 				{
@@ -4866,6 +5042,29 @@ function CalculaGBits()
 				}
 				
 			}
+			
+			/*No es necesario porque sale a la pantalla principal
+			var Vidas;
+			switch (BNMSISPWOI)
+			{
+				case 5:
+					Vidas=1;
+				case 3:
+					Vidas=0;
+				case 0:
+					Vidas=0;
+				case -2:
+					Vidas=-1;
+			}
+			
+			//PWMIBRSDCJ[0].Vidas //no lo actualizo. Prefiero que me venga siempre del servidor.
+			Vidas=PWMIBRSDCJ[0].Vidas+Vidas
+			if (Vidas<0)
+			{
+				Vidas=0;
+			}
+			TextVidas.text=Vidas;*/
+			
 		}
 		
 		YUFGSLAHYS=YUFGSLAHYS+BNMSISPWOI+GbitsNuevoDia;
@@ -4903,6 +5102,7 @@ function WWAYLOUPUQ(TXLWIIINGQ) {
 	//console.log("Crear AWCCMSCOPO puntuacion")
 	if (HGFAUFDVDF()==true) //2.0.1 Añado JHHWEKWEJK==false
 	{
+		DesactivarCuentaPalos();
 		
 		HGMNXSIAPV=false;
 		MYQBNBVHKU==false;
@@ -5526,9 +5726,24 @@ function UIYIUCHWUH(){
 	
 }
 		
+function LimpiarCuentaPalos()
+{
+	ContadorPaloOros=0;
+	ContadorPaloCopas=0;
+	ContadorPaloEspadas=0;
+	ContadorPaloBastos=0;
+	
+	textoCuentaPaloOros.text=0
+	textoCuentaPaloCopas.text=0
+	textoCuentaPaloEspadas.text=0
+	textoCuentaPaloBastos.text=0
+	
+}	
 function QSAXUCPASV(){
 
 var i;
+
+LimpiarCuentaPalos()
 
 if (MNAGVJHWOW()==false) //2.0.8.37, junto con todos BloqueoCartaCentro
 {
@@ -5985,7 +6200,7 @@ function ACGJHQWGVB()
 	//{
 		
 		CargaOpcionesDefecto();
-		
+		GrupoEmojis=YMHIHSNADE.add.group();
 		RXKKPILDQT = YMHIHSNADE.add.group();
 		SYXHGDSJDY = YMHIHSNADE.add.group();
 		BDRJVGFWQH = YMHIHSNADE.add.group();
@@ -5996,7 +6211,7 @@ function ACGJHQWGVB()
 		COTMMCVJWP = YMHIHSNADE.add.group();
 		BNWHJGHWUW = YMHIHSNADE.add.group();
 		VTEVNYKAUB=YMHIHSNADE.add.group();//1.0.9
-		GrupoEmojis=YMHIHSNADE.add.group();
+		
 	//}
 	VTEVNYKAUB.add(JBXCGDTWYW);
 	YMHIHSNADE.world.bringToTop(VTEVNYKAUB);

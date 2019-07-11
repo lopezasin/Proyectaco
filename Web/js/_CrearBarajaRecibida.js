@@ -20,6 +20,7 @@ function CLWUDOTYHT(data,RDBQUAVHEP,TXLWIIINGQ)
 	var i;
 	var SEQJGUOFTO;
 	
+	
 	NFARLTEOCI(); //2.0.8.37
 	
 	if (vCampeonatoOasis==true)

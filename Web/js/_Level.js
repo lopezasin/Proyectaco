@@ -17,6 +17,7 @@ Level.prototype = proto;
 
 var KYLIAIETHX=false;
 
+var GlobalActivaCuentaPalos=false;
 var EmoticonoGlobal="" //2.0.8051
 var BloqueoCartaCentro=false;
 var vCampeonatoOasis=false;
@@ -53,7 +54,7 @@ if (KYLIAIETHX==true){
 else
 {
 	BBWEGOPQUF=150;
-	JHGHJAGCMC='http://192.168.1.100:5000'		
+	JHGHJAGCMC='http://192.168.43.100:5000'		
 }
 
 //var TextoGeneral;
@@ -115,7 +116,7 @@ var ISVLSNLHWR=0;
 var IJCSKNTKVH="";
 
 var JLVDFTPUNI=101;
-var MFENMIFPUA=3;
+var MFENMIFPUA=1;
 var SoyBazan=false;
 
 var MQUIQKWTWS=false; //Para votar;
@@ -236,6 +237,7 @@ var XPBCVAGCDQ=[];
 var QLNEIQGEDF=[];
 var KYDWXPGHVY=[];
 var NBEJWDVLLV=[];
+var ArrayCompras=[];
 //var ArrayJugadoresDesconectadosID=[];
 //var XYXCEMMRDC=[];
 var JEHYBALODM=[];
@@ -252,6 +254,8 @@ var DHJGJHGWCY;
 var GJHWUYGCBN;
 
 var UUUIUYUSFS;
+var ImagenVidas;
+var TextVidas;
 var BotonEmoticono;
 
 
@@ -261,6 +265,13 @@ var NQMQGXXHIL = function(TKWCTNGROU,SSUNXNEEHN,PartidaRecibida){
 	this.AGTXFNIKQD=TKWCTNGROU
 	this.SSUNXNEEHN=SSUNXNEEHN
 	this.MQUGCIUQII=PartidaRecibida
+};
+
+var ObjetoCompra = function(Articulo,Precio,ValidezFecha, ValidezCotos){
+	this.Articulo=Articulo
+	this.Precio=Precio
+	this.ValidezFecha=ValidezFecha
+	this.ValidezCotos=ValidezCotos
 };
 
 var ObjetoPartida=function(partida,estado)
@@ -565,6 +576,17 @@ var BotonCuentaPaloOros;
 var BotonCuentaPaloCopas;
 var BotonCuentaPaloEspadas;
 var BotonCuentaPaloBastos;
+
+var textoCuentaPaloOros;
+var textoCuentaPaloCopas;
+var textoCuentaPaloEspadas;
+var textoCuentaPaloBastos;
+
+var ContadorPaloOros=0;
+var ContadorPaloCopas=0;
+var ContadorPaloEspadas=0;
+var ContadorPaloBastos=0;
+
 //var cambiar=1;
 
 var ObjetoG;
@@ -588,7 +610,7 @@ var UVYJLLYCYD=function(SSUNXNEEHN,AURESXCGMK)
 
 var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC,FFRVOEAXTF,BDYYDTFQAO,UHYGLMAUNK,DNQIYVAFPR,XCXKVEEIOO,BUJELVTIKU,NBJHGSFSJS,MBMWBWUYUY,OIUIOWCHVW,NHWYTYUSYG,NMABCQQCDD,
 	AMBCNABIQQ,gprd,MSIUWFLWPD,UIWHVYYYYD,RERQEQFSDV,BNMSISPWOI,GGHGFTERRW,BCKDDFIRYT,HJKSDFLPEP,TTTTQJHGDQ,BMNSDBFJKS,
-	IrA,IrATexto,Posicion30,EsPRO)
+	IrA,IrATexto,Posicion30,EsPRO,ArrayComprasJugador,PrioridadElegir,Vidas)
 	{
 	this.WWKVHIMWYD=WWKVHIMWYD
 	this.BONQVNOXDP=BONQVNOXDP
@@ -621,6 +643,9 @@ var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC
 	this.IrATexto=IrATexto
 	this.Posicion30=Posicion30
 	this.EsPRO=EsPRO
+	this.ArrayComprasJugador=ArrayComprasJugador
+	this.PrioridadElegir=PrioridadElegir
+	this.Vidas=Vidas
 	
 	this.OBTBPOULAV=FFRVOEAXTF+"-"+BDYYDTFQAO;
 	
@@ -1067,17 +1092,7 @@ Level.prototype.create=function(){
 
 	
 
-	BotonCuentaPaloOros=YMHIHSNADE.add.image(50, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
-	BotonCuentaPaloOros.loadTexture(NXNXBWBBWL,'1_oros', 0);
 
-	BotonCuentaPaloCopas=YMHIHSNADE.add.image(60, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
-	BotonCuentaPaloCopas.loadTexture(NXNXBWBBWL,'1_copas', 0);	
-	
-	BotonCuentaPaloEspadas=YMHIHSNADE.add.image(70, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
-	BotonCuentaPaloEspadas.loadTexture(NXNXBWBBWL,'1_espadas', 0);	
-	
-	BotonCuentaPaloBastos=YMHIHSNADE.add.image(80, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
-	BotonCuentaPaloBastos.loadTexture(NXNXBWBBWL,'1_bastos', 0);	
 	
 	if (BRQFVLOBSF==undefined)
 	{
@@ -1674,6 +1689,8 @@ Level.prototype.create=function(){
 		BJWEJKFWER.kill();
 	}
 	
+
+	
 	if (JGKQOAGEHK==undefined)
 	{
 		//JKLJKLRIRI.destroy();
@@ -1682,6 +1699,14 @@ Level.prototype.create=function(){
 		JGKQOAGEHK.anchor.set(0.5,0.5)
 		JGKQOAGEHK.kill();
 	}
+	
+	if (TextVidas==undefined)
+	{
+		//JKLJKLRIRI.destroy();
+		TextVidas=YMHIHSNADE.add.bitmapText(-100, 100, 'MiFuenteAmarilla', 'BitmapText', 30);
+		TextVidas.anchor.set(0.5,0.5)
+		TextVidas.kill();
+	}		
 	
 	if (JKLJKLRIRI==undefined)
 	{
@@ -1779,7 +1804,7 @@ Level.prototype.create=function(){
 	}
 	
 	
-		
+	//console.log("check "+	YMHIHSNADE.cache.checkJSONKey('general'))
 	
 	KAHCKJHQEO.kill();
 	
@@ -1839,7 +1864,58 @@ Level.prototype.create=function(){
 		MNSLSOPOOP.kill();
 	}
 	*/
+	
+	var IncrementoYCuentaPalos=0;
+	if (JHJEWHFWNL==true)
+	{
+		 IncrementoYCuentaPalos=20;
+	}
+	
+	if (BotonCuentaPaloOros==undefined)
+	{
+		BotonCuentaPaloOros=YMHIHSNADE.add.image(300, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
+		BotonCuentaPaloOros.loadTexture(NXNXBWBBWL,'1_oros', 0);
+		BotonCuentaPaloOros.scale.setTo(0.5,0.5)	
+		BotonCuentaPaloOros.x=WIEVLYANFM("U_5",0)-35 ;
+		BotonCuentaPaloOros.y=FIGQBSJQGA("U_5",0)+65+IncrementoYCuentaPalos ;
+		
+		
+		textoCuentaPaloOros=YMHIHSNADE.add.bitmapText(WIEVLYANFM("U_5",0)+10, FIGQBSJQGA("U_5",0)+75+IncrementoYCuentaPalos , 'MiFuenteAmarilla', 'BitmapText', 30);	
+		textoCuentaPaloOros.text="";
 
+		BotonCuentaPaloCopas=YMHIHSNADE.add.image(330, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
+		BotonCuentaPaloCopas.loadTexture(NXNXBWBBWL,'1_copas', 0);	
+		BotonCuentaPaloCopas.scale.setTo(0.5,0.5)	
+		BotonCuentaPaloCopas.x=WIEVLYANFM("U_5",0)+55 ;
+		BotonCuentaPaloCopas.y=FIGQBSJQGA("U_5",0)+65+IncrementoYCuentaPalos;
+
+		textoCuentaPaloCopas=YMHIHSNADE.add.bitmapText(WIEVLYANFM("U_5",0)+100, FIGQBSJQGA("U_5",0)+75+IncrementoYCuentaPalos , 'MiFuenteAmarilla', 'BitmapText', 30);	
+		textoCuentaPaloCopas.text="";
+		
+		
+		BotonCuentaPaloEspadas=YMHIHSNADE.add.image(70, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
+		BotonCuentaPaloEspadas.loadTexture(NXNXBWBBWL,'1_espadas', 0);	
+		BotonCuentaPaloEspadas.scale.setTo(0.5,0.5)	
+		BotonCuentaPaloEspadas.x=WIEVLYANFM("U_5",0)+145 ;
+		BotonCuentaPaloEspadas.y=FIGQBSJQGA("U_5",0)+65+IncrementoYCuentaPalos ;
+		
+		textoCuentaPaloEspadas=YMHIHSNADE.add.bitmapText(WIEVLYANFM("U_5",0)+190, FIGQBSJQGA("U_5",0)+75+IncrementoYCuentaPalos , 'MiFuenteAmarilla', 'BitmapText', 30);	
+		textoCuentaPaloEspadas.text="";
+		
+		
+		BotonCuentaPaloBastos=YMHIHSNADE.add.image(80, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
+		BotonCuentaPaloBastos.loadTexture(NXNXBWBBWL,'1_bastos', 0);	
+		BotonCuentaPaloBastos.scale.setTo(0.5,0.5)	
+		BotonCuentaPaloBastos.x=WIEVLYANFM("U_5",0)+235 ;
+		BotonCuentaPaloBastos.y=FIGQBSJQGA("U_5",0)+65+IncrementoYCuentaPalos ;
+		
+		textoCuentaPaloBastos=YMHIHSNADE.add.bitmapText(WIEVLYANFM("U_5",0)+280, FIGQBSJQGA("U_5",0)+75+IncrementoYCuentaPalos , 'MiFuenteAmarilla', 'BitmapText', 30);	
+		textoCuentaPaloBastos.text="";
+		
+		DesactivarCuentaPalos();
+	}
+	
+	
     this.stage.backgroundColor = '#2d2d2d';
 
 	//this.CAYLTXOAMJ=0;
@@ -2440,6 +2516,14 @@ TDRCQKMLDY= YMHIHSNADE.add.button(1000, 0, 'spr_cantar', function(){
 		UUUIUYUSFS.kill();
 	}
 	
+	if (ImagenVidas==undefined)
+	{
+		ImagenVidas=YMHIHSNADE.add.image(YMHIHSNADE.world.width-375 ,60, 'general', 'imagen_vida');
+		ImagenVidas.anchor.setTo(0.5, 0.5)
+		ImagenVidas.frameName='imagen_vida'
+		ImagenVidas.kill();
+	}	
+	
 
 	if (BotonEmoticono==undefined)
 	{
@@ -2501,6 +2585,14 @@ function JHGQKGFQGB()
 	return HJKSDFLPEP;
 }
 
+function MuestraVidas()
+{
+	TextVidas.text="x "+PWMIBRSDCJ[0].Vidas;
+	TextVidas.x = YMHIHSNADE.world.width-300;
+	TextVidas.align = 'left';
+	TextVidas.y=60;
+	TextVidas.revive();	
+}
 function JQDGHVJGUW()
 {
 	if (PWMIBRSDCJ.length>0 && PWMIBRSDCJ[0].WWKVHIMWYD!="DesconocidoPRO")
@@ -3167,11 +3259,18 @@ function WTERKRAPBE(ABWBCAJRXQ,KXAWTTIEGG,SPWYNLHQXU,PAXBGDCANU,VRCARVJJPF,VGVSE
 				var ObjetoMoneda=CalculaGBits();
 			}
 			
-			try
-			{
-				socket.emit('IUYWUIHCVW',FUAQHEGBCV,Name,Socket,Sala,KXAWTTIEGG,Idas,XJARYUVBCB,PAXBGDCANU,VRCARVJJPF,VGVSETFAFF,As,WJIXAEXYTP,Amigo,MQUGCIUQII,NBJHGSFSJS,ObjetoMoneda)
-			}
-			catch(e){}
+			var CKHBSQULIF=YMHIHSNADE.time.create(false); //2.0.8054
+			var ContinuarTry=true;
+			CKHBSQULIF.loop(200,function(){
+				try
+				{
+					socket.emit('IUYWUIHCVW',FUAQHEGBCV,Name,Socket,Sala,KXAWTTIEGG,Idas,XJARYUVBCB,PAXBGDCANU,VRCARVJJPF,VGVSETFAFF,As,WJIXAEXYTP,Amigo,MQUGCIUQII,NBJHGSFSJS,ObjetoMoneda)
+					CKHBSQULIF.stop();
+					CKHBSQULIF.remove();
+				}
+				catch(e){}
+			});
+			CKHBSQULIF.start();
 		}
 	}
 }
@@ -3197,6 +3296,7 @@ function IICHSQQWTF(XGSWBEHNKH)
 	
 	// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
 	
+	document.getElementById("InputSalas").value=""; //2.0.8051
 	
 	NGHJWGJHWG();
 
@@ -3289,6 +3389,8 @@ function MostrarTienda()
 	var d=document.getElementById('DivTienda');
 	d.style.display = '';
 		$('.multiple-items').slick('setPosition'); //corrige bug slick
+		
+
 }
 
 function BHWJGHJGWI(){
@@ -3529,6 +3631,7 @@ function MostrarElegirEmoticono()
 	
 
 	
+	ValidaPermisosEmoticonos();
 		
 	var d=document.getElementById('DivEmoticonos');
 	d.style.display = 'block';
@@ -3553,7 +3656,66 @@ function MostrarElegirEmoticono()
 	
 }
 
+function EstaEnArrayCompras(Valor)
+{
+	var i;
+	var VEFCIYHBGC=false;
+	for (i=0;i<=ArrayCompras.length-1;i++)
+	{
+		if (ArrayCompras[i].Articulo==Valor)
+		{
+			VEFCIYHBGC=true;
+		}
+	}
+	
+	return VEFCIYHBGC
+}
 
+function AccesoEmoji(Emoji)
+{
+	var ItemsArticulo005=['emoj0001','emoj0002','emoj0003','emoj0004','emoj0005','emoj0006','emoj0007','emoj0008','emoj0009','emoj0010']
+	var ItemsArticulo006=['emoj0011','emoj0012','emoj0013','emoj0014','emoj0015','emoj0016','emoj0017','emoj0018','emoj0019','emoj0020']
+	var ItemsArticulo007=['emoj0021']
+	var ItemsArticulo008=['emoj0021']
+	
+	return ( 
+		(ItemsArticulo005.indexOf(Emoji)>=0 && EstaEnArrayCompras('Art005')) 
+	 || (ItemsArticulo006.indexOf(Emoji)>=0 && EstaEnArrayCompras('Art006')) 
+	 || (ItemsArticulo007.indexOf(Emoji)>=0 && EstaEnArrayCompras('Art007')) 
+	 || (ItemsArticulo008.indexOf(Emoji)>=0 && EstaEnArrayCompras('Art007'))
+		)
+	
+}
+function ValidaPermisosEmoticonos()
+{
+	var i;
+	var Relleno=""
+	var Emoji;
+	
+	
+	for (i=1;i<=48;i++)
+	{
+		if (i<=9)
+		{
+			Relleno="0"
+		}
+		else
+		{
+			Relleno=""
+		}
+		Emoji='emoj00'+Relleno+i;
+		
+		//console.log(Emoji+" "+ItemsArticulo005.indexOf(Emoji))
+		if (  AccesoEmoji(Emoji) )
+		{
+			document.getElementById(Emoji).style.WebkitFilter="grayscale(0%)"			
+		}
+		else
+		{
+			document.getElementById(Emoji).style.WebkitFilter="grayscale(100%)"
+		}
+	}	
+}
 function OcultarElegirEmoticono()
 {
 	var d=document.getElementById('DivEmoticonos');
@@ -3566,7 +3728,7 @@ function OcultarElegirEmoticono()
 	
 }
 
-function Comprar(Articulo)
+function Comprar(Articulo,Auxiliar)
 {
 	var OBTBPOULAV;
 	if (SNJCSVWFCC())
@@ -3575,7 +3737,10 @@ function Comprar(Articulo)
 		if (PWMIBRSDCJ.length>0)
 		{
 			OBTBPOULAV=PWMIBRSDCJ[0].OBTBPOULAV;
-			socket.emit('solicita_compra',socket.id,OBTBPOULAV,Articulo);	
+			try
+			{
+				socket.emit('solicita_compra',socket.id,OBTBPOULAV,Articulo,Auxiliar);	
+			}catch(e){}
 		}
 		else
 		{
@@ -3585,12 +3750,61 @@ function Comprar(Articulo)
 		
 	}
 }
+
+function CalculaCaducidad(Articulo)
+{
+	var TipoCaducidad;
+	switch (Articulo)
+	{
+		case 'Art001': //Cambia WWKVHIMWYD
+		TipoCaducidad=1; //EBAPPJFYSW			
+		break;	
+		
+		case 'Art002': //Cambia QHHQPXWFNG
+		TipoCaducidad=1; //EBAPPJFYSW			
+		break;					
+		
+		case 'Art003': //XRUDRJJNSI
+		TipoCaducidad=2; //Cotos			
+		break;
+		
+		case 'Art004': //Prioridad Elegir
+		TipoCaducidad=2; //Cotos			
+		break;		
+
+		case 'Art005': //Emojis
+		TipoCaducidad=1; //EBAPPJFYSW			
+		break;	
+
+		case 'Art006': //Emojis
+		TipoCaducidad=1; //EBAPPJFYSW			
+		break;	
+		
+		case 'Art007': //Emojis
+		TipoCaducidad=1; //EBAPPJFYSW			
+		break;		
+
+		case 'Art008': //Emojis
+		TipoCaducidad=1; //EBAPPJFYSW			
+		break;		
+
+		case 'Art009': //Cambia QHHQPXWFNG
+		TipoCaducidad=1; //EBAPPJFYSW			
+		break;			
+	}	
+	
+	return TipoCaducidad;
+}
+
 function MostrarDetalleTienda(Articulo,ArrayTienda)
 {
 	var RHOLNWBOXR;
 	var i;
 	var d;
+	var u;
 	//ArticuloGlobal
+	document.getElementById('TextErrorTienda').textContent=""
+	document.getElementById("file_to_upload").value = "";
 
 	d=document.getElementById('DivDetalleTienda');
 	d.style.display = 'block';	
@@ -3598,14 +3812,58 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 	d=document.getElementById('lblSaldo')
 	d.textContent = "Saldo: "+MHJKHDFSGF+" Guiñobits"
 
-	console.log("Articulo "+Articulo)
+	document.getElementById('txtCambiaNombre').value="";
+	
+	//console.log("Articulo "+Articulo)
+			document.getElementById("DivCambiaNombre").style.visibility = "hidden";
+			document.getElementById("DivCambiaFoto").style.visibility = "hidden";	
+
+/*	switch (Articulo)
+	{
+		case "Art001": //Cambia WWKVHIMWYD		
+		document.getElementById("DivCambiaNombre").style.visibility = "visible";
+		document.getElementById("DivCambiaFoto").style.visibility = "hidden";
+		//console.log("visible cambia nombre")
+		break;
+		
+		case "Art002": //Cambia QHHQPXWFNG		
+		document.getElementById("DivCambiaFoto").style.visibility = "visible";
+		document.getElementById("DivCambiaNombre").style.visibility = "hidden";
+		//console.log("visible cambia foto")
+		//document.getElementById("file_to_upload").style.visibility = "visible";
+		//document.getElementById("TextErrorTienda").style.visibility = "visible";
+		break;		
+	
+		default :
+		
+			document.getElementById("DivCambiaNombre").style.visibility = "hidden";
+			document.getElementById("DivCambiaFoto").style.visibility = "hidden";
+			//document.getElementById("file_to_upload").style.visibility = "hidden";
+			//document.getElementById("TextErrorTienda").style.visibility = "hidden";
+		break;
+	}*/
+	//console.log("Articulo "+Articulo)
 	for (i=0;i<=ArrayTienda.length-1;i++)
 	{	
 		if (ArrayTienda[i]._id_articulo==Articulo)
 		{
 			
 			d=document.getElementById('BotonComprar');
-			d.onclick =  function() { Comprar(Articulo) }
+			d.onclick =  function() { 
+				
+				var Auxiliar=""
+				
+				switch (Articulo)
+				{
+					case Articulo : "Art001"
+					
+					var e=document.getElementById('txtCambiaNombre');
+					Auxiliar=e.value
+				}
+				
+				Comprar(Articulo,Auxiliar) 
+				
+			}
 			
 
 	
@@ -3618,7 +3876,63 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 
 			d=document.getElementById("lblPrecioArticulo") 
 			d.textContent = ArrayTienda[i]._precio;		
-			console.log("Precio "+ ArrayTienda[i]._precio);
+			//console.log("Precio "+ ArrayTienda[i]._precio);
+			
+			d=document.getElementById("lblArticuloYaComprado") 
+			 			
+			var TipoCaducidad=CalculaCaducidad(Articulo)
+
+			
+			
+			var RPHWVBBGIM="";
+			var ActivarBotonCompra=true;
+			for (u=0;u<=ArrayCompras.length-1;u++)
+			{
+				if (ArrayCompras[u].Articulo==ArrayTienda[i]._id_articulo)
+				{
+					if (TipoCaducidad==2)
+					{
+						RPHWVBBGIM="¡Producto ya comprado!. Válido para "+ArrayCompras[u].ValidezCotos+ " cotos.";
+						ActivarBotonCompra=false;
+						//console.log(RPHWVBBGIM)
+					}
+					else
+					{
+						//if (Articulo=='Art001')
+						//{
+						//	RPHWVBBGIM="¡Producto ya comprado!. Cada cambio volverá a descontar Guiñobits. Válido hasta "+ArrayCompras[u].ValidezFecha;
+						//}
+						//else
+						//{
+							var current_datetime = new Date(ArrayCompras[u].ValidezFecha) //ValidezFecha;
+							var formatted_date = appendLeadingZeroes(current_datetime.getDate()) +'/'+ appendLeadingZeroes(current_datetime.getMonth() + 1) + '/' +current_datetime.getFullYear() + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
+							RPHWVBBGIM="¡Producto ya comprado!. Cambios ilimitados hasta el "+formatted_date;
+						//}
+						ActivarBotonCompra=false;
+						
+						switch (Articulo)
+						{
+							case 'Art001': //Cambia WWKVHIMWYD
+							document.getElementById("DivCambiaNombre").style.visibility = "visible"		
+							break;	
+							
+							case 'Art002': //Cambia QHHQPXWFNG
+							document.getElementById("DivCambiaFoto").style.visibility = "visible"	
+							break;	
+							
+							case 'Art009': //Cambia QHHQPXWFNG
+							document.getElementById("DivCambiaFoto").style.visibility = "visible"	
+							break;								
+						}
+						
+					}
+					
+					break;
+				}
+			}
+			
+			d.textContent = RPHWVBBGIM;
+		
 
 			if (ArrayTienda[i]._precio>MHJKHDFSGF)
 			{
@@ -3626,7 +3940,9 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 			}
 			else
 			{
-				 document.getElementById("BotonComprar").disabled=false;
+
+				 document.getElementById("BotonComprar").disabled=!ActivarBotonCompra;
+
 			}
 		//var b=a.labels[0];
 			
@@ -4259,17 +4575,34 @@ function NXVIOTGLQV(AHGGSIUEBA)
 
 
 			//console.log("Envio cambio pareja");
-			socket.emit('IWOWOOKJKJ',QPHHGPRJAI[0],			
-			 function(XQLEOGMJYG)
-			 {	
-				EXBCVLOIYJ(XQLEOGMJYG,'IWOWOOKJKJ');
-			 }
-			);						
-			QPHHGPRJAI.splice(0,1000);	
+			var CKHBSQULIF=YMHIHSNADE.time.create(false);
+			var ContinuarTry=true;
 			
+			CKHBSQULIF.loop(200,function(){
 			
-			KYDWXPGHVY.splice(0,1000) //Importante no quitarlo. Al hacer los giros con el array de jugadores, hay que volver a calcular los desconectados y por eso se limpia el array
-			LRYVPILWKS();
+				try
+				{
+					socket.emit('IWOWOOKJKJ',QPHHGPRJAI[0],			
+					 function(XQLEOGMJYG)
+					 {	
+						EXBCVLOIYJ(XQLEOGMJYG,'IWOWOOKJKJ');
+					 }
+					);
+
+					CKHBSQULIF.stop();
+					CKHBSQULIF.remove();
+												
+					QPHHGPRJAI.splice(0,1000);	
+				
+				
+					KYDWXPGHVY.splice(0,1000) //Importante no quitarlo. Al hacer los giros con el array de jugadores, hay que volver a calcular los desconectados y por eso se limpia el array
+					LRYVPILWKS();
+				
+				}
+				catch(e){}
+			});
+			CKHBSQULIF.start();
+
 		
 		}
 		catch(e)
@@ -4330,12 +4663,12 @@ function BMCMSNBKUQ()
 			//console.log("Puntuacion Especial "+PWMIBRSDCJ[0].TTTTQJHGDQ);
 			if(PWMIBRSDCJ!=undefined && PWMIBRSDCJ[0].TTTTQJHGDQ)
 			{
-				restar=YUFGSLAHYS-4
+				restar=YUFGSLAHYS-5 //2.0.8051 Antes -4
 			}
 			else
 			{
 				
-				restar=-2
+				restar=-5 //2.0.8051 Antes -2
 			}
 			
 			if (MHJKHDFSGF+restar>=0)
@@ -4477,6 +4810,8 @@ function YBWXJFDOAW()
 	EFKTQSXAMA.revive();
 	LNJDKEVPQE.revive();
 	MNBDJFHWHU();
+	ImagenVidas.revive();
+	MuestraVidas();
 	HEUDCWFSMP();
 	
 	
@@ -4534,7 +4869,7 @@ function YBWXJFDOAW()
 
 	var RDJFKUULTX=YMHIHSNADE.add.tween(EFKTQSXAMA).to( { y: PHMUHFKHBO  }, 400, KYFMRVNHIQ,false);
 	RDJFKUULTX.onComplete.add(function(){
-		Renderizar(false); //2.0.8054
+		//Renderizar(false); //2.0.8054 Lo quito porque la lia parda al bajar monedas y entrar a jugar
 	})
 	RDJFKUULTX.start();
 	
@@ -6218,7 +6553,7 @@ function JVEHDHOEEM(NoConectar){
 	{
 		return false;
 	}*/
-	HJBVQUGKVY()
+	
 	if (HDGGWGGSVH==true)
 	{
 		var d=document.getElementById('DivAudioGoogle');
@@ -6410,6 +6745,8 @@ function OCSBJTDODP(){
 		BJWEJKFWER.kill();
 		JGKQOAGEHK.kill();
 		UUUIUYUSFS.kill();
+		ImagenVidas.kill();
+		TextVidas.kill();
 		
 		
 		EGPDVIEJEL=false;
@@ -6564,7 +6901,7 @@ MDBPQGPDUY=function(sprite, spriteColision) {
 */
 
 var JHIWUIUYCJ = function(AURESXCGMK,Sala,Cerrada,WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,LIHWIHIUVH,XJARYUVBCB,UIEHFVKJSD,EJOYNSESRD,IRQGAFESIC,Amigo,OBTBPOULAV,KKUYGYRGYG, LKKDKDNMNR,JJHFHGHSUI,UHYGLMAUNK,NBJHGSFSJS,
-	OIUIOWCHVW,NHWYTYUSYG,NMABCQQCDD, AMBCNABIQQ,Posicion30,EsPRO){
+	OIUIOWCHVW,NHWYTYUSYG,NMABCQQCDD, AMBCNABIQQ,Posicion30,EsPRO,PrioridadElegir){
 		
 	this.AURESXCGMK=AURESXCGMK;
 	this.Sala=Sala;
@@ -6589,6 +6926,7 @@ var JHIWUIUYCJ = function(AURESXCGMK,Sala,Cerrada,WWKVHIMWYD,BONQVNOXDP,QHHQPXWF
 	this.AMBCNABIQQ=AMBCNABIQQ
 	this.Posicion30=Posicion30
 	this.EsPRO=EsPRO
+	this.PrioridadElegir=PrioridadElegir
 	
 	this.Viva=true;
 	this.Acabada=false;
@@ -6758,6 +7096,7 @@ function setEventHandlers() { //ESTE
   );
   
   socket.on('envia_articulo_comprado', onSocketArticuloComprado);
+  socket.on('envia_item_duplicado', onSocketArticuloDuplicado);
   
   socket.on('VMCFXIVSKH', function(data,callback)
   {
@@ -7014,7 +7353,49 @@ function onSocketTiendaDesdeServer(ArrayTienda)
 {
 	var i;
 	var Articulo
-	console.log("Array Tienda "+ArrayTienda[0]._descripcion)
+	
+	$('.multiple-items').on('click',  function (e){ 
+	//console.log(e.target.id)
+	//console.log("sub-"+e.target.id.substring(0, 3)+"-");
+	var id=e.target.id.substring(0, 3)
+	var Articulo;
+	if (id=='Art')
+	{
+		//console.log(e.target.id)
+		Articulo=e.target.id
+	}
+	else
+	{
+		//console.log(e.target.children[0].id)
+		Articulo=e.target.children[0].id
+	}
+	
+	var TipoOct=0;
+	switch (Articulo)
+	{
+		case "Art002":
+			TipoOct=1
+			break;
+		case "Art009":
+			TipoOct=2
+			break;
+	
+	}
+	document.getElementById('tipooct').value=TipoOct;
+	
+	MostrarDetalleTienda(Articulo,ArrayTienda)
+	//console.log(index)
+	//console.log(slide)
+	//target.children
+	//var slideClicked = $(e.currentTarget).attr("data-slick-index"); console.log(slideClicked);
+
+	});
+/*$(".multiple-items").on("click", function(e){ 
+    var slideClicked = $(this).find(".slick-active").attr("data-slick-index"); 
+    console.log(slideClicked); 
+});*/
+
+	//console.log("Array Tienda "+ArrayTienda[0]._descripcion)
 	var d=document.getElementById("JugadorEmoti1");
 	for (i=0;i<=ArrayTienda.length-1;i++)
 	{
@@ -7023,10 +7404,15 @@ function onSocketTiendaDesdeServer(ArrayTienda)
 		if (d!=null)
 		{
 			d.src=ArrayTienda[i]._foto
-			Articulo=ArrayTienda[i]._id_articulo
-			//console.log(d)
-			d.onclick=function(){MostrarDetalleTienda(this.id,ArrayTienda)}
-			//function(){ alert(Articulo);
+			//Articulo=ArrayTienda[i]._id_articulo
+			
+			
+			//d.onclick=function(){MostrarDetalleTienda(this.id,ArrayTienda)}
+	
+	//revisando
+
+
+		//function(){ alert(Articulo);
 			//console.log("Configuro el alert "+d.id)
 			//MostrarDetalleTienda(Articulo,ArrayTienda)
 			//}
@@ -7304,7 +7690,7 @@ switch (Key)
 function EliminaMensaje(ArrayPasar)
 {
 	var CKHBSQULIF=YMHIHSNADE.time.create(false);
-	CKHBSQULIF.loop(100,function()
+	CKHBSQULIF.loop(200,function()
 	{ 
 		try
 		{
@@ -7671,7 +8057,20 @@ function LVEMXLIFKA(KJEWHVDJKS,New)
 								case 'HKJSDHFUIW' :	 //ok
 									 //console.log("Envio a Parejas desde Server "+ArrayPasar[0].OYJAHGADFQ)
 									  MCMWUEHUWH(ArrayPasar[0].ArrayDelaPropiaSalaClienteOrdenada,ArrayPasar[0].RDBQUAVHEP,ArrayPasar[0].OYJAHGADFQ);
-									  socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
+
+										//var CKHBSQULIF=YMHIHSNADE.time.create(false); //2.0.8054 Al final lo quito
+										//var ContinuarTry=true;
+										//CKHBSQULIF.loop(200,function(){
+											  try
+											  {
+												socket.emit("elimina_mensaje",ArrayPasar[0].OYJAHGADFQ)
+												//CKHBSQULIF.stop();
+												//CKHBSQULIF.remove();												
+											  }
+											  catch(e){}
+										//});
+										//CKHBSQULIF.start();
+										
 								break;	  
 					  
 								/*case 'KJHKHEIEIE' :	//ok
@@ -7896,6 +8295,12 @@ function onSocketErrorDesdeServer(NNWWUUQPPP,ErrorPublico) {
 	{
 		//Informar a todos de que un usuario ha sido sancionado
 		VSXSYEUABW(ErrorPublico, false);		
+	}
+
+	if (NNWWUUQPPP=="Error14")
+	{
+		//lPermisoDesconectado=false;
+		VSXSYEUABW(ErrorPublico, true);		
 	}		
 	
 }
@@ -8797,10 +9202,18 @@ function CURCDCWNHB(CYHNPORXFJ)
 			CYHNPORXFJ[0].IrA,
 			CYHNPORXFJ[0].IrATexto,
 			CYHNPORXFJ[0].Posicion30,
-			CYHNPORXFJ[0].EsPRO
+			CYHNPORXFJ[0].EsPRO,
+			CYHNPORXFJ[0].ArrayComprasJugador,
+			CYHNPORXFJ[0].PrioridadElegir,
+			CYHNPORXFJ[0].Vidas
 			));
 			
 			//alert(PWMIBRSDCJ[0].IRQGAFESIC);
+		//console.log("Rellena infojugador1");
+		if (CYHNPORXFJ[0].ArrayComprasJugador.length>0)
+		{
+			IncorporaCompraInfoJugador(CYHNPORXFJ[0].ArrayComprasJugador)
+		}
 		
 		if (CYHNPORXFJ[0].gprd==true)
 		{
@@ -8810,6 +9223,7 @@ function CURCDCWNHB(CYHNPORXFJ)
 			RERQEQFSDV=CYHNPORXFJ[0].RERQEQFSDV
 			
 			JQDGHVJGUW(false);
+			
 		
 			if ( CYHNPORXFJ[0].XCXKVEEIOO!="" )
 			{
@@ -8993,9 +9407,18 @@ function DVCXGBTNWL(CYHNPORXFJ)
 			CYHNPORXFJ[0].IrA,
 			CYHNPORXFJ[0].IrATexto,
 			CYHNPORXFJ[0].Posicion30,
-			CYHNPORXFJ[0].EsPRO			
+			CYHNPORXFJ[0].EsPRO,
+			CYHNPORXFJ[0].ArrayComprasJugador,
+			CYHNPORXFJ[0].PrioridadElegir,
+			CYHNPORXFJ[0].Vidas
 			));
 			
+			//console.log("Rellena infojugador2");
+			if (CYHNPORXFJ[0].ArrayComprasJugador.length>0)
+			{
+				IncorporaCompraInfoJugador(CYHNPORXFJ[0].ArrayComprasJugador)
+			}			
+				
 			if (CYHNPORXFJ[0].DNQIYVAFPR==false)
 			{
 				onSocketErrorDesdeServer("Error8",CYHNPORXFJ[0].XCXKVEEIOO); //1.0.8
@@ -9383,7 +9806,7 @@ function BCVWETKAKG(JugadorQueReconecta,NombreDesconectado,posicionJugador,Nuevo
 	{
 		
 		UYEUYIYECB=IEUIUCYUCC("La sala ya no es válida. ¡Entra de nuevo! :)" ,40);
-		TLGMUNNDGH=true;
+		//TLGMUNNDGH=true; Comentado 2.08054
 		
 		UYEUYIYECB.alpha=1
 		var tw = YMHIHSNADE.add.tween(UYEUYIYECB).to( { alpha: 0 }, 1000, KYFMRVNHIQ, true,4000);
@@ -10274,7 +10697,11 @@ function AYAOSXTCBR() {
 			{
 				//console.log("Se mete 2")
 				PrimeraVezConectado=false;
-				socket.emit('enviar_peticion_tienda', socket.id,SFKLFIJOIO) ;
+				try
+				{
+					socket.emit('enviar_peticion_tienda', socket.id,SFKLFIJOIO) ;
+				}
+				catch(e){}
 			}
 			
 			if (SNJCSVWFCC()==true && ( UEHYPTREIH.alive==true || LNJDKEVPQE.alive==true  ))
@@ -10726,6 +11153,8 @@ function AAQWTFMQMA() {
 	BJWEJKFWER.kill();
 	JGKQOAGEHK.kill();
 	UUUIUYUSFS.kill();
+	ImagenVidas.kill();
+	TextVidas.kill();
 	
 	//if (JBXCGDTWYW==undefined)
 	//{
@@ -10775,7 +11204,7 @@ function AAQWTFMQMA() {
 				XPBCVAGCDQ.push(new JHIWUIUYCJ(HGIFKEMXAD[i].AURESXCGMK,HGIFKEMXAD[i].Sala,false,HGIFKEMXAD[i].WWKVHIMWYD,
 					HGIFKEMXAD[i].BONQVNOXDP,QHHQPXWFNG,null,HGIFKEMXAD[i].XJARYUVBCB,HGIFKEMXAD[i].UIEHFVKJSD,HGIFKEMXAD[i].EJOYNSESRD,HGIFKEMXAD[i].IRQGAFESIC, HGIFKEMXAD[i].Amigo , HGIFKEMXAD[i].OBTBPOULAV, (i+1), "",HGIFKEMXAD[i].WWKVHIMWYD, HGIFKEMXAD[i].UHYGLMAUNK,HGIFKEMXAD[i].NBJHGSFSJS,
 					HGIFKEMXAD[i].OIUIOWCHVW,HGIFKEMXAD[i].NHWYTYUSYG,HGIFKEMXAD[i].NMABCQQCDD,HGIFKEMXAD[i].AMBCNABIQQ,
-					HGIFKEMXAD[i].Posicion30,HGIFKEMXAD[i].EsPRO
+					HGIFKEMXAD[i].Posicion30,HGIFKEMXAD[i].EsPRO,HGIFKEMXAD[i].PrioridadElegir
 					));
 					
 					/*			XPBCVAGCDQ.push(new JHIWUIUYCJ(HGIFKEMXAD[i].AURESXCGMK,HGIFKEMXAD[i].Sala,false,HGIFKEMXAD[i].WWKVHIMWYD,
@@ -10792,7 +11221,10 @@ function AAQWTFMQMA() {
 						}
 					}
 					
-					
+					if (HGIFKEMXAD[i].AURESXCGMK==socket.id)  //2.0.8054
+					{
+						ValidarTodosArticulos();
+					}
 					
 				//log(true,"Se está recibiendo "+HGIFKEMXAD[i].WWKVHIMWYD+" "+HGIFKEMXAD[i].XJARYUVBCB	);
 				//log(true,"Se ha guardado ");
@@ -10835,6 +11267,8 @@ function AAQWTFMQMA() {
 		{
 			
 			//ACGJHQWGVB();
+			
+
 			
 			TFSXFTYVGQ=i+1;
 			
@@ -10899,8 +11333,15 @@ function AAQWTFMQMA() {
 				//console.log("Posicion30 "+XPBCVAGCDQ[i].Posicion30)
 				//if (XPBCVAGCDQ[i].Posicion30<JugadorElige) //2.0.8.37 Para que elija el mejor
 				//{
+
 					MMNORPWJDC=XPBCVAGCDQ[i].AURESXCGMK;
 					JugadorElige=XPBCVAGCDQ[i].Posicion30
+					
+					if (XPBCVAGCDQ[i].PrioridadElegir) //2.0.8051
+					{
+						break;
+					}
+				
 				//}
 			}
 		}
@@ -10914,6 +11355,7 @@ function AAQWTFMQMA() {
 			 if (JHVKJDVHWW(MMNORPWJDC,socket.id)){ //Se crea la baraja
 				
 				DVNRTQIWGL=1;
+				ValidaDisponibilidadArticulo('Art004');
 				VVCDGUUDWR(true);
 
 			 }
@@ -10929,6 +11371,11 @@ function AAQWTFMQMA() {
 			{
 				MMNORPWJDC=XPBCVAGCDQ[i].AURESXCGMK;
 				JugadorElige=XPBCVAGCDQ[i].Posicion30
+				
+				if (XPBCVAGCDQ[i].PrioridadElegir) //2.0.8051
+				{
+					break;
+				}
 			} 
 		 }
 		 
@@ -12156,6 +12603,8 @@ function MCFSLYOMHE()
 	BJWEJKFWER.kill();
 	JGKQOAGEHK.kill();
 	UUUIUYUSFS.kill();
+	ImagenVidas.kill();
+	TextVidas.kill();
 	
 	//YMHIHSNADE.state.start("Level",false,false); //2.0.8
 	
@@ -12278,6 +12727,7 @@ function Salir(VideoJuego){
 function FHKOYDXPCL()
 {
 
+	DesactivarCuentaPalos();
 	NFARLTEOCI();
 	EHUHWTYXOS=false;
 	//	WNEWPCNXPA();
