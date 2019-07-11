@@ -30,6 +30,8 @@
 	
 <preference name="KeepRunning" value="true"/>
 <preference name="exit-on-suspend" value="false" /> 
+<preference name="StatusBarOverlaysWebView" value="false" /> 
+
 
 <!-- <feature name="http://api.phonegap.com/1.0/media"/> -->
 <!-- <preference name="apiKey" value="e03d2f91dfd56f1615baf6d697c46428" />
