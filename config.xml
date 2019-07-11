@@ -72,7 +72,7 @@
 <plugin name="cordova-plugin-inapppurchase" />
 
 <gap:plugin name="cordova-plugin-googleplus" source="npm" >
-<param name= "play_store_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9zaSw/s4Or4TyebqxUAs3UWoWGwJsErJe2PvInCIHW/digf+r6bURqF3MtQNDFXtN86NterDFUrvhGDipUHchnQj9cMdHIabJVMygH9BQlHu2B8ZLvhJAEHtcTJ+ho4U7+pnx5pBTGf+ICxLhYa4XanBCdrJTQHFxCWv5+QtxmQqILbbRXWKIUVAZ816Rl44j0Vd1QIdZccgfhR4Gfw5f+aOkDaEfGng48MC2e33lGjadcTYfSqRrci8p6SpkTVT74zR9KEvVNYacoB/MYmBpCcwXGdou65yDS9vMPdc9Kx4CWV5pDlm+h0AlolEG/LEDij9Qdku/cXJuUv9K1TyQIDAQAB" />
+<param name= "play_store_key" value= "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9zaSw/s4Or4TyebqxUAs3UWoWGwJsErJe2PvInCIHW/digf+r6bURqF3MtQNDFXtN86NterDFUrvhGDipUHchnQj9cMdHIabJVMygH9BQlHu2B8ZLvhJAEHtcTJ+ho4U7+pnx5pBTGf+ICxLhYa4XanBCdrJTQHFxCWv5+QtxmQqILbbRXWKIUVAZ816Rl44j0Vd1QIdZccgfhR4Gfw5f+aOkDaEfGng48MC2e33lGjadcTYfSqRrci8p6SpkTVT74zR9KEvVNYacoB/MYmBpCcwXGdou65yDS9vMPdc9Kx4CWV5pDlm+h0AlolEG/LEDij9Qdku/cXJuUv9K1TyQIDAQAB" />
 </gap:plugin>
 
 <gap:plugin name="cordova-plugin-googleplus" source="npm" spec="6.0.0">
