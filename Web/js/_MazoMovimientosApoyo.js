@@ -3,14 +3,22 @@
 
 function RegisterProduct() {
 
+	socket.emit('Consola',"METODO REGISTER");
 	var productInApp1;
 	
+	try
+	{
 	store.register({
 		id:    "android.test.purchased",
 		alias: "android.test.purchased",
 		type:  store.CONSUMABLE
 	});
-
+	}
+	catch(e)
+	{
+		socket.emit('Consola',"METODO REGISTER "+e.message);
+	}
+	
 	productInApp1 = store.get("android.test.purchased");
 
 	store.ready(function () {

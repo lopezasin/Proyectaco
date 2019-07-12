@@ -7397,6 +7397,7 @@ function onSocketTiendaDesdeServer(ArrayTienda)
 	MostrarDetalleTienda(Articulo,ArrayTienda)
 	if (Articulo=='Art010')
 	{
+		console.log("se mete")
 		RegisterProduct();
 	}
 	//console.log(index)
