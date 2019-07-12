@@ -32,7 +32,7 @@ function RegisterProduct() {
 	store.when("001").approved(function(res) {
 		//alert('Product purchased');
 		socket.emit('Consola',"PRODUCTO COMPRADO "+JSON.stringify(res));
-		product.finish();
+		res.finish();
 	});	
 	
 	store.when("001").canceled(function(res) {
