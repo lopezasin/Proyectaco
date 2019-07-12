@@ -33,6 +33,7 @@ function RegisterProduct() {
 		//alert('Product purchased');
 		socket.emit('Consola',"PRODUCTO COMPRADO");
 		socket.emit('Consola',"PRODUCTO COMPRADO "+res);
+		product.finish();
 	});	
 	
 	store.when("001").canceled(function(res) {
