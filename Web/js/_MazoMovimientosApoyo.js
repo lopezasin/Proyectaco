@@ -31,21 +31,18 @@ function RegisterProduct() {
 
 	store.when("001").approved(function(res) {
 		//alert('Product purchased');
-		socket.emit('Consola',"PRODUCTO COMPRADO");
-		socket.emit('Consola',"PRODUCTO COMPRADO "+res);
+		socket.emit('Consola',"PRODUCTO COMPRADO "+JSON.stringify(res));
 		product.finish();
 	});	
 	
 	store.when("001").canceled(function(res) {
 		//alert('Product purchased');
-		socket.emit('Consola',"PRODUCTO CANCELADO");
-		socket.emit('Consola',"PRODUCTO CANCELADO "+res);
+		socket.emit('Consola',"PRODUCTO CANCELADO "+JSON.stringify(res));
 	});		
 	
 	store.when("001").error(function(res) {
 		//alert('Product purchased');
-		socket.emit('Consola',"PRODUCTO ERROR");
-		socket.emit('Consola',"PRODUCTO ERROR "+res);
+		socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
 	});			
 
 	
