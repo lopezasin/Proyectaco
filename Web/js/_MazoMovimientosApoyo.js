@@ -9,7 +9,7 @@ function RegisterProduct() {
 	try
 	{
 	store.register({
-		id:    "android.test.purchased",
+		id:    "001",
 		alias: "android.test.purchased",
 		type:  store.CONSUMABLE
 	});
@@ -19,7 +19,7 @@ function RegisterProduct() {
 		socket.emit('Consola',"METODO REGISTER "+e.message);
 	}
 	
-	productInApp1 = store.get("android.test.purchased");
+	productInApp1 = store.get("001");
 
 	store.ready(function () {
         //console.log("STORE READY");
@@ -29,19 +29,19 @@ function RegisterProduct() {
 	
 	store.refresh();
 
-	store.when("android.test.purchased").approved(function(res) {
+	store.when("001").approved(function(res) {
 		//alert('Product purchased');
 		socket.emit('Consola',"PRODUCTO COMPRADO");
 		socket.emit('Consola',"PRODUCTO COMPRADO "+res);
 	});	
 	
-	store.when("android.test.purchased").canceled(function(res) {
+	store.when("001").canceled(function(res) {
 		//alert('Product purchased');
 		socket.emit('Consola',"PRODUCTO CANCELADO");
 		socket.emit('Consola',"PRODUCTO CANCELADO "+res);
 	});		
 	
-	store.when("android.test.purchased").error(function(res) {
+	store.when("001").error(function(res) {
 		//alert('Product purchased');
 		socket.emit('Consola',"PRODUCTO ERROR");
 		socket.emit('Consola',"PRODUCTO ERROR "+res);
