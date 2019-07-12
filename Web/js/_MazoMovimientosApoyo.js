@@ -1,5 +1,51 @@
 ﻿'use strict';
 
+
+function RegisterProduct() {
+
+	var productInApp1;
+	
+	store.register({
+		id:    "android.test.purchased",
+		alias: "android.test.purchased",
+		type:  store.CONSUMABLE
+	});
+
+	productInApp1 = store.get("android.test.purchased");
+
+	store.ready(function () {
+        //console.log("STORE READY");
+		socket.emit('Consola',"STORE READY");
+    }); 
+
+	store.when("android.test.purchased").approved(function(res) {
+		//alert('Product purchased');
+		socket.emit('Consola',"PRODUCTO COMPRADO");
+		socket.emit('Consola',"PRODUCTO COMPRADO "+res);
+	});	
+	
+	store.when("android.test.purchased").canceled(function(res) {
+		//alert('Product purchased');
+		socket.emit('Consola',"PRODUCTO CANCELADO");
+		socket.emit('Consola',"PRODUCTO CANCELADO "+res);
+	});		
+	
+	store.when("android.test.purchased").error(function(res) {
+		//alert('Product purchased');
+		socket.emit('Consola',"PRODUCTO ERROR");
+		socket.emit('Consola',"PRODUCTO ERROR "+res);
+	});			
+
+	store.refresh();
+    //   console.log(JSON.stringify(store));
+}
+
+
+function CompraGBits(){
+	store.order("android.test.purchased");
+}
+
+
 function EnviarAjax()
 {
 	var ObjetoTamano=showFileSize();

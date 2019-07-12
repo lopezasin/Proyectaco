@@ -3851,18 +3851,24 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 			d=document.getElementById('BotonComprar');
 			d.onclick =  function() { 
 				
-				var Auxiliar=""
-				
-				switch (Articulo)
+				if (Articulo!='Art010')
 				{
-					case Articulo : "Art001"
+					var Auxiliar=""
 					
-					var e=document.getElementById('txtCambiaNombre');
-					Auxiliar=e.value
+					switch (Articulo)
+					{
+						case Articulo : "Art001"
+						
+						var e=document.getElementById('txtCambiaNombre');
+						Auxiliar=e.value
+					}
+					
+					Comprar(Articulo,Auxiliar) 
 				}
-				
-				Comprar(Articulo,Auxiliar) 
-				
+				else
+				{
+					CompraGBits();	
+				}
 			}
 			
 
@@ -3943,6 +3949,11 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 
 				 document.getElementById("BotonComprar").disabled=!ActivarBotonCompra;
 
+			}
+			
+			if (Articulo=='Art010')
+			{
+				 document.getElementById("BotonComprar").disabled=false;
 			}
 		//var b=a.labels[0];
 			
@@ -7384,6 +7395,10 @@ function onSocketTiendaDesdeServer(ArrayTienda)
 	document.getElementById('tipooct').value=TipoOct;
 	
 	MostrarDetalleTienda(Articulo,ArrayTienda)
+	if (Articulo=='Art010')
+	{
+		RegisterProduct();
+	}
 	//console.log(index)
 	//console.log(slide)
 	//target.children
