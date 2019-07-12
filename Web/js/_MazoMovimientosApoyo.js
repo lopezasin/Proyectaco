@@ -23,8 +23,11 @@ function RegisterProduct() {
 
 	store.ready(function () {
         //console.log("STORE READY");
+		alert("Tienda lista")
 		socket.emit('Consola',"STORE READY");
     }); 
+	
+	store.refresh();
 
 	store.when("android.test.purchased").approved(function(res) {
 		//alert('Product purchased');
@@ -44,12 +47,13 @@ function RegisterProduct() {
 		socket.emit('Consola',"PRODUCTO ERROR "+res);
 	});			
 
-	store.refresh();
+	
     //   console.log(JSON.stringify(store));
 }
 
 
 function CompraGBits(){
+	socket.emit('Consola',"COMPRANDO");
 	store.order("android.test.purchased");
 }
 
