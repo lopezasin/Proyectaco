@@ -3,7 +3,7 @@
 
 function RegisterProduct() {
 
-	socket.emit('Consola',"METODO REGISTER");
+	//socket.emit('Consola',"METODO REGISTER");
 	var productInApp1;
 	
 	try
@@ -16,33 +16,36 @@ function RegisterProduct() {
 	}
 	catch(e)
 	{
-		socket.emit('Consola',"METODO REGISTER "+e.message);
+		//socket.emit('Consola',"METODO REGISTER "+e.message);
 	}
 	
 	productInApp1 = store.get("001");
 
 	store.ready(function () {
         //console.log("STORE READY");
-		alert("Tienda lista")
-		socket.emit('Consola',"STORE READY");
+		//alert("Tienda lista")
+		//socket.emit('Consola',"STORE READY");
     }); 
 	
 	store.refresh();
 
 	store.when("001").approved(function(res) {
 		//alert('Product purchased');
-		socket.emit('Consola',"PRODUCTO COMPRADO "+JSON.stringify(res));
+		document.getElementById("BotonComprar").disabled=true;
+		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,200);
+		OcultarDetalleTienda();
+		CerrarTienda();	
 		res.finish();
 	});	
 	
 	store.when("001").canceled(function(res) {
 		//alert('Product purchased');
-		socket.emit('Consola',"PRODUCTO CANCELADO "+JSON.stringify(res));
+		//socket.emit('Consola',"PRODUCTO CANCELADO "+JSON.stringify(res));
 	});		
 	
 	store.when("001").error(function(res) {
 		//alert('Product purchased');
-		socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
+		//socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
 	});			
 
 	
@@ -51,8 +54,15 @@ function RegisterProduct() {
 
 
 function CompraGBits(){
-	socket.emit('Consola',"COMPRANDO");
-	store.order("android.test.purchased");
+	//socket.emit('Consola',"COMPRANDO");
+	
+	//socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,200);
+	//				OcultarDetalleTienda();
+	//				CerrarTienda();	
+	if (PWMIBRSDCJ.length>0)
+	{
+		store.order("android.test.purchased");
+	}
 }
 
 

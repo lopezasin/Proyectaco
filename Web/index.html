@@ -780,6 +780,13 @@ function onDeviceReady() {
 		
 		window.open = cordova.InAppBrowser.open;
 		
+		
+		if( window.plugins )
+		{
+			document.getElementById("Sublogin1").style.visibility = "hidden";
+			document.getElementById("Sublogin2").style.visibility = "visible";
+		}
+		
 		Inicia();
 
 }
@@ -1697,6 +1704,7 @@ function onSignInFailure(googleUser) {
 <div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onClick="MCFSLYOMHE()" ><i class='fa fa-times'></i></div>
 		Inicia sesión con<br><br>
 		
+		<div id=Sublogin1 >
 		<script>
 		if( window.plugins || ieVersion()!=undefined ) //Para que también se meta si es IE
 		{
@@ -1718,7 +1726,16 @@ function onSignInFailure(googleUser) {
 		<button onClick="RSHJSKMBRP(2)" style="margin: 0 auto;width: 180px;"; ><i class='fa fa-facebook-official'></i> Facebook</button>
 		<button onClick="RSHJSKMBRP(3)" style="margin: 0 auto;width: 180px;"><i class='fa fa-instagram'></i> Instagram</button>
 		<button onClick="RSHJSKMBRP(4)" style="margin: 0 auto;width: 180px;"><i class='fa fa-twitter'></i> Twitter</button>		
+		</div>
 
+
+		<div id=Sublogin2 style="display:none">
+		<button onClick='RSHJSKMBRP(1)' style='margin: 0 auto;width: 180px;'><i class='fa fa-google'></i> Google</button>
+		<button onClick="RSHJSKMBRP(2)" style="margin: 0 auto;width: 180px;"; ><i class='fa fa-facebook-official'></i> Facebook</button>
+		<button onClick="RSHJSKMBRP(3)" style="margin: 0 auto;width: 180px;"><i class='fa fa-instagram'></i> Instagram</button>
+		<button onClick="RSHJSKMBRP(4)" style="margin: 0 auto;width: 180px;"><i class='fa fa-twitter'></i> Twitter</button>		
+		</div>		
+		
 		<br><br>	
 		<a onClick="Abre(1)" >política de privacidad</a>
 </div> 

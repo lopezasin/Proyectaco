@@ -2668,12 +2668,12 @@ function GVJKQGAAOQ()
 	
 	if(YUFGSLAHYS>0)
 	{
-		JGKQOAGEHK.y=60;
+		JGKQOAGEHK.y=60+70; //2.0.8054 +70 para cuando compres gbits se vea bien
 		JGKQOAGEHK.font='MiFuenteAmarilla';
 	}
 	else
 	{
-		JGKQOAGEHK.y=70;
+		JGKQOAGEHK.y=70+70; //2.0.8054 +70 para cuando compres gbits se vea bien
 		JGKQOAGEHK.font='MiFuenteRoja';
 	}
 	JGKQOAGEHK.fontSize=70;
@@ -3790,6 +3790,10 @@ function CalculaCaducidad(Articulo)
 
 		case 'Art009': //Cambia QHHQPXWFNG
 		TipoCaducidad=1; //EBAPPJFYSW			
+		break;		
+
+		case 'Art010': //Cambia QHHQPXWFNG
+		TipoCaducidad=1; //EBAPPJFYSW			
 		break;			
 	}	
 	
@@ -3898,6 +3902,7 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 				{
 					if (TipoCaducidad==2)
 					{
+
 						RPHWVBBGIM="¡Producto ya comprado!. Válido para "+ArrayCompras[u].ValidezCotos+ " cotos.";
 						ActivarBotonCompra=false;
 						//console.log(RPHWVBBGIM)
@@ -3912,7 +3917,15 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 						//{
 							var current_datetime = new Date(ArrayCompras[u].ValidezFecha) //ValidezFecha;
 							var formatted_date = appendLeadingZeroes(current_datetime.getDate()) +'/'+ appendLeadingZeroes(current_datetime.getMonth() + 1) + '/' +current_datetime.getFullYear() + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
-							RPHWVBBGIM="¡Producto ya comprado!. Cambios ilimitados hasta el "+formatted_date;
+							
+							if (ArrayCompras[u].Articulo=='Art010')
+							{
+								RPHWVBBGIM=""
+							}
+							else
+							{
+								RPHWVBBGIM="¡Producto ya comprado!. Cambios ilimitados hasta el "+formatted_date;
+							}
 						//}
 						ActivarBotonCompra=false;
 						
@@ -7061,6 +7074,7 @@ function setEventHandlers() { //ESTE
 
   socket.on('VOUQWLMKWW', CURCDCWNHB);
   socket.on('UAKKKJVTUK', DVCXGBTNWL);
+  socket.on('envia_incremento_gbits', onSocketIncrementoGbitsComprados)
   socket.on('BBDIWBRGXG', onSocketControl);
  
   socket.on('disconnect', RWOCHOBYJY);
@@ -7398,7 +7412,7 @@ function onSocketTiendaDesdeServer(ArrayTienda)
 	if (Articulo=='Art010')
 	{
 		console.log("se mete")
-		RegisterProduct();
+		//RegisterProduct();
 	}
 	//console.log(index)
 	//console.log(slide)

@@ -182,11 +182,25 @@ function appendLeadingZeroes(n){
   return n
 }
 
+function onSocketIncrementoGbitsComprados(GbitsComprados)
+{
+	var RPHWVBBGIM;
+	
+	YUFGSLAHYS=GbitsComprados;
+	//CerrarTienda();
+	//OcultarDetalleTienda();
+	Renderizar(true);
+	JQDGHVJGUW();	
+	
+	RPHWVBBGIM="¡Producto comprado correctamente!"
+	document.getElementById("lblArticuloYaComprado").textContent=RPHWVBBGIM	
+}
 
 	
 function onSocketArticuloComprado(Articulo,Precio,ValidezFecha, ValidezCotos)
 {
 	var TipoCaducidad;
+	var RPHWVBBGIM;
 	
 	YUFGSLAHYS=-Precio;
 	//CerrarTienda();
@@ -202,7 +216,14 @@ function onSocketArticuloComprado(Articulo,Precio,ValidezFecha, ValidezCotos)
 		var current_datetime = new Date(ValidezFecha) //ValidezFecha;
 		var formatted_date = appendLeadingZeroes(current_datetime.getDate()) +'/'+ appendLeadingZeroes(current_datetime.getMonth() + 1) + '/' +current_datetime.getFullYear() + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
 
-		RPHWVBBGIM="¡Producto comprado correctamente!. Cambios ilimitados hasta el "+formatted_date;
+		if (Articulo=='Art010')
+		{
+			RPHWVBBGIM=""
+		}	
+		else
+		{
+			RPHWVBBGIM="¡Producto comprado correctamente!. Cambios ilimitados hasta el "+formatted_date;
+		}
 	}
 	else
 	{
