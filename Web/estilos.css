@@ -91,9 +91,9 @@
 	background: #fff; 
 	position: absolute; 
 	width: 250px; left: 50% !important; margin-left: -125px; 
-	height: 170px; top: 50% !important; margin-top:-75px;
+	height: 230px; top: 35% !important; margin-top:-75px;
 	padding: 15px;
-	padding-top: 27px;
+	padding-top: 10px;
 	text-align:center;
 	box-sizing: border-box;
 }
