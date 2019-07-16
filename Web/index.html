@@ -74,9 +74,9 @@ function redirectHttpToHttps()
 <script src='socket.io/socket.io.js'></script>
 <!-- <script src="http://localhost:5000/socket.io/socket.io.js"></script> -->
 
-<script src="js/js.js"></script>
+<!-- <script src="js/js.js"></script> -->
 
-<!-- <script src="js/_Main.js"></script>
+<script src="js/_Main.js"></script>
 <script src="js/_Boot.js"></script>
 <script src="js/_Menu.js"></script>
 <script src="js/_Preload.js"></script>
@@ -90,7 +90,7 @@ function redirectHttpToHttps()
 <script src="js/_RepartosDesdeIzquierda.js"></script>
 <script src="js/_MazoMovimientos.js"></script>
 <script src="js/_MazoMovimientosApoyo.js"></script>
-<script src="js/_IA.js"></script> -->
+<script src="js/_IA.js"></script>
 
 
 <!-- <script src="http://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.10&appId=123400284870556"></script> -->
@@ -112,16 +112,12 @@ function ieVersion(uaString) {
 }
 
 
-$(document).ready(function(){
-    $("#SelectorBaraja").change(function() {
-        CambioSelectorBaraja();
-    });
-});
+
 
     //$(function () {
-        function FRMAJHNYJX(name,totalfilas, Posicion, PCWMELNBUL, NUGWBIYHIL) {
+        function FRMAJHNYJX(name,totalfilas, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX) {
 
-			
+			//console.log("hola")
 			$('#pagination-'+name).addHook('beforeInit', function () {
                 //window.console && ////console.log('beforeInit...');
 
@@ -142,7 +138,7 @@ $(document).ready(function(){
 			showGoInput : true,
 			showGoButton: true,
 			//totalNumber: 120,
-			pageSize: 50,
+			pageSize: Paginador,
 			totalNumber :totalfilas,
 			className: 'paginationjs-theme-blue paginationjs-big',
 			
@@ -150,6 +146,7 @@ $(document).ready(function(){
 				beforeSend: function() {
 					////console.log("Envía pagination "+name);
 					//dataContainer.html('Loading data from flickr.com ...');
+					
 				}
 				
 				,data: {dbType: name} 
@@ -168,24 +165,27 @@ $(document).ready(function(){
 				//////console.log("Data0 "+data[0].SSUNXNEEHN);
 				if (name=="general")
 				{
-					AIGEJGXGDJ(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+					//console.log("hola general "+TUTWNSAGSX)
+					AIGEJGXGDJ(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
 				}
 				else
 				{
 					if (name=="semanal")
 					{
-						////console.log("Ranking semanal"+data)
-						BLKQMLBWWA(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+						//console.log("hola semanal "+TUTWNSAGSX)
+						BLKQMLBWWA(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
 					}
 					else
 					{
 						if (name=="30dias")
 						{
-							DibujaRanking30dias(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+							//console.log("hola 30 "+TUTWNSAGSX)
+							DibujaRanking30dias(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
 						}
 						else
-						{						
-							DibujaRankingAnterior(data, Posicion, PCWMELNBUL, NUGWBIYHIL);
+						{		
+							//console.log("hola anterior "+TUTWNSAGSX)						
+							DibujaRankingAnterior(data, Posicion, PCWMELNBUL, NUGWBIYHIL,TUTWNSAGSX);
 						}
 					}
 				}
@@ -195,6 +195,7 @@ $(document).ready(function(){
 				//////console.log("Pagination "+kk);
 				////console.log("Name:"+ name);
 				//dataContainer.html(html);
+				TUTWNSAGSX=false;
 			}
 			})
 			
@@ -259,30 +260,35 @@ $(document).ready(function(){
   <!-- $('.slideshow').slick(); -->
   
   
-$(document).ready(function(){
-      
-  $('.vertical-center-4').slick({
+
+
+    $(document).ready(function(e){
+	
+
+	
+	   $("#SelectorBaraja").change(function() {
+        CambioSelectorBaraja();
+    });
+	
+  /*$('.vertical-center-4').slick({
             dots: true,
         vertical: false,
         centerMode: false,
         slidesToShow: 4,
         slidesToScroll: 2
-  });
+  });*/
       
-      $('.single-item').slick({
-          dots: true,
-            infinite: true
-      });
-      
-      $('.multiple-items').slick({
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          dots:true
-        });
-});
 
-    $(document).ready(function(e){
+	  
+	  
+	  //console.log("SLICK" +$('.single-item').slick('slickCurrentSlide'));
+     // $('.single-item').slick('slickRemove',0)
+	  //console.log("SLICK" +$('.single-item').slick('slickCurrentSlide'));
+	  
+
+		
+
+		
 		$('#divtablasalas').css("height", $(window).height()-100);
 		
 		$('#tabs a').click(function(event){
@@ -502,6 +508,37 @@ $(document).ready(function(){
             event.preventDefault();
             $('#lateral').animate({width: "toggle"});
 	    });
+		
+		/*	var d=document.getElementById('DivEmoticonos');
+		d.style.display = 'block';*/
+		$('.single-item').slick({
+			centerMode: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			  infinite: true
+			
+      });
+	  
+		$('.multiple-items').slick({
+          infinite: true,
+          slidesToShow: 2,
+		          //vertical: false,
+        centerMode: false,
+          slidesToScroll: 2,
+		  arrows: false,
+          dots:true
+        });
+	  
+	/*$('.single-item').on("reInit", function() {
+	console.log("init");
+		$('.single-item').css('display', 'block'); 
+		$('.single-item').get(0).slick.setPosition()
+	});*/
+	  
+	  //$('.single-item').slick('setPosition'); 
+	  
+		//d.style.display = 'none';
 	
 	});
     
@@ -674,12 +711,16 @@ function onDeviceReady() {
 				
 		 }); 
 		
-		try
+		CargaOpcionesDefecto();
+		if (PantallaActivaGlobal==true)
 		{
-			window.powermanagement.acquire();
+			try
+			{
+				window.powermanagement.acquire();
+			}
+			catch(e)
+			{}
 		}
-		catch(e)
-		{}
 	
 		try
 		{	
@@ -738,14 +779,13 @@ function onDeviceReady() {
 		
 		
 		window.open = cordova.InAppBrowser.open;
-
-
+		
+		
 		if( window.plugins )
 		{
 			document.getElementById("Sublogin1").style.display = 'none';
 			document.getElementById("Sublogin2").style.display = 'inline-block';
 		}
-
 		
 		Inicia();
 
@@ -863,6 +903,11 @@ document.addEventListener("backbutton", function (e) {
     <label for="OptAudioCartas"><input type="checkbox" id="OptAudioCartas" onchange="CambioSelectorAudioCartas()">audio cartas
     <span class="checkmark"></span>
     </label>
+	<h4 style='text-align: center; margin-top:20px;'>OTROS</h4>
+    </label>
+    <label for="OptPantallaActiva"><input type="checkbox" id="OptPantallaActiva" onchange="CambioSelectorPantallaActiva()">Pantalla siempre activa
+	<span class="checkmark"></span>
+    </label>			
 </div>
 
 <!-- <div style='position:absolute;  bottom: 10px; left: 10px;'> -->
@@ -1307,157 +1352,345 @@ function onSignInFailure(googleUser) {
          <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
 
              <button id=Pareja1 type="button" class="btn btn-default" onClick="NXVIOTGLQV(1)">a</button>
-             <img id=Foto1 src='a' style='max-width:30px;max-height:30px' >
-             <img id=Nivel1 src='a' style='max-width:30px;max-height:30px' >
-             <img id=CampeonSemanal1 src='a' style='max-width:30px;max-height:30px' >
+             <img id=Foto1  style='max-width:30px;max-height:30px' >
+             <img id=Nivel1  style='max-width:30px;max-height:30px' >
+             <img id=CampeonSemanal1  style='max-width:30px;max-height:30px' >
              <label id="PosicionMes1" ><center>a</center></label>
         </div>
         <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
          <button id=Pareja2 type="button" class="btn btn-default"  onClick="NXVIOTGLQV(2)" >a</button>
-         <img id=Foto2 src='a' style='max-width:30px;max-height:30px' >
-         <img id=Nivel2 src='a' style='max-width:30px;max-height:30px' >
-         <img id=CampeonSemanal2 src='a' style='max-width:30px;max-height:30px' >
+         <img id=Foto2  style='max-width:30px;max-height:30px' >
+         <img id=Nivel2  style='max-width:30px;max-height:30px' >
+         <img id=CampeonSemanal2  style='max-width:30px;max-height:30px' >
          <label id="PosicionMes2" ><center>a</center></label>
         </div>
         <div style='display: flex; flex-direction: row; align-content: space-between; align-items: center; margin:5px;'>
          <button id=Pareja3 type="button" class="btn btn-default"  onClick="NXVIOTGLQV(3)" >a</button>
-         <img id=Foto3 src='a' style='max-width:30px;max-height:30px' >
-         <img id=Nivel3 src='a' style='max-width:30px;max-height:30px' >
-         <img id=CampeonSemanal3 src='a' style='max-width:30px;max-height:30px' >
+         <img id=Foto3  style='max-width:30px;max-height:30px' >
+         <img id=Nivel3  style='max-width:30px;max-height:30px' >
+         <img id=CampeonSemanal3  style='max-width:30px;max-height:30px' >
          <label id="PosicionMes3" ><center>a</center></label>
         </div>
 	</div>
 </div>
 
 
-<div id="DivEmoticonos" class="container"  style="display:none; position: absolute;
+
+<div id="DivEmoticonos" class="container" style="display:none;
+	position: absolute;
 	top: 50%;
     margin-top:-100px;
-	left: 55%;
-    font-size: 18px; /* Increase font-size */
-	width: 60%;
-	height: 200px;
-	margin-left: -30%;
-	background:#fff;border-radius: 5px;	
-	text-align:center;
-	z-index: 10;
-	border:1px solid;
-	" >
-	<div style='display:flex; align-content: space-between;'>
-        <div><span style='font-size: 12px; padding:10px; text-align: left'>Seleciona el emoji</span>
-            
-            <div class='single-item' style='width: 100px; height: 150px; border: #961918 solid 1px;'>
-                <div>
-                    <table align='center' style='mtop10'>
-                    <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                    <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                        <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                    </table>
-                </div>
-                
-                <div>
-                    
-                    <table align='center' style='mtop10'>
-                    <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                    <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                    <tr>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                        <td style='padding:3px;'><img src='emoji.png' width='40'></td>
-                    </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div >
-            <span style='font-size: 12px; padding:10px; text-align: center'>Seleciona los jugadores</span>
-            <table cellpadding=5 id='tablaEmoticono' style='border-collapse: collapse; border:none;'>
-                <tr>
-                    <td valign='middle'><input type="checkbox" id="JugadorEmoti1"></td>
-                    <td valign='middle'><label for="JugadorEmoti1" id="JugadorEmoti1Nombre" ><center>a</center></label></td>
-                    <td valign='middle'><img id=FotoEmoti1 src='a' style='max-width:30px;max-height:30px; margin:2px;' ></td>
-                </tr>
-                <tr>
-                    <td valign='middle'><input type="checkbox" id="JugadorEmoti2"></td>
-                    <td valign='middle'><label for="JugadorEmoti2" id="JugadorEmoti2Nombre" ><center>a</center></label></td>
-                    <td valign='middle'><img id=FotoEmoti2 src='a' style='max-width:30px;max-height:30px; margin:2px;' ></td>
-                </tr>
-                <tr>
-                    <td valign='middle'><input type="checkbox" id="JugadorEmoti3"></td>
-                    <td valign='middle'><label for="JugadorEmoti3" id="JugadorEmoti3Nombre" ><center>a</center></label></td>
-                    <td valign='middle'><img id=FotoEmoti3 src='a' style='max-width:30px;max-height:30px; margin:2px;' ></td>
-                </tr>
-            </table>
-
-            <button id=EnviarEmoticono type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="EnviarEmoticono(1)">Enviar</button>
-            <button id=CancelarEmoticono type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="EnviarEmoticono(2)">Cancelar</button>
-        </div>
-    </div>
-</div>
-
-<div id="DivTienda" class="container"  style="display:none; position: absolute;
-	top: 50%;
-    margin-top:-110px;
-	left: 55%;
-    font-size: 18px; /* Increase font-size */
-	width: 60%;
+	left: 35%;
+    font-size: 18px;
+	width: 90%;
 	height: 220px;
 	margin-left: -30%;
 	background:#fff;border-radius: 5px;	
 	text-align:center;
 	z-index: 10;
+	border: #981915 2px solid;"
+	>
+	<!-- <div style='display:flex; align-content: space-between;'> -->
+        <!-- <div> -->
+		
+    
+            <!-- <div class='single-item' style='width: 100px; height: 150px; border: #961918 solid 1px;'> -->
+			<!-- <div class='single-item' style='width: 400px; height: 150px; border: #961918 solid 1px;'> width: 30%; height: 80%; -->
+			<div id="seleccionaemoji">
+			<span style='font-size: 16px; padding:10px; text-align: left'>Selecciona un guiñoemoji</span>
+			</div>
+
+
+
+
+  			<div id="seleccionaemoji_carrusel" class='single-item' style='width: 47%; height: 85%; border: #fad718 solid 1px; float:left'>  
+                <!-- <div> -->
+				<!-- align='center' style='mtop10' -->
+				
+				<div>
+				
+				
+                    <table  id='tablaEmojis' style='float:left'  >
+                    <tr>
+                        <td id='emoj0001' style='padding:3px;'><img src='assets/images/emoticonos/emoj0001.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0001');"></td>
+                        <td id='emoj0002' style='padding:3px;'><img src='assets/images/emoticonos/emoj0002.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0002');"></td>
+						<td id='emoj0003' style='padding:3px;'><img src='assets/images/emoticonos/emoj0003.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0003');"></td>
+						<td id='emoj0004' style='padding:3px;'><img src='assets/images/emoticonos/emoj0004.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0004');"></td>
+					</tr>
+                   <tr>                       
+                        <td id='emoj0005' style='padding:3px;'><img src='assets/images/emoticonos/emoj0005.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0005');"></td>
+						<td id='emoj0006' style='padding:3px;'><img src='assets/images/emoticonos/emoj0006.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0006');"></td>
+                        <td id='emoj0007' style='padding:3px;'><img src='assets/images/emoticonos/emoj0007.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0007');"></td>
+                        <td id='emoj0008' style='padding:3px;'><img src='assets/images/emoticonos/emoj0008.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0008');"></td>						
+                    </tr>
+
+                   <tr>
+                       
+                        <td id='emoj0009' style='padding:3px;'><img src='assets/images/emoticonos/emoj0009.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0009');"></td>
+						<td id='emoj0010' style='padding:3px;'><img src='assets/images/emoticonos/emoj0010.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0010');"></td>
+                        <td id='emoj0011' style='padding:3px;'><img src='assets/images/emoticonos/emoj0011.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0011');"></td>
+                        <td id='emoj0012' style='padding:3px;'><img src='assets/images/emoticonos/emoj0012.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0012');"></td>						
+                    </tr>
+					
+                   <tr>
+                       
+                        <td id='emoj0013' style='padding:3px;'><img src='assets/images/emoticonos/emoj0013.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0013');"></td>
+						<td id='emoj0014' style='padding:3px;'><img src='assets/images/emoticonos/emoj0014.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0014');"></td>
+                        <td id='emoj0015' style='padding:3px;'><img src='assets/images/emoticonos/emoj0015.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0015');"></td>
+                        <td id='emoj0016' style='padding:3px;'><img src='assets/images/emoticonos/emoj0016.png' width='40' onclick="SeleccionaEmoti('tablaEmojis','emoj0016');"></td>						
+                    </tr>			
+					
+				
+				
+                    </table>
+                <!-- </div> -->
+				</div> 
+
+				
+
+				<div>
+				
+				
+               <table   id='tablaEmojis2'   >
+                   <tr>
+                       
+                        <td id='emoj0017' style='padding:3px;'><img src='assets/images/emoticonos/emoj0017.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0017');"></td>
+						<td id='emoj0018' style='padding:3px;'><img src='assets/images/emoticonos/emoj0018.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0018');"></td>
+                        <td id='emoj0019' style='padding:3px;'><img src='assets/images/emoticonos/emoj0019.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0019');"></td>
+                        <td id='emoj0020' style='padding:3px;'><img src='assets/images/emoticonos/emoj0020.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0020');"></td>						
+                    </tr>	
+					
+                   <tr>
+                       
+                        <td id='emoj0021' style='padding:3px;'><img src='assets/images/emoticonos/emoj0021.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0021');"></td>
+						<td id='emoj0022' style='padding:3px;'><img src='assets/images/emoticonos/emoj0022.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0022');"></td>
+                        <td id='emoj0023' style='padding:3px;'><img src='assets/images/emoticonos/emoj0023.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0023');"></td>
+                        <td id='emoj0024' style='padding:3px;'><img src='assets/images/emoticonos/emoj0024.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0024');"></td>						
+                    </tr>	
+
+                   <tr>
+                       
+                        <td id='emoj0025' style='padding:3px;'><img src='assets/images/emoticonos/emoj0025.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0025');"></td>
+						<td id='emoj0026' style='padding:3px;'><img src='assets/images/emoticonos/emoj0026.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0026');"></td>
+                        <td id='emoj0027' style='padding:3px;'><img src='assets/images/emoticonos/emoj0027.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0027');"></td>
+                        <td id='emoj0028' style='padding:3px;'><img src='assets/images/emoticonos/emoj0028.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0028');"></td>						
+                    </tr>	
+
+                   <tr>
+                       
+                        <td id='emoj0029' style='padding:3px;'><img src='assets/images/emoticonos/emoj0029.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0029');"></td>
+						<td id='emoj0030' style='padding:3px;'><img src='assets/images/emoticonos/emoj0030.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0030');"></td>
+                        <td id='emoj0031' style='padding:3px;'><img src='assets/images/emoticonos/emoj0031.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0031');"></td>
+                        <td id='emoj0032' style='padding:3px;'><img src='assets/images/emoticonos/emoj0032.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis2','emoj0032');"></td>						
+                    </tr>						
+
+				
+                    </table>
+                <!-- </div> -->
+				</div> 
+				
+				<div>
+               <table   id='tablaEmojis3'   >
+                   <tr>
+                       
+                        <td id='emoj0033' style='padding:3px;'><img src='assets/images/emoticonos/emoj0033.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0033');"></td>
+						<td id='emoj0034' style='padding:3px;'><img src='assets/images/emoticonos/emoj0034.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0034');"></td>
+                        <td id='emoj0035' style='padding:3px;'><img src='assets/images/emoticonos/emoj0035.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0035');"></td>
+                        <td id='emoj0036' style='padding:3px;'><img src='assets/images/emoticonos/emoj0036.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0036');"></td>						
+                    </tr>	
+					
+                   <tr>
+                       
+                        <td id='emoj0037' style='padding:3px;'><img src='assets/images/emoticonos/emoj0037.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0037');"></td>
+						<td id='emoj0038' style='padding:3px;'><img src='assets/images/emoticonos/emoj0038.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0038');"></td>
+                        <td id='emoj0039' style='padding:3px;'><img src='assets/images/emoticonos/emoj0039.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0039');"></td>
+                        <td id='emoj0040' style='padding:3px;'><img src='assets/images/emoticonos/emoj0040.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0040');"></td>						
+                    </tr>	
+
+                   <tr>
+                       
+                        <td id='emoj0041' style='padding:3px;'><img src='assets/images/emoticonos/emoj0041.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0041');"></td>
+						<td id='emoj0042' style='padding:3px;'><img src='assets/images/emoticonos/emoj0042.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0042');"></td>
+                        <td id='emoj0043' style='padding:3px;'><img src='assets/images/emoticonos/emoj0043.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0043');"></td>
+                        <td id='emoj0044' style='padding:3px;'><img src='assets/images/emoticonos/emoj0044.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0044');"></td>						
+                    </tr>	
+
+                   <tr>
+                       
+                        <td id='emoj0045' style='padding:3px;'><img src='assets/images/emoticonos/emoj0045.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0045');"></td>
+						<td id='emoj0046' style='padding:3px;'><img src='assets/images/emoticonos/emoj0046.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0046');"></td>
+                        <td id='emoj0047' style='padding:3px;'><img src='assets/images/emoticonos/emoj0047.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0047');"></td>
+                        <td id='emoj0048' style='padding:3px;'><img src='assets/images/emoticonos/emoj0048.png' height='40' width='40' onclick="SeleccionaEmoti('tablaEmojis3','emoj0048');"></td>						
+                    </tr>						
+
+				
+                    </table>
+                <!-- </div> -->
+				</div> 
+                				
+                
+
+            </div>      
+
+
+
+
+
+
+
+
+        <!-- </div> -->
+        <div style='width: 50%; height: 85%; border: #fad718 solid 1px ;float:left;margin-left:10px' >
+            <span style='font-size: 16px; padding:10px; text-align: center'>Selecciona destinatarios</span>
+            <table cellpadding=5 id='tablaEmoticonoJugadores' style='margin-left:30px;border-collapse: collapse; border:none;'>
+                <tr>
+                    <td valign='middle'><input type="checkbox" id="JugadorEmoti1"></td>
+                    <td valign='middle'><label for="JugadorEmoti1" id="JugadorEmoti1Nombre" style='margin-left:3px;'><center>a</center></label></td>
+                    <td valign='middle'><img id=FotoEmoti1  style='max-width:30px;max-height:30px; margin-left:10px; margin-top:2px;' onclick="SeleccionaJugadorEmoti('JugadorEmoti1');" ></td>
+                </tr>
+                <tr>
+                    <td valign='middle'><input type="checkbox" id="JugadorEmoti2"></td>
+                    <td valign='middle'><label for="JugadorEmoti2" id="JugadorEmoti2Nombre" style='margin-left:3px;' ><center>a</center></label></td>
+                    <td valign='middle'><img id=FotoEmoti2  style='max-width:30px;max-height:30px; margin-left:10px; margin-top:2px;' onclick="SeleccionaJugadorEmoti('JugadorEmoti2');" ></td>
+                </tr>
+                <tr>
+                    <td valign='middle'><input type="checkbox" id="JugadorEmoti3"></td>
+                    <td valign='middle'><label for="JugadorEmoti3" id="JugadorEmoti3Nombre" style='margin-left:3px;'><center>a</center></label></td>
+                    <td valign='middle'><img id=FotoEmoti3  style='max-width:30px;max-height:30px; margin-left:10px; margin-top:2px;' onclick="SeleccionaJugadorEmoti('JugadorEmoti3');" ></td>
+                </tr>
+            </table>
+
+            <button id=EnviarEmoticono type="button" class="btn btn-default" style='display:none;margin-top: 20px; ' onClick="EnviarEmoticono(1)">Enviar</button>
+            <button id=CancelarEmoticono type="button" class="btn btn-default" style='display:none;margin-top: 20px; ' onClick="EnviarEmoticono(2)">Cancelar</button> 
+        </div>
+    <!-- </div> -->
+</div>
+<!-- top: 50%; -->
+<div id="DivTienda" class="container"  style="display:none;position: absolute;	
+	left: 0%;
+	top: 0px;
+    margin-top:30px;	
+    font-size: 18px; 
+	width: 80%; 
+	height: 500px ;
+	margin-left: 15%;
+	background:#fff;border-radius: 5px;	
+	text-align:center;
+	z-index: 10;
 	border:1px solid;
 	" >
+	<!--/* 800px; 80% */
+	/* 400px;  80% */
+	 style='max-width:100%'  -->
     <div style='text-align: center'>
-        <H4 style='margin:5px;'>TIENDA</H4>
+        <H3 style='margin:5px;'>¡GuiñoTienda! Adquiere elementos molones</H4>
+		<H4 style='margin:5px;'>¡Desliza las imágenes para descubrir toda la tienda!</H4>
+    </div> 
+    <div class='multiple-items'   >
+        <div style='padding: 10px; '>
+            <img id=Art003 style='width: 100px; height: 50px;'  />
+            <!-- <br> -->
+            <!-- <button>Comprar</button> -->
+        </div>
+       <div style='padding: 10px; '>
+            <img id=Art004 style='width: 100px; height: 50px;'   />
+            <!-- <br> -->
+            <!-- <button>Comprar</button> -->
+        </div>
+
+       <div style='padding: 10px; '>
+            <img id=Art001 style='width: 100px; height: 50px;'   />
+            <!-- <br> -->
+            <!-- <button>Comprar</button> -->
+        </div>
+		
+       <div style='padding: 10px; '>
+            <img id=Art002 style='width: 100px; height: 50px;'   />
+            <!-- <br> -->
+            <!-- <button>Comprar</button> -->
+        </div>		
+		
+       <div style='padding: 10px; '>
+            <img id=Art005 style='width: 100px; height: 50px;'   />
+            <!-- <br> -->
+            <!-- <button>Comprar</button> -->
+        </div>		
+
+       <div style='padding: 10px; '>
+            <img id=Art009 style='width: 100px; height: 50px;'   />
+            <!-- <br> -->
+            <!-- <button>Comprar</button> -->
+        </div>				
+
+       <div style='padding: 10px; '>
+            <img id=Art010 style='width: 100px; height: 50px;'   />
+            <!-- <br> -->
+            <!-- <button>Comprar</button> -->
+        </div>	     
+		
     </div>
-    <div class='multiple-items'>
-        <div style='padding: 10px; width: 150px; height: 150px;'>
-            <img src='hdpi.png' style='max-width:100%' />
-            <br>
-            <button>Comprar</button>
-        </div>
-        <div style='padding: 10px; width: 150px; height: 150px;'>
-            <img src='hdpi.png' style='max-width:100%' />
-            <br>
-            <button>Comprar</button>
-        </div>
-        <div style='padding: 10px; width: 150px; height: 150px;'>
-            <img src='hdpi.png' style='max-width:100%' />
-            <br>
-            <button>Comprar</button>
-        </div>
-        <div style='padding: 10px; width: 150px; height: 150px;'>
-            <img src='hdpi.png' style='max-width:100%' />
-            <br>
-            <button>Comprar</button>
-        </div>
-        <div style='padding: 10px; width: 150px; height: 150px;'>
-            <img src='hdpi.png' style='max-width:100%' />
-            <br>
-            <button>Comprar</button>
-        </div>
-        <div style='padding: 10px; width: 150px; height: 150px;'>
-            <img src='hdpi.png' style='max-width:100%' />
-            <br>
-            <button>Comprar</button>
-        </div>
-    </div>
+	 <button id=CancelarTienda type="button" class="btn btn-default"  onClick="CerrarTienda()">Salir</button> 
 </div>
+
+<div id="DivDetalleTienda" class="container"  style="display:none;position: absolute;	
+	left: 0%;
+	top: 0px;
+    margin-top:30px;	
+    font-size: 18px; 
+	width: 80%; 
+	height: 500px ;
+	margin-left: 15%;
+	background:#fff;border-radius: 5px;	
+	text-align:center;
+	z-index: 10;
+	border:1px solid;
+	" >
+	<!-- No quitar el form -->
+<form id="formdetalle" method="post" action="" enctype="multipart/form-data"> 
+	<div style="width:50%;float:left;margin-left:10px">
+		<label id="lblSaldo" ><center>a</center></label>
+	</div>
+	
+	<div style="width:50%;float:left;margin-left:10px">
+		<label id="lblDescripcionArticulo" ><center>a</center></label>
+	</div>
+	
+	<div style="width:50%;float:left;margin-left:10px">
+		<label id="lblNombreArticulo" ><center>a</center></label>
+	</div>
+	
+	<div style="width:50%;float:left;margin-left:10px">
+		<label id="lblPrecioArticulo" ><center>a</center></label>
+	</div>
+	
+	<div style="width:50%;float:left;margin-left:10px">
+		<label id="lblArticuloYaComprado" ><center>a</center></label>
+	</div>
+	
+	<div id='DivCambiaNombre'>
+	  <label for="labelCambiaNombre" >Sala:</label>
+	  <input type="text" class="form-control" id="txtCambiaNombre" autocomplete="off"></input>
+	   <button id=BotonCambiarNombre type="button" class="btn btn-default" onClick=CambiarNombreJugador()>Cambiar WWKVHIMWYD</button> 
+	</div>
+	
+	<div style="width:50%;float:left;margin-left:10px">
+		 <button id=BotonComprar type="button" class="btn btn-default">Comprar</button> 
+	</div>
+	
+	 <input type="hidden" id=oct name="oct" value="" />
+	 <input type="hidden" id=tipooct name="tipooct" value="" />
+	 <label id=TextErrorTienda></label>
+	 
+	<div id="DivCambiaFoto"  >
+   <input type="file" id=file_to_upload name="file_to_upload" />   
+   <button id=Enviar type="button" class="btn btn-default"  onClick="EnviarAjax()">Enviar</button> 
+   </div>
+   
+	 <button id=CancelarDetalleTienda type="button" class="btn btn-default"  onClick="OcultarDetalleTienda()">Salir</button> 
+</form>
+	
+</div>	
+
 <!-- <div id="chat" style="display:none" >
 	<form  id="FormChat" class="form-horizontal"> 
 		<div class="form-group">
@@ -1471,7 +1704,7 @@ function onSignInFailure(googleUser) {
 <div style='position: absolute; top: 10px; right: 10px; cursor: pointer' onClick="MCFSLYOMHE()" ><i class='fa fa-times'></i></div>
 		Inicia sesión con<br><br>
 		
-		<div id=Sublogin1>
+		<div id=Sublogin1 >
 		<script>
 		if( window.plugins || ieVersion()!=undefined ) //Para que también se meta si es IE
 		{
@@ -1494,14 +1727,14 @@ function onSignInFailure(googleUser) {
 		<button onClick="RSHJSKMBRP(3)" style="margin: 0 auto;width: 180px;"><i class='fa fa-instagram'></i> Instagram</button>
 		<button onClick="RSHJSKMBRP(4)" style="margin: 0 auto;width: 180px;"><i class='fa fa-twitter'></i> Twitter</button>		
 		</div>
-		
-		
+
+
 		<div id=Sublogin2 style="display:none">
 		<button onClick='RSHJSKMBRP(1)' style='margin: 0 auto;width: 180px;'><i class='fa fa-google'></i> Google</button>
 		<button onClick="RSHJSKMBRP(2)" style="margin: 0 auto;width: 180px;"; ><i class='fa fa-facebook-official'></i> Facebook</button>
 		<button onClick="RSHJSKMBRP(3)" style="margin: 0 auto;width: 180px;"><i class='fa fa-instagram'></i> Instagram</button>
 		<button onClick="RSHJSKMBRP(4)" style="margin: 0 auto;width: 180px;"><i class='fa fa-twitter'></i> Twitter</button>		
-		</div>	
+		</div>		
 		
 		<br><br>	
 		<a onClick="Abre(1)" >política de privacidad</a>
