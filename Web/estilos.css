@@ -1,0 +1,447 @@
+
+    #lateral { padding: 10px }
+    
+    #lateral select { padding:10px; border: #000 solid 1px; border-radius: 5px; width:100%; box-sizing: border-box; }
+    
+    #lateral label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+#lateral label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+#lateral label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+#lateral label input:checked ~ .checkmark {
+  background-color: #961918;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+#lateral label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+#lateral label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+    .zoom{
+        /* Aumentamos la anchura y altura durante 2 segundos */
+        transition: width 2s, height 2s, transform 1s;
+        -moz-transition: width 2s, height 2s, -moz-transform 1s;
+        -webkit-transition: width 2s, height 2s, -webkit-transform 1s;
+        -o-transition: width 2s, height 2s,-o-transform 1s;
+    }
+    .zoom:hover{
+        /* tranformamos el elemento al pasar el mouse por encima al doble de
+           su tamaño con scale(2). */
+        transform : scale(3);
+        -moz-transform : scale(3);      /* Firefox */
+        -webkit-transform : scale(3);   /* Chrome - Safari */
+        -o-transform : scale(3);        /* Opera */
+    }
+	
+	
+#Login { 
+	background: #fff; 
+	position: absolute; 
+	width: 250px; left: 50% !important; margin-left: -125px; 
+	height: 230px; top: 35% !important; margin-top:-75px;
+	padding: 15px;
+	padding-top: 10px;
+	text-align:center;
+	box-sizing: border-box;
+}
+
+button { width: 100px; padding: 5px; box-sizing: border-box; border-radius: 5px; background: #333; color:#fff; margin: 2px; } 
+
+.redondeado1em { -webkit-border-radius: 1em; -moz-border-radius: 1em; -ms-border-radius: 1em; -o-border-radius: 1em; border-radius: 1em; }
+
+.table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+	position: absolute; 
+	background: #fff; 
+	width: 400px; left: 40% !important; margin-left: -125px; 
+	height: 150px; top: 50% !important; margin-top:-100px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+
+
+#FormCrearSala {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+	position: absolute; 
+	background: #fff; 
+	width: 400px; left: 40% !important; margin-left: -125px; 
+	height: 220px; top: 50% !important; margin-top:-100px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+
+#FormPasswordSala{
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+	position: absolute; 
+	background: #fff; 
+	width: 400px; left: 40% !important; margin-left: -125px; 
+	height: 220px; top: 50% !important; margin-top:-100px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+
+
+
+#InputSalas {
+
+	font-size: 16px; /* Increase font-size */
+
+	width: 200; 
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#BtnCrearSalas {
+
+	font-size: 16px; /* Increase font-size */
+	
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+
+#BtnCerrarSalas {
+
+	font-size: 16px; /* Increase font-size */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#TablaSalas {
+    border-collapse: collapse; /* Collapse borders */	
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+	width: 100%;
+	background: #fff;
+	
+}
+
+#TablaSalas th, #TablaSalas td {
+    text-align: left; /* Left-align text */
+    padding: 7px; /* Add padding */
+	font-size: 13px;
+}
+
+#TablaSalas tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd; 
+}
+
+#TablaSalas tr.header, #TablaSalas tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+<!-- #TablaClasificacion {
+    border-collapse: collapse; /* Collapse borders */	
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 11px; /* Increase font-size */
+	width: 100%;
+	background: #fff;
+	border-spacing: 565em;
+} -->
+
+input:focus { outline:none; }
+
+#DivClasificacionContenedor {
+	position: absolute;
+	width: 900px;
+	height: 600px;
+	left: 50%;
+	margin-left: -450px;
+	top: 50%;
+	margin-top: -300px;
+	background: rgba(255, 255, 255, 0.8);
+	overflow:auto;
+}
+
+@media (max-width: 900px) {
+	#DivClasificacionContenedor {
+		margin:0px;
+		left: 30px;
+		top: 30px;
+		right: 30px;
+		bottom: 30px;
+		width: auto !important;
+		height: auto !important;
+	}
+}
+
+@media (max-height: 700px) {
+	#DivClasificacionContenedor {
+		margin:0px;
+		left: 30px;
+		top: 5px;
+		right: 30px;
+		bottom: 30px;
+		width: auto !important;
+		height: auto !important;
+	}
+}
+
+#TablaClasificacion {
+    border-collapse: collapse;
+	border: 1px solid #ddd;
+    width: 100%;
+} 
+
+#tr.TablaClasificacion {
+padding-bottom: 50em;
+border-spacing: 50em;
+    	float: none;
+	position: absolute; 
+} 
+
+#TablaClasificacion th, #TablaClasificacion td {
+    text-align: left;
+    padding: 5px;
+	font-size: 12px;
+}
+
+#TablaClasificacion tr:nth-child(even){background-color: #f2f2f2} 
+
+#TablaClasificacion th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+#TablaClasificacionSemanal {
+    border-collapse: collapse;
+	border: 1px solid #ddd;
+	 width: 100%;
+} 
+
+#tr.TablaClasificacionSemanal {
+padding-bottom: 50em;
+border-spacing: 50em;
+    	float: none;
+	position: absolute; 
+} 
+
+#TablaClasificacionSemanal th, #TablaClasificacionSemanal td {
+    text-align: left;
+    padding: 5px;
+	font-size: 12px;
+}
+
+#TablaClasificacionSemanal tr:nth-child(even){background-color: #f2f2f2} 
+
+#TablaClasificacionSemanal th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+#TablaClasificacionAnterior {
+    border-collapse: collapse;
+	border: 1px solid #ddd;
+	 width: 100%;
+} 
+
+#tr.TablaClasificacionAnterior {
+padding-bottom: 50em;
+border-spacing: 50em;
+    	float: none;
+	position: absolute; 
+} 
+
+#TablaClasificacionAnterior th, #TablaClasificacionAnterior td {
+    text-align: left;
+    padding: 5px;
+	font-size: 12px;
+}
+
+#TablaClasificacionAnterior tr:nth-child(even){background-color: #f2f2f2} 
+
+#TablaClasificacionAnterior th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+#TablaClasificacion30dias {
+    border-collapse: collapse;
+	border: 1px solid #ddd;
+	 width: 100%;
+} 
+
+#tr.TablaClasificacion30dias {
+padding-bottom: 50em;
+border-spacing: 50em;
+    	float: none;
+	position: absolute; 
+} 
+
+#TablaClasificacion30dias th, #TablaClasificacion30dias td {
+    text-align: left;
+    padding: 5px;
+	font-size: 12px;
+}
+
+#TablaClasificacion30dias tr:nth-child(even){background-color: #f2f2f2} 
+
+#TablaClasificacion30dias th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+
+ <!--    border-collapse: collapse; /* Collapse borders */
+    	float: none;
+	position: absolute; 
+	width: 550px; left: 50% !important; margin-left: -300px; 
+	height: 200px; top: 50% !important; margin-top:-250px;
+	
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */ -->
+
+
+#Clasificacion tr {
+    text-align: center;
+
+}
+
+
+#Clasificacion td {
+    text-align: center;
+
+}
+
+#Clasificacion th {
+    text-align: center;
+
+}
+
+#DivFace {
+  width: 250;
+  height: 35;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#DivInstagram {
+  width: 250;
+  height: 30;
+  position: absolute;
+  top: 0;
+  left: 125;
+}
+
+
+
+#tabs { padding: 1px; padding-bottom: 0px; }
+#tabs a { 
+	text-decoration: none;
+	background: #390; color: #fff; display: inline-block; padding: 5px;
+	-webkit-border-radius: 1em 0em 0px 0px; 
+	-moz-border-radius: 1em 1em 0px 0px; 
+	-ms-border-radius: 1em 1em 0px 0px; 
+	-o-border-radius: 1em 1em 0px 0px; 
+	border-radius: 1em 1em 0px 0px; }
+#tabs a.activo { background: #fff; font-size: 20px; color: #000; }
+
+
+
+
+
+       ul, li {
+            list-style: none;
+        }
+
+        #wrapper {
+            width: 900px;
+            margin: 20px auto;
+        }
+
+        .data-container {
+            margin-top: 5px;
+        }
+
+        .data-container ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .data-container li {
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            background: #eee;
+            color: #666;
+        }
+		
+    #tablaEmoticonoJugadores label { position:relative; top: 5px; centerPadding: '60px'  }	
+	.colorSeleccion{
+                background-color: #ff00ff;
+            }
