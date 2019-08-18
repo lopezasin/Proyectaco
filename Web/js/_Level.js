@@ -7510,7 +7510,7 @@ function onSocketTiendaDesdeServer(ArrayTienda)
 	if (Articulo=='Art010')
 	{
 		console.log("se mete")
-		//RegisterProduct();
+		RegisterProduct();
 	}
 	//console.log(index)
 	//console.log(slide)
