@@ -6629,7 +6629,8 @@ function XEMENNVXGV()
 					//'max reconnection attempts' : BBWEGOPQUF, 2.0.8054 no está en las especificaciones
 					ForceNew : false,
 					connect_timeout : 4000,
-					timeout :4500
+					timeout :4500,
+					transports: ['websocket'] //2.0.8054 más rápido
 				//'connection timeout':5000
 				//timeout :5
 				// transports: ['websocket'],

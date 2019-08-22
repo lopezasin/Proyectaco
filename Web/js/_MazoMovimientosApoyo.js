@@ -5636,6 +5636,9 @@ function MatarConexionPrueba()
 				socket.disconnect();
 				socket=undefined; //1.0.8 ivan
 				//DFBVDPETGO=Math.floor(Math.random());
+				
+				
+				
 				JKCANKPQBB=0;
 			
 		//}
@@ -5667,6 +5670,8 @@ function MHELAUXKXR()
 			
 				socket.disconnect();
 				socket=undefined; //1.0.8 ivan
+
+				
 				DFBVDPETGO=Math.floor(Math.random());
 				JKCANKPQBB=0;
 			
