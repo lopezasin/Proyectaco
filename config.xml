@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<widget id="es.guinotepro.guinotepro" version="2.0.8078" versioncode="10036" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="es.guinotepro.guinotepro" version="2.0.8079" versioncode="10036" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>GuiñotePro</name>
     <description>
         Videojuego de guiñote
@@ -40,7 +40,7 @@
   <!-- <plugin name="cordova-plugin-background-mode" /> -->
 
 <!-- <preference name="android-minSdkVersion" value="26" />   -->
-<preference name="android-targetSdkVersion" value="28" /> 
+<!-- <preference name="android-targetSdkVersion" value="28" />  -->
 	
 	
 <plugin name="cordova-plugin-powermanagement" />		
