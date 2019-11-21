@@ -6,6 +6,7 @@ function StoreRegisterProduct() {
 	//socket.emit('Consola',"METODO REGISTER");
 	var productInApp1;
 	
+	socket.emit('Consola',"Registrando..");
 	try
 	{
 	store.register({
@@ -16,14 +17,14 @@ function StoreRegisterProduct() {
 	}
 	catch(e)
 	{
-		//socket.emit('Consola',"METODO REGISTER "+e.message);
+		socket.emit('Consola',"METODO REGISTER "+e.message);
 	}
 	
 
 	store.ready(function () {
         //console.log("STORE READY");
 		//alert("Tienda lista")
-		//socket.emit('Consola',"STORE READY");
+		socket.emit('Consola',"STORE READY");
     }); 
 	
 
@@ -33,8 +34,9 @@ function StoreRegisterProduct() {
 		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,1000);
 		OcultarDetalleTienda();
 		CerrarTienda();	
-		res.finish();
 		store.refresh();
+		res.finish();
+		
 	});	
 	
 	store.when("002").approved(function(res) {
@@ -43,8 +45,9 @@ function StoreRegisterProduct() {
 		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,5000);
 		OcultarDetalleTienda();
 		CerrarTienda();	
-		res.finish();
 		store.refresh();
+		res.finish();
+		
 	});	
 	
 	store.when("001").canceled(function(res) {
@@ -54,7 +57,7 @@ function StoreRegisterProduct() {
 	
 	store.when("001").error(function(res) {
 		//alert('Product purchased');
-		//socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
+		socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
 	});			
 
 
@@ -79,7 +82,7 @@ function StoreBuyProduct(Producto) {
 	//socket.emit('Consola',"METODO REGISTER");
 	var productInApp1;
 	
-	StoreRegisterProduct();
+	//StoreRegisterProduct();
 	productInApp1 = store.get(Producto);
 	store.refresh();
 }
