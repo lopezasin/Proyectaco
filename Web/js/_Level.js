@@ -7824,8 +7824,20 @@ function setEventHandlers() { //ESTE
 	  
 	//if (data.NuevoId!=undefined)
 	//{
-	
-	
+		
+	var CKHBSQULIF=YMHIHSNADE.time.create(false);
+	CKHBSQULIF.loop(200,function(){
+		try
+		{
+	socket.emit('Consola', 'Acabo de reconectar desde server');
+		CKHBSQULIF.stop();
+					CKHBSQULIF.remove();
+		}
+		catch(e){console.log("algo pasa")}
+	})
+	CKHBSQULIF.start();	
+		
+		
 		if (HMVFLEYPXM.length==0 && MNAGVJHWOW()==false  && HGMNXSIAPV==true && BloqueoCartaCentro==false) //2.0.8051 critico BloqueoCartaCentro==false     //(HGMNXSIAPV==true ||  MarcadorNuevo() )   ) 
 	  {
 			   //console.log("lo flipo1: "+data.NuevoId) //borrar

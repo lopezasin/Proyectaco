@@ -14,7 +14,14 @@ function ConsultaCompraRecibida()
 	var VueltasMaximas=5*60;
 	var Vueltas=1;
 	
-	//console.log("Esta corriendo "+ )
+	try
+	{
+		socket.emit('Consola',"Consultando compra inicio..");
+	}
+	catch(e)
+	{
+		console.log("Error consultando compra Inicio. No debe existir socket")
+	}
 	
 	timerConsultaCompraRecibida.stop();
 	timerConsultaCompraRecibida.remove();	
@@ -27,7 +34,12 @@ function ConsultaCompraRecibida()
 			timerConsultaCompraRecibida.stop();
 			timerConsultaCompraRecibida.remove();	
 		}
-		socket.emit('Consola',"Consultando compra..");
+		
+		try
+		{
+			socket.emit('Consola',"Consultando compra..");
+		}
+		catch(e){console.log("Error consultando compra. No debe existir socket")}
 	})
 	timerConsultaCompraRecibida.start();
 }
