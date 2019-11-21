@@ -5,7 +5,7 @@ function TVYNYTCQYW(FHXIGDTMQS,EHDWIURHHD,HVCFEWNDRF,game,NPYBJSHIFL,jugador,TKW
 	this.UUOPKETETA=EHDWIURHHD;
     this.HVCFEWNDRF=HVCFEWNDRF;    
 	this.TNFAGGMKXD=game;
-	this.NPYBJSHIFL=NPYBJSHIFL;
+	this.NPYBJSHIFL=NPYBJSHIFL; //lo uso para salidas para el turno. Saber qué turno llevabas cuando tiraste.
 	this.jugador=jugador;
 	this.AGTXFNIKQD=TKWCTNGROU; //A priori se usa solo en los buffer.Ojo en el futuro si meto mⳠpar⮥tros en la llamada pq este no lo he rellenado en ning򮠬ado.
 	this.VMKDXVSQEY=VMKDXVSQEY;	
@@ -39,32 +39,36 @@ function TVYNYTCQYW(FHXIGDTMQS,EHDWIURHHD,HVCFEWNDRF,game,NPYBJSHIFL,jugador,TKW
 		case 1 :
 			this.VVRCMEUNOJ=12;
 			this.WQCPJQWFPN=11;
+			this.valorTexto= "1 " +FHXIGDTMQS
 			break;
 		case 3 :
 			this.VVRCMEUNOJ=11;
 			this.WQCPJQWFPN=10;
+			this.valorTexto= "3 " +FHXIGDTMQS
 			break;	
 		case 10 :
 			this.VVRCMEUNOJ=10;
 			this.WQCPJQWFPN=4;
+			this.valorTexto= "rey " +FHXIGDTMQS
 			break;				
 		case 9 :
 			this.VVRCMEUNOJ=8;
 			this.WQCPJQWFPN=2;
+			this.valorTexto= "caballo " +FHXIGDTMQS
 			break;	
 		case 8 :
 			this.VVRCMEUNOJ=9;
 			this.WQCPJQWFPN=3;
+			this.valorTexto= "sota " +FHXIGDTMQS
 			break;				
 		default :		
 			this.VVRCMEUNOJ=HVCFEWNDRF
 			this.WQCPJQWFPN=0;
+			this.valorTexto=HVCFEWNDRF + " " +FHXIGDTMQS
 			break;		
 	}
 	
-	
 
-	
  
 }
 

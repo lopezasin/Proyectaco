@@ -1,6 +1,7 @@
 ﻿'use strict';
 function RPMTCXIXGA(TXLWIIINGQ){
-	Renderizar(true, "repartos1");
+		Renderizar(true);
+	console.log("desde izquierda")
 	PPRNUIJOLC(TXLWIIINGQ);
 };
 
@@ -13,11 +14,15 @@ function DWVCJLTLFT(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("U",0);
 	var GHTWROCHVV=FIGQBSJQGA("U",0);
 
-	PQUFIBKJJH = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		PQUFIBKJJH.to( {x:NOFEDXHMLS
-		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
-		PQUFIBKJJH.onComplete.add(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); GITYOTEJCB(TXLWIIINGQ); } );
-		PQUFIBKJJH.start();
+	//PQUFIBKJJH = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
+		,angle:FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 0}, IRXOKNWTLV, BSXWFYLCEW);
+		twReparto.onComplete.addOnce(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); GITYOTEJCB(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 		
 
@@ -33,11 +38,14 @@ function GITYOTEJCB(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("U",1);
 	var GHTWROCHVV=FIGQBSJQGA("U",1);
 	
-	LJRRHVSVKD = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		LJRRHVSVKD.to( {x:NOFEDXHMLS
+	//LJRRHVSVKD = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {x:NOFEDXHMLS
 		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
-		LJRRHVSVKD.onComplete.add(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); XAYOFVQQCG(TXLWIIINGQ); } );
-		LJRRHVSVKD.start();
+		twReparto.onComplete.addOnce(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); XAYOFVQQCG(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -55,11 +63,14 @@ function XAYOFVQQCG(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("U",2);
 	var GHTWROCHVV=FIGQBSJQGA("U",2);
 	
-	LCYAHFBDTT = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		LCYAHFBDTT.to( {x:NOFEDXHMLS
+	//LCYAHFBDTT = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {x:NOFEDXHMLS
 		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);		
-		LCYAHFBDTT.onComplete.add(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); INQEMJOSCP(TXLWIIINGQ); } );
-		LCYAHFBDTT.start();
+		twReparto.onComplete.addOnce(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); INQEMJOSCP(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -88,15 +99,18 @@ function PPRNUIJOLC(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("L",0);
 	var GHTWROCHVV=FIGQBSJQGA("L",0);
 	
-	NEPGDYQDEI = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		NEPGDYQDEI.to( {
+	//NEPGDYQDEI = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		NEPGDYQDEI.onComplete.add(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); CPTBWFORBL(TXLWIIINGQ); } );
-		NEPGDYQDEI.start();
+		twReparto.onComplete.addOnce(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); CPTBWFORBL(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -109,15 +123,18 @@ function CPTBWFORBL(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("L",1);
 	var GHTWROCHVV=FIGQBSJQGA("L",1);
 	
-	HHBPAROITT = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		HHBPAROITT.to( {
+	//HHBPAROITT = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		HHBPAROITT.onComplete.add(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); KQFTDLQFIE(TXLWIIINGQ); } );
-		HHBPAROITT.start();
+		twReparto.onComplete.addOnce(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); KQFTDLQFIE(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -133,15 +150,18 @@ function KQFTDLQFIE(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("L",2);
 	var GHTWROCHVV=FIGQBSJQGA("L",2);
 	
-	EWXBTDLSHW = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		EWXBTDLSHW.to( {
+	//EWXBTDLSHW = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		EWXBTDLSHW.onComplete.add(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD);FPNDVMQEDQ(TXLWIIINGQ); } );
-		EWXBTDLSHW.start();
+		twReparto.onComplete.addOnce(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD);FPNDVMQEDQ(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -158,12 +178,17 @@ function FPNDVMQEDQ(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("D",0);
 	var GHTWROCHVV=FIGQBSJQGA("D",0);
 	
-	BDEFDQUJJE = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		BDEFDQUJJE.to( {x:NOFEDXHMLS
-		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
-		BDEFDQUJJE.onComplete.add(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD);HKEFSBMWPH(TXLWIIINGQ); } );
-		BDEFDQUJJE.start();
-		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+	//BDEFDQUJJE = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale.setTo(QDTCADQEEX,QDTCADQEEX)		
+	
+		twReparto.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
+		,angle:FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 0}, IRXOKNWTLV, BSXWFYLCEW);
+		twReparto.onComplete.addOnce(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD);HKEFSBMWPH(TXLWIIINGQ); } );
+		twReparto.start();
+		//YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 		FXGSEGRXKC.pop();
 		
 
@@ -179,12 +204,16 @@ function HKEFSBMWPH(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("D",1);
 	var GHTWROCHVV=FIGQBSJQGA("D",1);
 	
-	CKOUBGTDUF = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		CKOUBGTDUF.to( {x:NOFEDXHMLS
+	//CKOUBGTDUF = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale.setTo(QDTCADQEEX,QDTCADQEEX)		
+	
+		twReparto.to( {x:NOFEDXHMLS
 		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
-		CKOUBGTDUF.onComplete.add(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); HIVFBMLVXH(TXLWIIINGQ); } );
-		CKOUBGTDUF.start();
-		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		twReparto.onComplete.addOnce(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); HIVFBMLVXH(TXLWIIINGQ); } );
+		twReparto.start();
+		//YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 		FXGSEGRXKC.pop();
 };
 
@@ -201,12 +230,16 @@ function HIVFBMLVXH(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("D",2);
 	var GHTWROCHVV=FIGQBSJQGA("D",2);
 	
-	JLFYUAKDIJ = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		JLFYUAKDIJ.to( {x:NOFEDXHMLS
+	//JLFYUAKDIJ = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale.setTo(QDTCADQEEX,QDTCADQEEX)		
+	
+		twReparto.to( {x:NOFEDXHMLS
 		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);		
-		JLFYUAKDIJ.onComplete.add(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); VMCYVGKCHH(TXLWIIINGQ); } );
-		JLFYUAKDIJ.start();
-		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		twReparto.onComplete.addOnce(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); VMCYVGKCHH(TXLWIIINGQ); } );
+		twReparto.start();
+		//YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 		FXGSEGRXKC.pop();
 };
 
@@ -221,15 +254,18 @@ function VMCYVGKCHH(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("R",0);
 	var GHTWROCHVV=FIGQBSJQGA("R",0);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); PRTNWAIQGT(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); PRTNWAIQGT(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -244,15 +280,18 @@ function PRTNWAIQGT(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("R",1);
 	var GHTWROCHVV=FIGQBSJQGA("R",1);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); VQXEHLSCJV(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); VQXEHLSCJV(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -266,15 +305,18 @@ function VQXEHLSCJV(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("R",2);
 	var GHTWROCHVV=FIGQBSJQGA("R",2);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); DWVCJLTLFT(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); DWVCJLTLFT(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -289,11 +331,15 @@ function LBLWWILWGV(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("U",3);
 	var GHTWROCHVV=FIGQBSJQGA("U",3);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {x:NOFEDXHMLS
-		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); SXVSSQMCNS(TXLWIIINGQ); } );
-		s.start();
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
+		,angle:FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 0}, IRXOKNWTLV, BSXWFYLCEW);
+		twReparto.onComplete.addOnce(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); SXVSSQMCNS(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 		
 
@@ -307,11 +353,14 @@ function SXVSSQMCNS(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("U",4);
 	var GHTWROCHVV=FIGQBSJQGA("U",4);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {x:NOFEDXHMLS
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {x:NOFEDXHMLS
 		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); PRSAPRHAMB(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); PRSAPRHAMB(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -323,12 +372,15 @@ function PRSAPRHAMB(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("U",5);
 	var GHTWROCHVV=FIGQBSJQGA("U",5);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {x:NOFEDXHMLS
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {x:NOFEDXHMLS
 		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);		
-		//s.onComplete.add(INQEMJOSCP,this)
-		s.onComplete.add(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); QYYXUWQADX(TXLWIIINGQ); } );
-		s.start();
+		//twReparto.onComplete.add(INQEMJOSCP,this)
+		twReparto.onComplete.addOnce(function(){ PBHYCULPGK.add(TWJONOKGHC[TWJONOKGHC.length-1].TNFAGGMKXD); QYYXUWQADX(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 		//JQSOOBSDDS();
 };
@@ -343,15 +395,18 @@ function INQEMJOSCP(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("L",3);
 	var GHTWROCHVV=FIGQBSJQGA("L",3);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); DCMSDUMKVR(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); DCMSDUMKVR(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -364,15 +419,18 @@ function DCMSDUMKVR(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("L",4);
 	var GHTWROCHVV=FIGQBSJQGA("L",4);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); DBHUFSIMNO(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); DBHUFSIMNO(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -385,15 +443,18 @@ function DBHUFSIMNO(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("L",5);
 	var GHTWROCHVV=FIGQBSJQGA("L",5);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 90
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); XUJGUFVMBP(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ SYXHGDSJDY.add(KNVKGHHTYC[KNVKGHHTYC.length-1].TNFAGGMKXD); XUJGUFVMBP(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -408,12 +469,17 @@ function XUJGUFVMBP(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("D",3);
 	var GHTWROCHVV=FIGQBSJQGA("D",3);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {x:NOFEDXHMLS
-		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); JHJQDCOTLB(TXLWIIINGQ); } );
-		s.start();
-		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale.setTo(QDTCADQEEX,QDTCADQEEX)		
+	
+		twReparto.to( {x:NOFEDXHMLS
+		,y:GHTWROCHVV
+		,angle:FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 0}, IRXOKNWTLV, BSXWFYLCEW);
+		twReparto.onComplete.addOnce(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); JHJQDCOTLB(TXLWIIINGQ); } );
+		twReparto.start();
+		//YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 		FXGSEGRXKC.pop();
 		
 
@@ -428,12 +494,16 @@ function JHJQDCOTLB(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("D",4);
 	var GHTWROCHVV=FIGQBSJQGA("D",4);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {x:NOFEDXHMLS
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale.setTo(QDTCADQEEX,QDTCADQEEX)		
+	
+		twReparto.to( {x:NOFEDXHMLS
 		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); YTTJELQLUH(TXLWIIINGQ); } );
-		s.start();
-		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		twReparto.onComplete.addOnce(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); YTTJELQLUH(TXLWIIINGQ); } );
+		twReparto.start();
+		//YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 		FXGSEGRXKC.pop();
 };
 
@@ -446,12 +516,16 @@ function YTTJELQLUH(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("D",5);
 	var GHTWROCHVV=FIGQBSJQGA("D",5);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {x:NOFEDXHMLS
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale.setTo(QDTCADQEEX,QDTCADQEEX)		
+	
+		twReparto.to( {x:NOFEDXHMLS
 		,y:GHTWROCHVV}, IRXOKNWTLV, BSXWFYLCEW);		
-		s.onComplete.add(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); AVBRKFCIOB(TXLWIIINGQ); } );
-		s.start();
-		YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
+		twReparto.onComplete.addOnce(function(){ RXKKPILDQT.add(AGKVNAGGLB[AGKVNAGGLB.length-1].TNFAGGMKXD); AVBRKFCIOB(TXLWIIINGQ); } );
+		twReparto.start();
+		//YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.scale).to( {x:QDTCADQEEX,y:QDTCADQEEX}, IRXOKNWTLV, BSXWFYLCEW,true);
 		FXGSEGRXKC.pop();
 };
 
@@ -464,15 +538,18 @@ function AVBRKFCIOB(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("R",3);
 	var GHTWROCHVV=FIGQBSJQGA("R",3);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); ECQUSGNMRO(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); ECQUSGNMRO(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -485,15 +562,18 @@ function ECQUSGNMRO(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("R",4);
 	var GHTWROCHVV=FIGQBSJQGA("R",4);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); RWWDLCBKMR(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); RWWDLCBKMR(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };
 
@@ -506,14 +586,17 @@ function RWWDLCBKMR(TXLWIIINGQ){
 	var NOFEDXHMLS=WIEVLYANFM("R",5);
 	var GHTWROCHVV=FIGQBSJQGA("R",5);
 	
-	var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
-		s.to( {
+	//var s = YMHIHSNADE.add.tween(FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD);
+	twReparto.timeline = [];
+	twReparto.target=FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD
+	
+		twReparto.to( {
 		x:NOFEDXHMLS,
 		y:GHTWROCHVV,
 		angle : FXGSEGRXKC[FXGSEGRXKC.length-1].TNFAGGMKXD.angle + 270
 		}
 		, IRXOKNWTLV, BSXWFYLCEW);
-		s.onComplete.add(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); LBLWWILWGV(TXLWIIINGQ); } );
-		s.start();
+		twReparto.onComplete.addOnce(function(){ BDRJVGFWQH.add(CBCNHFGWLU[CBCNHFGWLU.length-1].TNFAGGMKXD); LBLWWILWGV(TXLWIIINGQ); } );
+		twReparto.start();
 		FXGSEGRXKC.pop();
 };

@@ -1,5 +1,69 @@
 ï»¿'use strict';
 
+function CambiarUsuario()
+{
+	//$('#lateral').slideToggle();
+	$('#lateral').animate({width: "toggle"});	
+	var a=document.getElementById("lblCambiarUsuario") 
+	
+	a.textContent = "Â¿Desea cambiar de usuario?";
+	var d=document.getElementById('DivCambiarUsuario');
+	d.style.display = 'block';
+	
+}
+
+function RespuestaCambiarUsuario(JSKXXDPSDS)	
+{
+
+	
+	document.getElementById('DivCambiarUsuario').style.display = 'none';
+	
+	
+	if (JSKXXDPSDS==true)
+	{	
+		if( window.plugins)	
+		{
+			window.plugins.googleplus.disconnect(
+			function (msg) {
+				MITSNADNQS()
+			});
+
+
+			facebookConnectPlugin.logout(MITSNADNQS, MITSNADNQS)
+		}
+		else
+		{
+			window.location.href=JHGHJAGCMC+'/logout'
+		}
+	}
+	//document.getElementById('DivCambiarUsuario').display = 'none';
+ 
+}
+
+
+
+function onSocketProgresoDesdeServer(bytesRecibidos, bytesEsperados)
+{
+	
+	var elem = document.getElementById("myBar");   
+	var width = bytesRecibidos/bytesEsperados;
+	
+	console.log("Progreso desde Server "+width*100)
+	  //var id = setInterval(frame, 10);
+	  //function frame() {
+	if (width >= 100) {
+	  //clearInterval(id);
+	} 
+	else 
+	{
+	  //width++; 
+	  var recorre=width*100+ '%';
+	   console.log("aumentando "+recorre)
+	  elem.style.width = recorre; 
+	 
+	}
+	//}
+}
 
 /*function ActivaArticulo(Articulo)
 {
@@ -60,9 +124,9 @@ function ValidarTodosArticulos()
 	ValidaDisponibilidadArticulo('Art005') //Para caducar los de Tipo EBAPPJFYSW
 	ValidaDisponibilidadArticulo('Art006') //Para caducar los de Tipo EBAPPJFYSW
 	ValidaDisponibilidadArticulo('Art007') //Para caducar los de Tipo EBAPPJFYSW
-	ValidaDisponibilidadArticulo('Art008') //Para caducar los de Tipo EBAPPJFYSW
+	//ValidaDisponibilidadArticulo('Art008') //Para caducar los de Tipo EBAPPJFYSW
 	ValidaDisponibilidadArticulo('Art009') //Para caducar los de Tipo EBAPPJFYSW
-	ValidaDisponibilidadArticulo('Art012') //Para caducar los de Tipo EBAPPJFYSW
+	
 }			
 			
 function ValidaDisponibilidadArticulo(Articulo)
@@ -92,7 +156,7 @@ function ValidaDisponibilidadArticulo(Articulo)
 			break;			
 		}*/
 			
-		console.log("Tipo caducidad "+	TipoCaducidad);
+		//console.log("Tipo caducidad "+	TipoCaducidad);
 		for (i=0;i<=ArrayCompras.length-1;i++)
 		{
 			if (ArrayCompras[i].Articulo==Articulo)
@@ -112,6 +176,11 @@ function ValidaDisponibilidadArticulo(Articulo)
 				}
 				else
 				{
+					if (Articulo='Art006')
+					{	
+						console.log("Validez EBAPPJFYSW "+ArrayCompras[i].ValidezFecha+" ahora son las "+new Date(Date.now()) )
+					}
+					
 					if (ArrayCompras[i].ValidezFecha<=new Date(Date.now()))
 					{
 						//Disponibilidad=false; que siempre haya disponibilidad. Ya se borrarÃ¡ del array y dejarÃ¡ de tener
@@ -294,6 +363,7 @@ function onSocketArticuloDuplicado()
 
 function GHDHJSKQIU()
 {
+	
 	var x=WIEVLYANFM("U_C",0)-COIVBWRMCC;
 	var y=FIGQBSJQGA("U_C",0)+(MKSLYEWQQS/2)+(YAJVUBPNNW);
 	var x1;
@@ -372,14 +442,7 @@ function GHDHJSKQIU()
 	
 	BNVUWCOWEC.kill();
 
-	/*if (UUUIUYUSFS==undefined)
-	{
-		UUUIUYUSFS=YMHIHSNADE.add.image(YMHIHSNADE.world.width-200 ,60, 'general', 'bolsa_dinero');
-		UUUIUYUSFS.anchor.setTo(0.5, 0.5)
-		UUUIUYUSFS.frameName='bolsa_dinero'
-		UUUIUYUSFS.kill();
-	}*/
-
+	
 
 	
 
@@ -525,7 +588,7 @@ function LHEQVYHCSK()
 	
 	if (AJFQVFUKAP==true)
 	{
-		JHKSJDHVKJ=5; //1.0.9 7
+		JHKSJDHVKJ=0.2; //  5 OJIMETRO
 	}
 	
 	if (LUCRWXJMDR==10)
@@ -554,8 +617,9 @@ function MNAGVJHWOW() //2.0.1
 	}
 	
 }
-function GIDSSFEUNT(SinIA)
+function GIDSSFEUNT(Origen)
 {
+	
 	
 	var JHKSJDHVKJ;
 	var KKKKSKSSKW=1000;
@@ -564,18 +628,21 @@ function GIDSSFEUNT(SinIA)
 	var i;
 	var CambioEstado=false;
 	
-	/*if (BHJCWGIUIU==false)
-	{
-		CambioEstado=true;
-		BHJCWGIUIU=true;
-	}
-	*/
+			var current_datetime = new Date() //ValidezFecha;
+		var formatted_date = appendLeadingZeroes(current_datetime.getDate()) +'/'+ appendLeadingZeroes(current_datetime.getMonth() + 1) + '/' +current_datetime.getFullYear() + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
+
+	//console.log("superorganizador desde "+Origen+" "+formatted_date)
+
+	
+	
 	//console.log("GBROPWPVSK: "+GBROPWPVSK+" MNAGVJHWOW"+MNAGVJHWOW())
 	//console.log("Super Organizador "+GBROPWPVSK+" MNAGVJHWOW "+MNAGVJHWOW())
-	if (GBROPWPVSK==false && MNAGVJHWOW()==false ) //2.0.7 && WSHPROHDIV==0
+	if (GBROPWPVSK==false && MNAGVJHWOW()==false) //2.0.7 && WSHPROHDIV==0
 	{
+
+	
 		KKQJCHKQEP();	
-		
+		//console.log("llegando1");
 		
 		if (EGPDVIEJEL==false)
 		{
@@ -599,6 +666,7 @@ function GIDSSFEUNT(SinIA)
 					NMBBHJGSXX=true;
 				}
 			}
+			
 		}
 		else
 		{
@@ -617,12 +685,14 @@ function GIDSSFEUNT(SinIA)
 				}*/
 				//console.log('Consola', 'Nueva desde SuperOrganizador2')
 				KPQSPDMKJE(vTurnoConsumido,false); //vTurnoConsumido 2.0.8.37
+				
 			}
 			else
 			{
-				
+				//console.log("llegando2");
 				if (DVNRTQIWGL==TFSXFTYVGQ)
-				{		
+				{
+					//console.log("llegando3");					
 					if (HUUCUYFBLW.duration.toFixed(0)==0)
 					{
 						
@@ -717,6 +787,7 @@ function GIDSSFEUNT(SinIA)
 										//console.log("Llama IA "+DVNRTQIWGL+" "+LUCRWXJMDR+" "+MQUGCIUQII)
 										LlamadaIA(DVNRTQIWGL,LUCRWXJMDR,MQUGCIUQII);
 									}
+									
 									AJFQVFUKAP=true; //1.0.8	
 									UWYHEIVJHX=0;
 								}
@@ -733,6 +804,7 @@ function GIDSSFEUNT(SinIA)
 				}
 				else
 				{
+					//console.log("llegando4 "+MYQBNBVHKU);
 					//console.log("Ojo. Apunto estoy ")
 					for (i=0;i<=KYDWXPGHVY.length-1;i++)
 					{
@@ -751,25 +823,14 @@ function GIDSSFEUNT(SinIA)
 						}	
 						
 					}	
+					
+
 				}
 			}
 		}
 		
 		if (NMBBHJGSXX==true)
 		{
-			/*PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
-			TKXPPGUPVV.stop();
-			TKXPPGUPVV.remove();
-			TKXPPGUPVV.add(PLKOPTSHBQ, function()
-			{		
-				TKXPPGUPVV.stop();
-				TKXPPGUPVV.remove();
-				//socket.emit("Consola","IA desde 2. Soy el jugador "+TFSXFTYVGQ);
-				//IA(DVNRTQIWGL,LUCRWXJMDR,MQUGCIUQII);
-				//return false;
-			}
-			);
-			TKXPPGUPVV.start();	*/
 			LlamadaIA(DVNRTQIWGL,LUCRWXJMDR,MQUGCIUQII);
 		}
 	}
@@ -779,29 +840,34 @@ function GIDSSFEUNT(SinIA)
 		//OGGWQECXBK("SinClave") //2.0.7 chungo
 		
 	}
-	BHJCWGIUIU=false;
+	//BHJCWGIUIU=false;
 }
 
 
 function LlamadaIA(TurnoRecibido,SLGKDYQCAY,PartidaRecibida)
 {
 
-	var PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
+	if (vProbandoIA==false)
+	{
+		
+		var PLKOPTSHBQ=XNYRSXYRGF(DVNRTQIWGL);
 
-	TKXPPGUPVV.stop();
-	TKXPPGUPVV.remove();
-	TKXPPGUPVV.add(PLKOPTSHBQ, function()
-	{		
 		TKXPPGUPVV.stop();
 		TKXPPGUPVV.remove();
-		if (MNAGVJHWOW()==false)
-		{
-			//console.log("Llega a IA")
-			IA(TurnoRecibido,SLGKDYQCAY,PartidaRecibida);
+		TKXPPGUPVV.add(PLKOPTSHBQ, function()
+		{		
+			TKXPPGUPVV.stop();
+			TKXPPGUPVV.remove();
+			if (MNAGVJHWOW()==false)
+			{
+				//console.log("Llega a IA")
+				IA(TurnoRecibido,SLGKDYQCAY,PartidaRecibida);
+			}
+			
 		}
+		);
+		TKXPPGUPVV.start();	
 	}
-	);
-	TKXPPGUPVV.start();	
 }
 
 function EABXADHEVT(OTBFIOUAIV)
@@ -812,745 +878,753 @@ function EABXADHEVT(OTBFIOUAIV)
 	var PPOQCOUQCE=false;
 	var IQQIXCCBNV=""
 	
-switch (OTBFIOUAIV)
-	{
+	if (SonidoSilenciar==false)
+	{	
+		switch (OTBFIOUAIV)
+		{
+
+			case '_NoSube' :
+				
+				LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
+				if (LXGKVFJUFT<=4)
+				{
+					IQQIXCCBNV='SndNoSube';
+				}
+				if (LXGKVFJUFT==5)
+				{			
+					IQQIXCCBNV='SndNano';
+				}
+				//SFVDEVFFCR.play();
+				
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}
+				
+				break;	
+				
+			case 'WWYKUMYJBJ' :
+				IQQIXCCBNV='VKEJRPCHKN';
+				//VKEJRPCHKN.play();
+				if (SonidoCartas==false)
+				{
+					IQQIXCCBNV="";
+				}
+				
+				break;
+
+			case 'CVRQKCGIRI' :
+				IQQIXCCBNV='LFWPDMQYKH';
+				if (SonidoCartas==false)
+				{
+					IQQIXCCBNV="";
+				}
+				//LFWPDMQYKH.play();
+				break;
+			
+			case 'BNSLLGGORP' :
+				IQQIXCCBNV='BHLJBCKLKE';
+				if (SonidoCantes==false)
+				{
+					IQQIXCCBNV="";
+				}			
+				//BHLJBCKLKE.play();
+				break;	
+			
+			case 'TKYUFYJRRA' :
+			
+				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='Snd20Copas2';
+				}
+				else
+				{			
+					IQQIXCCBNV='SFVDEVFFCR';
+				}
+				
+				if (SonidoCantes==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;		
+			
+			case 'LFYAQLIDAI' :
+				IQQIXCCBNV='KMBKTLXURD';
+				
+				if (SonidoCantes==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;		
+			
+			case 'CEDKIIHEHO' :
+				IQQIXCCBNV='UIYIEWUHCI';
+				
+				if (SonidoCantes==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;		
+
+			case '_Veinte' :
+				IQQIXCCBNV='Snd20';
+				
+				if (SonidoCantes==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;						
+				
+			case 'CPBEWFVQIJ' :
+				
+				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='DPCNHOBNRM';
+					//DPCNHOBNRM.play();
+				}
+				else
+				{
+					IQQIXCCBNV='GMKJKKAKMH';
+					//GMKJKKAKMH.play();
+				}
+
+				if (SonidoCantes==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;		
+				
+				
+			case 'JCIRYRCUJJ' :
+				
+				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='UHKVCVBOMD';
+					//UHKVCVBOMD.play();
+				}
+				else
+				{
+					IQQIXCCBNV='JHGVBSHGIW';
+					//JHGVBSHGIW.play();
+				}
+				
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;	
+
+			case 'CLVBGPCTEJ' :
+				
+				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='LKGDBLGIEP';
+					//LKGDBLGIEP.play();
+				}
+				else
+				{
+					IQQIXCCBNV='IUIUOPPWCC';
+					//IUIUOPPWCC.play();
+				}
+				
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;	
+				
 		
-		case '_NoSube' :
-			
-			LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
-			if (LXGKVFJUFT<=4)
-			{
-				IQQIXCCBNV='SndNoSube';
-			}
-			if (LXGKVFJUFT==5)
-			{			
-				IQQIXCCBNV='SndNano';
-			}
-			//SFVDEVFFCR.play();
-			
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}
-			
-			break;	
-			
-		case 'WWYKUMYJBJ' :
-			IQQIXCCBNV='VKEJRPCHKN';
-			//VKEJRPCHKN.play();
-			if (SonidoCartas==false)
-			{
-				IQQIXCCBNV="";
-			}
-			
-			break;
 
-		case 'CVRQKCGIRI' :
-			IQQIXCCBNV='LFWPDMQYKH';
-			if (SonidoCartas==false)
-			{
-				IQQIXCCBNV="";
-			}
-			//LFWPDMQYKH.play();
-			break;
-		
-		case 'BNSLLGGORP' :
-			IQQIXCCBNV='BHLJBCKLKE';
-			if (SonidoCantes==false)
-			{
-				IQQIXCCBNV="";
-			}			
-			//BHLJBCKLKE.play();
-			break;	
-		
-		case 'TKYUFYJRRA' :
-		
-			LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='Snd20Copas2';
-			}
-			else
-			{			
-				IQQIXCCBNV='SFVDEVFFCR';
-			}
-			
-			if (SonidoCantes==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;		
-		
-		case 'LFYAQLIDAI' :
-			IQQIXCCBNV='KMBKTLXURD';
-			
-			if (SonidoCantes==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;		
-		
-		case 'CEDKIIHEHO' :
-			IQQIXCCBNV='UIYIEWUHCI';
-			
-			if (SonidoCantes==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;		
-
-		case '_Veinte' :
-			IQQIXCCBNV='Snd20';
-			
-			if (SonidoCantes==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;						
-			
-		case 'CPBEWFVQIJ' :
-			
-			LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='DPCNHOBNRM';
-				//DPCNHOBNRM.play();
-			}
-			else
-			{
-				IQQIXCCBNV='GMKJKKAKMH';
-				//GMKJKKAKMH.play();
-			}
-
-			if (SonidoCantes==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;		
-			
-			
-		case 'JCIRYRCUJJ' :
-			
-			LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='UHKVCVBOMD';
-				//UHKVCVBOMD.play();
-			}
-			else
-			{
-				IQQIXCCBNV='JHGVBSHGIW';
-				//JHGVBSHGIW.play();
-			}
-			
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;	
-
-		case 'CLVBGPCTEJ' :
-			
-			LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='LKGDBLGIEP';
-				//LKGDBLGIEP.play();
-			}
-			else
-			{
-				IQQIXCCBNV='IUIUOPPWCC';
-				//IUIUOPPWCC.play();
-			}
-			
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;	
-			
-	
-
-		case 'USNAAQWHUY' :
-			
-			LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
-			
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='KFDIGGAMBI';
-				//KFDIGGAMBI.play();
-			}
-			if (LXGKVFJUFT==2)
-			{
-				IQQIXCCBNV='MWLXRMDQXK';
-				//MWLXRMDQXK.play();
-			}
-			
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;	
-			
-		
-		case 'DNBXXHKKYK' :
-			LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='DPIDINSQVF';
-				//DPIDINSQVF.play();
-			}
-			if (LXGKVFJUFT==2)
-			{
-				IQQIXCCBNV='NUSHIUSPKE';
-				//NUSHIUSPKE.play();
-			}	
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			
-			break;	
-			
-		case '_Primo' :
-			LXGKVFJUFT = Math.floor(Math.random() * 3) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='SndPrimo';
-				//DPIDINSQVF.play();
-			}
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;					
-			
-		case '_Gafas' :
-			LXGKVFJUFT = Math.floor(Math.random() * 3) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='NNXHHWHWWW';
-				//DPIDINSQVF.play();
-			}
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			
-			break;				
-
-		case 'JCGKEWDJBQ' :
-			
-			LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='NSNSNSWGIU';
-			}	
-			
-			if (LXGKVFJUFT==2)
-			{
-				IQQIXCCBNV='SndClases';
-			}	
-
-			if (LXGKVFJUFT==3)
-			{
-				IQQIXCCBNV='SndMejor';
-			}	
-
-			if (LXGKVFJUFT==4)
-			{
-				IQQIXCCBNV='SndGenial';
-			}	
-
-			if (LXGKVFJUFT==5)
-			{
-				IQQIXCCBNV='SndArtista';
-			}	
-
-			if (LXGKVFJUFT==6)
-			{
-				IQQIXCCBNV='SndToco';
-			}			
-			
-			if (LXGKVFJUFT>=7)
-			{
-				IQQIXCCBNV='GERQISACAV';
-			}
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;		
-
-		case 'CAGCUMKBGA' :
-			LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
-			if (LXGKVFJUFT<=3)
-			{
-				IQQIXCCBNV='TSXDMBDDID';
-			}
-			else
-			{
-				IQQIXCCBNV='HJGWHJDGJP';
-			}
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;	
-
-		case 'TSYFNOWESC' :
-			IQQIXCCBNV='VLVITFRSLA';
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;		
-
-		case 'XKBVJQJRBV' :
-			LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
-			if (LXGKVFJUFT<=7 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='LSQGNFJBGH';
-				//LSQGNFJBGH.play();
-				PPOQCOUQCE=true;
-			}
-			if (LXGKVFJUFT<=8 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='UUUUDJWJAJ';
-				//MSJIWCUWCU.play();
-				PPOQCOUQCE=true;
-			}				
-			if (LXGKVFJUFT<=9 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='MSJIWCUWCU';
-				//MSJIWCUWCU.play();
-				PPOQCOUQCE=true;
-			}	
-			if (LXGKVFJUFT<=10 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='AZZHJKWPLD';
-				//AZZHJKWPLD.play();
-				PPOQCOUQCE=true;
-			}							
-	
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;		
-
-		case 'LMAYDDUATD' :
-			LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
-			if (LXGKVFJUFT<=7  && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='CVJDMGILKI';
-				//CVJDMGILKI.play();
-				PPOQCOUQCE=true;
-			}
-			if (LXGKVFJUFT<=8 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='UUUUDJWJAJ';
-				//MSJIWCUWCU.play();
-				PPOQCOUQCE=true;
-			}				
-			if (LXGKVFJUFT<=9  && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='MSJIWCUWCU';
-				//MSJIWCUWCU.play();
-				PPOQCOUQCE=true;
-			}	
-			if (LXGKVFJUFT<=10  && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='AZZHJKWPLD';
-				//AZZHJKWPLD.play();
-				PPOQCOUQCE=true;
-			}					
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}			
-			break;	
-
-		case 'YURJWRGUNO' :
-			
-			
-			
-			if (JVQXQGYDHH==0 && CNCCBHQJKL==1)
-			{
-				LXGKVFJUFT = Math.floor(Math.random() * 3) + 1  
+			case 'USNAAQWHUY' :
+				
+				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
 				
 				if (LXGKVFJUFT==1)
 				{
-					IQQIXCCBNV='HGJCHGAJGC';
-					//HGJCHGAJGC.play();
+					IQQIXCCBNV='KFDIGGAMBI';
+					//KFDIGGAMBI.play();
 				}
 				if (LXGKVFJUFT==2)
 				{
-					IQQIXCCBNV='VPGBDEHDIT';
-					//VPGBDEHDIT.play();
+					IQQIXCCBNV='MWLXRMDQXK';
+					//MWLXRMDQXK.play();
 				}
+				
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;	
+				
+			
+			case 'DNBXXHKKYK' :
+				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='DPIDINSQVF';
+					//DPIDINSQVF.play();
+				}
+				if (LXGKVFJUFT==2)
+				{
+					IQQIXCCBNV='NUSHIUSPKE';
+					//NUSHIUSPKE.play();
+				}	
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				
+				break;	
+				
+			case '_Primo' :
+				LXGKVFJUFT = Math.floor(Math.random() * 3) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='SndPrimo';
+					//DPIDINSQVF.play();
+				}
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;					
+				
+			case '_Gafas' :
+				LXGKVFJUFT = Math.floor(Math.random() * 3) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='NNXHHWHWWW';
+					//DPIDINSQVF.play();
+				}
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				
+				break;				
+
+			case 'JCGKEWDJBQ' :
+				
+				LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='NSNSNSWGIU';
+				}	
+				
+				if (LXGKVFJUFT==2)
+				{
+					IQQIXCCBNV='SndClases';
+				}	
+
 				if (LXGKVFJUFT==3)
 				{
-					IQQIXCCBNV='NBSMNBHWOW';
-					//VPGBDEHDIT.play();
+					IQQIXCCBNV='SndMejor';
+				}	
+
+				if (LXGKVFJUFT==4)
+				{
+					IQQIXCCBNV='SndGenial';
+				}	
+
+				if (LXGKVFJUFT==5)
+				{
+					IQQIXCCBNV='SndArtista';
+				}	
+
+				if (LXGKVFJUFT==6)
+				{
+					IQQIXCCBNV='SndToco';
+				}			
+				
+				if (LXGKVFJUFT>=7)
+				{
+					IQQIXCCBNV='GERQISACAV';
+				}
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;		
+
+			case 'CAGCUMKBGA' :
+				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
+				if (LXGKVFJUFT<=3)
+				{
+					IQQIXCCBNV='TSXDMBDDID';
+				}
+				else
+				{
+					IQQIXCCBNV='HJGWHJDGJP';
+				}
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;	
+
+			case 'TSYFNOWESC' :
+				IQQIXCCBNV='VLVITFRSLA';
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;		
+
+			case 'XKBVJQJRBV' :
+				LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
+				if (LXGKVFJUFT<=7 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='LSQGNFJBGH';
+					//LSQGNFJBGH.play();
+					PPOQCOUQCE=true;
+				}
+				if (LXGKVFJUFT<=8 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='UUUUDJWJAJ';
+					//MSJIWCUWCU.play();
+					PPOQCOUQCE=true;
 				}				
-				PPOQCOUQCE=true;
-			}
-			
-			if (JVQXQGYDHH==0 && CNCCBHQJKL==2)
-			{
-				IQQIXCCBNV='LOIYUIYIUC';
-				//LOIYUIYIUC.play();
-				PPOQCOUQCE=true;
-			}				
-			
-			LXGKVFJUFT = Math.floor(Math.random() * 3) + 1  
-			
-			if (LXGKVFJUFT==1 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='NEKUUPJKUV';
-				//NEKUUPJKUV.play();
-				PPOQCOUQCE=true;
-			}
-			if (LXGKVFJUFT==2 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='VPGBDEHDIT';
-				//VPGBDEHDIT.play();
-				PPOQCOUQCE=true;
-			}		
+				if (LXGKVFJUFT<=9 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='MSJIWCUWCU';
+					//MSJIWCUWCU.play();
+					PPOQCOUQCE=true;
+				}	
+				if (LXGKVFJUFT<=10 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='AZZHJKWPLD';
+					//AZZHJKWPLD.play();
+					PPOQCOUQCE=true;
+				}							
+		
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;		
+
+			case 'LMAYDDUATD' :
+				LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
+				if (LXGKVFJUFT<=7  && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='CVJDMGILKI';
+					//CVJDMGILKI.play();
+					PPOQCOUQCE=true;
+				}
+				if (LXGKVFJUFT<=8 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='UUUUDJWJAJ';
+					//MSJIWCUWCU.play();
+					PPOQCOUQCE=true;
+				}				
+				if (LXGKVFJUFT<=9  && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='MSJIWCUWCU';
+					//MSJIWCUWCU.play();
+					PPOQCOUQCE=true;
+				}	
+				if (LXGKVFJUFT<=10  && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='AZZHJKWPLD';
+					//AZZHJKWPLD.play();
+					PPOQCOUQCE=true;
+				}					
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}			
+				break;	
+
+			case 'YURJWRGUNO' :
 				
-			if (LXGKVFJUFT==3  && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='UUYECMNSZZ';
-				//UUYECMNSZZ.play();
-				PPOQCOUQCE=true;
-			}						
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;		
-
-		case 'OTSNYLXEHR' :
-			LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='MIKBDMVLOR';
-				//MIKBDMVLOR.play();
-			}
-			if (LXGKVFJUFT==2)
-			{
-				IQQIXCCBNV='HKHCMJEIUU';
-				//HKHCMJEIUU.play();
-			}	
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;	
-			
-		case '_HayPROS' :
-			LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='SndSientate';
-			}
-			else
-			{
-				IQQIXCCBNV='UUQGJQGJAM';
 				
-			}
+				
+				if (JVQXQGYDHH==0 && CNCCBHQJKL==1)
+				{
+					LXGKVFJUFT = Math.floor(Math.random() * 3) + 1  
+					
+					if (LXGKVFJUFT==1)
+					{
+						IQQIXCCBNV='HGJCHGAJGC';
+						//HGJCHGAJGC.play();
+					}
+					if (LXGKVFJUFT==2)
+					{
+						IQQIXCCBNV='VPGBDEHDIT';
+						//VPGBDEHDIT.play();
+					}
+					if (LXGKVFJUFT==3)
+					{
+						IQQIXCCBNV='NBSMNBHWOW';
+						//VPGBDEHDIT.play();
+					}				
+					PPOQCOUQCE=true;
+				}
+				
+				if (JVQXQGYDHH==0 && CNCCBHQJKL==2)
+				{
+					IQQIXCCBNV='LOIYUIYIUC';
+					//LOIYUIYIUC.play();
+					PPOQCOUQCE=true;
+				}				
+				
+				LXGKVFJUFT = Math.floor(Math.random() * 3) + 1  
+				
+				if (LXGKVFJUFT==1 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='NEKUUPJKUV';
+					//NEKUUPJKUV.play();
+					PPOQCOUQCE=true;
+				}
+				if (LXGKVFJUFT==2 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='VPGBDEHDIT';
+					//VPGBDEHDIT.play();
+					PPOQCOUQCE=true;
+				}		
+					
+				if (LXGKVFJUFT==3  && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='UUYECMNSZZ';
+					//UUYECMNSZZ.play();
+					PPOQCOUQCE=true;
+				}						
 
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;		
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;		
 
-		case '_HayProfesionales' :
-			
-			LXGKVFJUFT = Math.floor(Math.random() * 8) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='SndSientate';
-			}
-			if (LXGKVFJUFT==2)
-			{
-				IQQIXCCBNV='LWHWUIWHIL';
-			}
-	
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;		
-			
-			
-		case '_Oficio' :
-			LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
-			if (LXGKVFJUFT<=2 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='NXHWHHWQQE';
-				PPOQCOUQCE=true;
-				//MIKBDMVLOR.play();
-			}
-			if (LXGKVFJUFT==3 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='MIKBDMVLOR';
-				PPOQCOUQCE=true;
-				//MIKBDMVLOR.play();
-			}			
-			if (LXGKVFJUFT==4 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='HKHCMJEIUU';
-				PPOQCOUQCE=true;
-				//HKHCMJEIUU.play();
-			}	
+			case 'OTSNYLXEHR' :
+				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='MIKBDMVLOR';
+					//MIKBDMVLOR.play();
+				}
+				if (LXGKVFJUFT==2)
+				{
+					IQQIXCCBNV='HKHCMJEIUU';
+					//HKHCMJEIUU.play();
+				}	
 
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;				
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;	
+				
+			case '_HayPROS' :
+				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='SndSientate';
+				}
+				else
+				{
+					IQQIXCCBNV='UUQGJQGJAM';
+					
+				}
 
-						
-		case 'OJJBAIPHEV' :
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;		
+
+			case '_HayProfesionales' :
+				
+				LXGKVFJUFT = Math.floor(Math.random() * 8) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='SndSientate';
+				}
+				if (LXGKVFJUFT==2)
+				{
+					IQQIXCCBNV='LWHWUIWHIL';
+				}
 		
-			LXGKVFJUFT = Math.floor(Math.random() * 5) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='JDPOTVNRCT';
-				//JDPOTVNRCT.play();
-			}
-			if (LXGKVFJUFT==2)
-			{
-				IQQIXCCBNV='UWYIUWJHGS';
-				//JDPOTVNRCT.play();
-			}			
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;		
+				
+				
+			case '_Oficio' :
+				LXGKVFJUFT = Math.floor(Math.random() * 4) + 1  
+				if (LXGKVFJUFT<=2 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='NXHWHHWQQE';
+					PPOQCOUQCE=true;
+					//MIKBDMVLOR.play();
+				}
+				if (LXGKVFJUFT==3 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='MIKBDMVLOR';
+					PPOQCOUQCE=true;
+					//MIKBDMVLOR.play();
+				}			
+				if (LXGKVFJUFT==4 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='HKHCMJEIUU';
+					PPOQCOUQCE=true;
+					//HKHCMJEIUU.play();
+				}	
 
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;		
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;				
 
-		case '_Ultimas' :
-			IQQIXCCBNV='NBIQIUICLA';
-			//NBIQIUICLA.play();
-
-			if (SonidoCantes==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;	
+							
+			case 'OJJBAIPHEV' :
 			
-		case '_Grano' :
+				LXGKVFJUFT = Math.floor(Math.random() * 5) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='JDPOTVNRCT';
+					//JDPOTVNRCT.play();
+				}
+				if (LXGKVFJUFT==2)
+				{
+					IQQIXCCBNV='UWYIUWJHGS';
+					//JDPOTVNRCT.play();
+				}			
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;		
+
+			case '_Ultimas' :
+				IQQIXCCBNV='NBIQIUICLA';
+				//NBIQIUICLA.play();
+
+				if (SonidoCantes==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;	
+				
+			case '_Grano' :
+			
+				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='JBCWHUIWCW';
+					//JBCWHUIWCW.play();
+				}	
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;						
+				
+			case '_Puntos_menos15' :
+			
+				LXGKVFJUFT = Math.floor(Math.random() * 7) + 1  
+
+				if (LXGKVFJUFT<=3 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='MSJIWCUWCU';
+					//MSJIWCUWCU.play();
+					PPOQCOUQCE=true;
+				}	
+				
+				
+				if (LXGKVFJUFT<=6 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='UUUUDJWJAJ';
+					//MSJIWCUWCU.play();
+					PPOQCOUQCE=true;
+				}
+				
+				if (LXGKVFJUFT<=7 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='AZZHJKWPLD';
+					//AZZHJKWPLD.play();
+					PPOQCOUQCE=true;
+				}	
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}	
+				break;		
+
+		case '_Puntos_mas15' :
+			
+				LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
+
+				if (LXGKVFJUFT<=3 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='MSJIWCUWCU';
+					//MSJIWCUWCU.play();
+					PPOQCOUQCE=true;
+				}	
+				
+				if (LXGKVFJUFT<=6 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='OOUOIWJDDD';
+					//MSJIWCUWCU.play();
+					PPOQCOUQCE=true;
+				}				
+				
+				if (LXGKVFJUFT<=9 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='UUUUDJWJAJ';
+					//MSJIWCUWCU.play();
+					PPOQCOUQCE=true;
+				}
+				
+				if (LXGKVFJUFT<=10 && PPOQCOUQCE==false)
+				{
+					IQQIXCCBNV='AZZHJKWPLD';
+					//AZZHJKWPLD.play();
+					PPOQCOUQCE=true;
+				}		
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;						
+
+			case '_Chatarrero' :
+			
+				LXGKVFJUFT = Math.floor(Math.random() * 6) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='UIYIUHCWVX';
+					//UIYIUHCWVX.play();
+				}	
+				if (LXGKVFJUFT==2)
+				{
+					IQQIXCCBNV='SndDar';				
+				}	
+
+				if (LXGKVFJUFT==3)
+				{
+					IQQIXCCBNV='SndTaustano';
+				}
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;	
+
+			case '_Suerte' :
+				
+				LXGKVFJUFT = Math.floor(Math.random() * 20) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='AAAAJKGHKC';
+					//AAAAJKGHKC.play();
+				}	
+				if (LXGKVFJUFT==2)
+				{
+					IQQIXCCBNV='HKJHVUHWUO';
+					//HKJHVUHWUO.play();
+				}	
+				if (LXGKVFJUFT==3)
+				{
+					IQQIXCCBNV='UIYIUWCHCW';
+					//UIYIUWCHCW.play();
+				}		
+				if (LXGKVFJUFT==4)
+				{
+					IQQIXCCBNV='SndArrancao';
+					//UIYIUWCHCW.play();
+				}		
+				if (LXGKVFJUFT==5)
+				{
+					IQQIXCCBNV='SndNoSabes';
+				}	
+				if (LXGKVFJUFT==6)
+				{
+					IQQIXCCBNV='SndPensar';
+				}				
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;	
+			
+			case '_Escupe' :
+			
+				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='ZZJJJUHIHI';
+					//ZZJJJUHIHI.play();
+				}						
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;			
+
+			case '_GuinoteOtro' :
+			
+				LXGKVFJUFT = Math.floor(Math.random() * 1) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='BVUWCEFEGY';
+					//BVUWCEFEGY.play();
+				}						
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;		
+
+			case '_Faldas' :
+			
+				LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
+				if (LXGKVFJUFT==1)
+				{
+					IQQIXCCBNV='LEUSNCUWAA';
+					//LEUSNCUWAA.play();
+				}						
+
+				if (SonidoChascarrillos==false)
+				{
+					IQQIXCCBNV="";
+				}				
+				break;		
+			
+			case '_Monedas' :
+				IQQIXCCBNV='NMGIUEIWFE';
+				break;
+			case '_Cremallera' :
+				IQQIXCCBNV='PPPQIODKJA';
+				break;				
+		}
 		
-			LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='JBCWHUIWCW';
-				//JBCWHUIWCW.play();
-			}	
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;						
-			
-		case '_Puntos_menos15' :
+		Reproduce(IQQIXCCBNV);
 		
-			LXGKVFJUFT = Math.floor(Math.random() * 7) + 1  
 
-			if (LXGKVFJUFT<=3 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='MSJIWCUWCU';
-				//MSJIWCUWCU.play();
-				PPOQCOUQCE=true;
-			}	
-			
-			
-			if (LXGKVFJUFT<=6 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='UUUUDJWJAJ';
-				//MSJIWCUWCU.play();
-				PPOQCOUQCE=true;
-			}
-			
-			if (LXGKVFJUFT<=7 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='AZZHJKWPLD';
-				//AZZHJKWPLD.play();
-				PPOQCOUQCE=true;
-			}	
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}	
-			break;		
-
-	case '_Puntos_mas15' :
-		
-			LXGKVFJUFT = Math.floor(Math.random() * 10) + 1  
-
-			if (LXGKVFJUFT<=3 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='MSJIWCUWCU';
-				//MSJIWCUWCU.play();
-				PPOQCOUQCE=true;
-			}	
-			
-			if (LXGKVFJUFT<=6 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='OOUOIWJDDD';
-				//MSJIWCUWCU.play();
-				PPOQCOUQCE=true;
-			}				
-			
-			if (LXGKVFJUFT<=9 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='UUUUDJWJAJ';
-				//MSJIWCUWCU.play();
-				PPOQCOUQCE=true;
-			}
-			
-			if (LXGKVFJUFT<=10 && PPOQCOUQCE==false)
-			{
-				IQQIXCCBNV='AZZHJKWPLD';
-				//AZZHJKWPLD.play();
-				PPOQCOUQCE=true;
-			}		
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;						
-
-		case '_Chatarrero' :
-		
-			LXGKVFJUFT = Math.floor(Math.random() * 6) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='UIYIUHCWVX';
-				//UIYIUHCWVX.play();
-			}	
-			if (LXGKVFJUFT==2)
-			{
-				IQQIXCCBNV='SndDar';				
-			}	
-
-			if (LXGKVFJUFT==3)
-			{
-				IQQIXCCBNV='SndTaustano';
-			}
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;	
-
-		case '_Suerte' :
-			
-			LXGKVFJUFT = Math.floor(Math.random() * 20) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='AAAAJKGHKC';
-				//AAAAJKGHKC.play();
-			}	
-			if (LXGKVFJUFT==2)
-			{
-				IQQIXCCBNV='HKJHVUHWUO';
-				//HKJHVUHWUO.play();
-			}	
-			if (LXGKVFJUFT==3)
-			{
-				IQQIXCCBNV='UIYIUWCHCW';
-				//UIYIUWCHCW.play();
-			}		
-			if (LXGKVFJUFT==4)
-			{
-				IQQIXCCBNV='SndArrancao';
-				//UIYIUWCHCW.play();
-			}		
-			if (LXGKVFJUFT==5)
-			{
-				IQQIXCCBNV='SndNoSabes';
-			}	
-			if (LXGKVFJUFT==6)
-			{
-				IQQIXCCBNV='SndPensar';
-			}				
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;	
-		
-		case '_Escupe' :
-		
-			LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='ZZJJJUHIHI';
-				//ZZJJJUHIHI.play();
-			}						
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;			
-
-		case '_GuinoteOtro' :
-		
-			LXGKVFJUFT = Math.floor(Math.random() * 1) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='BVUWCEFEGY';
-				//BVUWCEFEGY.play();
-			}						
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;		
-
-		case '_Faldas' :
-		
-			LXGKVFJUFT = Math.floor(Math.random() * 2) + 1  
-			if (LXGKVFJUFT==1)
-			{
-				IQQIXCCBNV='LEUSNCUWAA';
-				//LEUSNCUWAA.play();
-			}						
-
-			if (SonidoChascarrillos==false)
-			{
-				IQQIXCCBNV="";
-			}				
-			break;							
-	
 	}
-	
-	Reproduce(IQQIXCCBNV);
-	
-
-}
-	
+}		
 function Reproduce(IQQIXCCBNV)
 {
 	
@@ -1589,6 +1663,7 @@ function Reproduce(IQQIXCCBNV)
 		}
 	}
 }
+
 
 
 
@@ -1714,13 +1789,30 @@ function QTIPILDEPH(sprite,UBWRXKMTQN,SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ,FHEFFYUQF
 			try
 			{			
 				
-				PQUFIBKJJH = YMHIHSNADE.add.tween(sprite);
+				//PQUFIBKJJH = YMHIHSNADE.add.tween(sprite);
+				PQUFIBKJJH.timeline=[]
+				PQUFIBKJJH.target=sprite
+				
 				PQUFIBKJJH.to( {x:NOFEDXHMLS
 				,y:GHTWROCHVV,
 				angle : UYAEIRFYUJ
 				}, MDYSFNYPYP, KYFMRVNHIQ,false);		
-				PQUFIBKJJH.onComplete.add( function () {
+				PQUFIBKJJH.onComplete.addOnce( function () {
 					//CHJKAHKJHC();
+					
+					if (JHJEWHFWNL==false)
+					{
+						 //YMHIHSNADE.add.tween(sprite.scale).to( {x:1,y:1}, IRXOKNWTLV, BSXWFYLCEW,true);
+						 sprite.scale.setTo(1,1)
+					}
+					else
+					{
+						 //YMHIHSNADE.add.tween(sprite.scale).to( {x:1.2,y:1.2}, IRXOKNWTLV, BSXWFYLCEW,true);
+						 sprite.scale.setTo(1.2,1.2)
+					}
+					sprite.bringToTop();
+			
+			
 					log(true,"MUEVE AL TABLERO: VA A LLAMAR A QUIEN GANA MANO "+UHTPGPRUJA);
 					//Renderizar(false);
 				//console.log("Acabo de tirar una carta al centro "+sprite.name+" con tarea "+TXLWIIINGQ)
@@ -1734,18 +1826,11 @@ function QTIPILDEPH(sprite,UBWRXKMTQN,SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ,FHEFFYUQF
 			}
 			
 			//var twEscala;
-			if (JHJEWHFWNL==false)
-			{
-				 YMHIHSNADE.add.tween(sprite.scale).to( {x:1,y:1}, IRXOKNWTLV, BSXWFYLCEW,true);
-			}
-			else
-			{
-				 YMHIHSNADE.add.tween(sprite.scale).to( {x:1.2,y:1.2}, IRXOKNWTLV, BSXWFYLCEW,true);
-			}
+
 			//twEscala
 			
 			PQUFIBKJJH.start();
-			sprite.bringToTop();
+			
 	//}	
 		
 
@@ -1879,6 +1964,8 @@ function FRWLTWDFVM(SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 			//TTJFVWDTMG=1;
 			DVNRTQIWGL=TTJFVWDTMG;
 			vTurnoConsumido=TTJFVWDTMG;
+			
+			ArrayRondaGanada.push(new NQMQGXXHIL(SLGKDYQCAY,DVNRTQIWGL) )
 			
 			
 			MMMCNMNKTP=DVNRTQIWGL;
@@ -2031,12 +2118,14 @@ function FRWLTWDFVM(SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 							function()
 							{
 								quakeEnd();
-								tw5 = YMHIHSNADE.add.tween(JJUORGEQOU.scale);
+								//tw5 = YMHIHSNADE.add.tween(JJUORGEQOU.scale);
+								tw5.timeline=[];
+								tw5.target=JJUORGEQOU.scale;
 								tw5.to( {x:MEPQMUPTEH,y:MEPQMUPTEH}		
 								, MDYSFNYPYP, KYFMRVNHIQ,false,PVQFVAAAEY);
 								//PQUFIBKJJH.onComplete.add(JFILXLIVJN,this)
 									log(false,"¿LAS HARA PEQUEÑAS?");
-								tw5.onComplete.add(
+								tw5.onComplete.addOnce(
 									function () {
 										JFILXLIVJN(UPCWNPYAIE,MMMCNMNKTP,TXLWIIINGQ); //Truco para poder pasar por parámetro
 										JJUORGEQOU.bringToTop();
@@ -2134,13 +2223,14 @@ function FRWLTWDFVM(SLGKDYQCAY,UHTPGPRUJA,TXLWIIINGQ){
 					 }		
 				 
 					Renderizar(true, "Va ganando 1");
-					tw5 = YMHIHSNADE.add.tween(JJUORGEQOU.scale);
+					//tw5 = YMHIHSNADE.add.tween(JJUORGEQOU.scale);
+					tw5.timeline=[]
+					tw5.target=JJUORGEQOU.scale
 					tw5.to( {x:MEPQMUPTEH,y:MEPQMUPTEH}		
 					, MDYSFNYPYP, KYFMRVNHIQ,false,PVQFVAAAEY);
-					//PQUFIBKJJH.onComplete.add(JFILXLIVJN,this)
 						log(false,"¿LAS HARA PEQUEÑAS?");
-					
-					tw5.onComplete.add(
+					console.log("KOKOKKOK")
+					tw5.onComplete.addOnce(
 						function () {
 							JFILXLIVJN(UPCWNPYAIE,MMMCNMNKTP,TXLWIIINGQ); //Truco para poder pasar por parámetro
 							JJUORGEQOU.bringToTop();
@@ -2380,7 +2470,8 @@ function AGLRWERBPD(UPCWNPYAIE){
 		DVNRTQIWGL++;
 	}
 		
-	GIDSSFEUNT();		
+	
+	GIDSSFEUNT("desde calcular turno");		
 	KKQJCHKQEP();	
 	//raka JWXRWCVLGC(UPCWNPYAIE);
 			
@@ -2400,12 +2491,14 @@ function JFILXLIVJN(TKWCTNGROU,LDCCGSIBKW,TXLWIIINGQ){
 		//log(false,"Se hacen pequeñas")
 		VRLYJAAHUE(VDKOVQXHON[0].TNFAGGMKXD);
 		VDKOVQXHON[0].TNFAGGMKXD.alpha=1;
-		TKXWTMCBFU = YMHIHSNADE.add.tween(VDKOVQXHON[0].TNFAGGMKXD.scale);
+		//TKXWTMCBFU = YMHIHSNADE.add.tween(VDKOVQXHON[0].TNFAGGMKXD.scale);
+		TKXWTMCBFU.timeline=[]
+		TKXWTMCBFU.target=VDKOVQXHON[0].TNFAGGMKXD.scale
 		TKXWTMCBFU.to( {x:RABUWLOKWX
 		,y:RABUWLOKWX
 		}
 		, MDYSFNYPYP, KYFMRVNHIQ,false,PVQFVAAAEY);
-		TKXWTMCBFU.onComplete.add(function(){
+		TKXWTMCBFU.onComplete.addOnce(function(){
 			WEFMQSNCOE(TXLWIIINGQ);
 			})				
 		TKXWTMCBFU.start();					
@@ -2415,12 +2508,14 @@ function JFILXLIVJN(TKWCTNGROU,LDCCGSIBKW,TXLWIIINGQ){
 		if(VDKOVQXHON.length>=2){
 		VRLYJAAHUE(VDKOVQXHON[1].TNFAGGMKXD);
 		VDKOVQXHON[1].TNFAGGMKXD.alpha=1;
-		UEIQAMIDWY = YMHIHSNADE.add.tween(VDKOVQXHON[1].TNFAGGMKXD.scale);
+		//UEIQAMIDWY = YMHIHSNADE.add.tween(VDKOVQXHON[1].TNFAGGMKXD.scale);
+		UEIQAMIDWY.timeline=[]
+		UEIQAMIDWY.target=VDKOVQXHON[1].TNFAGGMKXD.scale		
 		UEIQAMIDWY.to( {x:RABUWLOKWX
 		,y:RABUWLOKWX
 		}
 		, MDYSFNYPYP, KYFMRVNHIQ,false,PVQFVAAAEY);
-		UEIQAMIDWY.onComplete.add(function(){
+		UEIQAMIDWY.onComplete.addOnce(function(){
 			UCJLIRNXGJ(TXLWIIINGQ);
 			})				
 		UEIQAMIDWY.start();		
@@ -2430,12 +2525,14 @@ function JFILXLIVJN(TKWCTNGROU,LDCCGSIBKW,TXLWIIINGQ){
 		if(VDKOVQXHON.length>=3){		
 		VRLYJAAHUE(VDKOVQXHON[2].TNFAGGMKXD);
 		VDKOVQXHON[2].TNFAGGMKXD.alpha=1;
-		GCKCAMPPHX = YMHIHSNADE.add.tween(VDKOVQXHON[2].TNFAGGMKXD.scale);
+		//GCKCAMPPHX = YMHIHSNADE.add.tween(VDKOVQXHON[2].TNFAGGMKXD.scale);
+		GCKCAMPPHX.timeline=[]
+		GCKCAMPPHX.target=VDKOVQXHON[2].TNFAGGMKXD.scale			
 		GCKCAMPPHX.to( {x:RABUWLOKWX
 		,y:RABUWLOKWX
 		}
 		, MDYSFNYPYP, KYFMRVNHIQ,false,PVQFVAAAEY);
-		GCKCAMPPHX.onComplete.add(function(){
+		GCKCAMPPHX.onComplete.addOnce(function(){
 			PGDMTNSUGD(TXLWIIINGQ);
 			})				
 		GCKCAMPPHX.start();		
@@ -2446,12 +2543,14 @@ function JFILXLIVJN(TKWCTNGROU,LDCCGSIBKW,TXLWIIINGQ){
 		//log(false,"Antes de llegar al 4");
 		VRLYJAAHUE(VDKOVQXHON[3].TNFAGGMKXD);
 		VDKOVQXHON[3].TNFAGGMKXD.alpha=1;
-		CFFVTFENDF = YMHIHSNADE.add.tween(VDKOVQXHON[3].TNFAGGMKXD.scale);
+		//CFFVTFENDF = YMHIHSNADE.add.tween(VDKOVQXHON[3].TNFAGGMKXD.scale);
+		CFFVTFENDF.timeline=[]
+		CFFVTFENDF.target=VDKOVQXHON[3].TNFAGGMKXD.scale			
 		CFFVTFENDF.to( {x:RABUWLOKWX
 		,y:RABUWLOKWX
 		}
 		, MDYSFNYPYP, KYFMRVNHIQ,false,PVQFVAAAEY);
-		CFFVTFENDF.onComplete.add(//VRHXGWDUTQ,this)		
+		CFFVTFENDF.onComplete.addOnce(//VRHXGWDUTQ,this)		
 				function () {
 					VRHXGWDUTQ(TKWCTNGROU,LDCCGSIBKW,TXLWIIINGQ); //Truco para poder pasar por parámetro
 				}
@@ -2465,7 +2564,7 @@ function JFILXLIVJN(TKWCTNGROU,LDCCGSIBKW,TXLWIIINGQ){
 
 function DFCCHCJBNP(UPCWNPYAIE,TXLWIIINGQ){
 
-
+console.log("ROBAR CARTAS 1.2 "+FBSDMRLVEL.length)
 	BloqueoCartaCentro=false;
 	//console.log("investigo4 "+BloqueoCartaCentro);
 	if (OTGNMRHTVK()==true && 1==2) // 1.0.9
@@ -2505,7 +2604,8 @@ function DFCCHCJBNP(UPCWNPYAIE,TXLWIIINGQ){
 
 			//}
 			
-			if (EGPDVIEJEL==false){
+			if (EGPDVIEJEL==false)
+			{
 				//log(true,"IA Desde Eliminar de la mesa");
 					
 					//var TKXPPGUPVV = YMHIHSNADE.time.create(false);//REVISIONTIEMPO
@@ -2520,7 +2620,7 @@ function DFCCHCJBNP(UPCWNPYAIE,TXLWIIINGQ){
 					}*/
 						
 					//var	TKXPPGUPVV = YMHIHSNADE.time.create(false);
-					GIDSSFEUNT();
+					GIDSSFEUNT("DESDE ELIMINAR MESA");
 					/*
 					//raka
 					
@@ -2533,6 +2633,11 @@ function DFCCHCJBNP(UPCWNPYAIE,TXLWIIINGQ){
 							
 							
 				//}
+			}
+			else
+			{
+				
+				GIDSSFEUNT("DESDE ELIMINAR MESA2");
 			}
 			
 			
@@ -2571,7 +2676,151 @@ function DFCCHCJBNP(UPCWNPYAIE,TXLWIIINGQ){
 		
 		LMGBDQDXWP();
 	}
+	console.log("ROBAR CARTAS 3 "+FBSDMRLVEL.length)
 }
+
+function CalcularVariableEmoticono(LetraDesde,LetraHasta)
+{
+	var EmoticonoEnviar;
+	
+	if (LetraDesde="D")
+	{
+		if (LetraHasta=="R")
+		{
+			EmoticonoEnviar=EmoticonoEnviarDR
+		}
+		if (LetraHasta=="U")
+		{
+			EmoticonoEnviar=EmoticonoEnviarDU
+		}
+		if (LetraHasta=="L")
+		{
+			EmoticonoEnviar=EmoticonoEnviarDL
+		}
+	}	
+	
+	if (LetraDesde="R")
+	{
+		if (LetraHasta=="D")
+		{
+			EmoticonoEnviar=EmoticonoEnviarRD
+		}
+		if (LetraHasta=="U")
+		{
+			EmoticonoEnviar=EmoticonoEnviarRU
+		}
+		if (LetraHasta=="L")
+		{
+			EmoticonoEnviar=EmoticonoEnviarRL
+		}
+	}		
+
+	if (LetraDesde="U")
+	{
+		if (LetraHasta=="D")
+		{
+			EmoticonoEnviar=EmoticonoEnviarUD
+		}
+		if (LetraHasta=="R")
+		{
+			EmoticonoEnviar=EmoticonoEnviarUR
+		}
+		if (LetraHasta=="L")
+		{
+			EmoticonoEnviar=EmoticonoEnviarUL
+		}
+	}
+
+	if (LetraDesde="L")
+	{
+		if (LetraHasta=="D")
+		{
+			EmoticonoEnviar=EmoticonoEnviarLD
+		}
+		if (LetraHasta=="U")
+		{
+			EmoticonoEnviar=EmoticonoEnviarLU
+		}
+		if (LetraHasta=="R")
+		{
+			EmoticonoEnviar=EmoticonoEnviarLR
+		}
+	}		
+	
+	return EmoticonoEnviar;
+}
+
+function CalcularTweenEmoticono(LetraDesde,LetraHasta)
+{
+	var TweenEnviar;
+	
+	if (LetraDesde="D")
+	{
+		if (LetraHasta=="R")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoDR
+		}
+		if (LetraHasta=="U")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoDU
+		}
+		if (LetraHasta=="L")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoDL
+		}
+	}	
+	
+	if (LetraDesde="R")
+	{
+		if (LetraHasta=="D")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoRD
+		}
+		if (LetraHasta=="U")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoRU
+		}
+		if (LetraHasta=="L")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoRL
+		}
+	}		
+
+	if (LetraDesde="U")
+	{
+		if (LetraHasta=="D")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoUD
+		}
+		if (LetraHasta=="R")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoUR
+		}
+		if (LetraHasta=="L")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoUL
+		}
+	}
+
+	if (LetraDesde="L")
+	{
+		if (LetraHasta=="D")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoLD
+		}
+		if (LetraHasta=="U")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoLU
+		}
+		if (LetraHasta=="R")
+		{
+			TweenEnviar=twDesplazamientoEmoticonoLR
+		}
+	}		
+	
+	return TweenEnviar;
+}
+
 
 function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoticonoServer)
 {
@@ -2581,9 +2830,10 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 	
 	var Rotar=true;
 	var Fadding=true;
-	var vTiempoEmotiMover=900;
-	var vTiempoEmotiDesaparecer=1000;
-	var STLEOJDWSU;
+	var vTiempoEmotiMover=800;
+	var vTiempoEmotiDesaparecer=100;
+	var LetraDesde;
+	var LetraHasta;
 	var DUHVSKZZZD=140;
 	var DesplazamientoD=200;
 	var posXDesde;
@@ -2591,52 +2841,55 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 	var posYDesde;
 	var posYHasta;	
 	var twDesplazamientoEmoticono;
+
 	
 	//var JugadorDesde=1;
 	//var JugadorHasta=4;
 	
-	var STLEOJDWSU=HHOPUSIABJ(JugadorDesde)
+	var LetraDesde=HHOPUSIABJ(JugadorDesde)
 	
-	if (STLEOJDWSU=="U")
+	if (LetraDesde=="U")
 	{
 		posXDesde=YMHIHSNADE.world.centerX	;
-		posYDesde=0;	
+		posYDesde=0;
+
+		
 	}
-	if (STLEOJDWSU=="R")
+	if (LetraDesde=="R")
 	{
 		posXDesde=YMHIHSNADE.world.width	;
 		posYDesde=YMHIHSNADE.world.centerY	;	
 	}	
-	if (STLEOJDWSU=="L")
+	if (LetraDesde=="L")
 	{
 		posXDesde=0	;
 		posYDesde=YMHIHSNADE.world.centerY	;	
 	}		
-	if (STLEOJDWSU=="D")
+	if (LetraDesde=="D")
 	{
 		posXDesde=YMHIHSNADE.world.centerX	;
 		posYDesde=YMHIHSNADE.world.height	;	
 	}		
 	
 	
-	STLEOJDWSU=HHOPUSIABJ(JugadorHasta)
+	LetraHasta=HHOPUSIABJ(JugadorHasta)
 	
-	if (STLEOJDWSU=="U")
+	if (LetraHasta=="U")
 	{
 		posXHasta=YMHIHSNADE.world.centerX	;
 		posYHasta=0+DUHVSKZZZD;	
 	}
-	if (STLEOJDWSU=="R")
+	if (LetraHasta=="R")
 	{
 		posXHasta=YMHIHSNADE.world.width-DUHVSKZZZD	;
 		posYHasta=YMHIHSNADE.world.centerY	;	
 	}	
-	if (STLEOJDWSU=="L")
+	if (LetraHasta=="L")
 	{
 		posXHasta=0+DUHVSKZZZD	;
 		posYHasta=YMHIHSNADE.world.centerY	;	
 	}		
-	if (STLEOJDWSU=="D")
+	if (LetraHasta=="D")
 	{
 		posXHasta=YMHIHSNADE.world.centerX	;
 		if (twEnviarEmoticonoGlobalParaMi.isRunning)
@@ -2645,12 +2898,25 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 		}
 		posYHasta=YMHIHSNADE.world.height-DesplazamientoD	;	
 	}		
+	
+	var EmoticonoEnviar=CalcularVariableEmoticono(LetraDesde,LetraHasta)
+	
+	EmoticonoEnviar.scale.setTo(0.6,0.6)
+	EmoticonoEnviar.bringToTop();
+		
+	EmoticonoEnviar.revive();
+	EmoticonoEnviar.x=posXDesde
+	EmoticonoEnviar.y=posYDesde
+	EmoticonoEnviar.frameName=idEmoticonoServer
+	
+	
+	twDesplazamientoEmoticono=CalcularTweenEmoticono(LetraDesde,LetraHasta)
 		
 	Renderizar(true);
 	//console.log("EMOTICONO "+idEmoticonoServer)
-	var EmoticonoEnviar=YMHIHSNADE.add.image(posXDesde,posYDesde,'emoticonos_server',idEmoticonoServer);
+	//var EmoticonoEnviar=YMHIHSNADE.add.image(posXDesde,posYDesde,'emoticonos_server',idEmoticonoServer);
 	
-	if (EmoticonoEnviar.frameName!=undefined)
+	if (EmoticonoEnviar.frameName!=undefined && !twDesplazamientoEmoticono.isRunning)
 	{
 		GrupoEmojis.add(EmoticonoEnviar);
 		YMHIHSNADE.world.bringToTop(GrupoEmojis);
@@ -2665,26 +2931,22 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 		if (Efecto==1) //Rebote
 		{
 			EfectoMovimiento= Phaser.Easing.Bounce.Out;
-			twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+			//twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+
 		}
 
 		if (Efecto==2) 
 		{
 			EfectoMovimiento= Phaser.Easing.Sinusoidal.InOut;
-			twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+			//twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
 		}	
 		
 		if (Efecto==3) //Rebote
 		{
 			EfectoMovimiento= Phaser.Easing.Linear.None;
-			twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
+			//twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({x:posXHasta,y:posYHasta}, vTiempoEmotiMover, EfectoMovimiento,true);
 		}	
-		twEnviarEmoticonoGlobal=twDesplazamientoEmoticono;
-		if (STLEOJDWSU=="D")
-		{
-			twEnviarEmoticonoGlobalParaMi=twDesplazamientoEmoticono;
-		}
-		
+
 
 		Rotar=Math.floor(Math.random() * 5) + 1 
 		if (Rotar<=2)
@@ -2696,31 +2958,42 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 			Rotar=false;
 		}
 
+		var MOFGFYOVIG=0;
 		if (Rotar==true && Efecto!=1 )
 		{
-			twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({angle: 360}, vTiempoEmotiMover, Phaser.Easing.Cubic.In, true, 100, 0);
-			twEnviarEmoticonoGlobal=twDesplazamientoEmoticono;
+			MOFGFYOVIG=360
+			//twDesplazamientoEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar).to({angle: 360}, vTiempoEmotiMover, Phaser.Easing.Cubic.In, true, 100, 0);
 		}
 		
-		/*Fadding=Math.floor(Math.random() * 10) + 1 
-		if (Fadding<=2)
-		{
-			Fadding=true;
-		}
-		else
-		{
-			Fadding=false;
-		}
 		
-		Fadding=false;
-		if (Fadding==true)
-		{
-			EmoticonoEnviar.alpha = 0;
-			YMHIHSNADE.add.tween(EmoticonoEnviar).to( { alpha: 1 }, vTiempoEmoti, Phaser.Easing.Linear.None, true, 20, 0);
-		}*/
+		twDesplazamientoEmoticono.target=EmoticonoEnviar
+		twDesplazamientoEmoticono.timeline=[]		
+		twDesplazamientoEmoticono.to({x:posXHasta,y:posYHasta,angle: MOFGFYOVIG}, vTiempoEmotiMover, EfectoMovimiento,true);
+		twDesplazamientoEmoticono.onComplete.addOnce(  function(){
+			twDesplazamientoEmoticono.target=EmoticonoEnviar.scale
+			twDesplazamientoEmoticono.timeline=[]	
+			twDesplazamientoEmoticono.to( {x:1.2,y:1.2}, vTiempoEmotiMover, Phaser.Easing.Linear.None,true,vTiempoEmotiDesaparecer)
+			twDesplazamientoEmoticono.onComplete.addOnce(  function(){
+				twDesplazamientoEmoticono.target=EmoticonoEnviar.scale
+				twDesplazamientoEmoticono.timeline=[]	
+				twDesplazamientoEmoticono.to( {x:1.2,y:1.2}, vTiempoEmotiMover, Phaser.Easing.Linear.None,true,vTiempoEmotiDesaparecer)
+				twDesplazamientoEmoticono.onComplete.addOnce(  function(){
+					EmoticonoEnviar.bringToTop();
+					EmoticonoEnviar.kill();//2.0.1 clave:rehuse
+					Renderizar(true);
+				})
+			})
 		
-		EmoticonoEnviar.scale.setTo(0.3,0.3)
-		EmoticonoEnviar.bringToTop();
+		})
+	
+		
+		
+
+
+		
+
+		
+		/*
 		var twEmoticono=YMHIHSNADE.add.tween(EmoticonoEnviar.scale).to( {x:1.2,y:1.2}, vTiempoEmotiMover, Phaser.Easing.Linear.None,true,vTiempoEmotiDesaparecer);
 		twEmoticono.onComplete.add(  function(){
 									//if (DQKYYAPEEN.isRunning==false && MJBCTSKUIB.isRunning==false)
@@ -2732,12 +3005,8 @@ function onSocketEnviarEmoticonosDesdeServer(JugadorDesde, JugadorHasta, idEmoti
 											Renderizar(true);
 										});
 									//}
-									})
-		twEnviarEmoticonoGlobal=twEmoticono;
-		if (STLEOJDWSU=="D")
-		{	
-			twEnviarEmoticonoGlobalParaMi=twEmoticono;
-		}
+									})*/
+		
 	}
 }
 
@@ -3218,7 +3487,10 @@ function RQMTWGKGIA(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDX
 					//if (HQWFFUCQDR(SLGKDYQCAY,UHTPGPRUJA,PartidaRecibida))
 					//{
 						VDKOVQXHON.push(new TVYNYTCQYW(XACEBCSJAB[i].SGCSHJVERI,XACEBCSJAB[i].UUOPKETETA,XACEBCSJAB[i].HVCFEWNDRF,XACEBCSJAB[i].TNFAGGMKXD,null,UHTPGPRUJA,null,VMKDXVSQEY,XACEBCSJAB[i].MQUGCIUQII));
-						
+						//if [11,12].indexOf( XACEBCSJAB[i].VVRCMEUNOJ  )>=0
+						//{
+							MazoCartasSalidas.push(new TVYNYTCQYW(XACEBCSJAB[i].SGCSHJVERI,XACEBCSJAB[i].UUOPKETETA,XACEBCSJAB[i].HVCFEWNDRF,null,VDKOVQXHON.length,UHTPGPRUJA,SLGKDYQCAY,null,null));
+						//}
 					
 
 						
@@ -3301,7 +3573,7 @@ function RQMTWGKGIA(XACEBCSJAB,STLEOJDWSU,SJVCMXWVVI,UHTPGPRUJA,SLGKDYQCAY,VMKDX
 	}
 
 	
-	OROGRNBISW(XACEBCSJAB,STLEOJDWSU)
+	OROGRNBISW(XACEBCSJAB,STLEOJDWSU,false,false,false,false)
 	
 	
 

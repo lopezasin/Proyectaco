@@ -139,6 +139,8 @@ function CLWUDOTYHT(data,RDBQUAVHEP,TXLWIIINGQ)
 			//log(false,"Longitud "+this.Cartas.length)
 			//log(false,this.Cartas[i].EHDWIURHHD);
 			FXGSEGRXKC.push(new TVYNYTCQYW(data[i].SGCSHJVERI,data[i].UUOPKETETA,data[i].HVCFEWNDRF,null,null,null,null,null,data[i].MQUGCIUQII));
+			MazoTodas.push(new TVYNYTCQYW(data[i].SGCSHJVERI,data[i].UUOPKETETA,data[i].HVCFEWNDRF,null,null,null,null,null,data[i].MQUGCIUQII));
+			
 			//MazoVivo.push(new TVYNYTCQYW(data[i].SGCSHJVERI,data[i].UUOPKETETA,data[i].HVCFEWNDRF,null,null));
 			if (HBFBHWJQSQ==false)
 			{
@@ -187,6 +189,7 @@ function CLWUDOTYHT(data,RDBQUAVHEP,TXLWIIINGQ)
 					}
 					
 				}			
+				
 				
 				FXGSEGRXKC[i].TNFAGGMKXD = YMHIHSNADE.add.image(50,YMHIHSNADE.world.centerY/2, NXNXBWBBWL,XCKJMDNBYC);				
 				FXGSEGRXKC[i].TNFAGGMKXD.anchor.setTo(0.5, 0.5);
