@@ -7626,11 +7626,15 @@ function setEventHandlers() { //ESTE
 	  
 	  if (HMVFLEYPXM.length==0 && MNAGVJHWOW()==false && HGMNXSIAPV==true)
 	  {
-		  onSocketIncrementoGbitsComprados(data.GbitsComprados)
+		  socket.emit('Consola', 'En local, gbits directo')
+		  socket.emit('Consola', 'Monedas '+data.Monedas)
+		  onSocketIncrementoGbitsComprados(data.Monedas)
 		  return callback(data.OYJAHGADFQ);
 	  }
 	  else
 	  {
+		  socket.emit('Consola', 'En local, gbits indirecto')
+		  socket.emit('Consola', 'Monedas '+data.Monedas)
 		  var Pasar=[];
 		  Pasar.push(data)
 		  LVEMXLIFKA(Pasar);
@@ -8631,7 +8635,7 @@ function LVEMXLIFKA(KJEWHVDJKS,New)
 								break;	
 
 								case 'envia_incremento_gbits' :	//2.0.8054
-									   onSocketIncrementoGbitsComprados(ArrayPasar[0].GbitsComprados)
+									   onSocketIncrementoGbitsComprados(ArrayPasar[0].Monedas)
 									  EliminaMensaje(ArrayPasar);
 								break;									
 						
