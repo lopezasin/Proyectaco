@@ -261,7 +261,7 @@ function appendLeadingZeroes(n){
   return n
 }
 
-function onSocketIncrementoGbitsComprados(GbitsComprados)
+function onSocketIncrementoGbitsComprados(GbitsComprados, TXLWIIINGQ)
 {
 	var RPHWVBBGIM;
 	
@@ -273,6 +273,8 @@ function onSocketIncrementoGbitsComprados(GbitsComprados)
 	
 	RPHWVBBGIM="¡Producto comprado correctamente!"
 	document.getElementById("lblArticuloYaComprado").textContent=RPHWVBBGIM	
+	
+	OGGWQECXBK(TXLWIIINGQ,false,false);
 }
 
 	

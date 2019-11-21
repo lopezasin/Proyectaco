@@ -7624,22 +7624,22 @@ function setEventHandlers() { //ESTE
   socket.on('envia_incremento_gbits', function(data,callback)
   {
 	  
-	  if (HMVFLEYPXM.length==0 && MNAGVJHWOW()==false && HGMNXSIAPV==true)
-	  {
+	  //if (HMVFLEYPXM.length==0 && MNAGVJHWOW()==false && HGMNXSIAPV==true)
+	  //{
 		  socket.emit('Consola', 'En local, gbits directo')
 		  socket.emit('Consola', 'Monedas '+data.Monedas)
-		  onSocketIncrementoGbitsComprados(data.Monedas)
+		  onSocketIncrementoGbitsComprados(data.Monedas, false)
 		  return callback(data.OYJAHGADFQ);
-	  }
-	  else
-	  {
-		  socket.emit('Consola', 'En local, gbits indirecto')
-		  socket.emit('Consola', 'Monedas '+data.Monedas)
-		  var Pasar=[];
-		  Pasar.push(data)
-		  LVEMXLIFKA(Pasar);
-		  return (0);
-	  }
+	  //}
+	  //else
+	  //{
+		//  socket.emit('Consola', 'En local, gbits indirecto')
+		//  socket.emit('Consola', 'Monedas '+data.Monedas)
+	//	  var Pasar=[];
+	//	  Pasar.push(data)
+	//	  LVEMXLIFKA(Pasar);
+	//	  return (0);
+	//  }
 	  
 	  
   }
@@ -7655,14 +7655,14 @@ function setEventHandlers() { //ESTE
   socket.on('envia_articulo_comprado', onSocketArticuloComprado);
   socket.on('envia_item_duplicado', onSocketArticuloDuplicado);
   
-  socket.on('VMCFXIVSKH', function(data,callback)
+  socket.on('VMCFXIVSKH', function(data) //2.0.8054 quito callback
   {
 
 	  
 	  if (HMVFLEYPXM.length==0 && MNAGVJHWOW()==false && HGMNXSIAPV==true)
 	  {
 		  XWGQYYRRQO(data.UHTPGPRUJA,data.SJVCMXWVVI,data.BBSGITWRQX,false)
-		  return callback(data.OYJAHGADFQ);
+		  //return callback(data.OYJAHGADFQ);
 	  }
 	  /*2.0.8054 Ya no lo gestiono
 	  else
@@ -7814,17 +7814,19 @@ function setEventHandlers() { //ESTE
   }
   );  */
   
-  socket.on('OYYQISPRTK', function(data,callback)
+
+ socket.on('OYYQISPRTK', function(data) //2.0.8054 quito callback
   {
 	  VMSUJQUAGD(data.data,data.QuienHabla)
-	  return callback(data.OYJAHGADFQ);
+	 //2.0.8054 return callback(data.OYJAHGADFQ);
   }
   );
   
-    socket.on('enviar_emoticono_desde_server', function(data,callback)
+  
+    socket.on('enviar_emoticono_desde_server', function(data)  //2.0.8054 quito callback
   {
 	  onSocketEnviarEmoticonosDesdeServer(data.Desde,data.Hasta,data.idEmoticono)
-	  return callback(data.OYJAHGADFQ);
+	  //return callback(data.OYJAHGADFQ);
   }
   );
   
@@ -8635,7 +8637,7 @@ function LVEMXLIFKA(KJEWHVDJKS,New)
 								break;	
 
 								case 'envia_incremento_gbits' :	//2.0.8054
-									   onSocketIncrementoGbitsComprados(ArrayPasar[0].Monedas)
+									   onSocketIncrementoGbitsComprados(ArrayPasar[0].Monedas,ArrayPasar[0].OYJAHGADFQ)
 									  EliminaMensaje(ArrayPasar);
 								break;									
 						
