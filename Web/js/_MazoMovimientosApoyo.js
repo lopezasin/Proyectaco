@@ -43,6 +43,62 @@ function ConsultaCompraRecibida()
 	})
 	timerConsultaCompraRecibida.start();
 }
+
+function EnviarComprarGbits()
+{
+	
+	var GXNRNMAAKW=function( OBTBPOULAV,AURESXCGMK, Monedas,
+		OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR)
+		{
+		 
+		 
+		 this.OBTBPOULAV=OBTBPOULAV
+		 this.AURESXCGMK=AURESXCGMK
+		 this.Monedas=Monedas
+		 
+		 this.OYJAHGADFQ=OYJAHGADFQ
+		 this.OJPXTRQDKS=OJPXTRQDKS
+		 this.LYHKNIMVEB=LYHKNIMVEB
+		 this.RHOLNWBOXR=RHOLNWBOXR
+		 
+		 this.EBAPPJFYSW=new Date(Date.now());
+	 }
+
+										
+	var QPHHGPRJAI=[];
+	QPHHGPRJAI.splice(0,1000);
+
+		
+	var OYJAHGADFQ=Math.random()*100000;
+	var KCPHFPSPLQ=new GXNRNMAAKW(PWMIBRSDCJ[0].OBTBPOULAV ,
+		socket.id, 1000,
+		OYJAHGADFQ,socket.id,null,'enviar comprar gbits');
+	NBEJWDVLLV.push(KCPHFPSPLQ);
+	QPHHGPRJAI.push(KCPHFPSPLQ);
+	
+	var CKHBSQULIF=YMHIHSNADE.time.create(false);
+	var ContinuarTry=true;
+	CKHBSQULIF.loop(200,function(){
+		//console.log("Entra al TKXPPGUPVV")
+		try
+		{
+			//console.log("Enviando..")
+			socket.emit('enviar_comprar_gbits',QPHHGPRJAI[0],
+			 function(XQLEOGMJYG)
+			 {		
+				EXBCVLOIYJ(XQLEOGMJYG,'enviar comprar gbits');
+			 }
+			);
+												
+		}
+		catch(e)
+		{
+			//console.log("Error "+e)
+			ContinuarTry=false;
+		}
+	})	
+}
+
 function StoreRegisterProduct() {
 
 	//socket.emit('Consola',"METODO REGISTER");
@@ -73,7 +129,7 @@ function StoreRegisterProduct() {
 	store.when("001").approved(function(res) {
 		//alert('Product purchased');
 		document.getElementById("BotonComprar").disabled=true;
-		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,1000);
+		EnviarComprarGbits(socket.id,PWMIBRSDCJ[0].OBTBPOULAV,1000);		
 		OcultarDetalleTienda();
 		CerrarTienda();	
 		//ConsultaCompraRecibida();
@@ -84,7 +140,7 @@ function StoreRegisterProduct() {
 	store.when("002").approved(function(res) {
 		//alert('Product purchased');
 		document.getElementById("BotonComprar").disabled=true;
-		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,5000);
+		EnviarComprarGbits(socket.id,PWMIBRSDCJ[0].OBTBPOULAV,5000)
 		OcultarDetalleTienda();
 		CerrarTienda();	
 		//ConsultaCompraRecibida();
@@ -6123,10 +6179,10 @@ function MHELAUXKXR()
 	BNWHJGHWUW.removeAll(); //2.0.7 para poder chatear durante los recuentos. Que se mate en este momento.
 	//console.log("BORRO TODOS LOS TIMERS");
 	
-	if (timerConsultaCompraRecibida.running)
-	{
-		EsperandoCompra=true;		
-	}
+	//if (timerConsultaCompraRecibida.running)
+	//{
+	//	EsperandoCompra=true;		
+	//}
 	
 	try
 	{
@@ -6135,10 +6191,10 @@ function MHELAUXKXR()
 	}
 	catch(e){}
 															
-	if (EsperandoCompra==true)
-	{
-		ConsultaCompraRecibida(); //Que se vuelva a lanzar el esperador de compras de guiñobits.
-	}
+	//if (EsperandoCompra==true)
+	//{
+	//	ConsultaCompraRecibida(); //Que se vuelva a lanzar el esperador de compras de guiñobits.
+	//}
 	
 	//console.log("He sido asesinado de verdad");
 	try

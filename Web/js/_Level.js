@@ -7572,7 +7572,7 @@ function setEventHandlers() { //ESTE
 
   socket.on('VOUQWLMKWW', CURCDCWNHB);
   socket.on('UAKKKJVTUK', DVCXGBTNWL);
-  socket.on('envia_incremento_gbits', onSocketIncrementoGbitsComprados)
+ 
   socket.on('BBDIWBRGXG', onSocketControl);
  
   socket.on('disconnect', RWOCHOBYJY);
@@ -7619,6 +7619,34 @@ function setEventHandlers() { //ESTE
 	  
   }
   );
+  
+  
+  socket.on('envia_incremento_gbits', function(data,callback)
+  {
+	  
+	  if (HMVFLEYPXM.length==0 && MNAGVJHWOW()==false && HGMNXSIAPV==true)
+	  {
+		  onSocketIncrementoGbitsComprados(data.GbitsComprados)
+		  return callback(data.OYJAHGADFQ);
+	  }
+	  else
+	  {
+		  var Pasar=[];
+		  Pasar.push(data)
+		  LVEMXLIFKA(Pasar);
+		  return (0);
+	  }
+	  
+	  
+  }
+  );
+
+
+
+
+
+
+   
   
   socket.on('envia_articulo_comprado', onSocketArticuloComprado);
   socket.on('envia_item_duplicado', onSocketArticuloDuplicado);
@@ -8311,7 +8339,7 @@ function LVEMXLIFKA(KJEWHVDJKS,New)
 		//2.0.8054 'VMCFXIVSKH', lo quito
 		var DGUPRQJRLP=['OUPPFUDFTA','FFGKWCDVFE','PMXHPCMRIF',
 		'VOJPSKOTNY','IPGXRVPSID','RNLCJXJTGF','GCOMOMYQBP','TGUUXMBTHT',
-		'salir_pantalla_principal','KJHKHEIEIE','HKJSDHFUIW'];
+		'salir_pantalla_principal','KJHKHEIEIE','HKJSDHFUIW', 'envia_incremento_gbits'];
 		//var timerTareas=YMHIHSNADE.time.create(false);
 		
 		if (KJEWHVDJKS!=null) 
@@ -8343,9 +8371,9 @@ function LVEMXLIFKA(KJEWHVDJKS,New)
 					}		*/
 					
 					
-					//if (DGUPRQJRLP.indexOf( KJEWHVDJKS[i].RHOLNWBOXR )==true && JSNTWHPRIL.includes( KJEWHVDJKS[i].IdMsgUnico )==false   
 					
-					if (DGUPRQJRLP.indexOf( KJEWHVDJKS[i].RHOLNWBOXR )>=0 && JSNTWHPRIL.indexOf( KJEWHVDJKS[i].IdMsgUnico )==-1   
+					
+					if (DGUPRQJRLP.indexOf( KJEWHVDJKS[i].RHOLNWBOXR )>=0 && JSNTWHPRIL.indexOf( KJEWHVDJKS[i].IdMsgUnico )==-1    
 					
 					//&&  !(  KJEWHVDJKS[i].RHOLNWBOXR=="GCOMOMYQBP" 
 					//		&& (JHVKJDVHWW(KJEWHVDJKS[i].OJPXTRQDKS,XPBCVAGCDQ[TFSXFTYVGQ-1].AURESXCGMK) ) )					
@@ -8385,7 +8413,7 @@ function LVEMXLIFKA(KJEWHVDJKS,New)
 							{
 								//console.log("Inserto tarea "+KJEWHVDJKS[i].RHOLNWBOXR) //locura
 								HMVFLEYPXM.push(KJEWHVDJKS[i])
-								JSNTWHPRIL.push(KJEWHVDJKS[i].IdMsgUnico)
+								JSNTWHPRIL.push(KJEWHVDJKS[i].IdMsgUnico)   
 							}
 							else
 							{
@@ -8527,10 +8555,10 @@ function LVEMXLIFKA(KJEWHVDJKS,New)
 					if (Continua==true)
 					{
 					
-						if (ArrayPasar[0].RHOLNWBOXR=="PMXHPCMRIF")
-						{
+						//if (ArrayPasar[0].RHOLNWBOXR=="PMXHPCMRIF")
+						//{
 							//console.log("..y es "+DevuelveNombreCartaDebug(ArrayPasar[0].SJVCMXWVVI)+" con ronda "+ArrayPasar[0].AGTXFNIKQD)
-						}
+						//}
 							
 						//console.log("Gestor "+ArrayPasar[0].OYJAHGADFQ+" "+ArrayPasar[0].MQUGCIUQII)
 						if ( FLKJPGBHIN(ArrayPasar[0].OYJAHGADFQ, ArrayPasar[0].MQUGCIUQII, ArrayPasar[0].RHOLNWBOXR)==true) //20180824 meto el MQUGCIUQII
@@ -8600,7 +8628,12 @@ function LVEMXLIFKA(KJEWHVDJKS,New)
 								case 'IPGXRVPSID' :	//ok
 									  TGLVJXEMKD(ArrayPasar[0].UHTPGPRUJA,ArrayPasar[0].OMDVKATFLQ,ArrayPasar[0].AWCCMSCOPO,ArrayPasar[0].OYJAHGADFQ);
 									  EliminaMensaje(ArrayPasar);
-								break;		
+								break;	
+
+								case 'envia_incremento_gbits' :	//2.0.8054
+									   onSocketIncrementoGbitsComprados(ArrayPasar[0].GbitsComprados)
+									  EliminaMensaje(ArrayPasar);
+								break;									
 						
 								case 'RNLCJXJTGF' :		//ok
 									  MBDMSUIWEH(ArrayPasar[0].UHTPGPRUJA,ArrayPasar[0].SJVCMXWVVI,ArrayPasar[0].OYJAHGADFQ);
