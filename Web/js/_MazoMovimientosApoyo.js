@@ -14,6 +14,8 @@ function ConsultaCompraRecibida()
 	var VueltasMaximas=5*60;
 	var Vueltas=1;
 	
+	//console.log("Esta corriendo "+ )
+	
 	timerConsultaCompraRecibida.stop();
 	timerConsultaCompraRecibida.remove();	
 	
@@ -6105,9 +6107,15 @@ function MatarConexionPrueba()
 
 function MHELAUXKXR()
 {	
-
+	var EsperandoCompra=false;
 	BNWHJGHWUW.removeAll(); //2.0.7 para poder chatear durante los recuentos. Que se mate en este momento.
 	//console.log("BORRO TODOS LOS TIMERS");
+	
+	if (timerConsultaCompraRecibida.running)
+	{
+		EsperandoCompra=true;		
+	}
+	
 	try
 	{
 		YMHIHSNADE.time.removeAll()				
@@ -6115,7 +6123,11 @@ function MHELAUXKXR()
 	}
 	catch(e){}
 															
-															
+	if (EsperandoCompra==true)
+	{
+		ConsultaCompraRecibida(); //Que se vuelva a lanzar el esperador de compras de guiñobits.
+	}
+	
 	//console.log("He sido asesinado de verdad");
 	try
 	{
