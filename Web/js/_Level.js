@@ -7043,6 +7043,7 @@ function XEMENNVXGV()
 			);
 			//IJCSKNTKVH
 			
+
 			
 			BNCAIUQIJJ=false;
 
@@ -11048,6 +11049,11 @@ function AYAOSXTCBR() {
 		 // }
 		//);
 		
+	try
+	{
+		StoreRegisterProduct();
+	}
+	catch(e){}	
 		
 	var UYEUYIYECB="";
 	//console.log("QKVJASWVEO caida "+UJHVBJDGJD);

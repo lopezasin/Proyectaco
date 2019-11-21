@@ -34,7 +34,7 @@ function StoreRegisterProduct() {
 		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,1000);
 		OcultarDetalleTienda();
 		CerrarTienda();	
-		store.refresh();
+		//store.refresh();
 		res.finish();
 		
 	});	
@@ -45,7 +45,7 @@ function StoreRegisterProduct() {
 		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,5000);
 		OcultarDetalleTienda();
 		CerrarTienda();	
-		store.refresh();
+		//store.refresh();
 		res.finish();
 		
 	});	
@@ -84,11 +84,11 @@ function StoreBuyProduct(Producto) {
 	
 	//StoreRegisterProduct();
 	productInApp1 = store.get(Producto);
-	store.refresh();
+	//store.refresh();
 }
 
-/*
-function StoreBuyProduct() {
+
+/*function StoreBuyProduct2() {
 
 	//socket.emit('Consola',"METODO REGISTER");
 	var productInApp1;
@@ -158,8 +158,8 @@ function StoreBuyProduct() {
     //   console.log(JSON.stringify(store));
 }
 
-*/
 
+*/
 
 function CompraGBits(Articulo){
 	//socket.emit('Consola',"COMPRANDO");
