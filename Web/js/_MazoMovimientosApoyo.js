@@ -14,7 +14,10 @@ function ConsultaCompraRecibida()
 	var VueltasMaximas=5*60;
 	var Vueltas=1;
 	
-	timerConsultaCompraRecibida.loop(1000, function(){		
+	timerConsultaCompraRecibida.stop();
+	timerConsultaCompraRecibida.remove();	
+	
+	timerConsultaCompraRecibida.loop(3000, function(){		
 		Vueltas=Vueltas+1;
 		RefrescaTiendaMonedas();
 		if (Actuales!=YUFGSLAHYS || Vueltas>=VueltasMaximas)
@@ -59,7 +62,7 @@ function StoreRegisterProduct() {
 		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,1000);
 		OcultarDetalleTienda();
 		CerrarTienda();	
-		ConsultaCompraRecibida();
+		//ConsultaCompraRecibida();
 		res.finish();
 		
 	});	
@@ -70,7 +73,7 @@ function StoreRegisterProduct() {
 		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,5000);
 		OcultarDetalleTienda();
 		CerrarTienda();	
-		ConsultaCompraRecibida();
+		//ConsultaCompraRecibida();
 		res.finish();
 		
 	});	
@@ -108,6 +111,7 @@ function StoreBuyProduct(Producto) {
 	var productInApp1;
 	
 	//StoreRegisterProduct();
+	ConsultaCompraRecibida();
 	productInApp1 = store.get(Producto);
 	//store.refresh();
 }
