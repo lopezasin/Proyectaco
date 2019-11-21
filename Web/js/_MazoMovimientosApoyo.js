@@ -1,7 +1,91 @@
 ﻿'use strict';
 
 
-function RegisterProduct() {
+function StoreRegisterProduct() {
+
+	//socket.emit('Consola',"METODO REGISTER");
+	var productInApp1;
+	
+	try
+	{
+	store.register({
+		id:    "001",
+		alias: "android.test.purchased",
+		type:  store.CONSUMABLE
+	});
+	}
+	catch(e)
+	{
+		//socket.emit('Consola',"METODO REGISTER "+e.message);
+	}
+	
+
+	store.ready(function () {
+        //console.log("STORE READY");
+		//alert("Tienda lista")
+		//socket.emit('Consola',"STORE READY");
+    }); 
+	
+
+	store.when("001").approved(function(res) {
+		//alert('Product purchased');
+		document.getElementById("BotonComprar").disabled=true;
+		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,1000);
+		OcultarDetalleTienda();
+		CerrarTienda();	
+		res.finish();
+		store.refresh();
+	});	
+	
+	store.when("002").approved(function(res) {
+		//alert('Product purchased');
+		document.getElementById("BotonComprar").disabled=true;
+		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,5000);
+		OcultarDetalleTienda();
+		CerrarTienda();	
+		res.finish();
+		store.refresh();
+	});	
+	
+	store.when("001").canceled(function(res) {
+		//alert('Product purchased');
+		//socket.emit('Consola',"PRODUCTO CANCELADO "+JSON.stringify(res));
+	});		
+	
+	store.when("001").error(function(res) {
+		//alert('Product purchased');
+		//socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
+	});			
+
+
+	store.when("002").canceled(function(res) {
+		//alert('Product purchased');
+		//socket.emit('Consola',"PRODUCTO CANCELADO "+JSON.stringify(res));
+	});		
+	
+	store.when("002").error(function(res) {
+		//alert('Product purchased');
+		//socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
+	});		
+	
+	store.refresh();
+    //   console.log(JSON.stringify(store));
+}
+
+
+
+function StoreBuyProduct(Producto) {
+
+	//socket.emit('Consola',"METODO REGISTER");
+	var productInApp1;
+	
+ 
+	productInApp1 = store.get(Producto);
+	
+}
+
+/*
+function StoreBuyProduct() {
 
 	//socket.emit('Consola',"METODO REGISTER");
 	var productInApp1;
@@ -71,8 +155,10 @@ function RegisterProduct() {
     //   console.log(JSON.stringify(store));
 }
 
+*/
 
-function CompraGBits(){
+
+function CompraGBits(Articulo){
 	//socket.emit('Consola',"COMPRANDO");
 	
 	//socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,200);
@@ -82,6 +168,16 @@ function CompraGBits(){
 	
 	if (PWMIBRSDCJ.length>0)
 	{
+		if (Articulo=='Art010')
+		{
+			//console.log("se mete")
+			StoreBuyProduct('001');
+		}	
+		if (Articulo=='Art011')
+		{
+			//console.log("se mete")
+			StoreBuyProduct('002');
+		}			
 		store.order(vTipoCompras);
 	}
 }

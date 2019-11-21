@@ -3299,6 +3299,13 @@ function SolicitaClasificacion()
 	
 	if (checkConnection()==true)
 	{
+		
+		try
+		{
+			store.refresh();
+		}
+		catch(e){}
+	
 		if (PWMIBRSDCJ.length>0)
 		{
 			OBTBPOULAV=PWMIBRSDCJ[0].OBTBPOULAV;
@@ -3595,6 +3602,13 @@ function CerrarTienda()
 
 function MostrarTienda()
 {
+
+	try
+	{
+		store.refresh();
+	}
+	catch(e){}
+	
 	var d=document.getElementById('DivTienda');
 	d.style.display = '';
 		$('.multiple-items').slick('setPosition'); //corrige bug slick
@@ -4121,7 +4135,7 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 				}
 				else
 				{
-					CompraGBits();	
+					CompraGBits(Articulo);	
 				}
 			}
 			
@@ -7062,6 +7076,13 @@ function JVEHDHOEEM(NoConectar){
 		return false;
 	}*/
 	
+	
+	try
+	{
+		store.refresh();
+	}
+	catch(e){}
+	
 	if (HDGGWGGSVH==true)
 	{
 		var d=document.getElementById('DivAudioGoogle');
@@ -7903,9 +7924,14 @@ function onSocketTiendaDesdeServer(ArrayTienda)
 	MostrarDetalleTienda(Articulo,ArrayTienda)
 	if (Articulo=='Art010')
 	{
-		console.log("se mete")
-		RegisterProduct();
+		//console.log("se mete")
+		// StoreBuyProduct('001');
 	}
+	if (Articulo=='Art010')
+	{
+		//console.log("se mete")
+		//StoreBuyProduct('001');
+	}	
 	//console.log(index)
 	//console.log(slide)
 	//target.children
