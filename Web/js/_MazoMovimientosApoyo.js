@@ -77,7 +77,7 @@ function EnviarComprarGbits()
 	QPHHGPRJAI.push(KCPHFPSPLQ);
 	
 	var CKHBSQULIF=YMHIHSNADE.time.create(false);
-	var ContinuarTry=true;
+	
 	CKHBSQULIF.loop(200,function(){
 		//console.log("Entra al TKXPPGUPVV")
 		try
@@ -89,14 +89,16 @@ function EnviarComprarGbits()
 				EXBCVLOIYJ(XQLEOGMJYG,'enviar comprar gbits');
 			 }
 			);
+			CKHBSQULIF.stop();
+			CKHBSQULIF.remove();
 												
 		}
 		catch(e)
-		{
-			//console.log("Error "+e)
-			ContinuarTry=false;
+		{			
 		}
-	})	
+	})
+	
+	CKHBSQULIF.start();	
 }
 
 function StoreRegisterProduct() {
