@@ -44,17 +44,17 @@ function ConsultaCompraRecibida()
 	timerConsultaCompraRecibida.start();
 }
 
-function EnviarComprarGbits()
+function EnviarComprarGbits(ArticuloComprar)
 {
 	
-	var GXNRNMAAKW=function( OBTBPOULAV,AURESXCGMK, Monedas,
+	var GXNRNMAAKW=function( OBTBPOULAV,AURESXCGMK, ArticuloComprar,
 		OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR)
 		{
 		 
 		 
 		 this.OBTBPOULAV=OBTBPOULAV
 		 this.AURESXCGMK=AURESXCGMK
-		 this.Monedas=Monedas
+		 this.ArticuloComprar=ArticuloComprar
 		 
 		 this.OYJAHGADFQ=OYJAHGADFQ
 		 this.OJPXTRQDKS=OJPXTRQDKS
@@ -71,7 +71,7 @@ function EnviarComprarGbits()
 		
 	var OYJAHGADFQ=Math.random()*100000;
 	var KCPHFPSPLQ=new GXNRNMAAKW(PWMIBRSDCJ[0].OBTBPOULAV ,
-		socket.id, 1000,
+		socket.id, ArticuloComprar,
 		OYJAHGADFQ,socket.id,null,'enviar comprar gbits');
 	NBEJWDVLLV.push(KCPHFPSPLQ);
 	QPHHGPRJAI.push(KCPHFPSPLQ);
@@ -131,7 +131,7 @@ function StoreRegisterProduct() {
 	store.when("001").approved(function(res) {
 		//alert('Product purchased');
 		document.getElementById("BotonComprar").disabled=true;
-		EnviarComprarGbits(socket.id,PWMIBRSDCJ[0].OBTBPOULAV,1000);		
+		EnviarComprarGbits('Art010');		
 		OcultarDetalleTienda();
 		CerrarTienda();	
 		//ConsultaCompraRecibida();
@@ -142,7 +142,7 @@ function StoreRegisterProduct() {
 	store.when("002").approved(function(res) {
 		//alert('Product purchased');
 		document.getElementById("BotonComprar").disabled=true;
-		EnviarComprarGbits(socket.id,PWMIBRSDCJ[0].OBTBPOULAV,5000)
+		EnviarComprarGbits('Art012')
 		OcultarDetalleTienda();
 		CerrarTienda();	
 		//ConsultaCompraRecibida();
