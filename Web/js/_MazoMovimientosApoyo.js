@@ -79,9 +79,9 @@ function StoreBuyProduct(Producto) {
 	//socket.emit('Consola',"METODO REGISTER");
 	var productInApp1;
 	
- 
+	StoreRegisterProduct();
 	productInApp1 = store.get(Producto);
-	
+	store.refresh();
 }
 
 /*
