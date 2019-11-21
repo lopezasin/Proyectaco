@@ -522,6 +522,7 @@ var EHBNOAKBDQ=false;
 var KOHYQKLAJO=false;
 var PJRPWGXEYM=75;
 var HUUCUYFBLW;
+var timerConsultaCompraRecibida;
 var HYSGUYGUYT;
 var BGHJGDWJVI;
 var TKXPPGUPVV;
@@ -3300,11 +3301,7 @@ function SolicitaClasificacion()
 	if (checkConnection()==true)
 	{
 		
-		try
-		{
-			store.refresh();
-		}
-		catch(e){}
+		RefrescaTiendaMonedas();
 	
 		if (PWMIBRSDCJ.length>0)
 		{
@@ -3603,11 +3600,7 @@ function CerrarTienda()
 function MostrarTienda()
 {
 
-	try
-	{
-		store.refresh();
-	}
-	catch(e){}
+	RefrescaTiendaMonedas();
 	
 	var d=document.getElementById('DivTienda');
 	d.style.display = '';
@@ -7078,11 +7071,7 @@ function JVEHDHOEEM(NoConectar){
 	}*/
 	
 	
-	try
-	{
-		store.refresh();
-	}
-	catch(e){}
+	RefrescaTiendaMonedas();
 	
 	if (HDGGWGGSVH==true)
 	{

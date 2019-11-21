@@ -1,6 +1,31 @@
 ﻿'use strict';
 
-
+function RefrescaTiendaMonedas()
+{
+	try
+	{
+		store.refresh();
+	}
+	catch(e){}		
+}
+function ConsultaCompraRecibida()
+{
+	var Actuales=YUFGSLAHYS;
+	var VueltasMaximas=5*60;
+	var Vueltas=1;
+	
+	timerConsultaCompraRecibida.loop(1000, function(){		
+		Vueltas=Vueltas+1;
+		RefrescaTiendaMonedas();
+		if (Actuales!=YUFGSLAHYS || Vueltas>=VueltasMaximas)
+		{
+			timerConsultaCompraRecibida.stop();
+			timerConsultaCompraRecibida.remove();	
+		}
+		socket.emit('Consola',"Consultando compra..");
+	})
+	timerConsultaCompraRecibida.start();
+}
 function StoreRegisterProduct() {
 
 	//socket.emit('Consola',"METODO REGISTER");
@@ -34,7 +59,7 @@ function StoreRegisterProduct() {
 		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,1000);
 		OcultarDetalleTienda();
 		CerrarTienda();	
-		//store.refresh();
+		ConsultaCompraRecibida();
 		res.finish();
 		
 	});	
@@ -45,7 +70,7 @@ function StoreRegisterProduct() {
 		socket.emit('enviar_comprar_gbits',socket.id,PWMIBRSDCJ[0].OBTBPOULAV,5000);
 		OcultarDetalleTienda();
 		CerrarTienda();	
-		//store.refresh();
+		ConsultaCompraRecibida();
 		res.finish();
 		
 	});	
@@ -71,7 +96,7 @@ function StoreRegisterProduct() {
 		//socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
 	});		
 	
-	store.refresh();
+	RefrescaTiendaMonedas();
     //   console.log(JSON.stringify(store));
 }
 
@@ -718,6 +743,7 @@ function PPWJOWHOIW()
 	MMCDRVCGAV=YMHIHSNADE.time.create(false);	
 	TKXPPGUPVV=YMHIHSNADE.time.create(false);
 	timerrecolector=YMHIHSNADE.time.create(false);
+	timerConsultaCompraRecibida=YMHIHSNADE.time.create(false);
 }
 
 function HUCLBWTDFV(UHTPGPRUJA,AWCCMSCOPO,OMDVKATFLQ)
