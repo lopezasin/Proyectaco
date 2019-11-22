@@ -19,7 +19,7 @@
 <access origin="*"/>
 
 <!-- <preference name='phonegap-version' value='cli-7.0.1' /> -->
-<preference name='phonegap-version' value='cli-9.0.0' />
+<preference name='phonegap-version' value='cli-8.0.0' />
 
 <!-- <preference name='pgb-builder-version' value='1' /> -->
 	
@@ -64,10 +64,10 @@
   <param name="APP_NAME" value="GuinotePro" /> 
 </plugin>
 
-<!-- <plugin name="cordova-plugin-googleplus" >
+<plugin name="cordova-plugin-googleplus" >
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
 </plugin>
-	 -->
+	
  <plugin spec="https://github.com/j3k0/cordova-plugin-purchase.git#v9">
     <param name="BILLING_KEY" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9zaSw/s4Or4TyebqxUAs3UWoWGwJsErJe2PvInCIHW/digf+r6bURqF3MtQNDFXtN86NterDFUrvhGDipUHchnQj9cMdHIabJVMygH9BQlHu2B8ZLvhJAEHtcTJ+ho4U7+pnx5pBTGf+ICxLhYa4XanBCdrJTQHFxCWv5+QtxmQqILbbRXWKIUVAZ816Rl44j0Vd1QIdZccgfhR4Gfw5f+aOkDaEfGng48MC2e33lGjadcTYfSqRrci8p6SpkTVT74zR9KEvVNYacoB/MYmBpCcwXGdou65yDS9vMPdc9Kx4CWV5pDlm+h0AlolEG/LEDij9Qdku/cXJuUv9K1TyQIDAQAB"/>
 </plugin> 
