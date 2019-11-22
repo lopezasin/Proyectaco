@@ -29,7 +29,7 @@ function ConsultaCompraRecibida()
 	timerConsultaCompraRecibida.loop(3000, function(){		
 		Vueltas=Vueltas+1;
 		RefrescaTiendaMonedas();
-		if (RevisarCompraGbitsGlobal==true || Vueltas>=VueltasMaximas)
+		if (RevisarCompraGbitsGlobal==false || Vueltas>=VueltasMaximas)
 		{
 			timerConsultaCompraRecibida.stop();
 			timerConsultaCompraRecibida.remove();	
@@ -106,7 +106,7 @@ function StoreRegisterProduct() {
 	//socket.emit('Consola',"METODO REGISTER");
 	var productInApp1;
 	
-	if (store==undefined)
+	if (CrearStoreGlobal==true)
 	{
 		socket.emit('Consola',"Registrando..");
 		try
@@ -127,6 +127,7 @@ function StoreRegisterProduct() {
 			//console.log("STORE READY");
 			//alert("Tienda lista")
 			socket.emit('Consola',"STORE READY");
+			CrearStoreGlobal=false;
 		}); 
 		
 

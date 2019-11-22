@@ -17,6 +17,7 @@ Level.prototype = proto;
 var KYLIAIETHX=false;
 var vTipoCompras="android.test.purchased";
 
+var CrearStoreGlobal=true;
 var RevisarCompraGbitsGlobal=false;
 var GlobalActivaCuentaPalos=false;
 var EmoticonoGlobal="" //2.0.8051
