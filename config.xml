@@ -19,7 +19,7 @@
 <access origin="*"/>
 
 <!-- <preference name='phonegap-version' value='cli-7.0.1' /> -->
-<preference name='phonegap-version' value='cli-7.0.1' />
+<preference name='phonegap-version' value='cli-8.0.0' />
 
 <!-- <preference name='pgb-builder-version' value='1' /> -->
 	
@@ -59,12 +59,12 @@
 <!-- <plugin name="cordova-plugin-iosmediavolume" /> -->
 	
 
-<plugin name="cordova-plugin-facebook4" >
+<plugin name="cordova-plugin-facebook4"  source="npm">
   <param name="APP_ID" value="123400284870556" />
   <param name="APP_NAME" value="GuinotePro" /> 
 </plugin>
 
-<plugin name="cordova-plugin-googleplus" >
+<plugin name="cordova-plugin-googleplus"  source="npm" spec="6.0.0">
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
 </plugin>
 	
