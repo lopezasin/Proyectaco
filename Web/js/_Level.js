@@ -10,10 +10,12 @@ function Level() {
 
 
 
-var proto = Object.create(Phaser.State);
+var proto;
+
+proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
-
+console.log("LA CREACION MAXIMA")
 var KYLIAIETHX=false;
 var vTipoCompras="android.test.purchased"; //full version
 
@@ -11245,6 +11247,12 @@ function AYAOSXTCBR() {
 			}
 		}
 	}
+	
+	if (RevisarCompraGbitsGlobal==true)
+	{
+		console.log("Lo sabia3")	
+		ConsultaCompraRecibida(); //Que se vuelva a lanzar el esperador de compras de guiñobits.
+	}	
   //socket.emit('adduser', prompt("What's your name?"));
   
 };

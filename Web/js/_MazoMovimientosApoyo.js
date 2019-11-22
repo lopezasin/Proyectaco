@@ -22,15 +22,17 @@ function ConsultaCompraRecibida()
 	{
 		console.log("Error consultando compra Inicio. No debe existir socket")
 	}
-	
+	console.log("llega a reactivar");
 	timerConsultaCompraRecibida.stop();
 	timerConsultaCompraRecibida.remove();	
 	
 	timerConsultaCompraRecibida.loop(3000, function(){		
 		Vueltas=Vueltas+1;
+		console.log("llega a reactivar1.1 "+RevisarCompraGbitsGlobal);
 		RefrescaTiendaMonedas();
 		if (RevisarCompraGbitsGlobal==false || Vueltas>=VueltasMaximas)
 		{
+			console.log("llega a reactivar1");
 			timerConsultaCompraRecibida.stop();
 			timerConsultaCompraRecibida.remove();	
 		}
@@ -6190,10 +6192,10 @@ function MHELAUXKXR()
 	BNWHJGHWUW.removeAll(); //2.0.7 para poder chatear durante los recuentos. Que se mate en este momento.
 	//console.log("BORRO TODOS LOS TIMERS");
 	
-	if (timerConsultaCompraRecibida.running)
+	/*if (RevisarCompraGbitsGlobal==true)
 	{
 		EsperandoCompra=true;		
-	}
+	}*/
 	
 	try
 	{
@@ -6201,11 +6203,9 @@ function MHELAUXKXR()
 		PPWJOWHOIW();
 	}
 	catch(e){}
-															
-	if (EsperandoCompra==true)
-	{
-		ConsultaCompraRecibida(); //Que se vuelva a lanzar el esperador de compras de guiñobits.
-	}
+			
+		console.log("Lo sabia1 "+EsperandoCompra)	
+
 	
 	//console.log("He sido asesinado de verdad");
 	try
@@ -6240,8 +6240,18 @@ function MHELAUXKXR()
 	
 	WNEWPCNXPA(); //2.0.1
 	QSAXUCPASV(); //2.0.1
+
+
 	
 	YMHIHSNADE.state.start("Level",false,true); //2.0.8.37 el true
+	
+	/*console.log("Lo sabia2")	
+	if (RevisarCompraGbitsGlobal==true)
+	{
+		console.log("Lo sabia3")	
+		RevisarCompraGbitsGlobal=true;
+		ConsultaCompraRecibida(); //Que se vuelva a lanzar el esperador de compras de guiñobits.
+	}	*/
 	
 	//XEMENNVXGV(); //1.0.8 Si no fallaba la consulta del ránking desde logindesdeweb
 }
