@@ -59,12 +59,12 @@
 <!-- <plugin name="cordova-plugin-iosmediavolume" /> -->
 	
 
-<plugin name="cordova-plugin-facebook4" spec="5.0.0">
-  <param name="APP_ID" value="123400284870556" />
-  <param name="APP_NAME" value="GuinotePro" />
+<plugin name="cordova-plugin-facebook4" >
+<!--   <param name="APP_ID" value="123400284870556" />
+  <param name="APP_NAME" value="GuinotePro" /> -->
 </plugin>
 
-<plugin name="cordova-plugin-googleplus" spec="8.0.0">
+<plugin name="cordova-plugin-googleplus" >
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
 </plugin>
 	
