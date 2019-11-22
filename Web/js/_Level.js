@@ -15,7 +15,7 @@ Level.prototype = proto;
 
 
 var KYLIAIETHX=false;
-var vTipoCompras="android.test.purchased";
+var vTipoCompras="android.test.purchased"; //full version
 
 var CrearStoreGlobal=true;
 var RevisarCompraGbitsGlobal=false;

@@ -44,10 +44,10 @@ function ConsultaCompraRecibida()
 	timerConsultaCompraRecibida.start();
 }
 
-function EnviarComprarGbits(ArticuloComprar)
+function EnviarComprarGbits(ArticuloComprar, res)
 {
 	
-	var GXNRNMAAKW=function( OBTBPOULAV,AURESXCGMK, ArticuloComprar,
+	var GXNRNMAAKW=function( OBTBPOULAV,AURESXCGMK, ArticuloComprar,ArticuloExterno,
 		OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR)
 		{
 		 
@@ -55,6 +55,7 @@ function EnviarComprarGbits(ArticuloComprar)
 		 this.OBTBPOULAV=OBTBPOULAV
 		 this.AURESXCGMK=AURESXCGMK
 		 this.ArticuloComprar=ArticuloComprar
+		 this.ArticuloExterno=ArticuloExterno
 		 
 		 this.OYJAHGADFQ=OYJAHGADFQ
 		 this.OJPXTRQDKS=OJPXTRQDKS
@@ -71,7 +72,7 @@ function EnviarComprarGbits(ArticuloComprar)
 		
 	var OYJAHGADFQ=Math.random()*100000;
 	var KCPHFPSPLQ=new GXNRNMAAKW(PWMIBRSDCJ[0].OBTBPOULAV ,
-		socket.id, ArticuloComprar,
+		socket.id, ArticuloComprar,res,
 		OYJAHGADFQ,socket.id,null,'enviar comprar gbits');
 	NBEJWDVLLV.push(KCPHFPSPLQ);
 	QPHHGPRJAI.push(KCPHFPSPLQ);
@@ -87,6 +88,7 @@ function EnviarComprarGbits(ArticuloComprar)
 			 function(XQLEOGMJYG)
 			 {		
 				EXBCVLOIYJ(XQLEOGMJYG,'enviar comprar gbits');
+				res.finish();
 			 }
 			);
 			CKHBSQULIF.stop();
@@ -134,11 +136,11 @@ function StoreRegisterProduct() {
 		store.when("001").approved(function(res) {
 			//alert('Product purchased');
 			document.getElementById("BotonComprar").disabled=true;
-			EnviarComprarGbits('Art010');		
+			EnviarComprarGbits('Art010', res);		
 			OcultarDetalleTienda();
 			CerrarTienda();	
 			//ConsultaCompraRecibida();
-			res.finish();
+			//res.finish();
 			
 		});	
 		
@@ -149,7 +151,7 @@ function StoreRegisterProduct() {
 			OcultarDetalleTienda();
 			CerrarTienda();	
 			//ConsultaCompraRecibida();
-			res.finish();
+			//res.finish();
 			
 		});	
 		
@@ -6187,10 +6189,10 @@ function MHELAUXKXR()
 	BNWHJGHWUW.removeAll(); //2.0.7 para poder chatear durante los recuentos. Que se mate en este momento.
 	//console.log("BORRO TODOS LOS TIMERS");
 	
-	//if (timerConsultaCompraRecibida.running)
-	//{
-	//	EsperandoCompra=true;		
-	//}
+	if (timerConsultaCompraRecibida.running)
+	{
+		EsperandoCompra=true;		
+	}
 	
 	try
 	{
@@ -6199,10 +6201,10 @@ function MHELAUXKXR()
 	}
 	catch(e){}
 															
-	//if (EsperandoCompra==true)
-	//{
-	//	ConsultaCompraRecibida(); //Que se vuelva a lanzar el esperador de compras de guiñobits.
-	//}
+	if (EsperandoCompra==true)
+	{
+		ConsultaCompraRecibida(); //Que se vuelva a lanzar el esperador de compras de guiñobits.
+	}
 	
 	//console.log("He sido asesinado de verdad");
 	try
