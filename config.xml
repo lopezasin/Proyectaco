@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<widget id="es.guinotepro.guinotepro" version="2.0.8080" versioncode="10036" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="es.guinotepro.guinotepro" version="2.0.8081" versioncode="10036" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>GuiñotePro</name>
     <description>
         Videojuego de guiñote
@@ -71,13 +71,15 @@
 </plugin> -->
 
 
-<gap:plugin name="cordova-plugin-googleplus" source="npm"  >
-  <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
-</gap:plugin>
+
 
 <gap:plugin name="cordova-plugin-facebook4" source="npm">
   <param name="APP_ID" value="123400284870556" />
   <param name="APP_NAME" value="GuinotePro" />
+</gap:plugin>
+
+<gap:plugin name="cordova-plugin-googleplus" source="npm"  >
+  <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
 </gap:plugin>
 
 <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
