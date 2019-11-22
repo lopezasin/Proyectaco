@@ -87,8 +87,9 @@ function EnviarComprarGbits(ArticuloComprar, res)
 			socket.emit('enviar_comprar_gbits',QPHHGPRJAI[0],
 			 function(XQLEOGMJYG)
 			 {		
+				socket.emit("DEBERIA PARAR");
 				EXBCVLOIYJ(XQLEOGMJYG,'enviar comprar gbits');
-				res.finish();
+				//res.finish();
 			 }
 			);
 			CKHBSQULIF.stop();
@@ -151,7 +152,7 @@ function StoreRegisterProduct() {
 			OcultarDetalleTienda();
 			CerrarTienda();	
 			//ConsultaCompraRecibida();
-			//res.finish();
+			res.finish();
 			
 		});	
 		
