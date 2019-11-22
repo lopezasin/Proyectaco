@@ -141,7 +141,7 @@ function StoreRegisterProduct() {
 			OcultarDetalleTienda();
 			CerrarTienda();	
 			//ConsultaCompraRecibida();
-			//res.finish();
+			res.finish();
 			
 		});	
 		
