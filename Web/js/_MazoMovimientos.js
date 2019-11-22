@@ -268,6 +268,8 @@ function onSocketIncrementoGbitsComprados(GbitsComprados, TXLWIIINGQ)
 	YUFGSLAHYS=GbitsComprados;
 	//CerrarTienda();
 	//OcultarDetalleTienda();
+	RevisarCompraGbitsGlobal=false;
+	
 	Renderizar(true);
 	JQDGHVJGUW();	
 	

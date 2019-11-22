@@ -10,7 +10,7 @@ function RefrescaTiendaMonedas()
 }
 function ConsultaCompraRecibida()
 {
-	var Actuales=YUFGSLAHYS;
+	//var Actuales=YUFGSLAHYS;
 	var VueltasMaximas=5*60;
 	var Vueltas=1;
 	
@@ -29,7 +29,7 @@ function ConsultaCompraRecibida()
 	timerConsultaCompraRecibida.loop(3000, function(){		
 		Vueltas=Vueltas+1;
 		RefrescaTiendaMonedas();
-		if (Actuales!=YUFGSLAHYS || Vueltas>=VueltasMaximas)
+		if (RevisarCompraGbitsGlobal==true || Vueltas>=VueltasMaximas)
 		{
 			timerConsultaCompraRecibida.stop();
 			timerConsultaCompraRecibida.remove();	
@@ -106,72 +106,75 @@ function StoreRegisterProduct() {
 	//socket.emit('Consola',"METODO REGISTER");
 	var productInApp1;
 	
-	socket.emit('Consola',"Registrando..");
-	try
+	if (store==undefined)
 	{
-	store.register({
-		id:    "001",
-		alias: "android.test.purchased",
-		type:  store.CONSUMABLE
-	});
-	}
-	catch(e)
-	{
-		socket.emit('Consola',"METODO REGISTER "+e.message);
-	}
-	
-
-	store.ready(function () {
-        //console.log("STORE READY");
-		//alert("Tienda lista")
-		socket.emit('Consola',"STORE READY");
-    }); 
-	
-
-	store.when("001").approved(function(res) {
-		//alert('Product purchased');
-		document.getElementById("BotonComprar").disabled=true;
-		EnviarComprarGbits('Art010');		
-		OcultarDetalleTienda();
-		CerrarTienda();	
-		//ConsultaCompraRecibida();
-		res.finish();
+		socket.emit('Consola',"Registrando..");
+		try
+		{
+		store.register({
+			id:    "001",
+			alias: "android.test.purchased",
+			type:  store.CONSUMABLE
+		});
+		}
+		catch(e)
+		{
+			socket.emit('Consola',"METODO REGISTER "+e.message);
+		}
 		
-	});	
-	
-	store.when("002").approved(function(res) {
-		//alert('Product purchased');
-		document.getElementById("BotonComprar").disabled=true;
-		EnviarComprarGbits('Art012')
-		OcultarDetalleTienda();
-		CerrarTienda();	
-		//ConsultaCompraRecibida();
-		res.finish();
+
+		store.ready(function () {
+			//console.log("STORE READY");
+			//alert("Tienda lista")
+			socket.emit('Consola',"STORE READY");
+		}); 
 		
-	});	
-	
-	store.when("001").canceled(function(res) {
-		//alert('Product purchased');
-		//socket.emit('Consola',"PRODUCTO CANCELADO "+JSON.stringify(res));
-	});		
-	
-	store.when("001").error(function(res) {
-		//alert('Product purchased');
-		socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
-	});			
+
+		store.when("001").approved(function(res) {
+			//alert('Product purchased');
+			document.getElementById("BotonComprar").disabled=true;
+			EnviarComprarGbits('Art010');		
+			OcultarDetalleTienda();
+			CerrarTienda();	
+			//ConsultaCompraRecibida();
+			res.finish();
+			
+		});	
+		
+		store.when("002").approved(function(res) {
+			//alert('Product purchased');
+			document.getElementById("BotonComprar").disabled=true;
+			EnviarComprarGbits('Art012')
+			OcultarDetalleTienda();
+			CerrarTienda();	
+			//ConsultaCompraRecibida();
+			res.finish();
+			
+		});	
+		
+		store.when("001").canceled(function(res) {
+			//alert('Product purchased');
+			//socket.emit('Consola',"PRODUCTO CANCELADO "+JSON.stringify(res));
+		});		
+		
+		store.when("001").error(function(res) {
+			//alert('Product purchased');
+			socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
+		});			
 
 
-	store.when("002").canceled(function(res) {
-		//alert('Product purchased');
-		//socket.emit('Consola',"PRODUCTO CANCELADO "+JSON.stringify(res));
-	});		
-	
-	store.when("002").error(function(res) {
-		//alert('Product purchased');
-		//socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
-	});		
-	
-	RefrescaTiendaMonedas();
+		store.when("002").canceled(function(res) {
+			//alert('Product purchased');
+			//socket.emit('Consola',"PRODUCTO CANCELADO "+JSON.stringify(res));
+		});		
+		
+		store.when("002").error(function(res) {
+			//alert('Product purchased');
+			//socket.emit('Consola',"PRODUCTO ERROR "+JSON.stringify(res));
+		});		
+		
+		RefrescaTiendaMonedas();
+	}
     //   console.log(JSON.stringify(store));
 }
 
@@ -183,7 +186,9 @@ function StoreBuyProduct(Producto) {
 	var productInApp1;
 	
 	//StoreRegisterProduct();
+	RevisarCompraGbitsGlobal=true;
 	ConsultaCompraRecibida();
+	socket.emit('Consola',"Leyendo la ficha de.."+Producto);
 	productInApp1 = store.get(Producto);
 	//store.refresh();
 }

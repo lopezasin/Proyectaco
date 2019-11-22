@@ -17,6 +17,7 @@ Level.prototype = proto;
 var KYLIAIETHX=false;
 var vTipoCompras="android.test.purchased";
 
+var RevisarCompraGbitsGlobal=false;
 var GlobalActivaCuentaPalos=false;
 var EmoticonoGlobal="" //2.0.8051
 var BloqueoCartaCentro=false;
@@ -4106,7 +4107,7 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 		console.log("HVCFEWNDRF "+ArrayTienda[i]._id_articulo)
 		if (ArrayTienda[i]._id_articulo==Articulo)
 		{
-			
+			console.log("entra HVCFEWNDRF "+ArrayTienda[i]._id_articulo)
 			d=document.getElementById('BotonComprar');
 			d.onclick =  function() { 
 				
@@ -4128,6 +4129,7 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 				}
 				else
 				{
+					console.log("justo comprando "+Articulo)
 					CompraGBits(Articulo);	
 				}
 			}
