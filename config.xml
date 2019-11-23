@@ -59,7 +59,7 @@
 <!-- <plugin name="cordova-plugin-iosmediavolume" /> -->
 	
 
-<gap:plugin name="cordova-plugin-facebook4"  source="npm">
+<gap:plugin name="cordova-plugin-facebook4"  source="npm" spec="5.0.0">
   <param name="APP_ID" value="123400284870556" />
   <param name="APP_NAME" value="GuinotePro" /> 
 </gap:plugin>
