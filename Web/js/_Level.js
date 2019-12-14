@@ -5175,8 +5175,16 @@ function RespuestaFaltanVidas(JSKXXDPSDS)
 
 function MuestraVideo()
 {
-	prepareRewardVideoAd('ca-app-pub-3940256099942544/5224354917', VideoExitoso, VideoFallido);
-	showRewardVideoAd();
+/* 	prepareRewardVideoAd('ca-app-pub-3940256099942544/5224354917', VideoExitoso, VideoFallido);
+	showRewardVideoAd(); */
+	
+	admob.rewardvideo.config({
+	id: 'ca-app-pub-3940256099942544/5224354917',
+	})
+
+	admob.rewardvideo.prepare()
+
+	admob.rewardvideo.show()
 }
 
 function VideoExitoso()
