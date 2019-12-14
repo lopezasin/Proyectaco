@@ -48,7 +48,7 @@
 </plugin>
  -->
 
-<plugin name="cocoon-plugin-ads-android-admob" spec="1.0.12"/>
+<plugin name="phonegap-admob"  />
 
 	
 <plugin name="cordova-plugin-powermanagement" />		
