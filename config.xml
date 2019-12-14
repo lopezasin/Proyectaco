@@ -48,7 +48,9 @@
 </plugin>
  -->
 
-<plugin name="phonegap-admob"  />
+<plugin name="cordova-plugin-admobpro-firebase" source="npm" />
+
+<plugin name="cordova-plugin-firebase" source="npm" />
 
 	
 <plugin name="cordova-plugin-powermanagement" />		
