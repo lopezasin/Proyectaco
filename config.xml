@@ -43,27 +43,20 @@
 <!-- <preference name="android-targetSdkVersion" value="28" />  Para que funcione-->
 
 
-<!-- <preference name="android-build-tool" value="gradle" />
-<plugin name="cordova-plugin-admob-free" source="npm">
-<variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
-</plugin> -->
 
 
 
-<!-- <plugin name="cordova-admob-jimmy" source="npm">
-<variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
+
+<plugin name="cordova-admob-jimmy" source="npm">
+<!-- <variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/>  -->
 </plugin>
- -->
+
 
 <!-- <plugin spec="https://github.com/jamesfdickinson/admob-google-cordova-clean.git" source="npm">
 <variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
 </plugin>
  -->
 
-    <plugin name="cordova-admob-plus" source="npm">
-        <variable name="APP_ID_ANDROID" value="ca-app-pub-3940256099942544~3347511713" />
-        <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" />
-    </plugin>
 
 
 	
