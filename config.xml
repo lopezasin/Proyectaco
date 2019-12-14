@@ -55,7 +55,12 @@
 </plugin>
  -->
 
-<plugin spec="https://github.com/jamesfdickinson/admob-google-cordova-clean.git" source="npm">
+<!-- <plugin spec="https://github.com/jamesfdickinson/admob-google-cordova-clean.git" source="npm">
+<variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
+</plugin>
+ -->
+
+<plugin name="cordova-plugin-admob-free" source="npm">
 <variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
 </plugin>
 
