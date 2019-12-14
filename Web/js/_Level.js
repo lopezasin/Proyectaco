@@ -33,6 +33,7 @@ var HDGGWGGSVH=false;
 var Paginador=50;
 var MundoAntiguo=false;
 var EstoyClickando=false
+var ArticuloComprar;
 
 //AdjustTweenFunctions()
 
@@ -61,7 +62,7 @@ if (KYLIAIETHX==true){
 else
 {
 	BBWEGOPQUF=150;
-	JHGHJAGCMC='http://192.168.43.100:5000'		
+	JHGHJAGCMC='http://192.168.1.100:5000'		
 }
 
 //var TextoGeneral;
@@ -135,10 +136,22 @@ var EGSJHTESLW=false;
 var XXDFSFRGHO=true;
 
 var VBMSLTWABI=0;
-var HLBMKNFUWL=1;//1000 milisegundos OJIMETRO 10
-var GWFPRHAYQK=0.1;//chance 10 segundos OJIMETRO 1
+var vProbandoIA=false; //OJIMETRO
 
-var vProbandoIA=true; //OJIMETRO
+var HLBMKNFUWL;
+var GWFPRHAYQK;
+
+if (vProbandoIA==true)
+{
+	HLBMKNFUWL=0.1;
+	GWFPRHAYQK=0.1;
+}
+else
+{
+	HLBMKNFUWL=1000;
+	GWFPRHAYQK=10;
+}
+
 
 var BocadilloTemp;
 var MUIUIFIUWE;
@@ -740,7 +753,7 @@ var UVYJLLYCYD=function(SSUNXNEEHN,AURESXCGMK)
 
 var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC,FFRVOEAXTF,BDYYDTFQAO,UHYGLMAUNK,DNQIYVAFPR,XCXKVEEIOO,BUJELVTIKU,NBJHGSFSJS,MBMWBWUYUY,OIUIOWCHVW,NHWYTYUSYG,NMABCQQCDD,
 	AMBCNABIQQ,gprd,MSIUWFLWPD,UIWHVYYYYD,RERQEQFSDV,BNMSISPWOI,GGHGFTERRW,BCKDDFIRYT,HJKSDFLPEP,TTTTQJHGDQ,BMNSDBFJKS,
-	IrA,IrATexto,Posicion30,EsPRO,ArrayComprasJugador,PrioridadElegir,Vidas, ObjetoParametros)
+	IrA,IrATexto,Posicion30,EsPRO,ArrayComprasJugador,PrioridadElegir,Vidas, ObjetoParametros, TarifaPlana)
 	{
 	this.WWKVHIMWYD=WWKVHIMWYD
 	this.BONQVNOXDP=BONQVNOXDP
@@ -777,6 +790,7 @@ var AWXPNWRCHC = function(WWKVHIMWYD,BONQVNOXDP,QHHQPXWFNG,EJOYNSESRD,IRQGAFESIC
 	this.PrioridadElegir=PrioridadElegir
 	this.Vidas=Vidas
 	this.ObjetoParametros=ObjetoParametros
+	this.TarifaPlana=TarifaPlana
 	
 	this.OBTBPOULAV=FFRVOEAXTF+"-"+BDYYDTFQAO;
 	
@@ -1981,13 +1995,16 @@ Level.prototype.create=function(){
 	
 	}
 	
-	if (BotonIA==undefined)
+	if (vProbandoIA==true)
 	{
-		//PANPKTGSCV.destroy();
-		BotonIA= YMHIHSNADE.add.button(150+YAJVUBPNNW, 50, 'general', function(){			
-			IA(DVNRTQIWGL,LUCRWXJMDR,MQUGCIUQII);
-		})
-	}	
+		if (BotonIA==undefined)
+		{
+			//PANPKTGSCV.destroy();
+			BotonIA= YMHIHSNADE.add.button(150+YAJVUBPNNW, 50, 'general', function(){			
+				IA(DVNRTQIWGL,LUCRWXJMDR,MQUGCIUQII);
+			})
+		}	
+	}
 
 	
 	IFMJVFFEQN.kill();	
@@ -2047,19 +2064,26 @@ Level.prototype.create=function(){
 		BotonCuentaPaloOros.scale.setTo(0.5,0.5)	
 		BotonCuentaPaloOros.x=WIEVLYANFM("U_5",0)-35 ;
 		BotonCuentaPaloOros.y=FIGQBSJQGA("U_5",0)+65+IncrementoYCuentaPalos ;
-		
+		BotonCuentaPaloOros.inputEnabled = true;
+		BotonCuentaPaloOros.events.onInputDown.add( function(){ MostrarMensajeCuentaPalos(); } );
 		
 		textoCuentaPaloOros=YMHIHSNADE.add.bitmapText(WIEVLYANFM("U_5",0)+10, FIGQBSJQGA("U_5",0)+75+IncrementoYCuentaPalos , 'MiFuenteAmarilla', 'BitmapText', 30);	
 		textoCuentaPaloOros.text="";
+		textoCuentaPaloOros.inputEnabled = true;
+		textoCuentaPaloOros.events.onInputDown.add( function(){ MostrarMensajeCuentaPalos(); } );		
 
 		BotonCuentaPaloCopas=YMHIHSNADE.add.image(330, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
 		BotonCuentaPaloCopas.loadTexture(NXNXBWBBWL,'1_copas', 0);	
 		BotonCuentaPaloCopas.scale.setTo(0.5,0.5)	
 		BotonCuentaPaloCopas.x=WIEVLYANFM("U_5",0)+55 ;
 		BotonCuentaPaloCopas.y=FIGQBSJQGA("U_5",0)+65+IncrementoYCuentaPalos;
+		BotonCuentaPaloCopas.inputEnabled = true;
+		BotonCuentaPaloCopas.events.onInputDown.add( function(){ MostrarMensajeCuentaPalos(); } );			
 
 		textoCuentaPaloCopas=YMHIHSNADE.add.bitmapText(WIEVLYANFM("U_5",0)+100, FIGQBSJQGA("U_5",0)+75+IncrementoYCuentaPalos , 'MiFuenteAmarilla', 'BitmapText', 30);	
 		textoCuentaPaloCopas.text="";
+		textoCuentaPaloCopas.inputEnabled = true;
+		textoCuentaPaloCopas.events.onInputDown.add( function(){ MostrarMensajeCuentaPalos(); } );			
 		
 		
 		BotonCuentaPaloEspadas=YMHIHSNADE.add.image(70, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
@@ -2067,9 +2091,13 @@ Level.prototype.create=function(){
 		BotonCuentaPaloEspadas.scale.setTo(0.5,0.5)	
 		BotonCuentaPaloEspadas.x=WIEVLYANFM("U_5",0)+145 ;
 		BotonCuentaPaloEspadas.y=FIGQBSJQGA("U_5",0)+65+IncrementoYCuentaPalos ;
+		BotonCuentaPaloEspadas.inputEnabled = true;
+		BotonCuentaPaloEspadas.events.onInputDown.add( function(){ MostrarMensajeCuentaPalos(); } );			
 		
 		textoCuentaPaloEspadas=YMHIHSNADE.add.bitmapText(WIEVLYANFM("U_5",0)+190, FIGQBSJQGA("U_5",0)+75+IncrementoYCuentaPalos , 'MiFuenteAmarilla', 'BitmapText', 30);	
 		textoCuentaPaloEspadas.text="";
+		textoCuentaPaloEspadas.inputEnabled = true;
+		textoCuentaPaloEspadas.events.onInputDown.add( function(){ MostrarMensajeCuentaPalos(); } );			
 		
 		
 		BotonCuentaPaloBastos=YMHIHSNADE.add.image(80, YMHIHSNADE.world.centerY/2, RCYRGXLWBR)
@@ -2077,9 +2105,13 @@ Level.prototype.create=function(){
 		BotonCuentaPaloBastos.scale.setTo(0.5,0.5)	
 		BotonCuentaPaloBastos.x=WIEVLYANFM("U_5",0)+235 ;
 		BotonCuentaPaloBastos.y=FIGQBSJQGA("U_5",0)+65+IncrementoYCuentaPalos ;
+		BotonCuentaPaloBastos.inputEnabled = true;
+		BotonCuentaPaloBastos.events.onInputDown.add( function(){ MostrarMensajeCuentaPalos(); } );			
 		
 		textoCuentaPaloBastos=YMHIHSNADE.add.bitmapText(WIEVLYANFM("U_5",0)+280, FIGQBSJQGA("U_5",0)+75+IncrementoYCuentaPalos , 'MiFuenteAmarilla', 'BitmapText', 30);	
 		textoCuentaPaloBastos.text="";
+		textoCuentaPaloBastos.inputEnabled = true;
+		textoCuentaPaloBastos.events.onInputDown.add( function(){ MostrarMensajeCuentaPalos(); } );			
 		
 		DesactivarCuentaPalos();
 	}
@@ -2803,15 +2835,18 @@ function JHGQKGFQGB()
 
 function MuestraVidas()
 {
-	TextVidas.text="x "+PWMIBRSDCJ[0].Vidas;
-	TextVidas.x = YMHIHSNADE.world.width-300;
-	TextVidas.align = 'left';
-	TextVidas.y=60;
-	TextVidas.revive();	
+	if (PWMIBRSDCJ[0].TarifaPlana==false)
+	{
+		TextVidas.text="x "+PWMIBRSDCJ[0].Vidas;
+		TextVidas.x = YMHIHSNADE.world.width-300;
+		TextVidas.align = 'left';
+		TextVidas.y=60;
+		TextVidas.revive();	
+	}
 }
 function JQDGHVJGUW()
 {
-	if (PWMIBRSDCJ.length>0 && PWMIBRSDCJ[0].WWKVHIMWYD!="DesconocidoPRO")
+	if (PWMIBRSDCJ.length>0 && PWMIBRSDCJ[0].WWKVHIMWYD!="DesconocidoPRO" && PWMIBRSDCJ[0].TarifaPlana==false)
 	{
 
 		
@@ -2873,160 +2908,166 @@ function JQDGHVJGUW()
 
 function GVJKQGAAOQ()
 {
-	if (Math.abs(YUFGSLAHYS)<100)
+	if (PWMIBRSDCJ[0].TarifaPlana==false)
 	{
-		JGKQOAGEHK.x=YMHIHSNADE.world.width -300;
-	}
-	else
-	{
-		JGKQOAGEHK.x=YMHIHSNADE.world.width -330;
-	}
-	
-	if(YUFGSLAHYS>0)
-	{
-		JGKQOAGEHK.y=60+70; //2.0.8054 +70 para cuando compres gbits se vea bien
-		JGKQOAGEHK.font='MiFuenteAmarilla';
-	}
-	else
-	{
-		JGKQOAGEHK.y=70+70; //2.0.8054 +70 para cuando compres gbits se vea bien
-		JGKQOAGEHK.font='MiFuenteRoja';
-	}
-	JGKQOAGEHK.fontSize=70;
-	
-	JGKQOAGEHK.width=0;
-	JGKQOAGEHK.height=0;
-	JGKQOAGEHK.alpha=1;
-	
-	//var JHVJLQHUVQ;
-	//var CBJKQGHVQV;
-	
-		JHVJLQHUVQ = YMHIHSNADE.add.tween(JGKQOAGEHK.scale);
-		//JHVJLQHUVQ.target=JGKQOAGEHK.scale
-		//JHVJLQHUVQ.timeline=[]
-		JHVJLQHUVQ.to( {x:1
-		,y:1
-		}
-		, 300,KYFMRVNHIQ,false,0);
-		
-		JHVJLQHUVQ.onComplete.addOnce(function()
+		if (Math.abs(YUFGSLAHYS)<100)
 		{
-			CBJKQGHVQV = YMHIHSNADE.add.tween(JGKQOAGEHK);
-			//CBJKQGHVQV.target=JGKQOAGEHK
-			//CBJKQGHVQV.timeline=[]			
-			CBJKQGHVQV.to({ alpha: 0 }, 1500, KYFMRVNHIQ, true,1000);	
+			JGKQOAGEHK.x=YMHIHSNADE.world.width -300;
+		}
+		else
+		{
+			JGKQOAGEHK.x=YMHIHSNADE.world.width -330;
+		}
+		
+		if(YUFGSLAHYS>0)
+		{
+			JGKQOAGEHK.y=60+70; //2.0.8054 +70 para cuando compres gbits se vea bien
+			JGKQOAGEHK.font='MiFuenteAmarilla';
+		}
+		else
+		{
+			JGKQOAGEHK.y=70+70; //2.0.8054 +70 para cuando compres gbits se vea bien
+			JGKQOAGEHK.font='MiFuenteRoja';
+		}
+		JGKQOAGEHK.fontSize=70;
+		
+		JGKQOAGEHK.width=0;
+		JGKQOAGEHK.height=0;
+		JGKQOAGEHK.alpha=1;
+		
+		//var JHVJLQHUVQ;
+		//var CBJKQGHVQV;
+		
+			JHVJLQHUVQ = YMHIHSNADE.add.tween(JGKQOAGEHK.scale);
+			//JHVJLQHUVQ.target=JGKQOAGEHK.scale
+			//JHVJLQHUVQ.timeline=[]
+			JHVJLQHUVQ.to( {x:1
+			,y:1
+			}
+			, 300,KYFMRVNHIQ,false,0);
 			
-			//CBJKQGHVQV.onComplete.add(function(){
-				//Renderizar(false);	
-			//});
-			CBJKQGHVQV.start();
+			JHVJLQHUVQ.onComplete.addOnce(function()
+			{
+				CBJKQGHVQV = YMHIHSNADE.add.tween(JGKQOAGEHK);
+				//CBJKQGHVQV.target=JGKQOAGEHK
+				//CBJKQGHVQV.timeline=[]			
+				CBJKQGHVQV.to({ alpha: 0 }, 1500, KYFMRVNHIQ, true,1000);	
+				
+				//CBJKQGHVQV.onComplete.add(function(){
+					//Renderizar(false);	
+				//});
+				CBJKQGHVQV.start();
+				
+			});
 			
-		});
+			
+			JHVJLQHUVQ.start();
+			
+			
+			
+		var CadenaIndicador=""
+		if (YUFGSLAHYS>0)
+		{
+			CadenaIndicador="+";
+		}
 		
-		
-		JHVJLQHUVQ.start();
-		
-		
-		
-	var CadenaIndicador=""
-	if (YUFGSLAHYS>0)
-	{
-		CadenaIndicador="+";
+		JGKQOAGEHK.text=CadenaIndicador+YUFGSLAHYS;
+		console.log("revive marcador")
+		JGKQOAGEHK.revive();
 	}
-	
-	JGKQOAGEHK.text=CadenaIndicador+YUFGSLAHYS;
-	JGKQOAGEHK.revive();
 }
 function UYQORUIYVK(Cantidad)
 {
-	var JWTFKQGYVM;
-	
-	UUUIUYUSFS.revive();
-	UUUIUYUSFS.frameName='bolsa_dinero';	
-	
-	BJWEJKFWER.text="x "+MHJKHDFSGF;
-	BJWEJKFWER.x = YMHIHSNADE.world.width-160+(BJWEJKFWER.textWidth/2 );
+	if (PWMIBRSDCJ[0].TarifaPlana==false)
+	{
+		var JWTFKQGYVM;
 		
-	JWTFKQGYVM=YMHIHSNADE.time.create(false);
-	JWTFKQGYVM.add(500, function()
-	{		
-		EABXADHEVT('_Monedas');
-
-		MHJKHDFSGF=MHJKHDFSGF+YUFGSLAHYS;
-		YUFGSLAHYS=0;		
+		UUUIUYUSFS.revive();
+		UUUIUYUSFS.frameName='bolsa_dinero';	
+		
 		BJWEJKFWER.text="x "+MHJKHDFSGF;
 		BJWEJKFWER.x = YMHIHSNADE.world.width-160+(BJWEJKFWER.textWidth/2 );
-		
-		HUCHKABMAP.maxParticles=10;
-		HUCHKABMAP.makeParticles('general','magia');
-		HUCHKABMAP.y=45;
-		HUCHKABMAP.setRotation(0, 0);
-		HUCHKABMAP.setAlpha(0.3, 0.8);
-		HUCHKABMAP.setScale(0.5, 1);
-		HUCHKABMAP.gravity = 200;
+			
+		JWTFKQGYVM=YMHIHSNADE.time.create(false);
+		JWTFKQGYVM.add(500, function()
+		{		
+			EABXADHEVT('_Monedas');
 
-		HUCHKABMAP.minParticleSpeed.setTo(-300, 30);
-		HUCHKABMAP.maxParticleSpeed.setTo(300, 100);
-		
-		HUCHKABMAP.flow(0, 1000, HUCHKABMAP.maxParticles, 10);
-	});
-	JWTFKQGYVM.start();	
+			MHJKHDFSGF=MHJKHDFSGF+YUFGSLAHYS;
+			YUFGSLAHYS=0;		
+			BJWEJKFWER.text="x "+MHJKHDFSGF;
+			BJWEJKFWER.x = YMHIHSNADE.world.width-160+(BJWEJKFWER.textWidth/2 );
+			
+			HUCHKABMAP.maxParticles=10;
+			HUCHKABMAP.makeParticles('general','magia');
+			HUCHKABMAP.y=45;
+			HUCHKABMAP.setRotation(0, 0);
+			HUCHKABMAP.setAlpha(0.3, 0.8);
+			HUCHKABMAP.setScale(0.5, 1);
+			HUCHKABMAP.gravity = 200;
+
+			HUCHKABMAP.minParticleSpeed.setTo(-300, 30);
+			HUCHKABMAP.maxParticleSpeed.setTo(300, 100);
+			
+			HUCHKABMAP.flow(0, 1000, HUCHKABMAP.maxParticles, 10);
+		});
+		JWTFKQGYVM.start();	
+	}
 }
 
 function JQKFHLKHQI(Cantidad)
 {
-	var timerBolsaRota;
-	var JWTFKQGYVM;
-	
-	var monedasrestar=YUFGSLAHYS*(-1);
-	
+	if (PWMIBRSDCJ[0].TarifaPlana==false)
+	{
+		var timerBolsaRota;
+		var JWTFKQGYVM;
 		
-	UUUIUYUSFS.revive();
-	UUUIUYUSFS.frameName='bolsa_dinero';	
-	BJWEJKFWER.text="x "+MHJKHDFSGF;
-	BJWEJKFWER.x = YMHIHSNADE.world.width-160+(BJWEJKFWER.textWidth/2 );
-	
-
-	
-	
-	timerBolsaRota=YMHIHSNADE.time.create(false);
-	timerBolsaRota.add(500, function()
-	{		
-		EABXADHEVT('_Cremallera');
-		UUUIUYUSFS.frameName='bolsa_dinero_rota';	
-		MHJKHDFSGF=MHJKHDFSGF+YUFGSLAHYS;
-		YUFGSLAHYS=0;
+		var monedasrestar=YUFGSLAHYS*(-1);
+		
+			
+		UUUIUYUSFS.revive();
+		UUUIUYUSFS.frameName='bolsa_dinero';	
 		BJWEJKFWER.text="x "+MHJKHDFSGF;
 		BJWEJKFWER.x = YMHIHSNADE.world.width-160+(BJWEJKFWER.textWidth/2 );
 		
-		emitterMoneda.maxParticles=monedasrestar;
-		emitterMoneda.makeParticles('general','moneda');
-		emitterMoneda.setRotation(1, 1);
-		emitterMoneda.setAlpha(1, 1);
-		emitterMoneda.setScale(1, 1)
-		emitterMoneda.gravity = 200;
-		emitterMoneda.y=75;
-		emitterMoneda.minParticleSpeed.setTo(-300, 30);
-		emitterMoneda.maxParticleSpeed.setTo(300, 100);
+
 		
-		emitterMoneda.flow(0, 1000, (monedasrestar/2),monedasrestar);	
-	
-		JWTFKQGYVM=YMHIHSNADE.time.create(false);
-		JWTFKQGYVM.add(1500, function()
-		{
-			UUUIUYUSFS.frameName='bolsa_dinero';	
+		
+		timerBolsaRota=YMHIHSNADE.time.create(false);
+		timerBolsaRota.add(500, function()
+		{		
+			EABXADHEVT('_Cremallera');
+			UUUIUYUSFS.frameName='bolsa_dinero_rota';	
+			MHJKHDFSGF=MHJKHDFSGF+YUFGSLAHYS;
+			YUFGSLAHYS=0;
+			BJWEJKFWER.text="x "+MHJKHDFSGF;
+			BJWEJKFWER.x = YMHIHSNADE.world.width-160+(BJWEJKFWER.textWidth/2 );
+			
+			emitterMoneda.maxParticles=monedasrestar;
+			emitterMoneda.makeParticles('general','moneda');
+			emitterMoneda.setRotation(1, 1);
+			emitterMoneda.setAlpha(1, 1);
+			emitterMoneda.setScale(1, 1)
+			emitterMoneda.gravity = 200;
+			emitterMoneda.y=75;
+			emitterMoneda.minParticleSpeed.setTo(-300, 30);
+			emitterMoneda.maxParticleSpeed.setTo(300, 100);
+			
+			emitterMoneda.flow(0, 1000, (monedasrestar/2),monedasrestar);	
+		
+			JWTFKQGYVM=YMHIHSNADE.time.create(false);
+			JWTFKQGYVM.add(1500, function()
+			{
+				UUUIUYUSFS.frameName='bolsa_dinero';	
+			}
+			);
+			JWTFKQGYVM.start();	
+		
+		
 		}
 		);
-		JWTFKQGYVM.start();	
-	
-	
+		timerBolsaRota.start();	
 	}
-	);
-	timerBolsaRota.start();	
-
- 
-	
-
 }
 
 function LLSSKSKSKQ()
@@ -3613,10 +3654,14 @@ function MostrarTienda()
 
 }
 
-function MostrarFaltaVidas()
+function MostrarFaltaVidas(QKVJASWVEO)
 {	
 	var d=document.getElementById('DivFaltaVidas');
 	d.style.display = '';
+	
+	document.getElementById("btusagbits").innerText ="Utiliza 10 Guiñobits"
+	document.getElementById("btusavideo").innerText = "Visualiza un vídeo"
+	document.getElementById("btesperar").innerText = "Espera hasta "+QKVJASWVEO
 }
 
 function CerrarFaltaVidas()
@@ -3923,11 +3968,13 @@ function AccesoEmoji(Emoji)
 	var ItemsArticulo008=[]
 	var ItemsArticulo012=[]
 	
+	
 	return ( 
 		(ItemsArticulo005.indexOf(Emoji)>=0 && EstaEnArrayCompras('Art005')) 
 	 || (ItemsArticulo006.indexOf(Emoji)>=0 && EstaEnArrayCompras('Art006')) 
 	 || (ItemsArticulo007.indexOf(Emoji)>=0 && EstaEnArrayCompras('Art007')) 
 	 || (ItemsArticulo012.indexOf(Emoji)>=0 && EstaEnArrayCompras('Art012'))
+	 || PWMIBRSDCJ[0].TarifaPlana
 		)
 	
 }
@@ -4041,16 +4088,72 @@ function CalculaCaducidad(Articulo)
 		TipoCaducidad=1; //EBAPPJFYSW			
 		break;			
 		
-		case 'Art011': //Guiñobits
+		case 'Art011': //Vidas
 		TipoCaducidad=1; //EBAPPJFYSW			
 		break;	
 
-		/*case 'Art012': //Emojis
+		case 'Art012': //Guiñobits
 		TipoCaducidad=1; //EBAPPJFYSW			
-		break;		*/	
+		break;
+		
+		case 'Art013': //Tarifa Plana
+		TipoCaducidad=1; //EBAPPJFYSW			
+		break;		
 	}	
 	
 	return TipoCaducidad;
+}
+
+function ActivaElementosHTML(Articulo, TarifaPlana)
+{
+	var d;
+	var u;
+	
+
+	console.log("ENTRA A CONFIGURAR")
+	if ( (Articulo=='Art010' || Articulo=='Art012') && !window.plugins && TarifaPlana==false )
+	{
+		console.log("lo visibiliza")
+		document.getElementById("card-element").style.visibility = "visible";
+		document.getElementById("card-button").style.display = "inline-block"; 
+		
+		document.getElementById("BotonComprar").style.display = "none";		
+		
+		ArticuloComprar=Articulo //Truco para pagar con tarjeta. Elegir qué artículo es.
+		
+	}
+	else
+	{
+		console.log("lo oculta")
+		document.getElementById("card-element").style.visibility = "hidden";
+		document.getElementById("card-button").style.display = "none";		
+		document.getElementById("BotonComprar").style.display = "inline-block";				
+	}
+
+	for (u=0;u<=ArrayCompras.length-1;u++)
+	{
+		if (ArrayCompras[u].Articulo==Articulo || TarifaPlana)
+		{
+			switch (Articulo)
+			{
+				case 'Art001': //Cambia WWKVHIMWYD
+				document.getElementById("DivCambiaNombre").style.visibility = "visible"
+				break;	
+				
+				case 'Art002': //Cambia QHHQPXWFNG
+				document.getElementById("DivCambiaFoto").style.visibility = "visible"
+				document.getElementById("myProgress").style.display = "inline-block"					
+				break;	
+				
+				case 'Art009': //Cambia IRQGAFESIC
+				document.getElementById("DivCambiaFoto").style.visibility = "visible"	
+				document.getElementById("myProgress").style.display = "inline-block"					
+				break;	
+				
+				
+			}	
+		}
+	}
 }
 
 function MostrarDetalleTienda(Articulo,ArrayTienda)
@@ -4059,7 +4162,38 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 	var i;
 	var d;
 	var u;
-	//ArticuloGlobal
+	
+	var TarifaPlana=false;
+	
+	//ActivaElementosHTML(Articulo);
+	
+	
+	for (i=0;i<=ArrayCompras.length-1;i++)
+	{
+		if 	(ArrayCompras[i].Articulo=='Art013')
+		{
+			TarifaPlana=true;
+			break;
+		}
+	}
+	
+	if (TarifaPlana)
+	{
+		var current_datetime = new Date(ArrayCompras[i].ValidezFecha) //ValidezFecha;
+		var formatted_date = appendLeadingZeroes(current_datetime.getDate()) +'/'+ appendLeadingZeroes(current_datetime.getMonth() + 1) + '/' +current_datetime.getFullYear() + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
+		
+		document.getElementById("lblArticuloYaComprado").textContent="GuiñoPass aplicado hasta el "+formatted_date
+		
+		//ActivaElementosHTML(Articulo);
+		
+		//document.getElementById("card-element").style.visibility = "hidden";
+		//document.getElementById("card-button").style.display = "none";		
+		//document.getElementById("BotonComprar").style.display = "none";				
+	}
+	else
+	{
+	}
+	
 	document.getElementById('TextErrorTienda').textContent=""
 	document.getElementById("file_to_upload").value = "";
 
@@ -4072,218 +4206,218 @@ function MostrarDetalleTienda(Articulo,ArrayTienda)
 	document.getElementById('txtCambiaNombre').value="";
 	
 	//console.log("Articulo "+Articulo)
-			document.getElementById("DivCambiaNombre").style.visibility = "hidden";
-			document.getElementById("DivCambiaFoto").style.visibility = "hidden";	
+	document.getElementById("DivCambiaNombre").style.visibility = "hidden";
+	document.getElementById("DivCambiaFoto").style.visibility = "hidden";	
 			
 	document.getElementById("myProgress").style.display = "none"					
 	var elem = document.getElementById("myBar");   
-	elem.style.width = '1%'; 
-
-
-/*	switch (Articulo)
-	{
-		case "Art001": //Cambia WWKVHIMWYD		
-		document.getElementById("DivCambiaNombre").style.visibility = "visible";
-		document.getElementById("DivCambiaFoto").style.visibility = "hidden";
-		//console.log("visible cambia nombre")
-		break;
-		
-		case "Art002": //Cambia QHHQPXWFNG		
-		document.getElementById("DivCambiaFoto").style.visibility = "visible";
-		document.getElementById("DivCambiaNombre").style.visibility = "hidden";
-		//console.log("visible cambia foto")
-		//document.getElementById("file_to_upload").style.visibility = "visible";
-		//document.getElementById("TextErrorTienda").style.visibility = "visible";
-		break;		
+	elem.style.width = '1%'; 	
 	
-		default :
-		
-			document.getElementById("DivCambiaNombre").style.visibility = "hidden";
-			document.getElementById("DivCambiaFoto").style.visibility = "hidden";
-			//document.getElementById("file_to_upload").style.visibility = "hidden";
-			//document.getElementById("TextErrorTienda").style.visibility = "hidden";
-		break;
-	}*/
-	console.log("Otro tamaño "+ArrayTienda.length)
-	for (i=0;i<=ArrayTienda.length-1;i++)
-	{	
-		console.log("HVCFEWNDRF "+ArrayTienda[i]._id_articulo)
-		if (ArrayTienda[i]._id_articulo==Articulo)
-		{
-			console.log("entra HVCFEWNDRF "+ArrayTienda[i]._id_articulo)
-			d=document.getElementById('BotonComprar');
-			d.onclick =  function() { 
-				
-				if (Articulo!='Art010')
-				{
-					var Auxiliar=""
-					
-					switch (Articulo)
-					{
-						case Articulo : "Art001"
-						
-						var e=document.getElementById('txtCambiaNombre');
-						Auxiliar=e.value
-						break;
 
-					}
-					
-					Comprar(Articulo,Auxiliar) 
-				}
-				else
-				{
-					console.log("justo comprando "+Articulo)
-					CompraGBits(Articulo);	
-				}
-			}
-			
 
-	
-	
-			d=document.getElementById("lblDescripcionArticulo") 
-			d.textContent = ArrayTienda[i]._descripcion;	
-
-			d=document.getElementById("lblNombreArticulo") 
-			d.textContent = ArrayTienda[i]._nombre;				
-
-			d=document.getElementById("lblPrecioArticulo") 
-			d.textContent = ArrayTienda[i]._precio;		
-			//console.log("Precio "+ ArrayTienda[i]._precio);
-			
-			d=document.getElementById("lblArticuloYaComprado") 
-			 			
-			var TipoCaducidad=CalculaCaducidad(Articulo)
-
-			
-			
-			var RPHWVBBGIM="";
-			var ActivarBotonCompra=true;
-			for (u=0;u<=ArrayCompras.length-1;u++)
+		console.log("Otro tamaño "+ArrayTienda.length)
+		for (i=0;i<=ArrayTienda.length-1;i++)
+		{	
+			console.log("HVCFEWNDRF "+ArrayTienda[i]._id_articulo)
+			if (ArrayTienda[i]._id_articulo==Articulo)
 			{
-				if (ArrayCompras[u].Articulo==ArrayTienda[i]._id_articulo)
-				{
-					if (TipoCaducidad==2)
+				console.log("entra HVCFEWNDRF "+ArrayTienda[i]._id_articulo)
+				d=document.getElementById('BotonComprar');
+				d.onclick =  function() { 
+					
+					if (Articulo!='Art010' && Articulo!='Art012')
 					{
+						var Auxiliar=""
+						
+						switch (Articulo)
+						{
+							case Articulo : "Art001"
+							
+							var e=document.getElementById('txtCambiaNombre');
+							Auxiliar=e.value
+							break;
 
-						RPHWVBBGIM="¡Producto ya comprado!. Válido para "+ArrayCompras[u].ValidezCotos+ " cotos.";
-						ActivarBotonCompra=false;
-						//console.log(RPHWVBBGIM)
+						}
+						
+						Comprar(Articulo,Auxiliar) 
 					}
 					else
 					{
-						//if (Articulo=='Art001')
-						//{
-						//	RPHWVBBGIM="¡Producto ya comprado!. Cada cambio volverá a descontar Guiñobits. Válido hasta "+ArrayCompras[u].ValidezFecha;
-						//}
-						//else
-						//{
-							var current_datetime = new Date(ArrayCompras[u].ValidezFecha) //ValidezFecha;
-							var formatted_date = appendLeadingZeroes(current_datetime.getDate()) +'/'+ appendLeadingZeroes(current_datetime.getMonth() + 1) + '/' +current_datetime.getFullYear() + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
-							
-							switch (ArrayCompras[u].Articulo)
-							{
-								case 'Art010':  //Compra Gbits
-								RPHWVBBGIM="";
-								break;
-								
-								case 'Art005':  //Emojis
-								RPHWVBBGIM="¡Producto ya comprado!. Disponible hasta el "+formatted_date;
-								break;
+						console.log("justo comprando "+Articulo)
+						CompraGBits(Articulo);	
+					}
+				}
+				
 
-								case 'Art006':  //Emojis
-								RPHWVBBGIM="¡Producto ya comprado!. Disponible hasta el "+formatted_date;
-								break;
+		
+		
+				d=document.getElementById("lblDescripcionArticulo") 
+				d.textContent = ArrayTienda[i]._descripcion;	
 
-								case 'Art007':  //Emojis
-								RPHWVBBGIM="¡Producto ya comprado!. Disponible hasta el "+formatted_date;
-								break;				
+				d=document.getElementById("lblNombreArticulo") 
+				d.textContent = ArrayTienda[i]._nombre;				
 
-								case 'Art008':  //Emojis
-								RPHWVBBGIM="¡Producto ya comprado!. Disponible hasta el "+formatted_date;
-								break;	
-
-								
-								default :	
-								RPHWVBBGIM="¡Producto ya comprado!. Cambios ilimitados hasta el "+formatted_date;
-								break;
-							}
-							
-							/*if (ArrayCompras[u].Articulo=='Art010')
-							{
-								RPHWVBBGIM=""
-							}
-							else
-							{
-								RPHWVBBGIM="¡Producto ya comprado!. Cambios ilimitados hasta el "+formatted_date;
-							}*/
-						//}
-						ActivarBotonCompra=false;
-						console.log("SE DEBERIA ACTIVAR "+Articulo)
-						switch (Articulo)
-						{
-							case 'Art001': //Cambia WWKVHIMWYD
-							document.getElementById("DivCambiaNombre").style.visibility = "visible"		
-							break;	
-							
-							case 'Art002': //Cambia QHHQPXWFNG
-							document.getElementById("DivCambiaFoto").style.visibility = "visible"
-							document.getElementById("myProgress").style.display = "inline-block"					
-							break;	
-							
-							case 'Art009': //Cambia QHHQPXWFNG
-							document.getElementById("DivCambiaFoto").style.visibility = "visible"	
-							document.getElementById("myProgress").style.display = "inline-block"					
-							break;								
+				d=document.getElementById("lblPrecioArticulo") 
+				d.textContent = ArrayTienda[i]._precio;		
+				if (Articulo=='Art010' || Articulo=='Art012')
+				{
+					var esIOSAPP=false;
+					if (window.plugins)
+					{
+						var SO=JHDSFWFWUU();
+						if (SO.toUpperCase()=="IOS")
+						{	
+							esIOSAPP=true;
 						}
-						
 					}
 					
-					break;
+					if (esIOSAPP==true)
+					{
+						if (Articulo=='Art010')
+						{
+							d.textContent="2,29€"
+						}
+						if (Articulo=='Art012')
+						{
+							d.textContent="4,49€"
+						}					
+					}
+					else
+					{
+						if (Articulo=='Art010')
+						{
+							d.textContent="1€ + IVA (1,21€)"
+						}
+						if (Articulo=='Art012')
+						{
+							d.textContent="3€ + IVA (3,63€)"
+						}
+					}
+					
 				}
-			}
-			
-			d.textContent = RPHWVBBGIM;
-		
-
-			if (ArrayTienda[i]._precio>MHJKHDFSGF)
-			{
-				 document.getElementById("BotonComprar").disabled=true;
-			}
-			else
-			{
-
-				 document.getElementById("BotonComprar").disabled=!ActivarBotonCompra;
-
-			}
-			
-			if (Articulo=='Art010')
-			{
-				 document.getElementById("BotonComprar").disabled=false;
-			}
-		//var b=a.labels[0];
-			
-		
-			/*switch (Articulo)
-			{	
-			
-				case 1 :		
-				RHOLNWBOXR = "Cambia tu nombre en GuiñotePro, con la comodidad de no tener que hacerlo desde tu Red Social.\n";
-					"Nota: Nombres de caracter ofensivos o publicitarios serán rechazados."
-						
-				break;	
-
-				case 2 :		
-				RHOLNWBOXR = "Cambia tu foto en GuiñotePro, con la comodidad de no tener que hacerlo desde tu Red Social.\n";
-					"Nota: Nombres de caracter ofensiva o publicitaria será rechazada."
-						
-				break;	
+				else
+				{
+					d.textContent=d.textContent+" Guiñobits."
+				}
+				//console.log("Precio "+ ArrayTienda[i]._precio);
+				
+				d=document.getElementById("lblArticuloYaComprado") 
+							
+				var TipoCaducidad=CalculaCaducidad(Articulo)
 
 				
-			}*/
+				
+				var RPHWVBBGIM="";
+				var ActivarBotonCompra=true;
+				for (u=0;u<=ArrayCompras.length-1;u++)
+				{
+					if (ArrayCompras[u].Articulo==ArrayTienda[i]._id_articulo || TarifaPlana)
+					{
+						if (TipoCaducidad==2)
+						{
 
-			
+							RPHWVBBGIM="¡Producto ya comprado!. Válido para "+ArrayCompras[u].ValidezCotos+ " cotos.";
+							ActivarBotonCompra=false;
+							//console.log(RPHWVBBGIM)
+						}
+						else
+						{
+							//if (Articulo=='Art001')
+							//{
+							//	RPHWVBBGIM="¡Producto ya comprado!. Cada cambio volverá a descontar Guiñobits. Válido hasta "+ArrayCompras[u].ValidezFecha;
+							//}
+							//else
+							//{
+								var current_datetime = new Date(ArrayCompras[u].ValidezFecha) //ValidezFecha;
+								var formatted_date = appendLeadingZeroes(current_datetime.getDate()) +'/'+ appendLeadingZeroes(current_datetime.getMonth() + 1) + '/' +current_datetime.getFullYear() + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
+								
+								switch (ArrayCompras[u].Articulo)
+								{
+									case 'Art010':  //Compra Gbits
+									RPHWVBBGIM="";
+									break;
+									
+									case 'Art012':  //Compra Gbits
+									RPHWVBBGIM="";
+									break;								
+									
+									case 'Art005':  //Emojis
+									RPHWVBBGIM="¡Producto ya comprado!. Disponible hasta el "+formatted_date;
+									break;
+
+									case 'Art006':  //Emojis
+									RPHWVBBGIM="¡Producto ya comprado!. Disponible hasta el "+formatted_date;
+									break;
+
+									case 'Art007':  //Emojis
+									RPHWVBBGIM="¡Producto ya comprado!. Disponible hasta el "+formatted_date;
+									break;				
+
+									case 'Art008':  //Emojis
+									RPHWVBBGIM="¡Producto ya comprado!. Disponible hasta el "+formatted_date;
+									break;	
+									
+									case 'Art013':  //Tarifa plana
+									RPHWVBBGIM="¡Producto ya comprado!. Disponible hasta el "+formatted_date;
+									break;									
+
+									
+									default :	
+									RPHWVBBGIM="¡Producto ya comprado!. Cambios ilimitados hasta el "+formatted_date;
+									break;
+								}
+								
+								/*if (ArrayCompras[u].Articulo=='Art010')
+								{
+									RPHWVBBGIM=""
+								}
+								else
+								{
+									RPHWVBBGIM="¡Producto ya comprado!. Cambios ilimitados hasta el "+formatted_date;
+								}*/
+							//}
+							ActivarBotonCompra=false;
+							console.log("SE DEBERIA ACTIVAR "+Articulo)
+							
+							//ActivaElementosHTML(Articulo, TarifaPlana);
+						
+							
+						}
+						
+						
+						break;
+					}
+				}
+				
+				ActivaElementosHTML(Articulo, TarifaPlana);
+				
+				if (TarifaPlana==true)
+				{
+					document.getElementById("BotonComprar").disabled=true;
+				}
+				else
+				{
+					d.textContent = RPHWVBBGIM;
+					
+					if (ArrayTienda[i]._precio>MHJKHDFSGF)
+					{
+						 document.getElementById("BotonComprar").disabled=true;
+					}
+					else
+					{
+
+						 document.getElementById("BotonComprar").disabled=!ActivarBotonCompra;
+
+					}
+					
+					if (Articulo=='Art010' || Articulo=='Art012')
+					{
+						 document.getElementById("BotonComprar").disabled=false;
+					}
+				}				
+			}
 		}
-	}
+	//}
 }
 
 
@@ -4628,6 +4762,9 @@ function HEUDCWFSMP()
 			
 			var d=document.getElementById('DivInstagram');
 			d.style.display = 'inline-block';	
+
+			var d=document.getElementById('DivCookies');
+			d.style.display = 'inline-block';				
 		}
 	}
 	catch(e){}
@@ -4646,6 +4783,10 @@ function NGHJWGJHWG()
 	
 	var d=document.getElementById('DivInstagram');
 	d.style.display = 'none';	
+	
+
+	var d=document.getElementById('DivCookies');
+	d.style.display = 'none';		
 }
 
 
@@ -4692,6 +4833,26 @@ function CerrarMensaje()
 	//console.log("CERRADO")
 }
 
+
+
+
+
+function MostrarMensajeCuentaPalos()
+{
+	console.log("MYQCQNOJGH mensaje")
+	var d=document.getElementById('DivMensajeCuentaPalos');
+	d.style.display = 'inline-block';	
+}
+
+function CerrarMensajeCuentaPalos()
+{
+	var d=document.getElementById('DivMensajeCuentaPalos');
+	d.style.display = 'none';	
+
+}
+
+
+
 function AbreNavegador(Web)
 {
 	var isCordovaApp = document.URL.indexOf('http://') === -1
@@ -4721,6 +4882,16 @@ function RespuestaIrA(JSKXXDPSDS)
 	CerrarIrA();
 }
 
+
+function RespuestaCuentaPalos(JSKXXDPSDS)
+{
+	if (JSKXXDPSDS==true)
+	{
+		DesactivarCuentaPalos()		
+	}
+	
+	CerrarMensajeCuentaPalos();
+}
 
 function NXVIOTGLQV(AHGGSIUEBA)
 {
@@ -4976,8 +5147,9 @@ function RespuestaFaltanVidas(JSKXXDPSDS)
 	var textomensaje=a.textContent;
 	
 	CerrarFaltaVidas();
-	if (JSKXXDPSDS==false)
+	if (JSKXXDPSDS==1)
 	{
+		Comprar('Art011',null)
 		/*if (textomensaje.search('videojuego')>=0) 
 		{
 			navigator.app.exitApp();
@@ -4992,12 +5164,34 @@ function RespuestaFaltanVidas(JSKXXDPSDS)
 	}
 	else
 	{
-		//alert("Se queda");
+		if (JSKXXDPSDS==2)
+		{
+			MuestraVideo()
+		}
 					
-		Comprar('Art011',null)
+		
 	}
 }
 
+function MuestraVideo()
+{
+	prepareRewardVideoAd('ca-app-pub-3940256099942544/5224354917', VideoExitoso, VideoFallido);
+	showRewardVideoAd();
+}
+
+function VideoExitoso()
+{
+	alert("Video exitoso");
+}
+
+function VideoFallido()
+{
+	alert("Video fallido");
+}
+
+document.addEventListener('onAdFailLoad', function(e){
+    alert("No carga el vídeo");
+});
 
 function RespuestaSaldoInsuficiente(JSKXXDPSDS)
 {
@@ -5010,7 +5204,7 @@ function RespuestaSaldoInsuficiente(JSKXXDPSDS)
 	if (JSKXXDPSDS==true)
 	{
 		console.log("Longitud tienda "+ArrayArticulosTiendaGlobal.length)
-		MostrarDetalleTienda('Art010',ArrayArticulosTiendaGlobal)
+		MostrarDetalleTienda('Art012',ArrayArticulosTiendaGlobal)
 	}
 	else
 	{
@@ -5178,8 +5372,13 @@ function YBWXJFDOAW()
 	EFKTQSXAMA.revive();
 	LNJDKEVPQE.revive();
 	MNBDJFHWHU();
-	ImagenVidas.revive();
-	MuestraVidas();
+	
+	if (PWMIBRSDCJ[0].TarifaPlana==false)
+	{
+		ImagenVidas.revive();
+		MuestraVidas();
+	}
+	
 	HEUDCWFSMP();
 	
 	
@@ -7963,7 +8162,7 @@ function onSocketTiendaDesdeServer(ArrayTienda)
 	document.getElementById('tipooct').value=TipoOct;
 	
 	MostrarDetalleTienda(Articulo,ArrayTienda)
-	if (Articulo=='Art010')
+	if (Articulo=='Art010' )
 	{
 		//console.log("se mete")
 		// StoreBuyProduct('001');
@@ -8889,10 +9088,9 @@ function onSocketErrorDesdeServer(NNWWUUQPPP,ErrorPublico) {
 		//lPermisoDesconectado=false;
 		FSKHWVCMCA=false;
 		
-		document.getElementById("lblSinVidas").textContent="No te quedan vidas. Si deseas jugar de manera inmediata, te descontaremos 50 Guiñobits. "+
-			"Si lo prefieres, puedes esperar hasta el " +ErrorPublico + " para recuperar todas las vidas sin coste alguno."+
-			" ¿Quieres jugar ya?"
-		MostrarFaltaVidas()	
+		document.getElementById("lblSinVidas").textContent="¡Continúa jugando!"
+			
+		MostrarFaltaVidas(ErrorPublico)	
 	}	
 
 	if (NNWWUUQPPP=="Error16")
@@ -9807,7 +10005,8 @@ function CURCDCWNHB(CYHNPORXFJ)
 			CYHNPORXFJ[0].ArrayComprasJugador,
 			CYHNPORXFJ[0].PrioridadElegir,
 			CYHNPORXFJ[0].Vidas,
-			CYHNPORXFJ[0].ObjetoParametros
+			CYHNPORXFJ[0].ObjetoParametros,
+			CYHNPORXFJ[0].TarifaPlana
 			));
 			
 			//alert(PWMIBRSDCJ[0].IRQGAFESIC);
@@ -10014,7 +10213,8 @@ function DVCXGBTNWL(CYHNPORXFJ)
 			CYHNPORXFJ[0].ArrayComprasJugador,
 			CYHNPORXFJ[0].PrioridadElegir,
 			CYHNPORXFJ[0].Vidas,
-			CYHNPORXFJ[0].ObjetoParametros
+			CYHNPORXFJ[0].ObjetoParametros,
+			CYHNPORXFJ[0].TarifaPlana
 			));
 			
 			//console.log("Rellena infojugador2");
@@ -11887,7 +12087,8 @@ function AAQWTFMQMA() {
 			
 
 			
-			 if (JHVKJDVHWW(MMNORPWJDC,socket.id)){ //Se crea la baraja
+			 if (JHVKJDVHWW(MMNORPWJDC,socket.id))
+			 { //Se crea la baraja
 				
 				DVNRTQIWGL=1;
 				ValidaDisponibilidadArticulo('Art004');

@@ -110,7 +110,7 @@ function onSocketSaldoInsuficiente(Precio,Gbits, ArrayArticulosTienda)
 
 function ValidarTodosArticulos()
 {
-	if (ValidaDisponibilidadArticulo('Art003'))
+	if (ValidaDisponibilidadArticulo('Art003') || PWMIBRSDCJ[0].TarifaPlana)
 	{
 		GlobalActivaCuentaPalos=true;
 	}
@@ -126,6 +126,7 @@ function ValidarTodosArticulos()
 	ValidaDisponibilidadArticulo('Art007') //Para caducar los de Tipo EBAPPJFYSW
 	//ValidaDisponibilidadArticulo('Art008') //Para caducar los de Tipo EBAPPJFYSW
 	ValidaDisponibilidadArticulo('Art009') //Para caducar los de Tipo EBAPPJFYSW
+	
 	
 }			
 			
@@ -176,7 +177,7 @@ function ValidaDisponibilidadArticulo(Articulo)
 				}
 				else
 				{
-					if (Articulo='Art006')
+					if (Articulo=='Art006')
 					{	
 						console.log("Validez EBAPPJFYSW "+ArrayCompras[i].ValidezFecha+" ahora son las "+new Date(Date.now()) )
 					}
@@ -299,13 +300,13 @@ function onSocketArticuloComprado(Articulo,Precio,ValidezFecha, ValidezCotos)
 		var current_datetime = new Date(ValidezFecha) //ValidezFecha;
 		var formatted_date = appendLeadingZeroes(current_datetime.getDate()) +'/'+ appendLeadingZeroes(current_datetime.getMonth() + 1) + '/' +current_datetime.getFullYear() + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
 
-		if (Articulo=='Art010')
+		if (Articulo=='Art010' || Articulo=='Art012')
 		{
 			RPHWVBBGIM=""
 		}	
 		else
 		{
-			RPHWVBBGIM="¡Producto comprado correctamente!. Cambios ilimitados hasta el "+formatted_date;
+			RPHWVBBGIM="¡Producto comprado correctamente!. Disponible hasta el "+formatted_date;
 		}
 	}
 	else
@@ -592,7 +593,14 @@ function LHEQVYHCSK()
 	
 	if (AJFQVFUKAP==true)
 	{
-		JHKSJDHVKJ=0.2; //  5 OJIMETRO
+		if (vProbandoIA==false)
+		{
+			JHKSJDHVKJ=5;
+		}
+		else
+		{
+			JHKSJDHVKJ=0.1;
+		}
 	}
 	
 	if (LUCRWXJMDR==10)

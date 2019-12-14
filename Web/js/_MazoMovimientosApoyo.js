@@ -48,7 +48,7 @@ function ConsultaCompraRecibida()
 
 function EnviarComprarGbits(ArticuloComprar, res)
 {
-	
+	var KCPHFPSPLQ;
 	var GXNRNMAAKW=function( OBTBPOULAV,AURESXCGMK, ArticuloComprar,ArticuloExterno,
 		OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR)
 		{
@@ -73,11 +73,6 @@ function EnviarComprarGbits(ArticuloComprar, res)
 
 		
 	var OYJAHGADFQ=Math.random()*100000;
-	var KCPHFPSPLQ=new GXNRNMAAKW(PWMIBRSDCJ[0].OBTBPOULAV ,
-		socket.id, ArticuloComprar,res,
-		OYJAHGADFQ,socket.id,null,'enviar comprar gbits');
-	NBEJWDVLLV.push(KCPHFPSPLQ);
-	QPHHGPRJAI.push(KCPHFPSPLQ);
 	
 	var CKHBSQULIF=YMHIHSNADE.time.create(false);
 	
@@ -86,6 +81,15 @@ function EnviarComprarGbits(ArticuloComprar, res)
 		try
 		{
 			//console.log("Enviando..")
+			
+			 KCPHFPSPLQ=new GXNRNMAAKW(PWMIBRSDCJ[0].OBTBPOULAV ,
+		socket.id, ArticuloComprar,res,
+		OYJAHGADFQ,socket.id,null,'enviar comprar gbits');
+	NBEJWDVLLV.push(KCPHFPSPLQ);
+	QPHHGPRJAI.push(KCPHFPSPLQ);
+	
+	
+	
 			socket.emit('enviar_comprar_gbits',QPHHGPRJAI[0],
 			 function(XQLEOGMJYG)
 			 {		
@@ -283,17 +287,24 @@ function CompraGBits(Articulo){
 	
 	if (PWMIBRSDCJ.length>0)
 	{
-		if (Articulo=='Art010')
+		if( !window.plugins)
 		{
-			//console.log("se mete")
-			StoreBuyProduct('001');
-		}	
-		if (Articulo=='Art011')
+			MostrarStripe();
+		}
+		else
 		{
-			//console.log("se mete")
-			StoreBuyProduct('002');
-		}			
-		store.order(vTipoCompras);
+			if (Articulo=='Art010')
+			{
+				//console.log("se mete")
+				StoreBuyProduct('001');
+			}	
+			if (Articulo=='Art012')
+			{
+				//console.log("se mete")
+				StoreBuyProduct('002');
+			}			
+			store.order(vTipoCompras);
+		}
 	}
 }
 
@@ -577,11 +588,11 @@ function track(pagina)
 			//ga('send', 'pageview');	
 			if (pagina=='index')
 			{
-				ga('send','pageview',{'title':'PC Entrada','page':'/index'});
+				ga('send','pageview',{'title':'PC Entrada','page':'/indexPC'});
 			}
 			else
 			{
-				ga('send','pageview',{'title':'PC Reparto','page':'/reparto'});
+				ga('send','pageview',{'title':'PC Reparto','page':'/repartoPC'});
 			}
 			//console.log("Enviado")
 		}
@@ -3426,7 +3437,7 @@ function MarcadorNuevo()
 {
 	if (KYLIAIETHX==false)
 	{
-		return true; //deshaz
+		//return true; //deshaz
 	}
 	return JVQXQGYDHH==0 && CNCCBHQJKL==0 && UHHXSNXXJK==0 && PXGXKDDNFK==0
 }
@@ -6045,6 +6056,8 @@ function WWAYLOUPUQ(TXLWIIINGQ) {
 							
 							var d=document.getElementById('DivResultado');
 							d.style.display = 'block';
+							
+
 							//d.style.zIndex=-100;
 							
 							if (OUENWKLUUA==true)
@@ -6053,6 +6066,13 @@ function WWAYLOUPUQ(TXLWIIINGQ) {
 								PXGXKDDNFK=0;
 
 								//QSAXUCPASV();
+								
+								document.getElementById('Clasificacion').style.backgroundColor="#ffffff";
+								
+							}
+							else
+							{
+								document.getElementById('Clasificacion').style.backgroundColor="#f7a654";
 							}
 							
 							var TiempoDelay=0;
@@ -6062,6 +6082,7 @@ function WWAYLOUPUQ(TXLWIIINGQ) {
 							{
 								var TiempoDelay=0;
 								var TiempoAnimacion=0;
+								console.log("esta reconectando "+HMVFLEYPXM[0].RHOLNWBOXR)
 							}
 				
 				
@@ -6069,6 +6090,7 @@ function WWAYLOUPUQ(TXLWIIINGQ) {
 							twRec4.timeline=[]
 							twRec4.target=AWCCMSCOPO
 							twRec4.to( { alpha: 0 }, TiempoDelay, KYFMRVNHIQ, true,TiempoAnimacion);
+							console.log("Tiempo delay "+TiempoDelay+" tiempo Animacion: "+TiempoAnimacion)
 							twRec4.onComplete.addOnce( 
 							
 								function()
@@ -6079,6 +6101,7 @@ function WWAYLOUPUQ(TXLWIIINGQ) {
 							
 											var d=document.getElementById('DivResultado');
 											d.style.display = 'none';
+											
 											//d.style.zIndex=-1;
 												
 												//console.log("deberia saltar");
@@ -6708,8 +6731,8 @@ function WNEWPCNXPA()
 	IEQDMBJCAY.kill();
 	YGTNAODFHW.kill();
 	
-	UHHXSNXXJK=75; //deshaz
-	PXGXKDDNFK=75;//deshaz
+	UHHXSNXXJK=0; //deshaz
+	PXGXKDDNFK=0;//deshaz
 	
 	MarcadorPartidasNuestroFin=JVQXQGYDHH;
 	MarcadorPartidasRivalFin=CNCCBHQJKL;	
@@ -6730,7 +6753,7 @@ function WNEWPCNXPA()
 	ESKTEXAVHU=0;
 	MYQBNBVHKU=false;
 	HGMNXSIAPV=false;
-	EVAILWGGKX=true;//deshaz
+	EVAILWGGKX=false;//deshaz
 	LUCRWXJMDR=1;
 	PNVKSWRTOJ=1;
 	DVNRTQIWGL=1

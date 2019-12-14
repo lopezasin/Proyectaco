@@ -2,10 +2,19 @@
 
 
 
+
 <head>
 <title>Guiñote</title>
 <script src="https://apis.google.com/js/platform.js"  async defer> </script>
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+
+
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1a630ca7-be70-4189-be71-9fc77a609301" data-blockingmode="auto" type="text/javascript"></script>
+
+
+
+
+
 <script language="JavaScript">
 function redirectHttpToHttps()
 {
@@ -94,7 +103,8 @@ function redirectHttpToHttps()
 <script src="js/_MazoMovimientosApoyo.js"></script>
 <script src="js/_IA.js"></script>
 <script src="js/_IADesarrollo.js"></script>
-
+<script src="https://js.stripe.com/v3/"></script>
+<script src="js/_stripe.js"></script>
 
 
 
@@ -563,7 +573,7 @@ function ieVersion(uaString) {
         centerMode: false,
           slidesToScroll: 2,
 		  arrows: false,
-          dots:true
+          dots:false
         });
 	  
 	/*$('.single-item').on("reInit", function() {
@@ -812,6 +822,7 @@ function onDeviceReady() {
 			/*window.addEventListener('keyboardDidHide', function (event) {
 				document.activeElement.blur();
 			});*/
+
 		
 		
 		window.open = cordova.InAppBrowser.open;
@@ -857,9 +868,9 @@ document.addEventListener("backbutton", function (e) {
 <!-- "padding:0px;margin:0px;width:100vw; class="container"-->
 <body  style="background-color:rgb(0%, 0%, 0%);" > 
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v5.0&appId=123400284870556&autoLogAppEvents=1"></script>
 
-
- 
   
 <div id='DivGPRD' style='position:absolute; top:0px; width: 100%; display:none; background: #82011c; z-index:10000'>
 <form id='fgprd'>
@@ -1420,6 +1431,34 @@ function onSignInFailure(googleUser) {
 	
 </div>
 
+
+<div id="DivMensajeCuentaPalos" class="container"  style="display:none; position: absolute;
+	top: 30%;
+	left: 55%;
+    font-size: 16px; /* Increase font-size */
+	width: 50%;
+	height: 150px;
+	margin-left: -30%;
+	background:#fff;border-radius: 5px;	
+	text-align:center;
+	z-index: 10;
+	border:1px solid;
+	-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+	" >
+	
+	
+	 <!-- <label id="lblSalir">a</label><br> -->
+	  <div style="text-align:center; margin-top: 10px; " >
+	  <label id="lblMensajeCuentaPalos" ><center>¿Ocultar XRUDRJJNSI en esta partida?</center></label>
+	   <!-- <label id="lblIrAWeb" class="hidden" ><center>Oculto</center></label> -->
+	  </div>
+	
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaCuentaPalos(true)">Sí</button>
+	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaCuentaPalos(false)">No</button>
+	
+</div>
+
+
 <div id="DivEligePareja" class="container"  style="display:none; position: absolute;
 	top: 20%;
 	left: 55%;
@@ -1681,8 +1720,9 @@ function onSignInFailure(googleUser) {
 	  <label id="lblSinVidas" ><center>a</center></label>
 	  </div>
 	
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaFaltanVidas(true)">Sí</button>
-	 <button type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaFaltanVidas(false)" >No</button>
+	 <button id="btusagbits" type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaFaltanVidas(1)">a</button><br>
+	 <button id="btusavideo" type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaFaltanVidas(2)" >b</button><br>
+	 <button id="btesperar" type="button" class="btn btn-default" style='margin-top: 20px; ' onClick="RespuestaFaltanVidas(3)" >c</button>
 	 
 	
 </div>
@@ -1737,6 +1777,16 @@ function onSignInFailure(googleUser) {
 		<div style='font-weight: 300; font-size: 12px; padding: 5px; padding-left: 10px; background: #981915; color: #fad718'>¡Desliza las imágenes para descubrir toda la tienda!</div>
     </div> 
     <div class='multiple-items' style='height: calc(100% - 80px);'  >
+	
+	   <div style='padding: 10px;  box-sizing: border-box'>
+			<div style='text-align: center; border: #ddd solid 1px; height: 100%'>
+			<img id=Art013 style='max-width: 100%; max-height: 100%; margin: 2px auto;'  />
+			</div>
+			<!-- <br> -->
+			<!-- <button>Comprar</button> -->
+        </div>	 
+		
+		
         <div style='padding: 10px; box-sizing: border-box; '>
             <div style='text-align: center; border: #ddd solid 1px; height: 100%'>
             <img id=Art003 style='max-width: 100%; max-height: 100%; margin: 2px auto;'  />
@@ -1804,6 +1854,14 @@ function onSignInFailure(googleUser) {
 
        <div style='padding: 10px;  box-sizing: border-box'>
             <div style='text-align: center; border: #ddd solid 1px; height: 100%'>
+            <img id=Art012 style='max-width: 100%; max-height: 100%; margin: 2px auto;'  />
+            </div>
+            <!-- <br> -->
+            <!-- <button>Comprar</button> -->
+        </div>	 
+		
+       <div style='padding: 10px;  box-sizing: border-box'>
+            <div style='text-align: center; border: #ddd solid 1px; height: 100%'>
             <img id=Art010 style='max-width: 100%; max-height: 100%; margin: 2px auto;'  />
             </div>
             <!-- <br> -->
@@ -1866,8 +1924,10 @@ function onSignInFailure(googleUser) {
         <label id="lblDescripcionArticulo" style='font-weight: 300; font-size:15px; margin-top: 5px;' ><center>a</center></label>
         <br>
         <div>
-        <label id="lblPrecioArticulo" style='font-weight: 600; font-size:20px;  margin-top: 5px;' ><center>a</center></label> Guiñobits 
+        <label id="lblPrecioArticulo" style='font-weight: 600; font-size:20px;  margin-top: 5px;' ><center>a</center></label> 
         </div>
+		<div id="card-element"></div>
+		<button id="card-button" class="btn btn-default" style='margin-bottom: 5px;'>Pagar</button>		
         <button id=BotonComprar type="button" class="btn btn-default" style='margin-bottom: 5px;'>Comprar</button> 
 
         
@@ -1941,23 +2001,36 @@ function onSignInFailure(googleUser) {
 		<a onClick="Abre(1)" >política de privacidad</a>
 </div> 
 
-
-
+<div id="DivCookies" width="50" height="50" style="position: absolute;border:none;overflow:hidden;scrolling=no;frameborder=0;allowTransparency=true;bottom:100px">
+<script id="CookieDeclaration" src="https://consent.cookiebot.com/1a630ca7-be70-4189-be71-9fc77a609301/cd.js" type="text/javascript" async></script>
 </div>
 
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8050258181826342"
+     data-ad-slot="8611659983"
+     data-ad-format="auto"
+     data-full-width-responsive="true">
+</ins>
 
  
-
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
   <!-- <div id="DivFace" class="fb-like" data-href="https://www.facebook.com/guinotepro/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true">hola</div> -->
 
-<iframe id="DivFace" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fguinotepro&width=204&layout=button_count&action=like&size=large&show_faces=false&share=false&height=46&appId=123400284870556" width="204" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
-</iframe>
 
-<div id="DivInstagram" width="204" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
+
+<div id="DivInstagram" width="204" height="35"   style="border:none;overflow:hidden;left:140px" scrolling="no" frameborder="0" allowTransparency="true">
  <img src="assets/images/insta.png" alt="Italian Trulli" style="width:28px;height:28px;" onclick="AbreNavegador('https://www.instagram.com/guinotepro')">
 <!-- <a href="http://www.instagram.com/guinotepro" id="InstagramImg">See an example!</a> -->
 </div>
 
+<!-- <iframe id="DivFace" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fguinotepro&width=204&layout=button_count&action=like&size=large&show_faces=false&share=false&height=46&appId=123400284870556" width="204" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
+</iframe> -->
+
+<div id="DivFace" class="fb-like" data-href="https://facebook.com/guinotepro" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false" width="204" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></div>
 
 </body>
 

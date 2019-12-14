@@ -1,11 +1,11 @@
 ﻿'use strict';
-function EstaConectado(Quien)
+function UEWYIUWIVW(Quien)
 {
 	var i;
 	var Conectado=true;
-	for (i=0;i<=ArrayJugadoresDesconectados.length-1;i++)
+	for (i=0;i<=KYDWXPGHVY.length-1;i++)
 	{
-		if (ArrayJugadoresDesconectados[i].Jugador==Quien)
+		if (KYDWXPGHVY[i].SSUNXNEEHN==Quien)
 		{
 			Conectado=false;
 			break;
@@ -15,108 +15,108 @@ function EstaConectado(Quien)
 	return Conectado;
 }
 
-function IA(JugadorQueMueve,RondaQueMueve, PartidaRecibida){
-	var CartaMover=false;
-	var NumeroJugada;
-	var MazoIA=[];
-	var MazoIATemp=[];
+function IA(UHTPGPRUJA,RondaQueMueve, PartidaRecibida){
+	var NJGFWACAPY=false;
+	var BMITYYFCGC;
+	var MGYJHGHWGC=[];
+	var BMWUIUWIIO=[];
 	var i;
 	var u;
-	var Letra;
-	var Encontrada;
+	var STLEOJDWSU;
+	var LSKPLOTYIB;
 	//var CambioEstado=false;
 	
-	/*if (BloqueoIA==false)
+	/*if (NMBWIPWLGU==false)
 	{
 		CambioEstado=true;
-		BloqueoIA=true;
+		NMBWIPWLGU=true;
 	}*/
 	
-	//var JugadorQueMueve;
+	//var UHTPGPRUJA;
 
 	//////console.log("Llega a IA");
 	//alert("s");
-	timer.stop(); //1.0.9
-	timer.remove();
-	timerturno.stop(); //raka
-	timerturno.remove();
+	TKXPPGUPVV.stop(); //1.0.9
+	TKXPPGUPVV.remove();
+	HUUCUYFBLW.stop(); //raka
+	HUUCUYFBLW.remove();
 	
-	//////console.log("Turno "+vTurno+" Control: "+QuienTomaElControl+" Soy: "+SoyElJugador+" Mandatory: "+Mandatory+" to fixed "+timerturno.duration.toFixed(0));
-	if (  ( (RepartoFinalizado==true && PartidaComenzada==true &&  MarcadorNuestro<PuntosGanar && MarcadorRival<PuntosGanar) ||  (RepartoFinalizado==true && SonVueltas==false && PartidaComenzada==true)     ) 
-		&& PuntosFin()==false	
-		&& ( (JugadorQueMueve!=SoyElJugador && PermisoParaTomarControl(JugadorQueMueve)   ) || 
-					(JugadorQueMueve==SoyElJugador && timerturno.duration.toFixed(0)<=0 && ModoMultijugador==true)||
-					ModoMultijugador==false
+	//////console.log("Turno "+DVNRTQIWGL+" Control: "+ESKTEXAVHU+" Soy: "+TFSXFTYVGQ+" Mandatory: "+Mandatory+" to fixed "+HUUCUYFBLW.duration.toFixed(0));
+	if (  ( (HGMNXSIAPV==true && MYQBNBVHKU==true &&  UHHXSNXXJK<JLVDFTPUNI && PXGXKDDNFK<JLVDFTPUNI) ||  (HGMNXSIAPV==true && EVAILWGGKX==false && MYQBNBVHKU==true)     ) 
+		&& OTGNMRHTVK()==false	
+		&& ( (UHTPGPRUJA!=TFSXFTYVGQ && PermisoParaTomarControl(UHTPGPRUJA)   ) || 
+					(UHTPGPRUJA==TFSXFTYVGQ && HUUCUYFBLW.duration.toFixed(0)<=0 && EGPDVIEJEL==true)||
+					EGPDVIEJEL==false
 			)
-		&& FReconectando()==false
-		&& ( (ModoMultijugador==false) || (ModoMultijugador==true && EstoyConectado()==true) )
-		&& TurnoYaPasado(RondaQueMueve,JugadorQueMueve, PartidaRecibida)==false //importante por la rapidez que a veces se lanzan 2 ias
+		&& MNAGVJHWOW()==false
+		&& ( (EGPDVIEJEL==false) || (EGPDVIEJEL==true && SNJCSVWFCC()==true) )
+		&& TurnoYaPasado(RondaQueMueve,UHTPGPRUJA, PartidaRecibida)==false //importante por la rapidez que a veces se lanzan 2 ias
 	) 
-	//SoyElJugador==QuienTomaElControl && ModoMultijugador==true && EstaConectado(JugadorQueMueve)==false cabezon
+	//TFSXFTYVGQ==ESKTEXAVHU && EGPDVIEJEL==true && UEWYIUWIVW(UHTPGPRUJA)==false cabezon
 		
 	{
-		timerturno.stop();
-		timerturno.remove();
-		timer.stop();
-		timer.remove();
+		HUUCUYFBLW.stop();
+		HUUCUYFBLW.remove();
+		TKXPPGUPVV.stop();
+		TKXPPGUPVV.remove();
 		
 		//////console.log("IA Venga vamos");
-		NumeroJugada=MazoCentral.length+1;
+		BMITYYFCGC=VDKOVQXHON.length+1;
 			
 		
 		
-		log(false,"vRonda "+vRonda);
+		log(false,"LUCRWXJMDR "+LUCRWXJMDR);
 		
 		
 		
 
-		MazoIA.splice(0,100);
-		//QuienGanaManoResultado(vTurno);
+		MGYJHGHWGC.splice(0,100);
+		//EVHFMHFMJU(DVNRTQIWGL);
 		
-		/*1.0.9 if (ModoMultijugador==false)
+		/*1.0.9 if (EGPDVIEJEL==false)
 		{
-			JugadorQueMueve=vTurno;
+			UHTPGPRUJA=DVNRTQIWGL;
 		}*/
-		//JugadorQueMueve=vTurno; //1.0.9 2.0.7
+		//UHTPGPRUJA=DVNRTQIWGL; //1.0.9 2.0.7
 		
 		
-		//console.log("IA JUGADOR QUE MUEVE "+JugadorQueMueve+" Soy "+SoyElJugador);
+		//console.log("IA JUGADOR QUE MUEVE "+UHTPGPRUJA+" Soy "+TFSXFTYVGQ);
 		
-		Letra=DevuelveUbicacionCarta(JugadorQueMueve)
-		if (Letra=="D")
+		STLEOJDWSU=HHOPUSIABJ(UHTPGPRUJA)
+		if (STLEOJDWSU=="D")
 		{
-			MazoIATemp=MazoD;
+			BMWUIUWIIO=AGKVNAGGLB;
 		}
-		if (Letra=="U")
+		if (STLEOJDWSU=="U")
 		{
-			MazoIATemp=MazoU
+			BMWUIUWIIO=TWJONOKGHC
 		}
-		if (Letra=="L")
+		if (STLEOJDWSU=="L")
 		{
-			MazoIATemp=MazoL;
+			BMWUIUWIIO=KNVKGHHTYC;
 		}
 		
-		if (Letra=="R")
+		if (STLEOJDWSU=="R")
 		{
-			MazoIATemp=MazoR;
+			BMWUIUWIIO=CBCNHFGWLU;
 		}
-		//console.log("Debería sacar letra "+Letra);
+		//console.log("Debería sacar letra "+STLEOJDWSU);
 		
 		
 		
-		for(i=0;i<=MazoIATemp.length-1;i++)
+		for(i=0;i<=BMWUIUWIIO.length-1;i++)
 		{
-				MazoIA.push(new Carta(MazoIATemp[i].palo,MazoIATemp[i].idCarta,MazoIATemp[i].valor,null,null,null));
-				MazoIA[i].cartilla = MazoIATemp[i].cartilla;
+				MGYJHGHWGC.push(new TVYNYTCQYW(BMWUIUWIIO[i].SGCSHJVERI,BMWUIUWIIO[i].UUOPKETETA,BMWUIUWIIO[i].HVCFEWNDRF,null,null,null));
+				MGYJHGHWGC[i].TNFAGGMKXD = BMWUIUWIIO[i].TNFAGGMKXD;
 		}
 
 			
 
-			for (i=0;i<=MazoIA.length-1;i++)
+			for (i=0;i<=MGYJHGHWGC.length-1;i++)
 			{
-				if (ValidadorReglas(MazoIA[i],JugadorQueMueve)==false)
+				if (XPSRYGDPNI(MGYJHGHWGC[i],UHTPGPRUJA)==false)
 				{
-					MazoIA[i].palo="BORRAR";
+					MGYJHGHWGC[i].SGCSHJVERI="BORRAR";
 				}
 			}
 			//alert(1);
@@ -124,95 +124,95 @@ function IA(JugadorQueMueve,RondaQueMueve, PartidaRecibida){
 			for (u=0;u<=5;u++)
 			{
 				bloque:
-				for (i=0;i<=MazoIA.length-1;i++)
+				for (i=0;i<=MGYJHGHWGC.length-1;i++)
 				{
-					if (MazoIA[i].palo=="BORRAR")
+					if (MGYJHGHWGC[i].SGCSHJVERI=="BORRAR")
 					{
-						MazoIA.splice(i,1);					
+						MGYJHGHWGC.splice(i,1);					
 						break bloque;
 					}
 				}
 			}
 
 		
-		//log(false,"ESTOY DE VUELTAS: "+SonVueltas);
+		//log(false,"ESTOY DE VUELTAS: "+EVAILWGGKX);
 		//////console.log("IA Venga vamos2");
-		if (MazoIA.length>0)
+		if (MGYJHGHWGC.length>0)
 		{
 			
 			//borrar este bloque
-			/*if (SonVueltas==false)
+			/*if (EVAILWGGKX==false)
 			{
-				//console.log("JIOO "+MazoIA.length);
-				socket.emit("CartasPosibles",idPartida,vRonda,vTurno,MazoIA.length)
+				//console.log("JIOO "+MGYJHGHWGC.length);
+				socket.emit("CartasPosibles",MQUGCIUQII,LUCRWXJMDR,DVNRTQIWGL,MGYJHGHWGC.length)
 			}*/
 				
 				
-			if (vProduccion==false)
+			if (KYLIAIETHX==false)
 			{
-				//console.log("IA DEL JUGADOR "+JugadorQueMueve);
+				//console.log("IA DEL JUGADOR "+UHTPGPRUJA);
 			}
-			CartaMover=IA_PartidaGanada(MazoIA,JugadorQueMueve,NumeroJugada);
-			if (CartaMover==false)
+			NJGFWACAPY=BJGHJEGJWQ(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC);
+			if (NJGFWACAPY==false)
 			{
-				if (IA_MasDe20()==true)
+				if (NFKKYVMBUB()==true)
 				{
-					CartaMover=IA_Sujeta(MazoIA,JugadorQueMueve,"Alto",NumeroJugada);
+					NJGFWACAPY=HWPRRTMYEP(MGYJHGHWGC,UHTPGPRUJA,"Alto",BMITYYFCGC);
 				}
 				else
 				{
-					if (SonVueltas==false)
+					if (EVAILWGGKX==false)
 					{
-						if (IA_MasDe10()==true && SituacionEspecialDescartar(MazoIA,JugadorQueMueve,NumeroJugada)==false)
+						if (EAYMXOKKHT()==true && MZXZCVZDVZ(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)==false)
 						{
 							if(RondaQueMueve==4)
 							{
-								CartaMover=IA_Descarte(MazoIA,JugadorQueMueve,NumeroJugada);								
+								NJGFWACAPY=GMUESSHERK(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC);								
 							}
 							else
 							{								
-								CartaMover=IA_Sujeta(MazoIA,JugadorQueMueve,"Bajo",NumeroJugada);
+								NJGFWACAPY=HWPRRTMYEP(MGYJHGHWGC,UHTPGPRUJA,"Bajo",BMITYYFCGC);
 							}
 						}
 						else
 						{
-							if (SituacionEspecialSujetar(MazoIA,JugadorQueMueve,NumeroJugada)==true)
+							if (ZXCFVSVDSW(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)==true)
 							{
-								CartaMover=IA_Sujeta(MazoIA,JugadorQueMueve,"Bajo",NumeroJugada);
+								NJGFWACAPY=HWPRRTMYEP(MGYJHGHWGC,UHTPGPRUJA,"Bajo",BMITYYFCGC);
 							}
 							else
 							{
-								CartaMover=IA_Descarte(MazoIA,JugadorQueMueve,NumeroJugada);
+								NJGFWACAPY=GMUESSHERK(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC);
 							}
 						}
 					}
 					else
 					{
-						if (IA_MasDe10()==true)
+						if (EAYMXOKKHT()==true)
 						{
-							CartaMover=IA_Sujeta(MazoIA,JugadorQueMueve,"Bajo",NumeroJugada);
+							NJGFWACAPY=HWPRRTMYEP(MGYJHGHWGC,UHTPGPRUJA,"Bajo",BMITYYFCGC);
 						}
 						else
 						{
-							if ( NumeroJugada==3)
+							if ( BMITYYFCGC==3)
 							{
-								CartaMover=IA_Sujeta(MazoIA,JugadorQueMueve,"Bajo",NumeroJugada);
+								NJGFWACAPY=HWPRRTMYEP(MGYJHGHWGC,UHTPGPRUJA,"Bajo",BMITYYFCGC);
 							}
 							else
 							{
-								if (NumeroJugada==4 && RondaQueMueve==4)
+								if (BMITYYFCGC==4 && RondaQueMueve==4)
 								{
-									CartaMover=IA_Sujeta(MazoIA,JugadorQueMueve,"Bajo",NumeroJugada);
+									NJGFWACAPY=HWPRRTMYEP(MGYJHGHWGC,UHTPGPRUJA,"Bajo",BMITYYFCGC);
 								}
 								else
 								{
-									if (SituacionEspecialSujetar(MazoIA,JugadorQueMueve,NumeroJugada)==true)
+									if (ZXCFVSVDSW(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)==true)
 									{
-										CartaMover=IA_Sujeta(MazoIA,JugadorQueMueve,"Bajo",NumeroJugada);
+										NJGFWACAPY=HWPRRTMYEP(MGYJHGHWGC,UHTPGPRUJA,"Bajo",BMITYYFCGC);
 									}
 									else
 									{
-										CartaMover=IA_Descarte(MazoIA,JugadorQueMueve,NumeroJugada);
+										NJGFWACAPY=GMUESSHERK(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC);
 									}
 								}
 							}
@@ -230,38 +230,38 @@ function IA(JugadorQueMueve,RondaQueMueve, PartidaRecibida){
 				//}
 			//}
 			
-			/*for (var h=0;h<=MazoIA.length-1;h++)
+			/*for (var h=0;h<=MGYJHGHWGC.length-1;h++)
 			{
-				if (MazoIA[h].idCarta===CartaMover)
+				if (MGYJHGHWGC[h].UUOPKETETA===NJGFWACAPY)
 				{
-					var pp=MazoIA[h].palo;
-					var qq=MazoIA[h].numero
-					var rr=MazoIA[h].valor
+					var pp=MGYJHGHWGC[h].SGCSHJVERI;
+					var qq=MGYJHGHWGC[h].EHDWIURHHD
+					var rr=MGYJHGHWGC[h].HVCFEWNDRF
 				}
 			}*/
 			
-			////////console.log("CARTA MOVER "+CartaMover," "+JugadorQueMueve+" "+qq+" "+pp+" "+rr);
+			////////console.log("CARTA MOVER "+NJGFWACAPY," "+UHTPGPRUJA+" "+qq+" "+pp+" "+rr);
 			
 			//08/02/2017 Para por si acaso no existe (cambio de 7 o que se yo)
-			//console.log("Carta Mover "+CartaMover)
-			Encontrada=false;
-			for (i=0;i<=MazoIA.length-1;i++)
+			//console.log("TVYNYTCQYW Mover "+NJGFWACAPY)
+			LSKPLOTYIB=false;
+			for (i=0;i<=MGYJHGHWGC.length-1;i++)
 			{
-				if(MazoIA[i].cartilla.name==CartaMover)
+				if(MGYJHGHWGC[i].TNFAGGMKXD.name==NJGFWACAPY)
 				{
-					Encontrada=true;
+					LSKPLOTYIB=true;
 					break;
 				}
 			}
-			if (Encontrada==false)
+			if (LSKPLOTYIB==false)
 			{
 				//console.log("Brutal")
 				//alert("BRUTAL");
 				//////console.log("IA DESDE Imprevisible");
-				//timer.stop(); //Mucho miedo 29/04/2017
+				//TKXPPGUPVV.stop(); //Mucho miedo 29/04/2017
 				//////console.log("IA 4");
-				//IA(JugadorQueMueve,RondaQueMueve,PartidaRecibida);
-				LlamadaIA(JugadorQueMueve,RondaQueMueve,PartidaRecibida)
+				//IA(UHTPGPRUJA,RondaQueMueve,PartidaRecibida);
+				LlamadaIA(UHTPGPRUJA,RondaQueMueve,PartidaRecibida)
 			}
 			
 			
@@ -270,31 +270,31 @@ function IA(JugadorQueMueve,RondaQueMueve, PartidaRecibida){
 			
 			
 			if (1==1)
-			////////console.log("CARTA MOVER "+CartaMover );	
-			//if (CartaMover!=false)
+			////////console.log("CARTA MOVER "+NJGFWACAPY );	
+			//if (NJGFWACAPY!=false)
 			{
-					//console.log("Debe pasar "+SoyElJugador+" "+JugadorQueMueve+" "+ModoMultijugador)
-					if ( (ModoMultijugador==false  && SoyElJugador!=JugadorQueMueve) || (ModoMultijugador==true)   )
+					//console.log("Debe pasar "+TFSXFTYVGQ+" "+UHTPGPRUJA+" "+EGPDVIEJEL)
+					if ( (EGPDVIEJEL==false  && TFSXFTYVGQ!=UHTPGPRUJA) || (EGPDVIEJEL==true)   )
 					{
 						//////console.log("Antes de validar");
 						//if (1==1)
-						//console.log("EstoyConectado "+EstoyConectado())
-						if ( (ModoMultijugador==false) || (ModoMultijugador==true && EstoyConectado()==true) )
+						//console.log("SNJCSVWFCC "+SNJCSVWFCC())
+						if ( (EGPDVIEJEL==false) || (EGPDVIEJEL==true && SNJCSVWFCC()==true) )
 						{	
-							if (TurnoYaPasado(RondaQueMueve,JugadorQueMueve, PartidaRecibida)==false)//Parece que repito pero es necesario por la rapidez
+							if (TurnoYaPasado(RondaQueMueve,UHTPGPRUJA, PartidaRecibida)==false)//Parece que repito pero es necesario por la rapidez
 							{
-								if (ValidaMovimientoJugador(RondaQueMueve,JugadorQueMueve,PartidaRecibida)==true )
+								if (HQWFFUCQDR(RondaQueMueve,UHTPGPRUJA,PartidaRecibida)==true )
 								{
-									////console.log("Consola","BLOQUEADO EL MOVIMIENTO DEL JUGADOR "+JugadorQueMueve+" CON RONDA "+)
-									//////console.log("ACABO DE BLOQUEAR "+vRonda+" "+JugadorQueMueve)
-									log(true,"IA: ENVIO CARTA AL CENTRO "+CartaMover+" AUTOMATICAMENTE CON vTurno "+JugadorQueMueve)
-									/*if (JugadorQueMueve==1 && vRonda==2)
+									////console.log("Consola","BLOQUEADO EL MOVIMIENTO DEL JUGADOR "+UHTPGPRUJA+" CON RONDA "+)
+									//////console.log("ACABO DE BLOQUEAR "+LUCRWXJMDR+" "+UHTPGPRUJA)
+									log(true,"IA: ENVIO CARTA AL CENTRO "+NJGFWACAPY+" AUTOMATICAMENTE CON DVNRTQIWGL "+UHTPGPRUJA)
+									/*if (UHTPGPRUJA==1 && LUCRWXJMDR==2)
 									{
 										alert("bien");
 									}*/
-									if (ModoMultijugador==false)
+									if (EGPDVIEJEL==false)
 									{
-										MoverCentroAjeno(JugadorQueMueve,CartaMover,RondaQueMueve,Date.now(),PartidaRecibida,false); 
+										VPDVSDLPHG(UHTPGPRUJA,NJGFWACAPY,RondaQueMueve,Date.now(),PartidaRecibida,false); 
 									}
 									
 									else
@@ -304,73 +304,73 @@ function IA(JugadorQueMueve,RondaQueMueve, PartidaRecibida){
 									
 									}
 									
-									if (ModoMultijugador==true)
+									if (EGPDVIEJEL==true)
 									{
-											//////console.log("ENVIO CARTA AL RESTO "+CartaMover+" AUTOMATICAMENTE CON vTurno "+JugadorQueMueve)
+											//////console.log("ENVIO CARTA AL RESTO "+NJGFWACAPY+" AUTOMATICAMENTE CON DVNRTQIWGL "+UHTPGPRUJA)
 											
 											
 							/////////////
-										//console.log("Habitacion "+Habitacion+" JugadorMueve "+JugadorQueMueve+" Carta "+CartaMover+" "+ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre)
-										Habitacion,JugadorQueMueve,CartaMover,JugadorQueMueve, RondaQueMueve, SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),
-											ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,
-											ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre,idPartida,
-											IdMsg,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,Habitacion
+										//console.log("DFBVDPETGO "+DFBVDPETGO+" EYCRTUIDMY "+UHTPGPRUJA+" TVYNYTCQYW "+NJGFWACAPY+" "+XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD)
+										DFBVDPETGO,UHTPGPRUJA,NJGFWACAPY,UHTPGPRUJA, RondaQueMueve, EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),
+											XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,
+											XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD,MQUGCIUQII,
+											OYJAHGADFQ,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,DFBVDPETGO
 										
 										
 										
 										
-										var Hora=Date.now();
-										var ObjectSend=function( Habitacion,SoyElJugador,Cartilla,Turno, RondaParam, SonVueltas,Partida,JugadorFull,JugadorSala,Nombre,idPartida,
-											IdMsg,ClientId,SalaID,Mensaje){
-											 this.Habitacion=Habitacion
-											 this.SoyElJugador=SoyElJugador
-											 this.Cartilla=Cartilla
+										var QKVJASWVEO=Date.now();
+										var GXNRNMAAKW=function( DFBVDPETGO,TFSXFTYVGQ,AAJNQWXHMY,Turno, TKWCTNGROU, EVAILWGGKX,KXAWTTIEGG,OBTBPOULAV,AURESXCGMK,WWKVHIMWYD,MQUGCIUQII,
+											OYJAHGADFQ,OJPXTRQDKS,LYHKNIMVEB,RHOLNWBOXR){
+											 this.DFBVDPETGO=DFBVDPETGO
+											 this.TFSXFTYVGQ=TFSXFTYVGQ
+											 this.AAJNQWXHMY=AAJNQWXHMY
 											 this.Turno=Turno
-											 this.Ronda=RondaParam
-											 this.SonVueltas=SonVueltas
-											 this.Partida=Partida
-											 this.JugadorFull=JugadorFull
-											 this.JugadorSala=JugadorSala
-											 this.Nombre=Nombre
-											 this.idPartida=idPartida
+											 this.AGTXFNIKQD=TKWCTNGROU
+											 this.EVAILWGGKX=EVAILWGGKX
+											 this.KXAWTTIEGG=KXAWTTIEGG
+											 this.OBTBPOULAV=OBTBPOULAV
+											 this.AURESXCGMK=AURESXCGMK
+											 this.WWKVHIMWYD=WWKVHIMWYD
+											 this.MQUGCIUQII=MQUGCIUQII
 											 
-											 this.IdMsg=IdMsg
-											 this.ClientId=ClientId
-											 this.SalaID=SalaID
-											 this.Mensaje=Mensaje
+											 this.OYJAHGADFQ=OYJAHGADFQ
+											 this.OJPXTRQDKS=OJPXTRQDKS
+											 this.LYHKNIMVEB=LYHKNIMVEB
+											 this.RHOLNWBOXR=RHOLNWBOXR
 											 
-											 this.Fecha=new Date(Date.now());
+											 this.EBAPPJFYSW=new Date(Date.now());
 										 }
-										var ArrayAccionesDesconexionesLocal=[];
-										ArrayAccionesDesconexionesLocal.splice(0,1000);
+										var QPHHGPRJAI=[];
+										QPHHGPRJAI.splice(0,1000);
 					 
 											
-										var IdMsg=Math.random()*100000;
-										var Objeto=new ObjectSend(Habitacion,JugadorQueMueve,CartaMover,JugadorQueMueve, RondaQueMueve, SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),
-											ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,
-											ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre,idPartida,
-											IdMsg,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,Habitacion,'enviar carta centro');
-										ArrayAccionesDesconexiones.push(Objeto);
-										ArrayAccionesDesconexionesLocal.push(Objeto);
-										/*socket.emit("Consola","IA Jugador "+SoyElJugador+" Tiro por "+JugadorQueMueve+" Ronda "+RondaQueMueve+" Carta "+CartaMover);
-										if(CartaMover==1)
+										var OYJAHGADFQ=Math.random()*100000;
+										var KCPHFPSPLQ=new GXNRNMAAKW(DFBVDPETGO,UHTPGPRUJA,NJGFWACAPY,UHTPGPRUJA, RondaQueMueve, EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),
+											XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,
+											XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD,MQUGCIUQII,
+											OYJAHGADFQ,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,DFBVDPETGO,'RYUDYPPOXW');
+										NBEJWDVLLV.push(KCPHFPSPLQ);
+										QPHHGPRJAI.push(KCPHFPSPLQ);
+										/*socket.emit("Consola","IA SSUNXNEEHN "+TFSXFTYVGQ+" Tiro por "+UHTPGPRUJA+" AGTXFNIKQD "+RondaQueMueve+" TVYNYTCQYW "+NJGFWACAPY);
+										if(NJGFWACAPY==1)
 										{
-											socket.emit("Consola","---------CULPABLE--------------IA Jugador "+SoyElJugador+" Tiro por "+JugadorQueMueve+" Ronda "+RondaQueMueve+" Carta "+CartaMover);
+											socket.emit("Consola","---------CULPABLE--------------IA SSUNXNEEHN "+TFSXFTYVGQ+" Tiro por "+UHTPGPRUJA+" AGTXFNIKQD "+RondaQueMueve+" TVYNYTCQYW "+NJGFWACAPY);
 										}*/
-										//console.log("INVENTADA DE "+SoyElJugador+" representando a "+JugadorQueMueve+" Carta "+CartaMover+" "+RondaQueMueve)
+										//console.log("INVENTADA DE "+TFSXFTYVGQ+" representando a "+UHTPGPRUJA+" TVYNYTCQYW "+NJGFWACAPY+" "+RondaQueMueve)
 										
-										var timererror=game_objeto.time.create(false);
+										var CKHBSQULIF=YMHIHSNADE.time.create(false);
 										var ContinuarTry=true;
-										timererror.loop(200,function(){
-											//console.log("Entra al timer")
+										CKHBSQULIF.loop(200,function(){
+											//console.log("Entra al TKXPPGUPVV")
 											try
 											{
 												//console.log("Enviando..")
-												socket.emit('enviar carta centro',ArrayAccionesDesconexionesLocal[0],
-												 function(idMensaje)
+												socket.emit('RYUDYPPOXW',QPHHGPRJAI[0],
+												 function(XQLEOGMJYG)
 												 {		
 													//console.log("Enviada!")												 
-													EliminarColaMensajes(idMensaje,'enviar carta centro');
+													EXBCVLOIYJ(XQLEOGMJYG,'RYUDYPPOXW');
 												 }
 												);
 																					
@@ -384,9 +384,9 @@ function IA(JugadorQueMueve,RondaQueMueve, PartidaRecibida){
 											
 											if (ContinuarTry==true)
 											{
-												timererror.stop();
-												timererror.remove();
-												ArrayAccionesDesconexionesLocal.splice(0,1000);	
+												CKHBSQULIF.stop();
+												CKHBSQULIF.remove();
+												QPHHGPRJAI.splice(0,1000);	
 												
 
 												//console.log("CONTINUA")
@@ -397,16 +397,16 @@ function IA(JugadorQueMueve,RondaQueMueve, PartidaRecibida){
 													
 													
 												
-												//socket.emit('enviar carta centro', Habitacion,JugadorQueMueve,CartaMover,JugadorQueMueve, vRonda,SonVueltas,(MarcadorPartidasNuestro+MarcadorPartidasRival),ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorFull,ArrayDelaPropiaSala[JugadorQueMueve-1].JugadorSala,ArrayDelaPropiaSala[JugadorQueMueve-1].Nombre) ;
-												if (MazoIA[i].palo==Triunfo)
+												//socket.emit('RYUDYPPOXW', DFBVDPETGO,UHTPGPRUJA,NJGFWACAPY,UHTPGPRUJA, LUCRWXJMDR,EVAILWGGKX,(JVQXQGYDHH+CNCCBHQJKL),XPBCVAGCDQ[UHTPGPRUJA-1].OBTBPOULAV,XPBCVAGCDQ[UHTPGPRUJA-1].AURESXCGMK,XPBCVAGCDQ[UHTPGPRUJA-1].WWKVHIMWYD) ;
+												if (MGYJHGHWGC[i].SGCSHJVERI==TGTQPBEQFR)
 												{
-													if (MazoIA[i].valor==1)
+													if (MGYJHGHWGC[i].HVCFEWNDRF==1)
 													{
-														GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,false,false,true,false);
+														WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,true,false);
 													}
-													if (MazoIA[i].valor==3)
+													if (MGYJHGHWGC[i].HVCFEWNDRF==3)
 													{
-														GrabarResultado(JugadorQueMueve,(MarcadorPartidasNuestro+MarcadorPartidasRival),SonVueltas,0,false,false,false,true);
+														WTERKRAPBE(UHTPGPRUJA,(JVQXQGYDHH+CNCCBHQJKL),EVAILWGGKX,0,false,false,false,true);
 													}								
 												}
 																							
@@ -414,7 +414,7 @@ function IA(JugadorQueMueve,RondaQueMueve, PartidaRecibida){
 											////console.log("VUELTA");
 										}
 										);
-										timererror.start();
+										CKHBSQULIF.start();
 										
 
 									}
@@ -437,411 +437,411 @@ function IA(JugadorQueMueve,RondaQueMueve, PartidaRecibida){
 		}
 		else
 		{
-			//console.log("No muevo porque el MazoIA mide 0");
+			//console.log("No muevo porque el MGYJHGHWGC mide 0");
 		}
 	}
 	else
 	{
-		/*console.log("Reparto Finalizado "+RepartoFinalizado)
-		console.log("Partida Comenzada "+PartidaComenzada+ " Son Vueltas "+SonVueltas+" PuntosFin "+PuntosFin())
-		console.log("MarcadorNuestro "+MarcadorNuestro+" Puntos Ganar "+MarcadorNuestro)
-		console.log("MarcadorRival "+MarcadorRival)
-		console.log("JQM "+JugadorQueMueve+" Soy "+SoyElJugador+" Permiso "+PermisoParaTomarControl(JugadorQueMueve)+ " Reconectando "+FReconectando())*/
+		/*console.log("Reparto Finalizado "+HGMNXSIAPV)
+		console.log("KXAWTTIEGG Comenzada "+MYQBNBVHKU+ " Son Vueltas "+EVAILWGGKX+" OTGNMRHTVK "+OTGNMRHTVK())
+		console.log("UHHXSNXXJK "+UHHXSNXXJK+" PAXBGDCANU Ganar "+UHHXSNXXJK)
+		console.log("PXGXKDDNFK "+PXGXKDDNFK)
+		console.log("JQM "+UHTPGPRUJA+" Soy "+TFSXFTYVGQ+" Permiso "+PermisoParaTomarControl(UHTPGPRUJA)+ " Reconectando "+MNAGVJHWOW())*/
 		
 		
 	
 	}
 	
-	//BloqueoIA=false;
+	//NMBWIPWLGU=false;
 	
 }
 
-function SituacionPartida(MazoIA,JugadorQueMueve,NumeroJugada)
+function XXZXVSDVSD(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
 {
 	var i;
 	var u;
-	var Encontrado=false;
-	var MarcadorRevisar;
-	var MarcadorRevisarEllos;
-	var PuntosEnMesa=0;
-	var BuenaCarta=false;
-	var Devolver=false;
-	var ObjetoSituacion;
-	var ObjetoSituacionDevolver;
+	var VEFCIYHBGC=false;
+	var DVSFGEBHHE;
+	var VVSFGSGGSW;
+	var DCBSNHIVQB=0;
+	var NMBDIWHGDI=false;
+	var RTOSLKFWHC=false;
+	var SGEGEGEGEW;
+	var UYWGCJGCJJ;
 	
-	if (EsCompi(JugadorQueMueve)==true)
+	if (UDUUDUDDJJ(UHTPGPRUJA)==true)
 	{
-		MarcadorRevisar=MarcadorNuestro;
-		MarcadorRevisarEllos=MarcadorRival;
+		DVSFGEBHHE=UHHXSNXXJK;
+		VVSFGSGGSW=PXGXKDDNFK;
 	}
 	else
 	{
-		MarcadorRevisar=MarcadorRival;
-		MarcadorRevisarEllos=MarcadorNuestro;
+		DVSFGEBHHE=PXGXKDDNFK;
+		VVSFGSGGSW=UHHXSNXXJK;
 	}
 	
-	for (i=0;i<=MazoCentral.length-1;i++)
+	for (i=0;i<=VDKOVQXHON.length-1;i++)
 	{
-		PuntosEnMesa=PuntosEnMesa+MazoCentral[i].valorPuntuacion;
+		DCBSNHIVQB=DCBSNHIVQB+VDKOVQXHON[i].WQCPJQWFPN;
 	}
 	
-	var ObjetoSituacion=function(PuntosEnMesa,MarcadorRevisar,MarcadorRevisarEllos)
+	var SGEGEGEGEW=function(DCBSNHIVQB,DVSFGEBHHE,VVSFGSGGSW)
 	{
-		this.PuntosEnMesa=PuntosEnMesa
-		this.MarcadorRevisar=MarcadorRevisar
-		this.MarcadorRevisarEllos=MarcadorRevisarEllos
+		this.DCBSNHIVQB=DCBSNHIVQB
+		this.DVSFGEBHHE=DVSFGEBHHE
+		this.VVSFGSGGSW=VVSFGSGGSW
 	}
 
-	ObjetoSituacionDevolver=new ObjetoSituacion(PuntosEnMesa,MarcadorRevisar,MarcadorRevisarEllos);
-	return ObjetoSituacionDevolver;
+	UYWGCJGCJJ=new SGEGEGEGEW(DCBSNHIVQB,DVSFGEBHHE,VVSFGSGGSW);
+	return UYWGCJGCJJ;
 	
 	
 }
 
-function IA_MasDe10(){
+function EAYMXOKKHT(){
 	var i;
-	var devuelve=false;
-	var PuntosEnMesa=0;
+	var NMBAYQIQHE=false;
+	var DCBSNHIVQB=0;
 	var FiguraGorda=false;
 	
-	for (i=0;i<=MazoCentral.length-1;i++)
+	for (i=0;i<=VDKOVQXHON.length-1;i++)
 	{
-		PuntosEnMesa=PuntosEnMesa+MazoCentral[i].valorPuntuacion;
-		if (MazoCentral[i].valorReal>=11)
+		DCBSNHIVQB=DCBSNHIVQB+VDKOVQXHON[i].WQCPJQWFPN;
+		if (VDKOVQXHON[i].VVRCMEUNOJ>=11)
 		{
 			FiguraGorda=true;
 		}
 	}
 
-	if (PuntosEnMesa>=10 && FiguraGorda==true)
+	if (DCBSNHIVQB>=10 && FiguraGorda==true)
 	{
-		devuelve=true;
+		NMBAYQIQHE=true;
 	}	
 
-	return devuelve;
+	return NMBAYQIQHE;
 }
 
-function EsCompi(JugadorQueMueve)
+function UDUUDUDDJJ(UHTPGPRUJA)
 {
-	var Compi;
+	var UWCYUIWCIJ;
 	
-	if (SoyElJugador==1)
+	if (TFSXFTYVGQ==1)
 	{
-		if (JugadorQueMueve==1){
-			Compi=true;
+		if (UHTPGPRUJA==1){
+			UWCYUIWCIJ=true;
 		}
-		if (JugadorQueMueve==2){
-			Compi=false;
+		if (UHTPGPRUJA==2){
+			UWCYUIWCIJ=false;
 		}
-		if (JugadorQueMueve==3){
-			Compi=true;
+		if (UHTPGPRUJA==3){
+			UWCYUIWCIJ=true;
 		}
-		if (JugadorQueMueve==4){
-			Compi=false;
+		if (UHTPGPRUJA==4){
+			UWCYUIWCIJ=false;
 		}			
 	}
-	if (SoyElJugador==2)
+	if (TFSXFTYVGQ==2)
 	{
-		if (JugadorQueMueve==2){
-			Compi=true;
+		if (UHTPGPRUJA==2){
+			UWCYUIWCIJ=true;
 		}
-		if (JugadorQueMueve==3){
-			Compi=false;
+		if (UHTPGPRUJA==3){
+			UWCYUIWCIJ=false;
 		}
-		if (JugadorQueMueve==4){
-			Compi=true;
+		if (UHTPGPRUJA==4){
+			UWCYUIWCIJ=true;
 		}
-		if (JugadorQueMueve==1){
-			Compi=false;
+		if (UHTPGPRUJA==1){
+			UWCYUIWCIJ=false;
 		}			
 	}
-	if (SoyElJugador==3)
+	if (TFSXFTYVGQ==3)
 	{
-		if (JugadorQueMueve==3){
-			Compi=true;
+		if (UHTPGPRUJA==3){
+			UWCYUIWCIJ=true;
 		}
-		if (JugadorQueMueve==4){
-			Compi=false;
+		if (UHTPGPRUJA==4){
+			UWCYUIWCIJ=false;
 		}
-		if (JugadorQueMueve==1){
-			Compi=true;
+		if (UHTPGPRUJA==1){
+			UWCYUIWCIJ=true;
 		}
-		if (JugadorQueMueve==2){
-			Compi=false;
+		if (UHTPGPRUJA==2){
+			UWCYUIWCIJ=false;
 		}			
 	}
-	if (SoyElJugador==4)
+	if (TFSXFTYVGQ==4)
 	{
-		if (JugadorQueMueve==4){
-			Compi=true;
+		if (UHTPGPRUJA==4){
+			UWCYUIWCIJ=true;
 		}
-		if (JugadorQueMueve==1){
-			Compi=false;
+		if (UHTPGPRUJA==1){
+			UWCYUIWCIJ=false;
 		}
-		if (JugadorQueMueve==2){
-			Compi=true;
+		if (UHTPGPRUJA==2){
+			UWCYUIWCIJ=true;
 		}
-		if (JugadorQueMueve==3){
-			Compi=false;
+		if (UHTPGPRUJA==3){
+			UWCYUIWCIJ=false;
 		}			
 	}		
-	return Compi;
+	return UWCYUIWCIJ;
 }
-function PosibleCanteIA(Mazo)
+function BAVVCAHQCC(FXGSEGRXKC)
 {
 	var i;
-	var mediocante=0;
-	var puntoscante=0;
+	var JGDJVGWVNZ=0;
+	var NMABMNABIW=0;
 	
 	["oros","copas","espadas","bastos"].forEach( function(element, index, Array){
 		
-		mediocante=0;
+		JGDJVGWVNZ=0;
 		
-		for (i=0;i<=Mazo.length-1;i++)
+		for (i=0;i<=FXGSEGRXKC.length-1;i++)
 		{
-			if(Mazo[i].palo==element && (Mazo[i].valorReal==9 || Mazo[i].valorReal==10) && EstaCantado(element)==false)
+			if(FXGSEGRXKC[i].SGCSHJVERI==element && (FXGSEGRXKC[i].VVRCMEUNOJ==9 || FXGSEGRXKC[i].VVRCMEUNOJ==10) && SRFFTPLVMJ(element)==false)
 			{
-				mediocante++;
+				JGDJVGWVNZ++;
 			}
 		}
-		if (mediocante==2)
+		if (JGDJVGWVNZ==2)
 		{
-			if(Triunfo==element)
+			if(TGTQPBEQFR==element)
 			{
-				puntoscante=puntoscante+40;
+				NMABMNABIW=NMABMNABIW+40;
 			}
 			else
 			{
-				puntoscante=puntoscante+20;
+				NMABMNABIW=NMABMNABIW+20;
 			}
 		}	
 	});
-	//////console.log("Puntos cante: "+puntoscante);
-	return puntoscante;
+	//////console.log("PAXBGDCANU cante: "+NMABMNABIW);
+	return NMABMNABIW;
 }
 
 //AVE
-function TengoCantePaloOSieteCritico(Mazo,Palo,ValorReal)
+function TengoCantePaloOSieteCritico(FXGSEGRXKC,FHEFFYUQFX,ValorReal)
 {
 	var i;
-	var Devolver=false;
-	var mediocante=0;
+	var RTOSLKFWHC=false;
+	var JGDJVGWVNZ=0;
 	var EsEl7=false;
 	
-	for (i=0;i<=Mazo.length-1;i++)
+	for (i=0;i<=FXGSEGRXKC.length-1;i++)
 	{
-		if( (Mazo[i].valorReal==9 || Mazo[i].valorReal==10) && Mazo[i].palo==Palo && EstaCantado(Palo)==false)
+		if( (FXGSEGRXKC[i].VVRCMEUNOJ==9 || FXGSEGRXKC[i].VVRCMEUNOJ==10) && FXGSEGRXKC[i].SGCSHJVERI==FHEFFYUQFX && SRFFTPLVMJ(FHEFFYUQFX)==false)
 		{
-			mediocante++;
+			JGDJVGWVNZ++;
 		}
 		
-		if (Mazo[i].valorReal==7 && Mazo[i].palo==Triunfo && Mazo[i].valorReal==ValorReal)
+		if (FXGSEGRXKC[i].VVRCMEUNOJ==7 && FXGSEGRXKC[i].SGCSHJVERI==TGTQPBEQFR && FXGSEGRXKC[i].VVRCMEUNOJ==ValorReal)
 		{
 			EsEl7=true;
 		}
 			
 	}
 	
-	if (mediocante==2)
+	if (JGDJVGWVNZ==2)
 	{
-		Devolver=true;
+		RTOSLKFWHC=true;
 	}
 	else
 	{
-		if (CartaTriunfo.length>0)
+		if (FBSDMRLVEL.length>0)
 		{
-			if (mediocante==1 && (CartaTriunfo[0].valorReal==9 || CartaTriunfo[0].valorReal==10) && CartaTriunfo[0].palo==Palo)
+			if (JGDJVGWVNZ==1 && (FBSDMRLVEL[0].VVRCMEUNOJ==9 || FBSDMRLVEL[0].VVRCMEUNOJ==10) && FBSDMRLVEL[0].SGCSHJVERI==FHEFFYUQFX)
 			{
-				Devolver=true;			
+				RTOSLKFWHC=true;			
 			}
 			
-			if (mediocante==2) //Puede ser redundante porque hago otras validaciones en otros lados, pero lo dejo.
+			if (JGDJVGWVNZ==2) //Puede ser redundante porque hago otras validaciones en otros lados, pero lo dejo.
 			{
-				Devolver=true;			
+				RTOSLKFWHC=true;			
 			}			
 		
-			if ( (CartaTriunfo[0].valorReal==11 || CartaTriunfo[0].valorReal==12) && EsEl7==true)
+			if ( (FBSDMRLVEL[0].VVRCMEUNOJ==11 || FBSDMRLVEL[0].VVRCMEUNOJ==12) && EsEl7==true)
 			{
-				Devolver=true;	
+				RTOSLKFWHC=true;	
 			}
 		}
 		
 	}
 	
-	return Devolver;
+	return RTOSLKFWHC;
 }
 
 
-function IA_PartidaGanada(MazoIA,JugadorQueMueve,NumeroJugada){
+function BJGHJEGJWQ(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC){
 	var i;
-	var posTriunfo=0;
-	var posTriunfoSinRomper=0;
-	var posCualquiera=0;
-	var posCualquieraSinRomper=0;
-	var lanzala=false;
+	var NMBMWIAAGS=0;
+	var LLLSJDHWIV=0;
+	var MNBZMJHWHW=0;
+	var WYGCYJGXJX=0;
+	var NMABCIQLLA=false;
 
-	var CartaQueMasVale=0;
-	var CartaQueMasVale_ID=0;
+	var NBXYUWGUDX=0;
+	var NNCNXSHSAZ=0;
 	
-	var CartaQueMasValeSinRomper=0;
-	var CartaQueMasValeSinRomper_ID=0;
+	var JGDIWUDVIS=0;
+	var NMBJWWHGDH=0;
 	
-	var CartaQueMasValeCualquiera=0;
-	var CartaQueMasValeCualquiera_ID=0;
+	var NMXBZWIQQD=0;
+	var NMBVNKSLWU=0;
 	
-	var CartaQueMasValeCualquieraSinRomper=0;
-	var CartaQueMasValeCualquieraSinRomper_ID=0;
+	var NMVNHGIWDW=0;
+	var SHDBMVSNXB=0;
 	
 	
-	var PuntosEnMesa=0;
+	var DCBSNHIVQB=0;
 	var Key;
-	var MarcadorRevisar;
-	var MarcadorRevisarEllos;
-	var Devuelve=false;
-	var ObjetoSituacion;
+	var DVSFGEBHHE;
+	var VVSFGSGGSW;
+	var QOWECQVXCM=false;
+	var SGEGEGEGEW;
 	
-	ObjetoSituacion=SituacionPartida(MazoIA,JugadorQueMueve,NumeroJugada)
-	MarcadorRevisar=ObjetoSituacion.MarcadorRevisar;
-	MarcadorRevisarEllos=ObjetoSituacion.MarcadorRevisarEllos;
-	PuntosEnMesa=ObjetoSituacion.PuntosEnMesa;
+	SGEGEGEGEW=XXZXVSDVSD(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
+	DVSFGEBHHE=SGEGEGEGEW.DVSFGEBHHE;
+	VVSFGSGGSW=SGEGEGEGEW.VVSFGSGGSW;
+	DCBSNHIVQB=SGEGEGEGEW.DCBSNHIVQB;
 	
-	if (SonVueltas==true)
+	if (EVAILWGGKX==true)
 	{
 	
-	//if (NumeroJugada==3 && RBazaEsNuestra(MazoCentral,JugadorQueMueve)==true && MiCompiHaTiradoTriunfo(MazoCentral,NumeroJugada)==true)
+	//if (BMITYYFCGC==3 && VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA)==true && AJCKJHQOQC(VDKOVQXHON,BMITYYFCGC)==true)
 	//{
-	//	Devuelve=false;
+	//	QOWECQVXCM=false;
 	//}
 	//else
 	//{		
-		for (i=0;i<=MazoIA.length-1;i++)
+		for (i=0;i<=MGYJHGHWGC.length-1;i++)
 		{
-			if(MazoIA[i].palo==Triunfo)
+			if(MGYJHGHWGC[i].SGCSHJVERI==TGTQPBEQFR)
 			{
-				if (MazoIA[i].valorReal>CartaQueMasVale_ID)
+				if (MGYJHGHWGC[i].VVRCMEUNOJ>NNCNXSHSAZ)
 				{
-					CartaQueMasVale=MazoIA[i].valorPuntuacion;
-					CartaQueMasVale_ID=MazoIA[i].valorReal;
-					posTriunfo=i;
+					NBXYUWGUDX=MGYJHGHWGC[i].WQCPJQWFPN;
+					NNCNXSHSAZ=MGYJHGHWGC[i].VVRCMEUNOJ;
+					NMBMWIAAGS=i;
 				}
 			}
 		}
-		//////console.log("Carta que mas vale para "+vTurno+" "+CartaQueMasVale+" Turno "+NumeroJugada);
+		//////console.log("TVYNYTCQYW que mas vale para "+DVNRTQIWGL+" "+NBXYUWGUDX+" Turno "+BMITYYFCGC);
 		
 
-		for (i=0;i<=MazoIA.length-1;i++)
+		for (i=0;i<=MGYJHGHWGC.length-1;i++)
 		{
-			if(MazoIA[i].palo==Triunfo)
+			if(MGYJHGHWGC[i].SGCSHJVERI==TGTQPBEQFR)
 			{
-				if (MazoIA[i].valorReal>CartaQueMasValeSinRomper_ID && TengoCantePaloOSieteCritico(MazoIA, MazoIA[i].palo, MazoIA[i].valorReal)==false) //AVE  (MazoIA[i].valorReal!=10 && MazoIA[i].valorReal!=9) )
+				if (MGYJHGHWGC[i].VVRCMEUNOJ>NMBJWWHGDH && TengoCantePaloOSieteCritico(MGYJHGHWGC, MGYJHGHWGC[i].SGCSHJVERI, MGYJHGHWGC[i].VVRCMEUNOJ)==false) //AVE  (MGYJHGHWGC[i].VVRCMEUNOJ!=10 && MGYJHGHWGC[i].VVRCMEUNOJ!=9) )
 				{
-					CartaQueMasValeSinRomper=MazoIA[i].valorPuntuacion;
-					CartaQueMasValeSinRomper_ID=MazoIA[i].valorReal;
-					posTriunfoSinRomper=i;
+					JGDIWUDVIS=MGYJHGHWGC[i].WQCPJQWFPN;
+					NMBJWWHGDH=MGYJHGHWGC[i].VVRCMEUNOJ;
+					LLLSJDHWIV=i;
 				}
 			}
 		}
-		//////console.log("Carta que mas vale para "+vTurno+" "+CartaQueMasValeSinRomper+" Turno "+NumeroJugada);
+		//////console.log("TVYNYTCQYW que mas vale para "+DVNRTQIWGL+" "+JGDIWUDVIS+" Turno "+BMITYYFCGC);
 		
 		
-		for (i=0;i<=MazoIA.length-1;i++)
+		for (i=0;i<=MGYJHGHWGC.length-1;i++)
 		{
 
-			if (MazoIA[i].valorReal>CartaQueMasValeCualquiera_ID)
+			if (MGYJHGHWGC[i].VVRCMEUNOJ>NMBVNKSLWU)
 			{
-				CartaQueMasValeCualquiera=MazoIA[i].valorPuntuacion;
-				CartaQueMasValeCualquiera_ID=MazoIA[i].valorReal;
-				posCualquiera=i;
+				NMXBZWIQQD=MGYJHGHWGC[i].WQCPJQWFPN;
+				NMBVNKSLWU=MGYJHGHWGC[i].VVRCMEUNOJ;
+				MNBZMJHWHW=i;
 			}
 			
 		}
 		
-		for (i=0;i<=MazoIA.length-1;i++)
+		for (i=0;i<=MGYJHGHWGC.length-1;i++)
 		{
 
-			if (MazoIA[i].valorReal>CartaQueMasValeCualquieraSinRomper_ID && TengoCantePaloOSieteCritico(MazoIA, MazoIA[i].palo, MazoIA[i].valorReal)==false) //&& (MazoIA[i].valorReal!=10 && MazoIA[i].valorReal!=9) )
+			if (MGYJHGHWGC[i].VVRCMEUNOJ>SHDBMVSNXB && TengoCantePaloOSieteCritico(MGYJHGHWGC, MGYJHGHWGC[i].SGCSHJVERI, MGYJHGHWGC[i].VVRCMEUNOJ)==false) //&& (MGYJHGHWGC[i].VVRCMEUNOJ!=10 && MGYJHGHWGC[i].VVRCMEUNOJ!=9) )
 			{
-				CartaQueMasValeCualquieraSinRomper=MazoIA[i].valorPuntuacion;
-				CartaQueMasValeCualquieraSinRomper_ID=MazoIA[i].valorReal;
-				posCualquieraSinRomper=i;
+				NMVNHGIWDW=MGYJHGHWGC[i].WQCPJQWFPN;
+				SHDBMVSNXB=MGYJHGHWGC[i].VVRCMEUNOJ;
+				WYGCYJGXJX=i;
 			}
 			
 		}	
 		
-		Key=IA_DevuelveKey(MazoIA,MazoIA[posCualquiera].palo,MazoIA[posCualquiera].valorReal);
-		if ((MarcadorRevisar+CartaQueMasValeCualquiera+PuntosEnMesa)>=PuntosGanar  &&  NumeroJugada==4 && IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false)
+		Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[MNBZMJHWHW].SGCSHJVERI,MGYJHGHWGC[MNBZMJHWHW].VVRCMEUNOJ);
+		if ((DVSFGEBHHE+NMXBZWIQQD+DCBSNHIVQB)>=JLVDFTPUNI  &&  BMITYYFCGC==4 && FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false)
 		{	
-			if (vProduccion==false)
+			if (KYLIAIETHX==false)
 			{
 				//console.log("CG 1");
 			}
-			Devuelve=Key;
+			QOWECQVXCM=Key;
 		}
 		
-		if ((MarcadorRevisarEllos+PuntosEnMesa)>=PuntosGanar && (RBazaEsNuestra(MazoCentral,JugadorQueMueve)==false || NumeroTriunfos(MazoCentral)==0 ))
+		if ((VVSFGSGGSW+DCBSNHIVQB)>=JLVDFTPUNI && (VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA)==false || OQOQOCBSKK(VDKOVQXHON)==0 ))
 		{
-			if (vProduccion==false)
+			if (KYLIAIETHX==false)
 			{
 				//console.log("CG vital");
 			}
-			Devuelve=IA_Sujeta(MazoIA,JugadorQueMueve,"Bajo",NumeroJugada);
+			QOWECQVXCM=HWPRRTMYEP(MGYJHGHWGC,UHTPGPRUJA,"Bajo",BMITYYFCGC);
 		}
 
 		//Sin tener en cuenta cantes. Hay que hacerlo por separado porque si no podría guardarse medio cante a pesar de ganar matando con esa carta
-		if (Devuelve==false)
+		if (QOWECQVXCM==false)
 		{
-			if ( ((MarcadorRevisar+CartaQueMasVale+PuntosEnMesa)>=PuntosGanar)  )
+			if ( ((DVSFGEBHHE+NBXYUWGUDX+DCBSNHIVQB)>=JLVDFTPUNI)  )
 			{
-				if (NumeroJugada==4)
+				if (BMITYYFCGC==4)
 				{				
-					var Key=IA_DevuelveKey(MazoIA,MazoIA[posTriunfo].palo,MazoIA[posTriunfo].valorReal)
+					var Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[NMBMWIAAGS].SGCSHJVERI,MGYJHGHWGC[NMBMWIAAGS].VVRCMEUNOJ)
 					////////console.log("Ultimo en tirar: (prov2): "+Key);
-					if (IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false)
+					if (FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false)
 					{
-						if (vProduccion==false)
+						if (KYLIAIETHX==false)
 						{
 							//console.log("CG 2");
 						}
-						Devuelve=Key;
+						QOWECQVXCM=Key;
 					}
 					else
 					{
 						////////console.log("Ultimo en tirar: No lo hace");
-						if (vProduccion==false)
+						if (KYLIAIETHX==false)
 						{
 							//console.log("CG 3");
 						}
-						Devuelve=false;
+						QOWECQVXCM=false;
 					}
 					
 				}
 				else
 				{
 
-					////////console.log("RECOMIENDA: "+MazoIA[u].palo+" "+MazoIA[u].valorReal);
-					var Key=IA_DevuelveKey(MazoIA,MazoIA[posTriunfo].palo,MazoIA[posTriunfo].valorReal);
+					////////console.log("RECOMIENDA: "+MGYJHGHWGC[u].SGCSHJVERI+" "+MGYJHGHWGC[u].VVRCMEUNOJ);
+					var Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[NMBMWIAAGS].SGCSHJVERI,MGYJHGHWGC[NMBMWIAAGS].VVRCMEUNOJ);
 					////////console.log("RECOMENDADO KEY: "+Key)
-					if (IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false && MazoIA[posTriunfo].valorPuntuacion!=10)
+					if (FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false && MGYJHGHWGC[NMBMWIAAGS].WQCPJQWFPN!=10)
 					{		
 						////////console.log("RECOMENDADO KEY DEVUELTA: "+Key)
-						//////console.log("CG 4_1: "+MarcadorRevisar);
-						//////console.log("CG 4_1: "+PuntosEnMesa);
-						//////console.log("CG 4_3 "+CartaQueMasVale);		
-						if (vProduccion==false)
+						//////console.log("CG 4_1: "+DVSFGEBHHE);
+						//////console.log("CG 4_1: "+DCBSNHIVQB);
+						//////console.log("CG 4_3 "+NBXYUWGUDX);		
+						if (KYLIAIETHX==false)
 						{
-							//console.log("CG 4: "+(MarcadorRevisar+CartaQueMasVale+PuntosEnMesa));
+							//console.log("CG 4: "+(DVSFGEBHHE+NBXYUWGUDX+DCBSNHIVQB));
 						}						
 						
-						Devuelve=Key;
+						QOWECQVXCM=Key;
 					}
 					else
 					{
 						////////console.log("ni recomienda ni leches");
-						if (vProduccion==false)
+						if (KYLIAIETHX==false)
 						{
 							//console.log("CG 5");
 						}	
-						Devuelve=false;
+						QOWECQVXCM=false;
 					}
 				
 					
@@ -852,79 +852,79 @@ function IA_PartidaGanada(MazoIA,JugadorQueMueve,NumeroJugada){
 				////////console.log("No merece echar carta");
 				//////console.log("CG 6 ");
 				
-				if (vProduccion==false)
+				if (KYLIAIETHX==false)
 				{
-					//console.log("CG 7 "+(MarcadorRevisar+CartaQueMasVale+PuntosEnMesa));
+					//console.log("CG 7 "+(DVSFGEBHHE+NBXYUWGUDX+DCBSNHIVQB));
 				}				
-				Devuelve=false;
+				QOWECQVXCM=false;
 			}
 		}
 		
 		//Ahora teniendo en cuenta cantes
-		Key=IA_DevuelveKey(MazoIA,MazoIA[posCualquieraSinRomper].palo,MazoIA[posCualquieraSinRomper].valorReal);
-		if ((MarcadorRevisar+CartaQueMasValeCualquiera+PuntosEnMesa+PosibleCanteIA(MazoIA))>=PuntosGanar  &&  NumeroJugada==4 && IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false)
+		Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[WYGCYJGXJX].SGCSHJVERI,MGYJHGHWGC[WYGCYJGXJX].VVRCMEUNOJ);
+		if ((DVSFGEBHHE+NMXBZWIQQD+DCBSNHIVQB+BAVVCAHQCC(MGYJHGHWGC))>=JLVDFTPUNI  &&  BMITYYFCGC==4 && FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false)
 		{	
-			if (vProduccion==false)
+			if (KYLIAIETHX==false)
 			{
 				//console.log("CG 8");
 			}	
-			Devuelve=Key;
+			QOWECQVXCM=Key;
 		}
 		
-		if (Devuelve==false)
+		if (QOWECQVXCM==false)
 		{
-			if ( ((MarcadorRevisar+CartaQueMasVale+PuntosEnMesa+PosibleCanteIA(MazoIA) )>=PuntosGanar)  )
+			if ( ((DVSFGEBHHE+NBXYUWGUDX+DCBSNHIVQB+BAVVCAHQCC(MGYJHGHWGC) )>=JLVDFTPUNI)  )
 			{
-				if (NumeroJugada==4)
+				if (BMITYYFCGC==4)
 				{				
-					var Key=IA_DevuelveKey(MazoIA,MazoIA[posTriunfoSinRomper].palo,MazoIA[posTriunfoSinRomper].valorReal)
+					var Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[LLLSJDHWIV].SGCSHJVERI,MGYJHGHWGC[LLLSJDHWIV].VVRCMEUNOJ)
 					////////console.log("Ultimo en tirar: (prov2): "+Key);
-					if (IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false)
+					if (FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false)
 					{
-						if (vProduccion==false)
+						if (KYLIAIETHX==false)
 						{
 							//console.log("CG 9");
 						}
-						Devuelve=Key;
+						QOWECQVXCM=Key;
 					}
 					else
 					{
 						////////console.log("Ultimo en tirar: No lo hace");
-						if (vProduccion==false)
+						if (KYLIAIETHX==false)
 						{
 							//console.log("CG 10");
 						}
-						Devuelve=false;
+						QOWECQVXCM=false;
 					}
 					
 				}
 				else
 				{
 
-					////////console.log("RECOMIENDA: "+MazoIA[u].palo+" "+MazoIA[u].valorReal);
-					var Key=IA_DevuelveKey(MazoIA,MazoIA[posTriunfoSinRomper].palo,MazoIA[posTriunfoSinRomper].valorReal);
+					////////console.log("RECOMIENDA: "+MGYJHGHWGC[u].SGCSHJVERI+" "+MGYJHGHWGC[u].VVRCMEUNOJ);
+					var Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[LLLSJDHWIV].SGCSHJVERI,MGYJHGHWGC[LLLSJDHWIV].VVRCMEUNOJ);
 					////////console.log("RECOMENDADO KEY: "+Key)
-					if (IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false && MazoIA[posTriunfo].valorPuntuacion!=10 || ( MazoIA[posTriunfo].valorPuntuacion==10 && NumeroJugada>=2)   ) 
+					if (FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false && MGYJHGHWGC[NMBMWIAAGS].WQCPJQWFPN!=10 || ( MGYJHGHWGC[NMBMWIAAGS].WQCPJQWFPN==10 && BMITYYFCGC>=2)   ) 
 					{		
 						////////console.log("RECOMENDADO KEY DEVUELTA: "+Key)
-						//////console.log("CG 4_1: "+MarcadorRevisar);
-						//////console.log("CG 4_1: "+PuntosEnMesa);
-						//////console.log("CG 4_3 "+CartaQueMasVale);				
+						//////console.log("CG 4_1: "+DVSFGEBHHE);
+						//////console.log("CG 4_1: "+DCBSNHIVQB);
+						//////console.log("CG 4_3 "+NBXYUWGUDX);				
 						
-						if (vProduccion==false)
+						if (KYLIAIETHX==false)
 						{
-							//console.log("CG 11: "+(MarcadorRevisar+CartaQueMasVale+PuntosEnMesa));
+							//console.log("CG 11: "+(DVSFGEBHHE+NBXYUWGUDX+DCBSNHIVQB));
 						}						
-						Devuelve=Key;
+						QOWECQVXCM=Key;
 					}
 					else
 					{
 						////////console.log("ni recomienda ni leches");
-						if (vProduccion==false)
+						if (KYLIAIETHX==false)
 						{
 							//console.log("CG 12");
 						}	
-						Devuelve=false;
+						QOWECQVXCM=false;
 					}
 				
 					
@@ -934,382 +934,382 @@ function IA_PartidaGanada(MazoIA,JugadorQueMueve,NumeroJugada){
 			{
 				////////console.log("No merece echar carta");
 				//////console.log("CG 6 ");
-				if (vProduccion==false)
+				if (KYLIAIETHX==false)
 				{
-					//console.log("CG 13 "+(MarcadorRevisar+CartaQueMasVale+PuntosEnMesa));
+					//console.log("CG 13 "+(DVSFGEBHHE+NBXYUWGUDX+DCBSNHIVQB));
 				}					
 				
-				Devuelve=false;
+				QOWECQVXCM=false;
 			}
 		}	
 	//}
 	}
-	return Devuelve;
+	return QOWECQVXCM;
 }
 
 
-function IA_Ganaria(MazoIA,JugadorQueMueve, LaKey)
+function FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA, PPHCWHCIWQ)
 {
 	
 	var u;
 	var i;
-	var Devuelve;
-	var Encontrado=false;
-	var ArrayFicticio=[];
+	var QOWECQVXCM;
+	var VEFCIYHBGC=false;
+	var JEOOIEYAWD=[];
 	
 		
-	ArrayFicticio.splice(0,100);
-	for (u=0;u<=MazoCentral.length-1;u++){
-		ArrayFicticio.push(new CartaBazaNuestra(MazoCentral[u].palo,MazoCentral[u].valorReal,MazoCentral[u].jugador ));
+	JEOOIEYAWD.splice(0,100);
+	for (u=0;u<=VDKOVQXHON.length-1;u++){
+		JEOOIEYAWD.push(new UYOMGORTXR(VDKOVQXHON[u].SGCSHJVERI,VDKOVQXHON[u].VVRCMEUNOJ,VDKOVQXHON[u].jugador ));
 	}
 	
-	for (i=0;i<=MazoIA.length-1;i++)
+	for (i=0;i<=MGYJHGHWGC.length-1;i++)
 	{
-		if (MazoIA[i].cartilla.name==LaKey)
+		if (MGYJHGHWGC[i].TNFAGGMKXD.name==PPHCWHCIWQ)
 		{
-			ArrayFicticio.push(new CartaBazaNuestra(MazoIA[i].palo,MazoIA[i].valorReal,JugadorQueMueve));
+			JEOOIEYAWD.push(new UYOMGORTXR(MGYJHGHWGC[i].SGCSHJVERI,MGYJHGHWGC[i].VVRCMEUNOJ,UHTPGPRUJA));
 			break;
 		}		
 	}
 
 	
 	
-	if (RBazaEsNuestra(ArrayFicticio,JugadorQueMueve)==true)
+	if (VMLEORHBGI(JEOOIEYAWD,UHTPGPRUJA)==true)
 	{
-		Encontrado=true;	
+		VEFCIYHBGC=true;	
 	}
 
 	
-	if (Encontrado==true)
+	if (VEFCIYHBGC==true)
 	{
-		Devuelve=LaKey;
+		QOWECQVXCM=PPHCWHCIWQ;
 	}
 	else
 	{
-		Devuelve=false;
+		QOWECQVXCM=false;
 	}
 	
-	log(true,"IA_Ganaria "+JugadorQueMueve +" "+Devuelve);
-	return Devuelve;
+	log(true,"FNLYNGWANP "+UHTPGPRUJA +" "+QOWECQVXCM);
+	return QOWECQVXCM;
 }
 
 
 
-function IA_MasDe20(){
+function NFKKYVMBUB(){
 
 	var i;
-	var devuelve=false;
-	var PuntosEnMesa=0;
+	var NMBAYQIQHE=false;
+	var DCBSNHIVQB=0;
 	
-	for (i=0;i<=MazoCentral.length-1;i++)
+	for (i=0;i<=VDKOVQXHON.length-1;i++)
 	{
-		PuntosEnMesa=PuntosEnMesa+MazoCentral[i].valorPuntuacion;
+		DCBSNHIVQB=DCBSNHIVQB+VDKOVQXHON[i].WQCPJQWFPN;
 	}
 
-	if (PuntosEnMesa>=20)
+	if (DCBSNHIVQB>=20)
 	{
-		devuelve=true;
+		NMBAYQIQHE=true;
 	}	
 
-	return devuelve;
+	return NMBAYQIQHE;
 }
 
-function TengoBuenTriunfo(Mazo,JugadorQueMueve,NumeroJugada)
+function PPPPWPCPWW(FXGSEGRXKC,UHTPGPRUJA,BMITYYFCGC)
 {
 	var i;
 	var u;
-	var Devolver=false;
-	var Encontrado;
+	var RTOSLKFWHC=false;
+	var VEFCIYHBGC;
 	
 	for (u=12;u>=7;u--)
 	{
-		for (i=0;i<=Mazo.length-1;i++)
+		for (i=0;i<=FXGSEGRXKC.length-1;i++)
 		{
-			var Key=IA_DevuelveKey(Mazo,Mazo[i].palo,Mazo[i].valorReal)
-			if (Mazo[i].palo==Triunfo && Mazo[i].valorReal==u)
+			var Key=UIBEMREGDL(FXGSEGRXKC,FXGSEGRXKC[i].SGCSHJVERI,FXGSEGRXKC[i].VVRCMEUNOJ)
+			if (FXGSEGRXKC[i].SGCSHJVERI==TGTQPBEQFR && FXGSEGRXKC[i].VVRCMEUNOJ==u)
 			{
-				Devolver=Key;
+				RTOSLKFWHC=Key;
 				break;
 			}
 		}	
 	}
 	
-	return Devolver;
+	return RTOSLKFWHC;
 }
 
-function TengoAsTresTriunfo(Mazo,JugadorQueMueve,NumeroJugada)
+function SMMBWKHVIL(FXGSEGRXKC,UHTPGPRUJA,BMITYYFCGC)
 {
 	var i;
 	var u;
-	var Devolver=false;
-	var Encontrado;
+	var RTOSLKFWHC=false;
+	var VEFCIYHBGC;
 	
 	for (u=12;u>=11;u--)
 	{
-		for (i=0;i<=Mazo.length-1;i++)
+		for (i=0;i<=FXGSEGRXKC.length-1;i++)
 		{
-			var Key=IA_DevuelveKey(Mazo,Mazo[i].palo,Mazo[i].valorReal)
-			if (Mazo[i].palo==Triunfo && Mazo[i].valorReal==u)
+			var Key=UIBEMREGDL(FXGSEGRXKC,FXGSEGRXKC[i].SGCSHJVERI,FXGSEGRXKC[i].VVRCMEUNOJ)
+			if (FXGSEGRXKC[i].SGCSHJVERI==TGTQPBEQFR && FXGSEGRXKC[i].VVRCMEUNOJ==u)
 			{
-				Devolver=Key;
+				RTOSLKFWHC=Key;
 				break;
 			}
 		}	
 	}
 	
-	return Devolver;
+	return RTOSLKFWHC;
 }
 
-function TengoBuenaCartaTriunfo(Mazo,JugadorQueMueve,NumeroJugada)
+function JJAJAJAJAJ(FXGSEGRXKC,UHTPGPRUJA,BMITYYFCGC)
 {
 	var i;
 	var u;
-	var Devolver=false;
-	var Encontrado;
+	var RTOSLKFWHC=false;
+	var VEFCIYHBGC;
 	
 	for (u=10;u>=8;u--)
 	{
-		for (i=0;i<=Mazo.length-1;i++)
+		for (i=0;i<=FXGSEGRXKC.length-1;i++)
 		{
-			var Key=IA_DevuelveKey(Mazo,Mazo[i].palo,Mazo[i].valorReal)
-			if (Mazo[i].palo==Triunfo && Mazo[i].valorReal==u)
+			var Key=UIBEMREGDL(FXGSEGRXKC,FXGSEGRXKC[i].SGCSHJVERI,FXGSEGRXKC[i].VVRCMEUNOJ)
+			if (FXGSEGRXKC[i].SGCSHJVERI==TGTQPBEQFR && FXGSEGRXKC[i].VVRCMEUNOJ==u)
 			{
-				Devolver=Key;
+				RTOSLKFWHC=Key;
 				break;
 			}
 		}	
 	}
 	
-	return Devolver;
+	return RTOSLKFWHC;
 }
 
-function TengoBuenaCartaNOTriunfo(Mazo,JugadorQueMueve,NumeroJugada)
+function EJEJEJEJJE(FXGSEGRXKC,UHTPGPRUJA,BMITYYFCGC)
 {
 	var i;
 	var u;
-	var Devolver=false;
-	var Encontrado;
+	var RTOSLKFWHC=false;
+	var VEFCIYHBGC;
 	
-	//////console.log("Analizando cartas.."+vRonda+" "+NumeroJugada);
+	//////console.log("Analizando cartas.."+LUCRWXJMDR+" "+BMITYYFCGC);
 	for (u=12;u>=11;u--)
 	{
-		for (i=0;i<=Mazo.length-1;i++)
+		for (i=0;i<=FXGSEGRXKC.length-1;i++)
 		{
-			var Key=IA_DevuelveKey(Mazo,Mazo[i].palo,Mazo[i].valorReal)
-			if (Mazo[i].palo!=Triunfo && Mazo[i].valorReal==u)
+			var Key=UIBEMREGDL(FXGSEGRXKC,FXGSEGRXKC[i].SGCSHJVERI,FXGSEGRXKC[i].VVRCMEUNOJ)
+			if (FXGSEGRXKC[i].SGCSHJVERI!=TGTQPBEQFR && FXGSEGRXKC[i].VVRCMEUNOJ==u)
 			{
-				Devolver=Key;
+				RTOSLKFWHC=Key;
 				break;
 			}
 		}	
 	}
-	//////console.log("Analizando cartas fin .."+vRonda+" "+NumeroJugada+" " +Devolver);
-	return Devolver;
+	//////console.log("Analizando cartas fin .."+LUCRWXJMDR+" "+BMITYYFCGC+" " +RTOSLKFWHC);
+	return RTOSLKFWHC;
 }
 
 
-function TienenAsTresNoTriunfo(JugadorQueMueve)
+function IGHVIUGWUO(UHTPGPRUJA)
 {
-	var LetraUltimo="D";
-	var Letra=DevuelveUbicacionCarta(JugadorQueMueve);
-	var Mazo;
+	var MANSCWVWVW="D";
+	var STLEOJDWSU=HHOPUSIABJ(UHTPGPRUJA);
+	var FXGSEGRXKC;
 	var i;
-	var Devolver=false;
+	var RTOSLKFWHC=false;
 	
-	if (Letra=="D")
+	if (STLEOJDWSU=="D")
 	{
-		LetraUltimo="R";
-		Mazo=MazoR;
+		MANSCWVWVW="R";
+		FXGSEGRXKC=CBCNHFGWLU;
 	}
-	if (Letra=="R")
+	if (STLEOJDWSU=="R")
 	{
-		LetraUltimo="U";
-		Mazo=MazoU;
+		MANSCWVWVW="U";
+		FXGSEGRXKC=TWJONOKGHC;
 	}	
-	if (Letra=="U")
+	if (STLEOJDWSU=="U")
 	{
-		LetraUltimo="L";
-		Mazo=MazoL;
+		MANSCWVWVW="L";
+		FXGSEGRXKC=KNVKGHHTYC;
 	}	
-		if (Letra=="L")
+		if (STLEOJDWSU=="L")
 	{
-		LetraUltimo="D";
-		Mazo=MazoD;
+		MANSCWVWVW="D";
+		FXGSEGRXKC=AGKVNAGGLB;
 	}	
 	
-	var Palo=MazoCentral[0].palo;
+	var FHEFFYUQFX=VDKOVQXHON[0].SGCSHJVERI;
 	
-	for (i=0;i<=Mazo.length-1;i++)
+	for (i=0;i<=FXGSEGRXKC.length-1;i++)
 	{
-		if (Mazo[i].palo==Palo && Mazo[i].palo!=Triunfo && Mazo[i].valorReal>=12)
+		if (FXGSEGRXKC[i].SGCSHJVERI==FHEFFYUQFX && FXGSEGRXKC[i].SGCSHJVERI!=TGTQPBEQFR && FXGSEGRXKC[i].VVRCMEUNOJ>=12)
 		{
-			Devolver=true;
+			RTOSLKFWHC=true;
 			break;
 		}
 	}
 	
-	return Devolver;
+	return RTOSLKFWHC;
 	
 }
 
 
-function SituacionEspecialSujetar(MazoIA,JugadorQueMueve,NumeroJugada)
+function ZXCFVSVDSW(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
 {
 	var i;
 	var u;
-	var Encontrado=false;
-	var MarcadorRevisar;
-	var MarcadorRevisarEllos;
-	var PuntosEnMesa=0;
-	var BuenaCarta=false;
-	var Devolver=false;
-	var ObjetoSituacion;
-	var BazaYaEsNuestra=RBazaEsNuestra(MazoCentral,JugadorQueMueve);
+	var VEFCIYHBGC=false;
+	var DVSFGEBHHE;
+	var VVSFGSGGSW;
+	var DCBSNHIVQB=0;
+	var NMBDIWHGDI=false;
+	var RTOSLKFWHC=false;
+	var SGEGEGEGEW;
+	var LKCQTMENTF=VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA);
 	
-	ObjetoSituacion=SituacionPartida(MazoIA,JugadorQueMueve,NumeroJugada)
-	MarcadorRevisar=ObjetoSituacion.MarcadorRevisar;
-	MarcadorRevisarEllos=ObjetoSituacion.MarcadorRevisarEllos;
-	PuntosEnMesa=ObjetoSituacion.PuntosEnMesa;
+	SGEGEGEGEW=XXZXVSDVSD(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
+	DVSFGEBHHE=SGEGEGEGEW.DVSFGEBHHE;
+	VVSFGSGGSW=SGEGEGEGEW.VVSFGSGGSW;
+	DCBSNHIVQB=SGEGEGEGEW.DCBSNHIVQB;
 	
-	if (MazoCentral.length>0)
+	if (VDKOVQXHON.length>0)
 	{
-		if (vRonda>=5 && BazaYaEsNuestra==true && MazoCentral[0].palo!=Triunfo && NumeroJugada==3 && TienenAsTresNoTriunfo(JugadorQueMueve)==true )
+		if (LUCRWXJMDR>=5 && LKCQTMENTF==true && VDKOVQXHON[0].SGCSHJVERI!=TGTQPBEQFR && BMITYYFCGC==3 && IGHVIUGWUO(UHTPGPRUJA)==true )
 		{
-			Devolver=true;
+			RTOSLKFWHC=true;
 		}
 	}	
 	
-	if (vRonda==4 && BazaYaEsNuestra==false && NumeroJugada==3 && IA_MasDe10()==true )
+	if (LUCRWXJMDR==4 && LKCQTMENTF==false && BMITYYFCGC==3 && EAYMXOKKHT()==true )
 	{
-		Devolver=true;
+		RTOSLKFWHC=true;
 	}	
 		
 
 	
-	return Devolver;
+	return RTOSLKFWHC;
 }
 
 
-function SituacionEspecialDescartar(MazoIA,JugadorQueMueve,NumeroJugada)
+function MZXZCVZDVZ(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
 {
 	var i;
 	var u;
-	var Encontrado=false;
-	var MarcadorRevisar;
-	var MarcadorRevisarEllos;
-	var PuntosEnMesa=0;
-	var BuenaCarta=false;
-	var Devolver=false;
-	var ObjetoSituacion;
-	var BazaYaEsNuestra=RBazaEsNuestra(MazoCentral,JugadorQueMueve);
+	var VEFCIYHBGC=false;
+	var DVSFGEBHHE;
+	var VVSFGSGGSW;
+	var DCBSNHIVQB=0;
+	var NMBDIWHGDI=false;
+	var RTOSLKFWHC=false;
+	var SGEGEGEGEW;
+	var LKCQTMENTF=VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA);
 	
-	ObjetoSituacion=SituacionPartida(MazoIA,JugadorQueMueve,NumeroJugada)
-	MarcadorRevisar=ObjetoSituacion.MarcadorRevisar;
-	MarcadorRevisarEllos=ObjetoSituacion.MarcadorRevisarEllos;
-	PuntosEnMesa=ObjetoSituacion.PuntosEnMesa;
+	SGEGEGEGEW=XXZXVSDVSD(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
+	DVSFGEBHHE=SGEGEGEGEW.DVSFGEBHHE;
+	VVSFGSGGSW=SGEGEGEGEW.VVSFGSGGSW;
+	DCBSNHIVQB=SGEGEGEGEW.DCBSNHIVQB;
 	
-	if (MazoCentral.length>0) //Hay un guiñote en la mesa, soy el tercero y no sujeto
+	if (VDKOVQXHON.length>0) //Hay un guiñote en la mesa, soy el tercero y no sujeto
 	{
-		if (BazaYaEsNuestra==true && MazoCentral[0].palo!=Triunfo && NumeroJugada==3 && MazoCentral[0].valorReal>=12 )
+		if (LKCQTMENTF==true && VDKOVQXHON[0].SGCSHJVERI!=TGTQPBEQFR && BMITYYFCGC==3 && VDKOVQXHON[0].VVRCMEUNOJ>=12 )
 		{
-			Devolver=true;
+			RTOSLKFWHC=true;
 		}
 	}	
 	
 	
-	return Devolver;
+	return RTOSLKFWHC;
 }
 
-function PuedoDescartarme()
+function MBXKWGIPQD()
 {
 	var i;
-	var Devuelve=false;
+	var QOWECQVXCM=false;
 	
-	if (ArrayDescartePosible.length>0)
+	if (LSJCRLDUCH.length>0)
 	{
-		for (i=0;i<=ArrayDescartePosible.length-1;i++)
+		for (i=0;i<=LSJCRLDUCH.length-1;i++)
 		{
-			if (ArrayDescartePosible[i].veces==1 && ArrayDescartePosible[i].palo!=Triunfo)
+			if (LSJCRLDUCH[i].veces==1 && LSJCRLDUCH[i].SGCSHJVERI!=TGTQPBEQFR)
 			{
-				Devuelve=true;
+				QOWECQVXCM=true;
 				break
 			}
 		}
 	
 	}
 	
-	return Devuelve;
+	return QOWECQVXCM;
 	
 }
 
 
-function IA_Descarte(MazoIA,JugadorQueMueve,NumeroJugada)
+function GMUESSHERK(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
 {
 	var i;
 	var u;
-	var Encontrado=false;
-	var MarcadorRevisar;
-	var MarcadorRevisarEllos;
-	var PuntosEnMesa=0;
-	var BuenaCarta=false;
-	var Devolver=false;
-	var ObjetoSituacion;
+	var VEFCIYHBGC=false;
+	var DVSFGEBHHE;
+	var VVSFGSGGSW;
+	var DCBSNHIVQB=0;
+	var NMBDIWHGDI=false;
+	var RTOSLKFWHC=false;
+	var SGEGEGEGEW;
 	
 	
-	ObjetoSituacion=SituacionPartida(MazoIA,JugadorQueMueve,NumeroJugada)
-	MarcadorRevisar=ObjetoSituacion.MarcadorRevisar;
-	MarcadorRevisarEllos=ObjetoSituacion.MarcadorRevisarEllos;
-	PuntosEnMesa=ObjetoSituacion.PuntosEnMesa
+	SGEGEGEGEW=XXZXVSDVSD(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
+	DVSFGEBHHE=SGEGEGEGEW.DVSFGEBHHE;
+	VVSFGSGGSW=SGEGEGEGEW.VVSFGSGGSW;
+	DCBSNHIVQB=SGEGEGEGEW.DCBSNHIVQB
 
 	
 	
-	var BazaYaEsNuestra=RBazaEsNuestra(MazoCentral,JugadorQueMueve);
+	var LKCQTMENTF=VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA);
 	
-	ArrayDescartePosible.splice(0,100);
+	LSJCRLDUCH.splice(0,100);
 
 
 
-	for (i=0;i<=MazoIA.length-1;i++)
+	for (i=0;i<=MGYJHGHWGC.length-1;i++)
 	{
 		//log(false,"ENTRA "+i)
-		CuentaPalos(MazoIA[i].palo);
+		XRUDRJJNSI(MGYJHGHWGC[i].SGCSHJVERI);
 	}
 	
-	if (Devolver==false)
+	if (RTOSLKFWHC==false)
 	{
-		Devolver=IA_Cargar(MazoIA,JugadorQueMueve,NumeroJugada);
+		RTOSLKFWHC=FSXJJOQKGP(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC);
 	}
 	
 	
 
 	
 
-	//////console.log("Ronda "+vRonda+" Nº Jugada"+NumeroJugada)
+	//////console.log("AGTXFNIKQD "+LUCRWXJMDR+" Nº Jugada"+BMITYYFCGC)
 	
-	if (Devolver==false && SonVueltas==true && NumeroJugada<=2 && ( MarcadorRevisar>=80  || MarcadorRevisar<=40 || MarcadorRevisarEllos>=90 )  )
+	if (RTOSLKFWHC==false && EVAILWGGKX==true && BMITYYFCGC<=2 && ( DVSFGEBHHE>=80  || DVSFGEBHHE<=40 || VVSFGSGGSW>=90 )  )
 	{
-		BuenaCarta=TengoAsTresTriunfo(MazoIA,JugadorQueMueve,NumeroJugada)
-		if ( BuenaCarta!=false && IA_Ganaria(MazoIA,JugadorQueMueve,BuenaCarta)!=false ) //Si echo triunfo que sea para ganar
+		NMBDIWHGDI=SMMBWKHVIL(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
+		if ( NMBDIWHGDI!=false && FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,NMBDIWHGDI)!=false ) //Si echo triunfo que sea para ganar
 		{
-			Devolver=BuenaCarta;
-			////console.log("Devuelve "+vRonda+": "+"A13");
-			//Encontrado=true;
-			if (vProduccion==false)
+			RTOSLKFWHC=NMBDIWHGDI;
+			////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A13");
+			//VEFCIYHBGC=true;
+			if (KYLIAIETHX==false)
 			{
 				//console.log("CG 14");
 			}		
 		}	
 	}
 	
-	if (Devolver==false && SonVueltas==true && NumeroJugada<=2 && ( MarcadorRevisar<=40 || MarcadorRevisarEllos>=90 ) && (PuntosEnMesa+MarcadorRevisar<PuntosGanar) )
+	if (RTOSLKFWHC==false && EVAILWGGKX==true && BMITYYFCGC<=2 && ( DVSFGEBHHE<=40 || VVSFGSGGSW>=90 ) && (DCBSNHIVQB+DVSFGEBHHE<JLVDFTPUNI) )
 	{
-		BuenaCarta=TengoBuenaCartaNOTriunfo(MazoIA,JugadorQueMueve,NumeroJugada)
-		if ( BuenaCarta!=false )
+		NMBDIWHGDI=EJEJEJEJJE(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
+		if ( NMBDIWHGDI!=false )
 		{
-			Devolver=BuenaCarta;
-			////console.log("Devuelve "+vRonda+": "+"A14");
-			//Encontrado=true;
-			if (vProduccion==false)
+			RTOSLKFWHC=NMBDIWHGDI;
+			////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A14");
+			//VEFCIYHBGC=true;
+			if (KYLIAIETHX==false)
 			{
 				//console.log("CG 15");
 			}	
@@ -1317,109 +1317,109 @@ function IA_Descarte(MazoIA,JugadorQueMueve,NumeroJugada)
 	}		
 	
 	
-	if (Devolver==false && SonVueltas==true && NumeroJugada<=2 && ( MarcadorRevisar<=40 || MarcadorRevisarEllos>=90)  )
+	if (RTOSLKFWHC==false && EVAILWGGKX==true && BMITYYFCGC<=2 && ( DVSFGEBHHE<=40 || VVSFGSGGSW>=90)  )
 	{
-		BuenaCarta=TengoBuenaCartaTriunfo(MazoIA,JugadorQueMueve,NumeroJugada)
-		if ( BuenaCarta!=false && IA_Ganaria(MazoIA,JugadorQueMueve,BuenaCarta)!=false )
+		NMBDIWHGDI=JJAJAJAJAJ(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
+		if ( NMBDIWHGDI!=false && FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,NMBDIWHGDI)!=false )
 		{
-			Devolver=BuenaCarta;
-			if (vProduccion==false)
+			RTOSLKFWHC=NMBDIWHGDI;
+			if (KYLIAIETHX==false)
 			{
 				//console.log("CG 16");
 			}	
-			////console.log("Devuelve "+vRonda+": "+"A15");
-			//Encontrado=true;
+			////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A15");
+			//VEFCIYHBGC=true;
 		}	
 	}				
 	
-	if (Devolver==false && NumeroJugada==3 && BazaYaEsNuestra==true && TienenAsTresNoTriunfo(JugadorQueMueve)==false && SonVueltas==false && vRonda==4 && PuntosEnMesa<10)
+	if (RTOSLKFWHC==false && BMITYYFCGC==3 && LKCQTMENTF==true && IGHVIUGWUO(UHTPGPRUJA)==false && EVAILWGGKX==false && LUCRWXJMDR==4 && DCBSNHIVQB<10)
 	{
-		for (i=0;i<=MazoIA.length-1;i++)
+		for (i=0;i<=MGYJHGHWGC.length-1;i++)
 		{
-			var Key=IA_DevuelveKey(MazoIA,MazoIA[i].palo,MazoIA[i].valorReal)
-			if (MazoIA[i].palo!=Triunfo && MazoIA[i].valorReal>=11)
+			var Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[i].SGCSHJVERI,MGYJHGHWGC[i].VVRCMEUNOJ)
+			if (MGYJHGHWGC[i].SGCSHJVERI!=TGTQPBEQFR && MGYJHGHWGC[i].VVRCMEUNOJ>=11)
 			{
-				Devolver=Key;
-				////console.log("Devuelve "+vRonda+": "+"A16");
-				if (vProduccion==false)
+				RTOSLKFWHC=Key;
+				////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A16");
+				if (KYLIAIETHX==false)
 				{
 					//console.log("CG 17");
 				}	
-				//Encontrado=true;
+				//VEFCIYHBGC=true;
 				break;
 			}
 		}	
 	}	
 	
-	/*if (NumeroJugada==3 && BazaYaEsNuestra==false && TienenAsTresNoTriunfo(JugadorQueMueve)==false && SonVueltas==false && vRonda==4 && PuntosEnMesa>=10)
+	/*if (BMITYYFCGC==3 && LKCQTMENTF==false && IGHVIUGWUO(UHTPGPRUJA)==false && EVAILWGGKX==false && LUCRWXJMDR==4 && DCBSNHIVQB>=10)
 	{
-		for (i=0;i<=MazoIA.length-1;i++)
+		for (i=0;i<=MGYJHGHWGC.length-1;i++)
 		{
-			var Key=IA_DevuelveKey(MazoIA,MazoIA[i].palo,MazoIA[i].valorReal)
-			if (MazoIA[i].palo!=Triunfo && MazoIA[i].valorReal>=11)
+			var Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[i].SGCSHJVERI,MGYJHGHWGC[i].VVRCMEUNOJ)
+			if (MGYJHGHWGC[i].SGCSHJVERI!=TGTQPBEQFR && MGYJHGHWGC[i].VVRCMEUNOJ>=11)
 			{
-				Devolver=Key;
-				////console.log("Devuelve "+vRonda+": "+"A16");
-				//Encontrado=true;
+				RTOSLKFWHC=Key;
+				////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A16");
+				//VEFCIYHBGC=true;
 				break;
 			}
 		}	
 	}*/		
 	
-	if (Devolver==false) //Arrastro de as, o salgo de últimas con as si no puedo descartar
+	if (RTOSLKFWHC==false) //Arrastro de as, o salgo de últimas con as si no puedo descartar
 	{
-		if ( (vRonda>=5 && NumeroJugada==1) || (vRonda==4 && NumeroJugada==1 && PuedoDescartarme()==false  )   )
+		if ( (LUCRWXJMDR>=5 && BMITYYFCGC==1) || (LUCRWXJMDR==4 && BMITYYFCGC==1 && MBXKWGIPQD()==false  )   )
 		{
-			for (i=0;i<=MazoIA.length-1;i++)
+			for (i=0;i<=MGYJHGHWGC.length-1;i++)
 			{
-				var Key=IA_DevuelveKey(MazoIA,MazoIA[i].palo,MazoIA[i].valorReal)
-				if (MazoIA[i].palo!=Triunfo && MazoIA[i].valorReal==12)
+				var Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[i].SGCSHJVERI,MGYJHGHWGC[i].VVRCMEUNOJ)
+				if (MGYJHGHWGC[i].SGCSHJVERI!=TGTQPBEQFR && MGYJHGHWGC[i].VVRCMEUNOJ==12)
 				{
-					Devolver=Key;
-					if (vProduccion==false)
+					RTOSLKFWHC=Key;
+					if (KYLIAIETHX==false)
 					{
 						//console.log("CG 18");
 					}	
-					////console.log("Devuelve "+vRonda+": "+"A17");
-					//Encontrado=true;
+					////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A17");
+					//VEFCIYHBGC=true;
 					break;
 				}
 			}
 		}
 	}
 	
-	if (Devolver==false)
+	if (RTOSLKFWHC==false)
 	{		
-		for (i=0;i<=ArrayDescartePosible.length-1;i++)
+		for (i=0;i<=LSJCRLDUCH.length-1;i++)
 		{
-			//log(false,"A VER... "+ArrayDescartePosible[i].palo+" "+ArrayDescartePosible[i].veces)
-			if (ArrayDescartePosible[i].veces==1 && ArrayDescartePosible[i].palo!=Triunfo)
+			//log(false,"A VER... "+LSJCRLDUCH[i].SGCSHJVERI+" "+LSJCRLDUCH[i].veces)
+			if (LSJCRLDUCH[i].veces==1 && LSJCRLDUCH[i].SGCSHJVERI!=TGTQPBEQFR)
 			{
-				for (u=0;u<=MazoIA.length-1;u++)
+				for (u=0;u<=MGYJHGHWGC.length-1;u++)
 				{
 					
-					var Key=IA_DevuelveKey(MazoIA,MazoIA[u].palo,MazoIA[u].valorReal)
-					if (MazoIA[u].palo==ArrayDescartePosible[i].palo && 
-					( (MazoIA[u].valorPuntuacion<10  && SonVueltas==false) || (MazoIA[u].valorPuntuacion==0  && SonVueltas==true) )      && 
-					 ((MarcadorRevisar+MazoIA[u].valorPuntuacion+PuntosEnMesa)<PuntosGanar) && //Como antes se mira si gano, esto se refiere a que no doy partida a los rivales.
-						RompoCante(MazoIA,MazoIA[u].palo,MazoIA[u].valorReal)==false &&
+					var Key=UIBEMREGDL(MGYJHGHWGC,MGYJHGHWGC[u].SGCSHJVERI,MGYJHGHWGC[u].VVRCMEUNOJ)
+					if (MGYJHGHWGC[u].SGCSHJVERI==LSJCRLDUCH[i].SGCSHJVERI && 
+					( (MGYJHGHWGC[u].WQCPJQWFPN<10  && EVAILWGGKX==false) || (MGYJHGHWGC[u].WQCPJQWFPN==0  && EVAILWGGKX==true) )      && 
+					 ((DVSFGEBHHE+MGYJHGHWGC[u].WQCPJQWFPN+DCBSNHIVQB)<JLVDFTPUNI) && //Como antes se mira si gano, esto se refiere a que no doy partida a los rivales.
+						NMBCIWGWAD(MGYJHGHWGC,MGYJHGHWGC[u].SGCSHJVERI,MGYJHGHWGC[u].VVRCMEUNOJ)==false &&
 						(
-						BazaYaEsNuestra==true || 
-						IA_Ganaria(MazoIA,JugadorQueMueve,Key)==false ||
-						NumeroJugada==1
+						LKCQTMENTF==true || 
+						FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)==false ||
+						BMITYYFCGC==1
 						)
 
 					
 					)
 					{
-						//Encontrado=true;
-						Devolver=MazoIA[u].cartilla.name;
-						////console.log("Devuelve "+vRonda+": "+"A18");
-						if (vProduccion==false)
+						//VEFCIYHBGC=true;
+						RTOSLKFWHC=MGYJHGHWGC[u].TNFAGGMKXD.name;
+						////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A18");
+						if (KYLIAIETHX==false)
 						{
 							//console.log("CG 19");
 						}	
-						//log(false,"Encontrada "+MazoIA[u].palo+" "+MazoIA[u].valorPuntuacion);
+						//log(false,"LSKPLOTYIB "+MGYJHGHWGC[u].SGCSHJVERI+" "+MGYJHGHWGC[u].WQCPJQWFPN);
 						break;
 					}
 				}
@@ -1428,149 +1428,149 @@ function IA_Descarte(MazoIA,JugadorQueMueve,NumeroJugada)
 	}
 
 
-	if (Devolver==false)
+	if (RTOSLKFWHC==false)
 	{
-		////console.log("Devuelve "+vRonda+": "+"A19");
-		if (vProduccion==false)
+		////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A19");
+		if (KYLIAIETHX==false)
 		{
 			//console.log("CG 19.1");
 		}	
-		Devolver=IA_AleatoriaNoTriunfo(MazoIA,JugadorQueMueve,NumeroJugada);
+		RTOSLKFWHC=FYUXQXPFFD(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC);
 		
 	}
 	
-	//log(false,"IA_Descarte "+JugadorQueMueve +" "+Devolver);
-	return Devolver;
+	//log(false,"GMUESSHERK "+UHTPGPRUJA +" "+RTOSLKFWHC);
+	return RTOSLKFWHC;
 	
 }
 
-var ObjetoDescarte = function(palo,veces){
-	this.palo=palo;
+var HMWCCAMDCC = function(SGCSHJVERI,veces){
+	this.SGCSHJVERI=SGCSHJVERI;
 	this.veces=veces;	
 };
 	
 
-function CuentaPalos(palo){
+function XRUDRJJNSI(SGCSHJVERI){
 	
 	var i;
-	var Encontrado=false;
+	var VEFCIYHBGC=false;
 	
-	ArrayDescartePosible.splice(0,10)
-	for (i=0;i<=ArrayDescartePosible.length-1;i++)
+	LSJCRLDUCH.splice(0,10)
+	for (i=0;i<=LSJCRLDUCH.length-1;i++)
 	{
-		if (ArrayDescartePosible[i].palo==palo)
+		if (LSJCRLDUCH[i].SGCSHJVERI==SGCSHJVERI)
 		{
-			ArrayDescartePosible[i].veces=ArrayDescartePosible[i].veces+1;
-			Encontrado=true;
+			LSJCRLDUCH[i].veces=LSJCRLDUCH[i].veces+1;
+			VEFCIYHBGC=true;
 			break;
 		}
 	}
 	
-	if (Encontrado==false)
+	if (VEFCIYHBGC==false)
 	{
-		ArrayDescartePosible.push(new ObjetoDescarte(palo,1) );
+		LSJCRLDUCH.push(new HMWCCAMDCC(SGCSHJVERI,1) );
 	}
 	
 }
 
-function CartaIA(palo,valorReal,key,valorPuntuacion) {
-	this.palo=palo;
-	this.valorReal=valorReal;
+function JOGDJUXHDY(SGCSHJVERI,VVRCMEUNOJ,key,WQCPJQWFPN) {
+	this.SGCSHJVERI=SGCSHJVERI;
+	this.VVRCMEUNOJ=VVRCMEUNOJ;
     this.name=key;
-	this.valorPuntuacion=valorPuntuacion;
+	this.WQCPJQWFPN=WQCPJQWFPN;
 }
 
-function RompoCante(Mano,Palo,ValorReal)
+function NMBCIWGWAD(XACEBCSJAB,FHEFFYUQFX,ValorReal)
 {
 	var i;
 	var u;
-	var mediocante=0;
-	var Devolver=true;
+	var JGDJVGWVNZ=0;
+	var RTOSLKFWHC=true;
 	
 	if (ValorReal==9 || ValorReal==10)
 	{
-		for (i=0;i<=Mano.length-1;i++)
+		for (i=0;i<=XACEBCSJAB.length-1;i++)
 		{
-			if (Mano[i].palo==Palo && (Mano[i].valorReal==9 ||  Mano[i].valorReal==10))
+			if (XACEBCSJAB[i].SGCSHJVERI==FHEFFYUQFX && (XACEBCSJAB[i].VVRCMEUNOJ==9 ||  XACEBCSJAB[i].VVRCMEUNOJ==10))
 			{
-				mediocante++;
+				JGDJVGWVNZ++;
 			}
 		}
 		
-		if (mediocante==2)
+		if (JGDJVGWVNZ==2)
 		{
-			for (i=0;i<=RegistrarCantes.length-1;i++)
+			for (i=0;i<=FOQUJVEYFC.length-1;i++)
 			{
-				if (RegistrarCantes[i]==Palo)
+				if (FOQUJVEYFC[i]==FHEFFYUQFX)
 				{
-					Devolver=false;
+					RTOSLKFWHC=false;
 					break;					
 				}
 			}
 		}
 		else
 		{
-			Devolver=false;
+			RTOSLKFWHC=false;
 		}
 	}
 	else
 	{
-		Devolver=false;
+		RTOSLKFWHC=false;
 	}
 	
-	return Devolver;
+	return RTOSLKFWHC;
 	
 }
 
-function IA_AleatoriaNoTriunfo(MazoIA,JugadorQueMueve,NumeroJugada)
+function FYUXQXPFFD(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
 {
-	var ArrayManoCopia=[];
+	var THQIYGMEUM=[];
 	var i;
-	var Intentos=20;
-	var Encontrado=false;
-	var Devuelve=false;
+	var IYSEFXCNWF=20;
+	var VEFCIYHBGC=false;
+	var QOWECQVXCM=false;
 	var Key;
-	var ValorMasBajo;
-	var ValorMasAlto;
+	var PUWBYVGIMA;
+	var INIDNQUMXV;
 	
 	
-	var BazaYaEsNuestra=RBazaEsNuestra(MazoCentral,JugadorQueMueve);
+	var LKCQTMENTF=VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA);
 	
-	ArrayManoCopia.splice(0,100);
+	THQIYGMEUM.splice(0,100);
 	
 	
-	for (i=0;i<=MazoIA.length-1;i++){
-		ArrayManoCopia.push(new CartaIA(MazoIA[i].palo,MazoIA[i].valorReal,MazoIA[i].cartilla.name, MazoIA[i].valorPuntuacion ));
+	for (i=0;i<=MGYJHGHWGC.length-1;i++){
+		THQIYGMEUM.push(new JOGDJUXHDY(MGYJHGHWGC[i].SGCSHJVERI,MGYJHGHWGC[i].VVRCMEUNOJ,MGYJHGHWGC[i].TNFAGGMKXD.name, MGYJHGHWGC[i].WQCPJQWFPN ));
 	}
 	
 
 	
 	//Si no encuentra, me quito cualquiera
-	ValorMasBajo=100;
-	if (Devuelve==false)
+	PUWBYVGIMA=100;
+	if (QOWECQVXCM==false)
 	{
-		for (i=0;i<=ArrayManoCopia.length-1;i++)
+		for (i=0;i<=THQIYGMEUM.length-1;i++)
 		{	
-			Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)
-			if (ArrayManoCopia[i].valorReal<ValorMasBajo && ArrayManoCopia[i].palo!=Triunfo &&
+			Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)
+			if (THQIYGMEUM[i].VVRCMEUNOJ<PUWBYVGIMA && THQIYGMEUM[i].SGCSHJVERI!=TGTQPBEQFR &&
 			
-				(BazaYaEsNuestra==true || 
-				IA_Ganaria(MazoIA,JugadorQueMueve,Key)==false ||
-				NumeroJugada==1)
+				(LKCQTMENTF==true || 
+				FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)==false ||
+				BMITYYFCGC==1)
 				
-				&& RompoCante(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)==false
+				&& NMBCIWGWAD(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)==false
 				
 			)
 			
 			{
-				ValorMasBajo=ArrayManoCopia[i].valorReal
-				//Phaser.ArrayUtils.shuffle(ArrayManoCopia);
-				Devuelve=ArrayManoCopia[i].name
-				if (vProduccion==false)
+				PUWBYVGIMA=THQIYGMEUM[i].VVRCMEUNOJ
+				//Phaser.ArrayUtils.shuffle(THQIYGMEUM);
+				QOWECQVXCM=THQIYGMEUM[i].name
+				if (KYLIAIETHX==false)
 				{
 					//console.log("CG 20");
 				}	
-				////console.log("Devuelve "+vRonda+": "+"A08");
+				////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A08");
 				//break;
 			}
 		}
@@ -1580,96 +1580,96 @@ function IA_AleatoriaNoTriunfo(MazoIA,JugadorQueMueve,NumeroJugada)
 	
 	
 
-	ValorMasBajo=100;
-	if (Devuelve==false)
+	PUWBYVGIMA=100;
+	if (QOWECQVXCM==false)
 	{
 		
-		for (i=0;i<=ArrayManoCopia.length-1;i++)
+		for (i=0;i<=THQIYGMEUM.length-1;i++)
 		{	
-			Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)
-			if (ArrayManoCopia[i].valorReal<ValorMasBajo && ArrayManoCopia[i].palo==Triunfo && 
+			Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)
+			if (THQIYGMEUM[i].VVRCMEUNOJ<PUWBYVGIMA && THQIYGMEUM[i].SGCSHJVERI==TGTQPBEQFR && 
 			
-				(BazaYaEsNuestra==true || 
-				IA_Ganaria(MazoIA,JugadorQueMueve,Key)==false ||
-				NumeroJugada==1)
+				(LKCQTMENTF==true || 
+				FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)==false ||
+				BMITYYFCGC==1)
 				
-				&& RompoCante(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)==false
-				&& ( (NumeroJugada!=4 && NumeroJugada!=3 ) || ( (NumeroJugada==4 || NumeroJugada==3 )  && EchaElTresSiLoTienesConOtro(ArrayManoCopia, ArrayManoCopia[i].valorReal, ArrayManoCopia[i].palo)==true )
+				&& NMBCIWGWAD(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)==false
+				&& ( (BMITYYFCGC!=4 && BMITYYFCGC!=3 ) || ( (BMITYYFCGC==4 || BMITYYFCGC==3 )  && NBXWIVWWRS(THQIYGMEUM, THQIYGMEUM[i].VVRCMEUNOJ, THQIYGMEUM[i].SGCSHJVERI)==true )
 				) //Para que no se guarde el 3 pelado
 			)
 			{
-				ValorMasBajo=ArrayManoCopia[i].valorReal
-				//Phaser.ArrayUtils.shuffle(ArrayManoCopia);
-				Devuelve=ArrayManoCopia[i].name
-				if (vProduccion==false)
+				PUWBYVGIMA=THQIYGMEUM[i].VVRCMEUNOJ
+				//Phaser.ArrayUtils.shuffle(THQIYGMEUM);
+				QOWECQVXCM=THQIYGMEUM[i].name
+				if (KYLIAIETHX==false)
 				{
 					//console.log("CG 21");
 				}	
-				////console.log("Devuelve "+vRonda+": "+"A09");
+				////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A09");
 				//break;
 			}
 		}
 	}	
 		
 		
-	ValorMasBajo=100;
-	if (Devuelve==false)
+	PUWBYVGIMA=100;
+	if (QOWECQVXCM==false)
 	{
-		for (i=0;i<=ArrayManoCopia.length-1;i++)
+		for (i=0;i<=THQIYGMEUM.length-1;i++)
 		{	
-			Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)
-			if (ArrayManoCopia[i].valorReal<ValorMasBajo && ArrayManoCopia[i].palo!=Triunfo
-				&& RompoCante(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)==false
+			Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)
+			if (THQIYGMEUM[i].VVRCMEUNOJ<PUWBYVGIMA && THQIYGMEUM[i].SGCSHJVERI!=TGTQPBEQFR
+				&& NMBCIWGWAD(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)==false
 			)
 			
 			{
-				ValorMasBajo=ArrayManoCopia[i].valorReal
-				//Phaser.ArrayUtils.shuffle(ArrayManoCopia);
-				Devuelve=ArrayManoCopia[i].name
-				if (vProduccion==false)
+				PUWBYVGIMA=THQIYGMEUM[i].VVRCMEUNOJ
+				//Phaser.ArrayUtils.shuffle(THQIYGMEUM);
+				QOWECQVXCM=THQIYGMEUM[i].name
+				if (KYLIAIETHX==false)
 				{
 					//console.log("CG 22");
 				}	
-				////console.log("Devuelve "+vRonda+": "+"A10");
+				////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A10");
 				//break;
 			}
 		}
 	}
-	ValorMasBajo=100;
-	if (Devuelve==false)
+	PUWBYVGIMA=100;
+	if (QOWECQVXCM==false)
 	{
-		for (i=0;i<=ArrayManoCopia.length-1;i++)
+		for (i=0;i<=THQIYGMEUM.length-1;i++)
 		{	
-			if (ArrayManoCopia[i].valorReal<ValorMasBajo && ArrayManoCopia[i].palo==Triunfo
-				&& RompoCante(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)==false
-				&& ( (NumeroJugada!=4 && NumeroJugada!=3 ) || ( (NumeroJugada==4 || NumeroJugada==3 ) && EchaElTresSiLoTienesConOtro(ArrayManoCopia, ArrayManoCopia[i].valorReal, ArrayManoCopia[i].palo)==true ) 
+			if (THQIYGMEUM[i].VVRCMEUNOJ<PUWBYVGIMA && THQIYGMEUM[i].SGCSHJVERI==TGTQPBEQFR
+				&& NMBCIWGWAD(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)==false
+				&& ( (BMITYYFCGC!=4 && BMITYYFCGC!=3 ) || ( (BMITYYFCGC==4 || BMITYYFCGC==3 ) && NBXWIVWWRS(THQIYGMEUM, THQIYGMEUM[i].VVRCMEUNOJ, THQIYGMEUM[i].SGCSHJVERI)==true ) 
 				) //Para que no se guarde el 3 pelado
 			)
 			{
-				ValorMasBajo=ArrayManoCopia[i].valorReal
-				//Phaser.ArrayUtils.shuffle(ArrayManoCopia);
-				Devuelve=ArrayManoCopia[i].name
-				if (vProduccion==false)
+				PUWBYVGIMA=THQIYGMEUM[i].VVRCMEUNOJ
+				//Phaser.ArrayUtils.shuffle(THQIYGMEUM);
+				QOWECQVXCM=THQIYGMEUM[i].name
+				if (KYLIAIETHX==false)
 				{
 					//console.log("CG 23");
 				}	
-				////console.log("Devuelve "+vRonda+": "+"A11");
+				////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A11");
 				//break;
 			}
 		}
 	}	
 	
-	if (Devuelve==false)
+	if (QOWECQVXCM==false)
 	{
-		ArrayManoCopia=Phaser.ArrayUtils.shuffle(ArrayManoCopia);
-		ValorMasBajo=100;
-		for (i=0;i<=ArrayManoCopia.length-1;i++)
+		THQIYGMEUM=Phaser.ArrayUtils.shuffle(THQIYGMEUM);
+		PUWBYVGIMA=100;
+		for (i=0;i<=THQIYGMEUM.length-1;i++)
 		{
-			if (ArrayManoCopia[i].valorReal<=ValorMasBajo)
+			if (THQIYGMEUM[i].VVRCMEUNOJ<=PUWBYVGIMA)
 			{
-				ValorMasBajo=ArrayManoCopia[i].valorReal;
-				Devuelve=ArrayManoCopia[i].name
-				if (vProduccion==false)
+				PUWBYVGIMA=THQIYGMEUM[i].VVRCMEUNOJ;
+				QOWECQVXCM=THQIYGMEUM[i].name
+				if (KYLIAIETHX==false)
 				{
 					//console.log("CG 24");
 				}	
@@ -1677,36 +1677,36 @@ function IA_AleatoriaNoTriunfo(MazoIA,JugadorQueMueve,NumeroJugada)
 		}	
 		
 		
-		////console.log("Devuelve "+vRonda+": "+"A12");
+		////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A12");
 	}
 
 	
 	//Si acaba en mi que tire la más alta, aunque tenga ya el Devuelvo calculado
-	if (NumeroJugada==4)
+	if (BMITYYFCGC==4)
 	{
-		ValorMasAlto=0;
-	//if (Devuelve==false)
+		INIDNQUMXV=0;
+	//if (QOWECQVXCM==false)
 	//{
-		for (i=0;i<=ArrayManoCopia.length-1;i++)
+		for (i=0;i<=THQIYGMEUM.length-1;i++)
 		{	
-			Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)
-			if (ArrayManoCopia[i].valorReal>ValorMasAlto && ArrayManoCopia[i].palo!=Triunfo &&
+			Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)
+			if (THQIYGMEUM[i].VVRCMEUNOJ>INIDNQUMXV && THQIYGMEUM[i].SGCSHJVERI!=TGTQPBEQFR &&
 			
-				(BazaYaEsNuestra==true)
+				(LKCQTMENTF==true)
 				
-				&& RompoCante(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)==false
+				&& NMBCIWGWAD(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)==false
 				
 			)
 			
 			{
-				ValorMasAlto=ArrayManoCopia[i].valorReal
-				//Phaser.ArrayUtils.shuffle(ArrayManoCopia);
-				Devuelve=ArrayManoCopia[i].name
-				if (vProduccion==false)
+				INIDNQUMXV=THQIYGMEUM[i].VVRCMEUNOJ
+				//Phaser.ArrayUtils.shuffle(THQIYGMEUM);
+				QOWECQVXCM=THQIYGMEUM[i].name
+				if (KYLIAIETHX==false)
 				{
 					//console.log("CG 25");
 				}	
-				////console.log("Devuelve "+vRonda+": "+"A08");
+				////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A08");
 				//break;
 			}
 		}
@@ -1717,30 +1717,30 @@ function IA_AleatoriaNoTriunfo(MazoIA,JugadorQueMueve,NumeroJugada)
 	
 	
 	
-	//log(false,"IA_ALEATORIONOTriunfo "+JugadorQueMueve +" "+Devuelve);
-	return Devuelve;
+	//log(false,"IA_ALEATORIONOTriunfo "+UHTPGPRUJA +" "+QOWECQVXCM);
+	return QOWECQVXCM;
 	
 }
 
-function IA_DevuelveTriunfoMenorQue(ArrayManoCopia,MazoIA,JugadorQueMueve,ValorReal)
+function BXCWOPQCSD(THQIYGMEUM,MGYJHGHWGC,UHTPGPRUJA,ValorReal)
 {
 	var i;
-	var Intentos=20;
-	var Encontrado=false;
-	var Devuelve=false;
+	var IYSEFXCNWF=20;
+	var VEFCIYHBGC=false;
+	var QOWECQVXCM=false;
 	
-	for (i=0;i<=Intentos;i++)
+	for (i=0;i<=IYSEFXCNWF;i++)
 	{
-		//Intento quitarme cartas que no san Triunfo, pero que no valgan mⳠde 10 puntos
-		ArrayManoCopia=Phaser.ArrayUtils.shuffle(ArrayManoCopia);
-		if (ArrayManoCopia[0].palo==Triunfo && ArrayManoCopia[0].valorReal<=ValorReal)
+		//Intento quitarme cartas que no san TGTQPBEQFR, pero que no valgan mⳠde 10 OMDVKATFLQ
+		THQIYGMEUM=Phaser.ArrayUtils.shuffle(THQIYGMEUM);
+		if (THQIYGMEUM[0].SGCSHJVERI==TGTQPBEQFR && THQIYGMEUM[0].VVRCMEUNOJ<=ValorReal)
 		{
-			var Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[0].palo,ArrayManoCopia[0].valorReal)
-			if (IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false)
+			var Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[0].SGCSHJVERI,THQIYGMEUM[0].VVRCMEUNOJ)
+			if (FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false)
 			{
-				Encontrado=true;
-				Devuelve=ArrayManoCopia[0].name
-				if (vProduccion==false)
+				VEFCIYHBGC=true;
+				QOWECQVXCM=THQIYGMEUM[0].name
+				if (KYLIAIETHX==false)
 				{
 					//console.log("CG 25.1");
 				}	
@@ -1749,108 +1749,108 @@ function IA_DevuelveTriunfoMenorQue(ArrayManoCopia,MazoIA,JugadorQueMueve,ValorR
 		}
 	}
 	
-	return Devuelve;
+	return QOWECQVXCM;
 }
 
-/*IA_AleatoriaSiTriunfo=function(MazoIA,JugadorQueMueve)
+/*DSAYFEABOB=function(MGYJHGHWGC,UHTPGPRUJA)
 {
-	var ArrayManoCopia=[];
+	var THQIYGMEUM=[];
 	var i;
-	var Intentos=20;
-	var Encontrado=false;
-	var Devuelve;
+	var IYSEFXCNWF=20;
+	var VEFCIYHBGC=false;
+	var QOWECQVXCM;
 	
-	ArrayManoCopia.splice(0,100);
+	THQIYGMEUM.splice(0,100);
 	
 	
-	for (i=0;i<=MazoIA.length-1;i++){
-		ArrayManoCopia.push(new CartaIA(MazoIA[i].palo,MazoIA[i].valorReal,MazoIA[i].cartilla.name, MazoIA[i].valorPuntuacion ));
+	for (i=0;i<=MGYJHGHWGC.length-1;i++){
+		THQIYGMEUM.push(new JOGDJUXHDY(MGYJHGHWGC[i].SGCSHJVERI,MGYJHGHWGC[i].VVRCMEUNOJ,MGYJHGHWGC[i].TNFAGGMKXD.name, MGYJHGHWGC[i].WQCPJQWFPN ));
 	}
 	
 	
-	Encontrado=IA_DevuelveTriunfoMenorQue(ArrayManoCopia,MazoIA,JugadorQueMueve,7)
-	if (Encontrado==false)
+	VEFCIYHBGC=BXCWOPQCSD(THQIYGMEUM,MGYJHGHWGC,UHTPGPRUJA,7)
+	if (VEFCIYHBGC==false)
 	{
-		Encontrado=IA_DevuelveTriunfoMenorQue(ArrayManoCopia,MazoIA,JugadorQueMueve,8)
+		VEFCIYHBGC=BXCWOPQCSD(THQIYGMEUM,MGYJHGHWGC,UHTPGPRUJA,8)
 	}
-	if (Encontrado==false)
+	if (VEFCIYHBGC==false)
 	{
-		Encontrado=IA_DevuelveTriunfoMenorQue(ArrayManoCopia,MazoIA,JugadorQueMueve,9)
+		VEFCIYHBGC=BXCWOPQCSD(THQIYGMEUM,MGYJHGHWGC,UHTPGPRUJA,9)
 	}
-	if (Encontrado==false)
+	if (VEFCIYHBGC==false)
 	{
-		Encontrado=IA_DevuelveTriunfoMenorQue(ArrayManoCopia,MazoIA,JugadorQueMueve,10)
+		VEFCIYHBGC=BXCWOPQCSD(THQIYGMEUM,MGYJHGHWGC,UHTPGPRUJA,10)
 	}
-	if (Encontrado==false)
+	if (VEFCIYHBGC==false)
 	{
-		Encontrado=IA_DevuelveTriunfoMenorQue(ArrayManoCopia,MazoIA,JugadorQueMueve,11)
+		VEFCIYHBGC=BXCWOPQCSD(THQIYGMEUM,MGYJHGHWGC,UHTPGPRUJA,11)
 	}
-		if (Encontrado==false)
+		if (VEFCIYHBGC==false)
 	{
-		Encontrado=IA_DevuelveTriunfoMenorQue(ArrayManoCopia,MazoIA,JugadorQueMueve,12)
+		VEFCIYHBGC=BXCWOPQCSD(THQIYGMEUM,MGYJHGHWGC,UHTPGPRUJA,12)
 	}
-		if (Encontrado==false)
+		if (VEFCIYHBGC==false)
 	{
-		Encontrado=IA_DevuelveTriunfoMenorQue(ArrayManoCopia,MazoIA,JugadorQueMueve,12)
+		VEFCIYHBGC=BXCWOPQCSD(THQIYGMEUM,MGYJHGHWGC,UHTPGPRUJA,12)
 	}
 	
 	
 	
 	
-	if (Encontrado==false)
+	if (VEFCIYHBGC==false)
 	{
-		for (i=0;i<=Intentos;i++)
+		for (i=0;i<=IYSEFXCNWF;i++)
 		{
-			//Intento quitarme cartas que no san Triunfo, pero que maten
-			ArrayManoCopia=Phaser.ArrayUtils.shuffle(ArrayManoCopia);
-			if (ArrayManoCopia[0].palo!=Triunfo)
+			//Intento quitarme cartas que no san TGTQPBEQFR, pero que maten
+			THQIYGMEUM=Phaser.ArrayUtils.shuffle(THQIYGMEUM);
+			if (THQIYGMEUM[0].SGCSHJVERI!=TGTQPBEQFR)
 			{
-				var Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[0].palo,ArrayManoCopia[0].valorReal)
-				if (IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false)
+				var Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[0].SGCSHJVERI,THQIYGMEUM[0].VVRCMEUNOJ)
+				if (FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false)
 				{
-					Encontrado=true;
-					Devuelve=ArrayManoCopia[0].name
+					VEFCIYHBGC=true;
+					QOWECQVXCM=THQIYGMEUM[0].name
 					break;
 				}
 			}
 		}
 	}
 
-	if (Encontrado==false)
+	if (VEFCIYHBGC==false)
 	{
-		ArrayManoCopia=Phaser.ArrayUtils.shuffle(ArrayManoCopia);
-		Devuelve=ArrayManoCopia[0].name
+		THQIYGMEUM=Phaser.ArrayUtils.shuffle(THQIYGMEUM);
+		QOWECQVXCM=THQIYGMEUM[0].name
 	}
 	
-	log(false,"IA_ALEATORIOSITriunfo "+JugadorQueMueve +" "+Devuelve);
-	return Devuelve;
+	log(false,"IA_ALEATORIOSITriunfo "+UHTPGPRUJA +" "+QOWECQVXCM);
+	return QOWECQVXCM;
 }*/
 
-function MiCompiHaTiradoTriunfo(MazoCentral,NumeroJugada)
+function AJCKJHQOQC(VDKOVQXHON,BMITYYFCGC)
 {
-	var Devuelve=false;
-	if (NumeroJugada==3)
+	var QOWECQVXCM=false;
+	if (BMITYYFCGC==3)
 	{
-		if (MazoCentral.length>0)
+		if (VDKOVQXHON.length>0)
 		{
-			if (MazoCentral[0].palo==Triunfo)
+			if (VDKOVQXHON[0].SGCSHJVERI==TGTQPBEQFR)
 			{
-				Devuelve=true;
+				QOWECQVXCM=true;
 			}
 		}
 	}
-	return Devuelve;
+	return QOWECQVXCM;
 }
 
-function NumeroTriunfos(Mazo)
+function OQOQOCBSKK(FXGSEGRXKC)
 {
 	var i;
 	var Contador=0;
-	var Devuelve=false;
+	var QOWECQVXCM=false;
 	
-	for (i=0;i<=Mazo.length-1;i++)
+	for (i=0;i<=FXGSEGRXKC.length-1;i++)
 	{
-		if (Mazo[i].palo==Triunfo)
+		if (FXGSEGRXKC[i].SGCSHJVERI==TGTQPBEQFR)
 		{
 			Contador++;
 		}
@@ -1860,25 +1860,25 @@ function NumeroTriunfos(Mazo)
 	return Contador;
 }
 
-function EchaElTresSiLoTienesConOtro(Mano, ValorReal, Palo)
+function NBXWIVWWRS(XACEBCSJAB, ValorReal, FHEFFYUQFX)
 {
 	//Sirve para que no se quede con el tres pelado. Obligo a tirarlo si tengo dos triunfos y muere en mi la baza
 	var i;
-	var Devuelve=true;
+	var QOWECQVXCM=true;
 	
-	if (NumeroTriunfos(Mano)==2)
+	if (OQOQOCBSKK(XACEBCSJAB)==2)
 	{
-		if (Palo==Triunfo && ValorReal==11)
+		if (FHEFFYUQFX==TGTQPBEQFR && ValorReal==11)
 		{
-			Devuelve=true;
+			QOWECQVXCM=true;
 		}
 		else
 		{
-			for (i=0;i<=Mano.length-1;i++)
+			for (i=0;i<=XACEBCSJAB.length-1;i++)
 			{
-				if (Mano[i].palo==Triunfo && Mano[i].valorReal==11 && ValorReal!=11 && Palo==Triunfo)
+				if (XACEBCSJAB[i].SGCSHJVERI==TGTQPBEQFR && XACEBCSJAB[i].VVRCMEUNOJ==11 && ValorReal!=11 && FHEFFYUQFX==TGTQPBEQFR)
 				{
-					Devuelve=false;
+					QOWECQVXCM=false;
 				}
 			}
 		}
@@ -1887,85 +1887,85 @@ function EchaElTresSiLoTienesConOtro(Mano, ValorReal, Palo)
 	}
 	else
 	{
-		Devuelve=true;
+		QOWECQVXCM=true;
 	}
 	
 	//Si lo tengo pero en la mesa está el AS, no lo hecho
-	for (i=0;i<=MazoCentral.length-1;i++)
+	for (i=0;i<=VDKOVQXHON.length-1;i++)
 	{
-		if (MazoCentral[i].palo==Triunfo && MazoCentral[i].valorReal==12)
+		if (VDKOVQXHON[i].SGCSHJVERI==TGTQPBEQFR && VDKOVQXHON[i].VVRCMEUNOJ==12)
 		{
-			Devuelve=false;
+			QOWECQVXCM=false;
 			break;
 		}
 	}
 	
-	//////console.log("Validacion del tres: "+Devuelve);
-	return Devuelve;
+	//////console.log("Validacion del tres: "+QOWECQVXCM);
+	return QOWECQVXCM;
 	
 }
 
-function IA_Sujeta(MazoIA,JugadorQueMueve,Criterio,NumeroJugada){
-	//Con Triunfo Alto
-	//Con Triunfo Bajo
+function HWPRRTMYEP(MGYJHGHWGC,UHTPGPRUJA,Criterio,BMITYYFCGC){
+	//Con TGTQPBEQFR Alto
+	//Con TGTQPBEQFR Bajo
 	
 	var u;
 	var i;
-	var ArrayFicticio=[];
-	var ValorMasBajo=100;
-	var ValorMasAlto=0;
-	var Devuelve=false;
-	var IntentaSujetar=false;
+	var JEOOIEYAWD=[];
+	var PUWBYVGIMA=100;
+	var INIDNQUMXV=0;
+	var QOWECQVXCM=false;
+	var GCDJJRCJTC=false;
 	var valorAnalizar;
-	var ArrayManoCopia=[];
-	var Intentos;
+	var THQIYGMEUM=[];
+	var IYSEFXCNWF;
 	var CartaMasBaja=0;
 	var PaloMasBajo="";
 	var PaloMasAlto="";
 	var CartaMasAlta=0;
-	var Encontrado=false;
+	var VEFCIYHBGC=false;
 	
 	//////console.log("Sujeta");
 	
-	Devuelve=IA_Cargar(MazoIA,JugadorQueMueve,NumeroJugada);
-	if (Devuelve==false)
+	QOWECQVXCM=FSXJJOQKGP(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC);
+	if (QOWECQVXCM==false)
 	{
 		
 		
 		
 		
-		if (  //(SonVueltas==false && RBazaEsNuestra(MazoCentral,JugadorQueMueve)==true) 
-			//|| (SonVueltas==true && 
-		RBazaEsNuestra(MazoCentral,JugadorQueMueve)==true && MiCompiHaTiradoTriunfo(MazoCentral,NumeroJugada)==true    )		
+		if (  //(EVAILWGGKX==false && VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA)==true) 
+			//|| (EVAILWGGKX==true && 
+		VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA)==true && AJCKJHQOQC(VDKOVQXHON,BMITYYFCGC)==true    )		
 		{
-			////console.log("Devuelve "+vRonda+": "+"A01");
-			Devuelve=IA_Descarte(MazoIA,JugadorQueMueve,NumeroJugada);			
-			//log(false,"LA Baza ES NUESTRA JUGADOR: "+JugadorQueMueve);
+			////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A01");
+			QOWECQVXCM=GMUESSHERK(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC);			
+			//log(false,"LA SRCGCMADME ES NUESTRA JUGADOR: "+UHTPGPRUJA);
 		}
 		else
 		{		
 			
-			ArrayManoCopia.splice(0,100);	
+			THQIYGMEUM.splice(0,100);	
 
-			for (i=0;i<=MazoIA.length-1;i++){
-				ArrayManoCopia.push(new CartaIA(MazoIA[i].palo,MazoIA[i].valorReal,MazoIA[i].cartilla.name, MazoIA[i].valorPuntuacion ));
+			for (i=0;i<=MGYJHGHWGC.length-1;i++){
+				THQIYGMEUM.push(new JOGDJUXHDY(MGYJHGHWGC[i].SGCSHJVERI,MGYJHGHWGC[i].VVRCMEUNOJ,MGYJHGHWGC[i].TNFAGGMKXD.name, MGYJHGHWGC[i].WQCPJQWFPN ));
 			}
-			ArrayManoCopia=Phaser.ArrayUtils.shuffle(ArrayManoCopia);
+			THQIYGMEUM=Phaser.ArrayUtils.shuffle(THQIYGMEUM);
 			
 			
 			
-			if (MazoCentral.length>0) //A un guiñote , otro
+			if (VDKOVQXHON.length>0) //A un guiñote , otro
 			{
-				if (NumeroTriunfos(ArrayManoCopia)==0 && NumeroJugada==2 && MazoCentral[0].palo!=Triunfo && MazoCentral[0].valorReal>=11)
+				if (OQOQOCBSKK(THQIYGMEUM)==0 && BMITYYFCGC==2 && VDKOVQXHON[0].SGCSHJVERI!=TGTQPBEQFR && VDKOVQXHON[0].VVRCMEUNOJ>=11)
 				{
 					
-					for (i=0;i<=ArrayManoCopia.length-1;i++)
+					for (i=0;i<=THQIYGMEUM.length-1;i++)
 					{
-						var Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)
-						if ( ArrayManoCopia[i].valorReal>=11)
+						var Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)
+						if ( THQIYGMEUM[i].VVRCMEUNOJ>=11)
 						{
-							Devuelve=Key;
-							//////console.log("Devuelve "+vRonda+": "+"A02");
+							QOWECQVXCM=Key;
+							//////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A02");
 							break;
 						}
 					}
@@ -1973,76 +1973,76 @@ function IA_Sujeta(MazoIA,JugadorQueMueve,Criterio,NumeroJugada){
 			}
 			
 			
-			if (Devuelve==false)
+			if (QOWECQVXCM==false)
 			{
-				if (NumeroJugada==4)
+				if (BMITYYFCGC==4)
 				{	
-					Encontrado=false;
+					VEFCIYHBGC=false;
 					CartaMasAlta=0;
-					for (i=0;i<=ArrayManoCopia.length-1;i++)
+					for (i=0;i<=THQIYGMEUM.length-1;i++)
 					{
-						if (ArrayManoCopia[i].palo!=Triunfo)
+						if (THQIYGMEUM[i].SGCSHJVERI!=TGTQPBEQFR)
 						{
-							var Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)
-							if ( IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false)						
+							var Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)
+							if ( FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false)						
 							{
-								if (ArrayManoCopia[i].valorReal>=CartaMasAlta)
+								if (THQIYGMEUM[i].VVRCMEUNOJ>=CartaMasAlta)
 								{
-									CartaMasAlta=ArrayManoCopia[i].valorReal;
-									PaloMasAlto=ArrayManoCopia[i].palo;
-									Encontrado=true;								
+									CartaMasAlta=THQIYGMEUM[i].VVRCMEUNOJ;
+									PaloMasAlto=THQIYGMEUM[i].SGCSHJVERI;
+									VEFCIYHBGC=true;								
 								}
 							}
 						}
 					}
-					if (Encontrado==true)
+					if (VEFCIYHBGC==true)
 					{
-						Devuelve=IA_DevuelveKey(ArrayManoCopia,PaloMasAlto,CartaMasAlta)
-						//////console.log("Devuelve "+vRonda+": "+"A03");
+						QOWECQVXCM=UIBEMREGDL(THQIYGMEUM,PaloMasAlto,CartaMasAlta)
+						//////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A03");
 					}
 				}
 			}
 			
-			if (Devuelve==false)
+			if (QOWECQVXCM==false)
 			{
 				
-				//log(false,"LA Baza NO ES NUESTRA JUGADOR  "+JugadorQueMueve);
-				//Investigo mi Triunfo m�s bajo
+				//log(false,"LA SRCGCMADME NO ES NUESTRA JUGADOR  "+UHTPGPRUJA);
+				//Investigo mi TGTQPBEQFR m�s bajo
 				
-				if (NumeroJugada==4 || Criterio=="Bajo")
+				if (BMITYYFCGC==4 || Criterio=="Bajo")
 				{
-					if ( NumeroTriunfos(MazoCentral)<2 ) //ningún guiñote vale dos triunfos
+					if ( OQOQOCBSKK(VDKOVQXHON)<2 ) //ningún guiñote vale dos triunfos
 					{					
-						Encontrado=false;
+						VEFCIYHBGC=false;
 						CartaMasBaja=100;
-						for (i=0;i<=ArrayManoCopia.length-1;i++)
+						for (i=0;i<=THQIYGMEUM.length-1;i++)
 						{
-							if (ArrayManoCopia[i].palo==Triunfo)
+							if (THQIYGMEUM[i].SGCSHJVERI==TGTQPBEQFR)
 							{
-								var Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)
-								if ( IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false
+								var Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)
+								if ( FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false
 								
 								&& 
-									( (NumeroJugada!=4 && NumeroJugada!=3 ) || ( (NumeroJugada==4 || NumeroJugada==3 ) 
-									&& EchaElTresSiLoTienesConOtro(ArrayManoCopia, ArrayManoCopia[i].valorReal, ArrayManoCopia[i].palo)==true )				
+									( (BMITYYFCGC!=4 && BMITYYFCGC!=3 ) || ( (BMITYYFCGC==4 || BMITYYFCGC==3 ) 
+									&& NBXWIVWWRS(THQIYGMEUM, THQIYGMEUM[i].VVRCMEUNOJ, THQIYGMEUM[i].SGCSHJVERI)==true )				
 									)	//Para que no se guarde el 3 pelado
 								)								
 								{
-									if (ArrayManoCopia[i].valorReal<=CartaMasBaja)
+									if (THQIYGMEUM[i].VVRCMEUNOJ<=CartaMasBaja)
 									{
-										CartaMasBaja=ArrayManoCopia[i].valorReal;
-										PaloMasBajo=ArrayManoCopia[i].palo;
-										Encontrado=true;
+										CartaMasBaja=THQIYGMEUM[i].VVRCMEUNOJ;
+										PaloMasBajo=THQIYGMEUM[i].SGCSHJVERI;
+										VEFCIYHBGC=true;
 									}
 								}
 							}
 						}
-						//////console.log("Encontrado "+Encontrado)
-						if (Encontrado==true)
+						//////console.log("VEFCIYHBGC "+VEFCIYHBGC)
+						if (VEFCIYHBGC==true)
 						{
 							//////console.log("Ya lo creo ")
-							Devuelve=IA_DevuelveKey(ArrayManoCopia,PaloMasBajo,CartaMasBaja)
-							//////console.log("Devuelve "+vRonda+": "+"A04");
+							QOWECQVXCM=UIBEMREGDL(THQIYGMEUM,PaloMasBajo,CartaMasBaja)
+							//////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A04");
 						}	
 					}
 				}
@@ -2050,28 +2050,28 @@ function IA_Sujeta(MazoIA,JugadorQueMueve,Criterio,NumeroJugada){
 				{
 					if (Criterio=="Alto")
 					{
-						Encontrado=false;
+						VEFCIYHBGC=false;
 						CartaMasAlta=0;
-						for (i=0;i<=ArrayManoCopia.length-1;i++)
+						for (i=0;i<=THQIYGMEUM.length-1;i++)
 						{
-							if (ArrayManoCopia[i].palo==Triunfo)
+							if (THQIYGMEUM[i].SGCSHJVERI==TGTQPBEQFR)
 							{
-								var Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)
-								if ( IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false)						
+								var Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)
+								if ( FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false)						
 								{
-									if (ArrayManoCopia[i].valorReal>=CartaMasAlta)
+									if (THQIYGMEUM[i].VVRCMEUNOJ>=CartaMasAlta)
 									{
-										CartaMasAlta=ArrayManoCopia[i].valorReal;
-										PaloMasAlto=ArrayManoCopia[i].palo;
-										Encontrado=true
+										CartaMasAlta=THQIYGMEUM[i].VVRCMEUNOJ;
+										PaloMasAlto=THQIYGMEUM[i].SGCSHJVERI;
+										VEFCIYHBGC=true
 									}
 								}
 							}
 						}
-						if (Encontrado==true)
+						if (VEFCIYHBGC==true)
 						{
-							Devuelve=IA_DevuelveKey(ArrayManoCopia,PaloMasAlto,CartaMasAlta)
-							//////console.log("Devuelve "+vRonda+": "+"A05");
+							QOWECQVXCM=UIBEMREGDL(THQIYGMEUM,PaloMasAlto,CartaMasAlta)
+							//////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A05");
 						}						
 						
 					}				
@@ -2082,20 +2082,20 @@ function IA_Sujeta(MazoIA,JugadorQueMueve,Criterio,NumeroJugada){
 		}
 	}
 	
-	if (Devuelve==false)
+	if (QOWECQVXCM==false)
 	{
-		//////console.log("CG DESCARTE Ronda: "+vRonda+" jugada "+NumeroJugada);
-		Devuelve=IA_Descarte(MazoIA,JugadorQueMueve,NumeroJugada);		
+		//////console.log("CG DESCARTE AGTXFNIKQD: "+LUCRWXJMDR+" jugada "+BMITYYFCGC);
+		QOWECQVXCM=GMUESSHERK(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC);		
 	}
-	//log(false,"Y DEFINITAMENTE DEVUELVE.."+Devuelve)
-	log(false,"IA_Sujeta "+JugadorQueMueve +" "+Devuelve);
-	return Devuelve;
+	//log(false,"Y DEFINITAMENTE DEVUELVE.."+QOWECQVXCM)
+	log(false,"HWPRRTMYEP "+UHTPGPRUJA +" "+QOWECQVXCM);
+	return QOWECQVXCM;
 	
 }
 
-function IA_DeboCargar(JugadorQueMueve){
+function MWEIOSJBGW(UHTPGPRUJA){
 	var i;
-	if (RBazaEsNuestra(MazoCentral,JugadorQueMueve)==true)
+	if (VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA)==true)
 	{
 		return true;
 	}
@@ -2105,37 +2105,37 @@ function IA_DeboCargar(JugadorQueMueve){
 	}
 }
 
-function IA_Cargar(MazoIA,JugadorQueMueve,NumeroJugada)
+function FSXJJOQKGP(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
 {
 	var i;
-	var ArrayManoCopia=[];
-	var BazaYaEsNuestra=RBazaEsNuestra(MazoCentral,JugadorQueMueve);
-	var Devuelve=false;
-	ArrayManoCopia.splice(0,100);
+	var THQIYGMEUM=[];
+	var LKCQTMENTF=VMLEORHBGI(VDKOVQXHON,UHTPGPRUJA);
+	var QOWECQVXCM=false;
+	THQIYGMEUM.splice(0,100);
 	
-	var ObjetoSituacion=SituacionPartida(MazoIA,JugadorQueMueve,NumeroJugada)
-	var MarcadorRevisar=ObjetoSituacion.MarcadorRevisar;
-	var MarcadorRevisarEllos=ObjetoSituacion.MarcadorRevisarEllos;
-	var PuntosEnMesa=ObjetoSituacion.PuntosEnMesa;
+	var SGEGEGEGEW=XXZXVSDVSD(MGYJHGHWGC,UHTPGPRUJA,BMITYYFCGC)
+	var DVSFGEBHHE=SGEGEGEGEW.DVSFGEBHHE;
+	var VVSFGSGGSW=SGEGEGEGEW.VVSFGSGGSW;
+	var DCBSNHIVQB=SGEGEGEGEW.DCBSNHIVQB;
 	
 	
-	for (i=0;i<=MazoIA.length-1;i++){
-		ArrayManoCopia.push(new CartaIA(MazoIA[i].palo,MazoIA[i].valorReal,MazoIA[i].cartilla.name, MazoIA[i].valorPuntuacion ));
+	for (i=0;i<=MGYJHGHWGC.length-1;i++){
+		THQIYGMEUM.push(new JOGDJUXHDY(MGYJHGHWGC[i].SGCSHJVERI,MGYJHGHWGC[i].VVRCMEUNOJ,MGYJHGHWGC[i].TNFAGGMKXD.name, MGYJHGHWGC[i].WQCPJQWFPN ));
 	}
 	
-	ArrayManoCopia=Phaser.ArrayUtils.shuffle(ArrayManoCopia);
+	THQIYGMEUM=Phaser.ArrayUtils.shuffle(THQIYGMEUM);
 	
-	if (NumeroJugada==4)
+	if (BMITYYFCGC==4)
 	{
 	
-		for (i=0;i<=ArrayManoCopia.length-1;i++)
+		for (i=0;i<=THQIYGMEUM.length-1;i++)
 		{
-			var Key=IA_DevuelveKey(ArrayManoCopia,ArrayManoCopia[i].palo,ArrayManoCopia[i].valorReal)
-			if (  (BazaYaEsNuestra==true || IA_Ganaria(MazoIA,JugadorQueMueve,Key)!=false) && ArrayManoCopia[i].palo!=Triunfo && ArrayManoCopia[i].valorPuntuacion>=10  )
+			var Key=UIBEMREGDL(THQIYGMEUM,THQIYGMEUM[i].SGCSHJVERI,THQIYGMEUM[i].VVRCMEUNOJ)
+			if (  (LKCQTMENTF==true || FNLYNGWANP(MGYJHGHWGC,UHTPGPRUJA,Key)!=false) && THQIYGMEUM[i].SGCSHJVERI!=TGTQPBEQFR && THQIYGMEUM[i].WQCPJQWFPN>=10  )
 			{
-				Encontrado=true;
-				Devuelve=ArrayManoCopia[i].name
-				//////console.log("Devuelve "+vRonda+": "+"A06");
+				VEFCIYHBGC=true;
+				QOWECQVXCM=THQIYGMEUM[i].name
+				//////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A06");
 				break;
 			}
 		}
@@ -2143,51 +2143,51 @@ function IA_Cargar(MazoIA,JugadorQueMueve,NumeroJugada)
 	}
 	else
 	{
-		//log(false,"DEBE METERSE AQUI PARA CARGAR "+JugadorQueMueve+" "+BazaYaEsNuestra);
-		var Encontrado=false;
+		//log(false,"DEBE METERSE AQUI PARA CARGAR "+UHTPGPRUJA+" "+LKCQTMENTF);
+		var VEFCIYHBGC=false;
 		
-		if (BazaYaEsNuestra==true)
+		if (LKCQTMENTF==true)
 		{
-			for (i=0;i<=MazoCentral.length-1;i++)
+			for (i=0;i<=VDKOVQXHON.length-1;i++)
 			{
-				if (  (MazoCentral[i].palo==Triunfo && MazoCentral[i].valorPuntuacion>=4)
-						||    (MazoCentral[i].palo==Triunfo && MazoCentral[i].valorPuntuacion>=2 && PuntosEnMesa<=15   )       )
+				if (  (VDKOVQXHON[i].SGCSHJVERI==TGTQPBEQFR && VDKOVQXHON[i].WQCPJQWFPN>=4)
+						||    (VDKOVQXHON[i].SGCSHJVERI==TGTQPBEQFR && VDKOVQXHON[i].WQCPJQWFPN>=2 && DCBSNHIVQB<=15   )       )
 				{
-					Encontrado=true;
+					VEFCIYHBGC=true;
 					break;
 				}
 			}
 			
-			if (Encontrado==true)
+			if (VEFCIYHBGC==true)
 			{
-				//log(false,"ES DE MI COMPA�ERO "+JugadorQueMueve);
-				for (i=0;i<=ArrayManoCopia.length-1;i++)
+				//log(false,"ES DE MI COMPA�ERO "+UHTPGPRUJA);
+				for (i=0;i<=THQIYGMEUM.length-1;i++)
 				{
 					
-					if (  ArrayManoCopia[i].palo!=Triunfo && ArrayManoCopia[i].valorPuntuacion>=10  )
+					if (  THQIYGMEUM[i].SGCSHJVERI!=TGTQPBEQFR && THQIYGMEUM[i].WQCPJQWFPN>=10  )
 					{
-						Encontrado=true;
-						Devuelve=ArrayManoCopia[i].name
-						//////console.log("Devuelve "+vRonda+": "+"A07");
-						//log(false,"ESTA DEVUELVE "+JugadorQueMueve+ " "+ArrayManoCopia[i].valorReal+" de " + ArrayManoCopia[i].palo);
+						VEFCIYHBGC=true;
+						QOWECQVXCM=THQIYGMEUM[i].name
+						//////console.log("QOWECQVXCM "+LUCRWXJMDR+": "+"A07");
+						//log(false,"ESTA DEVUELVE "+UHTPGPRUJA+ " "+THQIYGMEUM[i].VVRCMEUNOJ+" de " + THQIYGMEUM[i].SGCSHJVERI);
 						break;
 					}
 				}
 			}
 			else
 			{
-				//log(false,"NO ES DE MI COMPA�ERO "+JugadorQueMueve);
+				//log(false,"NO ES DE MI COMPA�ERO "+UHTPGPRUJA);
 			}
 		}
 		else
 		{
-			Devuelve=false;
+			QOWECQVXCM=false;
 		}
 	}
 	
-	log(false,"IA_Cargar "+JugadorQueMueve +" "+Devuelve);
+	log(false,"FSXJJOQKGP "+UHTPGPRUJA +" "+QOWECQVXCM);
 	
-	return Devuelve;
+	return QOWECQVXCM;
 }
 
 
@@ -2197,26 +2197,26 @@ function IA_Cargar(MazoIA,JugadorQueMueve,NumeroJugada)
 
 
 
-function IA_DevuelveKey(MazoIA,palo,valorReal){
+function UIBEMREGDL(MGYJHGHWGC,SGCSHJVERI,VVRCMEUNOJ){
 	var i;
-	var Devuelve=false;
+	var QOWECQVXCM=false;
 	
-	for (i=0;i<=MazoIA.length-1;i++)
+	for (i=0;i<=MGYJHGHWGC.length-1;i++)
 	{
-		if (MazoIA[i].valorReal==valorReal && MazoIA[i].palo==palo)
+		if (MGYJHGHWGC[i].VVRCMEUNOJ==VVRCMEUNOJ && MGYJHGHWGC[i].SGCSHJVERI==SGCSHJVERI)
 		{
-			if (MazoIA[i].name!=undefined)
+			if (MGYJHGHWGC[i].name!=undefined)
 			{
-				Devuelve=MazoIA[i].name;
+				QOWECQVXCM=MGYJHGHWGC[i].name;
 			}
 			else
 			{
-				Devuelve=MazoIA[i].cartilla.name;
+				QOWECQVXCM=MGYJHGHWGC[i].TNFAGGMKXD.name;
 			}
-			//log(false,"EL KEY ES"+Devuelve);
+			//log(false,"EL KEY ES"+QOWECQVXCM);
 			break;
 		}
 	}
 	
-	return Devuelve;
+	return QOWECQVXCM;
 }

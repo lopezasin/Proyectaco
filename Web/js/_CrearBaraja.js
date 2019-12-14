@@ -4,6 +4,9 @@ function DMLCWWNWRP()
 //alert('Se mete en tapete');
 //alert('Creo tapete '+NHLRWTHYVG);
 
+localStorage.setItem('miGato', 'Juan');
+var cat = localStorage.getItem('miGato');
+console.log(cat);
 
 	try
 	{
@@ -574,8 +577,8 @@ function ETKKAJPFXQ(RDBQUAVHEP)
 	
    });
 	
-	//FXGSEGRXKC=Phaser.ArrayUtils.shuffle(FXGSEGRXKC);
-	//WUHRYVMYBE=Phaser.ArrayUtils.shuffle(WUHRYVMYBE);
+	FXGSEGRXKC=Phaser.ArrayUtils.shuffle(FXGSEGRXKC);
+	WUHRYVMYBE=Phaser.ArrayUtils.shuffle(WUHRYVMYBE);
 
 	var BarajaImprimir="";
 		

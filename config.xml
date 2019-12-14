@@ -73,6 +73,10 @@
 </plugin> 
 
 
+<plugin name="cordova-plugin-admobpro" source="npm">
+<variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
+</plugin>
+
 
 
 <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
