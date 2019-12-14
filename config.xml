@@ -42,8 +42,9 @@
 <!-- <preference name="android-minSdkVersion" value="26" />   -->
 <!-- <preference name="android-targetSdkVersion" value="28" />  Para que funcione-->
 
-<plugin spec="https://github.com/ratson/cordova-plugin-admob-free.git">
-<variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697" />
+<plugin  name="cordova-plugin-admob-free">
+<variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/>
+<variable name="PLAY_SERVICES_VERSION" value="15.0.1"/>
 </plugin>
 <!-- 	<variable name="PLAY_SERVICES_VERSION" value="16.0.0" /> -->
 
