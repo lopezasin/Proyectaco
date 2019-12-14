@@ -43,9 +43,10 @@
 <!-- <preference name="android-targetSdkVersion" value="28" />  Para que funcione-->
 
 
-
-<plugin name="cordova-plugin-admobpro" spec="2.29.29" source="pgb" />
-
+<preference name="android-build-tool" value="gradle" />
+<plugin name="cordova-plugin-admobpro" source="npm">
+<variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
+</plugin>
 	
 <plugin name="cordova-plugin-powermanagement" />		
 <plugin name="cordova-plugin-device"/> 
