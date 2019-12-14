@@ -48,8 +48,9 @@
 </plugin>
  -->
 
-<plugin name="cordova-plugin-admobpro-firebase" source="npm" />
-
+<plugin name="cordova-plugin-admobpro-firebase" source="npm" >
+<variable name="APP_ID_ANDROID" value="ca-app-pub-8050258181826342~7086723697"/>
+</plugin>
 <plugin name="cordova-plugin-firebase" source="npm" />
 
 	
