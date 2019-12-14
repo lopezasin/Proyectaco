@@ -43,10 +43,9 @@
 <!-- <preference name="android-targetSdkVersion" value="28" />  Para que funcione-->
 
 <plugin name="cordova-plugin-admobpro" source="npm">
-<variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
 <variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697" />
 </plugin>
-	
+<!-- 	<variable name="PLAY_SERVICES_VERSION" value="16.0.0" /> -->
 	
 <plugin name="cordova-plugin-powermanagement" />		
 <plugin name="cordova-plugin-device"/> 
@@ -69,9 +68,9 @@
   <param name="APP_NAME" value="GuinotePro" /> 
 </gap:plugin>
 
-<!-- <plugin name="cordova-plugin-googleplus"  source="npm" spec="6.0.0">
+<plugin name="cordova-plugin-googleplus"  source="npm" spec="6.0.0">
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
-</plugin> -->
+</plugin>
 	
  <plugin spec="https://github.com/j3k0/cordova-plugin-purchase.git#v9">
     <param name="BILLING_KEY" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9zaSw/s4Or4TyebqxUAs3UWoWGwJsErJe2PvInCIHW/digf+r6bURqF3MtQNDFXtN86NterDFUrvhGDipUHchnQj9cMdHIabJVMygH9BQlHu2B8ZLvhJAEHtcTJ+ho4U7+pnx5pBTGf+ICxLhYa4XanBCdrJTQHFxCWv5+QtxmQqILbbRXWKIUVAZ816Rl44j0Vd1QIdZccgfhR4Gfw5f+aOkDaEfGng48MC2e33lGjadcTYfSqRrci8p6SpkTVT74zR9KEvVNYacoB/MYmBpCcwXGdou65yDS9vMPdc9Kx4CWV5pDlm+h0AlolEG/LEDij9Qdku/cXJuUv9K1TyQIDAQAB"/>
