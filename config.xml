@@ -48,10 +48,7 @@
 </plugin>
  -->
 
-<plugin name="cordova-plugin-admobpro-firebase" source="npm" >
-<variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/>
-</plugin>
-<plugin name="cordova-plugin-firebase" source="npm" />
+<gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
 
 	
 <plugin name="cordova-plugin-powermanagement" />		
