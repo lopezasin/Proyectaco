@@ -42,11 +42,7 @@
 <!-- <preference name="android-minSdkVersion" value="26" />   -->
 <!-- <preference name="android-targetSdkVersion" value="28" />  Para que funcione-->
 
-<!-- <plugin  name="cordova-admob-plus" >
-<variable name="APP_ID_ANDROID" value="ca-app-pub-8050258181826342~7086723697"/>
-<variable name="APP_ID_IOS" value="ca-app-pub-8050258181826342~7086723697"/>
-</plugin>
- -->
+
 
 <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io"/>
 
