@@ -62,7 +62,7 @@ if (KYLIAIETHX==true){
 else
 {
 	BBWEGOPQUF=150;
-	JHGHJAGCMC='http://192.168.1.100:5000'		
+	JHGHJAGCMC='http://192.168.43.100:5000'		
 }
 
 //var TextoGeneral;
@@ -5181,13 +5181,13 @@ function initAds()
 	  ios : {
 		app : "ca-app-pub-8050258181826342~2626085570",
 		banner : "ca-app-pub-3940256099942544/6300978111",
-		interstitial : "ca-app-pub-3940256099942544/1033173712"
+		interstitial : "ca-app-pub-3940256099942544/1033173712",
 		video : "ca-app-pub-3940256099942544/5224354917"
 	  },
 	  android : {
 		app : "ca-app-pub-8050258181826342~7086723697",
 		banner : "ca-app-pub-3940256099942544/6300978111",
-		interstitial : "ca-app-pub-3940256099942544/1033173712"
+		interstitial : "ca-app-pub-3940256099942544/1033173712",
 		video : "ca-app-pub-3940256099942544/5224354917"
 	  }
 	};
