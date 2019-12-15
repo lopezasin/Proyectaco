@@ -5268,7 +5268,8 @@ function onAdLeftApplication ()
 		
 function MuestraVideo()
 {
-	admob.showRewardedAd()
+	//admob.showRewardedAd()
+	admob.rewardVideo.show())
 }
 
 function VideoExitoso()

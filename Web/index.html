@@ -841,21 +841,29 @@ function onDeviceReady() {
 				document.getElementById("SubchatOtros").style.display = 'none';			
 			}
 		
-		  initAds();
+		  /*initAds();
 		 
-		  // display a banner at startup
+
 		  admob.createBannerView();
 			
-		  // request an interstitial
+
 		  admob.requestInterstitialAd();		
 		  try
 		  {
 			admob.requestRewardedAd();	
-		}
-		catch(e)
-		{
-			alert("Función no implementada")
-		}
+			}
+			catch(e)
+			{
+				alert("Función no implementada")
+			}*/
+			
+			  admob.rewardVideo.load({
+				id: {
+				  // replace with your ad unit IDs
+				  android: 'ca-app-pub-3940256099942544/5224354917',
+				  ios: 'ca-app-pub-3940256099942544/5224354917',
+				},
+			  })
 		
 		
 		}
