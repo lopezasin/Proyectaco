@@ -5269,7 +5269,7 @@ function onAdLeftApplication ()
 function MuestraVideo()
 {
 	//admob.showRewardedAd()
-	admob.rewardVideo.show())
+	admob.rewardVideo.show()
 }
 
 function VideoExitoso()
