@@ -60,7 +60,7 @@
 
  <engine name="android" spec="8.0.0" />
  
-    <plugin name="cordova-plugin-admob-free" spec="npm">
+    <plugin name="cordova-plugin-admob-plus"  source="npm">
         <variable name="APP_ID_ANDROID" value="ca-app-pub-3940256099942544~3347511713" />
         <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" />
     </plugin>
