@@ -45,9 +45,9 @@
 
 
 
-<plugin name="cordova-admob-jimmy" source="npm">
+<!-- <plugin name="cordova-admob-jimmy" source="npm">
 	<variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/>
-</plugin>
+</plugin> -->
 
 <!-- <plugin name="cordova-admob-jimmy" source="npm">
 </plugin> -->
@@ -65,10 +65,10 @@
         <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" />
     </plugin> -->
 
-<!--     <plugin name="cordova-admob-plus" >
+    <plugin name="cordova-admob-plus" >
         <variable name="APP_ID_ANDROID" value="ca-app-pub-3940256099942544~3347511713" />
         <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" />
-    </plugin> -->
+    </plugin>
 
 <plugin name="cordova-plugin-powermanagement" />		
 <plugin name="cordova-plugin-device"/> 
