@@ -4785,8 +4785,8 @@ function NGHJWGJHWG()
 	d.style.display = 'none';	
 	
 
-	var d=document.getElementById('DivCookies');
-	d.style.display = 'none';		
+/* 	var d=document.getElementById('DivCookies');
+	d.style.display = 'none';		 */
 }
 
 
