@@ -58,7 +58,7 @@
 </plugin>
  -->
 
- <engine name="android" spec="8.0.0" />
+<!--  <engine name="android" spec="8.0.0" /> -->
  
 <!--     <plugin name="https://github.com/Heyzap/heyzap-cordova-admob.git"  source="npm">
         <variable name="APP_ID_ANDROID" value="ca-app-pub-3940256099942544~3347511713" />
