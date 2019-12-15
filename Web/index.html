@@ -857,13 +857,20 @@ function onDeviceReady() {
 				alert("Función no implementada")
 			}*/
 			
+			try
+			{
 			  admob.rewardVideo.load({
 				id: {
 				  // replace with your ad unit IDs
 				  android: 'ca-app-pub-3940256099942544/5224354917',
-				  ios: 'ca-app-pub-3940256099942544/5224354917',
-				},
+				  ios: 'ca-app-pub-3940256099942544/5224354917'
+				}
 			  })
+			 }
+			 catch(e)
+			 {
+			 alert(e.message)
+			 }
 		
 		
 		}
