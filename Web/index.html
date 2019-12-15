@@ -848,7 +848,14 @@ function onDeviceReady() {
 			
 		  // request an interstitial
 		  admob.requestInterstitialAd();		
-		  admob.requestRewardedAd();	
+		  try
+		  {
+			admob.requestRewardedAd();	
+		}
+		catch(e)
+		{
+			alert("Función no implementada")
+		}
 		
 		
 		}

@@ -5175,45 +5175,56 @@ function RespuestaFaltanVidas(JSKXXDPSDS)
 
 function initAds()
 {
-  if (window.plugins && admob) {
-	
-	var adPublisherIds = {
-	  ios : {
-		app : "ca-app-pub-8050258181826342~2626085570",
-		banner : "ca-app-pub-3940256099942544/6300978111",
-		interstitial : "ca-app-pub-3940256099942544/1033173712",
-		video : "ca-app-pub-3940256099942544/5224354917"
-	  },
-	  android : {
-		app : "ca-app-pub-8050258181826342~7086723697",
-		banner : "ca-app-pub-3940256099942544/6300978111",
-		interstitial : "ca-app-pub-3940256099942544/1033173712",
-		video : "ca-app-pub-3940256099942544/5224354917"
-	  }
-	};
-	
-	var admobid = (/(android)/i.test(navigator.userAgent)) ? adPublisherIds.android : adPublisherIds.ios;
+  try
+  {
+	  if (window.plugins && admob)
+	  {
 		
-	admob.setOptions({
-	  appId:            admobid.app,
-	  bannerAdId:       admobid.banner,
-	  interstitialAdId: admobid.interstitial,
-	  rewardedAdId : admobid.video 
-/* 	  tappxIdiOS:       "/XXXXXXXXX/Pub-XXXX-iOS-IIII",
-	  tappxIdAndroid:   "/XXXXXXXXX/Pub-XXXX-Android-AAAA", 
-	  tappxShare:       0.5,*/
-	  
-	});
+		var adPublisherIds = {
+		  ios : {
+			app : "ca-app-pub-8050258181826342~2626085570",
+			banner : "ca-app-pub-3940256099942544/6300978111",
+			interstitial : "ca-app-pub-3940256099942544/1033173712",
+			video : "ca-app-pub-3940256099942544/5224354917"
+		  },
+		  android : {
+			app : "ca-app-pub-8050258181826342~7086723697",
+			banner : "ca-app-pub-3940256099942544/6300978111",
+			interstitial : "ca-app-pub-3940256099942544/1033173712",
+			video : "ca-app-pub-3940256099942544/5224354917"
+		  }
+		};
+		
+		var admobid = (/(android)/i.test(navigator.userAgent)) ? adPublisherIds.android : adPublisherIds.ios;
+			
+		admob.setOptions({
+		  appId:            admobid.app,
+		  bannerAdId:       admobid.banner,
+		  interstitialAdId: admobid.interstitial,
+		  rewardedAdId : admobid.video 
+	/* 	  tappxIdiOS:       "/XXXXXXXXX/Pub-XXXX-iOS-IIII",
+		  tappxIdAndroid:   "/XXXXXXXXX/Pub-XXXX-Android-AAAA", 
+		  tappxShare:       0.5,*/
+		  
+		});
 
-	registerAdEvents();
-	
-  } else {
-	alert('AdMobAds plugin not ready');
+		registerAdEvents();
+		
+	  }
+	  else
+	  {
+		alert('AdMobAds plugin not ready');
+	  }
+  }
+  catch(e)
+  {
+	alert(e.message);
   }
 }
 
 
-function registerAdEvents() {
+function registerAdEvents() 
+{
   document.addEventListener(admob.events.onAdLoaded, onAdLoaded);
   document.addEventListener(admob.events.onAdFailedToLoad, onAdFailed);
   document.addEventListener(admob.events.onAdOpened, onAdOpened);
@@ -5251,10 +5262,7 @@ function onAdLeftApplication ()
 	alert("left")
 }
 
-function onAdFailed()
-{
-	alert("Fallado")
-}
+
 
 		
 		
