@@ -59,7 +59,7 @@
  -->
 
 
-<preference name="android-build-tool" value="gradle" /> 
+<dependency id="cordova-plugin-googleplayservices"/>
 <plugin name="cordova-plugin-admobpro"  source="npm">
 <param name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
 </plugin>
