@@ -84,6 +84,54 @@
 <!-- <plugin name="cordova-plugin-google-analytics" /> -->
 
 <plugin name="cordova-plugin-apprate" />
+
+<!-- <plugin name="cordova-plugin-keyboard" /> -->
+<!-- <plugin name="cordova-plugin-iosmediavolume" /> -->
+	
+
+<gap:plugin name="cordova-plugin-facebook4"  source="npm" spec="5.0.0">
+  <param name="APP_ID" value="123400284870556" />
+  <param name="APP_NAME" value="GuinotePro" /> 
+</gap:plugin>
+
+<plugin name="cordova-plugin-googleplus"  source="npm" spec="6.0.0">
+  <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
+</plugin>
+	
+ <plugin spec="https://github.com/j3k0/cordova-plugin-purchase.git#v9">
+    <param name="BILLING_KEY" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9zaSw/s4Or4TyebqxUAs3UWoWGwJsErJe2PvInCIHW/digf+r6bURqF3MtQNDFXtN86NterDFUrvhGDipUHchnQj9cMdHIabJVMygH9BQlHu2B8ZLvhJAEHtcTJ+ho4U7+pnx5pBTGf+ICxLhYa4XanBCdrJTQHFxCWv5+QtxmQqILbbRXWKIUVAZ816Rl44j0Vd1QIdZccgfhR4Gfw5f+aOkDaEfGng48MC2e33lGjadcTYfSqRrci8p6SpkTVT74zR9KEvVNYacoB/MYmBpCcwXGdou65yDS9vMPdc9Kx4CWV5pDlm+h0AlolEG/LEDij9Qdku/cXJuUv9K1TyQIDAQAB"/>
+</plugin> 
+
+
+
+
+
+
+<edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+    <string>App would like to access the library. Facebook Login required. Thanks</string>
+</edit-config>
+
+
+<!-- <config-file platform="ios" parent="NSPhotoLibraryUsageDescription" mode="replace">  
+      <string>App would like to access the library. Facebook Login required. Thanks</string> 
+</config-file>
+
+<config-file platform="ios" parent="NSCameraUsageDescription" mode="replace">
+	<string>App would like to access the library. Facebook Login required. Thanks</string> 
+</config-file>
+
+<gap:plugin name="cordova-plugin-facebook4" source="npm">
+    <param name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the library. Facebook Login required. Thanks"/>
+    <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library. Facebook Login required. Thanks"/>
+    <param name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the library. Facebook Login required. Thanks"/>
+</gap:plugin> -->
+
+<config-file platform="ios" parent="CFBundleLocalizations" mode="replace">
+    <array>
+        <string>es</string>
+    </array>
+</config-file>
+	
 	
 
 <!-- <icon src="icon.png" /> -->
