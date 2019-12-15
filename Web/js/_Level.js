@@ -1347,7 +1347,7 @@ Level.prototype.create=function(){
 	}
 	
 	
-	if( window.plugins)
+	if( window.plugins && 1==2)
 	{
 		window.plugins.googleplus.trySilentLogin(
 				{
