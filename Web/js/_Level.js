@@ -5173,18 +5173,94 @@ function RespuestaFaltanVidas(JSKXXDPSDS)
 	}
 }
 
+function initAds()
+{
+  if (window.plugins && admob) {
+	
+	var adPublisherIds = {
+	  ios : {
+		app : "ca-app-pub-8050258181826342~2626085570",
+		banner : "ca-app-pub-3940256099942544/6300978111",
+		interstitial : "ca-app-pub-3940256099942544/1033173712"
+		video : "ca-app-pub-3940256099942544/5224354917"
+	  },
+	  android : {
+		app : "ca-app-pub-8050258181826342~7086723697",
+		banner : "ca-app-pub-3940256099942544/6300978111",
+		interstitial : "ca-app-pub-3940256099942544/1033173712"
+		video : "ca-app-pub-3940256099942544/5224354917"
+	  }
+	};
+	
+	var admobid = (/(android)/i.test(navigator.userAgent)) ? adPublisherIds.android : adPublisherIds.ios;
+		
+	admob.setOptions({
+	  appId:            admobid.app,
+	  bannerAdId:       admobid.banner,
+	  interstitialAdId: admobid.interstitial,
+	  rewardedAdId : admobid.video 
+/* 	  tappxIdiOS:       "/XXXXXXXXX/Pub-XXXX-iOS-IIII",
+	  tappxIdAndroid:   "/XXXXXXXXX/Pub-XXXX-Android-AAAA", 
+	  tappxShare:       0.5,*/
+	  
+	});
+
+	registerAdEvents();
+	
+  } else {
+	alert('AdMobAds plugin not ready');
+  }
+}
+
+
+function registerAdEvents() {
+  document.addEventListener(admob.events.onAdLoaded, onAdLoaded);
+  document.addEventListener(admob.events.onAdFailedToLoad, onAdFailed);
+  document.addEventListener(admob.events.onAdOpened, onAdOpened);
+  document.addEventListener(admob.events.onAdClosed, onAdClosed);
+  document.addEventListener(admob.events.onAdLeftApplication, onAdLeftApplication);
+  /* document.addEventListener(admob.events.onInAppPurchaseRequested, function (e) {}); */
+  
+/*   document.addEventListener("pause", onPause, false);
+  document.addEventListener("resume", onResume, false); */
+}
+        
+function onAdLoaded()
+{
+	alert("Cargado")
+}
+
+function onAdFailed()
+{
+	alert("Fallado")
+}
+
+function onAdOpened()
+{
+	alert("Abierto")
+}
+
+
+function onAdClosed()
+{
+	alert("Cerrado")
+}
+
+function onAdLeftApplication ()
+{
+	alert("left")
+}
+
+function onAdFailed()
+{
+	alert("Fallado")
+}
+
+		
+		
 function MuestraVideo()
 {
-/* 	prepareRewardVideoAd('ca-app-pub-3940256099942544/5224354917', VideoExitoso, VideoFallido);
-	showRewardVideoAd(); */
-	
-	admob.rewardvideo.config({
-	id: 'ca-app-pub-3940256099942544/5224354917',
-	})
-
-	admob.rewardvideo.prepare()
-
-	admob.rewardvideo.show()
+	admob.showRewardedAd()
 }
 
 function VideoExitoso()

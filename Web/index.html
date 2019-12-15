@@ -840,7 +840,19 @@ function onDeviceReady() {
 				document.getElementById("SubchatiOS").style.display = 'inline-block';
 				document.getElementById("SubchatOtros").style.display = 'none';			
 			}
+		
+		  initAds();
+		 
+		  // display a banner at startup
+		  admob.createBannerView();
+			
+		  // request an interstitial
+		  admob.requestInterstitialAd();		
+		  admob.requestRewardedAd();	
+		
+		
 		}
+		
 		
 		Inicia();
 
