@@ -19,7 +19,7 @@
 <access origin="*"/>
 
 <!-- <preference name='phonegap-version' value='cli-7.0.1' /> -->
-<preference name='phonegap-version' value='cli-8.0.0' />
+<preference name='phonegap-version' value='cli-9.0.0' />
 
 <!-- <preference name='pgb-builder-version' value='1' /> -->
 	
@@ -53,7 +53,7 @@
 </plugin> -->
 
 
-<plugin spec="https://github.com/jamesfdickinson/admob-google-cordova-clean.git" source="npm">
+<plugin spec="https://github.com/kkleokrish/admob-google-cordova-clean.git" source="npm">
 <variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
 </plugin>
 
