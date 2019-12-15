@@ -59,7 +59,9 @@
  -->
 
 
-<plugin name="cordova-plugin-admobpro"/>
+<plugin name="cordova-plugin-admobpro">
+<param name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
+</plugin>
 	
 <plugin name="cordova-plugin-powermanagement" />		
 <plugin name="cordova-plugin-device"/> 
