@@ -60,11 +60,16 @@
 
  <engine name="android" spec="8.0.0" />
  
-    <plugin name="https://github.com/Heyzap/heyzap-cordova-admob.git"  source="npm">
+<!--     <plugin name="https://github.com/Heyzap/heyzap-cordova-admob.git"  source="npm">
+        <variable name="APP_ID_ANDROID" value="ca-app-pub-3940256099942544~3347511713" />
+        <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" />
+    </plugin> -->
+
+    <plugin name="cordova-admob-plus"  source="npm">
         <variable name="APP_ID_ANDROID" value="ca-app-pub-3940256099942544~3347511713" />
         <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" />
     </plugin>
-
+	
 
 <!-- <icon src="icon.png" /> -->
 <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024" />
