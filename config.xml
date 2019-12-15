@@ -81,7 +81,7 @@
 <plugin name="cordova-plugin-vibration"   /> <!-- Antes 2.1.4 -->
 <plugin name="cordova-plugin-whitelist"  />  <!--spec="1.3.2" -->
 
-<!-- <plugin name="cordova-plugin-google-analytics" /> -->
+ <plugin name="cordova-plugin-google-analytics" /> 
 
 <plugin name="cordova-plugin-apprate" />
 
