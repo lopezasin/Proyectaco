@@ -20,7 +20,7 @@
 
 <!-- <preference name='phonegap-version' value='cli-7.0.1' /> -->
 <preference name='phonegap-version' value='cli-9.0.0' />
-<preference name="android-minSdkVersion" value="19" />
+<!-- <preference name="android-minSdkVersion" value="19" /> -->
 
 <!-- <preference name='pgb-builder-version' value='1' /> -->
 	
@@ -47,7 +47,7 @@
 
 
 <plugin name="cordova-admob-plus" source="npm">
-<variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
+<param name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
 </plugin>
 
 
