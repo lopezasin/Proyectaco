@@ -62,6 +62,8 @@
         <!-- <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" /> -->
     <!-- </plugin> -->
 
+<plugin name="cordova-plugin-androidx" />
+<plugin name="cordova-plugin-androidx-adapter" />
 <plugin name="cordova-plugin-powermanagement" />		
 <plugin name="cordova-plugin-device"/> 
 <plugin name="cordova-plugin-inappbrowser"  /> <!-- Antes 1.7.0 -->
@@ -83,11 +85,13 @@
 <gap:plugin name="cordova-plugin-facebook4"  source="npm" spec="5.0.0"> 
   <param name="APP_ID" value="123400284870556" />
   <param name="APP_NAME" value="GuinotePro" /> 
+  <param name="FACEBOOK_ANDROID_SDK_VERSION" value="5.13.0" />
 </gap:plugin>
  
  
 <plugin name="cordova-plugin-googleplus"  source="npm" spec="6.0.0">
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
+  <param name="PLAY_SERVICES_VERSION" value="17.0.0" />
 </plugin>
 	
  <plugin spec="https://github.com/j3k0/cordova-plugin-purchase.git#v9">
