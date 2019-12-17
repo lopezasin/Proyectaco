@@ -20,6 +20,7 @@
 
 <!-- <preference name='phonegap-version' value='cli-7.0.1' /> -->
 <preference name='phonegap-version' value='cli-9.0.0' />
+<preference name="android-minSdkVersion" value="19" />
 
 <!-- <preference name='pgb-builder-version' value='1' /> -->
 	
@@ -45,18 +46,9 @@
 
 
 
-<!-- <plugin name="cordova-admob-jimmy" source="npm">
-	<variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/>
-</plugin> -->
-
-<!-- <plugin name="cordova-admob-jimmy" source="npm">
-</plugin> -->
-
-
-<!-- <plugin name="cordova-admob-plus" source="npm">
+<plugin name="cordova-admob-plus" source="npm">
 <variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
 </plugin>
- -->
 
 <!--  <engine name="android" spec="8.0.0" /> -->
  
@@ -81,7 +73,7 @@
 <plugin name="cordova-plugin-vibration"   /> <!-- Antes 2.1.4 -->
 <plugin name="cordova-plugin-whitelist"  />  <!--spec="1.3.2" -->
 
- <!-- <plugin name="cordova-plugin-google-analytics" />  -->
+ <plugin name="cordova-plugin-google-analytics" /> 
 
 <plugin name="cordova-plugin-apprate" />
 
