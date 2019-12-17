@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<widget id="es.guinotepro.guinotepro" version="2.0.8082" versioncode="10036" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="es.guinotepro.guinotepro" version="2.0.8083" versioncode="10036" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>GuiñotePro</name>
     <description>
         Videojuego de guiñote
@@ -50,17 +50,6 @@
 <variable name="ADMOB_APP_ID" value="ca-app-pub-8050258181826342~7086723697"/> 
 </plugin>
 
-<!--  <engine name="android" spec="8.0.0" /> -->
- 
-<!--     <plugin name="https://github.com/Heyzap/heyzap-cordova-admob.git"  source="npm">
-        <variable name="APP_ID_ANDROID" value="ca-app-pub-3940256099942544~3347511713" />
-        <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" />
-    </plugin> -->
-
-    <!-- <plugin name="cordova-admob-plus" > -->
-        <!-- <variable name="APP_ID_ANDROID" value="ca-app-pub-3940256099942544~3347511713" /> -->
-        <!-- <variable name="APP_ID_IOS" value="ca-app-pub-3940256099942544~1458002511" /> -->
-    <!-- </plugin> -->
 
 <plugin name="cordova-plugin-androidx" />
 <plugin name="cordova-plugin-androidx-adapter" />
@@ -82,14 +71,14 @@
 
 	
 
-<gap:plugin name="cordova-plugin-facebook4"  source="npm" spec="5.0.0"> 
+<gap:plugin name="cordova-plugin-facebook4"  source="npm" > <!-- spec="5.0.0" -->
   <param name="APP_ID" value="123400284870556" />
   <param name="APP_NAME" value="GuinotePro" /> 
   <param name="FACEBOOK_ANDROID_SDK_VERSION" value="5.13.0" />
 </gap:plugin>
  
  
-<plugin name="cordova-plugin-googleplus"  source="npm" spec="6.0.0">
+<plugin name="cordova-plugin-googleplus"  source="npm" > <!-- spec="6.0.0" -->
   <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.713259248814-9hbf4r1p4a9n2cu69mj8msd10a7r2err" />
   <param name="PLAY_SERVICES_VERSION" value="17.0.0" />
 </plugin>
